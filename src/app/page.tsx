@@ -69,6 +69,30 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Statistics Bar - Inspired by Top Agencies */}
+        <section className="stats-bar">
+          <div className="container">
+            <div className="stats-grid">
+              <div className="stat-item">
+                <span className="stat-value">$2.5M+</span>
+                <span className="stat-label">Client Revenue Generated</span>
+              </div>
+              <div className="stat-item">
+                <span className="stat-value">150+</span>
+                <span className="stat-label">Projects Delivered</span>
+              </div>
+              <div className="stat-item">
+                <span className="stat-value">98%</span>
+                <span className="stat-label">Client Satisfaction</span>
+              </div>
+              <div className="stat-item">
+                <span className="stat-value">5+</span>
+                <span className="stat-label">Years of Excellence</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Services Section */}
         <section className="section bg-white services-section">
           <div className="container">
@@ -91,6 +115,32 @@ export default function Home() {
                   <h3 className="service-title">{service.title}</h3>
                   <p className="service-desc">{service.desc}</p>
                   <Link href="/services" className="service-link">Learn more →</Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Client Results Section - Inspired by Thrive/WebFX */}
+        <section className="section results-section">
+          <div className="container">
+            <SectionHeader
+              label="CLIENT SUCCESS"
+              title="Results that speak for themselves"
+              subtext="We don't just promise results—we deliver measurable growth for every client."
+              light
+            />
+            <div className="results-grid">
+              {[
+                { metric: "320%", label: "Increase in Organic Traffic", client: "E-commerce Client" },
+                { metric: "45%", label: "Improvement in Marketing ROI", client: "SaaS Startup" },
+                { metric: "2.5x", label: "Lead Generation Growth", client: "B2B Services" },
+                { metric: "60%", label: "Reduction in Ad Spend Waste", client: "Retail Brand" }
+              ].map((result, i) => (
+                <div key={i} className="result-card">
+                  <span className="result-metric">{result.metric}</span>
+                  <span className="result-label">{result.label}</span>
+                  <span className="result-client">{result.client}</span>
                 </div>
               ))}
             </div>
