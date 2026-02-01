@@ -69,6 +69,143 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Trust Badges - Partnership Bar */}
+        <section className="trust-badges-bar">
+          <div className="container">
+            <div className="badges-wrapper">
+              <div className="badge-item">
+                <span className="badge-icon">🏆</span>
+                <div className="badge-text">
+                  <span className="badge-title">Google</span>
+                  <span className="badge-subtitle">Premier Partner</span>
+                </div>
+              </div>
+              <div className="badge-item">
+                <span className="badge-icon">◎</span>
+                <div className="badge-text">
+                  <span className="badge-title">Meta</span>
+                  <span className="badge-subtitle">Business Partner</span>
+                </div>
+              </div>
+              <div className="badge-item">
+                <span className="badge-icon">⬡</span>
+                <div className="badge-text">
+                  <span className="badge-title">HubSpot</span>
+                  <span className="badge-subtitle">Solutions Partner</span>
+                </div>
+              </div>
+              <div className="badge-item">
+                <span className="badge-icon">★</span>
+                <div className="badge-text">
+                  <span className="badge-title">Clutch</span>
+                  <span className="badge-subtitle">Top Agency 2024</span>
+                </div>
+              </div>
+              <div className="badge-item">
+                <span className="badge-icon">✓</span>
+                <div className="badge-text">
+                  <span className="badge-title">GoodFirms</span>
+                  <span className="badge-subtitle">Verified Agency</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Awards & Recognition */}
+        <section className="section awards-section bg-cream">
+          <div className="container">
+            <SectionHeader
+              label="RECOGNITION"
+              title="Awards & Certifications"
+              subtext="Recognized by industry leaders for excellence in digital marketing and technology."
+            />
+            <div className="awards-grid">
+              {[
+                { icon: "🥇", title: "Clutch", subtitle: "Top B2B Company", year: "2024" },
+                { icon: "⭐", title: "GoodFirms", subtitle: "Top Agency", year: "2024" },
+                { icon: "🏅", title: "Google", subtitle: "Premier Partner", year: "2025" },
+                { icon: "🏆", title: "Capterra", subtitle: "Best Value", year: "2024" },
+              ].map((award, i) => (
+                <div key={i} className="award-card">
+                  <span className="award-icon">{award.icon}</span>
+                  <span className="award-title">{award.title}</span>
+                  <span className="award-subtitle">{award.subtitle}</span>
+                  <span className="award-year">{award.year}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Client Logos */}
+        <section className="section clients-section bg-white">
+          <div className="container">
+            <SectionHeader
+              label="TRUSTED BY"
+              title="From Startups to Giants"
+              subtext="We're the marketing strategists behind the brands you love."
+            />
+            <div className="clients-grid">
+              {[
+                "TechFlow", "GrowthEdge", "InnovateCo", "DataPrime",
+                "CloudSync", "ScaleUp", "NextGen AI", "Quantum Labs",
+                "Vertex Digital", "Pulse Media", "Apex Solutions", "Stellar Tech"
+              ].map((client, i) => (
+                <div key={i} className="client-logo">
+                  <span>{client}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Tech Stack */}
+        <section className="section tech-section">
+          <div className="container">
+            <SectionHeader
+              label="OUR TECH STACK"
+              title="Powered by Industry-Leading Tools"
+              subtext="We leverage the best platforms and technologies to deliver exceptional results."
+              light
+            />
+            <div className="tech-categories">
+              <div className="tech-category">
+                <h4 className="tech-category-title">Analytics & Tracking</h4>
+                <div className="tech-logos">
+                  {["Google Analytics", "GTM", "Hotjar", "Mixpanel"].map((tool, i) => (
+                    <div key={i} className="tech-item">{tool}</div>
+                  ))}
+                </div>
+              </div>
+              <div className="tech-category">
+                <h4 className="tech-category-title">SEO & Content</h4>
+                <div className="tech-logos">
+                  {["SEMRush", "Ahrefs", "Moz", "Screaming Frog"].map((tool, i) => (
+                    <div key={i} className="tech-item">{tool}</div>
+                  ))}
+                </div>
+              </div>
+              <div className="tech-category">
+                <h4 className="tech-category-title">Marketing Automation</h4>
+                <div className="tech-logos">
+                  {["HubSpot", "Mailchimp", "Klaviyo", "ActiveCampaign"].map((tool, i) => (
+                    <div key={i} className="tech-item">{tool}</div>
+                  ))}
+                </div>
+              </div>
+              <div className="tech-category">
+                <h4 className="tech-category-title">Project Management</h4>
+                <div className="tech-logos">
+                  {["ClickUp", "Asana", "Monday", "Notion"].map((tool, i) => (
+                    <div key={i} className="tech-item">{tool}</div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Statistics Bar - Inspired by Top Agencies */}
         <section className="stats-bar">
           <div className="container">
@@ -103,12 +240,15 @@ export default function Home() {
             />
             <div className="services-grid">
               {[
-                { no: "01", title: "Digital Analytics", desc: "Unlock insights from your data to drive better business decisions and growth." },
-                { no: "02", title: "Ecommerce strategy", desc: "Build a powerful online store that converts visitors into loyal customers." },
-                { no: "03", title: "Digital Performance", desc: "Optimize your digital presence for maximum speed, efficiency, and ROI." },
-                { no: "04", title: "Digital Ads", desc: "Reach your target audience effectively with data-driven advertising campaigns." },
-                { no: "05", title: "Social Media strategy", desc: "Engage your community and build brand awareness across all social platforms." },
-                { no: "06", title: "SEO strategy", desc: "Improve your search engine rankings and drive organic traffic to your site." }
+                { no: "01", title: "AI-Powered Marketing", desc: "Leverage AI agents, predictive analytics, and machine learning to automate campaigns and maximize ROI." },
+                { no: "02", title: "SEO & AEO Strategy", desc: "Dominate search and AI answer engines with semantic SEO, featured snippets, and voice search optimization." },
+                { no: "03", title: "Performance Marketing", desc: "Data-driven paid media across Google, Meta, TikTok, and programmatic platforms with real-time optimization." },
+                { no: "04", title: "Content & Brand Strategy", desc: "Build authority with AI-assisted content creation, thought leadership, and omnichannel storytelling." },
+                { no: "05", title: "Marketing Automation", desc: "HubSpot, Klaviyo, and custom CRM integrations for personalized customer journeys at scale." },
+                { no: "06", title: "eCommerce Growth", desc: "Shopify, Amazon, and D2C strategies with conversion optimization and multi-channel attribution." },
+                { no: "07", title: "Social Media & Influencer", desc: "Community building, UGC campaigns, and influencer partnerships across Instagram, TikTok, and LinkedIn." },
+                { no: "08", title: "Web Development", desc: "Blazing-fast Next.js, headless CMS, and conversion-focused landing pages with A/B testing built-in." },
+                { no: "09", title: "Analytics & BI", desc: "GA4, Looker Studio dashboards, and custom attribution modeling to prove marketing ROI." }
               ].map((service, i) => (
                 <div key={i} className="service-card">
                   <span className="service-no">{service.no}</span>
