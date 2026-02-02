@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
 import { Icon } from '@/components/ui/Icon';
 import '@/styles/seo-page.css';
 
@@ -104,51 +103,129 @@ export function SEOPageContent() {
                 </div>
             </section>
 
-            {/* Benefits Section */}
-            <section className="seo-benefits">
+            {/* Common SEO Challenges - Pain Points Section */}
+            <section className="seo-challenges">
                 <div className="seo-container">
                     <div className="section-header text-center">
-                        <span className="section-label">WHY PARTNER WITH US</span>
+                        <span className="section-label">THE PROBLEM</span>
                         <h2 className="section-title">
-                            What Are the Benefits of Hiring an <span className="text-gradient">SEO Agency</span>?
+                            Common <span className="text-gradient">SEO Challenges</span> Holding You Back
                         </h2>
                         <p className="section-subtitle">
-                            Most businesses invest in SEO but struggle to see results. We&apos;re different.
-                            Our data-driven approach ensures every strategy is built for measurable ROI.
+                            If any of these sound familiar, you&apos;re not alone. Most businesses struggle with the same issues—until they partner with the right SEO team.
                         </p>
                     </div>
-                    <div className="benefits-grid">
-                        <div className="benefit-card">
-                            <div className="benefit-icon">
+                    <div className="challenges-grid">
+                        <div className="challenge-card">
+                            <div className="challenge-icon">
                                 <Icon type="target" />
                             </div>
-                            <h3>Strategic Keyword Targeting</h3>
-                            <p>We identify high-intent keywords your competitors miss, targeting
-                                search queries that drive conversions, not just traffic.</p>
+                            <h3>Invisible in Search Results</h3>
+                            <p>Your competitors are ranking on page one while your website is buried where customers never look.</p>
                         </div>
-                        <div className="benefit-card">
-                            <div className="benefit-icon pink">
-                                <Icon type="zap" />
-                            </div>
-                            <h3>Technical Excellence</h3>
-                            <p>From Core Web Vitals to schema markup, we ensure your website meets
-                                Google&apos;s technical requirements for top rankings.</p>
-                        </div>
-                        <div className="benefit-card">
-                            <div className="benefit-icon yellow">
+                        <div className="challenge-card">
+                            <div className="challenge-icon warning">
                                 <Icon type="activity" />
                             </div>
-                            <h3>Content That Ranks</h3>
-                            <p>AI-enhanced content strategies optimized for both traditional search
-                                and emerging AI platforms like ChatGPT and Perplexity.</p>
+                            <h3>Traffic Without Conversions</h3>
+                            <p>You&apos;re getting visitors but they&apos;re not turning into leads or customers. Wrong traffic = wasted opportunity.</p>
                         </div>
-                        <div className="benefit-card">
-                            <div className="benefit-icon">
+                        <div className="challenge-card">
+                            <div className="challenge-icon danger">
                                 <Icon type="barChart" />
                             </div>
-                            <h3>Transparent Reporting</h3>
-                            <p>Real-time dashboards and monthly reports that show exactly how your
-                                SEO investment translates to business growth.</p>
+                            <h3>Declining Organic Visibility</h3>
+                            <p>Algorithm updates have crushed your rankings. What worked before isn&apos;t working anymore.</p>
+                        </div>
+                        <div className="challenge-card">
+                            <div className="challenge-icon">
+                                <Icon type="zap" />
+                            </div>
+                            <h3>Technical Issues Hurting Performance</h3>
+                            <p>Slow load times, poor mobile experience, and crawl errors are silently killing your rankings.</p>
+                        </div>
+                        <div className="challenge-card">
+                            <div className="challenge-icon warning">
+                                <Icon type="cpu" />
+                            </div>
+                            <h3>No Clear SEO Strategy</h3>
+                            <p>Random optimizations without a cohesive plan. You&apos;re spending money but not seeing ROI.</p>
+                        </div>
+                        <div className="challenge-card">
+                            <div className="challenge-icon danger">
+                                <Icon type="globe" />
+                            </div>
+                            <h3>Missing from AI Search</h3>
+                            <p>ChatGPT, Perplexity, and AI Overviews are changing search. If you&apos;re not there, you&apos;re invisible to the next generation.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Why SEO Is Essential Section */}
+            <section className="seo-essential">
+                <div className="seo-container">
+                    <div className="essential-grid">
+                        <div className="essential-content">
+                            <span className="section-label">THE OPPORTUNITY</span>
+                            <h2 className="section-title">
+                                Why SEO Is Essential<br />for <span className="text-gradient">Business Growth</span>
+                            </h2>
+                            <p className="section-subtitle">
+                                SEO isn&apos;t just about rankings—it&apos;s about building a predictable, scalable engine for growth that compounds over time.
+                            </p>
+                            <div className="essential-stats">
+                                <div className="essential-stat">
+                                    <span className="essential-number">68%</span>
+                                    <span className="essential-label">of all online experiences begin with a search engine</span>
+                                </div>
+                                <div className="essential-stat">
+                                    <span className="essential-number">53%</span>
+                                    <span className="essential-label">of website traffic comes from organic search</span>
+                                </div>
+                                <div className="essential-stat">
+                                    <span className="essential-number">14.6%</span>
+                                    <span className="essential-label">close rate from SEO leads vs. 1.7% for outbound</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="essential-benefits">
+                            <div className="essential-benefit">
+                                <div className="benefit-check">
+                                    <Icon type="check" />
+                                </div>
+                                <div className="benefit-text">
+                                    <h4>Sustainable Traffic</h4>
+                                    <p>Unlike paid ads, organic traffic doesn&apos;t stop when you stop paying. Build lasting visibility.</p>
+                                </div>
+                            </div>
+                            <div className="essential-benefit">
+                                <div className="benefit-check">
+                                    <Icon type="check" />
+                                </div>
+                                <div className="benefit-text">
+                                    <h4>Higher Trust & Credibility</h4>
+                                    <p>75% of users never scroll past page one. Ranking high signals authority and trust.</p>
+                                </div>
+                            </div>
+                            <div className="essential-benefit">
+                                <div className="benefit-check">
+                                    <Icon type="check" />
+                                </div>
+                                <div className="benefit-text">
+                                    <h4>Better ROI Than Paid Media</h4>
+                                    <p>SEO delivers a 5.3x higher ROI than paid search over a 3-year period.</p>
+                                </div>
+                            </div>
+                            <div className="essential-benefit">
+                                <div className="benefit-check">
+                                    <Icon type="check" />
+                                </div>
+                                <div className="benefit-text">
+                                    <h4>Compound Growth Effect</h4>
+                                    <p>Content and authority gains compound over time, creating an exponential growth curve.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -227,46 +304,89 @@ export function SEOPageContent() {
                 </div>
             </section>
 
-            {/* Process Section */}
-            <section className="seo-process">
+            {/* 6-Phase Methodology Section */}
+            <section className="seo-methodology">
                 <div className="seo-container">
                     <div className="section-header text-center">
                         <span className="section-label">OUR PROVEN PROCESS</span>
                         <h2 className="section-title">
-                            Our SEO Methodology Drives <span className="text-gradient">Impactful Business Results</span>
+                            Our Proven <span className="text-gradient">6-Phase SEO Methodology</span>
                         </h2>
+                        <p className="section-subtitle">
+                            A battle-tested framework refined over 500+ successful campaigns. Every phase builds on the last to create compounding growth.
+                        </p>
                     </div>
-                    <div className="process-timeline">
-                        <div className="process-step">
-                            <div className="step-number">1</div>
-                            <div className="step-content">
-                                <h3>Discovery & Audit</h3>
-                                <p>Deep dive into your business, competitors, and current SEO performance
-                                    to identify opportunities and gaps.</p>
+                    <div className="methodology-grid">
+                        <div className="methodology-phase">
+                            <div className="phase-number">01</div>
+                            <div className="phase-content">
+                                <h3>Discovery & Analysis</h3>
+                                <p>Deep dive into your business goals, competitive landscape, and current SEO health. We analyze 200+ ranking factors to identify your biggest opportunities.</p>
+                                <div className="phase-deliverables">
+                                    <span>Technical Audit</span>
+                                    <span>Competitor Analysis</span>
+                                    <span>Opportunity Map</span>
+                                </div>
                             </div>
                         </div>
-                        <div className="process-step">
-                            <div className="step-number">2</div>
-                            <div className="step-content">
-                                <h3>Strategy Development</h3>
-                                <p>Custom SEO roadmap with prioritized actions, keyword targets, and
-                                    content calendar aligned to your goals.</p>
+                        <div className="methodology-phase">
+                            <div className="phase-number">02</div>
+                            <div className="phase-content">
+                                <h3>Keyword Intelligence</h3>
+                                <p>Beyond basic keyword research—we map buyer intent, search patterns, and content gaps to build a keyword strategy that drives revenue, not just traffic.</p>
+                                <div className="phase-deliverables">
+                                    <span>Intent Mapping</span>
+                                    <span>Keyword Clusters</span>
+                                    <span>Priority Matrix</span>
+                                </div>
                             </div>
                         </div>
-                        <div className="process-step">
-                            <div className="step-number">3</div>
-                            <div className="step-content">
-                                <h3>Implementation</h3>
-                                <p>Execute technical fixes, content optimization, and link building
-                                    campaigns with precision and speed.</p>
+                        <div className="methodology-phase">
+                            <div className="phase-number">03</div>
+                            <div className="phase-content">
+                                <h3>Technical Foundation</h3>
+                                <p>Fix the technical issues holding you back. We optimize site architecture, Core Web Vitals, mobile experience, and implement schema markup for rich results.</p>
+                                <div className="phase-deliverables">
+                                    <span>Site Speed</span>
+                                    <span>Mobile Optimization</span>
+                                    <span>Schema Implementation</span>
+                                </div>
                             </div>
                         </div>
-                        <div className="process-step">
-                            <div className="step-number">4</div>
-                            <div className="step-content">
-                                <h3>Analysis & Optimization</h3>
-                                <p>Continuous monitoring, A/B testing, and iterative improvements
-                                    to maximize ROI and rankings.</p>
+                        <div className="methodology-phase">
+                            <div className="phase-number">04</div>
+                            <div className="phase-content">
+                                <h3>Content Excellence</h3>
+                                <p>Create and optimize content that ranks and converts. We develop topic clusters, pillar pages, and supporting content that establishes topical authority.</p>
+                                <div className="phase-deliverables">
+                                    <span>Content Roadmap</span>
+                                    <span>On-Page Optimization</span>
+                                    <span>Content Creation</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="methodology-phase">
+                            <div className="phase-number">05</div>
+                            <div className="phase-content">
+                                <h3>Authority Building</h3>
+                                <p>Build domain authority through strategic link building, digital PR, and brand mentions. We acquire high-quality backlinks from relevant, authoritative sources.</p>
+                                <div className="phase-deliverables">
+                                    <span>Link Acquisition</span>
+                                    <span>Digital PR</span>
+                                    <span>Brand Mentions</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="methodology-phase">
+                            <div className="phase-number">06</div>
+                            <div className="phase-content">
+                                <h3>Analyze & Scale</h3>
+                                <p>Continuous optimization based on performance data. We identify what&apos;s working, double down on winners, and scale successful strategies across your site.</p>
+                                <div className="phase-deliverables">
+                                    <span>Performance Reviews</span>
+                                    <span>A/B Testing</span>
+                                    <span>Growth Scaling</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -337,6 +457,99 @@ export function SEOPageContent() {
                                 Google Maps and local search results.
                             </p>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* SEO Subscription Packages */}
+            <section className="seo-pricing">
+                <div className="seo-container">
+                    <div className="section-header text-center">
+                        <span className="section-label">INVESTMENT</span>
+                        <h2 className="section-title">
+                            Your SEO Engine, <span className="text-gradient">On Subscription</span>
+                        </h2>
+                        <p className="section-subtitle">
+                            Predictable pricing. Scalable results. Choose the plan that matches your growth stage.
+                        </p>
+                    </div>
+                    <div className="pricing-grid">
+                        <div className="pricing-card">
+                            <div className="pricing-header">
+                                <h3>Growth</h3>
+                                <p className="pricing-description">For businesses ready to start their SEO journey</p>
+                            </div>
+                            <div className="pricing-price">
+                                <span className="price-currency">$</span>
+                                <span className="price-amount">2,500</span>
+                                <span className="price-period">/month</span>
+                            </div>
+                            <ul className="pricing-features">
+                                <li><Icon type="check" /> Technical SEO audit & fixes</li>
+                                <li><Icon type="check" /> Keyword research (50 keywords)</li>
+                                <li><Icon type="check" /> On-page optimization (10 pages/mo)</li>
+                                <li><Icon type="check" /> 4 SEO blog posts/month</li>
+                                <li><Icon type="check" /> Monthly reporting & strategy call</li>
+                                <li><Icon type="check" /> Google Business Profile optimization</li>
+                            </ul>
+                            <Link href="/contact" className="btn-outline">
+                                Get Started
+                            </Link>
+                        </div>
+                        <div className="pricing-card featured">
+                            <div className="pricing-badge">MOST POPULAR</div>
+                            <div className="pricing-header">
+                                <h3>Scale</h3>
+                                <p className="pricing-description">For businesses serious about dominating search</p>
+                            </div>
+                            <div className="pricing-price">
+                                <span className="price-currency">$</span>
+                                <span className="price-amount">5,000</span>
+                                <span className="price-period">/month</span>
+                            </div>
+                            <ul className="pricing-features">
+                                <li><Icon type="check" /> Everything in Growth, plus:</li>
+                                <li><Icon type="check" /> Advanced technical optimization</li>
+                                <li><Icon type="check" /> Keyword research (150 keywords)</li>
+                                <li><Icon type="check" /> On-page optimization (25 pages/mo)</li>
+                                <li><Icon type="check" /> 8 SEO blog posts/month</li>
+                                <li><Icon type="check" /> Link building (10 links/month)</li>
+                                <li><Icon type="check" /> Competitor tracking & analysis</li>
+                                <li><Icon type="check" /> Bi-weekly strategy calls</li>
+                            </ul>
+                            <Link href="/contact" className="btn-primary">
+                                Get Started
+                                <Icon type="arrowRight" />
+                            </Link>
+                        </div>
+                        <div className="pricing-card">
+                            <div className="pricing-header">
+                                <h3>Enterprise</h3>
+                                <p className="pricing-description">For market leaders who demand the best</p>
+                            </div>
+                            <div className="pricing-price">
+                                <span className="price-currency">$</span>
+                                <span className="price-amount">10,000</span>
+                                <span className="price-period">/month</span>
+                            </div>
+                            <ul className="pricing-features">
+                                <li><Icon type="check" /> Everything in Scale, plus:</li>
+                                <li><Icon type="check" /> GEO & AEO optimization</li>
+                                <li><Icon type="check" /> Unlimited keyword research</li>
+                                <li><Icon type="check" /> Unlimited on-page optimization</li>
+                                <li><Icon type="check" /> 16 SEO blog posts/month</li>
+                                <li><Icon type="check" /> Link building (25 links/month)</li>
+                                <li><Icon type="check" /> Dedicated SEO strategist</li>
+                                <li><Icon type="check" /> Weekly strategy calls</li>
+                                <li><Icon type="check" /> Real-time Slack support</li>
+                            </ul>
+                            <Link href="/contact" className="btn-outline">
+                                Contact Sales
+                            </Link>
+                        </div>
+                    </div>
+                    <div className="pricing-note">
+                        <p>All plans include a 90-day commitment. Custom enterprise solutions available.</p>
                     </div>
                 </div>
             </section>
@@ -467,6 +680,12 @@ export function SEOPageContent() {
                                 <p>We combine traditional SEO expertise with cutting-edge AI and GEO
                                     strategies. Our team includes former Google engineers and we stay
                                     ahead of algorithm changes, not react to them.</p>
+                            </details>
+                            <details className="faq-item">
+                                <summary>Can I cancel my subscription?</summary>
+                                <p>After the initial 90-day commitment period, you can cancel with 30 days notice.
+                                    However, SEO works best with consistent, long-term investment. Most clients
+                                    see their best results after 12+ months of partnership.</p>
                             </details>
                         </div>
                     </div>

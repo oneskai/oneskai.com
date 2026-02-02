@@ -1014,6 +1014,368 @@
     color: rgba(255, 255, 255, 0.6);
 }
 
+/* ===== CHALLENGES SECTION ===== */
+.seo-challenges {
+    padding: 100px 0;
+    background: white;
+}
+
+.challenges-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 60px;
+}
+
+.challenge-card {
+    padding: 36px;
+    background: var(--bg-cream);
+    border-radius: 20px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.challenge-card:hover {
+    border-color: var(--accent-pink);
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.challenge-icon {
+    width: 56px;
+    height: 56px;
+    background: rgba(5, 46, 38, 0.1);
+    color: var(--primary-green);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.challenge-icon.warning {
+    background: rgba(255, 199, 0, 0.15);
+    color: #b8860b;
+}
+
+.challenge-icon.danger {
+    background: rgba(255, 35, 196, 0.1);
+    color: var(--accent-pink);
+}
+
+.challenge-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.challenge-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--text-dark);
+}
+
+.challenge-card p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--text-gray);
+}
+
+/* ===== WHY SEO IS ESSENTIAL SECTION ===== */
+.seo-essential {
+    padding: 100px 0;
+    background: linear-gradient(135deg, var(--bg-cream) 0%, rgba(255, 35, 196, 0.03) 100%);
+}
+
+.essential-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.essential-content .section-title {
+    font-size: 40px;
+}
+
+.essential-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 40px;
+}
+
+.essential-stat {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.essential-number {
+    font-size: 48px;
+    font-weight: 800;
+    color: var(--accent-pink);
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.essential-label {
+    font-size: 16px;
+    color: var(--text-gray);
+    line-height: 1.5;
+}
+
+.essential-benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.essential-benefit {
+    display: flex;
+    gap: 20px;
+    padding: 28px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.essential-benefit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-check {
+    width: 40px;
+    height: 40px;
+    background: rgba(5, 46, 38, 0.1);
+    color: var(--primary-green);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.benefit-check svg {
+    width: 20px;
+    height: 20px;
+}
+
+.benefit-text h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: var(--text-dark);
+}
+
+.benefit-text p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-gray);
+}
+
+/* ===== 6-PHASE METHODOLOGY SECTION ===== */
+.seo-methodology {
+    padding: 100px 0;
+    background: white;
+}
+
+.methodology-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 60px;
+}
+
+.methodology-phase {
+    background: var(--bg-cream);
+    border-radius: 20px;
+    padding: 36px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.methodology-phase:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.methodology-phase .phase-number {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 800;
+    color: white;
+    background: var(--primary-green);
+    padding: 8px 16px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+}
+
+.phase-content h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--text-dark);
+}
+
+.phase-content p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--text-gray);
+    margin-bottom: 20px;
+}
+
+.phase-deliverables {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.phase-deliverables span {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--primary-green);
+    background: rgba(5, 46, 38, 0.1);
+    padding: 6px 12px;
+    border-radius: 100px;
+}
+
+/* ===== PRICING SECTION ===== */
+.seo-pricing {
+    padding: 100px 0;
+    background: var(--bg-cream);
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 60px;
+}
+
+.pricing-card {
+    background: white;
+    border-radius: 24px;
+    padding: 40px;
+    position: relative;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-card.featured {
+    border-color: var(--accent-pink);
+    background: linear-gradient(180deg, white 0%, rgba(255, 35, 196, 0.03) 100%);
+}
+
+.pricing-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, var(--accent-pink), #a855f7);
+    color: white;
+    padding: 6px 20px;
+    border-radius: 100px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.pricing-header {
+    margin-bottom: 24px;
+}
+
+.pricing-header h3 {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+
+.pricing-description {
+    font-size: 14px;
+    color: var(--text-gray);
+    line-height: 1.5;
+}
+
+.pricing-price {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+    margin-bottom: 32px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.price-currency {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.price-amount {
+    font-size: 56px;
+    font-weight: 800;
+    color: var(--primary-green);
+    line-height: 1;
+}
+
+.price-period {
+    font-size: 16px;
+    color: var(--text-gray);
+}
+
+.pricing-features {
+    list-style: none;
+    margin-bottom: 32px;
+}
+
+.pricing-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 15px;
+    color: var(--text-dark);
+    padding: 10px 0;
+}
+
+.pricing-features li:first-child {
+    font-weight: 600;
+}
+
+.pricing-features svg {
+    width: 18px;
+    height: 18px;
+    color: var(--accent-pink);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.pricing-card .btn-primary,
+.pricing-card .btn-outline {
+    width: 100%;
+    justify-content: center;
+}
+
+.pricing-note {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.pricing-note p {
+    font-size: 14px;
+    color: var(--text-gray);
+}
+
 /* ===== RESPONSIVE STYLES ===== */
 @media (max-width: 1200px) {
     .seo-hero-grid {
@@ -1053,12 +1415,19 @@
     }
 
     .industries-grid,
-    .faq-layout {
+    .faq-layout,
+    .essential-grid {
         grid-template-columns: 1fr;
         gap: 40px;
     }
 
     .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .challenges-grid,
+    .methodology-grid,
+    .pricing-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
@@ -1104,7 +1473,10 @@
     .services-grid,
     .results-grid,
     .testimonials-grid,
-    .process-timeline {
+    .process-timeline,
+    .challenges-grid,
+    .methodology-grid,
+    .pricing-grid {
         grid-template-columns: 1fr;
     }
 
@@ -1114,5 +1486,22 @@
 
     .cta-title {
         font-size: 32px;
+    }
+
+    .essential-number {
+        font-size: 36px;
+    }
+
+    .essential-stat {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .price-amount {
+        font-size: 44px;
+    }
+
+    .pricing-card {
+        padding: 30px;
     }
 }
