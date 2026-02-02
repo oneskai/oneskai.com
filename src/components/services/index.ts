@@ -1,0 +1,1 @@
+export { SEOPageContent } from './SEOPageContent';

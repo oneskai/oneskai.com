@@ -7,9 +7,9 @@ interface BadgeProps {
 }
 
 const variants = {
-  default: 'bg-gradient-to-r from-purple-500 to-purple-700',
-  new: 'bg-gradient-to-r from-green-500 to-emerald-600',
-  hiring: 'bg-gradient-to-r from-blue-500 to-indigo-600',
+  default: 'bg-[#ff23c4]/10 text-[#ff23c4] border border-[#ff23c4]/20',
+  new: 'bg-emerald-500/10 text-emerald-600 border border-emerald-500/20',
+  hiring: 'bg-blue-500/10 text-blue-600 border border-blue-500/20',
 };
 
 export function Badge({ children, variant = 'default', className = '' }: BadgeProps) {

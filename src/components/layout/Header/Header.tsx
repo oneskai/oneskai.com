@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Icon } from '@/components/ui/Icon';
 import { Badge } from '@/components/ui/Badge';
 import { ThemeToggle } from '@/components/ui/ThemeToggle';
@@ -44,24 +44,148 @@ function MegaMenuLink({
   href,
   children,
   megaMenu,
+  variant,
 }: {
   href: string;
   children: React.ReactNode;
   megaMenu?: React.ReactNode;
+  variant?: 'narrow';
 }) {
   return (
     <div className="nav-item-wrapper">
       <Link href={href} className="nav-link">
         {children}
-        {megaMenu && <span className="dropdown-arrow">▾</span>}
+        {megaMenu && <span className="dropdown-arrow"><Icon type="chevronDown" /></span>}
       </Link>
-      {megaMenu && <div className="mega-menu">{megaMenu}</div>}
+      {megaMenu && <div className={`mega-menu ${variant || ''}`}>{megaMenu}</div>}
+    </div>
+  );
+}
+
+// Services Mega Menu Component
+function ServicesMegaMenu() {
+  const [activeTab, setActiveTab] = useState('growth');
+
+  const tabs = [
+    { id: 'growth', title: 'Growth Marketing', desc: 'Data-driven strategies to boost customer value.' },
+    { id: 'consulting', title: 'Marketing Consulting', desc: 'Transformative growth with bespoke strategies.' },
+    { id: 'data', title: 'Marketing Intelligence', desc: 'Leverage data to enhance marketing outcomes.' },
+    { id: 'creative', title: 'Creatives', desc: 'Captivating campaigns for every customer touchpoint.' },
+  ];
+
+  const content: Record<string, React.ReactNode> = {
+    growth: (
+      <div className="services-tab-content">
+        <div className="services-category-section">
+          <h4 className="services-category-title">Owned Media</h4>
+          <div className="services-grid-new">
+            <MegaMenuItem icon="search" title="Search Engine Optimization" description="Grow traffic where users shop." href="/services/seo" />
+            <MegaMenuItem icon="cpu" title="Generative Engine Optimization" description="Make your brand visible across AI search." href="/services/geo" />
+            <MegaMenuItem icon="smartphone" title="App Store Optimization" description="App Store Growth & Visibility." href="/services/aso" />
+            <MegaMenuItem icon="fileText" title="Content marketing" description="Engage customers at every journey stage." href="/services/content-marketing" />
+            <MegaMenuItem icon="mail" title="Email & SMS" description="Retain customers, expand lifetime value." href="/services/email-marketing" />
+            <MegaMenuItem icon="activity" title="Social Media" description="Connect authentically through social media." href="/services/social-media" />
+          </div>
+        </div>
+        <div className="services-category-section">
+          <h4 className="services-category-title">Paid Media</h4>
+          <div className="services-grid-new">
+            <MegaMenuItem icon="hash" title="Paid Social Advertising" description="Targeted campaigns across major social platforms." href="/services/paid-social" />
+            <MegaMenuItem icon="play" title="Search & PPC Advertising" description="Google, Bing & YouTube search dominance." href="/services/ppc" />
+            <MegaMenuItem icon="analytics" title="Display & Programmatic Advertising" description="Data-driven media buying at scale." href="/services/programmatic" />
+            <MegaMenuItem icon="zap" title="Remarketing & Retargeting" description="Re-engage visitors and recover lost conversions." href="/services/remarketing" />
+          </div>
+        </div>
+      </div>
+    ),
+    data: (
+      <div className="services-tab-content">
+        <div className="services-category-section">
+          <h4 className="services-category-title">Intelligence & Analytics</h4>
+          <div className="services-grid-new">
+            <MegaMenuItem icon="analytics" title="Data Audits" description="Evaluate your current data infrastructure." href="/services/data-audits" />
+            <MegaMenuItem icon="target" title="Attribution" description="Understand the true value of every channel." href="/services/attribution" />
+            <MegaMenuItem icon="zap" title="Predictive Analytics" description="Forecast trends and customer behavior." href="/services/predictive" />
+            <MegaMenuItem icon="activity" title="Google Analytics 4 Strategy" description="Clean migrations and advanced tracking." href="/services/ga4" />
+            <MegaMenuItem icon="cpu" title="Business Intelligence Dashboards" description="Real-time insights for better decisions." href="/services/bi" />
+          </div>
+        </div>
+      </div>
+    ),
+    consulting: (
+      <div className="services-tab-content">
+        <div className="services-category-section">
+          <h4 className="services-category-title">Marketing Consulting</h4>
+          <div className="services-grid-new">
+            <MegaMenuItem icon="users" title="Fractional Chief Marketing Officer" description="High-level strategy without the overhead." href="/services/fractional-cmo" />
+            <MegaMenuItem icon="briefcase" title="Consulting" description="Navigate complexity with expert consulting." href="/services/consulting" />
+            <MegaMenuItem icon="target" title="Full Go-To-Market Strategy" description="Data-driven GTM digital strategy." href="/services/gtm" />
+            <MegaMenuItem icon="activity" title="Media Planning Scenarios" description="Optimize ad spend with forecasting." href="/services/media-planning" />
+            <MegaMenuItem icon="users" title="Persona Development" description="Develop data-driven customer profiles." href="/services/persona-development" />
+            <MegaMenuItem icon="search" title="Market Research" description="Deep dives into your target audience." href="/services/market-research" />
+          </div>
+        </div>
+      </div>
+    ),
+    creative: (
+      <div className="services-tab-content">
+        <div className="services-category-section">
+          <h4 className="services-category-title">Creative & Development</h4>
+          <div className="services-grid-new">
+            <MegaMenuItem icon="globe" title="Web Design & Development" description="Custom, fast & conversion-focused." href="/services/web-design" />
+            <MegaMenuItem icon="award" title="Brand Identity" description="Logos, voice, and visual guidelines." href="/services/branding" />
+            <MegaMenuItem icon="video" title="Video Production" description="High-impact video for paid & social." href="/services/video" />
+            <MegaMenuItem icon="zap" title="Ad Creatives" description="Performance-driven design for ads." href="/services/ads-creative" />
+            <MegaMenuItem icon="smartphone" title="User Interface & User Experience Design" description="Conversion-focused digital experiences." href="/services/ui-ux" />
+            <MegaMenuItem icon="fileText" title="Copywriting" description="Persuasive words that drive action." href="/services/copywriting" />
+          </div>
+        </div>
+      </div>
+    ),
+  };
+
+  return (
+    <div className="services-mega-menu">
+      <div className="services-sidebar">
+        {tabs.map((tab) => (
+          <button
+            key={tab.id}
+            className={`services-tab-btn ${activeTab === tab.id ? 'active' : ''}`}
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              setActiveTab(tab.id);
+            }}
+          >
+            <span className="tab-title">{tab.title}</span>
+            <span className="tab-desc">{tab.desc}</span>
+          </button>
+        ))}
+        <div className="services-footer">
+          <Link href="/services" className="view-all-btn">
+            View all services <Icon type="arrowRight" />
+          </Link>
+        </div>
+      </div>
+      <div className="services-content">
+        {content[activeTab]}
+      </div>
     </div>
   );
 }
 
 export function Header({ navigation }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   // Default navigation if not provided from CMS
   const defaultNav = {
@@ -71,123 +195,162 @@ export function Header({ navigation }: HeaderProps) {
         label: 'Services',
         href: '/services',
         hasMegaMenu: true,
-        megaMenuColumns: [
-          {
-            _key: 'digital',
-            heading: 'Digital Services',
-            items: [
-              { _key: '1', icon: 'analytics', title: 'Digital Analytics', description: 'Unlock insights from your data', href: '/services/analytics' },
-              { _key: '2', icon: 'cart', title: 'Ecommerce Strategy', description: 'Build a powerful online store', href: '/services/ecommerce' },
-              { _key: '3', icon: 'zap', title: 'Digital Performance', description: 'Optimize your digital presence', href: '/services/performance' },
-            ],
-          },
-          {
-            _key: 'marketing',
-            heading: 'Marketing Services',
-            items: [
-              { _key: '4', icon: 'target', title: 'Digital Ads', description: 'Data-driven campaigns', href: '/services/ads' },
-              { _key: '5', icon: 'smartphone', title: 'Social Media', description: 'Build brand awareness', href: '/services/social' },
-              { _key: '6', icon: 'search', title: 'SEO Strategy', description: 'Improve rankings', href: '/services/seo' },
-            ],
-          },
-          {
-            _key: 'dev',
-            heading: 'Development',
-            items: [
-              { _key: '7', icon: 'code', title: 'Web Development', description: 'Modern web solutions', href: '/services/web' },
-              { _key: '8', icon: 'mobile', title: 'Mobile Apps', description: 'Native and cross-platform', href: '/services/mobile', badge: 'New' },
-              { _key: '9', icon: 'cloud', title: 'Cloud Solutions', description: 'Scalable infrastructure', href: '/services/cloud' },
-            ],
-          },
-        ],
+        megaMenu: <ServicesMegaMenu />,
       },
       {
-        _key: 'industries',
-        label: 'Industries',
-        href: '/industries',
+        _key: 'solutions',
+        label: 'Solutions',
+        href: '/solutions',
         hasMegaMenu: true,
-        megaMenuColumns: [
-          {
-            _key: 'industries1',
-            heading: 'Industries We Serve',
-            items: [
-              { _key: '1', icon: 'heart', title: 'Healthcare', description: 'Digital healthcare solutions', href: '/industries/healthcare' },
-              { _key: '2', icon: 'building', title: 'Finance', description: 'Secure fintech solutions', href: '/industries/finance' },
-              { _key: '3', icon: 'cart', title: 'Retail & Ecommerce', description: 'Digital retail transformation', href: '/industries/retail' },
-            ],
-          },
-          {
-            _key: 'industries2',
-            heading: '\u00A0',
-            items: [
-              { _key: '4', icon: 'book', title: 'Education', description: 'E-learning platforms', href: '/industries/education' },
-              { _key: '5', icon: 'activity', title: 'Manufacturing', description: 'Industry 4.0 solutions', href: '/industries/manufacturing' },
-              { _key: '6', icon: 'zap', title: 'Automotive', description: 'Connected vehicle solutions', href: '/industries/automotive' },
-            ],
-          },
-        ],
+        megaMenu: (
+          <div className="mega-menu-container">
+            <div className="mega-menu-main">
+              <div className="mega-menu-sidebar">
+                <div className="feature-card">
+                  <div className="feature-card-icon">
+                    <Icon type="analytics" />
+                  </div>
+                  <h3 className="feature-card-title">Success Stories</h3>
+                  <p className="feature-card-desc">
+                    See how we've helped businesses achieve 10x growth through our tailored solutions.
+                  </p>
+                  <Link href="/work" className="feature-card-btn">
+                    View Case Studies <Icon type="arrowRight" />
+                  </Link>
+                </div>
+              </div>
+              <div className="mega-menu-grid">
+                <div className="mega-menu-column">
+                  <h4 className="mega-menu-heading">Growth & Performance</h4>
+                  <MegaMenuItem key="lead-gen" icon="target" title="Lead Generation" description="Convert traffic into customers" href="/solutions/lead-generation" />
+                  <MegaMenuItem key="ecom-growth" icon="cart" title="eCommerce Growth" description="Scale your online revenue" href="/solutions/ecommerce" />
+                  <MegaMenuItem key="revenue" icon="activity" title="Revenue Optimization" description="Maximize marketing ROI" href="/solutions/revenue-optimization" />
+                </div>
+                <div className="mega-menu-column">
+                  <h4 className="mega-menu-heading">Brand & Presence</h4>
+                  <MegaMenuItem key="reputation" icon="award" title="Market Leadership" description="Dominate your industry niche" href="/solutions/market-leadership" />
+                  <MegaMenuItem key="social-influence" icon="hash" title="Social Influence" description="Build a loyal online community" href="/solutions/social-influence" />
+                  <MegaMenuItem key="brand-evolution" icon="zap" title="Digital Evolution" description="Transform your brand's future" href="/solutions/digital-evolution" />
+                </div>
+                <div className="mega-menu-column">
+                  <h4 className="mega-menu-heading">Future-Ready</h4>
+                  <MegaMenuItem key="ai-integration" icon="cpu" title="AI Integration" description="Leverage AI for efficiency" href="/solutions/ai-integration" />
+                  <MegaMenuItem key="seo-dominance" icon="search" title="Search Dominance" description="Own the search landscape" href="/solutions/search-dominance" />
+                  <MegaMenuItem key="mobile-first" icon="smartphone" title="Mobile-First Strategy" description="Win on every hand-held device" href="/solutions/mobile-first" />
+                </div>
+              </div>
+            </div>
+            <div className="mega-menu-footer">
+              <Link href="/contact" className="mega-menu-footer-link">
+                Schedule Call <Icon type="arrowRight" />
+              </Link>
+            </div>
+          </div>
+        ),
       },
+
       {
         _key: 'about',
         label: 'About',
         href: '/about',
         hasMegaMenu: true,
-        megaMenuColumns: [
-          {
-            _key: 'company',
-            heading: 'Company',
-            items: [
-              { _key: '1', icon: 'building', title: 'About Us', description: 'Our mission and values', href: '/about' },
-              { _key: '2', icon: 'users', title: 'Our Team', description: 'Meet our experts', href: '/about/team' },
-              { _key: '3', icon: 'briefcase', title: 'Careers', description: 'Join our team', href: '/careers', badge: 'Hiring' },
-            ],
-          },
-          {
-            _key: 'story',
-            heading: 'Our Story',
-            items: [
-              { _key: '4', icon: 'activity', title: 'Our Process', description: 'How we deliver results', href: '/about/process' },
-              { _key: '5', icon: 'award', title: 'Awards', description: 'Recognition and achievements', href: '/about/awards' },
-              { _key: '6', icon: 'handshake', title: 'Partners', description: 'Strategic partnerships', href: '/about/partners' },
-            ],
-          },
-        ],
+        variant: 'narrow' as const,
+        megaMenu: (
+          <div className="mega-menu-container">
+            <div className="mega-menu-main">
+              <div className="mega-menu-sidebar">
+                <div className="feature-card">
+                  <div className="feature-card-icon">
+                    <Icon type="users" />
+                  </div>
+                  <h3 className="feature-card-title">Join the Evolution</h3>
+                  <p className="feature-card-desc">
+                    We're always looking for talented individuals to join our mission of enabling digital evolution.
+                  </p>
+                  <Link href="/careers" className="feature-card-btn">
+                    View Openings <Icon type="arrowRight" />
+                  </Link>
+                </div>
+              </div>
+              <div className="mega-menu-grid">
+                <div className="mega-menu-column">
+                  <h4 className="mega-menu-heading">Company</h4>
+                  <MegaMenuItem key="1" icon="building" title="About Us" description="Our mission and values" href="/about" />
+                  <MegaMenuItem key="2" icon="users" title="Our Team" description="Meet our experts" href="/about/team" />
+                  <MegaMenuItem key="3" icon="briefcase" title="Careers" description="Join our team" href="/careers" badge="Hiring" />
+                </div>
+                <div className="mega-menu-column">
+                  <h4 className="mega-menu-heading">Our Story</h4>
+                  <MegaMenuItem key="4" icon="activity" title="Our Process" description="How we deliver results" href="/about/process" />
+                  <MegaMenuItem key="5" icon="award" title="Awards" description="Recognition and achievements" href="/about/awards" />
+                  <MegaMenuItem key="6" icon="handshake" title="Partners" description="Strategic partnerships" href="/about/partners" />
+                </div>
+              </div>
+            </div>
+            <div className="mega-menu-footer">
+              <Link href="/contact" className="mega-menu-footer-link">
+                Schedule Call <Icon type="arrowRight" />
+              </Link>
+            </div>
+          </div>
+        ),
       },
+
       {
         _key: 'resources',
         label: 'Resources',
         href: '/resources',
         hasMegaMenu: true,
-        megaMenuColumns: [
-          {
-            _key: 'learn',
-            heading: 'Learn',
-            items: [
-              { _key: '1', icon: 'fileText', title: 'Blog', description: 'Latest insights', href: '/blog' },
-              { _key: '2', icon: 'book', title: 'Guides & Ebooks', description: 'In-depth resources', href: '/resources/guides' },
-              { _key: '3', icon: 'video', title: 'Webinars', description: 'Live and recorded sessions', href: '/resources/webinars' },
-            ],
-          },
-          {
-            _key: 'support',
-            heading: 'Support',
-            items: [
-              { _key: '4', icon: 'book', title: 'Documentation', description: 'Technical docs', href: '/docs' },
-              { _key: '5', icon: 'help', title: 'FAQ', description: 'Common questions', href: '/faq' },
-              { _key: '6', icon: 'message', title: 'Community', description: 'Join our forum', href: '/community' },
-            ],
-          },
-        ],
+        variant: 'narrow' as const,
+        megaMenu: (
+          <div className="mega-menu-container">
+            <div className="mega-menu-main">
+              <div className="mega-menu-sidebar">
+                <div className="feature-card">
+                  <div className="feature-card-icon">
+                    <Icon type="megaphone" />
+                  </div>
+                  <h3 className="feature-card-title">Stay Informed</h3>
+                  <p className="feature-card-desc">
+                    Get the latest digital evolution insights and strategies delivered to your inbox.
+                  </p>
+                  <Link href="/newsletter" className="feature-card-btn">
+                    Subscribe Now <Icon type="arrowRight" />
+                  </Link>
+                </div>
+              </div>
+              <div className="mega-menu-grid">
+                <div className="mega-menu-column">
+                  <h4 className="mega-menu-heading">Learn</h4>
+                  <MegaMenuItem key="1" icon="fileText" title="Blog" description="Latest insights" href="/blog" />
+                  <MegaMenuItem key="2" icon="book" title="Guides & Ebooks" description="In-depth resources" href="/resources/guides" />
+                  <MegaMenuItem key="3" icon="video" title="Webinars" description="Live and recorded sessions" href="/resources/webinars" />
+                </div>
+                <div className="mega-menu-column">
+                  <h4 className="mega-menu-heading">Support</h4>
+                  <MegaMenuItem key="4" icon="book" title="Documentation" description="Technical docs" href="/docs" />
+                  <MegaMenuItem key="5" icon="help" title="FAQ" description="Common questions" href="/faq" />
+                  <MegaMenuItem key="6" icon="message" title="Community" description="Join our forum" href="/community" />
+                </div>
+              </div>
+            </div>
+            <div className="mega-menu-footer">
+              <Link href="/contact" className="mega-menu-footer-link">
+                Schedule Call <Icon type="arrowRight" />
+              </Link>
+            </div>
+          </div>
+        ),
       },
       { _key: 'contact', label: 'Contact', href: '/contact', hasMegaMenu: false },
     ],
-    ctaButton: { text: 'Get a Quote', href: '/contact' },
-  };
+    ctaButton: { text: 'Work with Us', href: '/contact' },
+  } as Navigation;
 
   const navData = navigation || defaultNav;
 
   return (
-    <header className="header">
+    <header className={`header ${scrolled ? 'scrolled' : ''}`}>
       <div className="container header-inner">
         <Link href="/" className="logo">
           <span style={{ color: 'var(--accent-pink)' }}>O</span>NESKAI
@@ -195,29 +358,34 @@ export function Header({ navigation }: HeaderProps) {
 
         {/* Desktop Navigation */}
         <nav className="nav desktop-only">
-          {navData.mainNav?.map((item) => (
+          {navData.mainNav?.map((item: any) => (
             <MegaMenuLink
               key={item._key}
               href={item.href}
+              variant={item.variant}
               megaMenu={
-                item.hasMegaMenu && item.megaMenuColumns ? (
-                  <div className={`mega-menu-grid ${item.megaMenuColumns.length === 2 ? 'mega-menu-compact' : ''}`}>
-                    {item.megaMenuColumns.map((column) => (
-                      <div key={column._key} className="mega-menu-column">
-                        <h4 className="mega-menu-heading">{column.heading}</h4>
-                        {column.items?.map((menuItem) => (
-                          <MegaMenuItem
-                            key={menuItem._key}
-                            icon={menuItem.icon || 'target'}
-                            title={menuItem.title}
-                            description={menuItem.description || ''}
-                            href={menuItem.href}
-                            badge={menuItem.badge}
-                          />
-                        ))}
-                      </div>
-                    ))}
-                  </div>
+                item.hasMegaMenu && item.megaMenu ? (
+                  Array.isArray(item.megaMenu) ? (
+                    <div className={`mega-menu-grid ${item.megaMenu.length === 2 ? 'mega-menu-compact' : ''}`}>
+                      {item.megaMenu.map((column: any) => (
+                        <div key={column._key} className="mega-menu-column">
+                          <h4 className="mega-menu-heading">{column.heading}</h4>
+                          {column.items?.map((menuItem: any) => (
+                            <MegaMenuItem
+                              key={menuItem._key}
+                              icon={menuItem.icon || 'target'}
+                              title={menuItem.title}
+                              description={menuItem.description || ''}
+                              href={menuItem.href}
+                              badge={menuItem.badge}
+                            />
+                          ))}
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    item.megaMenu
+                  )
                 ) : undefined
               }
             >
@@ -229,7 +397,7 @@ export function Header({ navigation }: HeaderProps) {
         <div className="header-cta">
           <ThemeToggle />
           <Link href={navData.ctaButton?.href || '/contact'} className="btn-talk">
-            {navData.ctaButton?.text || 'Get a Quote'}
+            {navData.ctaButton?.text || 'Work with Us'}
           </Link>
 
           {/* Mobile Menu Button */}
@@ -261,7 +429,7 @@ export function Header({ navigation }: HeaderProps) {
             className="mobile-nav-cta"
             onClick={() => setMobileMenuOpen(false)}
           >
-            {navData.ctaButton?.text || 'Get a Quote'}
+            {navData.ctaButton?.text || 'Work with Us'}
           </Link>
         </div>
       )}

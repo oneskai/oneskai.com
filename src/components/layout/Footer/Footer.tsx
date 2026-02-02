@@ -1,4 +1,7 @@
+'use client';
+
 import Link from 'next/link';
+import { Icon } from '@/components/ui/Icon';
 import type { Footer as FooterType, SiteSettings } from '@/types/sanity';
 
 interface FooterProps {
@@ -7,145 +10,139 @@ interface FooterProps {
 }
 
 export function Footer({ footer, siteSettings }: FooterProps) {
-  // Default footer content
-  const defaultFooter = {
-    ctaTitle: 'Start your business transformation today!',
-    ctaButtons: [
-      { _key: '1', label: 'Our Services', href: '/services', variant: 'outline' as const },
-      { _key: '2', label: 'Get Started', href: '/contact', variant: 'primary' as const },
-    ],
-    description: 'We empower businesses with digital solutions that drive results and foster growth.',
-    columns: [
-      {
-        _key: '1',
-        title: 'Services',
-        links: [
-          { _key: '1', label: 'Digital Strategy', href: '/services/strategy' },
-          { _key: '2', label: 'Development', href: '/services/development' },
-          { _key: '3', label: 'Design', href: '/services/design' },
-          { _key: '4', label: 'Ecommerce', href: '/services/ecommerce' },
-        ],
-      },
-      {
-        _key: '2',
-        title: 'Agency',
-        links: [
-          { _key: '1', label: 'About us', href: '/about' },
-          { _key: '2', label: 'Process', href: '/about/process' },
-          { _key: '3', label: 'The Team', href: '/about/team' },
-          { _key: '4', label: 'Careers', href: '/careers' },
-        ],
-      },
-      {
-        _key: '3',
-        title: 'Resources',
-        links: [
-          { _key: '1', label: 'Blog', href: '/blog' },
-          { _key: '2', label: 'News', href: '/news' },
-          { _key: '3', label: 'Events', href: '/events' },
-          { _key: '4', label: 'Case Studies', href: '/case-studies' },
-        ],
-      },
-    ],
-    bottomText: '© 2024 Oneskai Digital. All rights reserved.',
-    bottomLinks: [
-      { _key: '1', label: 'Privacy Policy', href: '/privacy' },
-      { _key: '2', label: 'Terms of Service', href: '/terms' },
-    ],
-  };
-
-  const data = footer || defaultFooter;
   const contactEmail = siteSettings?.contactEmail || 'hello@oneskai.com';
-  const socialLinks = siteSettings?.socialLinks || [];
 
   return (
-    <footer className="footer">
-      <div className="container">
-        {/* Newsletter/CTA Bar */}
-        <div className="newsletter-bar">
-          <h2>{data.ctaTitle}</h2>
-          <div style={{ display: 'flex', gap: '15px' }}>
-            {data.ctaButtons?.map((btn) => (
-              <Link
-                key={btn._key}
-                href={btn.href}
-                className="cta-btn"
-                style={
-                  btn.variant === 'outline'
-                    ? { background: 'transparent', border: '1px solid white', color: 'white' }
-                    : undefined
-                }
-              >
-                {btn.label}
-              </Link>
-            ))}
+    <footer className="site-footer">
+      <div className="footer-wrapper">
+        {/* Top CTA Section */}
+        <div className="footer-cta-section">
+          <div className="footer-cta-content">
+            <h2 className="footer-cta-heading">
+              Ready to <span className="text-accent">accelerate</span> your growth?
+            </h2>
+            <p className="footer-cta-text">
+              Join 200+ brands that have transformed their digital presence with Oneskai.
+            </p>
           </div>
-        </div>
-
-        {/* Footer Columns */}
-        <div className="footer-columns">
-          {/* Company Info */}
-          <div className="footer-col">
-            <Link href="/" className="logo" style={{ color: 'white', marginBottom: '20px', display: 'block' }}>
-              <span style={{ color: 'var(--accent-pink)' }}>O</span>NESKAI
+          <div className="footer-cta-actions">
+            <Link href="/contact" className="footer-cta-btn-primary">
+              Start Your Journey
+              <Icon type="arrowRight" />
             </Link>
-            <p style={{ color: '#888', maxWidth: '250px' }}>{data.description}</p>
-          </div>
-
-          {/* Dynamic Columns */}
-          {data.columns?.map((column) => (
-            <div key={column._key} className="footer-col">
-              <h5>{column.title}</h5>
-              <ul>
-                {column.links?.map((link) => (
-                  <li key={link._key}>
-                    <Link href={link.href}>{link.label}</Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-
-          {/* Contact Info */}
-          <div className="footer-col">
-            <h5>Get in touch</h5>
-            <p style={{ color: '#888', marginBottom: '15px' }}>{contactEmail}</p>
-            {socialLinks.length > 0 && (
-              <div style={{ display: 'flex', gap: '15px' }}>
-                {socialLinks.map((social) => (
-                  <a
-                    key={social._key}
-                    href={social.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{ color: '#888' }}
-                  >
-                    {social.platform?.substring(0, 2)}
-                  </a>
-                ))}
-              </div>
-            )}
-            {socialLinks.length === 0 && (
-              <div style={{ display: 'flex', gap: '15px' }}>
-                {['tw', 'fb', 'li', 'ig'].map((s) => (
-                  <span key={s} style={{ color: '#888' }}>
-                    {s}
-                  </span>
-                ))}
-              </div>
-            )}
+            <Link href="/work" className="footer-cta-btn-outline">
+              View Case Studies
+            </Link>
           </div>
         </div>
 
-        {/* Footer Bottom */}
-        <div className="footer-bottom">
-          <p>{data.bottomText}</p>
-          <div style={{ display: 'flex', gap: '20px' }}>
-            {data.bottomLinks?.map((link) => (
-              <Link key={link._key} href={link.href}>
-                {link.label}
-              </Link>
-            ))}
+        {/* Main Footer Content */}
+        <div className="footer-grid">
+          {/* Brand Column */}
+          <div className="footer-brand-col">
+            <Link href="/" className="footer-brand-logo">
+              <span className="logo-highlight">O</span>NESKAI
+            </Link>
+            <p className="footer-brand-desc">
+              Data-driven marketing, cutting-edge technology, and strategic consulting for ambitious brands.
+            </p>
+            <div className="footer-social-row">
+              <a href="https://linkedin.com/company/oneskai" target="_blank" rel="noopener noreferrer" className="footer-social-btn" aria-label="LinkedIn">
+                Li
+              </a>
+              <a href="https://twitter.com/oneskai" target="_blank" rel="noopener noreferrer" className="footer-social-btn" aria-label="Twitter">
+                X
+              </a>
+              <a href="https://instagram.com/oneskai" target="_blank" rel="noopener noreferrer" className="footer-social-btn" aria-label="Instagram">
+                Ig
+              </a>
+              <a href="https://youtube.com/@oneskai" target="_blank" rel="noopener noreferrer" className="footer-social-btn" aria-label="YouTube">
+                Yt
+              </a>
+            </div>
+          </div>
+
+          {/* Services Column */}
+          <div className="footer-nav-col">
+            <h4 className="footer-nav-title">Services</h4>
+            <ul className="footer-nav-list">
+              <li><Link href="/services/seo">SEO</Link></li>
+              <li><Link href="/services/geo">GEO (AI Search)</Link></li>
+              <li><Link href="/services/ppc">PPC Advertising</Link></li>
+              <li><Link href="/services/content-marketing">Content Marketing</Link></li>
+              <li><Link href="/services/social-media">Social Media</Link></li>
+              <li><Link href="/services" className="footer-view-all">View All →</Link></li>
+            </ul>
+          </div>
+
+          {/* Solutions Column */}
+          <div className="footer-nav-col">
+            <h4 className="footer-nav-title">Solutions</h4>
+            <ul className="footer-nav-list">
+              <li><Link href="/solutions/lead-generation">Lead Generation</Link></li>
+              <li><Link href="/solutions/ecommerce">eCommerce Growth</Link></li>
+              <li><Link href="/solutions/revenue-optimization">Revenue Optimization</Link></li>
+              <li><Link href="/solutions/ai-integration">AI Integration</Link></li>
+              <li><Link href="/solutions" className="footer-view-all">View All →</Link></li>
+            </ul>
+          </div>
+
+          {/* Company Column */}
+          <div className="footer-nav-col">
+            <h4 className="footer-nav-title">Company</h4>
+            <ul className="footer-nav-list">
+              <li><Link href="/about">About Us</Link></li>
+              <li><Link href="/about/team">Our Team</Link></li>
+              <li><Link href="/work">Case Studies</Link></li>
+              <li><Link href="/careers">Careers</Link></li>
+              <li><Link href="/contact">Contact</Link></li>
+            </ul>
+          </div>
+
+          {/* Resources Column */}
+          <div className="footer-nav-col">
+            <h4 className="footer-nav-title">Resources</h4>
+            <ul className="footer-nav-list">
+              <li><Link href="/blog">Blog</Link></li>
+              <li><Link href="/resources/guides">Guides & Ebooks</Link></li>
+              <li><Link href="/resources/webinars">Webinars</Link></li>
+              <li><Link href="/newsletter">Newsletter</Link></li>
+              <li><Link href="/faq">FAQ</Link></li>
+            </ul>
+          </div>
+
+          {/* Contact Column */}
+          <div className="footer-contact-col">
+            <h4 className="footer-nav-title">Get in Touch</h4>
+            <a href={`mailto:${contactEmail}`} className="footer-contact-email">
+              {contactEmail}
+            </a>
+            <div className="footer-locations">
+              <div className="footer-location">
+                <span className="location-dot"></span>
+                New York, USA
+              </div>
+              <div className="footer-location">
+                <span className="location-dot"></span>
+                London, UK
+              </div>
+              <div className="footer-location">
+                <span className="location-dot"></span>
+                Singapore
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="footer-bottom-bar">
+          <p className="footer-copyright">
+            © {new Date().getFullYear()} Oneskai Digital. All rights reserved.
+          </p>
+          <div className="footer-legal-links">
+            <Link href="/privacy">Privacy Policy</Link>
+            <span className="footer-divider">•</span>
+            <Link href="/terms">Terms of Service</Link>
           </div>
         </div>
       </div>

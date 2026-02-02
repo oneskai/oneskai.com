@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import "@/styles/homepage.css";
 import { ThemeProvider } from "@/providers/ThemeProvider";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -45,9 +48,12 @@ export default function RootLayout({
       </head>
       <body className={`${inter.variable} antialiased`}>
         <ThemeProvider defaultTheme="system">
-          {children}
+          <Header />
+          <main>{children}</main>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
   );
 }
+

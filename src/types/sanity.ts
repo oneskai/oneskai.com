@@ -61,7 +61,8 @@ export interface NavItem {
   _key: string;
   label: string;
   href: string;
-  megaMenu?: MegaMenuColumn[];
+  hasMegaMenu?: boolean;
+  megaMenu?: MegaMenuColumn[] | React.ReactNode;
 }
 
 // Mega Menu Column
@@ -106,6 +107,10 @@ export interface Navigation {
   _id: string;
   _type: 'navigation';
   mainNav: NavItem[];
+  ctaButton?: {
+    text: string;
+    href: string;
+  };
 }
 
 // Footer Column
