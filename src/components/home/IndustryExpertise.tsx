@@ -1,54 +1,109 @@
 'use client';
 
+import React, { useState } from 'react';
+import { Icon } from '@/components/ui/Icon';
+import { FiArrowUpRight } from 'react-icons/fi';
+
 const industries = [
     {
-        name: 'SaaS',
-        description: 'Your software solves problems — let\'s make sure the world knows it. We craft campaigns that dominate user acquisition, slash churn, and scale subscriptions.',
+        id: 'saas',
+        name: 'SaaS & Tech',
+        title: 'User Acquisition at Scale',
+        description: 'From PLG to Enterprise sales, we engineer acquisition engines that slash CAC and maximize LTV. We speak the language of churn, MRR, and cohorts.',
         color: 'blue',
-        icon: 'cloud'
+        icon: 'cloud',
+        metrics: '140% avg. ROI increase'
     },
     {
+        id: 'fintech',
         name: 'Fintech',
-        description: 'In a sector built on security and speed, we engineer campaigns that convert skeptics into loyal users. Regulatory-compliant ads, high-ROI funnels, and storytelling that turns complex tech into irresistible value.',
+        title: 'Trust Reimagined',
+        description: 'In an industry built on security, we craft high-intent funnels that convert skeptics into users while navigating complex regulatory landscapes.',
         color: 'purple',
-        icon: 'building'
+        icon: 'building',
+        metrics: '3.2x User Growth'
     },
     {
+        id: 'ecommerce',
         name: 'eCommerce',
-        description: 'Turbocharge your store with performance marketing that doesn\'t just drive traffic — it drives sales. Dynamic ads, AI-powered retargeting, and checkout flows smoother than silk.',
-        color: 'red',
-        icon: 'cart'
+        title: 'Revenue Extraction',
+        description: 'Turbocharge your store with performance marketing that doesn\'t just drive traffic—it drives profit. AI-powered scaling for high-volume brands.',
+        color: 'orange',
+        icon: 'cart',
+        metrics: '8.4x ROAS avg.'
     },
     {
-        name: 'Financial',
-        description: 'High-trust industries demand high-impact strategies. We build compliant campaigns that turn cold leads into long-term clients. Think wealth management ads that perform.',
-        color: 'orange',
-        icon: 'dollar'
+        id: 'premium',
+        name: 'High-Ticket Services',
+        title: 'Relationship Authority',
+        description: 'Complex sales cycles demand strategic authority. We build lead-gen engines for law firms, consultancies, and luxury services.',
+        color: 'red',
+        icon: 'briefcase',
+        metrics: 'Lead Quality +45%'
     }
 ];
 
 export function IndustryExpertise() {
+    const [activeId, setActiveId] = useState<string | null>(null);
+
     return (
         <section className="industry-expertise-section">
-            <div className="container">
-                <div className="section-header text-center">
-                    <h2 className="section-title">Any Industry. Any Goal. We Make Performance Marketing Work for You</h2>
-                    <p className="section-subtext">
-                        We don't need to compromise on quality for short-term profit because our subscription model is built on long-term, mutually beneficial partnerships with hourly billing.
-                    </p>
+            <div className="industry-pattern"></div>
+
+            <div className="industry-container">
+                <div className="industry-header-grid">
+                    <div className="industry-header-content">
+                        <span className="section-tag">Market Reach</span>
+                        <h2 className="section-title">
+                            Any Industry. <span className="title-accent">Any Goal.</span>
+                        </h2>
+                        <p className="section-subtitle">
+                            We don&apos;t just run ads; we engineer industry-specific growth engines. Our subscription model ensures we are as invested in your unit economics as you are.
+                        </p>
+                    </div>
+                    <div className="industry-header-visual">
+                        <div className="abstract-globe">
+                            <div className="globe-ring ring-1"></div>
+                            <div className="globe-ring ring-2"></div>
+                            <div className="globe-ring ring-3"></div>
+                        </div>
+                    </div>
                 </div>
 
-                <div className="industry-grid">
-                    {industries.map((industry, index) => (
-                        <div key={index} className="industry-card">
-                            <div className={`industry-visual ${industry.color}`}>
-                                {/* 3D-like icons would go here, using placeholders */}
-                                <div className="icon-3d-placeholder"></div>
+                <div className="industry-mosaic-grid">
+                    {industries.map((item) => (
+                        <div
+                            key={item.id}
+                            className={`industry-mosaic-card ${item.id} ${activeId === item.id ? 'active' : ''}`}
+                            onMouseEnter={() => setActiveId(item.id)}
+                            onMouseLeave={() => setActiveId(null)}
+                        >
+                            <div className="mosaic-card-content">
+                                <div className="mosaic-top">
+                                    <div className={`mosaic-icon-box ${item.color}`}>
+                                        <Icon type={item.icon} />
+                                    </div>
+                                    <span className="mosaic-industry-name">{item.name}</span>
+                                </div>
+
+                                <div className="mosaic-body">
+                                    <h3 className="mosaic-title">{item.title}</h3>
+                                    <p className="mosaic-description">{item.description}</p>
+                                </div>
+
+                                <div className="mosaic-footer">
+                                    <div className="mosaic-metric">
+                                        <span className="metric-dot"></span>
+                                        {item.metrics}
+                                    </div>
+                                    <div className="mosaic-action">
+                                        <FiArrowUpRight />
+                                    </div>
+                                </div>
                             </div>
-                            <div className="industry-content">
-                                <h3 className={`industry-name ${industry.color}`}>{industry.name}</h3>
-                                <p className="industry-desc">{industry.description}</p>
-                            </div>
+
+                            <div className="mosaic-bg-glow"></div>
+                            <div className="mosaic-pattern-overlay"></div>
                         </div>
                     ))}
                 </div>

@@ -1,98 +1,78 @@
 'use client';
 
+import React from 'react';
 import Link from 'next/link';
 import { Icon } from '@/components/ui/Icon';
+import { FiArrowUp, FiArrowDown } from 'react-icons/fi';
 
-const results = [
+const metrics = [
     {
-        client: 'E-Commerce Brand',
-        industry: 'Fashion & Retail',
-        metrics: [
-            { label: 'Revenue Growth', value: '+412%', change: 'increase' },
-            { label: 'ROAS', value: '8.4x', change: 'increase' },
-            { label: 'CAC Reduction', value: '-47%', change: 'decrease' },
-        ],
-        quote: "Oneskai transformed our digital presence. We went from struggling to scale to being the fastest-growing D2C brand in our category.",
-        services: ['Paid Media', 'SEO', 'Creative'],
+        id: 0,
+        value: '412%',
+        label: 'Revenue Growth',
+        description: 'Proprietary scaling models that identify high-intent audiences before your competitors do.',
+        trend: 'up',
+        color: 'green'
     },
     {
-        client: 'SaaS Platform',
-        industry: 'Technology',
-        metrics: [
-            { label: 'Qualified Leads', value: '+890%', change: 'increase' },
-            { label: 'Pipeline Value', value: '$24M', change: 'increase' },
-            { label: 'Time to Close', value: '-32%', change: 'decrease' },
-        ],
-        quote: "Their data-driven approach to B2B marketing helped us close our Series B. The ROI on their services is undeniable.",
-        services: ['ABM', 'Content', 'Analytics'],
+        id: 1,
+        value: '8.4x',
+        label: 'Average ROAS',
+        description: 'Multi-touch attribution systems designed to reclaim wasted ad spend and maximize ROI.',
+        trend: 'up',
+        color: 'green'
     },
     {
-        client: 'Healthcare Provider',
-        industry: 'Healthcare',
-        metrics: [
-            { label: 'Patient Inquiries', value: '+267%', change: 'increase' },
-            { label: 'Cost Per Lead', value: '-58%', change: 'decrease' },
-            { label: 'Brand Awareness', value: '+340%', change: 'increase' },
-        ],
-        quote: "In a highly regulated industry, they navigated compliance while delivering exceptional marketing results.",
-        services: ['Local SEO', 'Paid Search', 'Reputation'],
-    },
+        id: 2,
+        value: '47%',
+        label: 'Lower CAC',
+        description: 'Zero-waste acquisition engines that drive down costs through precision target mapping.',
+        trend: 'down',
+        color: 'blue'
+    }
 ];
 
 export function ResultsSection() {
     return (
         <section className="results-section">
             <div className="results-container">
-                <div className="results-header">
-                    <span className="section-tag">Proven Results</span>
-                    <h2 className="section-title">
-                        Data That Dominates
-                        <br />
-                        <span className="title-accent">Doubt.</span>
+                <div className="results-header-modern">
+                    <div className="header-badge">Proven Impact</div>
+                    <h2 className="results-headline">
+                        Performance that <span className="text-glow">Outscales</span> the Competition
                     </h2>
-                    <p className="section-subtitle">
-                        Every campaign we run is built on data, optimized for performance,
-                        and measured by the metrics that matter to your business.
+                    <p className="results-subtext">
+                        We don&apos;t just deliver reports; we deliver revenue. Join 100+ high-growth brands dominating their markets with Oneskai Brain.
                     </p>
                 </div>
 
-                <div className="results-grid">
-                    {results.map((result, index) => (
-                        <div key={index} className="result-card">
-                            <div className="result-header">
-                                <div className="result-client">
-                                    <span className="client-name">{result.client}</span>
-                                    <span className="client-industry">{result.industry}</span>
-                                </div>
-                                <div className="result-services">
-                                    {result.services.map((service, i) => (
-                                        <span key={i} className="service-tag">{service}</span>
-                                    ))}
-                                </div>
-                            </div>
-
-                            <div className="result-metrics">
-                                {result.metrics.map((metric, i) => (
-                                    <div key={i} className="result-metric">
-                                        <span className={`metric-value ${metric.change}`}>
-                                            {metric.value}
-                                        </span>
-                                        <span className="metric-label">{metric.label}</span>
+                <div className="stats-grid-clickup">
+                    <div className="grid-border-top"></div>
+                    <div className="stats-inner-wrapper">
+                        {metrics.map((item) => (
+                            <div key={item.id} className="stat-column">
+                                <div className="stat-icon-wrapper">
+                                    <div className={`trend-indicator ${item.trend}`}>
+                                        {item.trend === 'up' ? <FiArrowUp /> : <FiArrowDown />}
                                     </div>
-                                ))}
+                                </div>
+                                <div className="stat-content">
+                                    <div className="stat-value-large">{item.value}</div>
+                                    <div className="stat-label-modern">{item.label}</div>
+                                    <p className="stat-description-modern">
+                                        {item.description}
+                                    </p>
+                                </div>
+                                <div className="stat-number-bg">0{item.id + 1}</div>
+                                {item.id < 2 && <div className="vertical-divider"></div>}
                             </div>
-
-                            <blockquote className="result-quote">
-                                &ldquo;{result.quote}&rdquo;
-                            </blockquote>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
 
-                <div className="results-cta">
-                    <Link href="/work" className="btn-primary">
-                        View All Case Studies
-                        <Icon type="arrowRight" />
+                <div className="results-footer-cta">
+                    <Link href="/work" className="results-link">
+                        Explore Our Case Studies <Icon type="arrowRight" />
                     </Link>
                 </div>
             </div>

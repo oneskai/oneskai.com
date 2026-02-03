@@ -19,13 +19,13 @@ export default function HomePage() {
       <HeroSection />
       <LogoWall />
       <ServicesSection />
-      <ReviewsSection />
       <ChallengesSection />
       <IndustryExpertise />
       <ResultsSection />
       <WhyUsSection />
       <SolutionsSection />
       <TestimonialsSection />
+      <ReviewsSection />
       <BlogSection />
       <CTASection />
     </main>

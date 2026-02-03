@@ -1,76 +1,117 @@
 'use client';
 
+import { useState } from 'react';
 import Link from 'next/link';
 import { Icon } from '@/components/ui/Icon';
 
-const solutions = [
+const solutionCategories = [
     {
-        category: 'Growth & Performance',
+        id: 'growth',
+        label: 'Growth & Performance',
+        icon: 'trending',
+        description: 'Exponential scaling through precision-engineered performance systems.',
         items: [
-            { name: 'Lead Generation', href: '/solutions/lead-generation', description: 'Fill your pipeline with qualified prospects' },
-            { name: 'eCommerce Growth', href: '/solutions/ecommerce', description: 'Scale your online revenue profitably' },
-            { name: 'Revenue Optimization', href: '/solutions/revenue-optimization', description: 'Maximize every marketing dollar' },
-        ],
-        gradient: 'linear-gradient(135deg, #052e26 0%, #0a4a3e 100%)',
+            { name: 'Lead Generation', href: '/solutions/lead-generation', description: 'AI-driven high-intent prospect identification.', icon: 'target' },
+            { name: 'eCommerce Growth', href: '/solutions/ecommerce', description: 'Revenue-first scaling for digital retailers.', icon: 'cart' },
+            { name: 'Revenue Optimization', href: '/solutions/revenue-optimization', description: 'Advanced conversion rate dominance.', icon: 'zap' },
+        ]
     },
     {
-        category: 'Brand & Presence',
+        id: 'brand',
+        label: 'Brand & Presence',
+        icon: 'star',
+        description: 'Authority-building frameworks that turn brands into market leaders.',
         items: [
-            { name: 'Market Leadership', href: '/solutions/market-leadership', description: 'Become the authority in your space' },
-            { name: 'Digital Evolution', href: '/solutions/digital-evolution', description: 'Transform your digital presence' },
-            { name: 'Social Influence', href: '/solutions/social-influence', description: 'Build authentic community engagement' },
-        ],
-        gradient: 'linear-gradient(135deg, #3d0da8 0%, #ffc700 100%)',
+            { name: 'Market Leadership', href: '/solutions/market-leadership', description: 'Psychology-led positioning strategies.', icon: 'award' },
+            { name: 'Digital Evolution', href: '/solutions/digital-evolution', description: 'End-to-end digital transformation.', icon: 'rocket' },
+            { name: 'Social Influence', href: '/solutions/social-influence', description: 'High-impact community engagement.', icon: 'users' },
+        ]
     },
     {
-        category: 'Future-Ready',
+        id: 'future',
+        label: 'Future-Ready',
+        icon: 'brain',
+        description: 'Leveraging cutting-edge technology to future-proof your growth engine.',
         items: [
-            { name: 'AI Integration', href: '/solutions/ai-integration', description: 'Leverage AI for competitive advantage' },
-            { name: 'Search Dominance', href: '/solutions/search-dominance', description: 'Own the search landscape' },
-            { name: 'Mobile-First', href: '/solutions/mobile-first', description: 'Win on every device' },
-        ],
-        gradient: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
+            { name: 'AI Integration', href: '/solutions/ai-integration', description: 'Custom AI workflows for marketing teams.', icon: 'cpu' },
+            { name: 'Search Dominance', href: '/solutions/search-dominance', description: 'Next-gen SEO and semantic search.', icon: 'search' },
+            { name: 'Mobile-First', href: '/solutions/mobile-first', description: 'Win in the palm of your customer\'s hand.', icon: 'smartphone' },
+        ]
     },
 ];
 
 export function SolutionsSection() {
+    const [activeTab, setActiveTab] = useState('growth');
+    const currentCategory = solutionCategories.find(c => c.id === activeTab);
+
     return (
-        <section className="solutions-section">
+        <section className="solutions-section-modern">
             <div className="solutions-container">
-                <div className="solutions-header">
-                    <span className="section-tag">Solutions</span>
-                    <h2 className="section-title">
-                        Strategic Solutions for
+                <div className="solutions-header-centered">
+                    <span className="section-tag">Strategic Solutions</span>
+                    <h2 className="solutions-headline-large">
+                        The Only Growth Engine That
                         <br />
-                        <span className="title-accent">Every Challenge</span>
+                        <span className="text-gradient">Scale Where You Scale</span>
                     </h2>
-                    <p className="section-subtitle">
-                        Whether you&apos;re looking to scale revenue, build brand authority, or
-                        future-proof your marketing, we have a tailored solution.
+                    <p className="solutions-subtitle-refined">
+                        Stop juggling disconnected agencies. Oneskai integrates deep strategy with elite execution to solve your most complex marketing challenges.
                     </p>
                 </div>
 
-                <div className="solutions-grid">
-                    {solutions.map((solution, index) => (
-                        <div
-                            key={index}
-                            className="solution-block"
-                            style={{ '--block-gradient': solution.gradient } as React.CSSProperties}
-                        >
-                            <h3 className="solution-category">{solution.category}</h3>
-                            <div className="solution-items">
-                                {solution.items.map((item, i) => (
-                                    <Link key={i} href={item.href} className="solution-item">
-                                        <div className="solution-info">
-                                            <span className="solution-name">{item.name}</span>
-                                            <span className="solution-desc">{item.description}</span>
-                                        </div>
-                                        <Icon type="arrowRight" />
-                                    </Link>
-                                ))}
-                            </div>
+                <div className="solutions-explorer-layout">
+                    {/* Left: Interactive Navigation */}
+                    <div className="solutions-nav-sidebar">
+                        {solutionCategories.map((category) => (
+                            <button
+                                key={category.id}
+                                className={`sol-nav-item ${activeTab === category.id ? 'active' : ''}`}
+                                onClick={() => setActiveTab(category.id)}
+                            >
+                                <div className="sol-nav-icon">
+                                    <Icon type={category.icon} />
+                                </div>
+                                <div className="sol-nav-text">
+                                    <span className="sol-nav-label">{category.label}</span>
+                                    <span className="sol-nav-desc-mini">{category.description}</span>
+                                </div>
+                            </button>
+                        ))}
+                    </div>
+
+                    {/* Right: Dynamic Content Area */}
+                    <div className="solutions-content-display">
+                        <div className="solutions-inner-grid">
+                            {currentCategory?.items.map((item, index) => (
+                                <Link key={index} href={item.href} className="sol-detail-card">
+                                    <div className="sol-card-icon">
+                                        <Icon type={item.icon} />
+                                    </div>
+                                    <h3 className="sol-card-name">{item.name}</h3>
+                                    <p className="sol-card-description">{item.description}</p>
+                                    <div className="sol-card-footer">
+                                        <span className="explore-text">Explore Solution</span>
+                                        <Icon type="arrowRight" className="arrow-small" />
+                                    </div>
+                                    <div className="card-shine" />
+                                </Link>
+                            ))}
                         </div>
-                    ))}
+                    </div>
+                </div>
+
+                <div className="solutions-bottom-social">
+                    <p className="social-text">Trusted by hyper-growth teams worldwide</p>
+                    <div className="social-logos-placeholder">
+                        {/* We use the LogoWall for actual logos, here we just add a subtle hint */}
+                        <div className="mini-logo-strip">
+                            <span>REVENUE-FIRST</span>
+                            <div className="dot" />
+                            <span>DATA-DRIVEN</span>
+                            <div className="dot" />
+                            <span>AI-POWERED</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

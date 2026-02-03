@@ -75,7 +75,7 @@ export function TestimonialsSection() {
                     </div>
 
                     <div className="testimonial-nav">
-                        <button className="nav-btn" onClick={prevTestimonial}>
+                        <button className="nav-btn prev" onClick={prevTestimonial}>
                             <Icon type="arrowLeft" />
                         </button>
                         <div className="nav-dots">
@@ -87,7 +87,7 @@ export function TestimonialsSection() {
                                 />
                             ))}
                         </div>
-                        <button className="nav-btn" onClick={nextTestimonial}>
+                        <button className="nav-btn next" onClick={nextTestimonial}>
                             <Icon type="arrowRight" />
                         </button>
                     </div>
