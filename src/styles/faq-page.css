@@ -47,7 +47,7 @@
 
 .faq-hero-title {
     font-size: 52px;
-    font-weight: 800;
+    font-weight: 600;
     line-height: 1.1;
     color: white;
     margin-bottom: 24px;
@@ -176,7 +176,7 @@
 
 .faq-section-title {
     font-size: 28px;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--faq-primary);
 }
 
@@ -317,7 +317,7 @@
 
 .faq-stat-num {
     font-size: 36px;
-    font-weight: 800;
+    font-weight: 600;
     color: var(--faq-accent);
     display: block;
     margin-bottom: 8px;
@@ -343,7 +343,7 @@
 
 .faq-cta h2 {
     font-size: 36px;
-    font-weight: 800;
+    font-weight: 600;
     color: white;
     margin-bottom: 20px;
 }

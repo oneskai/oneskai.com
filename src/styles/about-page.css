@@ -52,7 +52,7 @@
 
 .about-hero-title {
     font-size: 56px;
-    font-weight: 800;
+    font-weight: 600;
     line-height: 1.1;
     color: white;
     margin-bottom: 24px;
@@ -92,7 +92,7 @@
 
 .about-stat-num {
     font-size: 42px;
-    font-weight: 800;
+    font-weight: 600;
     color: var(--about-accent);
     display: block;
 }
@@ -124,7 +124,7 @@
 
 .about-section-title {
     font-size: 36px;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--about-dark);
     margin-bottom: 24px;
 }
@@ -150,7 +150,7 @@
 
 .about-cta-card h3 {
     font-size: 24px;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 16px;
 }
 
@@ -229,7 +229,7 @@
 
 .about-value-card h3 {
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--about-dark);
     margin-bottom: 12px;
 }
@@ -285,7 +285,7 @@
 
 .about-team-card h4 {
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--about-dark);
     margin-bottom: 4px;
 }
@@ -369,7 +369,7 @@
 
 .about-timeline-content h4 {
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--about-dark);
     margin-bottom: 8px;
 }
@@ -432,7 +432,7 @@
 
 .about-final-cta h2 {
     font-size: 42px;
-    font-weight: 800;
+    font-weight: 600;
     color: white;
     margin-bottom: 20px;
 }

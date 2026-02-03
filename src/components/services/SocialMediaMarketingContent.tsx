@@ -44,8 +44,8 @@ export function SocialMediaMarketingContent() {
 
                                 {/* Center Stats */}
                                 <div className="hero-stats-overlay">
-                                    <div style={{ fontSize: '52px', fontWeight: 900, color: '#4facfe', lineHeight: 1 }}>+315%</div>
-                                    <div style={{ fontSize: '13px', fontWeight: 700, color: '#64748b', textTransform: 'uppercase', marginTop: '10px', letterSpacing: '1px' }}>Avg. Engagement Lift</div>
+                                    <div style={{ fontSize: '52px', fontWeight: 600, color: '#4facfe', lineHeight: 1 }}>+315%</div>
+                                    <div style={{ fontSize: '13px', fontWeight: 600, color: '#64748b', textTransform: 'uppercase', marginTop: '10px', letterSpacing: '1px' }}>Avg. Engagement Lift</div>
                                 </div>
                             </div>
                         </div>
@@ -58,7 +58,7 @@ export function SocialMediaMarketingContent() {
                 <div className="social-container">
                     <div className="logo-strip">
                         {['Forbes', 'TechCrunch', 'AdWeek', 'Wired', 'VentureBeat'].map((name) => (
-                            <span key={name} style={{ fontSize: '24px', fontWeight: 900, color: '#cbd5e1' }}>{name}</span>
+                            <span key={name} style={{ fontSize: '24px', fontWeight: 600, color: '#cbd5e1' }}>{name}</span>
                         ))}
                     </div>
                 </div>
@@ -102,15 +102,15 @@ export function SocialMediaMarketingContent() {
 
                             <div style={{ marginTop: '40px' }}>
                                 <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
-                                    <span style={{ fontWeight: 800 }}>Organic Reach Growth</span>
-                                    <span style={{ fontWeight: 800, color: '#4facfe' }}>+412%</span>
+                                    <span style={{ fontWeight: 600 }}>Organic Reach Growth</span>
+                                    <span style={{ fontWeight: 600, color: '#4facfe' }}>+412%</span>
                                 </div>
                                 <div style={{ height: '8px', background: '#e2e8f0', borderRadius: '10px', overflow: 'hidden' }}>
                                     <div style={{ width: '85%', height: '100%', background: '#4facfe' }}></div>
                                 </div>
                                 <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px', marginTop: '25px' }}>
-                                    <span style={{ fontWeight: 800 }}>Inbound Lead Conversion</span>
-                                    <span style={{ fontWeight: 800, color: '#7c3aed' }}>+285%</span>
+                                    <span style={{ fontWeight: 600 }}>Inbound Lead Conversion</span>
+                                    <span style={{ fontWeight: 600, color: '#7c3aed' }}>+285%</span>
                                 </div>
                                 <div style={{ height: '8px', background: '#e2e8f0', borderRadius: '10px', overflow: 'hidden' }}>
                                     <div style={{ width: '70%', height: '100%', background: '#7c3aed' }}></div>
@@ -118,7 +118,7 @@ export function SocialMediaMarketingContent() {
                             </div>
                         </div>
                         <div className="chart-visual">
-                            <h4 style={{ textAlign: 'center', fontWeight: '800', marginBottom: '20px' }}>Compound Reach Effect</h4>
+                            <h4 style={{ textAlign: 'center', fontWeight: '600', marginBottom: '20px' }}>Compound Reach Effect</h4>
                             <div className="bar-container">
                                 {[30, 45, 40, 65, 80, 100].map((h, i) => (
                                     <div key={i} className={`bar ${i === 5 ? 'active' : ''}`} style={{ height: `${h}%` }}>
@@ -128,7 +128,7 @@ export function SocialMediaMarketingContent() {
                                             left: '50%',
                                             transform: 'translateX(-50%)',
                                             fontSize: '12px',
-                                            fontWeight: 800
+                                            fontWeight: 600
                                         }}>M{i + 1}</span>
                                     </div>
                                 ))}
@@ -159,7 +159,7 @@ export function SocialMediaMarketingContent() {
                                     <Icon type={p.icon} />
                                 </div>
                                 <div>
-                                    <h4 style={{ fontWeight: 800, fontSize: '20px', marginBottom: '10px' }}>{p.title}</h4>
+                                    <h4 style={{ fontWeight: 600, fontSize: '20px', marginBottom: '10px' }}>{p.title}</h4>
                                     <p style={{ fontSize: '15px', color: '#64748b', lineHeight: 1.6 }}>{p.text}</p>
                                 </div>
                             </div>
@@ -178,7 +178,7 @@ export function SocialMediaMarketingContent() {
                     <div className="industry-grid">
                         {['SaaS & Tech', 'E-commerce', 'Luxury Beauty', 'Real Estate', 'Education', 'Health & Wellness', 'FinTech', 'Legal Services'].map((ind) => (
                             <div key={ind} className="industry-item">
-                                <span style={{ fontWeight: 700 }}>{ind}</span>
+                                <span style={{ fontWeight: 600 }}>{ind}</span>
                             </div>
                         ))}
                     </div>
@@ -203,7 +203,7 @@ export function SocialMediaMarketingContent() {
                             <div key={i} className="workflow-step-inner">
                                 <span className="step-count">0{i + 1}</span>
                                 <div>
-                                    <h4 style={{ fontSize: '22px', fontWeight: 700, marginBottom: '8px' }}>{s.t}</h4>
+                                    <h4 style={{ fontSize: '22px', fontWeight: 600, marginBottom: '8px' }}>{s.t}</h4>
                                     <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '16px', lineHeight: 1.6 }}>{s.d}</p>
                                 </div>
                             </div>
@@ -221,8 +221,8 @@ export function SocialMediaMarketingContent() {
                     </div>
                     <div className="pricing-grid">
                         <div className="price-card">
-                            <h4 style={{ fontSize: '24px', fontWeight: 800, marginBottom: '20px' }}>Essentials</h4>
-                            <div style={{ fontSize: '42px', fontWeight: 900, marginBottom: '20px' }}>$2,499<span style={{ fontSize: '16px', color: '#999' }}>/mo</span></div>
+                            <h4 style={{ fontSize: '24px', fontWeight: 600, marginBottom: '20px' }}>Essentials</h4>
+                            <div style={{ fontSize: '42px', fontWeight: 600, marginBottom: '20px' }}>$2,499<span style={{ fontSize: '16px', color: '#999' }}>/mo</span></div>
                             <p style={{ color: '#666', marginBottom: '30px' }}>Perfect for brands looking to professionalize their presence.</p>
                             <ul style={{ listStyle: 'none', textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '40px' }}>
                                 <li><Icon type="check" className="text-gradient" /> 15 Custom Posts / mo</li>
@@ -235,8 +235,8 @@ export function SocialMediaMarketingContent() {
 
                         <div className="price-card featured">
                             <span className="popular-tag">MOST POPULAR</span>
-                            <h4 style={{ fontSize: '24px', fontWeight: 800, marginBottom: '20px' }}>Elite Growth</h4>
-                            <div style={{ fontSize: '42px', fontWeight: 900, marginBottom: '20px' }}>$4,999<span style={{ fontSize: '16px', color: '#999' }}>/mo</span></div>
+                            <h4 style={{ fontSize: '24px', fontWeight: 600, marginBottom: '20px' }}>Elite Growth</h4>
+                            <div style={{ fontSize: '42px', fontWeight: 600, marginBottom: '20px' }}>$4,999<span style={{ fontSize: '16px', color: '#999' }}>/mo</span></div>
                             <p style={{ color: '#666', marginBottom: '30px' }}>Comprehensive management for scale-ready brands.</p>
                             <ul style={{ listStyle: 'none', textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '40px' }}>
                                 <li><Icon type="check" style={{ color: '#4facfe' }} /> 30 Custom Posts / mo</li>
@@ -249,8 +249,8 @@ export function SocialMediaMarketingContent() {
                         </div>
 
                         <div className="price-card">
-                            <h4 style={{ fontSize: '24px', fontWeight: 800, marginBottom: '20px' }}>Omni-Dominance</h4>
-                            <div style={{ fontSize: '42px', fontWeight: 900, marginBottom: '20px' }}>Custom</div>
+                            <h4 style={{ fontSize: '24px', fontWeight: 600, marginBottom: '20px' }}>Omni-Dominance</h4>
+                            <div style={{ fontSize: '42px', fontWeight: 600, marginBottom: '20px' }}>Custom</div>
                             <p style={{ color: '#666', marginBottom: '30px' }}>For global brands requiring 24/7 narrative dominance.</p>
                             <ul style={{ listStyle: 'none', textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '40px' }}>
                                 <li><Icon type="check" className="text-gradient" /> Unlimited Custom Content</li>
@@ -282,8 +282,8 @@ export function SocialMediaMarketingContent() {
                             <div key={i} className="feed-card">
                                 <div style={{ width: '100%', height: '100%', background: `linear-gradient(${45 * i}deg, #1a1a1a, #333)`, transition: 'all 0.4s' }}></div>
                                 <div className="feed-overlay">
-                                    <span style={{ fontSize: '12px', fontWeight: 800, textTransform: 'uppercase', color: '#4facfe' }}>{p.label}</span>
-                                    <h4 style={{ fontSize: '22px', fontWeight: 800, marginTop: '10px' }}>{p.text}</h4>
+                                    <span style={{ fontSize: '12px', fontWeight: 600, textTransform: 'uppercase', color: '#4facfe' }}>{p.label}</span>
+                                    <h4 style={{ fontSize: '22px', fontWeight: 600, marginTop: '10px' }}>{p.text}</h4>
                                 </div>
                             </div>
                         ))}
@@ -306,7 +306,7 @@ export function SocialMediaMarketingContent() {
                             { q: "What is the turnaround time for content?", a: "We typically work in 2-week sprints. You'll receive a content batch for approval 7 days before the first post is scheduled to go live." }
                         ].map((item, idx) => (
                             <details key={idx} className="faq-item" style={{ background: '#f8fafc', padding: '30px', borderRadius: '24px', marginBottom: '20px', cursor: 'pointer', border: '1px solid #e2e8f0' }}>
-                                <summary style={{ fontWeight: 800, fontSize: '20px', listStyle: 'none', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                                <summary style={{ fontWeight: 600, fontSize: '20px', listStyle: 'none', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                                     {item.q}
                                     <Icon type="plus" style={{ width: '20px' }} />
                                 </summary>
@@ -322,15 +322,15 @@ export function SocialMediaMarketingContent() {
                 <div className="social-container">
                     <div className="cta-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1.1fr', gap: '100px', alignItems: 'center' }}>
                         <div>
-                            <h2 style={{ fontSize: '64px', fontWeight: 900, marginBottom: '30px', lineHeight: 1 }}>Let&apos;s build your <span style={{ color: 'var(--accent-yellow)' }}>Digital Empire.</span></h2>
+                            <h2 style={{ fontSize: '64px', fontWeight: 600, marginBottom: '30px', lineHeight: 1 }}>Let&apos;s build your <span style={{ color: 'var(--accent-yellow)' }}>Digital Empire.</span></h2>
                             <p style={{ fontSize: '22px', opacity: 0.8, marginBottom: '50px', lineHeight: 1.6 }}>Ready to move from &lsquo;posting&rsquo; to &lsquo;powerhouse&rsquo;? Our strategists are ready to blueprint your social dominance.</p>
                             <div style={{ display: 'flex', gap: '30px' }}>
                                 <div style={{ textAlign: 'center' }}>
-                                    <div style={{ fontSize: '32px', fontWeight: 900, color: 'var(--accent-yellow)' }}>24h</div>
+                                    <div style={{ fontSize: '32px', fontWeight: 600, color: 'var(--accent-yellow)' }}>24h</div>
                                     <div style={{ fontSize: '12px', opacity: 0.6 }}>RESPONSE TIME</div>
                                 </div>
                                 <div style={{ textAlign: 'center' }}>
-                                    <div style={{ fontSize: '32px', fontWeight: 900, color: 'var(--accent-yellow)' }}>100%</div>
+                                    <div style={{ fontSize: '32px', fontWeight: 600, color: 'var(--accent-yellow)' }}>100%</div>
                                     <div style={{ fontSize: '12px', opacity: 0.6 }}>CLIENT FOCUS</div>
                                 </div>
                             </div>
@@ -344,7 +344,7 @@ export function SocialMediaMarketingContent() {
                                 <input type="email" placeholder="Work Email" style={{ padding: '18px', borderRadius: '12px', border: '2px solid #f1f5f9', background: '#f8fafc', fontSize: '16px' }} />
                                 <input type="text" placeholder="Your Main Social Handle (@...)" style={{ padding: '18px', borderRadius: '12px', border: '2px solid #f1f5f9', background: '#f8fafc', fontSize: '16px' }} />
                                 <textarea placeholder="What are your goals for the next 6 months?" style={{ padding: '18px', borderRadius: '12px', border: '2px solid #f1f5f9', background: '#f8fafc', fontSize: '16px', height: '120px' }}></textarea>
-                                <button className="btn-primary" style={{ border: 'none', background: '#052e26', color: 'var(--accent-yellow)', fontSize: '18px', fontWeight: 800, cursor: 'pointer', padding: '20px' }}>
+                                <button className="btn-primary" style={{ border: 'none', background: '#052e26', color: 'var(--accent-yellow)', fontSize: '18px', fontWeight: 600, cursor: 'pointer', padding: '20px' }}>
                                     Generate My Custom Blueprint
                                 </button>
                             </form>

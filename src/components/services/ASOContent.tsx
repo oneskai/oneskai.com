@@ -47,7 +47,7 @@ export function ASOContent() {
                         <div className="content-hero-visual">
                             <div className="content-visual-card" style={{ background: 'linear-gradient(135deg, #4caf50, #8bc34a)' }}>
                                 <div style={{ padding: '40px', color: 'white', textAlign: 'center' }}>
-                                    <div style={{ fontSize: '80px', fontWeight: 900, lineHeight: 1 }}>Top 10</div>
+                                    <div style={{ fontSize: '80px', fontWeight: 600, lineHeight: 1 }}>Top 10</div>
                                     <div style={{ fontSize: '18px', opacity: 0.9, marginTop: '10px' }}>Category Rankings</div>
                                     <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', marginTop: '30px' }}>
                                         <div style={{ padding: '15px 20px', background: 'rgba(255,255,255,0.15)', borderRadius: '12px' }}>
@@ -138,21 +138,21 @@ export function ASOContent() {
                                 <li style={{ display: 'flex', gap: '15px' }}>
                                     <div style={{ color: '#4caf50' }}><Icon type="check" /></div>
                                     <div>
-                                        <h4 style={{ fontWeight: 700 }}>65% of Downloads from Search</h4>
+                                        <h4 style={{ fontWeight: 600 }}>65% of Downloads from Search</h4>
                                         <p style={{ fontSize: '14px', color: 'var(--text-gray)' }}>App store search is the #1 discovery channel. Own it.</p>
                                     </div>
                                 </li>
                                 <li style={{ display: 'flex', gap: '15px' }}>
                                     <div style={{ color: '#4caf50' }}><Icon type="check" /></div>
                                     <div>
-                                        <h4 style={{ fontWeight: 700 }}>Zero Ad Spend Required</h4>
+                                        <h4 style={{ fontWeight: 600 }}>Zero Ad Spend Required</h4>
                                         <p style={{ fontSize: '14px', color: 'var(--text-gray)' }}>Organic visibility that doesn&apos;t drain your UA budget.</p>
                                     </div>
                                 </li>
                                 <li style={{ display: 'flex', gap: '15px' }}>
                                     <div style={{ color: '#4caf50' }}><Icon type="check" /></div>
                                     <div>
-                                        <h4 style={{ fontWeight: 700 }}>Higher Quality Users</h4>
+                                        <h4 style={{ fontWeight: 600 }}>Higher Quality Users</h4>
                                         <p style={{ fontSize: '14px', color: 'var(--text-gray)' }}>Organic users have 3x higher LTV than paid users.</p>
                                     </div>
                                 </li>
@@ -184,7 +184,7 @@ export function ASOContent() {
                                 <div className="step-icon-wrapper" style={{ color: '#4caf50' }}>
                                     <Icon type={step.icon} />
                                 </div>
-                                <h3 style={{ fontSize: '20px', fontWeight: 800, marginBottom: '10px' }}>{step.title}</h3>
+                                <h3 style={{ fontSize: '20px', fontWeight: 600, marginBottom: '10px' }}>{step.title}</h3>
                                 <p style={{ fontSize: '14px', color: 'var(--text-gray)', lineHeight: '1.6' }}>{step.desc}</p>
                             </div>
                         ))}
@@ -226,11 +226,11 @@ export function ASOContent() {
                                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px', marginTop: '30px' }}>
                                     <div style={{ padding: '15px', background: '#1a1a1a', borderRadius: '8px' }}>
                                         <span style={{ fontSize: '10px', color: '#555' }}>KEYWORD RANKING</span>
-                                        <div style={{ fontSize: '24px', fontWeight: 800, color: '#4caf50' }}>#3</div>
+                                        <div style={{ fontSize: '24px', fontWeight: 600, color: '#4caf50' }}>#3</div>
                                     </div>
                                     <div style={{ padding: '15px', background: '#1a1a1a', borderRadius: '8px' }}>
                                         <span style={{ fontSize: '10px', color: '#555' }}>CONVERSION RATE</span>
-                                        <div style={{ fontSize: '24px', fontWeight: 800, color: '#8bc34a' }}>42%</div>
+                                        <div style={{ fontSize: '24px', fontWeight: 600, color: '#8bc34a' }}>42%</div>
                                     </div>
                                 </div>
                             </div>
@@ -310,37 +310,37 @@ export function ASOContent() {
                     </div>
                     <div className="testimonial-track">
                         <div className="content-testimonial-card">
-                            <div className="industry-label" style={{ color: '#4caf50', fontWeight: 700, fontSize: '12px', marginBottom: '10px' }}>FITNESS APP</div>
+                            <div className="industry-label" style={{ color: '#4caf50', fontWeight: 600, fontSize: '12px', marginBottom: '10px' }}>FITNESS APP</div>
                             <h3>500% Increase in Organic Downloads</h3>
                             <p style={{ color: 'var(--text-gray)', margin: '15px 0' }}>Through strategic keyword targeting and screenshot optimization, we took a fitness app from obscurity to category leader.</p>
                             <div className="author" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                                 <div className="avatar" style={{ width: '40px', height: '40px', borderRadius: '50%', background: '#4caf50' }}></div>
                                 <div className="info">
-                                    <span style={{ display: 'block', fontWeight: 700, fontSize: '14px' }}>Jason Chen</span>
+                                    <span style={{ display: 'block', fontWeight: 600, fontSize: '14px' }}>Jason Chen</span>
                                     <span style={{ fontSize: '12px', color: 'var(--text-gray)' }}>CEO, FitTrack Pro</span>
                                 </div>
                             </div>
                         </div>
                         <div className="content-testimonial-card">
-                            <div className="industry-label" style={{ color: '#8bc34a', fontWeight: 700, fontSize: '12px', marginBottom: '10px' }}>FINTECH APP</div>
+                            <div className="industry-label" style={{ color: '#8bc34a', fontWeight: 600, fontSize: '12px', marginBottom: '10px' }}>FINTECH APP</div>
                             <h3>From #120 to #8 in Finance Category</h3>
                             <p style={{ color: 'var(--text-gray)', margin: '15px 0' }}>Comprehensive ASO overhaul including localization in 12 markets drove massive ranking improvements.</p>
                             <div className="author" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                                 <div className="avatar" style={{ width: '40px', height: '40px', borderRadius: '50%', background: '#8bc34a' }}></div>
                                 <div className="info">
-                                    <span style={{ display: 'block', fontWeight: 700, fontSize: '14px' }}>Maria Santos</span>
+                                    <span style={{ display: 'block', fontWeight: 600, fontSize: '14px' }}>Maria Santos</span>
                                     <span style={{ fontSize: '12px', color: 'var(--text-gray)' }}>CMO, PayFlow</span>
                                 </div>
                             </div>
                         </div>
                         <div className="content-testimonial-card">
-                            <div className="industry-label" style={{ color: '#66bb6a', fontWeight: 700, fontSize: '12px', marginBottom: '10px' }}>GAMING APP</div>
+                            <div className="industry-label" style={{ color: '#66bb6a', fontWeight: 600, fontSize: '12px', marginBottom: '10px' }}>GAMING APP</div>
                             <h3>55% Reduction in CPI</h3>
                             <p style={{ color: 'var(--text-gray)', margin: '15px 0' }}>Strong organic growth from ASO allowed this gaming studio to dramatically reduce their paid user acquisition costs.</p>
                             <div className="author" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                                 <div className="avatar" style={{ width: '40px', height: '40px', borderRadius: '50%', background: '#66bb6a' }}></div>
                                 <div className="info">
-                                    <span style={{ display: 'block', fontWeight: 700, fontSize: '14px' }}>David Park</span>
+                                    <span style={{ display: 'block', fontWeight: 600, fontSize: '14px' }}>David Park</span>
                                     <span style={{ fontSize: '12px', color: 'var(--text-gray)' }}>Head of Growth, Pixel Games</span>
                                 </div>
                             </div>

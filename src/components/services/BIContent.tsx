@@ -29,7 +29,7 @@ export function BIContent() {
                                         {[{ label: 'Revenue', value: '$2.4M' }, { label: 'CAC', value: '$45' }, { label: 'LTV', value: '$890' }, { label: 'ROAS', value: '4.2x' }].map((m, i) => (
                                             <div key={i} style={{ padding: '15px', background: 'rgba(255,255,255,0.15)', borderRadius: '8px', textAlign: 'center' }}>
                                                 <div style={{ fontSize: '10px', opacity: 0.8 }}>{m.label}</div>
-                                                <div style={{ fontSize: '20px', fontWeight: 800 }}>{m.value}</div>
+                                                <div style={{ fontSize: '20px', fontWeight: 600 }}>{m.value}</div>
                                             </div>
                                         ))}
                                     </div>

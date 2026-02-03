@@ -57,7 +57,7 @@
 .blog-label {
     display: inline-block;
     font-size: 12px;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: 3px;
     text-transform: uppercase;
     color: var(--blog-secondary);
@@ -69,7 +69,7 @@
 
 .blog-hero-title {
     font-size: 56px;
-    font-weight: 800;
+    font-weight: 600;
     line-height: 1.1;
     color: white;
     margin-bottom: 24px;
@@ -210,7 +210,7 @@
     padding: 8px 16px;
     border-radius: 50px;
     font-size: 12px;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: 1px;
 }
 
@@ -234,7 +234,7 @@
     padding: 6px 14px;
     border-radius: 50px;
     font-size: 12px;
-    font-weight: 700;
+    font-weight: 600;
     text-transform: uppercase;
 }
 
@@ -248,7 +248,7 @@
 
 .blog-featured-title {
     font-size: 36px;
-    font-weight: 800;
+    font-weight: 600;
     color: var(--blog-dark);
     line-height: 1.3;
     margin-bottom: 20px;
@@ -278,13 +278,13 @@
     align-items: center;
     justify-content: center;
     color: white;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 18px;
 }
 
 .blog-author-info h4 {
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--blog-dark);
 }
 
@@ -301,7 +301,7 @@
     color: var(--blog-secondary);
     padding: 14px 28px;
     border-radius: 50px;
-    font-weight: 700;
+    font-weight: 600;
     text-decoration: none;
     margin-top: 30px;
     transition: all 0.3s;
@@ -334,7 +334,7 @@
 
 .blog-grid-title {
     font-size: 32px;
-    font-weight: 800;
+    font-weight: 600;
     color: var(--blog-dark);
 }
 
@@ -385,7 +385,7 @@
     padding: 6px 14px;
     border-radius: 50px;
     font-size: 11px;
-    font-weight: 700;
+    font-weight: 600;
     text-transform: uppercase;
 }
 
@@ -404,7 +404,7 @@
 
 .blog-card-title {
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--blog-dark);
     line-height: 1.4;
     margin-bottom: 14px;
@@ -451,7 +451,7 @@
     justify-content: center;
     color: white;
     font-size: 12px;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .blog-card-author span {
@@ -461,7 +461,7 @@
 
 .blog-card-read {
     color: var(--blog-accent);
-    font-weight: 700;
+    font-weight: 600;
     font-size: 14px;
     display: flex;
     align-items: center;
@@ -519,7 +519,7 @@
 
 .blog-newsletter h2 {
     font-size: 42px;
-    font-weight: 800;
+    font-weight: 600;
     color: white;
     margin-bottom: 20px;
 }
@@ -557,7 +557,7 @@
     padding: 16px 32px;
     border: none;
     border-radius: 50px;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 16px;
     cursor: pointer;
     transition: all 0.3s;

@@ -15,13 +15,13 @@ const industries = [
         metrics: '140% avg. ROI increase'
     },
     {
-        id: 'fintech',
-        name: 'Fintech',
-        title: 'Trust Reimagined',
-        description: 'In an industry built on security, we craft high-intent funnels that convert skeptics into users while navigating complex regulatory landscapes.',
+        id: 'hospitality',
+        name: 'Hospitality & Travel',
+        title: 'Experience-Driven Growth',
+        description: 'From boutique hotels to global travel brands, we craft demand-generation strategies that fill rooms, book trips, and maximize direct bookings.',
         color: 'purple',
-        icon: 'building',
-        metrics: '3.2x User Growth'
+        icon: 'globe',
+        metrics: '3.2x Booking Growth'
     },
     {
         id: 'ecommerce',
@@ -33,12 +33,12 @@ const industries = [
         metrics: '8.4x ROAS avg.'
     },
     {
-        id: 'premium',
-        name: 'High-Ticket Services',
-        title: 'Relationship Authority',
-        description: 'Complex sales cycles demand strategic authority. We build lead-gen engines for law firms, consultancies, and luxury services.',
+        id: 'pharma',
+        name: 'Pharma & Life Sciences',
+        title: 'Pharma Marketing',
+        description: 'Navigate complex regulatory landscapes with compliant marketing strategies. We drive HCP engagement and patient acquisition for biotech and pharmaceutical brands.',
         color: 'red',
-        icon: 'briefcase',
+        icon: 'activity',
         metrics: 'Lead Quality +45%'
     }
 ];

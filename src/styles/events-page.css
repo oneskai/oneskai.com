@@ -47,7 +47,7 @@
 
 .events-hero-title {
     font-size: 52px;
-    font-weight: 800;
+    font-weight: 600;
     line-height: 1.1;
     color: white;
     margin-bottom: 24px;
@@ -102,7 +102,7 @@
 
 .events-featured-title {
     font-size: 36px;
-    font-weight: 800;
+    font-weight: 600;
     margin-bottom: 20px;
 }
 
@@ -183,7 +183,7 @@
 
 .events-section-title {
     font-size: 36px;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--events-primary);
     margin-bottom: 16px;
 }
@@ -235,7 +235,7 @@
 
 .events-card-date-day {
     font-size: 24px;
-    font-weight: 800;
+    font-weight: 600;
     color: var(--events-primary);
     display: block;
     line-height: 1;
@@ -285,7 +285,7 @@
 
 .events-card h3 {
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--events-primary);
     margin-bottom: 12px;
     line-height: 1.4;
@@ -354,7 +354,7 @@
 
 .events-past-card h4 {
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--events-primary);
     margin-bottom: 8px;
 }
@@ -391,7 +391,7 @@
 
 .events-newsletter h2 {
     font-size: 36px;
-    font-weight: 800;
+    font-weight: 600;
     color: white;
     margin-bottom: 16px;
 }

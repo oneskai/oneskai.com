@@ -66,7 +66,7 @@ export function WebDevelopmentContent() {
                             { value: '24/7', label: 'Support Available' }
                         ].map((stat, i) => (
                             <div key={i} style={{ textAlign: 'center' }}>
-                                <div style={{ fontSize: '36px', fontWeight: 900, background: 'linear-gradient(135deg, #10b981, #3b82f6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{stat.value}</div>
+                                <div style={{ fontSize: '36px', fontWeight: 600, background: 'linear-gradient(135deg, #10b981, #3b82f6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{stat.value}</div>
                                 <div style={{ fontSize: '13px', color: '#64748b', marginTop: '5px' }}>{stat.label}</div>
                             </div>
                         ))}
@@ -98,7 +98,7 @@ export function WebDevelopmentContent() {
                         ].map((tech, i) => (
                             <div key={i} className="tech-item">
                                 <div className="tech-icon">{tech.icon}</div>
-                                <div style={{ fontWeight: 700, fontSize: '14px' }}>{tech.name}</div>
+                                <div style={{ fontWeight: 600, fontSize: '14px' }}>{tech.name}</div>
                             </div>
                         ))}
                     </div>
@@ -119,7 +119,7 @@ export function WebDevelopmentContent() {
                             { title: 'Cloud Architecture', desc: 'AWS, GCP, and Azure infrastructure designed for performance and cost.' }
                         ].map((service, i) => (
                             <div key={i} className="service-card">
-                                <h3 style={{ fontSize: '24px', fontWeight: 800, marginBottom: '15px' }}>{service.title}</h3>
+                                <h3 style={{ fontSize: '24px', fontWeight: 600, marginBottom: '15px' }}>{service.title}</h3>
                                 <p style={{ fontSize: '16px', opacity: 0.9, lineHeight: 1.7 }}>{service.desc}</p>
                             </div>
                         ))}
@@ -136,8 +136,8 @@ export function WebDevelopmentContent() {
                     </div>
                     <div className="pricing-grid">
                         <div className="price-card">
-                            <h4 style={{ fontSize: '24px', fontWeight: 800, marginBottom: '20px' }}>MVP</h4>
-                            <div style={{ fontSize: '42px', fontWeight: 900, marginBottom: '10px' }}>$15,000<span style={{ fontSize: '16px', color: '#999' }}>+</span></div>
+                            <h4 style={{ fontSize: '24px', fontWeight: 600, marginBottom: '20px' }}>MVP</h4>
+                            <div style={{ fontSize: '42px', fontWeight: 600, marginBottom: '10px' }}>$15,000<span style={{ fontSize: '16px', color: '#999' }}>+</span></div>
                             <p style={{ color: '#666', marginBottom: '30px', fontSize: '14px' }}>Launch-ready product</p>
                             <ul style={{ listStyle: 'none', textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '40px' }}>
                                 <li><Icon type="check" style={{ color: '#10b981' }} /> Core Features</li>
@@ -150,8 +150,8 @@ export function WebDevelopmentContent() {
 
                         <div className="price-card featured">
                             <span className="popular-tag">MOST POPULAR</span>
-                            <h4 style={{ fontSize: '24px', fontWeight: 800, marginBottom: '20px' }}>Full Product</h4>
-                            <div style={{ fontSize: '42px', fontWeight: 900, marginBottom: '10px' }}>$50,000<span style={{ fontSize: '16px', color: '#999' }}>+</span></div>
+                            <h4 style={{ fontSize: '24px', fontWeight: 600, marginBottom: '20px' }}>Full Product</h4>
+                            <div style={{ fontSize: '42px', fontWeight: 600, marginBottom: '10px' }}>$50,000<span style={{ fontSize: '16px', color: '#999' }}>+</span></div>
                             <p style={{ color: '#666', marginBottom: '30px', fontSize: '14px' }}>Complete application</p>
                             <ul style={{ listStyle: 'none', textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '40px' }}>
                                 <li><Icon type="check" style={{ color: '#3b82f6' }} /> Full Feature Set</li>
@@ -164,8 +164,8 @@ export function WebDevelopmentContent() {
                         </div>
 
                         <div className="price-card">
-                            <h4 style={{ fontSize: '24px', fontWeight: 800, marginBottom: '20px' }}>Dedicated Team</h4>
-                            <div style={{ fontSize: '42px', fontWeight: 900, marginBottom: '10px' }}>$25,000<span style={{ fontSize: '16px', color: '#999' }}>/mo</span></div>
+                            <h4 style={{ fontSize: '24px', fontWeight: 600, marginBottom: '20px' }}>Dedicated Team</h4>
+                            <div style={{ fontSize: '42px', fontWeight: 600, marginBottom: '10px' }}>$25,000<span style={{ fontSize: '16px', color: '#999' }}>/mo</span></div>
                             <p style={{ color: '#666', marginBottom: '30px', fontSize: '14px' }}>Ongoing development</p>
                             <ul style={{ listStyle: 'none', textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '40px' }}>
                                 <li><Icon type="check" style={{ color: '#10b981' }} /> 3-5 Developers</li>
@@ -193,7 +193,7 @@ export function WebDevelopmentContent() {
                             { q: 'How do you handle project management?', a: 'We use Agile methodology with 2-week sprints, daily standups, and regular demos. You\'ll have full visibility via our project management tools.' }
                         ].map((item, idx) => (
                             <details key={idx} style={{ background: '#fff', padding: '30px', borderRadius: '24px', marginBottom: '20px', cursor: 'pointer', border: '1px solid #e2e8f0' }}>
-                                <summary style={{ fontWeight: 800, fontSize: '20px', listStyle: 'none', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                                <summary style={{ fontWeight: 600, fontSize: '20px', listStyle: 'none', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                                     {item.q}
                                     <Icon type="plus" style={{ width: '20px' }} />
                                 </summary>
@@ -209,7 +209,7 @@ export function WebDevelopmentContent() {
                 <div className="webdev-container">
                     <div className="cta-grid">
                         <div>
-                            <h2 style={{ fontSize: '56px', fontWeight: 900, marginBottom: '30px', lineHeight: 1.1 }}>Ready to build <span style={{ color: 'var(--accent-yellow)' }}>something great?</span></h2>
+                            <h2 style={{ fontSize: '56px', fontWeight: 600, marginBottom: '30px', lineHeight: 1.1 }}>Ready to build <span style={{ color: 'var(--accent-yellow)' }}>something great?</span></h2>
                             <p style={{ fontSize: '20px', opacity: 0.8, marginBottom: '50px', lineHeight: 1.6 }}>Get a technical consultation and project estimate.</p>
                         </div>
                         <div className="cta-form">
@@ -224,7 +224,7 @@ export function WebDevelopmentContent() {
                                     <option value="other">Other</option>
                                 </select>
                                 <textarea placeholder="Describe your project..." style={{ height: '100px' }}></textarea>
-                                <button type="submit" className="btn-primary" style={{ border: 'none', background: 'linear-gradient(135deg, #10b981, #3b82f6)', color: 'white', fontSize: '18px', fontWeight: 800, cursor: 'pointer', padding: '20px' }}>
+                                <button type="submit" className="btn-primary" style={{ border: 'none', background: 'linear-gradient(135deg, #10b981, #3b82f6)', color: 'white', fontSize: '18px', fontWeight: 600, cursor: 'pointer', padding: '20px' }}>
                                     Get Free Consultation
                                 </button>
                             </form>

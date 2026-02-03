@@ -42,12 +42,12 @@ export function EmailMarketingContent() {
                                             <div style={{ width: '40px', height: '4px', background: '#f5f5f5' }}></div>
                                         </div>
                                     </div>
-                                    <div style={{ marginTop: '20px', fontSize: '18px', fontWeight: 800, color: '#16a34a' }}>+45% CTR</div>
+                                    <div style={{ marginTop: '20px', fontSize: '18px', fontWeight: 600, color: '#16a34a' }}>+45% CTR</div>
                                 </div>
                                 <div className="email-card-main">
                                     <div style={{ textAlign: 'center', marginBottom: '20px' }}>
                                         <Icon type="zap" className="text-gradient" />
-                                        <h4 style={{ fontSize: '18px', fontWeight: 800, marginTop: '10px' }}>Weekly Revenue</h4>
+                                        <h4 style={{ fontSize: '18px', fontWeight: 600, marginTop: '10px' }}>Weekly Revenue</h4>
                                     </div>
                                     {[70, 40, 90, 60, 100].map((h, i) => (
                                         <div key={i} style={{ height: '10px', background: '#f8fafc', borderRadius: '10px', marginBottom: '10px', overflow: 'hidden' }}>
@@ -55,13 +55,13 @@ export function EmailMarketingContent() {
                                         </div>
                                     ))}
                                     <div style={{ marginTop: '20px', padding: '15px', background: '#f0fdf4', borderRadius: '12px', textAlign: 'center' }}>
-                                        <span style={{ fontSize: '12px', fontWeight: 700, color: '#16a34a' }}>CONVERSION GOAL REACHED</span>
+                                        <span style={{ fontSize: '12px', fontWeight: 600, color: '#16a34a' }}>CONVERSION GOAL REACHED</span>
                                     </div>
                                 </div>
                                 <div className="email-card-sub right">
                                     <div style={{ fontSize: '12px', color: '#555', marginBottom: '10px' }}>RECENT REVENUE</div>
-                                    <div style={{ fontSize: '24px', fontWeight: 800 }}>$12,430</div>
-                                    <div style={{ fontSize: '11px', color: '#16a34a', fontWeight: 700 }}>+28.4% from flows</div>
+                                    <div style={{ fontSize: '24px', fontWeight: 600 }}>$12,430</div>
+                                    <div style={{ fontSize: '11px', color: '#16a34a', fontWeight: 600 }}>+28.4% from flows</div>
                                 </div>
                             </div>
                         </div>
@@ -126,7 +126,7 @@ export function EmailMarketingContent() {
                         <div className="lifecycle-visual" style={{ background: '#fff', padding: '40px', borderRadius: '32px', boxShadow: '0 20px 40px rgba(0,0,0,0.05)' }}>
                             <div className="mockup-header">
                                 <div className="dot" style={{ background: '#7c3aed' }}></div>
-                                <div style={{ fontSize: '14px', fontWeight: 700 }}>Automation Workflow</div>
+                                <div style={{ fontSize: '14px', fontWeight: 600 }}>Automation Workflow</div>
                             </div>
                             <div style={{ marginTop: '30px', display: 'flex', flexDirection: 'column', gap: '20px' }}>
                                 {[
@@ -138,8 +138,8 @@ export function EmailMarketingContent() {
                                 ].map((step, i) => (
                                     <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '15px', position: 'relative' }}>
                                         <div style={{ padding: '12px 20px', background: '#f8fafc', borderRadius: '10px', flex: 1, border: '1px solid #eee' }}>
-                                            <span style={{ fontSize: '10px', color: '#7c3aed', fontWeight: 800, display: 'block' }}>{step.c}</span>
-                                            <span style={{ fontWeight: 700 }}>{step.t}</span>
+                                            <span style={{ fontSize: '10px', color: '#7c3aed', fontWeight: 600, display: 'block' }}>{step.c}</span>
+                                            <span style={{ fontWeight: 600 }}>{step.t}</span>
                                         </div>
                                         {i < 4 && <div style={{ position: 'absolute', bottom: '-15px', left: '30px', height: '15px', width: '2px', background: '#ddd' }}></div>}
                                     </div>
@@ -189,8 +189,8 @@ export function EmailMarketingContent() {
                     </div>
                     <div className="plans-grid">
                         <div className="plan-card">
-                            <h4 style={{ fontWeight: 800, fontSize: '20px', marginBottom: '20px' }}>Starter</h4>
-                            <div style={{ fontSize: '32px', fontWeight: 800, marginBottom: '20px' }}>$1,999<span style={{ fontSize: '14px', color: '#999' }}>/mo</span></div>
+                            <h4 style={{ fontWeight: 600, fontSize: '20px', marginBottom: '20px' }}>Starter</h4>
+                            <div style={{ fontSize: '32px', fontWeight: 600, marginBottom: '20px' }}>$1,999<span style={{ fontSize: '14px', color: '#999' }}>/mo</span></div>
                             <ul style={{ listStyle: 'none', textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '30px' }}>
                                 <li><Icon type="check" className="text-gradient" /> 4 Campaigns / mo</li>
                                 <li><Icon type="check" className="text-gradient" /> Core Flow Setup</li>
@@ -199,8 +199,8 @@ export function EmailMarketingContent() {
                             <Link href="/contact" className="btn-outline" style={{ display: 'block' }}>Get Started</Link>
                         </div>
                         <div className="plan-card featured">
-                            <h4 style={{ fontWeight: 800, fontSize: '20px', marginBottom: '20px' }}>Growth</h4>
-                            <div style={{ fontSize: '32px', fontWeight: 800, marginBottom: '20px' }}>$3,499<span style={{ fontSize: '14px', color: 'rgba(255,255,255,0.6)' }}>/mo</span></div>
+                            <h4 style={{ fontWeight: 600, fontSize: '20px', marginBottom: '20px' }}>Growth</h4>
+                            <div style={{ fontSize: '32px', fontWeight: 600, marginBottom: '20px' }}>$3,499<span style={{ fontSize: '14px', color: 'rgba(255,255,255,0.6)' }}>/mo</span></div>
                             <ul style={{ listStyle: 'none', textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '30px' }}>
                                 <li><Icon type="check" /> 8 Campaigns / mo</li>
                                 <li><Icon type="check" /> Advanced Automations</li>
@@ -210,8 +210,8 @@ export function EmailMarketingContent() {
                             <Link href="/contact" className="btn-white" style={{ display: 'block', color: '#7c3aed' }}>Scale Now</Link>
                         </div>
                         <div className="plan-card">
-                            <h4 style={{ fontWeight: 800, fontSize: '20px', marginBottom: '20px' }}>Scale</h4>
-                            <div style={{ fontSize: '32px', fontWeight: 800, marginBottom: '20px' }}>$5,999<span style={{ fontSize: '14px', color: '#999' }}>/mo</span></div>
+                            <h4 style={{ fontWeight: 600, fontSize: '20px', marginBottom: '20px' }}>Scale</h4>
+                            <div style={{ fontSize: '32px', fontWeight: 600, marginBottom: '20px' }}>$5,999<span style={{ fontSize: '14px', color: '#999' }}>/mo</span></div>
                             <ul style={{ listStyle: 'none', textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '30px' }}>
                                 <li><Icon type="check" className="text-gradient" /> 16 Campaigns / mo</li>
                                 <li><Icon type="check" className="text-gradient" /> Full Omnichannel Retention</li>
@@ -221,8 +221,8 @@ export function EmailMarketingContent() {
                             <Link href="/contact" className="btn-outline" style={{ display: 'block' }}>Go Pro</Link>
                         </div>
                         <div className="plan-card">
-                            <h4 style={{ fontWeight: 800, fontSize: '20px', marginBottom: '20px' }}>Enterprise</h4>
-                            <div style={{ fontSize: '32px', fontWeight: 800, marginBottom: '20px' }}>Custom</div>
+                            <h4 style={{ fontWeight: 600, fontSize: '20px', marginBottom: '20px' }}>Enterprise</h4>
+                            <div style={{ fontSize: '32px', fontWeight: 600, marginBottom: '20px' }}>Custom</div>
                             <p style={{ fontSize: '14px', color: '#777', marginBottom: '40px' }}>For brands processing $1M+ monthly volume.</p>
                             <Link href="/contact" className="btn-primary" style={{ display: 'block' }}>Talk to Specialist</Link>
                         </div>
@@ -263,7 +263,7 @@ export function EmailMarketingContent() {
                 <div className="email-container">
                     <div className="cta-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px', alignItems: 'center' }}>
                         <div>
-                            <h2 style={{ fontSize: '56px', fontWeight: 800, marginBottom: '20px' }}>Ready to be <span style={{ color: 'var(--accent-yellow)' }}>undeniable?</span></h2>
+                            <h2 style={{ fontSize: '56px', fontWeight: 600, marginBottom: '20px' }}>Ready to be <span style={{ color: 'var(--accent-yellow)' }}>undeniable?</span></h2>
                             <p style={{ fontSize: '20px', opacity: 0.8, marginBottom: '40px' }}>Let&apos;s build your revenue engine together. Fill out the form and our growth specialists will be in touch.</p>
                         </div>
                         <div style={{ background: 'white', padding: '40px', borderRadius: '32px', color: 'black' }}>

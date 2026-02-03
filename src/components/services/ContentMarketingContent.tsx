@@ -149,14 +149,14 @@ export function ContentMarketingContent() {
                                 <li style={{ display: 'flex', gap: '15px' }}>
                                     <div style={{ color: '#16a34a' }}><Icon type="check" /></div>
                                     <div>
-                                        <h4 style={{ fontWeight: 700 }}>5.3x Higher ROI</h4>
+                                        <h4 style={{ fontWeight: 600 }}>5.3x Higher ROI</h4>
                                         <p style={{ fontSize: '14px', color: 'var(--text-gray)' }}>Average ROI compared to traditional display advertising.</p>
                                     </div>
                                 </li>
                                 <li style={{ display: 'flex', gap: '15px' }}>
                                     <div style={{ color: '#16a34a' }}><Icon type="check" /></div>
                                     <div>
-                                        <h4 style={{ fontWeight: 700 }}>Zero Ad Spend</h4>
+                                        <h4 style={{ fontWeight: 600 }}>Zero Ad Spend</h4>
                                         <p style={{ fontSize: '14px', color: 'var(--text-gray)' }}>Durable organic traffic that doesn&apos;t disappear when the budget stops.</p>
                                     </div>
                                 </li>
@@ -188,7 +188,7 @@ export function ContentMarketingContent() {
                                 <div className="step-icon-wrapper">
                                     <Icon type={step.icon} />
                                 </div>
-                                <h3 style={{ fontSize: '20px', fontWeight: 800, marginBottom: '10px' }}>{step.title}</h3>
+                                <h3 style={{ fontSize: '20px', fontWeight: 600, marginBottom: '10px' }}>{step.title}</h3>
                                 <p style={{ fontSize: '14px', color: 'var(--text-gray)', lineHeight: '1.6' }}>{step.desc}</p>
                             </div>
                         ))}
@@ -230,11 +230,11 @@ export function ContentMarketingContent() {
                                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px', marginTop: '30px' }}>
                                     <div style={{ padding: '15px', background: '#1a1a1a', borderRadius: '8px' }}>
                                         <span style={{ fontSize: '10px', color: '#555' }}>ENGAGEMENT SCORE</span>
-                                        <div style={{ fontSize: '24px', fontWeight: 800, color: 'var(--accent-yellow)' }}>9.8/10</div>
+                                        <div style={{ fontSize: '24px', fontWeight: 600, color: 'var(--accent-yellow)' }}>9.8/10</div>
                                     </div>
                                     <div style={{ padding: '15px', background: '#1a1a1a', borderRadius: '8px' }}>
                                         <span style={{ fontSize: '10px', color: '#555' }}>CONVERSION LIFT</span>
-                                        <div style={{ fontSize: '24px', fontWeight: 800, color: '#7c3aed' }}>+22%</div>
+                                        <div style={{ fontSize: '24px', fontWeight: 600, color: '#7c3aed' }}>+22%</div>
                                     </div>
                                 </div>
                             </div>
@@ -314,37 +314,37 @@ export function ContentMarketingContent() {
                     </div>
                     <div className="testimonial-track">
                         <div className="content-testimonial-card">
-                            <div className="industry-label" style={{ color: '#7c3aed', fontWeight: 700, fontSize: '12px', marginBottom: '10px' }}>SAAS</div>
+                            <div className="industry-label" style={{ color: '#7c3aed', fontWeight: 600, fontSize: '12px', marginBottom: '10px' }}>SAAS</div>
                             <h3>300% Increase in Inbound Leads</h3>
                             <p style={{ color: 'var(--text-gray)', margin: '15px 0' }}>Through a strategic topic cluster approach, we helped a B2B SaaS company dominate their niche keyword space.</p>
                             <div className="author" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                                 <div className="avatar" style={{ width: '40px', height: '40px', borderRadius: '50%', background: '#7c3aed' }}></div>
                                 <div className="info">
-                                    <span style={{ display: 'block', fontWeight: 700, fontSize: '14px' }}>Sarah Jenkins</span>
+                                    <span style={{ display: 'block', fontWeight: 600, fontSize: '14px' }}>Sarah Jenkins</span>
                                     <span style={{ fontSize: '12px', color: 'var(--text-gray)' }}>VP Marketing, CloudScale</span>
                                 </div>
                             </div>
                         </div>
                         <div className="content-testimonial-card">
-                            <div className="industry-label" style={{ color: '#3d0da8', fontWeight: 700, fontSize: '12px', marginBottom: '10px' }}>E-COMMERCE</div>
+                            <div className="industry-label" style={{ color: '#3d0da8', fontWeight: 600, fontSize: '12px', marginBottom: '10px' }}>E-COMMERCE</div>
                             <h3>$1.2M in Revenue from Organic</h3>
                             <p style={{ color: 'var(--text-gray)', margin: '15px 0' }}>Our product storytelling strategy turned a dormant blog into a top-performing revenue channel for a fashion retailer.</p>
                             <div className="author" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                                 <div className="avatar" style={{ width: '40px', height: '40px', borderRadius: '50%', background: '#3d0da8' }}></div>
                                 <div className="info">
-                                    <span style={{ display: 'block', fontWeight: 700, fontSize: '14px' }}>Marcus Thorne</span>
+                                    <span style={{ display: 'block', fontWeight: 600, fontSize: '14px' }}>Marcus Thorne</span>
                                     <span style={{ fontSize: '12px', color: 'var(--text-gray)' }}>Founder, UrbanTrend</span>
                                 </div>
                             </div>
                         </div>
                         <div className="content-testimonial-card">
-                            <div className="industry-label" style={{ color: '#ffc700', fontWeight: 700, fontSize: '12px', marginBottom: '10px' }}>FINTECH</div>
+                            <div className="industry-label" style={{ color: '#ffc700', fontWeight: 600, fontSize: '12px', marginBottom: '10px' }}>FINTECH</div>
                             <h3>Authority Status in 6 Months</h3>
                             <p style={{ color: 'var(--text-gray)', margin: '15px 0' }}>We positioned a fintech startup as the go-to source for industry insights through high-caliber whitepapers.</p>
                             <div className="author" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                                 <div className="avatar" style={{ width: '40px', height: '40px', borderRadius: '50%', background: '#ffc700' }}></div>
                                 <div className="info">
-                                    <span style={{ display: 'block', fontWeight: 700, fontSize: '14px' }}>Elena Rodriguez</span>
+                                    <span style={{ display: 'block', fontWeight: 600, fontSize: '14px' }}>Elena Rodriguez</span>
                                     <span style={{ fontSize: '12px', color: 'var(--text-gray)' }}>CMO, FinFlow</span>
                                 </div>
                             </div>

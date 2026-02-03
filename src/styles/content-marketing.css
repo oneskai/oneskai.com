@@ -56,7 +56,7 @@
 
 .content-hero-title {
     font-size: 64px;
-    font-weight: 800;
+    font-weight: 600;
     line-height: 1.1;
     letter-spacing: -2px;
     margin-bottom: 24px;
@@ -150,7 +150,7 @@
 
 .stat-num {
     font-size: 32px;
-    font-weight: 800;
+    font-weight: 600;
     color: #7c3aed;
     line-height: 1;
     margin-bottom: 4px;
@@ -215,7 +215,7 @@
     padding: 12px 20px;
     border-radius: 100px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    font-weight: 700;
+    font-weight: 600;
     font-size: 14px;
     display: flex;
     align-items: center;
@@ -239,7 +239,7 @@
 .section-label {
     display: inline-block;
     font-size: 12px;
-    font-weight: 700;
+    font-weight: 600;
     color: #7c3aed;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -248,7 +248,7 @@
 
 .section-title {
     font-size: 48px;
-    font-weight: 800;
+    font-weight: 600;
     line-height: 1.15;
     letter-spacing: -1px;
     margin-bottom: 20px;
@@ -320,7 +320,7 @@
 
 .challenge-card h3 {
     font-size: 22px;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 16px;
 }
 
@@ -358,7 +358,7 @@
 
 .pillar-num {
     font-size: 64px;
-    font-weight: 800;
+    font-weight: 600;
     opacity: 0.1;
     line-height: 1;
     margin-bottom: -30px;
@@ -376,7 +376,7 @@
 
 .pillar-content h3 {
     font-size: 24px;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 15px;
     color: var(--accent-yellow);
 }
@@ -414,7 +414,7 @@
 
 .content-service-card h3 {
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 12px;
 }
 
@@ -477,7 +477,7 @@
 }
 
 .faq-item summary {
-    font-weight: 700;
+    font-weight: 600;
     font-size: 18px;
     list-style: none;
     display: flex;
@@ -504,7 +504,7 @@
 
 .cta-box h2 {
     font-size: 56px;
-    font-weight: 800;
+    font-weight: 600;
     margin-bottom: 24px;
 }
 
@@ -513,7 +513,7 @@
     color: #7c3aed;
     padding: 18px 40px;
     border-radius: 100px;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 18px;
     text-decoration: none;
     display: inline-block;
@@ -578,7 +578,7 @@
 
 .chart-label {
     font-size: 12px;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--text-gray);
 }
 
@@ -590,7 +590,7 @@
     color: #16a34a;
     padding: 10px 20px;
     border-radius: 100px;
-    font-weight: 800;
+    font-weight: 600;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -630,7 +630,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 800;
+    font-weight: 600;
     box-shadow: 0 8px 16px rgba(5, 46, 38, 0.2);
 }
 
@@ -668,7 +668,7 @@
     color: var(--accent-yellow);
     border-radius: 100px;
     font-size: 12px;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 20px;
     letter-spacing: 1px;
 }
@@ -689,7 +689,7 @@
 .tech-feature-item h4 {
     color: var(--accent-yellow);
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .tech-feature-item p {

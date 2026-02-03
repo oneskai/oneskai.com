@@ -37,8 +37,8 @@ export function PPCContent() {
                             <div className="roas-display">
                                 <div className="roas-circle">
                                     <div className="roas-inner">
-                                        <div style={{ fontSize: '64px', fontWeight: 900, color: '#4285f4', lineHeight: 1 }}>4.8x</div>
-                                        <div style={{ fontSize: '14px', fontWeight: 700, color: '#64748b', textTransform: 'uppercase', marginTop: '10px', letterSpacing: '1px' }}>Average ROAS</div>
+                                        <div style={{ fontSize: '64px', fontWeight: 600, color: '#4285f4', lineHeight: 1 }}>4.8x</div>
+                                        <div style={{ fontSize: '14px', fontWeight: 600, color: '#64748b', textTransform: 'uppercase', marginTop: '10px', letterSpacing: '1px' }}>Average ROAS</div>
                                     </div>
                                 </div>
                             </div>
@@ -59,7 +59,7 @@ export function PPCContent() {
                         ].map((badge, i) => (
                             <div key={i} className="partner-badge">
                                 <span style={{ fontSize: '32px' }}>{badge.icon}</span>
-                                <span style={{ fontSize: '13px', fontWeight: 700, textTransform: 'uppercase' }}>{badge.name}</span>
+                                <span style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase' }}>{badge.name}</span>
                             </div>
                         ))}
                     </div>
@@ -84,7 +84,7 @@ export function PPCContent() {
                                 <div className={`platform-icon ${platform.color}`}>
                                     <Icon type={platform.icon} />
                                 </div>
-                                <h3 style={{ fontSize: '22px', fontWeight: 800, marginBottom: '15px' }}>{platform.name}</h3>
+                                <h3 style={{ fontSize: '22px', fontWeight: 600, marginBottom: '15px' }}>{platform.name}</h3>
                                 <p style={{ fontSize: '15px', color: '#64748b', lineHeight: 1.6 }}>{platform.desc}</p>
                             </div>
                         ))}
@@ -107,7 +107,7 @@ export function PPCContent() {
                         ].map((campaign, i) => (
                             <div key={i} className="campaign-card">
                                 <Icon type={campaign.icon} style={{ color: '#4285f4', marginBottom: '20px' }} />
-                                <h3 style={{ fontSize: '24px', fontWeight: 800, marginBottom: '20px' }}>{campaign.title}</h3>
+                                <h3 style={{ fontSize: '24px', fontWeight: 600, marginBottom: '20px' }}>{campaign.title}</h3>
                                 <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '12px' }}>
                                     {campaign.items.map((item, j) => (
                                         <li key={j} style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
@@ -138,20 +138,20 @@ export function PPCContent() {
                                 { title: 'Enhanced CPC', desc: 'Manual control with automated bid adjustments.' }
                             ].map((strategy, i) => (
                                 <div key={i} className="strategy-item">
-                                    <div style={{ width: '50px', height: '50px', background: 'linear-gradient(135deg, #ea4335, #4285f4)', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 900, flexShrink: 0 }}>
+                                    <div style={{ width: '50px', height: '50px', background: 'linear-gradient(135deg, #ea4335, #4285f4)', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 600, flexShrink: 0 }}>
                                         0{i + 1}
                                     </div>
                                     <div>
-                                        <h4 style={{ fontWeight: 800, marginBottom: '8px' }}>{strategy.title}</h4>
+                                        <h4 style={{ fontWeight: 600, marginBottom: '8px' }}>{strategy.title}</h4>
                                         <p style={{ fontSize: '15px', color: '#64748b' }}>{strategy.desc}</p>
                                     </div>
                                 </div>
                             ))}
                         </div>
                         <div className="bidding-visual">
-                            <div style={{ fontSize: '64px', fontWeight: 900, marginBottom: '20px' }}>37%</div>
+                            <div style={{ fontSize: '64px', fontWeight: 600, marginBottom: '20px' }}>37%</div>
                             <div style={{ fontSize: '18px', opacity: 0.9, marginBottom: '40px' }}>Average CPA Reduction</div>
-                            <div style={{ fontSize: '48px', fontWeight: 900, marginBottom: '20px' }}>2.3x</div>
+                            <div style={{ fontSize: '48px', fontWeight: 600, marginBottom: '20px' }}>2.3x</div>
                             <div style={{ fontSize: '18px', opacity: 0.9 }}>Conversion Lift</div>
                         </div>
                     </div>
@@ -167,8 +167,8 @@ export function PPCContent() {
                     </div>
                     <div className="pricing-grid">
                         <div className="price-card">
-                            <h4 style={{ fontSize: '24px', fontWeight: 800, marginBottom: '20px' }}>Starter</h4>
-                            <div style={{ fontSize: '42px', fontWeight: 900, marginBottom: '10px' }}>$1,500<span style={{ fontSize: '16px', color: '#999' }}>/mo</span></div>
+                            <h4 style={{ fontSize: '24px', fontWeight: 600, marginBottom: '20px' }}>Starter</h4>
+                            <div style={{ fontSize: '42px', fontWeight: 600, marginBottom: '10px' }}>$1,500<span style={{ fontSize: '16px', color: '#999' }}>/mo</span></div>
                             <p style={{ color: '#666', marginBottom: '30px', fontSize: '14px' }}>Ad spend up to $10K/mo</p>
                             <ul style={{ listStyle: 'none', textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '40px' }}>
                                 <li><Icon type="check" style={{ color: '#34a853' }} /> 1 Platform (Google or Meta)</li>
@@ -181,8 +181,8 @@ export function PPCContent() {
 
                         <div className="price-card featured">
                             <span className="popular-tag">MOST POPULAR</span>
-                            <h4 style={{ fontSize: '24px', fontWeight: 800, marginBottom: '20px' }}>Growth</h4>
-                            <div style={{ fontSize: '42px', fontWeight: 900, marginBottom: '10px' }}>$3,500<span style={{ fontSize: '16px', color: '#999' }}>/mo</span></div>
+                            <h4 style={{ fontSize: '24px', fontWeight: 600, marginBottom: '20px' }}>Growth</h4>
+                            <div style={{ fontSize: '42px', fontWeight: 600, marginBottom: '10px' }}>$3,500<span style={{ fontSize: '16px', color: '#999' }}>/mo</span></div>
                             <p style={{ color: '#666', marginBottom: '30px', fontSize: '14px' }}>Ad spend up to $50K/mo</p>
                             <ul style={{ listStyle: 'none', textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '40px' }}>
                                 <li><Icon type="check" style={{ color: '#4285f4' }} /> 3 Platforms Managed</li>
@@ -195,8 +195,8 @@ export function PPCContent() {
                         </div>
 
                         <div className="price-card">
-                            <h4 style={{ fontSize: '24px', fontWeight: 800, marginBottom: '20px' }}>Enterprise</h4>
-                            <div style={{ fontSize: '42px', fontWeight: 900, marginBottom: '10px' }}>Custom</div>
+                            <h4 style={{ fontSize: '24px', fontWeight: 600, marginBottom: '20px' }}>Enterprise</h4>
+                            <div style={{ fontSize: '42px', fontWeight: 600, marginBottom: '10px' }}>Custom</div>
                             <p style={{ color: '#666', marginBottom: '30px', fontSize: '14px' }}>Ad spend $50K+/mo</p>
                             <ul style={{ listStyle: 'none', textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '40px' }}>
                                 <li><Icon type="check" style={{ color: '#34a853' }} /> Unlimited Platforms</li>
@@ -265,15 +265,15 @@ export function PPCContent() {
                 <div className="ppc-container">
                     <div className="cta-grid">
                         <div>
-                            <h2 style={{ fontSize: '56px', fontWeight: 900, marginBottom: '30px', lineHeight: 1.1 }}>Ready to scale your <span style={{ color: 'var(--accent-yellow)' }}>ad performance?</span></h2>
+                            <h2 style={{ fontSize: '56px', fontWeight: 600, marginBottom: '30px', lineHeight: 1.1 }}>Ready to scale your <span style={{ color: 'var(--accent-yellow)' }}>ad performance?</span></h2>
                             <p style={{ fontSize: '20px', opacity: 0.8, marginBottom: '50px', lineHeight: 1.6 }}>Get a free PPC audit and discover exactly where your campaigns are leaking money—and how to fix it.</p>
                             <div style={{ display: 'flex', gap: '40px' }}>
                                 <div style={{ textAlign: 'center' }}>
-                                    <div style={{ fontSize: '32px', fontWeight: 900, color: 'var(--accent-yellow)' }}>Free</div>
+                                    <div style={{ fontSize: '32px', fontWeight: 600, color: 'var(--accent-yellow)' }}>Free</div>
                                     <div style={{ fontSize: '12px', opacity: 0.6 }}>PPC AUDIT</div>
                                 </div>
                                 <div style={{ textAlign: 'center' }}>
-                                    <div style={{ fontSize: '32px', fontWeight: 900, color: 'var(--accent-yellow)' }}>48h</div>
+                                    <div style={{ fontSize: '32px', fontWeight: 600, color: 'var(--accent-yellow)' }}>48h</div>
                                     <div style={{ fontSize: '12px', opacity: 0.6 }}>TURNAROUND</div>
                                 </div>
                             </div>
@@ -293,7 +293,7 @@ export function PPCContent() {
                                     <option value="25k-50k">$25,000 - $50,000</option>
                                     <option value="50k+">$50,000+</option>
                                 </select>
-                                <button type="submit" className="btn-primary" style={{ border: 'none', background: 'linear-gradient(135deg, #ea4335, #4285f4)', color: 'white', fontSize: '18px', fontWeight: 800, cursor: 'pointer', padding: '20px' }}>
+                                <button type="submit" className="btn-primary" style={{ border: 'none', background: 'linear-gradient(135deg, #ea4335, #4285f4)', color: 'white', fontSize: '18px', fontWeight: 600, cursor: 'pointer', padding: '20px' }}>
                                     Get My Free Audit
                                 </button>
                             </form>

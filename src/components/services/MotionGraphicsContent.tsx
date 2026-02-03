@@ -55,7 +55,7 @@ export function MotionGraphicsContent() {
                             { value: '48h', label: 'Fast Delivery Option' }
                         ].map((stat, i) => (
                             <div key={i} style={{ textAlign: 'center' }}>
-                                <div style={{ fontSize: '36px', fontWeight: 900, background: 'linear-gradient(135deg, #8b5cf6, #06b6d4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{stat.value}</div>
+                                <div style={{ fontSize: '36px', fontWeight: 600, background: 'linear-gradient(135deg, #8b5cf6, #06b6d4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{stat.value}</div>
                                 <div style={{ fontSize: '13px', color: '#64748b', marginTop: '5px' }}>{stat.label}</div>
                             </div>
                         ))}
@@ -78,7 +78,7 @@ export function MotionGraphicsContent() {
                         ].map((service, i) => (
                             <div key={i} className="service-card">
                                 <Icon type={service.icon} style={{ color: '#8b5cf6', marginBottom: '25px' }} />
-                                <h3 style={{ fontSize: '24px', fontWeight: 800, marginBottom: '15px' }}>{service.title}</h3>
+                                <h3 style={{ fontSize: '24px', fontWeight: 600, marginBottom: '15px' }}>{service.title}</h3>
                                 <p style={{ fontSize: '16px', color: '#64748b', lineHeight: 1.7 }}>{service.desc}</p>
                             </div>
                         ))}
@@ -110,8 +110,8 @@ export function MotionGraphicsContent() {
                     </div>
                     <div className="pricing-grid">
                         <div className="price-card">
-                            <h4 style={{ fontSize: '24px', fontWeight: 800, marginBottom: '20px' }}>Social Clip</h4>
-                            <div style={{ fontSize: '42px', fontWeight: 900, marginBottom: '10px' }}>$500<span style={{ fontSize: '16px', color: '#999' }}>+</span></div>
+                            <h4 style={{ fontSize: '24px', fontWeight: 600, marginBottom: '20px' }}>Social Clip</h4>
+                            <div style={{ fontSize: '42px', fontWeight: 600, marginBottom: '10px' }}>$500<span style={{ fontSize: '16px', color: '#999' }}>+</span></div>
                             <p style={{ color: '#666', marginBottom: '30px', fontSize: '14px' }}>15-30 second animation</p>
                             <ul style={{ listStyle: 'none', textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '40px' }}>
                                 <li><Icon type="check" style={{ color: '#8b5cf6' }} /> Simple Motion Graphics</li>
@@ -124,8 +124,8 @@ export function MotionGraphicsContent() {
 
                         <div className="price-card featured">
                             <span className="popular-tag">MOST POPULAR</span>
-                            <h4 style={{ fontSize: '24px', fontWeight: 800, marginBottom: '20px' }}>Explainer Video</h4>
-                            <div style={{ fontSize: '42px', fontWeight: 900, marginBottom: '10px' }}>$3,000<span style={{ fontSize: '16px', color: '#999' }}>+</span></div>
+                            <h4 style={{ fontSize: '24px', fontWeight: 600, marginBottom: '20px' }}>Explainer Video</h4>
+                            <div style={{ fontSize: '42px', fontWeight: 600, marginBottom: '10px' }}>$3,000<span style={{ fontSize: '16px', color: '#999' }}>+</span></div>
                             <p style={{ color: '#666', marginBottom: '30px', fontSize: '14px' }}>60-90 second video</p>
                             <ul style={{ listStyle: 'none', textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '40px' }}>
                                 <li><Icon type="check" style={{ color: '#06b6d4' }} /> Script Writing</li>
@@ -138,8 +138,8 @@ export function MotionGraphicsContent() {
                         </div>
 
                         <div className="price-card">
-                            <h4 style={{ fontSize: '24px', fontWeight: 800, marginBottom: '20px' }}>Brand Film</h4>
-                            <div style={{ fontSize: '42px', fontWeight: 900, marginBottom: '10px' }}>Custom</div>
+                            <h4 style={{ fontSize: '24px', fontWeight: 600, marginBottom: '20px' }}>Brand Film</h4>
+                            <div style={{ fontSize: '42px', fontWeight: 600, marginBottom: '10px' }}>Custom</div>
                             <p style={{ color: '#666', marginBottom: '30px', fontSize: '14px' }}>Full production</p>
                             <ul style={{ listStyle: 'none', textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '40px' }}>
                                 <li><Icon type="check" style={{ color: '#8b5cf6' }} /> Complete Creative</li>
@@ -167,7 +167,7 @@ export function MotionGraphicsContent() {
                             { q: 'How long does production take?', a: 'Simple social clips take 3-5 days. Explainer videos typically require 2-3 weeks. Complex projects are scoped individually.' }
                         ].map((item, idx) => (
                             <details key={idx} style={{ background: '#fff', padding: '30px', borderRadius: '24px', marginBottom: '20px', cursor: 'pointer', border: '1px solid #e2e8f0' }}>
-                                <summary style={{ fontWeight: 800, fontSize: '20px', listStyle: 'none', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                                <summary style={{ fontWeight: 600, fontSize: '20px', listStyle: 'none', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                                     {item.q}
                                     <Icon type="plus" style={{ width: '20px' }} />
                                 </summary>
@@ -183,7 +183,7 @@ export function MotionGraphicsContent() {
                 <div className="motion-container">
                     <div className="cta-grid">
                         <div>
-                            <h2 style={{ fontSize: '56px', fontWeight: 900, marginBottom: '30px', lineHeight: 1.1 }}>Ready to bring your <span style={{ color: 'var(--accent-yellow)' }}>story to life?</span></h2>
+                            <h2 style={{ fontSize: '56px', fontWeight: 600, marginBottom: '30px', lineHeight: 1.1 }}>Ready to bring your <span style={{ color: 'var(--accent-yellow)' }}>story to life?</span></h2>
                             <p style={{ fontSize: '20px', opacity: 0.8, marginBottom: '50px', lineHeight: 1.6 }}>Tell us about your animation project and get a custom quote.</p>
                         </div>
                         <div className="cta-form">
@@ -198,7 +198,7 @@ export function MotionGraphicsContent() {
                                     <option value="other">Other</option>
                                 </select>
                                 <textarea placeholder="Describe your project..." style={{ height: '100px' }}></textarea>
-                                <button type="submit" className="btn-primary" style={{ border: 'none', background: 'linear-gradient(135deg, #8b5cf6, #06b6d4)', color: 'white', fontSize: '18px', fontWeight: 800, cursor: 'pointer', padding: '20px' }}>
+                                <button type="submit" className="btn-primary" style={{ border: 'none', background: 'linear-gradient(135deg, #8b5cf6, #06b6d4)', color: 'white', fontSize: '18px', fontWeight: 600, cursor: 'pointer', padding: '20px' }}>
                                     Get Free Quote
                                 </button>
                             </form>

@@ -25,7 +25,7 @@ export function ConsultingContent() {
                         <div className="content-hero-visual">
                             <div className="content-visual-card" style={{ background: 'linear-gradient(135deg, #3b82f6, #6366f1)' }}>
                                 <div style={{ padding: '40px', color: 'white', textAlign: 'center' }}>
-                                    <div style={{ fontSize: '60px', fontWeight: 900 }}>💡</div>
+                                    <div style={{ fontSize: '60px', fontWeight: 600 }}>💡</div>
                                     <div style={{ fontSize: '18px', marginTop: '10px' }}>Strategic Clarity</div>
                                 </div>
                             </div>

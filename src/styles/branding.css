@@ -60,7 +60,7 @@
     padding: 12px 20px;
     border-radius: 100px;
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 600;
     color: #f59e0b;
     margin-bottom: 32px;
     border: 1px solid rgba(245, 158, 11, 0.2);
@@ -68,7 +68,7 @@
 
 .branding-hero-title {
     font-size: 72px;
-    font-weight: 900;
+    font-weight: 600;
     line-height: 1.05;
     letter-spacing: -3px;
     margin-bottom: 28px;
@@ -132,7 +132,7 @@
     justify-content: center;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
     font-size: 32px;
-    font-weight: 900;
+    font-weight: 600;
     transition: all 0.3s ease;
 }
 
@@ -254,7 +254,7 @@
     justify-content: center;
     margin: 0 auto 20px;
     font-size: 24px;
-    font-weight: 900;
+    font-weight: 600;
 }
 
 /* ===== DELIVERABLES ===== */
@@ -356,7 +356,7 @@
     padding: 8px 24px;
     border-radius: 100px;
     font-size: 12px;
-    font-weight: 800;
+    font-weight: 600;
 }
 
 /* ===== PORTFOLIO ===== */

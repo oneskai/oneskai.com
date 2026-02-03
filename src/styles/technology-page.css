@@ -46,7 +46,7 @@
 
 .tech-hero-title {
     font-size: 48px;
-    font-weight: 800;
+    font-weight: 600;
     line-height: 1.1;
     color: white;
     margin-bottom: 24px;
@@ -101,7 +101,7 @@
 
 .tech-partner-logo {
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 600;
     color: #94a3b8;
     opacity: 0.7;
     transition: all 0.3s;
@@ -134,7 +134,7 @@
 
 .tech-category-header h2 {
     font-size: 32px;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--tech-primary);
     margin-bottom: 12px;
 }
@@ -180,7 +180,7 @@
 
 .tech-tool-card h3 {
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--tech-primary);
     margin-bottom: 8px;
 }
@@ -219,7 +219,7 @@
 
 .tech-cta h2 {
     font-size: 36px;
-    font-weight: 800;
+    font-weight: 600;
     color: white;
     margin-bottom: 20px;
 }

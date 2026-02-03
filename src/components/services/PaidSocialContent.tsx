@@ -37,18 +37,18 @@ export function PaidSocialContent() {
                             <div className="spend-visual">
                                 <div className="spend-cards">
                                     <div className="spend-card" style={{ background: 'linear-gradient(135deg, #1877F2, #0066CC)' }}>
-                                        <div style={{ color: 'white', fontSize: '14px', fontWeight: 700, marginBottom: '10px' }}>META ADS</div>
-                                        <div style={{ color: 'white', fontSize: '32px', fontWeight: 900 }}>+247%</div>
+                                        <div style={{ color: 'white', fontSize: '14px', fontWeight: 600, marginBottom: '10px' }}>META ADS</div>
+                                        <div style={{ color: 'white', fontSize: '32px', fontWeight: 600 }}>+247%</div>
                                         <div style={{ color: 'rgba(255,255,255,0.8)', fontSize: '13px' }}>ROAS Increase</div>
                                     </div>
                                     <div className="spend-card" style={{ background: 'linear-gradient(135deg, #E1306C, #C13584)' }}>
-                                        <div style={{ color: 'white', fontSize: '14px', fontWeight: 700, marginBottom: '10px' }}>INSTAGRAM</div>
-                                        <div style={{ color: 'white', fontSize: '32px', fontWeight: 900 }}>3.2x</div>
+                                        <div style={{ color: 'white', fontSize: '14px', fontWeight: 600, marginBottom: '10px' }}>INSTAGRAM</div>
+                                        <div style={{ color: 'white', fontSize: '32px', fontWeight: 600 }}>3.2x</div>
                                         <div style={{ color: 'rgba(255,255,255,0.8)', fontSize: '13px' }}>Avg. ROAS</div>
                                     </div>
                                     <div className="spend-card" style={{ background: 'linear-gradient(135deg, #000, #333)' }}>
-                                        <div style={{ color: 'white', fontSize: '14px', fontWeight: 700, marginBottom: '10px' }}>TIKTOK</div>
-                                        <div style={{ color: '#00f2ea', fontSize: '32px', fontWeight: 900 }}>-58%</div>
+                                        <div style={{ color: 'white', fontSize: '14px', fontWeight: 600, marginBottom: '10px' }}>TIKTOK</div>
+                                        <div style={{ color: '#00f2ea', fontSize: '32px', fontWeight: 600 }}>-58%</div>
                                         <div style={{ color: 'rgba(255,255,255,0.8)', fontSize: '13px' }}>Cost Per Acquisition</div>
                                     </div>
                                 </div>
@@ -69,7 +69,7 @@ export function PaidSocialContent() {
                             { value: '94%', label: 'Client Retention' }
                         ].map((stat, i) => (
                             <div key={i} className="trust-stat">
-                                <div style={{ fontSize: '36px', fontWeight: 900, background: 'linear-gradient(135deg, #1877F2, #E1306C)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{stat.value}</div>
+                                <div style={{ fontSize: '36px', fontWeight: 600, background: 'linear-gradient(135deg, #1877F2, #E1306C)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{stat.value}</div>
                                 <div style={{ fontSize: '13px', color: '#64748b', marginTop: '5px' }}>{stat.label}</div>
                             </div>
                         ))}
@@ -92,7 +92,7 @@ export function PaidSocialContent() {
                         ].map((platform, i) => (
                             <div key={i} className="platform-detail-card">
                                 <Icon type={platform.icon} style={{ color: '#1877F2', marginBottom: '20px' }} />
-                                <h3 style={{ fontSize: '24px', fontWeight: 800, marginBottom: '15px' }}>{platform.name}</h3>
+                                <h3 style={{ fontSize: '24px', fontWeight: 600, marginBottom: '15px' }}>{platform.name}</h3>
                                 <p style={{ fontSize: '15px', color: '#64748b', marginBottom: '20px', lineHeight: 1.6 }}>{platform.desc}</p>
                                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', justifyContent: 'center' }}>
                                     {platform.features.map((f, j) => (
@@ -121,7 +121,7 @@ export function PaidSocialContent() {
                         ].map((item, i) => (
                             <div key={i} className="audience-card">
                                 <Icon type={item.icon} style={{ marginBottom: '20px' }} />
-                                <h4 style={{ fontSize: '20px', fontWeight: 800, marginBottom: '10px' }}>{item.title}</h4>
+                                <h4 style={{ fontSize: '20px', fontWeight: 600, marginBottom: '10px' }}>{item.title}</h4>
                                 <p style={{ fontSize: '14px', opacity: 0.8 }}>{item.desc}</p>
                             </div>
                         ))}
@@ -146,13 +146,13 @@ export function PaidSocialContent() {
                             ].map((format, i) => (
                                 <div key={i} className="format-card">
                                     <Icon type={format.icon} style={{ marginBottom: '15px' }} />
-                                    <h4 style={{ fontWeight: 800, marginBottom: '8px' }}>{format.title}</h4>
+                                    <h4 style={{ fontWeight: 600, marginBottom: '8px' }}>{format.title}</h4>
                                     <p style={{ fontSize: '13px', color: '#64748b' }}>{format.desc}</p>
                                 </div>
                             ))}
                         </div>
                         <div className="creative-showcase">
-                            <div style={{ fontSize: '72px', fontWeight: 900, marginBottom: '20px' }}>50+</div>
+                            <div style={{ fontSize: '72px', fontWeight: 600, marginBottom: '20px' }}>50+</div>
                             <div style={{ fontSize: '18px', marginBottom: '40px' }}>Creatives tested per campaign on average</div>
                             <div style={{ fontSize: '14px', opacity: 0.8, maxWidth: '400px', margin: '0 auto', lineHeight: 1.6 }}>We don&apos;t guess—we test. Every campaign gets a minimum of 50 creative variations to find your winning formula.</div>
                         </div>
@@ -169,8 +169,8 @@ export function PaidSocialContent() {
                     </div>
                     <div className="budget-tiers">
                         <div className="budget-card">
-                            <h4 style={{ fontSize: '24px', fontWeight: 800, marginBottom: '20px' }}>Launch</h4>
-                            <div style={{ fontSize: '42px', fontWeight: 900, marginBottom: '10px' }}>$2,000<span style={{ fontSize: '16px', color: '#999' }}>/mo</span></div>
+                            <h4 style={{ fontSize: '24px', fontWeight: 600, marginBottom: '20px' }}>Launch</h4>
+                            <div style={{ fontSize: '42px', fontWeight: 600, marginBottom: '10px' }}>$2,000<span style={{ fontSize: '16px', color: '#999' }}>/mo</span></div>
                             <p style={{ color: '#666', marginBottom: '30px', fontSize: '14px' }}>Ad spend up to $15K/mo</p>
                             <ul style={{ listStyle: 'none', textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '40px' }}>
                                 <li><Icon type="check" style={{ color: '#1877F2' }} /> 1 Platform Managed</li>
@@ -183,8 +183,8 @@ export function PaidSocialContent() {
 
                         <div className="budget-card featured">
                             <span className="popular-tag">BEST VALUE</span>
-                            <h4 style={{ fontSize: '24px', fontWeight: 800, marginBottom: '20px' }}>Scale</h4>
-                            <div style={{ fontSize: '42px', fontWeight: 900, marginBottom: '10px' }}>$4,500<span style={{ fontSize: '16px', color: '#999' }}>/mo</span></div>
+                            <h4 style={{ fontSize: '24px', fontWeight: 600, marginBottom: '20px' }}>Scale</h4>
+                            <div style={{ fontSize: '42px', fontWeight: 600, marginBottom: '10px' }}>$4,500<span style={{ fontSize: '16px', color: '#999' }}>/mo</span></div>
                             <p style={{ color: '#666', marginBottom: '30px', fontSize: '14px' }}>Ad spend up to $75K/mo</p>
                             <ul style={{ listStyle: 'none', textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '40px' }}>
                                 <li><Icon type="check" style={{ color: '#E1306C' }} /> 3 Platforms Managed</li>
@@ -197,8 +197,8 @@ export function PaidSocialContent() {
                         </div>
 
                         <div className="budget-card">
-                            <h4 style={{ fontSize: '24px', fontWeight: 800, marginBottom: '20px' }}>Enterprise</h4>
-                            <div style={{ fontSize: '42px', fontWeight: 900, marginBottom: '10px' }}>Custom</div>
+                            <h4 style={{ fontSize: '24px', fontWeight: 600, marginBottom: '20px' }}>Enterprise</h4>
+                            <div style={{ fontSize: '42px', fontWeight: 600, marginBottom: '10px' }}>Custom</div>
                             <p style={{ color: '#666', marginBottom: '30px', fontSize: '14px' }}>Ad spend $75K+/mo</p>
                             <ul style={{ listStyle: 'none', textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '40px' }}>
                                 <li><Icon type="check" style={{ color: '#1877F2' }} /> Unlimited Platforms</li>
@@ -230,7 +230,7 @@ export function PaidSocialContent() {
                             <div key={i} className="result-item">
                                 <div className="result-number">{result.metric}</div>
                                 <div>
-                                    <h4 style={{ fontWeight: 800, marginBottom: '8px' }}>{result.title}</h4>
+                                    <h4 style={{ fontWeight: 600, marginBottom: '8px' }}>{result.title}</h4>
                                     <p style={{ fontSize: '15px', color: '#64748b', lineHeight: 1.6 }}>{result.desc}</p>
                                 </div>
                             </div>
@@ -254,7 +254,7 @@ export function PaidSocialContent() {
                             { q: 'How do you measure success?', a: 'We focus on business outcomes: ROAS, CPA, and revenue generated. We implement proper pixel tracking and can integrate with your analytics for full-funnel visibility.' }
                         ].map((item, idx) => (
                             <details key={idx} className="faq-item" style={{ background: '#f8fafc', padding: '30px', borderRadius: '24px', marginBottom: '20px', cursor: 'pointer', border: '1px solid #e2e8f0' }}>
-                                <summary style={{ fontWeight: 800, fontSize: '20px', listStyle: 'none', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                                <summary style={{ fontWeight: 600, fontSize: '20px', listStyle: 'none', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                                     {item.q}
                                     <Icon type="plus" style={{ width: '20px' }} />
                                 </summary>
@@ -270,15 +270,15 @@ export function PaidSocialContent() {
                 <div className="paid-social-container">
                     <div className="cta-grid">
                         <div>
-                            <h2 style={{ fontSize: '56px', fontWeight: 900, marginBottom: '30px', lineHeight: 1.1 }}>Ready to scale your <span style={{ color: 'var(--accent-yellow)' }}>social ads?</span></h2>
+                            <h2 style={{ fontSize: '56px', fontWeight: 600, marginBottom: '30px', lineHeight: 1.1 }}>Ready to scale your <span style={{ color: 'var(--accent-yellow)' }}>social ads?</span></h2>
                             <p style={{ fontSize: '20px', opacity: 0.8, marginBottom: '50px', lineHeight: 1.6 }}>Get a free campaign audit and discover untapped opportunities in your paid social strategy.</p>
                             <div style={{ display: 'flex', gap: '40px' }}>
                                 <div style={{ textAlign: 'center' }}>
-                                    <div style={{ fontSize: '32px', fontWeight: 900, color: 'var(--accent-yellow)' }}>Free</div>
+                                    <div style={{ fontSize: '32px', fontWeight: 600, color: 'var(--accent-yellow)' }}>Free</div>
                                     <div style={{ fontSize: '12px', opacity: 0.6 }}>CAMPAIGN AUDIT</div>
                                 </div>
                                 <div style={{ textAlign: 'center' }}>
-                                    <div style={{ fontSize: '32px', fontWeight: 900, color: 'var(--accent-yellow)' }}>24h</div>
+                                    <div style={{ fontSize: '32px', fontWeight: 600, color: 'var(--accent-yellow)' }}>24h</div>
                                     <div style={{ fontSize: '12px', opacity: 0.6 }}>RESPONSE TIME</div>
                                 </div>
                             </div>
@@ -298,7 +298,7 @@ export function PaidSocialContent() {
                                     <option value="linkedin">LinkedIn</option>
                                     <option value="multiple">Multiple Platforms</option>
                                 </select>
-                                <button type="submit" className="btn-primary" style={{ border: 'none', background: 'linear-gradient(135deg, #1877F2, #E1306C)', color: 'white', fontSize: '18px', fontWeight: 800, cursor: 'pointer', padding: '20px' }}>
+                                <button type="submit" className="btn-primary" style={{ border: 'none', background: 'linear-gradient(135deg, #1877F2, #E1306C)', color: 'white', fontSize: '18px', fontWeight: 600, cursor: 'pointer', padding: '20px' }}>
                                     Get My Free Audit
                                 </button>
                             </form>

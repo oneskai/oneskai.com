@@ -37,7 +37,7 @@ export function GenericPage({ title, subtitle, category, description }: GenericP
                                     <div className="feature-icon" style={{ width: '48px', height: '48px', background: 'rgba(255, 35, 196, 0.1)', color: 'var(--accent-pink)', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '20px' }}>
                                         <Icon type="zap" />
                                     </div>
-                                    <h3 style={{ fontSize: '18px', fontWeight: 800, marginBottom: '10px' }}>Advanced Strategy</h3>
+                                    <h3 style={{ fontSize: '18px', fontWeight: 600, marginBottom: '10px' }}>Advanced Strategy</h3>
                                     <p style={{ fontSize: '14px', color: 'var(--text-gray)', lineHeight: 1.6 }}>
                                         Tailored approaches built on data and industry-leading expertise.
                                     </p>
@@ -46,7 +46,7 @@ export function GenericPage({ title, subtitle, category, description }: GenericP
                                     <div className="feature-icon" style={{ width: '48px', height: '48px', background: 'rgba(5, 46, 38, 0.1)', color: 'var(--primary-green)', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '20px' }}>
                                         <Icon type="activity" />
                                     </div>
-                                    <h3 style={{ fontSize: '18px', fontWeight: 800, marginBottom: '10px' }}>Measurable Results</h3>
+                                    <h3 style={{ fontSize: '18px', fontWeight: 600, marginBottom: '10px' }}>Measurable Results</h3>
                                     <p style={{ fontSize: '14px', color: 'var(--text-gray)', lineHeight: 1.6 }}>
                                         Focus on ROI and transparent reporting to track your business growth.
                                     </p>
@@ -56,7 +56,7 @@ export function GenericPage({ title, subtitle, category, description }: GenericP
 
                         <div className="sidebar">
                             <div className="sidebar-card" style={{ padding: '40px', background: 'var(--primary-green)', borderRadius: '24px', color: 'white' }}>
-                                <h3 style={{ fontSize: '24px', fontWeight: 800, marginBottom: '16px' }}>Ready to Scale?</h3>
+                                <h3 style={{ fontSize: '24px', fontWeight: 600, marginBottom: '16px' }}>Ready to Scale?</h3>
                                 <p style={{ fontSize: '15px', opacity: 0.9, marginBottom: '24px', lineHeight: 1.6 }}>
                                     Connect with our experts to discuss how {title} can transform your business.
                                 </p>

@@ -60,7 +60,7 @@
     padding: 12px 20px;
     border-radius: 100px;
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 600;
     color: #7c3aed;
     margin-bottom: 32px;
     border: 1px solid rgba(124, 58, 237, 0.2);
@@ -68,7 +68,7 @@
 
 .web-design-hero-title {
     font-size: 72px;
-    font-weight: 900;
+    font-weight: 600;
     line-height: 1.05;
     letter-spacing: -3px;
     margin-bottom: 28px;
@@ -160,7 +160,7 @@
     justify-content: center;
     color: white;
     font-size: 24px;
-    font-weight: 800;
+    font-weight: 600;
 }
 
 /* ===== TRUST BAR ===== */
@@ -226,7 +226,7 @@
     justify-content: center;
     margin: 0 auto 20px;
     font-size: 24px;
-    font-weight: 900;
+    font-weight: 600;
     color: white;
 }
 
@@ -362,7 +362,7 @@
     padding: 8px 24px;
     border-radius: 100px;
     font-size: 12px;
-    font-weight: 800;
+    font-weight: 600;
 }
 
 /* ===== PORTFOLIO ===== */

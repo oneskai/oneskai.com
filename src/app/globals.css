@@ -3,6 +3,7 @@
 :root {
   --primary-green: #052e26;
   --secondary-green: #0a4a3e;
+  --accent-pink: #ff2d75;
   --accent-purple: #3d0da8;
   --accent-yellow: #ffc700;
   --dark-navy: #152039;
@@ -32,6 +33,7 @@
   --text-dark: #f0f0f0;
   --text-gray: #a0a0a0;
   --border-color: #222222;
+  --accent-pink: #ff4a8d;
 
   --header-logo: #ffffff;
   --header-link: rgba(255, 255, 255, 0.8);
@@ -125,13 +127,14 @@ body {
 
 .logo {
   font-size: 24px;
-  font-weight: 800;
+  font-weight: 600;
   color: var(--header-logo);
   text-decoration: none;
   display: flex;
   align-items: center;
   letter-spacing: -0.5px;
   transition: color 0.3s ease;
+  margin-left: 30px;
 }
 
 .nav {
@@ -161,7 +164,7 @@ body {
   padding: 12px 28px;
   border-radius: 100px;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 600;
   text-decoration: none;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   display: inline-block;
@@ -262,7 +265,7 @@ body {
 .mega-menu-column h4,
 .services-category-title {
   font-size: 11px;
-  font-weight: 800;
+  font-weight: 600;
   color: var(--primary-green);
   text-transform: uppercase;
   letter-spacing: 1.5px;
@@ -308,7 +311,7 @@ body {
   align-items: center;
   gap: 10px;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--primary-green);
   text-decoration: none;
   transition: all 0.2s ease;
@@ -347,7 +350,7 @@ body {
 
 .feature-card-title {
   font-size: 18px;
-  font-weight: 800;
+  font-weight: 600;
   color: var(--text-dark);
 }
 
@@ -363,7 +366,7 @@ body {
   padding: 12px 24px;
   border-radius: 8px;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 600;
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -391,7 +394,7 @@ body {
 
 .mega-menu-column h4 {
   font-size: 11px;
-  font-weight: 800;
+  font-weight: 600;
   color: var(--primary-green);
   text-transform: uppercase;
   letter-spacing: 1.5px;
@@ -436,7 +439,7 @@ body {
 
 .mega-menu-item-title {
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-dark);
   margin-bottom: 2px;
   display: flex;
@@ -513,7 +516,7 @@ body {
 .services-tab-btn .tab-title {
   display: block;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-dark);
   margin-bottom: 4px;
 }
@@ -557,7 +560,7 @@ body {
 
 .services-category-title {
   font-size: 11px;
-  font-weight: 800;
+  font-weight: 600;
   color: var(--primary-green);
   text-transform: uppercase;
   letter-spacing: 1.5px;
@@ -590,7 +593,7 @@ body {
   color: #7c3aed;
   border-radius: 100px;
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 14px;
   display: flex;
   align-items: center;
@@ -609,7 +612,7 @@ body {
   background: var(--accent-yellow);
   color: white;
   font-size: 10px;
-  font-weight: 800;
+  font-weight: 600;
   padding: 2px 8px;
   border-radius: 20px;
   text-transform: uppercase;
@@ -634,7 +637,7 @@ body {
 .hero-title {
   font-size: 48px;
   line-height: 1.1;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 20px;
   color: var(--primary-green);
 }
@@ -652,7 +655,7 @@ body {
   padding: 14px 32px;
   border-radius: 100px;
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 600;
   display: inline-block;
   margin-bottom: 40px;
   transition: all 0.3s ease;
@@ -715,7 +718,7 @@ body {
 .section-label {
   color: var(--accent-yellow);
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 16px;
@@ -724,7 +727,7 @@ body {
 
 .section-title {
   font-size: 42px;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 20px;
   line-height: 1.2;
 }
@@ -779,7 +782,7 @@ body {
 .badge-title {
   color: white;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .badge-subtitle {
@@ -824,7 +827,7 @@ body {
 
 .award-title {
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 600;
   color: #1A1A1A;
 }
 
@@ -835,7 +838,7 @@ body {
 
 .award-year {
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--accent-yellow);
   background: rgba(255, 199, 0, 0.1);
   padding: 4px 12px;
@@ -872,7 +875,7 @@ body {
 
 .client-logo span {
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 600;
   color: #333;
   letter-spacing: 0.5px;
 }
@@ -898,7 +901,7 @@ body {
 .tech-category-title {
   color: var(--accent-yellow);
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 20px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -947,7 +950,7 @@ body {
 
 .stat-value {
   font-size: 48px;
-  font-weight: 800;
+  font-weight: 600;
   color: white;
   line-height: 1;
 }
@@ -988,7 +991,7 @@ body {
 
 .result-metric {
   font-size: 56px;
-  font-weight: 800;
+  font-weight: 600;
   color: var(--accent-yellow);
   line-height: 1;
 }
@@ -1020,14 +1023,14 @@ body {
 
 .service-no {
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 15px;
   display: block;
 }
 
 .service-title {
   font-size: 22px;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 14px;
 }
 
@@ -1040,7 +1043,7 @@ body {
 
 .service-link {
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 600;
   text-decoration: none;
   color: #1A1A1A;
   display: flex;
@@ -1106,14 +1109,14 @@ body {
 
 .approach-no {
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 15px;
   display: block;
 }
 
 .approach-title {
   font-size: 20px;
-  font-weight: 800;
+  font-weight: 600;
   margin-bottom: 14px;
 }
 
@@ -1147,7 +1150,7 @@ body {
 }
 
 .team-name {
-  font-weight: 700;
+  font-weight: 600;
   font-size: 18px;
 }
 
@@ -1186,7 +1189,7 @@ body {
   padding: 14px 28px;
   border-radius: 6px;
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 15px;
   display: inline-block;
   margin-top: 24px;
@@ -1252,7 +1255,7 @@ body {
 .blog-cat {
   color: var(--accent-yellow);
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 10px;
   display: block;
@@ -1261,7 +1264,7 @@ body {
 
 .blog-title {
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 10px;
   line-height: 1.4;
 }
@@ -1316,7 +1319,7 @@ body {
 
 .footer-cta-heading {
   font-size: 32px;
-  font-weight: 700;
+  font-weight: 600;
   margin: 0 0 8px 0;
   color: white;
 }
@@ -1396,7 +1399,7 @@ body {
 
 .footer-brand-logo {
   font-size: 24px;
-  font-weight: 800;
+  font-weight: 600;
   color: white;
   text-decoration: none;
   display: inline-block;
@@ -1449,7 +1452,7 @@ body {
 
 .footer-nav-title {
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 600;
   color: white;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -1884,7 +1887,7 @@ body {
   color: var(--accent-yellow);
   padding: 12px 24px;
   border-radius: 0 0 8px 8px;
-  font-weight: 700;
+  font-weight: 600;
   z-index: 9999;
   transition: top 0.3s ease;
 }

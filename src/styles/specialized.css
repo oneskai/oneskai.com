@@ -43,13 +43,13 @@
     padding: 12px 20px;
     border-radius: 100px;
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 32px;
 }
 
 .specialized-hero-title {
     font-size: 72px;
-    font-weight: 900;
+    font-weight: 600;
     line-height: 1.05;
     letter-spacing: -3px;
     margin-bottom: 28px;
@@ -166,7 +166,7 @@
     padding: 8px 24px;
     border-radius: 100px;
     font-size: 12px;
-    font-weight: 800;
+    font-weight: 600;
 }
 
 .cta-grid {

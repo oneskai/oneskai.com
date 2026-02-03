@@ -58,7 +58,7 @@ export function BrandingContent() {
                             { value: '8+', label: 'Years Experience' }
                         ].map((stat, i) => (
                             <div key={i} className="trust-brand">
-                                <div style={{ fontSize: '36px', fontWeight: 900, background: 'linear-gradient(135deg, #f59e0b, #10b981)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{stat.value}</div>
+                                <div style={{ fontSize: '36px', fontWeight: 600, background: 'linear-gradient(135deg, #f59e0b, #10b981)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{stat.value}</div>
                                 <div style={{ fontSize: '13px', color: '#64748b', marginTop: '5px' }}>{stat.label}</div>
                             </div>
                         ))}
@@ -84,7 +84,7 @@ export function BrandingContent() {
                                 <div className="service-icon">
                                     <Icon type={service.icon} />
                                 </div>
-                                <h3 style={{ fontSize: '20px', fontWeight: 800, marginBottom: '12px' }}>{service.title}</h3>
+                                <h3 style={{ fontSize: '20px', fontWeight: 600, marginBottom: '12px' }}>{service.title}</h3>
                                 <p style={{ fontSize: '14px', color: '#64748b', lineHeight: 1.6 }}>{service.desc}</p>
                             </div>
                         ))}
@@ -108,7 +108,7 @@ export function BrandingContent() {
                         ].map((step, i) => (
                             <div key={i} className="process-card">
                                 <div className="process-num">{step.num}</div>
-                                <h4 style={{ fontWeight: 800, marginBottom: '12px' }}>{step.title}</h4>
+                                <h4 style={{ fontWeight: 600, marginBottom: '12px' }}>{step.title}</h4>
                                 <p style={{ fontSize: '14px', opacity: 0.8 }}>{step.desc}</p>
                             </div>
                         ))}
@@ -137,14 +137,14 @@ export function BrandingContent() {
                                         <Icon type="check" />
                                     </div>
                                     <div>
-                                        <h4 style={{ fontWeight: 800, marginBottom: '6px' }}>{item.title}</h4>
+                                        <h4 style={{ fontWeight: 600, marginBottom: '6px' }}>{item.title}</h4>
                                         <p style={{ fontSize: '14px', color: '#64748b' }}>{item.desc}</p>
                                     </div>
                                 </div>
                             ))}
                         </div>
                         <div className="deliverables-visual">
-                            <div style={{ fontSize: '72px', fontWeight: 900, marginBottom: '20px' }}>50+</div>
+                            <div style={{ fontSize: '72px', fontWeight: 600, marginBottom: '20px' }}>50+</div>
                             <div style={{ fontSize: '18px', marginBottom: '40px' }}>Assets delivered per project</div>
                             <div style={{ fontSize: '14px', opacity: 0.8, maxWidth: '400px', margin: '0 auto', lineHeight: 1.6 }}>From logo files to social templates—everything you need to launch and maintain your brand.</div>
                         </div>
@@ -161,8 +161,8 @@ export function BrandingContent() {
                     </div>
                     <div className="pricing-grid">
                         <div className="price-card">
-                            <h4 style={{ fontSize: '24px', fontWeight: 800, marginBottom: '20px' }}>Logo Package</h4>
-                            <div style={{ fontSize: '42px', fontWeight: 900, marginBottom: '10px' }}>$3,500<span style={{ fontSize: '16px', color: '#999' }}>+</span></div>
+                            <h4 style={{ fontSize: '24px', fontWeight: 600, marginBottom: '20px' }}>Logo Package</h4>
+                            <div style={{ fontSize: '42px', fontWeight: 600, marginBottom: '10px' }}>$3,500<span style={{ fontSize: '16px', color: '#999' }}>+</span></div>
                             <p style={{ color: '#666', marginBottom: '30px', fontSize: '14px' }}>Logo design only</p>
                             <ul style={{ listStyle: 'none', textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '40px' }}>
                                 <li><Icon type="check" style={{ color: '#f59e0b' }} /> 3 Concept Directions</li>
@@ -175,8 +175,8 @@ export function BrandingContent() {
 
                         <div className="price-card featured">
                             <span className="popular-tag">MOST POPULAR</span>
-                            <h4 style={{ fontSize: '24px', fontWeight: 800, marginBottom: '20px' }}>Brand Identity</h4>
-                            <div style={{ fontSize: '42px', fontWeight: 900, marginBottom: '10px' }}>$12,000<span style={{ fontSize: '16px', color: '#999' }}>+</span></div>
+                            <h4 style={{ fontSize: '24px', fontWeight: 600, marginBottom: '20px' }}>Brand Identity</h4>
+                            <div style={{ fontSize: '42px', fontWeight: 600, marginBottom: '10px' }}>$12,000<span style={{ fontSize: '16px', color: '#999' }}>+</span></div>
                             <p style={{ color: '#666', marginBottom: '30px', fontSize: '14px' }}>Complete visual identity</p>
                             <ul style={{ listStyle: 'none', textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '40px' }}>
                                 <li><Icon type="check" style={{ color: '#10b981' }} /> Everything in Logo +</li>
@@ -189,8 +189,8 @@ export function BrandingContent() {
                         </div>
 
                         <div className="price-card">
-                            <h4 style={{ fontSize: '24px', fontWeight: 800, marginBottom: '20px' }}>Enterprise</h4>
-                            <div style={{ fontSize: '42px', fontWeight: 900, marginBottom: '10px' }}>Custom</div>
+                            <h4 style={{ fontSize: '24px', fontWeight: 600, marginBottom: '20px' }}>Enterprise</h4>
+                            <div style={{ fontSize: '42px', fontWeight: 600, marginBottom: '10px' }}>Custom</div>
                             <p style={{ color: '#666', marginBottom: '30px', fontSize: '14px' }}>Full brand transformation</p>
                             <ul style={{ listStyle: 'none', textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '40px' }}>
                                 <li><Icon type="check" style={{ color: '#f59e0b' }} /> Brand Strategy Workshop</li>
@@ -220,7 +220,7 @@ export function BrandingContent() {
                             { name: 'Nova', color: '#0ea5e9' }
                         ].map((brand, i) => (
                             <div key={i} className="portfolio-item" style={{ background: `linear-gradient(135deg, ${brand.color}40, ${brand.color}80)` }}>
-                                <span style={{ fontSize: '32px', fontWeight: 900, color: 'white' }}>{brand.name}</span>
+                                <span style={{ fontSize: '32px', fontWeight: 600, color: 'white' }}>{brand.name}</span>
                             </div>
                         ))}
                     </div>
@@ -242,7 +242,7 @@ export function BrandingContent() {
                             { q: 'Do you do rebranding for existing businesses?', a: 'Absolutely. Many of our clients are established businesses looking to refresh or completely reimagine their brand identity.' }
                         ].map((item, idx) => (
                             <details key={idx} className="faq-item" style={{ background: '#fff', padding: '30px', borderRadius: '24px', marginBottom: '20px', cursor: 'pointer', border: '1px solid #e2e8f0' }}>
-                                <summary style={{ fontWeight: 800, fontSize: '20px', listStyle: 'none', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                                <summary style={{ fontWeight: 600, fontSize: '20px', listStyle: 'none', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                                     {item.q}
                                     <Icon type="plus" style={{ width: '20px' }} />
                                 </summary>
@@ -258,15 +258,15 @@ export function BrandingContent() {
                 <div className="branding-container">
                     <div className="cta-grid">
                         <div>
-                            <h2 style={{ fontSize: '56px', fontWeight: 900, marginBottom: '30px', lineHeight: 1.1 }}>Ready to build a <span style={{ color: 'var(--accent-yellow)' }}>memorable brand?</span></h2>
+                            <h2 style={{ fontSize: '56px', fontWeight: 600, marginBottom: '30px', lineHeight: 1.1 }}>Ready to build a <span style={{ color: 'var(--accent-yellow)' }}>memorable brand?</span></h2>
                             <p style={{ fontSize: '20px', opacity: 0.8, marginBottom: '50px', lineHeight: 1.6 }}>Get a free brand consultation and discover how we can help you stand out in your market.</p>
                             <div style={{ display: 'flex', gap: '40px' }}>
                                 <div style={{ textAlign: 'center' }}>
-                                    <div style={{ fontSize: '32px', fontWeight: 900, color: 'var(--accent-yellow)' }}>Free</div>
+                                    <div style={{ fontSize: '32px', fontWeight: 600, color: 'var(--accent-yellow)' }}>Free</div>
                                     <div style={{ fontSize: '12px', opacity: 0.6 }}>CONSULTATION</div>
                                 </div>
                                 <div style={{ textAlign: 'center' }}>
-                                    <div style={{ fontSize: '32px', fontWeight: 900, color: 'var(--accent-yellow)' }}>48h</div>
+                                    <div style={{ fontSize: '32px', fontWeight: 600, color: 'var(--accent-yellow)' }}>48h</div>
                                     <div style={{ fontSize: '12px', opacity: 0.6 }}>RESPONSE TIME</div>
                                 </div>
                             </div>
@@ -287,7 +287,7 @@ export function BrandingContent() {
                                     <option value="logo">Logo Only</option>
                                 </select>
                                 <textarea placeholder="Tell us about your brand vision..." style={{ height: '100px' }}></textarea>
-                                <button type="submit" className="btn-primary" style={{ border: 'none', background: 'linear-gradient(135deg, #f59e0b, #10b981)', color: 'white', fontSize: '18px', fontWeight: 800, cursor: 'pointer', padding: '20px' }}>
+                                <button type="submit" className="btn-primary" style={{ border: 'none', background: 'linear-gradient(135deg, #f59e0b, #10b981)', color: 'white', fontSize: '18px', fontWeight: 600, cursor: 'pointer', padding: '20px' }}>
                                     Get Free Consultation
                                 </button>
                             </form>

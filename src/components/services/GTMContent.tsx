@@ -66,7 +66,7 @@ export function GTMContent() {
                             { value: 'Certified', label: 'Google Partners' }
                         ].map((stat, i) => (
                             <div key={i} style={{ textAlign: 'center' }}>
-                                <div style={{ fontSize: '36px', fontWeight: 900, background: 'linear-gradient(135deg, #3b82f6, #eab308)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{stat.value}</div>
+                                <div style={{ fontSize: '36px', fontWeight: 600, background: 'linear-gradient(135deg, #3b82f6, #eab308)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{stat.value}</div>
                                 <div style={{ fontSize: '13px', color: '#64748b', marginTop: '5px' }}>{stat.label}</div>
                             </div>
                         ))}
@@ -88,7 +88,7 @@ export function GTMContent() {
                             { title: 'Server-Side Tagging', desc: 'Enhanced privacy, faster loading, and more reliable tracking with server-side GTM.' }
                         ].map((service, i) => (
                             <div key={i} className="service-card">
-                                <h3 style={{ fontSize: '24px', fontWeight: 800, marginBottom: '15px' }}>{service.title}</h3>
+                                <h3 style={{ fontSize: '24px', fontWeight: 600, marginBottom: '15px' }}>{service.title}</h3>
                                 <p style={{ fontSize: '16px', color: '#64748b', lineHeight: 1.7 }}>{service.desc}</p>
                             </div>
                         ))}
@@ -105,8 +105,8 @@ export function GTMContent() {
                     </div>
                     <div className="pricing-grid">
                         <div className="price-card">
-                            <h4 style={{ fontSize: '24px', fontWeight: 800, marginBottom: '20px' }}>GTM Audit</h4>
-                            <div style={{ fontSize: '42px', fontWeight: 900, marginBottom: '10px' }}>$1,500</div>
+                            <h4 style={{ fontSize: '24px', fontWeight: 600, marginBottom: '20px' }}>GTM Audit</h4>
+                            <div style={{ fontSize: '42px', fontWeight: 600, marginBottom: '10px' }}>$1,500</div>
                             <p style={{ color: '#666', marginBottom: '30px', fontSize: '14px' }}>One-time assessment</p>
                             <ul style={{ listStyle: 'none', textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '40px' }}>
                                 <li><Icon type="check" style={{ color: '#3b82f6' }} /> Container Review</li>
@@ -119,8 +119,8 @@ export function GTMContent() {
 
                         <div className="price-card featured">
                             <span className="popular-tag">MOST POPULAR</span>
-                            <h4 style={{ fontSize: '24px', fontWeight: 800, marginBottom: '20px' }}>Full Setup</h4>
-                            <div style={{ fontSize: '42px', fontWeight: 900, marginBottom: '10px' }}>$5,000<span style={{ fontSize: '16px', color: '#999' }}>+</span></div>
+                            <h4 style={{ fontSize: '24px', fontWeight: 600, marginBottom: '20px' }}>Full Setup</h4>
+                            <div style={{ fontSize: '42px', fontWeight: 600, marginBottom: '10px' }}>$5,000<span style={{ fontSize: '16px', color: '#999' }}>+</span></div>
                             <p style={{ color: '#666', marginBottom: '30px', fontSize: '14px' }}>Complete implementation</p>
                             <ul style={{ listStyle: 'none', textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '40px' }}>
                                 <li><Icon type="check" style={{ color: '#eab308' }} /> GTM Container Setup</li>
@@ -133,8 +133,8 @@ export function GTMContent() {
                         </div>
 
                         <div className="price-card">
-                            <h4 style={{ fontSize: '24px', fontWeight: 800, marginBottom: '20px' }}>Server-Side</h4>
-                            <div style={{ fontSize: '42px', fontWeight: 900, marginBottom: '10px' }}>$10,000<span style={{ fontSize: '16px', color: '#999' }}>+</span></div>
+                            <h4 style={{ fontSize: '24px', fontWeight: 600, marginBottom: '20px' }}>Server-Side</h4>
+                            <div style={{ fontSize: '42px', fontWeight: 600, marginBottom: '10px' }}>$10,000<span style={{ fontSize: '16px', color: '#999' }}>+</span></div>
                             <p style={{ color: '#666', marginBottom: '30px', fontSize: '14px' }}>Advanced setup</p>
                             <ul style={{ listStyle: 'none', textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '40px' }}>
                                 <li><Icon type="check" style={{ color: '#3b82f6' }} /> Server Container</li>
@@ -162,7 +162,7 @@ export function GTMContent() {
                             { q: 'Will GTM slow down my website?', a: 'When implemented correctly, GTM actually speeds up your site by consolidating tags and controlling when they fire.' }
                         ].map((item, idx) => (
                             <details key={idx} style={{ background: '#fff', padding: '30px', borderRadius: '24px', marginBottom: '20px', cursor: 'pointer', border: '1px solid #e2e8f0' }}>
-                                <summary style={{ fontWeight: 800, fontSize: '20px', listStyle: 'none', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                                <summary style={{ fontWeight: 600, fontSize: '20px', listStyle: 'none', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                                     {item.q}
                                     <Icon type="plus" style={{ width: '20px' }} />
                                 </summary>
@@ -178,7 +178,7 @@ export function GTMContent() {
                 <div className="gtm-container">
                     <div className="cta-grid">
                         <div>
-                            <h2 style={{ fontSize: '56px', fontWeight: 900, marginBottom: '30px', lineHeight: 1.1 }}>Ready to fix your <span style={{ color: 'var(--accent-yellow)' }}>tracking?</span></h2>
+                            <h2 style={{ fontSize: '56px', fontWeight: 600, marginBottom: '30px', lineHeight: 1.1 }}>Ready to fix your <span style={{ color: 'var(--accent-yellow)' }}>tracking?</span></h2>
                             <p style={{ fontSize: '20px', opacity: 0.8, marginBottom: '50px', lineHeight: 1.6 }}>Get a free GTM audit and see what you&apos;re missing.</p>
                         </div>
                         <div className="cta-form">
@@ -192,7 +192,7 @@ export function GTMContent() {
                                     <option value="existing">Existing GTM, needs audit</option>
                                     <option value="rebuild">Full rebuild needed</option>
                                 </select>
-                                <button type="submit" className="btn-primary" style={{ border: 'none', background: 'linear-gradient(135deg, #3b82f6, #eab308)', color: 'white', fontSize: '18px', fontWeight: 800, cursor: 'pointer', padding: '20px' }}>
+                                <button type="submit" className="btn-primary" style={{ border: 'none', background: 'linear-gradient(135deg, #3b82f6, #eab308)', color: 'white', fontSize: '18px', fontWeight: 600, cursor: 'pointer', padding: '20px' }}>
                                     Get Free GTM Audit
                                 </button>
                             </form>

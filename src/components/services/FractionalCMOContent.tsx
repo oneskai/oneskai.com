@@ -25,7 +25,7 @@ export function FractionalCMOContent() {
                         <div className="content-hero-visual">
                             <div className="content-visual-card" style={{ background: 'linear-gradient(135deg, #0f172a, #475569)' }}>
                                 <div style={{ padding: '40px', color: 'white', textAlign: 'center' }}>
-                                    <div style={{ fontSize: '50px', fontWeight: 900 }}>CMO</div>
+                                    <div style={{ fontSize: '50px', fontWeight: 600 }}>CMO</div>
                                     <div style={{ fontSize: '14px', opacity: 0.9, marginTop: '5px' }}>On Your Terms</div>
                                     <div style={{ marginTop: '30px', fontSize: '14px', opacity: 0.8 }}>From $5,000/month</div>
                                 </div>

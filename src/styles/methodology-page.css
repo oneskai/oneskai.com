@@ -52,7 +52,7 @@
 
 .method-hero-title {
     font-size: 48px;
-    font-weight: 800;
+    font-weight: 600;
     line-height: 1.1;
     color: white;
     margin-bottom: 24px;
@@ -164,7 +164,7 @@
 
 .method-why-header h2 {
     font-size: 36px;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--method-secondary);
 }
 
@@ -218,7 +218,7 @@
 
 .method-cta-card h3 {
     font-size: 24px;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 16px;
 }
 
@@ -265,7 +265,7 @@
 
 .method-problems-header h2 {
     font-size: 36px;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--method-secondary);
     margin-bottom: 16px;
 }
@@ -309,7 +309,7 @@
 
 .method-problem-card h3 {
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--method-secondary);
     margin-bottom: 12px;
 }
@@ -347,7 +347,7 @@
 
 .method-result-num {
     font-size: 48px;
-    font-weight: 800;
+    font-weight: 600;
     color: var(--method-accent);
     display: block;
 }
@@ -378,7 +378,7 @@
 
 .method-process-header h2 {
     font-size: 36px;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--method-secondary);
     margin-bottom: 16px;
 }
@@ -425,7 +425,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 16px;
 }
 
@@ -445,7 +445,7 @@
 
 .method-step-card h3 {
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--method-secondary);
     margin-bottom: 12px;
 }
@@ -477,7 +477,7 @@
 
 .method-comparison-box h2 {
     font-size: 32px;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--method-secondary);
     margin-bottom: 16px;
 }
@@ -523,7 +523,7 @@
 
 .method-final-cta h2 {
     font-size: 42px;
-    font-weight: 800;
+    font-weight: 600;
     color: var(--method-secondary);
     margin-bottom: 20px;
 }

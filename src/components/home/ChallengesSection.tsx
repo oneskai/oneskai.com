@@ -6,7 +6,7 @@ import { Icon } from '@/components/ui/Icon';
 const challenges = [
     {
         title: "Freelancer Fatigue",
-        problem: "Managing 10 different freelancers with fragmented communication.",
+        problem: "Managing 10 different freelancers with fragmented communication. Endless email threads, missed deadlines, and zero accountability.",
         solution: "Unified Powerhouse",
         resolution: "Get a dedicated, cross-functional squad—SEO, PPC, and Design—working in perfect sync under one subscription.",
         iconType: "users",
@@ -14,7 +14,7 @@ const challenges = [
     },
     {
         title: "Agency Black Box",
-        problem: "Paying high retainers while being left in the dark about actual work.",
+        problem: "Paying high retainers while being left in the dark about actual work. No visibility into hours spent or real progress made.",
         solution: "Radical Transparency",
         resolution: "Real-time growth dashboards and daily Slack updates. You see every hour we work and every win we achieve.",
         iconType: "help",
@@ -22,7 +22,7 @@ const challenges = [
     },
     {
         title: "The Reactive Rut",
-        problem: "Waiting weeks for your agency to suggest a new growth idea.",
+        problem: "Waiting weeks for your agency to suggest a new growth idea. Always playing catch-up instead of getting ahead of competitors.",
         solution: "Proactive Engines",
         resolution: "Our growth engineers find opportunities before you even ask. We don't just take orders; we drive the strategy.",
         iconType: "clock",
@@ -30,7 +30,7 @@ const challenges = [
     },
     {
         title: "Scaling Scarcity",
-        problem: "Hiring in-house is too slow, too expensive, and carries heavy risk.",
+        problem: "Hiring in-house is too slow, too expensive, and carries heavy risk. Finding top talent takes months you don't have.",
         solution: "Instant Elasticity",
         resolution: "Scale your marketing talent up or down in 24 hours. No recruitment fees, no overhead, just pure execution.",
         iconType: "trending",
@@ -38,7 +38,7 @@ const challenges = [
     },
     {
         title: "Channel Chaos",
-        problem: "Wasting budget on too many channels with no clear focus on ROI.",
+        problem: "Wasting budget on too many channels with no clear focus on ROI. Spreading thin across platforms without measurable results.",
         solution: "Strategic Clarity",
         resolution: "We audit the noise and aggressively focus on the 20% of channels driving 80% of your revenue.",
         iconType: "activity",

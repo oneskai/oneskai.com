@@ -55,7 +55,7 @@ export function PhotographyContent() {
                             { value: 'Same Day', label: 'Turnaround Available' }
                         ].map((stat, i) => (
                             <div key={i} style={{ textAlign: 'center' }}>
-                                <div style={{ fontSize: '36px', fontWeight: 900, background: 'linear-gradient(135deg, #f43f5e, #fbbf24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{stat.value}</div>
+                                <div style={{ fontSize: '36px', fontWeight: 600, background: 'linear-gradient(135deg, #f43f5e, #fbbf24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{stat.value}</div>
                                 <div style={{ fontSize: '13px', color: '#64748b', marginTop: '5px' }}>{stat.label}</div>
                             </div>
                         ))}
@@ -79,7 +79,7 @@ export function PhotographyContent() {
                         ].map((service, i) => (
                             <div key={i} className="service-card">
                                 <Icon type={service.icon} style={{ color: '#f43f5e', marginBottom: '20px', width: '40px', height: '40px' }} />
-                                <h3 style={{ fontSize: '20px', fontWeight: 800, marginBottom: '12px' }}>{service.title}</h3>
+                                <h3 style={{ fontSize: '20px', fontWeight: 600, marginBottom: '12px' }}>{service.title}</h3>
                                 <p style={{ fontSize: '14px', color: '#64748b' }}>{service.desc}</p>
                             </div>
                         ))}
@@ -127,8 +127,8 @@ export function PhotographyContent() {
                     </div>
                     <div className="pricing-grid">
                         <div className="price-card">
-                            <h4 style={{ fontSize: '24px', fontWeight: 800, marginBottom: '20px' }}>Starter</h4>
-                            <div style={{ fontSize: '42px', fontWeight: 900, marginBottom: '10px' }}>$500</div>
+                            <h4 style={{ fontSize: '24px', fontWeight: 600, marginBottom: '20px' }}>Starter</h4>
+                            <div style={{ fontSize: '42px', fontWeight: 600, marginBottom: '10px' }}>$500</div>
                             <p style={{ color: '#666', marginBottom: '30px', fontSize: '14px' }}>2-hour session</p>
                             <ul style={{ listStyle: 'none', textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '40px' }}>
                                 <li><Icon type="check" style={{ color: '#f43f5e' }} /> 20 Edited Images</li>
@@ -141,8 +141,8 @@ export function PhotographyContent() {
 
                         <div className="price-card featured">
                             <span className="popular-tag">MOST POPULAR</span>
-                            <h4 style={{ fontSize: '24px', fontWeight: 800, marginBottom: '20px' }}>Professional</h4>
-                            <div style={{ fontSize: '42px', fontWeight: 900, marginBottom: '10px' }}>$1,200</div>
+                            <h4 style={{ fontSize: '24px', fontWeight: 600, marginBottom: '20px' }}>Professional</h4>
+                            <div style={{ fontSize: '42px', fontWeight: 600, marginBottom: '10px' }}>$1,200</div>
                             <p style={{ color: '#666', marginBottom: '30px', fontSize: '14px' }}>Half-day session</p>
                             <ul style={{ listStyle: 'none', textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '40px' }}>
                                 <li><Icon type="check" style={{ color: '#fbbf24' }} /> 50 Edited Images</li>
@@ -155,8 +155,8 @@ export function PhotographyContent() {
                         </div>
 
                         <div className="price-card">
-                            <h4 style={{ fontSize: '24px', fontWeight: 800, marginBottom: '20px' }}>Enterprise</h4>
-                            <div style={{ fontSize: '42px', fontWeight: 900, marginBottom: '10px' }}>Custom</div>
+                            <h4 style={{ fontSize: '24px', fontWeight: 600, marginBottom: '20px' }}>Enterprise</h4>
+                            <div style={{ fontSize: '42px', fontWeight: 600, marginBottom: '10px' }}>Custom</div>
                             <p style={{ color: '#666', marginBottom: '30px', fontSize: '14px' }}>Full production</p>
                             <ul style={{ listStyle: 'none', textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '40px' }}>
                                 <li><Icon type="check" style={{ color: '#f43f5e' }} /> Unlimited Images</li>
@@ -184,7 +184,7 @@ export function PhotographyContent() {
                             { q: 'What equipment do you use?', a: 'We use professional-grade Canon and Sony camera systems with a full range of prime and zoom lenses, plus professional lighting equipment.' }
                         ].map((item, idx) => (
                             <details key={idx} style={{ background: '#fff', padding: '30px', borderRadius: '24px', marginBottom: '20px', cursor: 'pointer', border: '1px solid #e2e8f0' }}>
-                                <summary style={{ fontWeight: 800, fontSize: '20px', listStyle: 'none', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                                <summary style={{ fontWeight: 600, fontSize: '20px', listStyle: 'none', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                                     {item.q}
                                     <Icon type="plus" style={{ width: '20px' }} />
                                 </summary>
@@ -200,7 +200,7 @@ export function PhotographyContent() {
                 <div className="photo-container">
                     <div className="cta-grid">
                         <div>
-                            <h2 style={{ fontSize: '56px', fontWeight: 900, marginBottom: '30px', lineHeight: 1.1 }}>Ready to capture <span style={{ color: 'var(--accent-yellow)' }}>your vision?</span></h2>
+                            <h2 style={{ fontSize: '56px', fontWeight: 600, marginBottom: '30px', lineHeight: 1.1 }}>Ready to capture <span style={{ color: 'var(--accent-yellow)' }}>your vision?</span></h2>
                             <p style={{ fontSize: '20px', opacity: 0.8, marginBottom: '50px', lineHeight: 1.6 }}>Book a consultation and let&apos;s plan your perfect shoot.</p>
                         </div>
                         <div className="cta-form">
@@ -215,7 +215,7 @@ export function PhotographyContent() {
                                     <option value="event">Event Coverage</option>
                                 </select>
                                 <textarea placeholder="Tell us about your project..." style={{ height: '100px' }}></textarea>
-                                <button type="submit" className="btn-primary" style={{ border: 'none', background: 'linear-gradient(135deg, #f43f5e, #fbbf24)', color: 'white', fontSize: '18px', fontWeight: 800, cursor: 'pointer', padding: '20px' }}>
+                                <button type="submit" className="btn-primary" style={{ border: 'none', background: 'linear-gradient(135deg, #f43f5e, #fbbf24)', color: 'white', fontSize: '18px', fontWeight: 600, cursor: 'pointer', padding: '20px' }}>
                                     Get Free Consultation
                                 </button>
                             </form>

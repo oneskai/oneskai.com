@@ -242,7 +242,7 @@ export function ContactContent() {
                 <div className="contact-offices-container">
                     <div style={{ textAlign: 'center', marginBottom: '60px' }}>
                         <span className="contact-label">GLOBAL PRESENCE</span>
-                        <h2 style={{ fontSize: '36px', fontWeight: 800, color: '#0f172a' }}>Our Offices</h2>
+                        <h2 style={{ fontSize: '36px', fontWeight: 600, color: '#0f172a' }}>Our Offices</h2>
                     </div>
                     <div className="contact-offices-grid">
                         <div className="office-card">

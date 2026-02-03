@@ -74,7 +74,7 @@ export function TestimonialsSection({
                   />
                 </div>
                 <div>
-                  <p style={{ fontWeight: 700 }}>{testi.name}</p>
+                  <p style={{ fontWeight: 600 }}>{testi.name}</p>
                   <p style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>{testi.role}</p>
                 </div>
               </div>

@@ -240,11 +240,11 @@ export function AboutContent() {
                         <h2 className="about-section-title" style={{ fontSize: '28px' }}>Brands We&apos;ve Partnered With</h2>
                     </div>
                     <div className="about-partners-grid">
-                        <span style={{ fontSize: '24px', fontWeight: 700, color: '#94a3b8' }}>Google</span>
-                        <span style={{ fontSize: '24px', fontWeight: 700, color: '#94a3b8' }}>Meta</span>
-                        <span style={{ fontSize: '24px', fontWeight: 700, color: '#94a3b8' }}>Shopify</span>
-                        <span style={{ fontSize: '24px', fontWeight: 700, color: '#94a3b8' }}>HubSpot</span>
-                        <span style={{ fontSize: '24px', fontWeight: 700, color: '#94a3b8' }}>Semrush</span>
+                        <span style={{ fontSize: '24px', fontWeight: 600, color: '#94a3b8' }}>Google</span>
+                        <span style={{ fontSize: '24px', fontWeight: 600, color: '#94a3b8' }}>Meta</span>
+                        <span style={{ fontSize: '24px', fontWeight: 600, color: '#94a3b8' }}>Shopify</span>
+                        <span style={{ fontSize: '24px', fontWeight: 600, color: '#94a3b8' }}>HubSpot</span>
+                        <span style={{ fontSize: '24px', fontWeight: 600, color: '#94a3b8' }}>Semrush</span>
                     </div>
                 </div>
             </section>

@@ -26,7 +26,7 @@ export function GEOContent() {
                         <div className="content-hero-visual">
                             <div className="content-visual-card" style={{ background: 'linear-gradient(135deg, #8b5cf6, #06b6d4)' }}>
                                 <div style={{ padding: '40px', color: 'white', textAlign: 'center' }}>
-                                    <div style={{ fontSize: '50px', fontWeight: 900, lineHeight: 1 }}>GEO</div>
+                                    <div style={{ fontSize: '50px', fontWeight: 600, lineHeight: 1 }}>GEO</div>
                                     <div style={{ fontSize: '14px', opacity: 0.9, marginTop: '10px' }}>Generative Engine Optimization</div>
                                     <div style={{ display: 'flex', justifyContent: 'center', gap: '10px', marginTop: '30px', flexWrap: 'wrap' }}>
                                         {['ChatGPT', 'Perplexity', 'Claude', 'Gemini'].map((item, i) => (
@@ -78,7 +78,7 @@ export function GEOContent() {
                                     { title: 'Authority Signals', desc: 'Building the trust markers that AI uses to determine source credibility.' },
                                     { title: 'Answer Optimization', desc: 'Targeting the specific questions users ask AI assistants.' }
                                 ].map((item, i) => (
-                                    <li key={i} style={{ display: 'flex', gap: '15px' }}><div style={{ color: '#8b5cf6' }}><Icon type="check" /></div><div><h4 style={{ fontWeight: 700 }}>{item.title}</h4><p style={{ fontSize: '14px', color: 'var(--text-gray)' }}>{item.desc}</p></div></li>
+                                    <li key={i} style={{ display: 'flex', gap: '15px' }}><div style={{ color: '#8b5cf6' }}><Icon type="check" /></div><div><h4 style={{ fontWeight: 600 }}>{item.title}</h4><p style={{ fontSize: '14px', color: 'var(--text-gray)' }}>{item.desc}</p></div></li>
                                 ))}
                             </ul>
                         </div>

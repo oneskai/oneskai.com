@@ -45,7 +45,7 @@ export function GA4Content() {
                         <div className="content-hero-visual">
                             <div className="content-visual-card" style={{ background: 'linear-gradient(135deg, #ea4335, #fbbc05)' }}>
                                 <div style={{ padding: '40px', color: 'white', textAlign: 'center' }}>
-                                    <div style={{ fontSize: '60px', fontWeight: 900, lineHeight: 1 }}>GA4</div>
+                                    <div style={{ fontSize: '60px', fontWeight: 600, lineHeight: 1 }}>GA4</div>
                                     <div style={{ fontSize: '16px', opacity: 0.9, marginTop: '10px' }}>Certified Experts</div>
                                     <div style={{ display: 'flex', justifyContent: 'center', gap: '15px', marginTop: '30px', flexWrap: 'wrap' }}>
                                         {['Events', 'Conversions', 'Audiences', 'Reports'].map((item, i) => (
@@ -114,7 +114,7 @@ export function GA4Content() {
                                 ].map((item, i) => (
                                     <li key={i} style={{ display: 'flex', gap: '15px' }}>
                                         <div style={{ color: '#ea4335' }}><Icon type="check" /></div>
-                                        <div><h4 style={{ fontWeight: 700 }}>{item.title}</h4><p style={{ fontSize: '14px', color: 'var(--text-gray)' }}>{item.desc}</p></div>
+                                        <div><h4 style={{ fontWeight: 600 }}>{item.title}</h4><p style={{ fontSize: '14px', color: 'var(--text-gray)' }}>{item.desc}</p></div>
                                     </li>
                                 ))}
                             </ul>
@@ -142,7 +142,7 @@ export function GA4Content() {
                             <div key={i} className="step-card">
                                 <div className="step-number-badge" style={{ background: 'linear-gradient(135deg, #ea4335, #fbbc05)' }}>{i + 1}</div>
                                 <div className="step-icon-wrapper" style={{ color: '#ea4335' }}><Icon type={step.icon} /></div>
-                                <h3 style={{ fontSize: '20px', fontWeight: 800, marginBottom: '10px' }}>{step.title}</h3>
+                                <h3 style={{ fontSize: '20px', fontWeight: 600, marginBottom: '10px' }}>{step.title}</h3>
                                 <p style={{ fontSize: '14px', color: 'var(--text-gray)', lineHeight: '1.6' }}>{step.desc}</p>
                             </div>
                         ))}

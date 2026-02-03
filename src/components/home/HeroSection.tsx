@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Icon } from '@/components/ui/Icon';
 
-const heroWords = ['Growth', 'Revenue', 'Visibility', 'Dominance', 'Excellence'];
+const heroWords = ['Marketing', 'Growth', 'Revenue', 'Dominance', 'Excellence'];
 
 export function HeroSection() {
     const [currentWord, setCurrentWord] = useState(0);
@@ -27,14 +27,15 @@ export function HeroSection() {
                 <div className="hero-content">
                     <div className="hero-badge">
                         <span className="badge-dot"></span>
-                        <span>Trusted by 200+ Brands Worldwide</span>
+                        <span>Trusted by Brands Worldwide</span>
                     </div>
 
                     <h1 className="hero-headline">
-                        <span className="hero-line-1">We Engineer</span>
-                        <span className={`hero-word ${isAnimating ? 'animating' : ''}`}>
-                            {heroWords[currentWord]}
-                            <span className="hero-word-underline"></span>
+                        <span className="hero-line-1">
+                            We engineer{" "}
+                            <span className={`hero-word ${isAnimating ? 'animating' : ''}`}>
+                                {heroWords[currentWord]}
+                            </span>
                         </span>
                         <span className="hero-line-2">For Ambitious Brands</span>
                     </h1>
@@ -47,7 +48,7 @@ export function HeroSection() {
 
                     <div className="hero-cta-group">
                         <Link href="/contact" className="btn-primary">
-                            <span>Start Your Evolution</span>
+                            <span>Talk to Us</span>
                             <Icon type="arrowRight" />
                         </Link>
                         <Link href="/work" className="btn-secondary">
@@ -58,8 +59,8 @@ export function HeroSection() {
 
                     <div className="hero-stats">
                         <div className="hero-stat">
-                            <span className="stat-number">$2.5B+</span>
-                            <span className="stat-label">Revenue Generated</span>
+                            <span className="stat-number">15.4k+</span>
+                            <span className="stat-label">Qualified Leads</span>
                         </div>
                         <div className="stat-divider"></div>
                         <div className="hero-stat">

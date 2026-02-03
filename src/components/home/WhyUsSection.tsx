@@ -29,6 +29,16 @@ const differentiators = [
     },
 ];
 
+const approachSteps = [
+    { number: '01', label: 'Diagnose', desc: 'Deep-dive audit of your current state', icon: 'search' },
+    { number: '02', label: 'Strategize', desc: 'Custom roadmap with clear KPIs', icon: 'target' },
+    { number: '03', label: 'Execute', desc: 'Rapid implementation with agile sprints', icon: 'rocket' },
+    { number: '04', label: 'AI Amplify', desc: 'Deploy AI-powered automation & personalization at scale', icon: 'brain' },
+    { number: '05', label: 'Track', desc: 'Real-time dashboards with full-funnel visibility', icon: 'analytics' },
+    { number: '06', label: 'Attribute', desc: 'Multi-touch attribution across the full customer journey', icon: 'layers' },
+    { number: '07', label: 'Optimize', desc: 'Continuous improvement through predictive analytics', icon: 'trending' },
+];
+
 export function WhyUsSection() {
     return (
         <section className="whyus-section">
@@ -60,31 +70,27 @@ export function WhyUsSection() {
                 </div>
 
                 <div className="whyus-visual">
-                    <div className="visual-card">
-                        <div className="visual-header">
-                            <span className="visual-tag">Our Approach</span>
+                    <div className="approach-timeline">
+                        <div className="approach-header">
+                            <span className="approach-tag">Our Approach</span>
+                            <h3 className="approach-title">From Strategy to Scale</h3>
                         </div>
-                        <div className="visual-steps">
-                            <div className="step">
-                                <span className="step-number">01</span>
-                                <span className="step-label">Diagnose</span>
-                                <p className="step-desc">Deep-dive audit of your current state</p>
-                            </div>
-                            <div className="step">
-                                <span className="step-number">02</span>
-                                <span className="step-label">Strategize</span>
-                                <p className="step-desc">Custom roadmap with clear KPIs</p>
-                            </div>
-                            <div className="step">
-                                <span className="step-number">03</span>
-                                <span className="step-label">Execute</span>
-                                <p className="step-desc">Rapid implementation with agile sprints</p>
-                            </div>
-                            <div className="step">
-                                <span className="step-number">04</span>
-                                <span className="step-label">Optimize</span>
-                                <p className="step-desc">Continuous improvement through data</p>
-                            </div>
+                        <div className="timeline-track">
+                            {approachSteps.map((step, index) => (
+                                <div key={index} className="timeline-step">
+                                    <div className="step-connector">
+                                        <div className="step-dot">
+                                            <Icon type={step.icon} />
+                                        </div>
+                                        {index < approachSteps.length - 1 && <div className="step-line" />}
+                                    </div>
+                                    <div className="step-content">
+                                        <span className="step-num">{step.number}</span>
+                                        <h4 className="step-title">{step.label}</h4>
+                                        <p className="step-text">{step.desc}</p>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>
