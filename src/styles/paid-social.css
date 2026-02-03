@@ -1,0 +1,523 @@
+/* ================================================
+   PAID SOCIAL ADVERTISING SERVICE PAGE STYLES - Oneskai Digital Agency
+   ================================================ */
+
+.paid-social-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.paid-social-page {
+    overflow-x: hidden;
+    background: #ffffff;
+}
+
+[data-theme="dark"] .paid-social-page {
+    background: #0a0a0a;
+}
+
+[data-theme="dark"] .paid-social-page .section-title,
+[data-theme="dark"] .paid-social-page h2,
+[data-theme="dark"] .paid-social-page h3,
+[data-theme="dark"] .paid-social-page h4 {
+    color: #ffffff;
+}
+
+[data-theme="dark"] .paid-social-page p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* ===== HERO SECTION ===== */
+.paid-social-hero {
+    min-height: 95vh;
+    padding: 180px 0 100px;
+    background: radial-gradient(circle at 20% 30%, rgba(24, 119, 242, 0.1) 0%, transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(225, 48, 108, 0.1) 0%, transparent 40%),
+        var(--bg-white);
+    position: relative;
+    overflow: hidden;
+}
+
+[data-theme="dark"] .paid-social-hero {
+    background: radial-gradient(circle at 20% 30%, rgba(24, 119, 242, 0.2) 0%, transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(225, 48, 108, 0.2) 0%, transparent 40%),
+        #0a0a0a;
+}
+
+.paid-social-hero-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.paid-social-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(90deg, rgba(24, 119, 242, 0.1), rgba(225, 48, 108, 0.1));
+    padding: 12px 20px;
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #1877F2;
+    margin-bottom: 32px;
+    border: 1px solid rgba(24, 119, 242, 0.2);
+}
+
+.paid-social-hero-title {
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -3px;
+    margin-bottom: 28px;
+    color: var(--text-dark);
+}
+
+[data-theme="dark"] .paid-social-hero-title {
+    color: #ffffff;
+}
+
+.paid-social-hero-title .text-gradient {
+    background: linear-gradient(135deg, #1877F2, #E1306C, #F77737);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-size: 200% auto;
+    animation: metaGradient 4s ease infinite;
+}
+
+@keyframes metaGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.paid-social-hero-subtitle {
+    font-size: 22px;
+    line-height: 1.6;
+    color: var(--text-gray);
+    margin-bottom: 40px;
+    max-width: 600px;
+}
+
+/* Ad Spend Visual */
+.spend-visual {
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+
+.spend-cards {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.spend-card {
+    position: absolute;
+    background: white;
+    border-radius: 24px;
+    padding: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+[data-theme="dark"] .spend-card {
+    background: #1a1a1a;
+}
+
+.spend-card:nth-child(1) {
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.spend-card:nth-child(2) {
+    top: 60px;
+    left: 60px;
+    z-index: 2;
+}
+
+.spend-card:nth-child(3) {
+    top: 120px;
+    left: 120px;
+    z-index: 1;
+}
+
+.spend-card:hover {
+    transform: translateY(-10px);
+}
+
+/* ===== TRUST BAR ===== */
+.paid-social-trust {
+    padding: 50px 0;
+    background: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+[data-theme="dark"] .paid-social-trust {
+    background: #111;
+    border-color: #222;
+}
+
+.trust-stats {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+.trust-stat {
+    text-align: center;
+}
+
+/* ===== PLATFORM BREAKDOWN ===== */
+.paid-social-platforms {
+    padding: 120px 0;
+}
+
+.platform-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+}
+
+.platform-tab {
+    padding: 15px 30px;
+    border-radius: 100px;
+    background: #f1f5f9;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .platform-tab {
+    background: #222;
+    color: white;
+}
+
+.platform-tab.active,
+.platform-tab:hover {
+    background: #1877F2;
+    color: white;
+}
+
+.platform-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.platform-detail-card {
+    background: white;
+    padding: 40px;
+    border-radius: 24px;
+    border: 1px solid #f1f5f9;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .platform-detail-card {
+    background: #111;
+    border-color: #222;
+}
+
+.platform-detail-card:hover {
+    border-color: #1877F2;
+    box-shadow: 0 20px 40px rgba(24, 119, 242, 0.1);
+}
+
+/* ===== AUDIENCE TARGETING ===== */
+.paid-social-audience {
+    padding: 120px 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.audience-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.audience-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 40px 30px;
+    border-radius: 24px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.audience-card:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-10px);
+}
+
+/* ===== CREATIVE FRAMEWORK ===== */
+.paid-social-creative {
+    padding: 120px 0;
+}
+
+.creative-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.creative-formats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.format-card {
+    background: #f8fafc;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .format-card {
+    background: #111;
+}
+
+.format-card:hover {
+    background: #1877F2;
+    color: white;
+}
+
+.creative-showcase {
+    background: linear-gradient(135deg, #1877F2, #E1306C);
+    border-radius: 32px;
+    padding: 60px;
+    color: white;
+    text-align: center;
+}
+
+/* ===== BUDGET SECTION ===== */
+.paid-social-budget {
+    padding: 120px 0;
+    background: #fafafa;
+}
+
+[data-theme="dark"] .paid-social-budget {
+    background: #0d0d0d;
+}
+
+.budget-tiers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.budget-card {
+    background: white;
+    padding: 50px 40px;
+    border-radius: 32px;
+    border: 1px solid #eee;
+    text-align: center;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .budget-card {
+    background: #1a1a1a;
+    border-color: #333;
+}
+
+.budget-card.featured {
+    border: 2px solid #1877F2;
+    transform: scale(1.05);
+    z-index: 2;
+    box-shadow: 0 30px 60px rgba(24, 119, 242, 0.15);
+}
+
+.budget-card .popular-tag {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(90deg, #1877F2, #E1306C);
+    color: white;
+    padding: 8px 24px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+/* ===== RESULTS ===== */
+.paid-social-results {
+    padding: 120px 0;
+}
+
+.results-showcase {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.result-item {
+    background: white;
+    padding: 50px;
+    border-radius: 32px;
+    border: 1px solid #f1f5f9;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .result-item {
+    background: #111;
+    border-color: #222;
+}
+
+.result-item:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.result-number {
+    font-size: 56px;
+    font-weight: 900;
+    background: linear-gradient(135deg, #1877F2, #E1306C);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ===== FAQ ===== */
+.paid-social-faq {
+    padding: 120px 0;
+    background: #f8fafc;
+}
+
+[data-theme="dark"] .paid-social-faq {
+    background: #0d0d0d;
+}
+
+/* ===== CTA ===== */
+.paid-social-cta {
+    background: #052e26;
+    padding: 120px 0;
+    color: white;
+}
+
+.cta-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 100px;
+    align-items: center;
+}
+
+.cta-form {
+    background: white;
+    padding: 50px;
+    border-radius: 40px;
+    color: black;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.3);
+}
+
+.cta-form input,
+.cta-form select,
+.cta-form textarea {
+    width: 100%;
+    padding: 18px;
+    border-radius: 12px;
+    border: 2px solid #f1f5f9;
+    background: #f8fafc;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.cta-form input:focus,
+.cta-form select:focus,
+.cta-form textarea:focus {
+    outline: none;
+    border-color: #1877F2;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1200px) {
+    .audience-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .results-showcase {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .paid-social-hero-grid,
+    .platform-details,
+    .creative-grid,
+    .budget-tiers,
+    .cta-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .paid-social-hero-title {
+        font-size: 48px;
+    }
+
+    .paid-social-container {
+        padding: 0 20px;
+    }
+
+    .spend-visual {
+        width: 300px;
+        height: 300px;
+        margin: 0 auto;
+    }
+
+    .budget-card.featured {
+        transform: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .audience-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .creative-formats {
+        grid-template-columns: 1fr;
+    }
+
+    .paid-social-hero {
+        padding: 140px 0 80px;
+        min-height: auto;
+    }
+
+    .paid-social-hero-title {
+        font-size: 36px;
+        letter-spacing: -1px;
+    }
+
+    .trust-stats {
+        gap: 40px;
+    }
+}

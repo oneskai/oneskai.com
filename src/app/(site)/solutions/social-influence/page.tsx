@@ -1,26 +1,10 @@
 import { Metadata } from 'next';
-import { GenericPage } from '@/components/layout/GenericPage/GenericPage';
-
-const pageConfig = {
-    slug: 'social-influence',
-    category: 'BRAND & PRESENCE',
-    title: 'Social Influence',
-    subtitle: 'Build a loyal online community.',
-    description: 'We help brands cultivate authentic social influence through strategic community building, influencer partnerships, and engagement-driven content.',
-};
+import { SocialInfluenceContent } from '@/components/solutions/SocialInfluenceContent';
 
 export const metadata: Metadata = {
-    title: `${pageConfig.title} | Oneskai`,
-    description: pageConfig.subtitle,
+    title: 'Social Influence Solutions | Social Media Marketing | Oneskai',
+    description: 'Build engaged communities and brand advocates through social media strategy, content creation, and influencer marketing.',
+    keywords: 'social influence, social media marketing, influencer marketing, community management, social strategy, paid social',
 };
 
-export default async function SocialInfluencePage() {
-    return (
-        <GenericPage
-            category={pageConfig.category}
-            title={pageConfig.title}
-            subtitle={pageConfig.subtitle}
-            description={pageConfig.description}
-        />
-    );
-}
+export default function SocialInfluencePage() { return <SocialInfluenceContent />; }

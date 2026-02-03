@@ -1,26 +1,10 @@
 import { Metadata } from 'next';
-import { GenericPage } from '@/components/layout/GenericPage/GenericPage';
-
-const pageConfig = {
-    slug: 'predictive',
-    category: 'MARKETING INTELLIGENCE',
-    title: 'Predictive Analytics',
-    subtitle: 'Forecast trends and customer behavior.',
-    description: 'Leverage machine learning and statistical modeling to predict future outcomes, identify opportunities, and make proactive marketing decisions.',
-};
+import { PredictiveContent } from '@/components/services/PredictiveContent';
 
 export const metadata: Metadata = {
-    title: `${pageConfig.title} | Oneskai`,
-    description: pageConfig.subtitle,
+    title: 'Predictive Analytics Services | ML-Powered Predictions | Oneskai',
+    description: 'Machine learning models that predict customer behavior, forecast outcomes, and optimize marketing spend. Churn prediction, lead scoring, and LTV models.',
+    keywords: 'predictive analytics, machine learning, churn prediction, lead scoring, LTV prediction, forecasting',
 };
 
-export default async function PredictivePage() {
-    return (
-        <GenericPage
-            category={pageConfig.category}
-            title={pageConfig.title}
-            subtitle={pageConfig.subtitle}
-            description={pageConfig.description}
-        />
-    );
-}
+export default function PredictivePage() { return <PredictiveContent />; }

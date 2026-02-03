@@ -1,26 +1,17 @@
 import { Metadata } from 'next';
-import { GenericPage } from '@/components/layout/GenericPage/GenericPage';
-
-const pageConfig = {
-    slug: 'gtm',
-    category: 'MARKETING CONSULTING',
-    title: 'Full Go-To-Market Strategy',
-    subtitle: 'Data-driven GTM for product launches.',
-    description: 'We develop comprehensive go-to-market strategies that align product positioning, messaging, channel selection, and launch tactics for maximum market impact.',
-};
+import { GTMContent } from '@/components/services/GTMContent';
 
 export const metadata: Metadata = {
-    title: `${pageConfig.title} | Oneskai`,
-    description: pageConfig.subtitle,
+    title: 'Google Tag Manager Services | GTM Implementation Agency | Oneskai',
+    description: 'Expert Google Tag Manager implementation and audit services. Server-side tagging, data layer design, and marketing tag management.',
+    keywords: 'Google Tag Manager, GTM implementation, GTM audit, server-side tagging, data layer, tag management, marketing tracking, GA4 setup',
+    openGraph: {
+        title: 'Google Tag Manager Services | GTM Implementation Agency | Oneskai',
+        description: 'Expert Google Tag Manager implementation for accurate marketing data.',
+        type: 'website',
+    },
 };
 
-export default async function GTMPage() {
-    return (
-        <GenericPage
-            category={pageConfig.category}
-            title={pageConfig.title}
-            subtitle={pageConfig.subtitle}
-            description={pageConfig.description}
-        />
-    );
+export default function GTMPage() {
+    return <GTMContent />;
 }

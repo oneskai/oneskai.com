@@ -1,26 +1,10 @@
 import { Metadata } from 'next';
-import { GenericPage } from '@/components/layout/GenericPage/GenericPage';
-
-const pageConfig = {
-    slug: 'search-dominance',
-    category: 'FUTURE-READY',
-    title: 'Search Dominance',
-    subtitle: 'Own the search landscape.',
-    description: 'We develop comprehensive search strategies that ensure your brand appears prominently across traditional search engines and emerging AI-powered platforms.',
-};
+import { SearchDominanceContent } from '@/components/solutions/SearchDominanceContent';
 
 export const metadata: Metadata = {
-    title: `${pageConfig.title} | Oneskai`,
-    description: pageConfig.subtitle,
+    title: 'Search Dominance Solutions | SEO, PPC & GEO | Oneskai',
+    description: 'Comprehensive search strategy combining SEO, PPC, and GEO to dominate search results and capture high-intent traffic.',
+    keywords: 'search dominance, SEO, PPC, Google Ads, GEO, search marketing, organic search',
 };
 
-export default async function SearchDominancePage() {
-    return (
-        <GenericPage
-            category={pageConfig.category}
-            title={pageConfig.title}
-            subtitle={pageConfig.subtitle}
-            description={pageConfig.description}
-        />
-    );
-}
+export default function SearchDominancePage() { return <SearchDominanceContent />; }

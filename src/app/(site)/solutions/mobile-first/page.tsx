@@ -1,26 +1,10 @@
 import { Metadata } from 'next';
-import { GenericPage } from '@/components/layout/GenericPage/GenericPage';
-
-const pageConfig = {
-    slug: 'mobile-first',
-    category: 'FUTURE-READY',
-    title: 'Mobile-First Strategy',
-    subtitle: 'Win on every hand-held device.',
-    description: 'We design mobile-first experiences and campaigns that capture the growing mobile audience with optimized UX, fast performance, and platform-specific strategies.',
-};
+import { MobileFirstContent } from '@/components/solutions/MobileFirstContent';
 
 export const metadata: Metadata = {
-    title: `${pageConfig.title} | Oneskai`,
-    description: pageConfig.subtitle,
+    title: 'Mobile-First Solutions | App & Mobile Marketing | Oneskai',
+    description: 'Mobile-first strategies that capture customers on their phones. Apps, mobile web, and cross-device experiences that drive engagement and conversion.',
+    keywords: 'mobile first, mobile marketing, app marketing, ASO, mobile strategy, mobile advertising',
 };
 
-export default async function MobileFirstPage() {
-    return (
-        <GenericPage
-            category={pageConfig.category}
-            title={pageConfig.title}
-            subtitle={pageConfig.subtitle}
-            description={pageConfig.description}
-        />
-    );
-}
+export default function MobileFirstPage() { return <MobileFirstContent />; }

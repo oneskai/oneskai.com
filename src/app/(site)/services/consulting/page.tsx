@@ -1,26 +1,10 @@
 import { Metadata } from 'next';
-import { GenericPage } from '@/components/layout/GenericPage/GenericPage';
-
-const pageConfig = {
-    slug: 'consulting',
-    category: 'MARKETING CONSULTING',
-    title: 'Marketing Consulting',
-    subtitle: 'Navigate complexity with expert guidance.',
-    description: 'Our consulting services provide strategic frameworks, competitive analysis, and actionable roadmaps to help you overcome challenges and capitalize on opportunities.',
-};
+import { ConsultingContent } from '@/components/services/ConsultingContent';
 
 export const metadata: Metadata = {
-    title: `${pageConfig.title} | Oneskai`,
-    description: pageConfig.subtitle,
+    title: 'Marketing Consulting Services | Strategic Advisory | Oneskai',
+    description: 'Expert marketing consulting for complex challenges. Get strategic clarity, growth roadmaps, and actionable recommendations from seasoned marketing experts.',
+    keywords: 'marketing consulting, marketing strategy, growth consulting, digital strategy, marketing audit, strategic advisory',
 };
 
-export default async function ConsultingPage() {
-    return (
-        <GenericPage
-            category={pageConfig.category}
-            title={pageConfig.title}
-            subtitle={pageConfig.subtitle}
-            description={pageConfig.description}
-        />
-    );
-}
+export default function ConsultingPage() { return <ConsultingContent />; }

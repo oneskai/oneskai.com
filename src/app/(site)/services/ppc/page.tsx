@@ -1,26 +1,17 @@
 import { Metadata } from 'next';
-import { GenericPage } from '@/components/layout/GenericPage/GenericPage';
-
-const pageConfig = {
-    slug: 'ppc',
-    category: 'PAID MEDIA',
-    title: 'Search & PPC Advertising',
-    subtitle: 'Google, Bing & YouTube search dominance.',
-    description: 'We manage precision-targeted PPC campaigns that capture high-intent traffic and deliver measurable ROI through continuous optimization and strategic bid management.',
-};
+import { PPCContent } from '@/components/services/PPCContent';
 
 export const metadata: Metadata = {
-    title: `${pageConfig.title} | Oneskai`,
-    description: pageConfig.subtitle,
+    title: 'PPC & Google Ads Management | Pay-Per-Click Agency | Oneskai',
+    description: 'Expert PPC management across Google Ads, Meta, YouTube & Bing. Achieve 4.8x average ROAS with our data-driven campaign architecture and Smart Bidding strategies.',
+    keywords: 'PPC management, Google Ads agency, pay-per-click, paid search, SEM, Google Ads management, Meta Ads, YouTube Ads, ROAS optimization',
+    openGraph: {
+        title: 'PPC & Google Ads Management | Pay-Per-Click Agency | Oneskai',
+        description: 'Expert PPC management achieving 4.8x average ROAS across Google, Meta, YouTube & Bing.',
+        type: 'website',
+    },
 };
 
-export default async function PPCPage() {
-    return (
-        <GenericPage
-            category={pageConfig.category}
-            title={pageConfig.title}
-            subtitle={pageConfig.subtitle}
-            description={pageConfig.description}
-        />
-    );
+export default function PPCPage() {
+    return <PPCContent />;
 }

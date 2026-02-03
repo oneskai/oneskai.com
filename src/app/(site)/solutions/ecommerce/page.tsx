@@ -1,26 +1,10 @@
 import { Metadata } from 'next';
-import { GenericPage } from '@/components/layout/GenericPage/GenericPage';
-
-const pageConfig = {
-    slug: 'ecommerce',
-    category: 'GROWTH & PERFORMANCE',
-    title: 'eCommerce Growth',
-    subtitle: 'Scale your online revenue.',
-    description: 'We help eCommerce brands accelerate growth through optimized product pages, strategic advertising, and customer retention programs.',
-};
+import { EcommerceSolutionContent } from '@/components/solutions/EcommerceSolutionContent';
 
 export const metadata: Metadata = {
-    title: `${pageConfig.title} | Oneskai`,
-    description: pageConfig.subtitle,
+    title: 'Ecommerce Growth Solutions | Online Revenue Optimization | Oneskai',
+    description: 'End-to-end ecommerce solutions that drive traffic, convert visitors, and maximize customer lifetime value across every channel.',
+    keywords: 'ecommerce growth, online revenue, Shopify marketing, Amazon marketing, ecommerce optimization, DTC marketing',
 };
 
-export default async function EcommercePage() {
-    return (
-        <GenericPage
-            category={pageConfig.category}
-            title={pageConfig.title}
-            subtitle={pageConfig.subtitle}
-            description={pageConfig.description}
-        />
-    );
-}
+export default function EcommercePage() { return <EcommerceSolutionContent />; }

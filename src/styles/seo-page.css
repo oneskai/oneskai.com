@@ -29,7 +29,7 @@
     right: -200px;
     width: 600px;
     height: 600px;
-    background: radial-gradient(circle, rgba(255, 35, 196, 0.08) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(61, 13, 168, 0.08) 0%, transparent 70%);
     border-radius: 50%;
     pointer-events: none;
 }
@@ -57,7 +57,7 @@
 .seo-badge .badge-dot {
     width: 8px;
     height: 8px;
-    background: var(--accent-pink);
+    background: var(--accent-yellow);
     border-radius: 50%;
     animation: pulse 2s infinite;
 }
@@ -72,7 +72,7 @@
 }
 
 .seo-hero-title .text-gradient {
-    background: linear-gradient(135deg, var(--accent-pink), #a855f7);
+    background: linear-gradient(135deg, var(--accent-yellow), #3d0da8);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -217,7 +217,7 @@
 }
 
 .search-result.featured {
-    background: linear-gradient(135deg, rgba(5, 46, 38, 0.05), rgba(255, 35, 196, 0.05));
+    background: linear-gradient(135deg, rgba(5, 46, 38, 0.05), rgba(61, 13, 168, 0.05));
     border: 1px solid rgba(5, 46, 38, 0.1);
 }
 
@@ -262,8 +262,8 @@
     right: 16px;
     top: 50%;
     transform: translateY(-50%);
-    background: var(--accent-pink);
-    color: white;
+    background: var(--accent-yellow);
+    color: var(--primary-green);
     padding: 4px 10px;
     border-radius: 6px;
     font-size: 12px;
@@ -354,7 +354,7 @@
     display: inline-block;
     font-size: 12px;
     font-weight: 700;
-    color: var(--accent-pink);
+    color: var(--accent-yellow);
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 16px;
@@ -370,7 +370,7 @@
 }
 
 .section-title .text-gradient {
-    background: linear-gradient(135deg, var(--accent-pink), #a855f7);
+    background: linear-gradient(135deg, var(--accent-yellow), #3d0da8);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -429,8 +429,8 @@
 }
 
 .benefit-icon.pink {
-    background: rgba(255, 35, 196, 0.1);
-    color: var(--accent-pink);
+    background: rgba(61, 13, 168, 0.1);
+    color: var(--accent-purple);
 }
 
 .benefit-icon.yellow {
@@ -479,7 +479,7 @@
 }
 
 .service-card:hover {
-    border-color: var(--accent-pink);
+    border-color: var(--accent-yellow);
     transform: translateY(-5px);
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
 }
@@ -510,8 +510,8 @@
     position: absolute;
     top: 20px;
     right: 20px;
-    background: var(--accent-pink);
-    color: white;
+    background: var(--accent-yellow);
+    color: var(--primary-green);
     padding: 4px 12px;
     border-radius: 100px;
     font-size: 11px;
@@ -522,7 +522,7 @@
 .service-number {
     font-size: 14px;
     font-weight: 700;
-    color: var(--accent-pink);
+    color: var(--accent-yellow);
     margin-bottom: 16px;
 }
 
@@ -562,7 +562,7 @@
 .service-features svg {
     width: 16px;
     height: 16px;
-    color: var(--accent-pink);
+    color: var(--accent-yellow);
     flex-shrink: 0;
 }
 
@@ -595,7 +595,7 @@
     left: 60px;
     right: 60px;
     height: 2px;
-    background: linear-gradient(90deg, var(--accent-pink), var(--accent-yellow));
+    background: linear-gradient(90deg, var(--accent-purple), var(--accent-yellow));
     z-index: 0;
 }
 
@@ -652,7 +652,7 @@
 }
 
 .seo-results .text-gradient {
-    background: linear-gradient(90deg, var(--accent-yellow), var(--accent-pink));
+    background: linear-gradient(90deg, var(--accent-yellow), var(--accent-purple));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -821,8 +821,8 @@
 .author-avatar {
     width: 48px;
     height: 48px;
-    background: var(--accent-pink);
-    color: white;
+    background: var(--accent-yellow);
+    color: var(--primary-green);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1059,8 +1059,8 @@
 }
 
 .challenge-icon.danger {
-    background: rgba(255, 35, 196, 0.1);
-    color: var(--accent-pink);
+    background: rgba(61, 13, 168, 0.1);
+    color: var(--accent-purple);
 }
 
 .challenge-icon svg {

@@ -1,26 +1,10 @@
 import { Metadata } from 'next';
-import { GenericPage } from '@/components/layout/GenericPage/GenericPage';
-
-const pageConfig = {
-    slug: 'persona-development',
-    category: 'MARKETING CONSULTING',
-    title: 'Persona Development',
-    subtitle: 'Develop data-driven customer profiles.',
-    description: 'We build detailed buyer personas based on real data and research, enabling your team to create more targeted messaging and effective marketing campaigns.',
-};
+import { PersonaDevelopmentContent } from '@/components/services/PersonaDevelopmentContent';
 
 export const metadata: Metadata = {
-    title: `${pageConfig.title} | Oneskai`,
-    description: pageConfig.subtitle,
+    title: 'Buyer Persona Development | Customer Research | Oneskai',
+    description: 'Data-driven buyer personas that inform messaging, targeting, and product decisions. Know your ideal customer inside and out.',
+    keywords: 'buyer persona, customer persona, audience research, customer research, ICP, ideal customer profile',
 };
 
-export default async function PersonaDevelopmentPage() {
-    return (
-        <GenericPage
-            category={pageConfig.category}
-            title={pageConfig.title}
-            subtitle={pageConfig.subtitle}
-            description={pageConfig.description}
-        />
-    );
-}
+export default function PersonaDevelopmentPage() { return <PersonaDevelopmentContent />; }

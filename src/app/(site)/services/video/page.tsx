@@ -1,26 +1,10 @@
 import { Metadata } from 'next';
-import { GenericPage } from '@/components/layout/GenericPage/GenericPage';
-
-const pageConfig = {
-    slug: 'video',
-    category: 'CREATIVES',
-    title: 'Video Production',
-    subtitle: 'High-impact video for paid & social.',
-    description: 'We produce compelling video content optimized for performance across advertising platforms and social channels—from concept to final delivery.',
-};
+import { VideoContent } from '@/components/services/VideoContent';
 
 export const metadata: Metadata = {
-    title: `${pageConfig.title} | Oneskai`,
-    description: pageConfig.subtitle,
+    title: 'Video Marketing Services | Brand Videos & Social Content | Oneskai',
+    description: 'Strategic video marketing that captures attention and drives action. Short-form social, brand videos, explainers, and video ads.',
+    keywords: 'video marketing, video production, social media video, brand video, explainer video, video ads, UGC',
 };
 
-export default async function VideoPage() {
-    return (
-        <GenericPage
-            category={pageConfig.category}
-            title={pageConfig.title}
-            subtitle={pageConfig.subtitle}
-            description={pageConfig.description}
-        />
-    );
-}
+export default function VideoPage() { return <VideoContent />; }

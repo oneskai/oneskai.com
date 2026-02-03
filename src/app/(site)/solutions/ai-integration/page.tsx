@@ -1,26 +1,10 @@
 import { Metadata } from 'next';
-import { GenericPage } from '@/components/layout/GenericPage/GenericPage';
-
-const pageConfig = {
-    slug: 'ai-integration',
-    category: 'FUTURE-READY',
-    title: 'AI Integration',
-    subtitle: 'Leverage AI for efficiency and innovation.',
-    description: 'We help businesses integrate AI into their marketing operations—from content generation to predictive analytics and automated customer interactions.',
-};
+import { AIIntegrationContent } from '@/components/solutions/AIIntegrationContent';
 
 export const metadata: Metadata = {
-    title: `${pageConfig.title} | Oneskai`,
-    description: pageConfig.subtitle,
+    title: 'AI Integration Solutions | AI-Powered Business Growth | Oneskai',
+    description: 'Harness artificial intelligence to automate operations, personalize experiences, and drive exponential business growth with strategic AI integration.',
+    keywords: 'AI integration, artificial intelligence, machine learning, marketing automation, chatbots, predictive analytics',
 };
 
-export default async function AIIntegrationPage() {
-    return (
-        <GenericPage
-            category={pageConfig.category}
-            title={pageConfig.title}
-            subtitle={pageConfig.subtitle}
-            description={pageConfig.description}
-        />
-    );
-}
+export default function AIIntegrationPage() { return <AIIntegrationContent />; }

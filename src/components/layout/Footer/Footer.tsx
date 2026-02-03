@@ -9,7 +9,7 @@ interface FooterProps {
   siteSettings?: SiteSettings;
 }
 
-export function Footer({ footer, siteSettings }: FooterProps) {
+export function Footer({ siteSettings }: FooterProps) {
   const contactEmail = siteSettings?.contactEmail || 'hello@oneskai.com';
 
   return (

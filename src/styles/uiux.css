@@ -1,0 +1,467 @@
+/* ================================================
+   UI/UX DESIGN SERVICE PAGE STYLES - Oneskai Digital Agency
+   ================================================ */
+
+.uiux-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.uiux-page {
+    overflow-x: hidden;
+    background: #ffffff;
+}
+
+[data-theme="dark"] .uiux-page {
+    background: #0a0a0a;
+}
+
+[data-theme="dark"] .uiux-page .section-title,
+[data-theme="dark"] .uiux-page h2,
+[data-theme="dark"] .uiux-page h3,
+[data-theme="dark"] .uiux-page h4 {
+    color: #ffffff;
+}
+
+[data-theme="dark"] .uiux-page p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* ===== HERO SECTION ===== */
+.uiux-hero {
+    min-height: 95vh;
+    padding: 180px 0 100px;
+    background: radial-gradient(circle at 20% 30%, rgba(99, 102, 241, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(168, 85, 247, 0.08) 0%, transparent 40%),
+        var(--bg-white);
+    position: relative;
+    overflow: hidden;
+}
+
+[data-theme="dark"] .uiux-hero {
+    background: radial-gradient(circle at 20% 30%, rgba(99, 102, 241, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(168, 85, 247, 0.15) 0%, transparent 40%),
+        #0a0a0a;
+}
+
+.uiux-hero-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.uiux-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(90deg, rgba(99, 102, 241, 0.1), rgba(168, 85, 247, 0.1));
+    padding: 12px 20px;
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #6366f1;
+    margin-bottom: 32px;
+    border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.uiux-hero-title {
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -3px;
+    margin-bottom: 28px;
+    color: var(--text-dark);
+}
+
+[data-theme="dark"] .uiux-hero-title {
+    color: #ffffff;
+}
+
+.uiux-hero-title .text-gradient {
+    background: linear-gradient(135deg, #6366f1, #a855f7, #ec4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.uiux-hero-subtitle {
+    font-size: 22px;
+    line-height: 1.6;
+    color: var(--text-gray);
+    margin-bottom: 40px;
+    max-width: 600px;
+}
+
+/* Wireframe Visual */
+.wireframe-visual {
+    position: relative;
+}
+
+.wireframe-card {
+    background: white;
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] .wireframe-card {
+    background: #1a1a1a;
+}
+
+.wireframe-header {
+    height: 20px;
+    background: #e2e8f0;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.wireframe-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+}
+
+.wireframe-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.wireframe-sidebar div {
+    height: 30px;
+    background: #e2e8f0;
+    border-radius: 4px;
+}
+
+.wireframe-main {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.wireframe-main div {
+    height: 60px;
+    background: linear-gradient(135deg, #6366f1, #a855f7);
+    border-radius: 8px;
+}
+
+/* ===== TRUST BAR ===== */
+.uiux-trust {
+    padding: 50px 0;
+    background: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+[data-theme="dark"] .uiux-trust {
+    background: #111;
+    border-color: #222;
+}
+
+/* ===== SERVICES ===== */
+.uiux-services {
+    padding: 120px 0;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.service-card {
+    background: white;
+    padding: 50px 40px;
+    border-radius: 32px;
+    border: 1px solid #f1f5f9;
+    transition: all 0.4s ease;
+}
+
+[data-theme="dark"] .service-card {
+    background: #111;
+    border-color: #222;
+}
+
+.service-card::before {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #6366f1, #a855f7);
+    border-radius: 16px;
+    margin-bottom: 25px;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px rgba(99, 102, 241, 0.15);
+}
+
+/* ===== PROCESS ===== */
+.uiux-process {
+    padding: 120px 0;
+    background: linear-gradient(135deg, #1e1b4b, #312e81);
+    color: white;
+}
+
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.process-step {
+    text-align: center;
+    padding: 30px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.process-step:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-10px);
+}
+
+.step-num {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #6366f1, #a855f7);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    font-weight: 900;
+}
+
+/* ===== TOOLS ===== */
+.uiux-tools {
+    padding: 120px 0;
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.tool-card {
+    background: white;
+    padding: 40px;
+    border-radius: 24px;
+    text-align: center;
+    border: 1px solid #f1f5f9;
+    transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .tool-card {
+    background: #111;
+    border-color: #222;
+}
+
+.tool-card:hover {
+    transform: scale(1.05);
+    border-color: #6366f1;
+}
+
+.tool-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+/* ===== PRICING ===== */
+.uiux-pricing {
+    padding: 120px 0;
+    background: #fafafa;
+}
+
+[data-theme="dark"] .uiux-pricing {
+    background: #0d0d0d;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.price-card {
+    background: white;
+    padding: 50px 40px;
+    border-radius: 32px;
+    border: 1px solid #eee;
+    text-align: center;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .price-card {
+    background: #1a1a1a;
+    border-color: #333;
+}
+
+.price-card.featured {
+    border: 2px solid #6366f1;
+    transform: scale(1.05);
+    z-index: 2;
+    box-shadow: 0 30px 60px rgba(99, 102, 241, 0.15);
+}
+
+.price-card .popular-tag {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(90deg, #6366f1, #a855f7);
+    color: white;
+    padding: 8px 24px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+/* ===== PORTFOLIO ===== */
+.uiux-portfolio {
+    padding: 120px 0;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.portfolio-item {
+    border-radius: 24px;
+    overflow: hidden;
+    height: 350px;
+    position: relative;
+    cursor: pointer;
+}
+
+.portfolio-item::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.portfolio-item:hover::after {
+    opacity: 1;
+}
+
+/* ===== FAQ ===== */
+.uiux-faq {
+    padding: 120px 0;
+    background: #f8fafc;
+}
+
+[data-theme="dark"] .uiux-faq {
+    background: #0d0d0d;
+}
+
+/* ===== CTA ===== */
+.uiux-cta {
+    background: #052e26;
+    padding: 120px 0;
+    color: white;
+}
+
+.cta-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 100px;
+    align-items: center;
+}
+
+.cta-form {
+    background: white;
+    padding: 50px;
+    border-radius: 40px;
+    color: black;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.3);
+}
+
+.cta-form input,
+.cta-form select,
+.cta-form textarea {
+    width: 100%;
+    padding: 18px;
+    border-radius: 12px;
+    border: 2px solid #f1f5f9;
+    background: #f8fafc;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.cta-form input:focus,
+.cta-form select:focus,
+.cta-form textarea:focus {
+    outline: none;
+    border-color: #6366f1;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1200px) {
+    .tools-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .process-steps {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .uiux-hero-grid,
+    .services-grid,
+    .pricing-grid,
+    .portfolio-grid,
+    .cta-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .uiux-hero-title {
+        font-size: 48px;
+    }
+
+    .uiux-container {
+        padding: 0 20px;
+    }
+
+    .price-card.featured {
+        transform: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .tools-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .process-steps {
+        grid-template-columns: 1fr;
+    }
+
+    .uiux-hero {
+        padding: 140px 0 80px;
+        min-height: auto;
+    }
+
+    .uiux-hero-title {
+        font-size: 36px;
+        letter-spacing: -1px;
+    }
+}

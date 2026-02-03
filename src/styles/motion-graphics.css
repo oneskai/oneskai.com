@@ -1,0 +1,375 @@
+/* ================================================
+   MOTION GRAPHICS SERVICE PAGE STYLES - Oneskai Digital Agency
+   ================================================ */
+
+.motion-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.motion-page {
+    overflow-x: hidden;
+    background: #ffffff;
+}
+
+[data-theme="dark"] .motion-page {
+    background: #0a0a0a;
+}
+
+[data-theme="dark"] .motion-page .section-title,
+[data-theme="dark"] .motion-page h2,
+[data-theme="dark"] .motion-page h3,
+[data-theme="dark"] .motion-page h4 {
+    color: #ffffff;
+}
+
+[data-theme="dark"] .motion-page p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* ===== HERO SECTION ===== */
+.motion-hero {
+    min-height: 95vh;
+    padding: 180px 0 100px;
+    background: radial-gradient(circle at 20% 30%, rgba(139, 92, 246, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(6, 182, 212, 0.08) 0%, transparent 40%),
+        var(--bg-white);
+    position: relative;
+    overflow: hidden;
+}
+
+[data-theme="dark"] .motion-hero {
+    background: radial-gradient(circle at 20% 30%, rgba(139, 92, 246, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(6, 182, 212, 0.15) 0%, transparent 40%),
+        #0a0a0a;
+}
+
+.motion-hero-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.motion-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(90deg, rgba(139, 92, 246, 0.1), rgba(6, 182, 212, 0.1));
+    padding: 12px 20px;
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #8b5cf6;
+    margin-bottom: 32px;
+    border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.motion-hero-title {
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -3px;
+    margin-bottom: 28px;
+    color: var(--text-dark);
+}
+
+[data-theme="dark"] .motion-hero-title {
+    color: #ffffff;
+}
+
+.motion-hero-title .text-gradient {
+    background: linear-gradient(135deg, #8b5cf6, #06b6d4, #10b981);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.motion-hero-subtitle {
+    font-size: 22px;
+    line-height: 1.6;
+    color: var(--text-gray);
+    margin-bottom: 40px;
+    max-width: 600px;
+}
+
+/* Animation Visual */
+.animation-visual {
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+
+.anim-circle {
+    position: absolute;
+    border-radius: 50%;
+    animation: pulse 3s ease-in-out infinite;
+}
+
+.anim-circle:nth-child(1) {
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(135deg, #8b5cf6, #06b6d4);
+    top: 50px;
+    left: 50px;
+    animation-delay: 0s;
+}
+
+.anim-circle:nth-child(2) {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(135deg, #06b6d4, #10b981);
+    top: 100px;
+    left: 100px;
+    animation-delay: 0.5s;
+}
+
+.anim-circle:nth-child(3) {
+    width: 100px;
+    height: 100px;
+    background: white;
+    top: 150px;
+    left: 150px;
+    animation-delay: 1s;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+/* ===== TRUST BAR ===== */
+.motion-trust {
+    padding: 50px 0;
+    background: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+[data-theme="dark"] .motion-trust {
+    background: #111;
+    border-color: #222;
+}
+
+/* ===== SERVICES ===== */
+.motion-services {
+    padding: 120px 0;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.service-card {
+    background: white;
+    padding: 50px 40px;
+    border-radius: 32px;
+    border: 1px solid #f1f5f9;
+    transition: all 0.4s ease;
+}
+
+[data-theme="dark"] .service-card {
+    background: #111;
+    border-color: #222;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px rgba(139, 92, 246, 0.15);
+    border-color: #8b5cf6;
+}
+
+/* ===== SHOWREEL ===== */
+.motion-showreel {
+    padding: 120px 0;
+    background: linear-gradient(135deg, #1e1b4b, #312e81);
+    color: white;
+}
+
+.reel-container {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 32px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.reel-container:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.play-button {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, #8b5cf6, #06b6d4);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+}
+
+/* ===== PRICING ===== */
+.motion-pricing {
+    padding: 120px 0;
+    background: #fafafa;
+}
+
+[data-theme="dark"] .motion-pricing {
+    background: #0d0d0d;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.price-card {
+    background: white;
+    padding: 50px 40px;
+    border-radius: 32px;
+    border: 1px solid #eee;
+    text-align: center;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .price-card {
+    background: #1a1a1a;
+    border-color: #333;
+}
+
+.price-card.featured {
+    border: 2px solid #8b5cf6;
+    transform: scale(1.05);
+    z-index: 2;
+    box-shadow: 0 30px 60px rgba(139, 92, 246, 0.15);
+}
+
+.price-card .popular-tag {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(90deg, #8b5cf6, #06b6d4);
+    color: white;
+    padding: 8px 24px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+/* ===== FAQ ===== */
+.motion-faq {
+    padding: 120px 0;
+    background: #f8fafc;
+}
+
+[data-theme="dark"] .motion-faq {
+    background: #0d0d0d;
+}
+
+/* ===== CTA ===== */
+.motion-cta {
+    background: #052e26;
+    padding: 120px 0;
+    color: white;
+}
+
+.cta-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 100px;
+    align-items: center;
+}
+
+.cta-form {
+    background: white;
+    padding: 50px;
+    border-radius: 40px;
+    color: black;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.3);
+}
+
+.cta-form input,
+.cta-form select,
+.cta-form textarea {
+    width: 100%;
+    padding: 18px;
+    border-radius: 12px;
+    border: 2px solid #f1f5f9;
+    background: #f8fafc;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.cta-form input:focus,
+.cta-form select:focus,
+.cta-form textarea:focus {
+    outline: none;
+    border-color: #8b5cf6;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+
+    .motion-hero-grid,
+    .services-grid,
+    .pricing-grid,
+    .cta-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .motion-hero-title {
+        font-size: 48px;
+    }
+
+    .motion-container {
+        padding: 0 20px;
+    }
+
+    .animation-visual {
+        width: 300px;
+        height: 300px;
+        margin: 0 auto;
+    }
+
+    .price-card.featured {
+        transform: none;
+    }
+
+    .reel-container {
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .motion-hero {
+        padding: 140px 0 80px;
+        min-height: auto;
+    }
+
+    .motion-hero-title {
+        font-size: 36px;
+        letter-spacing: -1px;
+    }
+}

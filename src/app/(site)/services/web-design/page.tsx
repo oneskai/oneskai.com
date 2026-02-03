@@ -1,26 +1,17 @@
 import { Metadata } from 'next';
-import { GenericPage } from '@/components/layout/GenericPage/GenericPage';
-
-const pageConfig = {
-    slug: 'web-design',
-    category: 'CREATIVES',
-    title: 'Web Design & Development',
-    subtitle: 'Custom, fast & conversion-focused.',
-    description: 'We create stunning, high-performance websites that reflect your brand identity and are engineered to convert visitors into customers.',
-};
+import { WebDesignContent } from '@/components/services/WebDesignContent';
 
 export const metadata: Metadata = {
-    title: `${pageConfig.title} | Oneskai`,
-    description: pageConfig.subtitle,
+    title: 'Web Design & Development | Custom Website Agency | Oneskai',
+    description: 'Award-winning web design agency specializing in high-performance websites that convert. Next.js, React, and headless CMS solutions for corporate, e-commerce, and SaaS.',
+    keywords: 'web design agency, website development, custom websites, Next.js development, React websites, headless CMS, corporate websites, e-commerce design',
+    openGraph: {
+        title: 'Web Design & Development | Custom Website Agency | Oneskai',
+        description: 'Award-winning web design agency building high-performance websites that convert visitors into customers.',
+        type: 'website',
+    },
 };
 
-export default async function WebDesignPage() {
-    return (
-        <GenericPage
-            category={pageConfig.category}
-            title={pageConfig.title}
-            subtitle={pageConfig.subtitle}
-            description={pageConfig.description}
-        />
-    );
+export default function WebDesignPage() {
+    return <WebDesignContent />;
 }

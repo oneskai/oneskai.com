@@ -56,10 +56,14 @@ export function BlogGrid({
   })) || staticData?.blogs?.map((b, i) => ({
     ...b,
     readTime: 5,
+    slug: undefined as string | undefined,
+    img: undefined as string | undefined,
     imgIndex: b.imgIndex || (i % 3) + 1,
   })) || defaultBlogs.map((b, i) => ({
     ...b,
     readTime: 5,
+    slug: undefined as string | undefined,
+    img: undefined as string | undefined,
     imgIndex: b.imgIndex || (i % 3) + 1,
   }));
 

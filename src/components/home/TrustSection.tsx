@@ -1,6 +1,7 @@
 'use client';
 
-import Image from 'next/image';
+// Image component will be used when real logos are added
+// import Image from 'next/image';
 
 const clients = [
     { name: 'Forbes', logo: '/images/logos/forbes.svg' },

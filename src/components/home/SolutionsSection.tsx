@@ -20,7 +20,7 @@ const solutions = [
             { name: 'Digital Evolution', href: '/solutions/digital-evolution', description: 'Transform your digital presence' },
             { name: 'Social Influence', href: '/solutions/social-influence', description: 'Build authentic community engagement' },
         ],
-        gradient: 'linear-gradient(135deg, #ff23c4 0%, #9333ea 100%)',
+        gradient: 'linear-gradient(135deg, #3d0da8 0%, #ffc700 100%)',
     },
     {
         category: 'Future-Ready',
@@ -45,7 +45,7 @@ export function SolutionsSection() {
                         <span className="title-accent">Every Challenge</span>
                     </h2>
                     <p className="section-subtitle">
-                        Whether you're looking to scale revenue, build brand authority, or
+                        Whether you&apos;re looking to scale revenue, build brand authority, or
                         future-proof your marketing, we have a tailored solution.
                     </p>
                 </div>

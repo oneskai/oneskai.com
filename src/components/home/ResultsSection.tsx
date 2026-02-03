@@ -83,7 +83,7 @@ export function ResultsSection() {
                             </div>
 
                             <blockquote className="result-quote">
-                                "{result.quote}"
+                                &ldquo;{result.quote}&rdquo;
                             </blockquote>
                         </div>
                     ))}

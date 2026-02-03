@@ -1,4 +1,5 @@
-import { revalidatePath, revalidateTag } from 'next/cache';
+import { revalidatePath } from 'next/cache';
+// revalidateTag available for future tag-based revalidation
 import { NextRequest, NextResponse } from 'next/server';
 
 export async function POST(request: NextRequest) {

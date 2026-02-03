@@ -1,0 +1,229 @@
+/* AFFILIATE, PR, CRO, LOCAL SEO, MARKETPLACE - Shared Styles */
+.specialized-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.specialized-page {
+    overflow-x: hidden;
+    background: #ffffff;
+}
+
+[data-theme="dark"] .specialized-page {
+    background: #0a0a0a;
+}
+
+[data-theme="dark"] .specialized-page .section-title,
+[data-theme="dark"] .specialized-page h2,
+[data-theme="dark"] .specialized-page h3 {
+    color: #ffffff;
+}
+
+[data-theme="dark"] .specialized-page p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.specialized-hero {
+    min-height: 95vh;
+    padding: 180px 0 100px;
+}
+
+.specialized-hero-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.specialized-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 32px;
+}
+
+.specialized-hero-title {
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -3px;
+    margin-bottom: 28px;
+}
+
+[data-theme="dark"] .specialized-hero-title {
+    color: #ffffff;
+}
+
+.specialized-hero-subtitle {
+    font-size: 22px;
+    line-height: 1.6;
+    color: var(--text-gray);
+    margin-bottom: 40px;
+    max-width: 600px;
+}
+
+.specialized-trust {
+    padding: 50px 0;
+    background: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+[data-theme="dark"] .specialized-trust {
+    background: #111;
+    border-color: #222;
+}
+
+.specialized-services {
+    padding: 120px 0;
+}
+
+.specialized-pricing {
+    padding: 120px 0;
+    background: #fafafa;
+}
+
+[data-theme="dark"] .specialized-pricing {
+    background: #0d0d0d;
+}
+
+.specialized-faq {
+    padding: 120px 0;
+    background: #f8fafc;
+}
+
+[data-theme="dark"] .specialized-faq {
+    background: #0d0d0d;
+}
+
+.specialized-cta {
+    background: #052e26;
+    padding: 120px 0;
+    color: white;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.service-card {
+    background: white;
+    padding: 50px 40px;
+    border-radius: 32px;
+    border: 1px solid #f1f5f9;
+    transition: all 0.4s ease;
+}
+
+[data-theme="dark"] .service-card {
+    background: #111;
+    border-color: #222;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.price-card {
+    background: white;
+    padding: 50px 40px;
+    border-radius: 32px;
+    border: 1px solid #eee;
+    text-align: center;
+    position: relative;
+}
+
+[data-theme="dark"] .price-card {
+    background: #1a1a1a;
+    border-color: #333;
+}
+
+.price-card.featured {
+    transform: scale(1.05);
+    z-index: 2;
+}
+
+.price-card .popular-tag {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    padding: 8px 24px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.cta-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 100px;
+    align-items: center;
+}
+
+.cta-form {
+    background: white;
+    padding: 50px;
+    border-radius: 40px;
+    color: black;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.3);
+}
+
+.cta-form input,
+.cta-form select,
+.cta-form textarea {
+    width: 100%;
+    padding: 18px;
+    border-radius: 12px;
+    border: 2px solid #f1f5f9;
+    background: #f8fafc;
+    font-size: 16px;
+}
+
+@media (max-width: 1024px) {
+
+    .specialized-hero-grid,
+    .services-grid,
+    .pricing-grid,
+    .cta-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .specialized-hero-title {
+        font-size: 48px;
+    }
+
+    .specialized-container {
+        padding: 0 20px;
+    }
+
+    .price-card.featured {
+        transform: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .specialized-hero {
+        padding: 140px 0 80px;
+        min-height: auto;
+    }
+
+    .specialized-hero-title {
+        font-size: 36px;
+    }
+}

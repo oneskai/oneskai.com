@@ -1,6 +1,9 @@
 import {
   HeroSection,
-  TrustSection,
+  LogoWall,
+  ReviewsSection,
+  ChallengesSection,
+  IndustryExpertise,
   ServicesSection,
   ResultsSection,
   WhyUsSection,
@@ -9,24 +12,22 @@ import {
   BlogSection,
   CTASection
 } from '@/components/home';
-import { Footer } from '@/components/layout/Footer';
 
 export default function HomePage() {
   return (
-    <>
-      <main className="home-page">
-        <HeroSection />
-        <TrustSection />
-        <ServicesSection />
-        <ResultsSection />
-        <WhyUsSection />
-        <SolutionsSection />
-        <TestimonialsSection />
-        <BlogSection />
-        <CTASection />
-      </main>
-      <Footer />
-    </>
+    <main className="home-page">
+      <HeroSection />
+      <LogoWall />
+      <ServicesSection />
+      <ReviewsSection />
+      <ChallengesSection />
+      <IndustryExpertise />
+      <ResultsSection />
+      <WhyUsSection />
+      <SolutionsSection />
+      <TestimonialsSection />
+      <BlogSection />
+      <CTASection />
+    </main>
   );
 }
-

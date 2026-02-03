@@ -1,12 +1,12 @@
-import { GenericPage } from '@/components/layout/GenericPage/GenericPage';
+import { Metadata } from 'next';
+import { CareersContent } from '@/components/careers/CareersContent';
+
+export const metadata: Metadata = {
+    title: 'Careers | Join Our Team - Oneskai',
+    description: 'Build your career with us. Explore exciting opportunities in digital marketing, analytics, design, and more. Remote-first culture with great benefits.',
+    keywords: 'careers, jobs, digital marketing jobs, remote jobs, marketing careers',
+};
 
 export default function CareersPage() {
-    return (
-        <GenericPage
-            category="JOIN US"
-            title="Careers at Oneskai"
-            subtitle="Help us build the future of digital excellence."
-            description="We're always looking for talented, passionate individuals to join our mission. Explore our open roles and discover how you can grow with us."
-        />
-    );
+    return <CareersContent />;
 }

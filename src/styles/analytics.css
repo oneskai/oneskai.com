@@ -1,0 +1,265 @@
+/* ================================================
+   ANALYTICS SERVICE PAGE STYLES - Oneskai Digital Agency
+   ================================================ */
+
+.analytics-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.analytics-page {
+    overflow-x: hidden;
+    background: #ffffff;
+}
+
+[data-theme="dark"] .analytics-page {
+    background: #0a0a0a;
+}
+
+[data-theme="dark"] .analytics-page .section-title,
+[data-theme="dark"] .analytics-page h2,
+[data-theme="dark"] .analytics-page h3,
+[data-theme="dark"] .analytics-page h4 {
+    color: #ffffff;
+}
+
+[data-theme="dark"] .analytics-page p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.analytics-hero {
+    min-height: 95vh;
+    padding: 180px 0 100px;
+    background: radial-gradient(circle at 20% 30%, rgba(249, 115, 22, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(234, 88, 12, 0.08) 0%, transparent 40%), var(--bg-white);
+}
+
+[data-theme="dark"] .analytics-hero {
+    background: radial-gradient(circle at 20% 30%, rgba(249, 115, 22, 0.15) 0%, transparent 40%), radial-gradient(circle at 80% 70%, rgba(234, 88, 12, 0.15) 0%, transparent 40%), #0a0a0a;
+}
+
+.analytics-hero-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.analytics-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(90deg, rgba(249, 115, 22, 0.1), rgba(234, 88, 12, 0.1));
+    padding: 12px 20px;
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #f97316;
+    margin-bottom: 32px;
+    border: 1px solid rgba(249, 115, 22, 0.2);
+}
+
+.analytics-hero-title {
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -3px;
+    margin-bottom: 28px;
+    color: var(--text-dark);
+}
+
+[data-theme="dark"] .analytics-hero-title {
+    color: #ffffff;
+}
+
+.analytics-hero-title .text-gradient {
+    background: linear-gradient(135deg, #f97316, #ea580c, #dc2626);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.analytics-hero-subtitle {
+    font-size: 22px;
+    line-height: 1.6;
+    color: var(--text-gray);
+    margin-bottom: 40px;
+    max-width: 600px;
+}
+
+.analytics-trust {
+    padding: 50px 0;
+    background: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+[data-theme="dark"] .analytics-trust {
+    background: #111;
+    border-color: #222;
+}
+
+.analytics-services {
+    padding: 120px 0;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.service-card {
+    background: white;
+    padding: 50px 40px;
+    border-radius: 32px;
+    border: 1px solid #f1f5f9;
+    transition: all 0.4s ease;
+}
+
+[data-theme="dark"] .service-card {
+    background: #111;
+    border-color: #222;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px rgba(249, 115, 22, 0.1);
+    border-color: #f97316;
+}
+
+.analytics-pricing {
+    padding: 120px 0;
+    background: #fafafa;
+}
+
+[data-theme="dark"] .analytics-pricing {
+    background: #0d0d0d;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.price-card {
+    background: white;
+    padding: 50px 40px;
+    border-radius: 32px;
+    border: 1px solid #eee;
+    text-align: center;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .price-card {
+    background: #1a1a1a;
+    border-color: #333;
+}
+
+.price-card.featured {
+    border: 2px solid #f97316;
+    transform: scale(1.05);
+    z-index: 2;
+    box-shadow: 0 30px 60px rgba(249, 115, 22, 0.15);
+}
+
+.price-card .popular-tag {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(90deg, #f97316, #ea580c);
+    color: white;
+    padding: 8px 24px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.analytics-faq {
+    padding: 120px 0;
+    background: #f8fafc;
+}
+
+[data-theme="dark"] .analytics-faq {
+    background: #0d0d0d;
+}
+
+.analytics-cta {
+    background: #052e26;
+    padding: 120px 0;
+    color: white;
+}
+
+.cta-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 100px;
+    align-items: center;
+}
+
+.cta-form {
+    background: white;
+    padding: 50px;
+    border-radius: 40px;
+    color: black;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.3);
+}
+
+.cta-form input,
+.cta-form select,
+.cta-form textarea {
+    width: 100%;
+    padding: 18px;
+    border-radius: 12px;
+    border: 2px solid #f1f5f9;
+    background: #f8fafc;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.cta-form input:focus,
+.cta-form select:focus,
+.cta-form textarea:focus {
+    outline: none;
+    border-color: #f97316;
+}
+
+@media (max-width: 1024px) {
+
+    .analytics-hero-grid,
+    .services-grid,
+    .pricing-grid,
+    .cta-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .analytics-hero-title {
+        font-size: 48px;
+    }
+
+    .analytics-container {
+        padding: 0 20px;
+    }
+
+    .price-card.featured {
+        transform: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .analytics-hero {
+        padding: 140px 0 80px;
+        min-height: auto;
+    }
+
+    .analytics-hero-title {
+        font-size: 36px;
+        letter-spacing: -1px;
+    }
+}

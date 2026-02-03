@@ -1,12 +1,12 @@
-import { GenericPage } from '@/components/layout/GenericPage/GenericPage';
+import { Metadata } from 'next';
+import { FAQContent } from '@/components/faq/FAQContent';
+
+export const metadata: Metadata = {
+    title: 'FAQ | Frequently Asked Questions - Oneskai',
+    description: 'Find answers to common questions about SEO, PPC, social media marketing, analytics, and our digital marketing services. Learn about AEO, GEO, and more.',
+    keywords: 'FAQ, digital marketing questions, SEO FAQ, PPC FAQ, marketing agency FAQ, AEO, GEO, answer engine optimization',
+};
 
 export default function FAQPage() {
-    return (
-        <GenericPage
-            category="SUPPORT"
-            title="Frequently Asked Questions"
-            subtitle="Find answers to common questions about our services and process."
-            description="Got questions? We've got answers. Explore our FAQ to learn more about how we work, what to expect, and how we deliver results."
-        />
-    );
+    return <FAQContent />;
 }

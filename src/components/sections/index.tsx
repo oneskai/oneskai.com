@@ -1,7 +1,10 @@
 import dynamic from 'next/dynamic';
 import type { Section, SectionType } from '@/types/sections';
+import type { TeamMember, BlogPost } from '@/types/sanity';
 
 // Dynamically import section components for code splitting
+// Using explicit type assertion for dynamic component mapping pattern
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const sectionComponents: Record<SectionType, React.ComponentType<any>> = {
   hero: dynamic(() => import('./HeroSection')),
   servicesGrid: dynamic(() => import('./ServicesGrid')),
@@ -16,8 +19,8 @@ const sectionComponents: Record<SectionType, React.ComponentType<any>> = {
 interface SectionRendererProps {
   sections: Section[];
   // Additional data that might be needed by sections
-  teamMembers?: any[];
-  blogPosts?: any[];
+  teamMembers?: TeamMember[];
+  blogPosts?: BlogPost[];
 }
 
 export function SectionRenderer({ sections, teamMembers, blogPosts }: SectionRendererProps) {
@@ -36,6 +39,7 @@ export function SectionRenderer({ sections, teamMembers, blogPosts }: SectionRen
         }
 
         // Pass additional data based on section type
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const additionalProps: Record<string, any> = {};
         if (section._type === 'teamSection' && teamMembers) {
           additionalProps.teamMembers = teamMembers;

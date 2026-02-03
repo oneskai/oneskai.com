@@ -212,7 +212,7 @@ export function Header({ navigation }: HeaderProps) {
                   </div>
                   <h3 className="feature-card-title">Success Stories</h3>
                   <p className="feature-card-desc">
-                    See how we've helped businesses achieve 10x growth through our tailored solutions.
+                    See how we&apos;ve helped businesses achieve 10x growth through our tailored solutions.
                   </p>
                   <Link href="/work" className="feature-card-btn">
                     View Case Studies <Icon type="arrowRight" />
@@ -265,7 +265,7 @@ export function Header({ navigation }: HeaderProps) {
                   </div>
                   <h3 className="feature-card-title">Join the Evolution</h3>
                   <p className="feature-card-desc">
-                    We're always looking for talented individuals to join our mission of enabling digital evolution.
+                    We&apos;re always looking for talented individuals to join our mission of enabling digital evolution.
                   </p>
                   <Link href="/careers" className="feature-card-btn">
                     View Openings <Icon type="arrowRight" />
@@ -281,9 +281,10 @@ export function Header({ navigation }: HeaderProps) {
                 </div>
                 <div className="mega-menu-column">
                   <h4 className="mega-menu-heading">Our Story</h4>
-                  <MegaMenuItem key="4" icon="activity" title="Our Process" description="How we deliver results" href="/about/process" />
-                  <MegaMenuItem key="5" icon="award" title="Awards" description="Recognition and achievements" href="/about/awards" />
-                  <MegaMenuItem key="6" icon="handshake" title="Partners" description="Strategic partnerships" href="/about/partners" />
+                  <MegaMenuItem key="4" icon="cpu" title="Our Methodology" description="The proven growth framework" href="/about/methodology" />
+                  <MegaMenuItem key="5" icon="settings" title="Technology & Partners" description="Our marketing tech stack" href="/about/technology" />
+                  <MegaMenuItem key="6" icon="activity" title="Our Process" description="How we deliver results" href="/about/process" />
+                  <MegaMenuItem key="7" icon="award" title="Awards" description="Recognition and achievements" href="/about/awards" />
                 </div>
               </div>
             </div>
@@ -325,12 +326,13 @@ export function Header({ navigation }: HeaderProps) {
                   <MegaMenuItem key="1" icon="fileText" title="Blog" description="Latest insights" href="/blog" />
                   <MegaMenuItem key="2" icon="book" title="Guides & Ebooks" description="In-depth resources" href="/resources/guides" />
                   <MegaMenuItem key="3" icon="video" title="Webinars" description="Live and recorded sessions" href="/resources/webinars" />
+                  <MegaMenuItem key="4" icon="calendar" title="Events" description="Upcoming meetups & conferences" href="/events" />
                 </div>
                 <div className="mega-menu-column">
                   <h4 className="mega-menu-heading">Support</h4>
-                  <MegaMenuItem key="4" icon="book" title="Documentation" description="Technical docs" href="/docs" />
-                  <MegaMenuItem key="5" icon="help" title="FAQ" description="Common questions" href="/faq" />
-                  <MegaMenuItem key="6" icon="message" title="Community" description="Join our forum" href="/community" />
+                  <MegaMenuItem key="5" icon="book" title="Documentation" description="Technical docs" href="/docs" />
+                  <MegaMenuItem key="6" icon="help" title="FAQ" description="Common questions" href="/faq" />
+                  <MegaMenuItem key="7" icon="message" title="Community" description="Join our forum" href="/community" />
                 </div>
               </div>
             </div>
@@ -353,24 +355,24 @@ export function Header({ navigation }: HeaderProps) {
     <header className={`header ${scrolled ? 'scrolled' : ''}`}>
       <div className="container header-inner">
         <Link href="/" className="logo">
-          <span style={{ color: 'var(--accent-pink)' }}>O</span>NESKAI
+          <span style={{ color: 'var(--accent-yellow)' }}>O</span>NESKAI
         </Link>
 
         {/* Desktop Navigation */}
         <nav className="nav desktop-only">
-          {navData.mainNav?.map((item: any) => (
+          {navData.mainNav?.map((item) => (
             <MegaMenuLink
               key={item._key}
               href={item.href}
-              variant={item.variant}
+              variant={'variant' in item ? (item as { variant?: 'narrow' }).variant : undefined}
               megaMenu={
                 item.hasMegaMenu && item.megaMenu ? (
                   Array.isArray(item.megaMenu) ? (
                     <div className={`mega-menu-grid ${item.megaMenu.length === 2 ? 'mega-menu-compact' : ''}`}>
-                      {item.megaMenu.map((column: any) => (
+                      {item.megaMenu.map((column) => (
                         <div key={column._key} className="mega-menu-column">
                           <h4 className="mega-menu-heading">{column.heading}</h4>
-                          {column.items?.map((menuItem: any) => (
+                          {column.items?.map((menuItem) => (
                             <MegaMenuItem
                               key={menuItem._key}
                               icon={menuItem.icon || 'target'}

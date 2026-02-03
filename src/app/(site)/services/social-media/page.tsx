@@ -1,26 +1,17 @@
 import { Metadata } from 'next';
-import { GenericPage } from '@/components/layout/GenericPage/GenericPage';
-
-const pageConfig = {
-    slug: 'social-media',
-    category: 'OWNED MEDIA',
-    title: 'Social Media Marketing',
-    subtitle: 'Connect authentically and build community.',
-    description: 'We help brands build genuine connections on social platforms through strategic content planning, community management, and data-driven engagement tactics.',
-};
+import { SocialMediaMarketingContent } from '@/components/services/SocialMediaMarketingContent';
 
 export const metadata: Metadata = {
-    title: `${pageConfig.title} | Oneskai`,
-    description: pageConfig.subtitle,
+    title: 'Social Media Marketing Services | Build Community & Engagement | Oneskai',
+    description: 'Grow your brand influence with strategic social media marketing. Specialized in organic growth, TikTok, Reels, and community management.',
+    keywords: 'social media marketing, TikTok marketing, Instagram growth, Reels strategy, community management, B2B social media, social media agency',
+    openGraph: {
+        title: 'Social Media Marketing Services | Build Community & Engagement | Oneskai',
+        description: 'Grow your brand influence with strategic social media marketing.',
+        type: 'website',
+    },
 };
 
-export default async function SocialMediaPage() {
-    return (
-        <GenericPage
-            category={pageConfig.category}
-            title={pageConfig.title}
-            subtitle={pageConfig.subtitle}
-            description={pageConfig.description}
-        />
-    );
+export default function SocialMediaPage() {
+    return <SocialMediaMarketingContent />;
 }

@@ -1,26 +1,10 @@
 import { Metadata } from 'next';
-import { GenericPage } from '@/components/layout/GenericPage/GenericPage';
-
-const pageConfig = {
-    slug: 'market-research',
-    category: 'MARKETING CONSULTING',
-    title: 'Market Research',
-    subtitle: 'Deep dives into your target audience.',
-    description: 'We conduct comprehensive market research to uncover customer insights, competitive dynamics, and market opportunities that inform your strategic decisions.',
-};
+import { MarketResearchContent } from '@/components/services/MarketResearchContent';
 
 export const metadata: Metadata = {
-    title: `${pageConfig.title} | Oneskai`,
-    description: pageConfig.subtitle,
+    title: 'Market Research Services | Competitive Analysis | Oneskai',
+    description: 'Strategic market research and competitive intelligence. Understand your market, customers, and competitors to make data-driven decisions.',
+    keywords: 'market research, competitive analysis, market sizing, customer research, market intelligence, TAM SAM SOM',
 };
 
-export default async function MarketResearchPage() {
-    return (
-        <GenericPage
-            category={pageConfig.category}
-            title={pageConfig.title}
-            subtitle={pageConfig.subtitle}
-            description={pageConfig.description}
-        />
-    );
-}
+export default function MarketResearchPage() { return <MarketResearchContent />; }

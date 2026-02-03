@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, useContext, useEffect, useState } from 'react';
+import { createContext, useContext, useEffect, useState, useCallback } from 'react';
 
 type Theme = 'light' | 'dark' | 'system';
 
@@ -26,44 +26,58 @@ interface ThemeProviderProps {
   storageKey?: string;
 }
 
+// Helper to get stored theme
+function getStoredTheme(storageKey: string, defaultTheme: Theme): Theme {
+  if (typeof window === 'undefined') return defaultTheme;
+  const stored = localStorage.getItem(storageKey) as Theme | null;
+  return stored || defaultTheme;
+}
+
+// Helper to get system theme
+function getSystemTheme(): 'light' | 'dark' {
+  if (typeof window === 'undefined') return 'light';
+  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+}
+
+// Helper to resolve theme
+function resolveTheme(t: Theme): 'light' | 'dark' {
+  if (t === 'system') {
+    return getSystemTheme();
+  }
+  return t;
+}
+
 export function ThemeProvider({
   children,
   defaultTheme = 'system',
   storageKey = 'theme',
 }: ThemeProviderProps) {
-  const [theme, setThemeState] = useState<Theme>(defaultTheme);
-  const [resolvedTheme, setResolvedTheme] = useState<'light' | 'dark'>('light');
+  // Initialize state with a function to avoid calling localStorage during SSR
+  const [theme, setThemeState] = useState<Theme>(() => getStoredTheme(storageKey, defaultTheme));
   const [mounted, setMounted] = useState(false);
 
-  // Get system preference
-  const getSystemTheme = (): 'light' | 'dark' => {
-    if (typeof window === 'undefined') return 'light';
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-  };
-
-  // Resolve theme based on current setting
-  const resolveTheme = (t: Theme): 'light' | 'dark' => {
-    if (t === 'system') {
-      return getSystemTheme();
-    }
-    return t;
-  };
+  // Calculate resolved theme
+  const resolvedTheme = mounted ? resolveTheme(theme) : 'light';
 
   // Apply theme to document
-  const applyTheme = (resolved: 'light' | 'dark') => {
+  const applyTheme = useCallback((resolved: 'light' | 'dark') => {
     const root = document.documentElement;
     root.setAttribute('data-theme', resolved);
-    setResolvedTheme(resolved);
-  };
+  }, []);
 
-  // Initialize theme from localStorage
+  // Mount effect - only runs once to detect client hydration
+  // This is a standard pattern for SSR hydration detection in Next.js
   useEffect(() => {
-    const stored = localStorage.getItem(storageKey) as Theme | null;
-    const initialTheme = stored || defaultTheme;
-    setThemeState(initialTheme);
-    applyTheme(resolveTheme(initialTheme));
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMounted(true);
-  }, [defaultTheme, storageKey]);
+  }, []);
+
+  // Apply theme when it changes or on mount
+  useEffect(() => {
+    if (mounted) {
+      applyTheme(resolveTheme(theme));
+    }
+  }, [theme, mounted, applyTheme]);
 
   // Listen for system theme changes
   useEffect(() => {
@@ -78,14 +92,13 @@ export function ThemeProvider({
 
     mediaQuery.addEventListener('change', handleChange);
     return () => mediaQuery.removeEventListener('change', handleChange);
-  }, [theme, mounted]);
+  }, [theme, mounted, applyTheme]);
 
-  // Set theme
-  const setTheme = (newTheme: Theme) => {
+  // Set theme function
+  const setTheme = useCallback((newTheme: Theme) => {
     localStorage.setItem(storageKey, newTheme);
     setThemeState(newTheme);
-    applyTheme(resolveTheme(newTheme));
-  };
+  }, [storageKey]);
 
   // Prevent hydration mismatch
   if (!mounted) {

@@ -1,26 +1,10 @@
 import { Metadata } from 'next';
-import { GenericPage } from '@/components/layout/GenericPage/GenericPage';
-
-const pageConfig = {
-    slug: 'ads-creative',
-    category: 'CREATIVES',
-    title: 'Ad Creatives',
-    subtitle: 'Performance-driven design for ads.',
-    description: 'We design scroll-stopping ad creatives optimized for click-through and conversion across all major advertising platforms.',
-};
+import { AdsCreativeContent } from '@/components/services/AdsCreativeContent';
 
 export const metadata: Metadata = {
-    title: `${pageConfig.title} | Oneskai`,
-    description: pageConfig.subtitle,
+    title: 'Ads Creative Services | High-Performance Ad Design | Oneskai',
+    description: 'Scroll-stopping ad creative for Facebook, Instagram, Google, TikTok, and more. Static, video, and UGC ads that drive conversions.',
+    keywords: 'ad creative, Facebook ads, video ads, UGC ads, display ads, ad design, creative production',
 };
 
-export default async function AdsCreativePage() {
-    return (
-        <GenericPage
-            category={pageConfig.category}
-            title={pageConfig.title}
-            subtitle={pageConfig.subtitle}
-            description={pageConfig.description}
-        />
-    );
-}
+export default function AdsCreativePage() { return <AdsCreativeContent />; }

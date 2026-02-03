@@ -27,7 +27,7 @@ const serviceCategories = [
             { name: 'BI Dashboards', href: '/services/bi', description: 'Real-time intelligence at your fingertips', icon: 'monitor' },
         ],
         stat: { value: '10x', label: 'Faster Insights' },
-        color: '#ff23c4',
+        color: '#3d0da8',
     },
     {
         id: 'consulting',
@@ -93,7 +93,7 @@ export function ServicesSection() {
                         {currentCategory?.services.map((service, index) => (
                             <Link href={service.href} key={index} className="service-card">
                                 <div className="service-icon" style={{ '--icon-color': currentCategory.color } as React.CSSProperties}>
-                                    <Icon type={service.icon as any} />
+                                    <Icon type={service.icon} />
                                 </div>
                                 <h3 className="service-name">{service.name}</h3>
                                 <p className="service-description">{service.description}</p>

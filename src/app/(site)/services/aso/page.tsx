@@ -1,26 +1,17 @@
 import { Metadata } from 'next';
-import { GenericPage } from '@/components/layout/GenericPage/GenericPage';
-
-const pageConfig = {
-    slug: 'aso',
-    category: 'OWNED MEDIA',
-    title: 'App Store Optimization',
-    subtitle: 'Maximize your app visibility and downloads.',
-    description: 'We optimize your app store presence across iOS and Android to drive organic downloads, improve rankings, and increase conversion rates in competitive app marketplaces.',
-};
+import { ASOContent } from '@/components/services/ASOContent';
 
 export const metadata: Metadata = {
-    title: `${pageConfig.title} | Oneskai`,
-    description: pageConfig.subtitle,
+    title: 'App Store Optimization (ASO) Services | iOS & Android | Oneskai',
+    description: 'Maximize your app visibility and organic downloads with expert ASO services. Keyword optimization, screenshot design, and rating management for iOS and Android.',
+    keywords: 'app store optimization, ASO, iOS app optimization, Android app optimization, app marketing, mobile app growth, app downloads',
+    openGraph: {
+        title: 'App Store Optimization (ASO) Services | Oneskai',
+        description: 'Maximize your app visibility and organic downloads with expert ASO services.',
+        type: 'website',
+    },
 };
 
-export default async function ASOPage() {
-    return (
-        <GenericPage
-            category={pageConfig.category}
-            title={pageConfig.title}
-            subtitle={pageConfig.subtitle}
-            description={pageConfig.description}
-        />
-    );
+export default function ASOPage() {
+    return <ASOContent />;
 }

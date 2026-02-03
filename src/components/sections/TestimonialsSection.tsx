@@ -11,6 +11,7 @@ interface TestimonialsSectionProps extends Partial<TestimonialsSectionType> {
       text: string;
       name: string;
       role: string;
+      img?: string;
       imgIndex?: number;
     }>;
   };
@@ -25,7 +26,7 @@ export function TestimonialsSection({
   const displayLabel = label || staticData?.label || 'TESTIMONIALS';
   const displayTitle = title || staticData?.title || 'What our clients say';
 
-  const defaultTestimonials = [
+  const defaultTestimonials: Array<{ text: string; name: string; role: string; img?: string; imgIndex: number }> = [
     {
       text: 'The team at Oneskai helped us automate our entire workflow, saving us hundreds of hours and improving accuracy significantly.',
       name: 'M. Rodriguez',
@@ -61,7 +62,7 @@ export function TestimonialsSection({
         <div className="testi-grid">
           {displayTestimonials.map((testi, i) => (
             <div key={i} className="testi-card">
-              <p className="testi-text">"{testi.text}"</p>
+              <p className="testi-text">&ldquo;{testi.text}&rdquo;</p>
               <div className="testi-author">
                 <div className="testi-avatar">
                   <Image

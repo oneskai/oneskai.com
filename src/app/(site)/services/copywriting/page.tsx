@@ -1,26 +1,12 @@
 import { Metadata } from 'next';
-import { GenericPage } from '@/components/layout/GenericPage/GenericPage';
-
-const pageConfig = {
-    slug: 'copywriting',
-    category: 'CREATIVES',
-    title: 'Copywriting',
-    subtitle: 'Persuasive words that drive action.',
-    description: 'Our copywriters craft compelling messaging that captures attention, builds trust, and motivates your audience to take action.',
-};
+import { CopywritingContent } from '@/components/services/CopywritingContent';
 
 export const metadata: Metadata = {
-    title: `${pageConfig.title} | Oneskai`,
-    description: pageConfig.subtitle,
+    title: 'Copywriting Services | Conversion Copy Agency | Oneskai',
+    description: 'Conversion-focused copywriting for websites, sales pages, and emails. Words that sell and engage your audience.',
+    keywords: 'copywriting, conversion copywriting, sales copy, website copy, email copywriting, landing page copy',
 };
 
-export default async function CopywritingPage() {
-    return (
-        <GenericPage
-            category={pageConfig.category}
-            title={pageConfig.title}
-            subtitle={pageConfig.subtitle}
-            description={pageConfig.description}
-        />
-    );
+export default function CopywritingPage() {
+    return <CopywritingContent />;
 }

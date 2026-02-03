@@ -1,26 +1,10 @@
 import { Metadata } from 'next';
-import { GenericPage } from '@/components/layout/GenericPage/GenericPage';
-
-const pageConfig = {
-    slug: 'programmatic',
-    category: 'PAID MEDIA',
-    title: 'Display & Programmatic Advertising',
-    subtitle: 'Data-driven media buying at scale.',
-    description: 'Leverage advanced programmatic platforms and real-time bidding to reach your ideal audience across the web with precision targeting and automated optimization.',
-};
+import { ProgrammaticContent } from '@/components/services/ProgrammaticContent';
 
 export const metadata: Metadata = {
-    title: `${pageConfig.title} | Oneskai`,
-    description: pageConfig.subtitle,
+    title: 'Programmatic Advertising Services | Display & CTV Ads | Oneskai',
+    description: 'Data-driven programmatic advertising across display, CTV, audio, and native channels. Precision targeting at massive scale.',
+    keywords: 'programmatic advertising, display ads, CTV advertising, DSP, DV360, The Trade Desk, native ads',
 };
 
-export default async function ProgrammaticPage() {
-    return (
-        <GenericPage
-            category={pageConfig.category}
-            title={pageConfig.title}
-            subtitle={pageConfig.subtitle}
-            description={pageConfig.description}
-        />
-    );
-}
+export default function ProgrammaticPage() { return <ProgrammaticContent />; }

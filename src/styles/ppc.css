@@ -1,0 +1,566 @@
+/* ================================================
+   PPC / GOOGLE ADS SERVICE PAGE STYLES - Oneskai Digital Agency
+   ================================================ */
+
+.ppc-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.ppc-page {
+    overflow-x: hidden;
+    background: #ffffff;
+}
+
+[data-theme="dark"] .ppc-page {
+    background: #0a0a0a;
+}
+
+[data-theme="dark"] .ppc-page .section-title,
+[data-theme="dark"] .ppc-page h2,
+[data-theme="dark"] .ppc-page h3,
+[data-theme="dark"] .ppc-page h4 {
+    color: #ffffff;
+}
+
+[data-theme="dark"] .ppc-page p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* ===== HERO SECTION ===== */
+.ppc-hero {
+    min-height: 95vh;
+    padding: 180px 0 100px;
+    background: radial-gradient(circle at 20% 20%, rgba(234, 67, 53, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 80% 80%, rgba(66, 133, 244, 0.08) 0%, transparent 40%),
+        var(--bg-white);
+    position: relative;
+    overflow: hidden;
+}
+
+[data-theme="dark"] .ppc-hero {
+    background: radial-gradient(circle at 20% 20%, rgba(234, 67, 53, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 80% 80%, rgba(66, 133, 244, 0.15) 0%, transparent 40%),
+        #0a0a0a;
+}
+
+.ppc-hero-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.ppc-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(90deg, rgba(234, 67, 53, 0.1), rgba(66, 133, 244, 0.1));
+    padding: 12px 20px;
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #ea4335;
+    margin-bottom: 32px;
+    border: 1px solid rgba(234, 67, 53, 0.2);
+}
+
+.ppc-hero-title {
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -3px;
+    margin-bottom: 28px;
+    color: var(--text-dark);
+}
+
+[data-theme="dark"] .ppc-hero-title {
+    color: #ffffff;
+}
+
+.ppc-hero-title .text-gradient {
+    background: linear-gradient(135deg, #ea4335, #4285f4, #34a853);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-size: 200% auto;
+    animation: googleGradient 4s ease infinite;
+}
+
+@keyframes googleGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.ppc-hero-subtitle {
+    font-size: 22px;
+    line-height: 1.6;
+    color: var(--text-gray);
+    margin-bottom: 40px;
+    max-width: 600px;
+}
+
+/* ROAS Display */
+.roas-display {
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+
+.roas-circle {
+    width: 100%;
+    height: 100%;
+    background: conic-gradient(#ea4335 0deg 120deg, #fbbc04 120deg 200deg, #34a853 200deg 280deg, #4285f4 280deg 360deg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 40px 80px rgba(66, 133, 244, 0.2);
+}
+
+.roas-inner {
+    width: 75%;
+    height: 75%;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+[data-theme="dark"] .roas-inner {
+    background: #1a1a1a;
+}
+
+/* ===== TRUST BAR ===== */
+.ppc-trust-bar {
+    padding: 50px 0;
+    background: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+[data-theme="dark"] .ppc-trust-bar {
+    background: #111;
+    border-color: #222;
+}
+
+.partner-badges {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.partner-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    opacity: 0.7;
+}
+
+/* ===== PLATFORMS SECTION ===== */
+.ppc-platforms {
+    padding: 120px 0;
+}
+
+.platforms-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.platform-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 24px;
+    text-align: center;
+    border: 1px solid #f1f5f9;
+    transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .platform-card {
+    background: #111;
+    border-color: #222;
+}
+
+.platform-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+}
+
+.platform-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+}
+
+.platform-icon.google {
+    background: linear-gradient(135deg, #ea4335, #fbbc04);
+    color: white;
+}
+
+.platform-icon.meta {
+    background: linear-gradient(135deg, #0668E1, #1877F2);
+    color: white;
+}
+
+.platform-icon.youtube {
+    background: #FF0000;
+    color: white;
+}
+
+.platform-icon.bing {
+    background: #00897B;
+    color: white;
+}
+
+/* ===== CAMPAIGN TYPES ===== */
+.ppc-campaigns {
+    padding: 120px 0;
+    background: #f8fafc;
+}
+
+[data-theme="dark"] .ppc-campaigns {
+    background: #0d0d0d;
+}
+
+.campaigns-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.campaign-card {
+    background: white;
+    padding: 50px 40px;
+    border-radius: 32px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+[data-theme="dark"] .campaign-card {
+    background: #1a1a1a;
+}
+
+.campaign-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #ea4335, #4285f4);
+}
+
+.campaign-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== BIDDING STRATEGIES ===== */
+.ppc-bidding {
+    padding: 120px 0;
+}
+
+.bidding-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.strategy-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.strategy-item {
+    display: flex;
+    gap: 20px;
+    padding: 25px;
+    background: #f8fafc;
+    border-radius: 16px;
+    align-items: flex-start;
+    transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .strategy-item {
+    background: #111;
+}
+
+.strategy-item:hover {
+    background: #f0f9ff;
+    transform: translateX(10px);
+}
+
+[data-theme="dark"] .strategy-item:hover {
+    background: #1a1a1a;
+}
+
+.bidding-visual {
+    background: linear-gradient(135deg, #ea4335, #4285f4);
+    border-radius: 32px;
+    padding: 60px;
+    color: white;
+    text-align: center;
+}
+
+/* ===== PRICING ===== */
+.ppc-pricing {
+    padding: 120px 0;
+    background: #fafafa;
+}
+
+[data-theme="dark"] .ppc-pricing {
+    background: #0d0d0d;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.price-card {
+    background: white;
+    padding: 50px 40px;
+    border-radius: 32px;
+    border: 1px solid #eee;
+    text-align: center;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .price-card {
+    background: #1a1a1a;
+    border-color: #333;
+}
+
+.price-card.featured {
+    border: 2px solid #4285f4;
+    transform: scale(1.05);
+    z-index: 2;
+    box-shadow: 0 30px 60px rgba(66, 133, 244, 0.15);
+}
+
+.price-card .popular-tag {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(90deg, #ea4335, #4285f4);
+    color: white;
+    padding: 8px 24px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+/* ===== RESULTS DASHBOARD ===== */
+.ppc-results {
+    padding: 120px 0;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: white;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.result-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    padding: 40px 30px;
+    border-radius: 24px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.result-value {
+    font-size: 48px;
+    font-weight: 900;
+    background: linear-gradient(135deg, #ea4335, #fbbc04);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ===== FAQ ===== */
+.ppc-faq {
+    padding: 120px 0;
+}
+
+.faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
+.faq-item {
+    background: #f8fafc;
+    padding: 30px;
+    border-radius: 24px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .faq-item {
+    background: #111;
+    border-color: #222;
+}
+
+.faq-item:hover {
+    border-color: #4285f4;
+}
+
+.faq-item summary {
+    font-weight: 800;
+    font-size: 20px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-item p {
+    margin-top: 20px;
+    color: #64748b;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+/* ===== CTA ===== */
+.ppc-cta {
+    background: #052e26;
+    padding: 120px 0;
+    color: white;
+}
+
+.cta-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 100px;
+    align-items: center;
+}
+
+.cta-form {
+    background: white;
+    padding: 50px;
+    border-radius: 40px;
+    color: black;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.3);
+}
+
+.cta-form input,
+.cta-form select,
+.cta-form textarea {
+    width: 100%;
+    padding: 18px;
+    border-radius: 12px;
+    border: 2px solid #f1f5f9;
+    background: #f8fafc;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.cta-form input:focus,
+.cta-form select:focus,
+.cta-form textarea:focus {
+    outline: none;
+    border-color: #4285f4;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1200px) {
+    .platforms-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .results-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .ppc-hero-grid,
+    .campaigns-grid,
+    .pricing-grid,
+    .bidding-grid,
+    .cta-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ppc-hero-title {
+        font-size: 48px;
+    }
+
+    .ppc-container {
+        padding: 0 20px;
+    }
+
+    .roas-display {
+        width: 300px;
+        height: 300px;
+        margin: 0 auto;
+    }
+
+    .price-card.featured {
+        transform: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .platforms-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .results-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ppc-hero {
+        padding: 140px 0 80px;
+        min-height: auto;
+    }
+
+    .ppc-hero-title {
+        font-size: 36px;
+        letter-spacing: -1px;
+    }
+
+    .ppc-hero-subtitle {
+        font-size: 18px;
+    }
+}

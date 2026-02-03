@@ -4,6 +4,8 @@ import type { HeroSection as HeroSectionType } from '@/types/sections';
 import { urlForImage } from '@/sanity/image';
 
 interface HeroSectionProps extends Partial<HeroSectionType> {
+  // UI control to show/hide trust card
+  showTrustCard?: boolean;
   // Allow static data fallback
   staticData?: {
     title: string;

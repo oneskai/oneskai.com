@@ -1,5 +1,5 @@
 import type { PortableTextBlock } from '@portabletext/types';
-import type { SanityImageSource } from '@sanity/image-url/lib/types/types';
+import type { SanityImageSource } from '@sanity/image-url';
 import type { Section } from './sections';
 
 // SEO Object

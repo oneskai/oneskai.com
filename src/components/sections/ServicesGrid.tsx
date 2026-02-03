@@ -27,7 +27,7 @@ export function ServicesGrid({
   const displayTitle = title || staticData?.title || 'Our services';
   const displaySubtitle = subtitle || staticData?.subtitle || 'Tailored solutions designed to meet your business needs and drive measurable results.';
 
-  const defaultServices = [
+  const defaultServices: Array<{ no: string; title: string; desc: string; link?: string }> = [
     { no: '01', title: 'Digital Analytics', desc: 'Unlock insights from your data to drive better business decisions and growth.' },
     { no: '02', title: 'Ecommerce strategy', desc: 'Build a powerful online store that converts visitors into loyal customers.' },
     { no: '03', title: 'Digital Performance', desc: 'Optimize your digital presence for maximum speed, efficiency, and ROI.' },

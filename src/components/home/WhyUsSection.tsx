@@ -24,7 +24,7 @@ const differentiators = [
     {
         icon: 'shield',
         title: 'Performance Guarantee',
-        description: 'We put our fees on the line. If we dont hit targets, you dont pay. Simple.',
+        description: 'We put our fees on the line. If we don\'t hit targets, you don\'t pay. Simple.',
         stat: 'Results or refund',
     },
 ];
@@ -49,7 +49,7 @@ export function WhyUsSection() {
                         {differentiators.map((item, index) => (
                             <div key={index} className="whyus-card">
                                 <div className="whyus-icon">
-                                    <Icon type={item.icon as any} />
+                                    <Icon type={item.icon} />
                                 </div>
                                 <h3 className="whyus-title">{item.title}</h3>
                                 <p className="whyus-description">{item.description}</p>

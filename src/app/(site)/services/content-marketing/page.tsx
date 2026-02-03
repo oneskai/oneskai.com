@@ -1,26 +1,17 @@
 import { Metadata } from 'next';
-import { GenericPage } from '@/components/layout/GenericPage/GenericPage';
-
-const pageConfig = {
-    slug: 'content-marketing',
-    category: 'OWNED MEDIA',
-    title: 'Content Marketing',
-    subtitle: 'Engage customers at every stage of their journey.',
-    description: 'From thought leadership articles to conversion-focused landing pages, we create content strategies that build trust, establish authority, and drive measurable business results.',
-};
+import { ContentMarketingContent } from '@/components/services/ContentMarketingContent';
 
 export const metadata: Metadata = {
-    title: `${pageConfig.title} | Oneskai`,
-    description: pageConfig.subtitle,
+    title: 'Content Marketing Services | ROI-Focused Content Agency | Oneskai',
+    description: 'Grow your brand awareness and bottom-line with our premium content marketing services. Strategic storytelling, SEO writing, and conversion-engineered content assets.',
+    keywords: 'content marketing services, content strategy, SEO writing, thought leadership, video marketing, brand storytelling, social media content',
+    openGraph: {
+        title: 'Content Marketing Services | ROI-Focused Content Agency | Oneskai',
+        description: 'Grow your brand awareness and bottom-line with premium content marketing assets and strategies.',
+        type: 'website',
+    },
 };
 
-export default async function ContentMarketingPage() {
-    return (
-        <GenericPage
-            category={pageConfig.category}
-            title={pageConfig.title}
-            subtitle={pageConfig.subtitle}
-            description={pageConfig.description}
-        />
-    );
+export default function ContentMarketingPage() {
+    return <ContentMarketingContent />;
 }

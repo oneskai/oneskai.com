@@ -1,12 +1,12 @@
-import { GenericPage } from '@/components/layout/GenericPage/GenericPage';
+import { Metadata } from 'next';
+import { ContactContent } from '@/components/contact/ContactContent';
+
+export const metadata: Metadata = {
+    title: 'Contact Us | Let\'s Scale Your Business - Oneskai',
+    description: 'Ready to start your digital evolution? Contact our expert team for SEO, PPC, and digital strategy. Get a custom growth proposal today.',
+    keywords: 'contact oneskai, marketing agency contact, get a quote, digital marketing proposal, hire seo agency',
+};
 
 export default function ContactPage() {
-    return (
-        <GenericPage
-            category="GET IN TOUCH"
-            title="Work With Us"
-            subtitle="Ready to start your digital evolution? Let's talk about your goals."
-            description="Whether you have a specific project in mind or just want to explore how we can help your business grow, our team is ready to connect and provide expert guidance."
-        />
-    );
+    return <ContactContent />;
 }

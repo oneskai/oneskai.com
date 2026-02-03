@@ -1,0 +1,76 @@
+/* 
+ * Oneskai Design System
+ * Unified color palette and design tokens
+ * Brand Colors: Green, Yellow, Purple
+ */
+
+:root {
+    /* Primary Brand Colors */
+    --brand-primary: #052e26;
+    /* Deep green - main brand color */
+    --brand-primary-dark: #01090e;
+    /* Near black - deep sections */
+    --brand-primary-light: #0a4a3e;
+    /* Lighter green variant */
+    --brand-navy: #152039;
+    /* Dark navy - alternative dark */
+
+    /* Accent Colors */
+    --brand-accent-yellow: #ffc700;
+    /* Gold yellow - CTAs, highlights */
+    --brand-accent-purple: #3d0da8;
+    /* Deep purple - gradients, secondary */
+
+    /* Text Colors */
+    --text-primary: #1A1A1A;
+    --text-secondary: #555555;
+    --text-muted: #6b7280;
+    --text-light: rgba(255, 255, 255, 0.8);
+    --text-white: #ffffff;
+
+    /* Background Colors */
+    --bg-white: #ffffff;
+    --bg-cream: #F9F9F7;
+    --bg-light: #f8fafc;
+    --bg-dark: var(--brand-primary);
+    --bg-darker: var(--brand-primary-dark);
+
+    /* Border Colors */
+    --border-light: #EAEAEA;
+    --border-default: #e2e8f0;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-primary-light) 100%);
+    --gradient-accent: linear-gradient(135deg, var(--brand-accent-yellow), var(--brand-accent-purple));
+    --gradient-hero: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-primary-dark) 100%);
+    --gradient-dark: linear-gradient(135deg, var(--brand-primary-dark) 0%, var(--brand-navy) 100%);
+    --gradient-purple: linear-gradient(135deg, var(--brand-accent-purple), #6b21a8);
+
+    /* Shadows */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.1);
+    --shadow-accent: 0 10px 30px rgba(255, 199, 0, 0.25);
+    --shadow-purple: 0 10px 30px rgba(61, 13, 168, 0.25);
+
+    /* Border Radius */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    --radius-pill: 50px;
+
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-default: 0.3s ease;
+    --transition-smooth: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Page-level overrides using design system */
+.page-wrapper {
+    --page-primary: var(--brand-primary);
+    --page-accent: var(--brand-accent-yellow);
+    --page-secondary: var(--brand-accent-purple);
+    --page-light: var(--bg-light);
+    --page-dark: var(--text-primary);
+}

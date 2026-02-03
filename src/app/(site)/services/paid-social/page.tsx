@@ -1,26 +1,17 @@
 import { Metadata } from 'next';
-import { GenericPage } from '@/components/layout/GenericPage/GenericPage';
-
-const pageConfig = {
-    slug: 'paid-social',
-    category: 'PAID MEDIA',
-    title: 'Paid Social Advertising',
-    subtitle: 'Targeted campaigns across major social platforms.',
-    description: 'We create and manage high-performance paid social campaigns on Meta, LinkedIn, TikTok, and more—driving awareness, engagement, and conversions at scale.',
-};
+import { PaidSocialContent } from '@/components/services/PaidSocialContent';
 
 export const metadata: Metadata = {
-    title: `${pageConfig.title} | Oneskai`,
-    description: pageConfig.subtitle,
+    title: 'Paid Social Advertising | Meta, TikTok & LinkedIn Ads Agency | Oneskai',
+    description: 'Expert paid social advertising across Meta, TikTok, LinkedIn & Pinterest. Achieve 2.8x average ROAS with scroll-stopping creative and precision audience targeting.',
+    keywords: 'paid social advertising, Facebook Ads, Instagram Ads, TikTok Ads, LinkedIn Ads, social media advertising, Meta Ads agency, paid social agency',
+    openGraph: {
+        title: 'Paid Social Advertising | Meta, TikTok & LinkedIn Ads Agency | Oneskai',
+        description: 'Expert paid social advertising achieving 2.8x average ROAS across Meta, TikTok & LinkedIn.',
+        type: 'website',
+    },
 };
 
-export default async function PaidSocialPage() {
-    return (
-        <GenericPage
-            category={pageConfig.category}
-            title={pageConfig.title}
-            subtitle={pageConfig.subtitle}
-            description={pageConfig.description}
-        />
-    );
+export default function PaidSocialPage() {
+    return <PaidSocialContent />;
 }

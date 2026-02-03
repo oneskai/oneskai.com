@@ -1,26 +1,10 @@
 import { Metadata } from 'next';
-import { GenericPage } from '@/components/layout/GenericPage/GenericPage';
-
-const pageConfig = {
-    slug: 'digital-evolution',
-    category: 'BRAND & PRESENCE',
-    title: 'Digital Evolution',
-    subtitle: 'Transform your brand for the future.',
-    description: 'We guide established brands through digital transformation—modernizing their presence, adopting new technologies, and future-proofing their marketing operations.',
-};
+import { DigitalEvolutionContent } from '@/components/solutions/DigitalEvolutionContent';
 
 export const metadata: Metadata = {
-    title: `${pageConfig.title} | Oneskai`,
-    description: pageConfig.subtitle,
+    title: 'Digital Evolution Solutions | Digital Transformation | Oneskai',
+    description: 'Complete digital transformation that modernizes technology, optimizes operations, and positions your business for the future of commerce.',
+    keywords: 'digital transformation, digital evolution, technology modernization, digital strategy, customer experience, process automation',
 };
 
-export default async function DigitalEvolutionPage() {
-    return (
-        <GenericPage
-            category={pageConfig.category}
-            title={pageConfig.title}
-            subtitle={pageConfig.subtitle}
-            description={pageConfig.description}
-        />
-    );
-}
+export default function DigitalEvolutionPage() { return <DigitalEvolutionContent />; }

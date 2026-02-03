@@ -1,26 +1,10 @@
 import { Metadata } from 'next';
-import { GenericPage } from '@/components/layout/GenericPage/GenericPage';
-
-const pageConfig = {
-    slug: 'market-leadership',
-    category: 'BRAND & PRESENCE',
-    title: 'Market Leadership',
-    subtitle: 'Dominate your industry niche.',
-    description: 'We position your brand as the definitive authority in your market through thought leadership, strategic content, and reputation management.',
-};
+import { MarketLeadershipContent } from '@/components/solutions/MarketLeadershipContent';
 
 export const metadata: Metadata = {
-    title: `${pageConfig.title} | Oneskai`,
-    description: pageConfig.subtitle,
+    title: 'Market Leadership Solutions | Industry Authority Building | Oneskai',
+    description: 'Position your brand as the definitive authority in your market through thought leadership, strategic content, and reputation management.',
+    keywords: 'market leadership, thought leadership, brand authority, industry leader, brand positioning, reputation management',
 };
 
-export default async function MarketLeadershipPage() {
-    return (
-        <GenericPage
-            category={pageConfig.category}
-            title={pageConfig.title}
-            subtitle={pageConfig.subtitle}
-            description={pageConfig.description}
-        />
-    );
-}
+export default function MarketLeadershipPage() { return <MarketLeadershipContent />; }

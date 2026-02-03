@@ -1,26 +1,11 @@
 import { Metadata } from 'next';
-import { GenericPage } from '@/components/layout/GenericPage/GenericPage';
-
-const pageConfig = {
-    slug: 'geo',
-    category: 'OWNED MEDIA',
-    title: 'Generative Engine Optimization',
-    subtitle: 'Make your brand visible across AI-powered search experiences.',
-    description: 'As AI transforms search, we help you stay ahead. Our GEO strategies ensure your content is discovered and surfaced by generative AI platforms like ChatGPT, Gemini, and Perplexity.',
-};
+import { GEOContent } from '@/components/services/GEOContent';
 
 export const metadata: Metadata = {
-    title: `${pageConfig.title} | Oneskai`,
-    description: pageConfig.subtitle,
+    title: 'Generative Engine Optimization (GEO) | AI Search Optimization | Oneskai',
+    description: 'Optimize your content for AI search engines like ChatGPT, Perplexity, and Claude. Be cited as the authoritative source in the AI era.',
+    keywords: 'GEO, generative engine optimization, AI SEO, ChatGPT optimization, Perplexity, AI search, LLM optimization',
+    openGraph: { title: 'Generative Engine Optimization (GEO) | Oneskai', description: 'Win in the AI search era with GEO optimization.', type: 'website' },
 };
 
-export default async function GEOPage() {
-    return (
-        <GenericPage
-            category={pageConfig.category}
-            title={pageConfig.title}
-            subtitle={pageConfig.subtitle}
-            description={pageConfig.description}
-        />
-    );
-}
+export default function GEOPage() { return <GEOContent />; }

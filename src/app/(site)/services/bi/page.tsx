@@ -1,26 +1,10 @@
 import { Metadata } from 'next';
-import { GenericPage } from '@/components/layout/GenericPage/GenericPage';
-
-const pageConfig = {
-    slug: 'bi',
-    category: 'MARKETING INTELLIGENCE',
-    title: 'Business Intelligence Dashboards',
-    subtitle: 'Real-time insights for better decisions.',
-    description: 'We design and build custom BI dashboards that consolidate your marketing data into actionable visualizations, enabling faster and smarter business decisions.',
-};
+import { BIContent } from '@/components/services/BIContent';
 
 export const metadata: Metadata = {
-    title: `${pageConfig.title} | Oneskai`,
-    description: pageConfig.subtitle,
+    title: 'Business Intelligence Services | Data Dashboards & Reporting | Oneskai',
+    description: 'Transform data into actionable insights with custom BI dashboards, automated reporting, and data warehousing solutions.',
+    keywords: 'business intelligence, BI dashboards, data analytics, Looker, Tableau, data visualization, marketing analytics',
 };
 
-export default async function BIPage() {
-    return (
-        <GenericPage
-            category={pageConfig.category}
-            title={pageConfig.title}
-            subtitle={pageConfig.subtitle}
-            description={pageConfig.description}
-        />
-    );
-}
+export default function BIPage() { return <BIContent />; }

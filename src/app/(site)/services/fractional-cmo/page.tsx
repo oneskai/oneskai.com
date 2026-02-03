@@ -1,26 +1,10 @@
 import { Metadata } from 'next';
-import { GenericPage } from '@/components/layout/GenericPage/GenericPage';
-
-const pageConfig = {
-    slug: 'fractional-cmo',
-    category: 'MARKETING CONSULTING',
-    title: 'Fractional Chief Marketing Officer',
-    subtitle: 'High-level strategy without the overhead.',
-    description: 'Get C-suite marketing leadership on a flexible basis. Our Fractional CMO service provides strategic direction, team mentorship, and executive-level marketing expertise.',
-};
+import { FractionalCMOContent } from '@/components/services/FractionalCMOContent';
 
 export const metadata: Metadata = {
-    title: `${pageConfig.title} | Oneskai`,
-    description: pageConfig.subtitle,
+    title: 'Fractional CMO Services | Part-Time Marketing Executive | Oneskai',
+    description: 'Get C-suite marketing leadership at a fraction of the cost. Strategic marketing leadership, team management, and growth strategy for scaling businesses.',
+    keywords: 'fractional CMO, part-time CMO, marketing leadership, outsourced CMO, marketing strategy, startup CMO',
 };
 
-export default async function FractionalCMOPage() {
-    return (
-        <GenericPage
-            category={pageConfig.category}
-            title={pageConfig.title}
-            subtitle={pageConfig.subtitle}
-            description={pageConfig.description}
-        />
-    );
-}
+export default function FractionalCMOPage() { return <FractionalCMOContent />; }

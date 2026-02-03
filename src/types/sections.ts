@@ -1,5 +1,5 @@
-import type { PortableTextBlock } from '@portabletext/types';
-import type { SanityImageSource } from '@sanity/image-url/lib/types/types';
+// PortableTextBlock available from @portabletext/types if needed for rich text
+import type { SanityImageSource } from '@sanity/image-url';
 
 // Base section type
 export interface BaseSection {
@@ -122,6 +122,7 @@ export interface BlogGridSection extends BaseSection {
   _type: 'blogGrid';
   label: string;
   title: string;
+  subtitle?: string;
   postsToShow?: number;
 }
 

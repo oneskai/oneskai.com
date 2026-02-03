@@ -1,26 +1,17 @@
 import { Metadata } from 'next';
-import { GenericPage } from '@/components/layout/GenericPage/GenericPage';
-
-const pageConfig = {
-    slug: 'branding',
-    category: 'CREATIVES',
-    title: 'Brand Identity',
-    subtitle: 'Logos, voice, and visual guidelines.',
-    description: 'We develop cohesive brand identities that capture your essence and resonate with your audience—from logo design to comprehensive brand guidelines.',
-};
+import { BrandingContent } from '@/components/services/BrandingContent';
 
 export const metadata: Metadata = {
-    title: `${pageConfig.title} | Oneskai`,
-    description: pageConfig.subtitle,
+    title: 'Branding & Brand Identity Design | Logo Design Agency | Oneskai',
+    description: 'Strategic brand identity design that makes your business memorable. Logo design, visual identity systems, brand guidelines, and complete branding packages.',
+    keywords: 'branding agency, brand identity design, logo design, visual identity, brand guidelines, brand strategy, corporate branding, rebrand',
+    openGraph: {
+        title: 'Branding & Brand Identity Design | Logo Design Agency | Oneskai',
+        description: 'Strategic brand identity design that makes your business memorable. Complete branding packages from $3,500.',
+        type: 'website',
+    },
 };
 
-export default async function BrandingPage() {
-    return (
-        <GenericPage
-            category={pageConfig.category}
-            title={pageConfig.title}
-            subtitle={pageConfig.subtitle}
-            description={pageConfig.description}
-        />
-    );
+export default function BrandingPage() {
+    return <BrandingContent />;
 }

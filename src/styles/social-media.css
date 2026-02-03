@@ -1,0 +1,471 @@
+/* ================================================
+   SOCIAL MEDIA MARKETING SERVICE PAGE STYLES - Oneskai Digital Agency
+   ================================================ */
+
+.social-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.social-marketing-page {
+    overflow-x: hidden;
+    background: #ffffff;
+}
+
+[data-theme="dark"] .social-marketing-page {
+    background: #0a0a0a;
+}
+
+/* ===== HERO SECTION REVAMP ===== */
+.social-hero {
+    min-height: 95vh;
+    padding: 180px 0 100px;
+    background: radial-gradient(circle at 10% 10%, rgba(79, 172, 254, 0.1) 0%, transparent 40%),
+        radial-gradient(circle at 90% 90%, rgba(0, 242, 254, 0.1) 0%, transparent 40%),
+        var(--bg-white);
+    position: relative;
+    overflow: hidden;
+}
+
+.social-hero-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.social-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(90deg, rgba(79, 172, 254, 0.15), rgba(0, 242, 254, 0.1));
+    padding: 12px 20px;
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #0369a1;
+    margin-bottom: 32px;
+    border: 1px solid rgba(79, 172, 254, 0.2);
+}
+
+.social-hero-title {
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -3px;
+    margin-bottom: 28px;
+    color: var(--text-dark);
+}
+
+.social-hero-title .text-gradient {
+    background: linear-gradient(135deg, #4facfe, #00f2fe, #7c3aed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-size: 200% auto;
+    animation: gradientShift 5s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.social-hero-subtitle {
+    font-size: 22px;
+    line-height: 1.6;
+    color: var(--text-gray);
+    margin-bottom: 40px;
+    max-width: 600px;
+}
+
+/* Enhanced Floating Icons */
+.social-icon-cloud {
+    position: relative;
+    width: 450px;
+    height: 450px;
+    margin: 0 auto;
+}
+
+.floating-icon {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background: white;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+.floating-icon svg {
+    width: 32px;
+    height: 32px;
+}
+
+.icon-ig {
+    top: 5%;
+    left: 15%;
+    color: #E4405F;
+    animation: floatY 6s ease-in-out infinite;
+}
+
+.icon-li {
+    top: 45%;
+    left: -5%;
+    color: #0A66C2;
+    animation: floatY 5s ease-in-out infinite 1s;
+}
+
+.icon-tt {
+    top: 75%;
+    left: 25%;
+    color: #000000;
+    animation: floatY 7s ease-in-out infinite 0.5s;
+}
+
+.icon-tw {
+    top: 15%;
+    right: 5%;
+    color: #1DA1F2;
+    animation: floatY 5.5s ease-in-out infinite 1.5s;
+}
+
+.icon-yt {
+    top: 65%;
+    right: -5%;
+    color: #FF0000;
+    animation: floatY 6.5s ease-in-out infinite 2s;
+}
+
+@keyframes floatY {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0);
+    }
+
+    50% {
+        transform: translateY(-30px) rotate(5deg);
+    }
+}
+
+.hero-stats-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px);
+    padding: 30px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    text-align: center;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.05);
+    z-index: 1;
+}
+
+/* ===== TRUST BAR ===== */
+.trust-bar {
+    padding: 40px 0;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    background: #fafafa;
+}
+
+.logo-strip {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0.6;
+    filter: grayscale(1);
+}
+
+/* ===== BENEFITS REVAMP ===== */
+.social-benefits {
+    padding: 120px 0;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.benefit-card {
+    padding: 60px 40px;
+    border-radius: 40px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.benefit-card:hover {
+    transform: translateY(-10px);
+}
+
+.benefit-card.vibrant {
+    background: linear-gradient(135deg, #7c3aed, #4f46e5);
+    color: white;
+    box-shadow: 0 30px 60px rgba(124, 58, 237, 0.25);
+}
+
+.benefit-card.soft {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+}
+
+.benefit-card h3 {
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+/* ===== ENGAGEMENT CHART SECTION ===== */
+.engagement-metrics {
+    padding: 100px 0;
+    background: #f0f9ff;
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.chart-visual {
+    background: white;
+    padding: 40px;
+    border-radius: 32px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+.bar-container {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+    height: 300px;
+    margin-top: 40px;
+}
+
+.bar {
+    flex: 1;
+    background: #e2e8f0;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    transition: height 1s ease-out;
+}
+
+.bar.active {
+    background: linear-gradient(to top, #4facfe, #00f2fe);
+}
+
+/* ===== PLATFORM STRATEGY ===== */
+.social-platforms {
+    padding: 120px 0;
+}
+
+.platform-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.platform-item {
+    display: flex;
+    gap: 25px;
+    background: white;
+    padding: 40px;
+    border-radius: 30px;
+    border: 1px solid #f1f5f9;
+    transition: all 0.3s ease;
+}
+
+.platform-item:hover {
+    border-color: #4facfe;
+    box-shadow: 0 10px 30px rgba(79, 172, 254, 0.1);
+}
+
+/* ===== PRICING SECTION ===== */
+.social-pricing {
+    padding: 120px 0;
+    background: #fafafa;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.price-card {
+    background: white;
+    padding: 50px 40px;
+    border-radius: 32px;
+    border: 1px solid #eee;
+    text-align: center;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.price-card.featured {
+    border: 2px solid #4facfe;
+    transform: scale(1.05);
+    z-index: 2;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.05);
+}
+
+.price-card .popular-tag {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #4facfe;
+    color: white;
+    padding: 6px 20px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+/* ===== INDUSTRIES SECTION ===== */
+.social-industries {
+    padding: 100px 0;
+}
+
+.industry-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.industry-item {
+    padding: 30px;
+    background: #f8fafc;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.industry-item:hover {
+    background: #4facfe;
+    color: white;
+}
+
+/* ===== WORKFLOW SECTION ===== */
+.social-workflow {
+    padding: 120px 0;
+    background: var(--primary-green);
+    color: white;
+}
+
+.workflow-steps {
+    margin-top: 60px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.workflow-step-inner {
+    display: flex;
+    gap: 40px;
+    padding: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    align-items: center;
+}
+
+.workflow-step-inner:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.step-count {
+    font-size: 48px;
+    font-weight: 900;
+    color: var(--accent-yellow);
+    opacity: 0.3;
+    min-width: 80px;
+}
+
+/* ===== FEED PREVIEW REVAMP ===== */
+.social-feed {
+    padding: 120px 0;
+    background: #000;
+    color: white;
+}
+
+.feed-scroll {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    padding: 40px 0;
+    scrollbar-width: none;
+}
+
+.feed-card {
+    min-width: 350px;
+    height: 500px;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    background: #222;
+}
+
+.feed-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 30px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+    z-index: 2;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .industry-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .social-hero-grid,
+    .benefits-grid,
+    .platform-grid,
+    .pricing-grid,
+    .metrics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .social-hero-title {
+        font-size: 48px;
+    }
+
+    .social-icon-cloud {
+        width: 300px;
+        height: 300px;
+    }
+
+    .social-container {
+        padding: 0 20px;
+    }
+}

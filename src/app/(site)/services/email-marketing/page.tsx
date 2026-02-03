@@ -1,26 +1,17 @@
 import { Metadata } from 'next';
-import { GenericPage } from '@/components/layout/GenericPage/GenericPage';
-
-const pageConfig = {
-    slug: 'email-marketing',
-    category: 'OWNED MEDIA',
-    title: 'Email & SMS Marketing',
-    subtitle: 'Retain customers and expand lifetime value.',
-    description: 'We design and execute email and SMS campaigns that nurture leads, re-engage customers, and drive repeat purchases through personalized, automated communication flows.',
-};
+import { EmailMarketingContent } from '@/components/services/EmailMarketingContent';
 
 export const metadata: Metadata = {
-    title: `${pageConfig.title} | Oneskai`,
-    description: pageConfig.subtitle,
+    title: 'Email & SMS Marketing Services | Retention & List ROI | Oneskai',
+    description: 'Maximize your list ROI with high-performance email and SMS lifecycles. Specialized in Klaviyo, automation flows, and conversion-focused retention strategies.',
+    keywords: 'email marketing services, SMS marketing, Klaviyo agency, retention marketing, marketing automation, e-commerce email marketing, list growth',
+    openGraph: {
+        title: 'Email & SMS Marketing Services | Retention & List ROI | Oneskai',
+        description: 'Maximize your list ROI with high-performance email and SMS lifecycles.',
+        type: 'website',
+    },
 };
 
-export default async function EmailMarketingPage() {
-    return (
-        <GenericPage
-            category={pageConfig.category}
-            title={pageConfig.title}
-            subtitle={pageConfig.subtitle}
-            description={pageConfig.description}
-        />
-    );
+export default function EmailMarketingPage() {
+    return <EmailMarketingContent />;
 }

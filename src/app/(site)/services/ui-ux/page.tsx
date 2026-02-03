@@ -1,26 +1,17 @@
 import { Metadata } from 'next';
-import { GenericPage } from '@/components/layout/GenericPage/GenericPage';
-
-const pageConfig = {
-    slug: 'ui-ux',
-    category: 'CREATIVES',
-    title: 'UI/UX Design',
-    subtitle: 'Conversion-focused digital experiences.',
-    description: 'We design intuitive user interfaces and seamless user experiences that delight customers and drive measurable business outcomes.',
-};
+import { UIUXContent } from '@/components/services/UIUXContent';
 
 export const metadata: Metadata = {
-    title: `${pageConfig.title} | Oneskai`,
-    description: pageConfig.subtitle,
+    title: 'UI/UX Design Services | User Experience Agency | Oneskai',
+    description: 'Human-centered UI/UX design that drives engagement and conversion. UX research, UI design, prototyping, and design systems for web and mobile products.',
+    keywords: 'UI/UX design, user experience design, UX research, UI design agency, product design, app design, design system, usability testing',
+    openGraph: {
+        title: 'UI/UX Design Services | User Experience Agency | Oneskai',
+        description: 'Human-centered UI/UX design that drives engagement and conversion.',
+        type: 'website',
+    },
 };
 
-export default async function UIUXPage() {
-    return (
-        <GenericPage
-            category={pageConfig.category}
-            title={pageConfig.title}
-            subtitle={pageConfig.subtitle}
-            description={pageConfig.description}
-        />
-    );
+export default function UIUXPage() {
+    return <UIUXContent />;
 }

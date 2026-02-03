@@ -1,26 +1,12 @@
 import { Metadata } from 'next';
-import { GenericPage } from '@/components/layout/GenericPage/GenericPage';
-
-const pageConfig = {
-    slug: 'attribution',
-    category: 'MARKETING INTELLIGENCE',
-    title: 'Attribution',
-    subtitle: 'Understand the true value of every channel.',
-    description: 'We implement advanced attribution models that reveal how each touchpoint contributes to conversions, enabling smarter budget allocation and campaign optimization.',
-};
+import { AttributionContent } from '@/components/services/AttributionContent';
 
 export const metadata: Metadata = {
-    title: `${pageConfig.title} | Oneskai`,
-    description: pageConfig.subtitle,
+    title: 'Marketing Attribution Services | Multi-Touch Attribution | Oneskai',
+    description: 'Multi-touch attribution modeling that reveals which channels drive real conversions. Data-driven budget allocation and ROAS optimization.',
+    keywords: 'marketing attribution, multi-touch attribution, channel analysis, ROAS optimization, conversion tracking, budget allocation',
 };
 
-export default async function AttributionPage() {
-    return (
-        <GenericPage
-            category={pageConfig.category}
-            title={pageConfig.title}
-            subtitle={pageConfig.subtitle}
-            description={pageConfig.description}
-        />
-    );
+export default function AttributionPage() {
+    return <AttributionContent />;
 }
