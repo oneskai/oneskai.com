@@ -1148,10 +1148,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--accent-pink);
+    color: var(--accent-yellow);
     font-size: 20px;
     z-index: 1;
     transition: all 0.3s ease;
+}
+
+.step-dot .mega-menu-icon {
+    color: inherit !important;
+    background: transparent !important;
+    width: 24px;
+    height: 24px;
 }
 
 .timeline-step:hover .step-dot {
