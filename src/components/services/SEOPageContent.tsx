@@ -3,6 +3,11 @@
 import Link from 'next/link';
 import { Icon } from '@/components/ui/Icon';
 import '@/styles/seo-page.css';
+import { PartnerLogos } from '@/components/partners/PartnerLogos';
+import { BlogBriefSection } from '@/components/blog/BlogBriefSection';
+import { TechStackSection } from '@/components/shared/TechStackSection';
+
+import { SEOIndustrySection } from './SEOIndustrySection';
 
 export function SEOPageContent() {
     return (
@@ -91,17 +96,8 @@ export function SEOPageContent() {
                 </div>
             </section>
 
-            {/* Trust Bar */}
-            <section className="seo-trust-bar">
-                <div className="seo-container">
-                    <p className="trust-text">Trusted by industry leaders worldwide</p>
-                    <div className="trust-logos">
-                        {['Google Partner', 'Meta Partner', 'HubSpot', 'Shopify Plus', 'AWS'].map((logo, i) => (
-                            <div key={i} className="trust-logo">{logo}</div>
-                        ))}
-                    </div>
-                </div>
-            </section>
+            {/* Trust Bar / Clients We Served */}
+            <PartnerLogos />
 
             {/* Common SEO Challenges - Pain Points Section */}
             <section className="seo-challenges">
@@ -177,7 +173,7 @@ export function SEOPageContent() {
                             <div className="essential-stats">
                                 <div className="essential-stat">
                                     <span className="essential-number">68%</span>
-                                    <span className="essential-label">of all online experiences begin with a search engine</span>
+                                    <span className="essential-label">of online experiences begin with a search engine</span>
                                 </div>
                                 <div className="essential-stat">
                                     <span className="essential-number">53%</span>
@@ -213,8 +209,8 @@ export function SEOPageContent() {
                                     <Icon type="check" />
                                 </div>
                                 <div className="benefit-text">
-                                    <h4>Better ROI Than Paid Media</h4>
-                                    <p>SEO delivers a 5.3x higher ROI than paid search over a 3-year period.</p>
+                                    <h4>Lower Customer Acquisition Cost</h4>
+                                    <p>Organic search often yields the highest ROI of any marketing channel over the long term.</p>
                                 </div>
                             </div>
                             <div className="essential-benefit">
@@ -222,14 +218,17 @@ export function SEOPageContent() {
                                     <Icon type="check" />
                                 </div>
                                 <div className="benefit-text">
-                                    <h4>Compound Growth Effect</h4>
-                                    <p>Content and authority gains compound over time, creating an exponential growth curve.</p>
+                                    <h4>Competitive Edge</h4>
+                                    <p>Dominating search results means capturing market share before your competitors do.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
+
+            {/* Tech Stack Section */}
+            <TechStackSection />
 
             {/* Services Grid */}
             <section className="seo-services">
@@ -320,78 +319,81 @@ export function SEOPageContent() {
                         <div className="methodology-phase">
                             <div className="phase-number">01</div>
                             <div className="phase-content">
-                                <h3>Discovery & Analysis</h3>
-                                <p>Deep dive into your business goals, competitive landscape, and current SEO health. We analyze 200+ ranking factors to identify your biggest opportunities.</p>
+                                <h3>Assessment & Audit</h3>
+                                <p>Deep technical audit of crawlability, indexability, and performance alongside a comprehensive keyword gap analysis and competitor review.</p>
                                 <div className="phase-deliverables">
                                     <span>Technical Audit</span>
-                                    <span>Competitor Analysis</span>
-                                    <span>Opportunity Map</span>
+                                    <span>Keyword Gap Analysis</span>
+                                    <span>Competitor Review</span>
                                 </div>
                             </div>
                         </div>
                         <div className="methodology-phase">
                             <div className="phase-number">02</div>
                             <div className="phase-content">
-                                <h3>Keyword Intelligence</h3>
-                                <p>Beyond basic keyword research—we map buyer intent, search patterns, and content gaps to build a keyword strategy that drives revenue, not just traffic.</p>
+                                <h3>Strategy & Roadmap</h3>
+                                <p>Defining KPIs and business-aligned goals, creating a content calendar, and prioritizing "low-hanging fruit" vs. long-term authority goals.</p>
                                 <div className="phase-deliverables">
-                                    <span>Intent Mapping</span>
-                                    <span>Keyword Clusters</span>
-                                    <span>Priority Matrix</span>
+                                    <span>KPI Definition</span>
+                                    <span>Content Roadmap</span>
+                                    <span>Resource Planning</span>
                                 </div>
                             </div>
                         </div>
                         <div className="methodology-phase">
                             <div className="phase-number">03</div>
                             <div className="phase-content">
-                                <h3>Technical Foundation</h3>
-                                <p>Fix the technical issues holding you back. We optimize site architecture, Core Web Vitals, mobile experience, and implement schema markup for rich results.</p>
+                                <h3>On-Page Optimization</h3>
+                                <p>Implementing semantic content optimization (NLP/LSI), HTML header structure improvements, and a strategic internal linking architecture.</p>
                                 <div className="phase-deliverables">
-                                    <span>Site Speed</span>
-                                    <span>Mobile Optimization</span>
-                                    <span>Schema Implementation</span>
+                                    <span>NLP Optimization</span>
+                                    <span>Header Structure</span>
+                                    <span>Internal Linking</span>
                                 </div>
                             </div>
                         </div>
                         <div className="methodology-phase">
                             <div className="phase-number">04</div>
                             <div className="phase-content">
-                                <h3>Content Excellence</h3>
-                                <p>Create and optimize content that ranks and converts. We develop topic clusters, pillar pages, and supporting content that establishes topical authority.</p>
+                                <h3>Technical Excellence</h3>
+                                <p>Core Web Vitals optimization, schema markup (Structured Data) implementation, and ensuring native mobile-first indexing compliance.</p>
                                 <div className="phase-deliverables">
-                                    <span>Content Roadmap</span>
-                                    <span>On-Page Optimization</span>
-                                    <span>Content Creation</span>
+                                    <span>Core Web Vitals</span>
+                                    <span>Schema Markup</span>
+                                    <span>Mobile Performance</span>
                                 </div>
                             </div>
                         </div>
                         <div className="methodology-phase">
                             <div className="phase-number">05</div>
                             <div className="phase-content">
-                                <h3>Authority Building</h3>
-                                <p>Build domain authority through strategic link building, digital PR, and brand mentions. We acquire high-quality backlinks from relevant, authoritative sources.</p>
+                                <h3>Content Authority</h3>
+                                <p>Creation of high-value pillar pages and topic clusters integrated with Conversion Rate Optimization (CRO) for landing pages.</p>
                                 <div className="phase-deliverables">
-                                    <span>Link Acquisition</span>
-                                    <span>Digital PR</span>
-                                    <span>Brand Mentions</span>
+                                    <span>Pillar Content</span>
+                                    <span>Topic Clusters</span>
+                                    <span>CRO Integration</span>
                                 </div>
                             </div>
                         </div>
                         <div className="methodology-phase">
                             <div className="phase-number">06</div>
                             <div className="phase-content">
-                                <h3>Analyze & Scale</h3>
-                                <p>Continuous optimization based on performance data. We identify what&apos;s working, double down on winners, and scale successful strategies across your site.</p>
+                                <h3>E-E-A-T & Backlinks</h3>
+                                <p>Building Expertise, Authoritativeness, and Trustworthiness through strategic link acquisition and digital PR from high-authority domains.</p>
                                 <div className="phase-deliverables">
-                                    <span>Performance Reviews</span>
-                                    <span>A/B Testing</span>
-                                    <span>Growth Scaling</span>
+                                    <span>Authority Links</span>
+                                    <span>EEAT Strategy</span>
+                                    <span>Digital PR</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
+
+            {/* Blog Brief Section */}
+            <BlogBriefSection />
 
             {/* Results Section */}
             <section id="case-studies" className="seo-results">
@@ -476,8 +478,8 @@ export function SEOPageContent() {
                     <div className="pricing-grid">
                         <div className="pricing-card">
                             <div className="pricing-header">
-                                <h3>Growth</h3>
-                                <p className="pricing-description">For businesses ready to start their SEO journey</p>
+                                <h3>Launch</h3>
+                                <p className="pricing-description">Perfect for startups and small businesses looking to establish a search presence.</p>
                             </div>
                             <div className="pricing-price">
                                 <span className="price-currency">$</span>
@@ -499,8 +501,8 @@ export function SEOPageContent() {
                         <div className="pricing-card featured">
                             <div className="pricing-badge">MOST POPULAR</div>
                             <div className="pricing-header">
-                                <h3>Scale</h3>
-                                <p className="pricing-description">For businesses serious about dominating search</p>
+                                <h3>Growth</h3>
+                                <p className="pricing-description">Designed for scaling businesses that want to dominate their niche.</p>
                             </div>
                             <div className="pricing-price">
                                 <span className="price-currency">$</span>
@@ -524,8 +526,8 @@ export function SEOPageContent() {
                         </div>
                         <div className="pricing-card">
                             <div className="pricing-header">
-                                <h3>Enterprise</h3>
-                                <p className="pricing-description">For market leaders who demand the best</p>
+                                <h3>Dominance</h3>
+                                <p className="pricing-description">For industry leaders requiring enterprise-level SEO and advanced analysis.</p>
                             </div>
                             <div className="pricing-price">
                                 <span className="price-currency">$</span>
@@ -555,32 +557,7 @@ export function SEOPageContent() {
             </section>
 
             {/* Industries Section */}
-            <section className="seo-industries">
-                <div className="seo-container">
-                    <div className="industries-grid">
-                        <div className="industries-content">
-                            <span className="section-label">INDUSTRY EXPERTISE</span>
-                            <h2 className="section-title">Industries We Serve</h2>
-                            <p className="section-subtitle">
-                                Our SEO specialists bring deep expertise across diverse sectors,
-                                understanding the unique challenges and opportunities in each industry.
-                            </p>
-                        </div>
-                        <div className="industries-list">
-                            <div className="industry-tag">E-Commerce & Retail</div>
-                            <div className="industry-tag">SaaS & Technology</div>
-                            <div className="industry-tag">Healthcare & Medical</div>
-                            <div className="industry-tag">Finance & Fintech</div>
-                            <div className="industry-tag">Real Estate</div>
-                            <div className="industry-tag">Legal Services</div>
-                            <div className="industry-tag">Education & EdTech</div>
-                            <div className="industry-tag">Hospitality & Travel</div>
-                            <div className="industry-tag">Manufacturing & B2B</div>
-                            <div className="industry-tag">Professional Services</div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <SEOIndustrySection />
 
             {/* Testimonials */}
             <section className="seo-testimonials">
