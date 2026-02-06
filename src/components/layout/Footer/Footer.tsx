@@ -45,76 +45,6 @@ export function Footer({ siteSettings }: FooterProps) {
           </div>
         </div>
 
-        {/* ── Brand + Subscribe Row ── */}
-        <div className="footer-brand-row">
-          <div className="footer-brand-col">
-            <Link href="/" className="footer-brand-logo">
-              {mounted && (
-                <Image
-                  src="/images/logo/os-dark.webp"
-                  alt="Oneskai"
-                  width={140}
-                  height={36}
-                  className="footer-logo-image"
-                />
-              )}
-              {!mounted && (
-                <Image
-                  src="/images/logo/os-dark.webp"
-                  alt="Oneskai"
-                  width={140}
-                  height={36}
-                  className="footer-logo-image"
-                />
-              )}
-            </Link>
-            <p className="footer-brand-desc">
-              Data-driven marketing, cutting-edge technology, and strategic consulting for ambitious brands worldwide.
-            </p>
-          </div>
-
-          <div className="footer-brand-divider" />
-
-          <div className="footer-subscribe-col">
-            <h4 className="footer-subscribe-heading">Stay ahead of the curve</h4>
-            <p className="footer-subscribe-text">Weekly insights on growth, SEO, and digital strategy.</p>
-            <form className="footer-subscribe-form" onSubmit={(e) => e.preventDefault()}>
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="footer-subscribe-input"
-                required
-              />
-              <button type="submit" className="footer-subscribe-btn">
-                Subscribe <FiSend />
-              </button>
-            </form>
-          </div>
-
-          <div className="footer-brand-divider" />
-
-          <div className="footer-social-col">
-            <h4 className="footer-social-heading">Follow us</h4>
-            <div className="footer-social-row">
-              <a href="https://linkedin.com/company/oneskai" target="_blank" rel="noopener noreferrer" className="footer-social-btn" aria-label="LinkedIn">
-                <Icon type="linkedin" />
-              </a>
-              <a href="https://x.com/oneskai" target="_blank" rel="noopener noreferrer" className="footer-social-btn" aria-label="X (Twitter)">
-                <Icon type="twitter" />
-              </a>
-              <a href="https://instagram.com/oneskai" target="_blank" rel="noopener noreferrer" className="footer-social-btn" aria-label="Instagram">
-                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" /></svg>
-              </a>
-              <a href="https://youtube.com/@oneskai" target="_blank" rel="noopener noreferrer" className="footer-social-btn" aria-label="YouTube">
-                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" /></svg>
-              </a>
-              <a href="https://facebook.com/oneskai" target="_blank" rel="noopener noreferrer" className="footer-social-btn" aria-label="Facebook">
-                <Icon type="facebook" />
-              </a>
-            </div>
-          </div>
-        </div>
-
         {/* ── Services Mega Grid ── */}
         <div className="footer-services-section">
 
@@ -197,6 +127,76 @@ export function Footer({ siteSettings }: FooterProps) {
           </div>
         </div>
 
+        {/* ── Brand + Subscribe Row ── */}
+        <div className="footer-brand-row">
+          <div className="footer-brand-col">
+            <Link href="/" className="footer-brand-logo">
+              {mounted && (
+                <Image
+                  src="/images/logo/os-dark.webp"
+                  alt="Oneskai"
+                  width={140}
+                  height={36}
+                  className="footer-logo-image"
+                />
+              )}
+              {!mounted && (
+                <Image
+                  src="/images/logo/os-dark.webp"
+                  alt="Oneskai"
+                  width={140}
+                  height={36}
+                  className="footer-logo-image"
+                />
+              )}
+            </Link>
+            <p className="footer-brand-desc">
+              Data-driven marketing, cutting-edge technology, and strategic consulting for ambitious brands worldwide.
+            </p>
+          </div>
+
+          <div className="footer-brand-divider" />
+
+          <div className="footer-subscribe-col">
+            <h4 className="footer-subscribe-heading">Stay ahead of the curve</h4>
+            <p className="footer-subscribe-text">Weekly insights on growth, SEO, and digital strategy.</p>
+            <form className="footer-subscribe-form" onSubmit={(e) => e.preventDefault()}>
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="footer-subscribe-input"
+                required
+              />
+              <button type="submit" className="footer-subscribe-btn">
+                Subscribe <FiSend />
+              </button>
+            </form>
+          </div>
+
+          <div className="footer-brand-divider" />
+
+          <div className="footer-social-col">
+            <h4 className="footer-social-heading">Follow us</h4>
+            <div className="footer-social-row">
+              <a href="https://linkedin.com/company/oneskai" target="_blank" rel="noopener noreferrer" className="footer-social-btn" aria-label="LinkedIn">
+                <Icon type="linkedin" />
+              </a>
+              <a href="https://x.com/oneskai" target="_blank" rel="noopener noreferrer" className="footer-social-btn" aria-label="X (Twitter)">
+                <Icon type="twitter" />
+              </a>
+              <a href="https://instagram.com/oneskai" target="_blank" rel="noopener noreferrer" className="footer-social-btn" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" /></svg>
+              </a>
+              <a href="https://youtube.com/@oneskai" target="_blank" rel="noopener noreferrer" className="footer-social-btn" aria-label="YouTube">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" /></svg>
+              </a>
+              <a href="https://facebook.com/oneskai" target="_blank" rel="noopener noreferrer" className="footer-social-btn" aria-label="Facebook">
+                <Icon type="facebook" />
+              </a>
+            </div>
+          </div>
+        </div>
+
         {/* ── Lower Nav Grid ── */}
         <div className="footer-nav-section">
           <div className="footer-nav-col">
@@ -206,11 +206,10 @@ export function Footer({ siteSettings }: FooterProps) {
               <li><Link href="/solutions/ecommerce">eCommerce Growth</Link></li>
               <li><Link href="/solutions/revenue-optimization">Revenue Optimization</Link></li>
               <li><Link href="/solutions/market-leadership">Market Leadership</Link></li>
-              <li><Link href="/solutions/social-influence">Social Influence</Link></li>
               <li><Link href="/solutions/digital-evolution">Digital Evolution</Link></li>
               <li><Link href="/solutions/ai-integration">AI Integration</Link></li>
               <li><Link href="/solutions/search-dominance">Search Dominance</Link></li>
-              <li><Link href="/solutions/mobile-first">Mobile-First</Link></li>
+              <li><Link href="/solutions/b2b-strategy">B2B Strategy</Link></li>
             </ul>
           </div>
 
@@ -222,10 +221,9 @@ export function Footer({ siteSettings }: FooterProps) {
               <li><Link href="/about">About Us</Link></li>
               <li><Link href="/about/team">Our Team</Link></li>
               <li><Link href="/about/methodology">Methodology</Link></li>
-              <li><Link href="/about/technology">Technology & Partners</Link></li>
-              <li><Link href="/about/process">Our Process</Link></li>
-              <li><Link href="/about/awards">Awards & Recognition</Link></li>
+              <li><Link href="/about/technology">Partnership</Link></li>
               <li><Link href="/work">Case Studies</Link></li>
+              <li><Link href="/about/awards">Recognition</Link></li>
               <li><Link href="/careers">Careers</Link></li>
               <li><Link href="/contact">Contact</Link></li>
             </ul>
@@ -237,13 +235,13 @@ export function Footer({ siteSettings }: FooterProps) {
             <h4 className="footer-nav-title">Resources</h4>
             <ul className="footer-nav-list">
               <li><Link href="/blog">Blog</Link></li>
-              <li><Link href="/resources/guides">Guides & Ebooks</Link></li>
-              <li><Link href="/resources/webinars">Webinars</Link></li>
-              <li><Link href="/events">Events</Link></li>
+              <li><Link href="/resources/guides">Guides</Link></li>
+              <li><Link href="/resources/ebooks">Ebooks</Link></li>
               <li><Link href="/newsletter">Newsletter</Link></li>
-              <li><Link href="/community">Community</Link></li>
               <li><Link href="/faq">FAQ</Link></li>
-              <li><Link href="/docs">Documentation</Link></li>
+              <li><Link href="/resources/downloads">Downloads</Link></li>
+              <li><Link href="/community">Community</Link></li>
+              <li><Link href="/resources/brand-assets">Brand Assets</Link></li>
             </ul>
           </div>
 
@@ -268,9 +266,15 @@ export function Footer({ siteSettings }: FooterProps) {
                 Singapore
               </div>
             </div>
-            <Link href="/contact" className="footer-contact-link">
+            <Link href="/contact" className="footer-contact-link" style={{ marginBottom: '25px' }}>
               Schedule a Call →
             </Link>
+            <div className="footer-review-logos" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '12px', marginTop: '10px' }}>
+              <div className="review-badge" style={{ padding: '8px', background: 'rgba(255,255,255,0.03)', borderRadius: '8px', fontSize: '10px', fontWeight: 600, color: '#fff', textAlign: 'center', border: '1px solid rgba(255,255,255,0.08)', letterSpacing: '0.5px' }}>CLUTCH 5.0</div>
+              <div className="review-badge" style={{ padding: '8px', background: 'rgba(255,255,255,0.03)', borderRadius: '8px', fontSize: '10px', fontWeight: 600, color: '#fff', textAlign: 'center', border: '1px solid rgba(255,255,255,0.08)', letterSpacing: '0.5px' }}>G2 LEADER</div>
+              <div className="review-badge" style={{ padding: '8px', background: 'rgba(255,255,255,0.03)', borderRadius: '8px', fontSize: '10px', fontWeight: 600, color: '#fff', textAlign: 'center', border: '1px solid rgba(255,255,255,0.08)', letterSpacing: '0.5px' }}>GOODFIRMS</div>
+              <div className="review-badge" style={{ padding: '8px', background: 'rgba(255,255,255,0.03)', borderRadius: '8px', fontSize: '10px', fontWeight: 600, color: '#fff', textAlign: 'center', border: '1px solid rgba(255,255,255,0.08)', letterSpacing: '0.5px' }}>CAPTERRA</div>
+            </div>
           </div>
         </div>
 
