@@ -1,4 +1,3 @@
-import { GenericPage } from '@/components/layout/GenericPage/GenericPage';
 import { LegalContent } from '@/components/layout/LegalContent/LegalContent';
 
 export default function PrivacyPage() {
@@ -69,13 +68,12 @@ export default function PrivacyPage() {
 
     return (
         <div className="privacy-policy-page">
-            <GenericPage
-                category="LEGAL"
+            <LegalContent
                 title="Privacy Policy"
-                subtitle="How we protect and manage your data."
-                description="Your privacy is important to us. This policy outlines how we collect, use, and safeguard your information in accordance with global data protection standards."
+                subtitle="Your privacy is important to us. This policy outlines how we collect, use, and safeguard your information in accordance with global data protection standards."
+                sections={sections}
+                lastUpdated="February 7, 2026"
             />
-            <LegalContent sections={sections} lastUpdated="February 7, 2026" />
         </div>
     );
 }

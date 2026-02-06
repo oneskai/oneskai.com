@@ -1,4 +1,3 @@
-import { GenericPage } from '@/components/layout/GenericPage/GenericPage';
 import { LegalContent } from '@/components/layout/LegalContent/LegalContent';
 
 export default function TermsPage() {
@@ -56,13 +55,12 @@ export default function TermsPage() {
 
     return (
         <div className="terms-of-service-page">
-            <GenericPage
-                category="LEGAL"
+            <LegalContent
                 title="Terms of Service"
-                subtitle="Guidelines for using our platform and services."
-                description="Please read these terms carefully before using our services. They govern your relationship with Oneskai."
+                subtitle="Please read these terms carefully before using our services. They govern your relationship with Oneskai."
+                sections={sections}
+                lastUpdated="February 7, 2026"
             />
-            <LegalContent sections={sections} lastUpdated="February 7, 2026" />
         </div>
     );
 }

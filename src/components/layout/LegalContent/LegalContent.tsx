@@ -6,15 +6,22 @@ interface LegalSection {
 }
 
 interface LegalContentProps {
+    title: string;
+    subtitle: string;
     sections: LegalSection[];
     lastUpdated: string;
 }
 
-export function LegalContent({ sections, lastUpdated }: LegalContentProps) {
+export function LegalContent({ title, subtitle, sections, lastUpdated }: LegalContentProps) {
     return (
-        <div className="legal-content-wrapper" style={{ padding: '60px 0', background: '#ffffff' }}>
+        <div className="legal-content-wrapper" style={{ padding: '160px 0 80px', background: '#ffffff' }}>
             <div className="container" style={{ maxWidth: '900px', margin: '0 auto', padding: '0 20px' }}>
-                <div className="last-updated" style={{ fontSize: '14px', color: 'var(--text-gray)', marginBottom: '40px', fontStyle: 'italic' }}>
+                <div className="legal-header" style={{ marginBottom: '60px' }}>
+                    <h1 style={{ fontSize: '48px', fontWeight: 600, color: 'var(--primary-green)', marginBottom: '16px', letterSpacing: '-1px' }}>{title}</h1>
+                    <p style={{ fontSize: '18px', color: 'var(--text-gray)', lineHeight: 1.6 }}>{subtitle}</p>
+                </div>
+
+                <div className="last-updated" style={{ fontSize: '14px', color: 'var(--text-gray)', marginBottom: '40px', fontStyle: 'italic', borderBottom: '1px solid #f1f5f9', paddingBottom: '20px' }}>
                     Last Updated: {lastUpdated}
                 </div>
 
