@@ -269,11 +269,19 @@ export function Footer({ siteSettings }: FooterProps) {
             <Link href="/contact" className="footer-contact-link" style={{ marginBottom: '25px' }}>
               Schedule a Call →
             </Link>
-            <div className="footer-review-logos" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '12px', marginTop: '10px' }}>
-              <div className="review-badge" style={{ padding: '8px', background: 'rgba(255,255,255,0.03)', borderRadius: '8px', fontSize: '10px', fontWeight: 600, color: '#fff', textAlign: 'center', border: '1px solid rgba(255,255,255,0.08)', letterSpacing: '0.5px' }}>CLUTCH 5.0</div>
-              <div className="review-badge" style={{ padding: '8px', background: 'rgba(255,255,255,0.03)', borderRadius: '8px', fontSize: '10px', fontWeight: 600, color: '#fff', textAlign: 'center', border: '1px solid rgba(255,255,255,0.08)', letterSpacing: '0.5px' }}>G2 LEADER</div>
-              <div className="review-badge" style={{ padding: '8px', background: 'rgba(255,255,255,0.03)', borderRadius: '8px', fontSize: '10px', fontWeight: 600, color: '#fff', textAlign: 'center', border: '1px solid rgba(255,255,255,0.08)', letterSpacing: '0.5px' }}>GOODFIRMS</div>
-              <div className="review-badge" style={{ padding: '8px', background: 'rgba(255,255,255,0.03)', borderRadius: '8px', fontSize: '10px', fontWeight: 600, color: '#fff', textAlign: 'center', border: '1px solid rgba(255,255,255,0.08)', letterSpacing: '0.5px' }}>CAPTERRA</div>
+            <div className="footer-review-logos" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '10px', marginTop: '20px' }}>
+              <div className="review-icon-link" title="Clutch 5.0" style={{ color: 'rgba(255,255,255,0.4)', transition: 'color 0.3s ease', cursor: 'pointer' }} onMouseEnter={(e) => e.currentTarget.style.color = '#fff'} onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255,255,255,0.4)'}>
+                <Icon type="clutch" style={{ width: '24px', height: '24px' }} />
+              </div>
+              <div className="review-icon-link" title="G2 Leader" style={{ color: 'rgba(255,255,255,0.4)', transition: 'color 0.3s ease', cursor: 'pointer' }} onMouseEnter={(e) => e.currentTarget.style.color = '#fff'} onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255,255,255,0.4)'}>
+                <Icon type="g2" style={{ width: '24px', height: '24px' }} />
+              </div>
+              <div className="review-icon-link" title="GoodFirms" style={{ color: 'rgba(255,255,255,0.4)', transition: 'color 0.3s ease', cursor: 'pointer' }} onMouseEnter={(e) => e.currentTarget.style.color = '#fff'} onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255,255,255,0.4)'}>
+                <Icon type="goodfirms" style={{ width: '24px', height: '24px' }} />
+              </div>
+              <div className="review-icon-link" title="Capterra" style={{ color: 'rgba(255,255,255,0.4)', transition: 'color 0.3s ease', cursor: 'pointer' }} onMouseEnter={(e) => e.currentTarget.style.color = '#fff'} onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255,255,255,0.4)'}>
+                <Icon type="capterra" style={{ width: '24px', height: '24px' }} />
+              </div>
             </div>
           </div>
         </div>
