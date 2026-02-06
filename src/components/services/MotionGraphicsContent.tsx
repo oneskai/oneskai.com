@@ -17,13 +17,13 @@ export function MotionGraphicsContent() {
                                 Animation Studio
                             </span>
                             <h1 className="motion-hero-title">
-                                Motion that <span className="text-gradient">moves audiences.</span>
+                                Motion that <span className="title-accent">moves audiences.</span>
                             </h1>
                             <p className="motion-hero-subtitle">
                                 From explainer videos to brand animations, we bring your message to life with captivating motion graphics that inform, engage, and inspire action.
                             </p>
                             <div className="content-hero-actions">
-                                <Link href="/contact" className="btn-primary large" style={{ background: 'linear-gradient(135deg, #8b5cf6, #06b6d4)', border: 'none', color: 'white' }}>
+                                <Link href="/contact" className="btn-primary large" style={{ background: 'linear-gradient(135deg, var(--accent-pink), #06b6d4)', border: 'none', color: 'var(--accent-yellow)' }}>
                                     Start Animation Project
                                     <Icon type="arrowRight" />
                                 </Link>
@@ -55,7 +55,7 @@ export function MotionGraphicsContent() {
                             { value: '48h', label: 'Fast Delivery Option' }
                         ].map((stat, i) => (
                             <div key={i} style={{ textAlign: 'center' }}>
-                                <div style={{ fontSize: '36px', fontWeight: 600, background: 'linear-gradient(135deg, #8b5cf6, #06b6d4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{stat.value}</div>
+                                <div style={{ fontSize: '36px', fontWeight: 600, background: 'linear-gradient(135deg, var(--accent-pink), #06b6d4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{stat.value}</div>
                                 <div style={{ fontSize: '13px', color: '#64748b', marginTop: '5px' }}>{stat.label}</div>
                             </div>
                         ))}
@@ -68,7 +68,7 @@ export function MotionGraphicsContent() {
                 <div className="motion-container">
                     <div className="section-header text-center">
                         <span className="section-label">WHAT WE CREATE</span>
-                        <h2 className="section-title">Animation <span className="text-gradient">services.</span></h2>
+                        <h2 className="section-title">Animation <span className="title-accent">services.</span></h2>
                     </div>
                     <div className="services-grid">
                         {[
@@ -77,7 +77,7 @@ export function MotionGraphicsContent() {
                             { icon: 'monitor', title: 'Social Content', desc: 'Scroll-stopping animated content for Instagram, TikTok, LinkedIn, and beyond.' }
                         ].map((service, i) => (
                             <div key={i} className="service-card">
-                                <Icon type={service.icon} style={{ color: '#8b5cf6', marginBottom: '25px' }} />
+                                <Icon type={service.icon} style={{ color: 'var(--accent-pink)', marginBottom: '25px' }} />
                                 <h3 style={{ fontSize: '24px', fontWeight: 600, marginBottom: '15px' }}>{service.title}</h3>
                                 <p style={{ fontSize: '16px', color: '#64748b', lineHeight: 1.7 }}>{service.desc}</p>
                             </div>
@@ -91,11 +91,11 @@ export function MotionGraphicsContent() {
                 <div className="motion-container">
                     <div className="section-header text-center">
                         <span className="section-label" style={{ color: 'rgba(255,255,255,0.7)' }}>OUR WORK</span>
-                        <h2 className="section-title" style={{ color: 'white' }}>Watch our <span style={{ color: '#a5b4fc' }}>showreel.</span></h2>
+                        <h2 className="section-title" style={{ color: 'var(--accent-yellow)' }}>Watch our <span style={{ color: '#a5b4fc' }}>showreel.</span></h2>
                     </div>
                     <div className="reel-container">
                         <div className="play-button">
-                            <Icon type="video" style={{ color: 'white' }} />
+                            <Icon type="video" style={{ color: 'var(--accent-yellow)' }} />
                         </div>
                     </div>
                 </div>
@@ -106,7 +106,7 @@ export function MotionGraphicsContent() {
                 <div className="motion-container">
                     <div className="section-header text-center">
                         <span className="section-label">INVESTMENT</span>
-                        <h2 className="section-title">Animation <span className="text-gradient">packages.</span></h2>
+                        <h2 className="section-title">Animation <span className="title-accent">packages.</span></h2>
                     </div>
                     <div className="pricing-grid">
                         <div className="price-card">
@@ -114,10 +114,10 @@ export function MotionGraphicsContent() {
                             <div style={{ fontSize: '42px', fontWeight: 600, marginBottom: '10px' }}>$500<span style={{ fontSize: '16px', color: '#999' }}>+</span></div>
                             <p style={{ color: '#666', marginBottom: '30px', fontSize: '14px' }}>15-30 second animation</p>
                             <ul style={{ listStyle: 'none', textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '40px' }}>
-                                <li><Icon type="check" style={{ color: '#8b5cf6' }} /> Simple Motion Graphics</li>
-                                <li><Icon type="check" style={{ color: '#8b5cf6' }} /> Text Animation</li>
-                                <li><Icon type="check" style={{ color: '#8b5cf6' }} /> Music & SFX</li>
-                                <li><Icon type="check" style={{ color: '#8b5cf6' }} /> 5-Day Delivery</li>
+                                <li><Icon type="check" style={{ color: 'var(--accent-pink)' }} /> Simple Motion Graphics</li>
+                                <li><Icon type="check" style={{ color: 'var(--accent-pink)' }} /> Text Animation</li>
+                                <li><Icon type="check" style={{ color: 'var(--accent-pink)' }} /> Music & SFX</li>
+                                <li><Icon type="check" style={{ color: 'var(--accent-pink)' }} /> 5-Day Delivery</li>
                             </ul>
                             <Link href="/contact" className="btn-outline" style={{ display: 'block' }}>Get Started</Link>
                         </div>
@@ -134,7 +134,7 @@ export function MotionGraphicsContent() {
                                 <li><Icon type="check" style={{ color: '#06b6d4' }} /> Custom Illustration</li>
                                 <li><Icon type="check" style={{ color: '#06b6d4' }} /> 2-3 Week Delivery</li>
                             </ul>
-                            <Link href="/contact" className="btn-primary" style={{ display: 'block', background: 'linear-gradient(135deg, #8b5cf6, #06b6d4)', border: 'none' }}>Start Project</Link>
+                            <Link href="/contact" className="btn-primary" style={{ display: 'block', background: 'linear-gradient(135deg, var(--accent-pink), #06b6d4)', border: 'none' }}>Start Project</Link>
                         </div>
 
                         <div className="price-card">
@@ -142,10 +142,10 @@ export function MotionGraphicsContent() {
                             <div style={{ fontSize: '42px', fontWeight: 600, marginBottom: '10px' }}>Custom</div>
                             <p style={{ color: '#666', marginBottom: '30px', fontSize: '14px' }}>Full production</p>
                             <ul style={{ listStyle: 'none', textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '40px' }}>
-                                <li><Icon type="check" style={{ color: '#8b5cf6' }} /> Complete Creative</li>
-                                <li><Icon type="check" style={{ color: '#8b5cf6' }} /> 3D Animation</li>
-                                <li><Icon type="check" style={{ color: '#8b5cf6' }} /> Character Design</li>
-                                <li><Icon type="check" style={{ color: '#8b5cf6' }} /> Multi-format Delivery</li>
+                                <li><Icon type="check" style={{ color: 'var(--accent-pink)' }} /> Complete Creative</li>
+                                <li><Icon type="check" style={{ color: 'var(--accent-pink)' }} /> 3D Animation</li>
+                                <li><Icon type="check" style={{ color: 'var(--accent-pink)' }} /> Character Design</li>
+                                <li><Icon type="check" style={{ color: 'var(--accent-pink)' }} /> Multi-format Delivery</li>
                             </ul>
                             <Link href="/contact" className="btn-outline" style={{ display: 'block' }}>Get Quote</Link>
                         </div>
@@ -198,7 +198,7 @@ export function MotionGraphicsContent() {
                                     <option value="other">Other</option>
                                 </select>
                                 <textarea placeholder="Describe your project..." style={{ height: '100px' }}></textarea>
-                                <button type="submit" className="btn-primary" style={{ border: 'none', background: 'linear-gradient(135deg, #8b5cf6, #06b6d4)', color: 'white', fontSize: '18px', fontWeight: 600, cursor: 'pointer', padding: '20px' }}>
+                                <button type="submit" className="btn-primary" style={{ border: 'none', background: 'linear-gradient(135deg, var(--accent-pink), #06b6d4)', color: 'var(--accent-yellow)', fontSize: '18px', fontWeight: 600, cursor: 'pointer', padding: '20px' }}>
                                     Get Free Quote
                                 </button>
                             </form>

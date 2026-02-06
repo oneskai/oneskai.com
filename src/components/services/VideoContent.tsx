@@ -6,15 +6,15 @@ import '@/styles/content-marketing.css';
 export function VideoContent() {
     return (
         <div className="content-marketing-page">
-            <section className="content-hero" style={{ background: 'radial-gradient(circle at 20% 30%, rgba(239, 68, 68, 0.15) 0%, transparent 40%), radial-gradient(circle at 80% 70%, rgba(244, 63, 94, 0.15) 0%, transparent 40%), var(--bg-white)' }}>
+            <section className="content-hero" style={{ background: 'var(--bg-cream)' }}>
                 <div className="content-container">
                     <div className="content-hero-grid">
                         <div className="content-hero-content">
-                            <span className="content-badge" style={{ background: 'rgba(239, 68, 68, 0.15)', color: '#ef4444', border: '1px solid rgba(239, 68, 68, 0.3)' }}><Icon type="video" />Video Marketing</span>
-                            <h1 className="content-hero-title">Video that <span style={{ background: 'linear-gradient(135deg, #ef4444, #f43f5e)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Moves People.</span></h1>
+                            <span className="content-badge" style={{ background: 'rgba(255, 45, 117, 0.08)', color: 'var(--accent-pink)', border: '1px solid rgba(255, 45, 117, 0.1)' }}><Icon type="video" />Video Marketing</span>
+                            <h1 className="content-hero-title">Video that <span style={{ background: 'var(--primary-green)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Moves People.</span></h1>
                             <p className="content-hero-subtitle">Strategic video marketing that captures attention, communicates value, and drives action across platforms—from social to streaming.</p>
                             <div className="content-hero-actions">
-                                <Link href="/contact" className="btn-primary large" style={{ background: 'linear-gradient(135deg, #ef4444, #f43f5e)', border: 'none' }}>Start Video Project<Icon type="arrowRight" /></Link>
+                                <Link href="/contact" className="btn-primary large" style={{ background: 'var(--primary-green)', border: 'none' }}>Start Video Project<Icon type="arrowRight" /></Link>
                                 <Link href="#case-studies" className="btn-outline">See Portfolio</Link>
                             </div>
                             <div className="hero-stat-bars">
@@ -23,8 +23,8 @@ export function VideoContent() {
                             </div>
                         </div>
                         <div className="content-hero-visual">
-                            <div className="content-visual-card" style={{ background: 'linear-gradient(135deg, #ef4444, #f43f5e)' }}>
-                                <div style={{ padding: '40px', color: 'white', textAlign: 'center' }}>
+                            <div className="content-visual-card" style={{ background: 'var(--primary-green)' }}>
+                                <div style={{ padding: '40px', color: 'var(--accent-yellow)', textAlign: 'center' }}>
                                     <div style={{ fontSize: '60px' }}>🎬</div>
                                     <div style={{ fontSize: '18px', marginTop: '10px' }}>Scroll-Stopping Content</div>
                                 </div>
@@ -38,7 +38,7 @@ export function VideoContent() {
                 <div className="content-container">
                     <div className="section-header text-center">
                         <span className="section-label">THE REALITY</span>
-                        <h2 className="section-title">Video Dominates <span style={{ background: 'linear-gradient(135deg, #ef4444, #f43f5e)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Every Platform</span></h2>
+                        <h2 className="section-title">Video Dominates <span style={{ background: 'var(--primary-green)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Every Platform</span></h2>
                     </div>
                     <div className="challenges-grid">
                         <div className="challenge-card"><div className="challenge-icon" style={{ background: 'rgba(239, 68, 68, 0.15)', color: '#ef4444' }}><Icon type="trending-up" /></div><h3>82% of Traffic is Video</h3><p>Video will account for 82% of all internet traffic. Brands without video get left behind.</p></div>
@@ -50,7 +50,7 @@ export function VideoContent() {
 
             <section className="content-services">
                 <div className="content-container">
-                    <div className="section-header"><span className="section-label">WHAT WE CREATE</span><h2 className="section-title">Video <span style={{ background: 'linear-gradient(135deg, #ef4444, #f43f5e)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Services</span></h2></div>
+                    <div className="section-header"><span className="section-label">WHAT WE CREATE</span><h2 className="section-title">Video <span style={{ background: 'var(--primary-green)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Services</span></h2></div>
                     <div className="services-grid">
                         {[
                             { title: 'Short-Form Social', desc: 'Scroll-stopping content for TikTok, Reels, Shorts, and social feeds.', tags: ['TikTok', 'Reels'] },
@@ -75,11 +75,11 @@ export function VideoContent() {
                 </div>
             </section>
 
-            <section className="content-cta" style={{ background: 'linear-gradient(135deg, #ef4444, #f43f5e)' }}>
+            <section className="content-cta" style={{ background: 'var(--primary-green)' }}>
                 <div className="content-container">
                     <div className="cta-box" style={{ background: 'transparent', boxShadow: 'none' }}>
-                        <h2 style={{ color: 'white' }}>Ready to <span style={{ color: '#fecaca' }}>Move Your Audience?</span></h2>
-                        <p style={{ fontSize: '20px', marginBottom: '40px', opacity: 0.9, color: 'white' }}>Start your video project and see the difference motion makes.</p>
+                        <h2 style={{ color: 'var(--accent-yellow)' }}>Ready to <span style={{ color: '#fecaca' }}>Move Your Audience?</span></h2>
+                        <p style={{ fontSize: '20px', marginBottom: '40px', opacity: 0.9, color: 'var(--accent-yellow)' }}>Start your video project and see the difference motion makes.</p>
                         <Link href="/contact" className="btn-white">Start Video Project</Link>
                     </div>
                 </div>

@@ -17,13 +17,13 @@ export function GraphicDesignContent() {
                                 Creative Excellence
                             </span>
                             <h1 className="graphic-hero-title">
-                                Visual design that <span className="text-gradient">stops the scroll.</span>
+                                Visual design that <span className="title-accent">stops the scroll.</span>
                             </h1>
                             <p className="graphic-hero-subtitle">
                                 From print to digital, we create stunning visual assets that elevate your brand, captivate audiences, and drive engagement across every touchpoint.
                             </p>
                             <div className="content-hero-actions">
-                                <Link href="/contact" className="btn-primary large" style={{ background: 'linear-gradient(135deg, #ec4899, #f97316)', border: 'none', color: 'white' }}>
+                                <Link href="/contact" className="btn-primary large" style={{ background: 'var(--primary-green)', border: 'none', color: 'var(--accent-yellow)' }}>
                                     Start Creative Project
                                     <Icon type="arrowRight" />
                                 </Link>
@@ -35,7 +35,7 @@ export function GraphicDesignContent() {
 
                         <div className="graphic-hero-visual">
                             <div className="swatches-visual">
-                                {['#ec4899', '#f97316', '#eab308', '#22c55e', '#0ea5e9', '#8b5cf6'].map((color, i) => (
+                                {['#ec4899', '#f97316', '#eab308', '#22c55e', '#0ea5e9', 'var(--accent-pink)'].map((color, i) => (
                                     <div key={i} className="swatch" style={{ background: color }}></div>
                                 ))}
                             </div>
@@ -55,7 +55,7 @@ export function GraphicDesignContent() {
                             { value: '50+', label: 'Active Clients' }
                         ].map((stat, i) => (
                             <div key={i} style={{ textAlign: 'center' }}>
-                                <div style={{ fontSize: '36px', fontWeight: 600, background: 'linear-gradient(135deg, #ec4899, #f97316)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{stat.value}</div>
+                                <div style={{ fontSize: '36px', fontWeight: 600, background: 'var(--primary-green)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{stat.value}</div>
                                 <div style={{ fontSize: '13px', color: '#64748b', marginTop: '5px' }}>{stat.label}</div>
                             </div>
                         ))}
@@ -68,7 +68,7 @@ export function GraphicDesignContent() {
                 <div className="graphic-container">
                     <div className="section-header text-center">
                         <span className="section-label">WHAT WE CREATE</span>
-                        <h2 className="section-title">Full-spectrum <span className="text-gradient">creative services.</span></h2>
+                        <h2 className="section-title">Full-spectrum <span className="title-accent">creative services.</span></h2>
                     </div>
                     <div className="services-grid">
                         {[
@@ -94,7 +94,7 @@ export function GraphicDesignContent() {
                 <div className="graphic-container">
                     <div className="section-header text-center">
                         <span className="section-label" style={{ color: 'rgba(255,255,255,0.7)' }}>HOW WE WORK</span>
-                        <h2 className="section-title" style={{ color: 'white' }}>Creative process <span style={{ color: '#fda4af' }}>that delivers.</span></h2>
+                        <h2 className="section-title" style={{ color: 'var(--accent-yellow)' }}>Creative process <span style={{ color: '#fda4af' }}>that delivers.</span></h2>
                     </div>
                     <div className="process-steps">
                         {[
@@ -118,7 +118,7 @@ export function GraphicDesignContent() {
                 <div className="graphic-container">
                     <div className="section-header text-center">
                         <span className="section-label">INVESTMENT</span>
-                        <h2 className="section-title">Creative <span className="text-gradient">packages.</span></h2>
+                        <h2 className="section-title">Creative <span className="title-accent">packages.</span></h2>
                     </div>
                     <div className="pricing-grid">
                         <div className="price-card">
@@ -146,7 +146,7 @@ export function GraphicDesignContent() {
                                 <li><Icon type="check" style={{ color: '#f97316' }} /> Dedicated Designer</li>
                                 <li><Icon type="check" style={{ color: '#f97316' }} /> 48h Turnaround</li>
                             </ul>
-                            <Link href="/contact" className="btn-primary" style={{ display: 'block', background: 'linear-gradient(135deg, #ec4899, #f97316)', border: 'none' }}>Start Retainer</Link>
+                            <Link href="/contact" className="btn-primary" style={{ display: 'block', background: 'var(--primary-green)', border: 'none' }}>Start Retainer</Link>
                         </div>
 
                         <div className="price-card">
@@ -170,7 +170,7 @@ export function GraphicDesignContent() {
                 <div className="graphic-container">
                     <div className="section-header text-center">
                         <span className="section-label">OUR WORK</span>
-                        <h2 className="section-title">Recent <span className="text-gradient">creations.</span></h2>
+                        <h2 className="section-title">Recent <span className="title-accent">creations.</span></h2>
                     </div>
                     <div className="portfolio-grid">
                         {[
@@ -179,7 +179,7 @@ export function GraphicDesignContent() {
                             { color: '#eab308' },
                             { color: '#22c55e' },
                             { color: '#0ea5e9' },
-                            { color: '#8b5cf6' },
+                            { color: 'var(--accent-pink)' },
                             { color: '#f43f5e' },
                             { color: '#14b8a6' }
                         ].map((item, i) => (
@@ -234,7 +234,7 @@ export function GraphicDesignContent() {
                                     <option value="other">Other</option>
                                 </select>
                                 <textarea placeholder="Describe your project..." style={{ height: '100px' }}></textarea>
-                                <button type="submit" className="btn-primary" style={{ border: 'none', background: 'linear-gradient(135deg, #ec4899, #f97316)', color: 'white', fontSize: '18px', fontWeight: 600, cursor: 'pointer', padding: '20px' }}>
+                                <button type="submit" className="btn-primary" style={{ border: 'none', background: 'var(--primary-green)', color: 'var(--accent-yellow)', fontSize: '18px', fontWeight: 600, cursor: 'pointer', padding: '20px' }}>
                                     Get Free Quote
                                 </button>
                             </form>

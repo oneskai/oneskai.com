@@ -18,7 +18,7 @@ export function ContentMarketingContent() {
                             </span>
                             <h1 className="content-hero-title">
                                 Content that Grows.
-                                <span className="text-gradient"> Stories that Sell.</span>
+                                <span className="title-accent"> Stories that Sell.</span>
                             </h1>
                             <p className="content-hero-subtitle">
                                 Drive brand awareness and bottom-line growth with premium content marketing services.
@@ -48,7 +48,7 @@ export function ContentMarketingContent() {
                             <div className="content-visual-card">
                                 <div className="content-preview-blocks">
                                     <div className="preview-block">
-                                        <div className="preview-icon" style={{ background: '#7c3aed' }}></div>
+                                        <div className="preview-icon" style={{ background: 'var(--accent-pink)' }}></div>
                                         <div className="preview-line"></div>
                                         <div className="preview-line short"></div>
                                     </div>
@@ -82,7 +82,7 @@ export function ContentMarketingContent() {
                     <div className="section-header text-center">
                         <span className="section-label">THE PROBLEM</span>
                         <h2 className="section-title">
-                            Is Your Content <span className="text-gradient">Actually Working?</span>
+                            Is Your Content <span className="title-accent">Actually Working?</span>
                         </h2>
                         <p className="section-subtitle">
                             Most businesses fall into the trap of producing content for the sake of it.
@@ -141,7 +141,7 @@ export function ContentMarketingContent() {
                         </div>
                         <div className="impact-content">
                             <span className="section-label">DATA-DRIVEN RESULTS</span>
-                            <h2 className="section-title">Content that <span className="text-gradient">Compounds</span></h2>
+                            <h2 className="section-title">Content that <span className="title-accent">Compounds</span></h2>
                             <p className="section-subtitle">
                                 Unlike paid media, content value grows over time. We focus on building a sustainable asset library that generates leads while you sleep.
                             </p>
@@ -171,7 +171,7 @@ export function ContentMarketingContent() {
                 <div className="content-container">
                     <div className="section-header text-center">
                         <span className="section-label">HOW WE WORK</span>
-                        <h2 className="section-title">The <span className="text-gradient">Content Engine</span> Lifecycle</h2>
+                        <h2 className="section-title">The <span className="title-accent">Content Engine</span> Lifecycle</h2>
                         <p className="section-subtitle">Our proven 6-step process to transform your brand into a media powerhouse.</p>
                     </div>
                     <div className="process-steps-grid">
@@ -202,7 +202,7 @@ export function ContentMarketingContent() {
                     <div className="tech-grid">
                         <div className="tech-content">
                             <span className="tech-tag">PROPRIETARY TECHNOLOGY</span>
-                            <h2 className="section-title" style={{ color: 'white' }}>The AI-Powered <span style={{ color: 'var(--accent-yellow)' }}>Edge</span></h2>
+                            <h2 className="section-title" style={{ color: 'var(--accent-yellow)' }}>The AI-Powered <span style={{ color: 'var(--accent-yellow)' }}>Edge</span></h2>
                             <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '18px', marginBottom: '30px' }}>
                                 We combine human creativity with advanced data science. Our proprietary &ldquo;Oneskai Lens&rdquo; tool identifies content gaps before your competitors even know they exist.
                             </p>
@@ -234,7 +234,7 @@ export function ContentMarketingContent() {
                                     </div>
                                     <div style={{ padding: '15px', background: '#1a1a1a', borderRadius: '8px' }}>
                                         <span style={{ fontSize: '10px', color: '#555' }}>CONVERSION LIFT</span>
-                                        <div style={{ fontSize: '24px', fontWeight: 600, color: '#7c3aed' }}>+22%</div>
+                                        <div style={{ fontSize: '24px', fontWeight: 600, color: 'var(--accent-pink)' }}>+22%</div>
                                     </div>
                                 </div>
                             </div>
@@ -249,7 +249,7 @@ export function ContentMarketingContent() {
                     <div className="section-header">
                         <span className="section-label">WHAT WE OFFER</span>
                         <h2 className="section-title">
-                            Full-Stack <span className="text-gradient">Content Solutions</span>
+                            Full-Stack <span className="title-accent">Content Solutions</span>
                         </h2>
                     </div>
                     <div className="services-grid">
@@ -310,15 +310,15 @@ export function ContentMarketingContent() {
                 <div className="content-container">
                     <div className="section-header text-center">
                         <span className="section-label">PROVEN RESULTS</span>
-                        <h2 className="section-title">We Deliver <span className="text-gradient">Measurable Impact</span></h2>
+                        <h2 className="section-title">We Deliver <span className="title-accent">Measurable Impact</span></h2>
                     </div>
                     <div className="testimonial-track">
                         <div className="content-testimonial-card">
-                            <div className="industry-label" style={{ color: '#7c3aed', fontWeight: 600, fontSize: '12px', marginBottom: '10px' }}>SAAS</div>
+                            <div className="industry-label" style={{ color: 'var(--accent-pink)', fontWeight: 600, fontSize: '12px', marginBottom: '10px' }}>SAAS</div>
                             <h3>300% Increase in Inbound Leads</h3>
                             <p style={{ color: 'var(--text-gray)', margin: '15px 0' }}>Through a strategic topic cluster approach, we helped a B2B SaaS company dominate their niche keyword space.</p>
                             <div className="author" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                                <div className="avatar" style={{ width: '40px', height: '40px', borderRadius: '50%', background: '#7c3aed' }}></div>
+                                <div className="avatar" style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'var(--accent-pink)' }}></div>
                                 <div className="info">
                                     <span style={{ display: 'block', fontWeight: 600, fontSize: '14px' }}>Sarah Jenkins</span>
                                     <span style={{ fontSize: '12px', color: 'var(--text-gray)' }}>VP Marketing, CloudScale</span>

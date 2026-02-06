@@ -70,27 +70,15 @@ export function WhyUsSection() {
                 </div>
 
                 <div className="whyus-visual">
-                    <div className="approach-timeline">
-                        <div className="approach-header">
-                            <span className="approach-tag">Our Approach</span>
-                            <h3 className="approach-title">From Strategy to Scale</h3>
-                        </div>
-                        <div className="timeline-track">
-                            {approachSteps.map((step, index) => (
-                                <div key={index} className="timeline-step">
-                                    <div className="step-connector">
-                                        <div className="step-dot">
-                                            <Icon type={step.icon} />
-                                        </div>
-                                        {index < approachSteps.length - 1 && <div className="step-line" />}
-                                    </div>
-                                    <div className="step-content">
-                                        <span className="step-num">{step.number}</span>
-                                        <h4 className="step-title">{step.label}</h4>
-                                        <p className="step-text">{step.desc}</p>
-                                    </div>
-                                </div>
-                            ))}
+                    <div className="whyus-image-container">
+                        <img
+                            src="/images/team-brainstorm.png"
+                            alt="Oneskai Team Brainstorming Strategy"
+                            className="whyus-image"
+                        />
+                        <div className="whyus-badge">
+                            <Icon type="users" />
+                            <span>Elite Strategy Team</span>
                         </div>
                     </div>
                 </div>

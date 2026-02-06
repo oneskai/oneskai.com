@@ -17,13 +17,13 @@ export function EcommerceContent() {
                                 E-commerce Solutions
                             </span>
                             <h1 className="ecom-hero-title">
-                                Online stores that <span className="text-gradient">sell while you sleep.</span>
+                                Online stores that <span className="title-accent">sell while you sleep.</span>
                             </h1>
                             <p className="ecom-hero-subtitle">
                                 Custom e-commerce development on Shopify, WooCommerce, and Magento. We build high-converting stores that scale with your business.
                             </p>
                             <div className="content-hero-actions">
-                                <Link href="/contact" className="btn-primary large" style={{ background: 'linear-gradient(135deg, #22c55e, #eab308)', border: 'none', color: 'white' }}>
+                                <Link href="/contact" className="btn-primary large" style={{ background: 'var(--primary-green)', border: 'none', color: 'var(--accent-yellow)' }}>
                                     Start E-commerce Project
                                     <Icon type="arrowRight" />
                                 </Link>
@@ -53,7 +53,7 @@ export function EcommerceContent() {
                                     <span>Total</span>
                                     <span>$227.00</span>
                                 </div>
-                                <button style={{ width: '100%', padding: '18px', background: 'linear-gradient(135deg, #22c55e, #eab308)', border: 'none', borderRadius: '12px', color: 'white', fontWeight: 600, cursor: 'pointer' }}>
+                                <button style={{ width: '100%', padding: '18px', background: 'var(--primary-green)', border: 'none', borderRadius: '12px', color: 'var(--accent-yellow)', fontWeight: 600, cursor: 'pointer' }}>
                                     Checkout Now
                                 </button>
                             </div>
@@ -73,7 +73,7 @@ export function EcommerceContent() {
                             { value: '99.9%', label: 'Uptime' }
                         ].map((stat, i) => (
                             <div key={i} style={{ textAlign: 'center' }}>
-                                <div style={{ fontSize: '36px', fontWeight: 600, background: 'linear-gradient(135deg, #22c55e, #eab308)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{stat.value}</div>
+                                <div style={{ fontSize: '36px', fontWeight: 600, background: 'var(--primary-green)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{stat.value}</div>
                                 <div style={{ fontSize: '13px', color: '#64748b', marginTop: '5px' }}>{stat.label}</div>
                             </div>
                         ))}
@@ -86,7 +86,7 @@ export function EcommerceContent() {
                 <div className="ecom-container">
                     <div className="section-header text-center">
                         <span className="section-label">PLATFORMS</span>
-                        <h2 className="section-title">Build on <span className="text-gradient">any platform.</span></h2>
+                        <h2 className="section-title">Build on <span className="title-accent">any platform.</span></h2>
                     </div>
                     <div className="platforms-grid">
                         {[
@@ -110,7 +110,7 @@ export function EcommerceContent() {
                 <div className="ecom-container">
                     <div className="section-header text-center">
                         <span className="section-label" style={{ color: 'rgba(255,255,255,0.7)' }}>CAPABILITIES</span>
-                        <h2 className="section-title" style={{ color: 'white' }}>Everything you need <span style={{ color: '#86efac' }}>to sell online.</span></h2>
+                        <h2 className="section-title" style={{ color: 'var(--accent-yellow)' }}>Everything you need <span style={{ color: '#86efac' }}>to sell online.</span></h2>
                     </div>
                     <div className="features-grid">
                         {[
@@ -132,7 +132,7 @@ export function EcommerceContent() {
                 <div className="ecom-container">
                     <div className="section-header text-center">
                         <span className="section-label">INVESTMENT</span>
-                        <h2 className="section-title">E-commerce <span className="text-gradient">packages.</span></h2>
+                        <h2 className="section-title">E-commerce <span className="title-accent">packages.</span></h2>
                     </div>
                     <div className="pricing-grid">
                         <div className="price-card">
@@ -160,7 +160,7 @@ export function EcommerceContent() {
                                 <li><Icon type="check" style={{ color: '#eab308' }} /> SEO Optimization</li>
                                 <li><Icon type="check" style={{ color: '#eab308' }} /> 6-8 Week Delivery</li>
                             </ul>
-                            <Link href="/contact" className="btn-primary" style={{ display: 'block', background: 'linear-gradient(135deg, #22c55e, #eab308)', border: 'none' }}>Start Project</Link>
+                            <Link href="/contact" className="btn-primary" style={{ display: 'block', background: 'var(--primary-green)', border: 'none' }}>Start Project</Link>
                         </div>
 
                         <div className="price-card">
@@ -224,7 +224,7 @@ export function EcommerceContent() {
                                     <option value="custom">Custom / Headless</option>
                                 </select>
                                 <textarea placeholder="Tell us about your store..." style={{ height: '100px' }}></textarea>
-                                <button type="submit" className="btn-primary" style={{ border: 'none', background: 'linear-gradient(135deg, #22c55e, #eab308)', color: 'white', fontSize: '18px', fontWeight: 600, cursor: 'pointer', padding: '20px' }}>
+                                <button type="submit" className="btn-primary" style={{ border: 'none', background: 'var(--primary-green)', color: 'var(--accent-yellow)', fontSize: '18px', fontWeight: 600, cursor: 'pointer', padding: '20px' }}>
                                     Get Free Consultation
                                 </button>
                             </form>

@@ -6,15 +6,15 @@ import '@/styles/content-marketing.css';
 export function RemarketingContent() {
     return (
         <div className="content-marketing-page">
-            <section className="content-hero" style={{ background: 'radial-gradient(circle at 20% 30%, rgba(234, 179, 8, 0.15) 0%, transparent 40%), radial-gradient(circle at 80% 70%, rgba(245, 158, 11, 0.15) 0%, transparent 40%), var(--bg-white)' }}>
+            <section className="content-hero" style={{ background: 'var(--bg-cream)' }}>
                 <div className="content-container">
                     <div className="content-hero-grid">
                         <div className="content-hero-content">
-                            <span className="content-badge" style={{ background: 'rgba(234, 179, 8, 0.15)', color: '#eab308', border: '1px solid rgba(234, 179, 8, 0.3)' }}><Icon type="refresh" />Remarketing</span>
-                            <h1 className="content-hero-title">Bring Them <span style={{ background: 'linear-gradient(135deg, #eab308, #f59e0b)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Back to Buy.</span></h1>
+                            <span className="content-badge" style={{ background: 'rgba(255, 45, 117, 0.08)', color: 'var(--accent-pink)', border: '1px solid rgba(255, 45, 117, 0.1)' }}><Icon type="refresh" />Remarketing</span>
+                            <h1 className="content-hero-title">Bring Them <span style={{ background: 'var(--primary-green)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Back to Buy.</span></h1>
                             <p className="content-hero-subtitle">Strategic retargeting campaigns that recapture visitors who didn&apos;t convert the first time. Turn window shoppers into customers.</p>
                             <div className="content-hero-actions">
-                                <Link href="/contact" className="btn-primary large" style={{ background: 'linear-gradient(135deg, #eab308, #f59e0b)', border: 'none' }}>Get Remarketing Audit<Icon type="arrowRight" /></Link>
+                                <Link href="/contact" className="btn-primary large" style={{ background: 'var(--primary-green)', border: 'none' }}>Get Remarketing Audit<Icon type="arrowRight" /></Link>
                                 <Link href="#case-studies" className="btn-outline">See Results</Link>
                             </div>
                             <div className="hero-stat-bars">
@@ -23,8 +23,8 @@ export function RemarketingContent() {
                             </div>
                         </div>
                         <div className="content-hero-visual">
-                            <div className="content-visual-card" style={{ background: 'linear-gradient(135deg, #eab308, #f59e0b)' }}>
-                                <div style={{ padding: '40px', color: 'white', textAlign: 'center' }}>
+                            <div className="content-visual-card" style={{ background: 'var(--primary-green)' }}>
+                                <div style={{ padding: '40px', color: 'var(--accent-yellow)', textAlign: 'center' }}>
                                     <div style={{ fontSize: '60px' }}>🔄</div>
                                     <div style={{ fontSize: '18px', marginTop: '10px' }}>Second Chance Conversions</div>
                                 </div>
@@ -38,7 +38,7 @@ export function RemarketingContent() {
                 <div className="content-container">
                     <div className="section-header text-center">
                         <span className="section-label">THE OPPORTUNITY</span>
-                        <h2 className="section-title">98% Leave Without <span style={{ background: 'linear-gradient(135deg, #eab308, #f59e0b)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Converting</span></h2>
+                        <h2 className="section-title">98% Leave Without <span style={{ background: 'var(--primary-green)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Converting</span></h2>
                     </div>
                     <div className="challenges-grid">
                         <div className="challenge-card"><div className="challenge-icon" style={{ background: 'rgba(234, 179, 8, 0.15)', color: '#eab308' }}><Icon type="users" /></div><h3>Warm Audiences</h3><p>Visitors who already know you are 10x more likely to convert than cold prospects.</p></div>
@@ -50,7 +50,7 @@ export function RemarketingContent() {
 
             <section className="content-services">
                 <div className="content-container">
-                    <div className="section-header"><span className="section-label">WHAT WE OFFER</span><h2 className="section-title">Remarketing <span style={{ background: 'linear-gradient(135deg, #eab308, #f59e0b)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Services</span></h2></div>
+                    <div className="section-header"><span className="section-label">WHAT WE OFFER</span><h2 className="section-title">Remarketing <span style={{ background: 'var(--primary-green)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Services</span></h2></div>
                     <div className="services-grid">
                         {[
                             { title: 'Dynamic Remarketing', desc: 'Show visitors the exact products they viewed with personalized ads.', tags: ['Ecommerce', 'Product Feeds'] },
@@ -75,11 +75,11 @@ export function RemarketingContent() {
                 </div>
             </section>
 
-            <section className="content-cta" style={{ background: 'linear-gradient(135deg, #eab308, #f59e0b)' }}>
+            <section className="content-cta" style={{ background: 'var(--primary-green)' }}>
                 <div className="content-container">
                     <div className="cta-box" style={{ background: 'transparent', boxShadow: 'none' }}>
-                        <h2 style={{ color: 'white' }}>Ready to Recover <span style={{ color: '#fef3c7' }}>Lost Revenue?</span></h2>
-                        <p style={{ fontSize: '20px', marginBottom: '40px', opacity: 0.9, color: 'white' }}>Get a remarketing audit and see what you&apos;re leaving on the table.</p>
+                        <h2 style={{ color: 'var(--accent-yellow)' }}>Ready to Recover <span style={{ color: '#fef3c7' }}>Lost Revenue?</span></h2>
+                        <p style={{ fontSize: '20px', marginBottom: '40px', opacity: 0.9, color: 'var(--accent-yellow)' }}>Get a remarketing audit and see what you&apos;re leaving on the table.</p>
                         <Link href="/contact" className="btn-white">Get Remarketing Audit</Link>
                     </div>
                 </div>

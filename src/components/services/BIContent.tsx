@@ -6,15 +6,15 @@ import '@/styles/content-marketing.css';
 export function BIContent() {
     return (
         <div className="content-marketing-page">
-            <section className="content-hero" style={{ background: 'radial-gradient(circle at 20% 30%, rgba(34, 197, 94, 0.15) 0%, transparent 40%), radial-gradient(circle at 80% 70%, rgba(16, 185, 129, 0.15) 0%, transparent 40%), var(--bg-white)' }}>
+            <section className="content-hero" style={{ background: 'var(--bg-cream)' }}>
                 <div className="content-container">
                     <div className="content-hero-grid">
                         <div className="content-hero-content">
-                            <span className="content-badge" style={{ background: 'rgba(34, 197, 94, 0.15)', color: '#22c55e', border: '1px solid rgba(34, 197, 94, 0.3)' }}><Icon type="pieChart" />Business Intelligence</span>
-                            <h1 className="content-hero-title">Data That <span style={{ background: 'linear-gradient(135deg, #22c55e, #10b981)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Drives Decisions.</span></h1>
+                            <span className="content-badge" style={{ background: 'rgba(255, 45, 117, 0.08)', color: 'var(--accent-pink)', border: '1px solid rgba(255, 45, 117, 0.1)' }}><Icon type="pieChart" />Business Intelligence</span>
+                            <h1 className="content-hero-title">Data That <span style={{ background: 'var(--primary-green)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Drives Decisions.</span></h1>
                             <p className="content-hero-subtitle">Transform raw data into actionable business intelligence. Custom dashboards, automated reporting, and insights that fuel smarter decisions.</p>
                             <div className="content-hero-actions">
-                                <Link href="/contact" className="btn-primary large" style={{ background: 'linear-gradient(135deg, #22c55e, #10b981)', border: 'none' }}>Get BI Demo<Icon type="arrowRight" /></Link>
+                                <Link href="/contact" className="btn-primary large" style={{ background: 'var(--primary-green)', border: 'none' }}>Get BI Demo<Icon type="arrowRight" /></Link>
                                 <Link href="#case-studies" className="btn-outline">See Dashboards</Link>
                             </div>
                             <div className="hero-stat-bars">
@@ -23,8 +23,8 @@ export function BIContent() {
                             </div>
                         </div>
                         <div className="content-hero-visual">
-                            <div className="content-visual-card" style={{ background: 'linear-gradient(135deg, #22c55e, #10b981)' }}>
-                                <div style={{ padding: '30px', color: 'white' }}>
+                            <div className="content-visual-card" style={{ background: 'var(--primary-green)' }}>
+                                <div style={{ padding: '30px', color: 'var(--accent-yellow)' }}>
                                     <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px' }}>
                                         {[{ label: 'Revenue', value: '$2.4M' }, { label: 'CAC', value: '$45' }, { label: 'LTV', value: '$890' }, { label: 'ROAS', value: '4.2x' }].map((m, i) => (
                                             <div key={i} style={{ padding: '15px', background: 'rgba(255,255,255,0.15)', borderRadius: '8px', textAlign: 'center' }}>
@@ -44,7 +44,7 @@ export function BIContent() {
                 <div className="content-container">
                     <div className="section-header text-center">
                         <span className="section-label">THE PROBLEM</span>
-                        <h2 className="section-title">Drowning in Data, <span style={{ background: 'linear-gradient(135deg, #22c55e, #10b981)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Starving for Insights?</span></h2>
+                        <h2 className="section-title">Drowning in Data, <span style={{ background: 'var(--primary-green)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Starving for Insights?</span></h2>
                     </div>
                     <div className="challenges-grid">
                         <div className="challenge-card"><div className="challenge-icon" style={{ background: 'rgba(34, 197, 94, 0.15)', color: '#22c55e' }}><Icon type="layers" /></div><h3>Siloed Data Sources</h3><p>Data scattered across platforms with no unified view of marketing performance.</p></div>
@@ -56,7 +56,7 @@ export function BIContent() {
 
             <section className="content-services">
                 <div className="content-container">
-                    <div className="section-header"><span className="section-label">WHAT WE BUILD</span><h2 className="section-title">BI <span style={{ background: 'linear-gradient(135deg, #22c55e, #10b981)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Solutions</span></h2></div>
+                    <div className="section-header"><span className="section-label">WHAT WE BUILD</span><h2 className="section-title">BI <span style={{ background: 'var(--primary-green)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Solutions</span></h2></div>
                     <div className="services-grid">
                         {[
                             { title: 'Executive Dashboards', desc: 'Real-time KPI dashboards for leadership to track business health at a glance.', tags: ['Looker', 'Tableau'] },
@@ -81,11 +81,11 @@ export function BIContent() {
                 </div>
             </section>
 
-            <section className="content-cta" style={{ background: 'linear-gradient(135deg, #22c55e, #10b981)' }}>
+            <section className="content-cta" style={{ background: 'var(--primary-green)' }}>
                 <div className="content-container">
                     <div className="cta-box" style={{ background: 'transparent', boxShadow: 'none' }}>
-                        <h2 style={{ color: 'white' }}>Ready for <span style={{ color: '#bbf7d0' }}>Data-Driven Decisions?</span></h2>
-                        <p style={{ fontSize: '20px', marginBottom: '40px', opacity: 0.9, color: 'white' }}>See a demo of our BI dashboards and how they can transform your business.</p>
+                        <h2 style={{ color: 'var(--accent-yellow)' }}>Ready for <span style={{ color: '#bbf7d0' }}>Data-Driven Decisions?</span></h2>
+                        <p style={{ fontSize: '20px', marginBottom: '40px', opacity: 0.9, color: 'var(--accent-yellow)' }}>See a demo of our BI dashboards and how they can transform your business.</p>
                         <Link href="/contact" className="btn-white">Schedule BI Demo</Link>
                     </div>
                 </div>

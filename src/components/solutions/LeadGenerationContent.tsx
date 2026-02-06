@@ -6,15 +6,15 @@ import '@/styles/content-marketing.css';
 export function LeadGenerationContent() {
     return (
         <div className="content-marketing-page">
-            <section className="content-hero" style={{ background: 'radial-gradient(circle at 20% 30%, rgba(59, 130, 246, 0.15) 0%, transparent 40%), radial-gradient(circle at 80% 70%, rgba(96, 165, 250, 0.15) 0%, transparent 40%), var(--bg-white)' }}>
+            <section className="content-hero" style={{ background: 'var(--bg-cream)' }}>
                 <div className="content-container">
                     <div className="content-hero-grid">
                         <div className="content-hero-content">
-                            <span className="content-badge" style={{ background: 'rgba(59, 130, 246, 0.15)', color: '#3b82f6', border: '1px solid rgba(59, 130, 246, 0.3)' }}><Icon type="target" />Lead Generation</span>
-                            <h1 className="content-hero-title">Fill Your <span style={{ background: 'linear-gradient(135deg, #3b82f6, #60a5fa)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Sales Pipeline.</span></h1>
+                            <span className="content-badge" style={{ background: 'rgba(255, 45, 117, 0.08)', color: 'var(--accent-pink)', border: '1px solid rgba(255, 45, 117, 0.1)' }}><Icon type="target" />Lead Generation</span>
+                            <h1 className="content-hero-title">Fill Your <span className="title-accent">Sales Pipeline.</span></h1>
                             <p className="content-hero-subtitle">Predictable, scalable lead generation that delivers qualified prospects to your sales team every month—not just traffic, but real opportunities.</p>
                             <div className="content-hero-actions">
-                                <Link href="/contact" className="btn-primary large" style={{ background: 'linear-gradient(135deg, #3b82f6, #60a5fa)', border: 'none' }}>Get Lead Gen Strategy<Icon type="arrowRight" /></Link>
+                                <Link href="/contact" className="btn-primary large" style={{ background: 'var(--primary-green)', border: 'none' }}>Get Lead Gen Strategy<Icon type="arrowRight" /></Link>
                                 <Link href="#case-studies" className="btn-outline">See Results</Link>
                             </div>
                             <div className="hero-stat-bars">
@@ -23,8 +23,8 @@ export function LeadGenerationContent() {
                             </div>
                         </div>
                         <div className="content-hero-visual">
-                            <div className="content-visual-card" style={{ background: 'linear-gradient(135deg, #3b82f6, #60a5fa)' }}>
-                                <div style={{ padding: '40px', color: 'white', textAlign: 'center' }}>
+                            <div className="content-visual-card" style={{ background: 'var(--primary-green)' }}>
+                                <div style={{ padding: '40px', color: 'var(--accent-yellow)', textAlign: 'center' }}>
                                     <div style={{ fontSize: '60px' }}>📈</div>
                                     <div style={{ fontSize: '18px', marginTop: '10px' }}>Pipeline Growth</div>
                                 </div>
@@ -38,7 +38,7 @@ export function LeadGenerationContent() {
                 <div className="content-container">
                     <div className="section-header text-center">
                         <span className="section-label">THE PROBLEM</span>
-                        <h2 className="section-title">Not Enough <span style={{ background: 'linear-gradient(135deg, #3b82f6, #60a5fa)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Qualified Leads?</span></h2>
+                        <h2 className="section-title">Not Enough <span className="title-accent">Qualified Leads?</span></h2>
                     </div>
                     <div className="challenges-grid">
                         <div className="challenge-card"><div className="challenge-icon" style={{ background: 'rgba(59, 130, 246, 0.15)', color: '#3b82f6' }}><Icon type="trending-down" /></div><h3>Inconsistent Pipeline</h3><p>Some months are feast, others famine. Your sales team can&apos;t predict their numbers.</p></div>
@@ -50,7 +50,7 @@ export function LeadGenerationContent() {
 
             <section className="content-services">
                 <div className="content-container">
-                    <div className="section-header"><span className="section-label">LEAD GEN ENGINE</span><h2 className="section-title">How We <span style={{ background: 'linear-gradient(135deg, #3b82f6, #60a5fa)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Generate Leads</span></h2></div>
+                    <div className="section-header"><span className="section-label">LEAD GEN ENGINE</span><h2 className="section-title">How We <span className="title-accent">Generate Leads</span></h2></div>
                     <div className="services-grid">
                         {[
                             { title: 'Paid Acquisition', desc: 'Google, LinkedIn, and Facebook campaigns optimized for lead quality—not just volume.', tags: ['PPC', 'LinkedIn', 'Meta'] },
@@ -75,11 +75,11 @@ export function LeadGenerationContent() {
                 </div>
             </section>
 
-            <section className="content-cta" style={{ background: 'linear-gradient(135deg, #3b82f6, #60a5fa)' }}>
+            <section className="content-cta" style={{ background: 'var(--primary-green)' }}>
                 <div className="content-container">
                     <div className="cta-box" style={{ background: 'transparent', boxShadow: 'none' }}>
-                        <h2 style={{ color: 'white' }}>Ready for <span style={{ color: '#dbeafe' }}>Predictable Pipeline?</span></h2>
-                        <p style={{ fontSize: '20px', marginBottom: '40px', opacity: 0.9, color: 'white' }}>Get a custom lead generation strategy for your business.</p>
+                        <h2 style={{ color: 'var(--accent-yellow)' }}>Ready for <span style={{ color: '#dbeafe' }}>Predictable Pipeline?</span></h2>
+                        <p style={{ fontSize: '20px', marginBottom: '40px', opacity: 0.9, color: 'var(--accent-yellow)' }}>Get a custom lead generation strategy for your business.</p>
                         <Link href="/contact" className="btn-white">Get Lead Gen Strategy</Link>
                     </div>
                 </div>

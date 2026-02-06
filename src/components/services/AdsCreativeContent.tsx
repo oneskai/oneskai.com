@@ -6,15 +6,15 @@ import '@/styles/content-marketing.css';
 export function AdsCreativeContent() {
     return (
         <div className="content-marketing-page">
-            <section className="content-hero" style={{ background: 'radial-gradient(circle at 20% 30%, rgba(236, 72, 153, 0.15) 0%, transparent 40%), radial-gradient(circle at 80% 70%, rgba(244, 114, 182, 0.15) 0%, transparent 40%), var(--bg-white)' }}>
+            <section className="content-hero" style={{ background: 'var(--bg-cream)' }}>
                 <div className="content-container">
                     <div className="content-hero-grid">
                         <div className="content-hero-content">
-                            <span className="content-badge" style={{ background: 'rgba(236, 72, 153, 0.15)', color: '#ec4899', border: '1px solid rgba(236, 72, 153, 0.3)' }}><Icon type="image" />Ads Creative</span>
-                            <h1 className="content-hero-title">Creatives That <span style={{ background: 'linear-gradient(135deg, #ec4899, #f472b6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Stop The Scroll.</span></h1>
+                            <span className="content-badge" style={{ background: 'rgba(255, 45, 117, 0.08)', color: 'var(--accent-pink)', border: '1px solid rgba(255, 45, 117, 0.1)' }}><Icon type="image" />Ads Creative</span>
+                            <h1 className="content-hero-title">Creatives That <span style={{ background: 'var(--primary-green)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Stop The Scroll.</span></h1>
                             <p className="content-hero-subtitle">High-performance ad creative that captures attention, communicates value, and drives conversions across every platform.</p>
                             <div className="content-hero-actions">
-                                <Link href="/contact" className="btn-primary large" style={{ background: 'linear-gradient(135deg, #ec4899, #f472b6)', border: 'none' }}>Get Creative Brief<Icon type="arrowRight" /></Link>
+                                <Link href="/contact" className="btn-primary large" style={{ background: 'var(--primary-green)', border: 'none' }}>Get Creative Brief<Icon type="arrowRight" /></Link>
                                 <Link href="#case-studies" className="btn-outline">View Portfolio</Link>
                             </div>
                             <div className="hero-stat-bars">
@@ -23,8 +23,8 @@ export function AdsCreativeContent() {
                             </div>
                         </div>
                         <div className="content-hero-visual">
-                            <div className="content-visual-card" style={{ background: 'linear-gradient(135deg, #ec4899, #f472b6)' }}>
-                                <div style={{ padding: '40px', color: 'white', textAlign: 'center' }}>
+                            <div className="content-visual-card" style={{ background: 'var(--primary-green)' }}>
+                                <div style={{ padding: '40px', color: 'var(--accent-yellow)', textAlign: 'center' }}>
                                     <div style={{ fontSize: '60px' }}>🎨</div>
                                     <div style={{ fontSize: '18px', marginTop: '10px' }}>Scroll-Stopping Creative</div>
                                 </div>
@@ -38,7 +38,7 @@ export function AdsCreativeContent() {
                 <div className="content-container">
                     <div className="section-header text-center">
                         <span className="section-label">THE PROBLEM</span>
-                        <h2 className="section-title">Are Your Ads <span style={{ background: 'linear-gradient(135deg, #ec4899, #f472b6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Being Ignored?</span></h2>
+                        <h2 className="section-title">Are Your Ads <span style={{ background: 'var(--primary-green)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Being Ignored?</span></h2>
                     </div>
                     <div className="challenges-grid">
                         <div className="challenge-card"><div className="challenge-icon" style={{ background: 'rgba(236, 72, 153, 0.15)', color: '#ec4899' }}><Icon type="eyeOff" /></div><h3>Creative Fatigue</h3><p>Same old ads get ignored. Your audience scrolls right past without a second glance.</p></div>
@@ -50,7 +50,7 @@ export function AdsCreativeContent() {
 
             <section className="content-services">
                 <div className="content-container">
-                    <div className="section-header"><span className="section-label">WHAT WE CREATE</span><h2 className="section-title">Ad Creative <span style={{ background: 'linear-gradient(135deg, #ec4899, #f472b6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Services</span></h2></div>
+                    <div className="section-header"><span className="section-label">WHAT WE CREATE</span><h2 className="section-title">Ad Creative <span style={{ background: 'var(--primary-green)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Services</span></h2></div>
                     <div className="services-grid">
                         {[
                             { title: 'Static Ads', desc: 'Eye-catching image ads optimized for Facebook, Instagram, LinkedIn, and display networks.', tags: ['Carousel', 'Single Image'] },
@@ -75,11 +75,11 @@ export function AdsCreativeContent() {
                 </div>
             </section>
 
-            <section className="content-cta" style={{ background: 'linear-gradient(135deg, #ec4899, #f472b6)' }}>
+            <section className="content-cta" style={{ background: 'var(--primary-green)' }}>
                 <div className="content-container">
                     <div className="cta-box" style={{ background: 'transparent', boxShadow: 'none' }}>
-                        <h2 style={{ color: 'white' }}>Ready to <span style={{ color: '#fce7f3' }}>Stop The Scroll?</span></h2>
-                        <p style={{ fontSize: '20px', marginBottom: '40px', opacity: 0.9, color: 'white' }}>Get a creative brief and see sample concepts for your brand.</p>
+                        <h2 style={{ color: 'var(--accent-yellow)' }}>Ready to <span style={{ color: '#fce7f3' }}>Stop The Scroll?</span></h2>
+                        <p style={{ fontSize: '20px', marginBottom: '40px', opacity: 0.9, color: 'var(--accent-yellow)' }}>Get a creative brief and see sample concepts for your brand.</p>
                         <Link href="/contact" className="btn-white">Get Creative Brief</Link>
                     </div>
                 </div>

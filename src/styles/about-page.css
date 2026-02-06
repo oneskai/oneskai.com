@@ -21,7 +21,7 @@
     right: 0;
     width: 50%;
     height: 100%;
-    background: radial-gradient(circle at 80% 30%, rgba(251, 191, 36, 0.15) 0%, transparent 50%);
+    background: var(--bg-cream);
     pointer-events: none;
 }
 

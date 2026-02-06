@@ -17,13 +17,13 @@ export function BrandingContent() {
                                 Strategic Brand Design
                             </span>
                             <h1 className="branding-hero-title">
-                                Build a brand that <span className="text-gradient">people remember.</span>
+                                Build a brand that <span className="title-accent">people remember.</span>
                             </h1>
                             <p className="branding-hero-subtitle">
                                 We craft distinctive brand identities that capture your essence, differentiate you from competitors, and create lasting emotional connections with your audience.
                             </p>
                             <div className="content-hero-actions">
-                                <Link href="/contact" className="btn-primary large" style={{ background: 'linear-gradient(135deg, #f59e0b, #10b981)', border: 'none', color: 'white' }}>
+                                <Link href="/contact" className="btn-primary large" style={{ background: 'var(--primary-green)', border: 'none', color: 'var(--accent-yellow)' }}>
                                     Start Branding Project
                                     <Icon type="arrowRight" />
                                 </Link>
@@ -36,10 +36,10 @@ export function BrandingContent() {
                         <div className="branding-hero-visual">
                             <div className="brand-showcase">
                                 <div className="logo-grid">
-                                    <div className="logo-card" style={{ background: '#f59e0b', color: 'white' }}>OK</div>
-                                    <div className="logo-card" style={{ background: '#10b981', color: 'white' }}>∞</div>
-                                    <div className="logo-card" style={{ background: '#0ea5e9', color: 'white' }}>◆</div>
-                                    <div className="logo-card" style={{ background: '#8b5cf6', color: 'white' }}>★</div>
+                                    <div className="logo-card" style={{ background: '#f59e0b', color: 'var(--accent-yellow)' }}>OK</div>
+                                    <div className="logo-card" style={{ background: '#10b981', color: 'var(--accent-yellow)' }}>∞</div>
+                                    <div className="logo-card" style={{ background: '#0ea5e9', color: 'var(--accent-yellow)' }}>◆</div>
+                                    <div className="logo-card" style={{ background: 'var(--accent-pink)', color: 'var(--accent-yellow)' }}>★</div>
                                 </div>
                             </div>
                         </div>
@@ -58,7 +58,7 @@ export function BrandingContent() {
                             { value: '8+', label: 'Years Experience' }
                         ].map((stat, i) => (
                             <div key={i} className="trust-brand">
-                                <div style={{ fontSize: '36px', fontWeight: 600, background: 'linear-gradient(135deg, #f59e0b, #10b981)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{stat.value}</div>
+                                <div style={{ fontSize: '36px', fontWeight: 600, background: 'var(--primary-green)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{stat.value}</div>
                                 <div style={{ fontSize: '13px', color: '#64748b', marginTop: '5px' }}>{stat.label}</div>
                             </div>
                         ))}
@@ -71,7 +71,7 @@ export function BrandingContent() {
                 <div className="branding-container">
                     <div className="section-header text-center">
                         <span className="section-label">WHAT WE CREATE</span>
-                        <h2 className="section-title">Complete brand <span className="text-gradient">identity systems.</span></h2>
+                        <h2 className="section-title">Complete brand <span className="title-accent">identity systems.</span></h2>
                     </div>
                     <div className="services-grid">
                         {[
@@ -97,7 +97,7 @@ export function BrandingContent() {
                 <div className="branding-container">
                     <div className="section-header text-center">
                         <span className="section-label" style={{ color: 'rgba(255,255,255,0.7)' }}>OUR APPROACH</span>
-                        <h2 className="section-title" style={{ color: 'white' }}>Strategic brand <span style={{ color: '#fbbf24' }}>development.</span></h2>
+                        <h2 className="section-title" style={{ color: 'var(--accent-yellow)' }}>Strategic brand <span style={{ color: '#fbbf24' }}>development.</span></h2>
                     </div>
                     <div className="process-cards">
                         {[
@@ -121,7 +121,7 @@ export function BrandingContent() {
                 <div className="branding-container">
                     <div className="section-header text-center">
                         <span className="section-label">WHAT YOU GET</span>
-                        <h2 className="section-title">Complete brand <span className="text-gradient">toolkit.</span></h2>
+                        <h2 className="section-title">Complete brand <span className="title-accent">toolkit.</span></h2>
                     </div>
                     <div className="deliverables-grid">
                         <div className="deliverables-list">
@@ -133,7 +133,7 @@ export function BrandingContent() {
                                 { title: 'Business Collateral', desc: 'Cards, letterhead, email signatures' }
                             ].map((item, i) => (
                                 <div key={i} className="deliverable-item">
-                                    <div style={{ width: '50px', height: '50px', background: 'linear-gradient(135deg, #f59e0b, #10b981)', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', flexShrink: 0 }}>
+                                    <div style={{ width: '50px', height: '50px', background: 'var(--primary-green)', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--accent-yellow)', flexShrink: 0 }}>
                                         <Icon type="check" />
                                     </div>
                                     <div>
@@ -157,7 +157,7 @@ export function BrandingContent() {
                 <div className="branding-container">
                     <div className="section-header text-center">
                         <span className="section-label">INVESTMENT</span>
-                        <h2 className="section-title">Branding <span className="text-gradient">packages.</span></h2>
+                        <h2 className="section-title">Branding <span className="title-accent">packages.</span></h2>
                     </div>
                     <div className="pricing-grid">
                         <div className="price-card">
@@ -185,7 +185,7 @@ export function BrandingContent() {
                                 <li><Icon type="check" style={{ color: '#10b981' }} /> Business Collateral</li>
                                 <li><Icon type="check" style={{ color: '#10b981' }} /> Social Media Templates</li>
                             </ul>
-                            <Link href="/contact" className="btn-primary" style={{ display: 'block', background: 'linear-gradient(135deg, #f59e0b, #10b981)', border: 'none' }}>Start Project</Link>
+                            <Link href="/contact" className="btn-primary" style={{ display: 'block', background: 'var(--primary-green)', border: 'none' }}>Start Project</Link>
                         </div>
 
                         <div className="price-card">
@@ -210,17 +210,17 @@ export function BrandingContent() {
                 <div className="branding-container">
                     <div className="section-header text-center">
                         <span className="section-label">SELECTED WORK</span>
-                        <h2 className="section-title">Brand <span className="text-gradient">showcase.</span></h2>
+                        <h2 className="section-title">Brand <span className="title-accent">showcase.</span></h2>
                     </div>
                     <div className="portfolio-showcase">
                         {[
                             { name: 'TechFlow', color: '#f59e0b' },
                             { name: 'GreenLeaf', color: '#10b981' },
-                            { name: 'Luxe Co', color: '#8b5cf6' },
+                            { name: 'Luxe Co', color: 'var(--accent-pink)' },
                             { name: 'Nova', color: '#0ea5e9' }
                         ].map((brand, i) => (
                             <div key={i} className="portfolio-item" style={{ background: `linear-gradient(135deg, ${brand.color}40, ${brand.color}80)` }}>
-                                <span style={{ fontSize: '32px', fontWeight: 600, color: 'white' }}>{brand.name}</span>
+                                <span style={{ fontSize: '32px', fontWeight: 600, color: 'var(--accent-yellow)' }}>{brand.name}</span>
                             </div>
                         ))}
                     </div>
@@ -287,7 +287,7 @@ export function BrandingContent() {
                                     <option value="logo">Logo Only</option>
                                 </select>
                                 <textarea placeholder="Tell us about your brand vision..." style={{ height: '100px' }}></textarea>
-                                <button type="submit" className="btn-primary" style={{ border: 'none', background: 'linear-gradient(135deg, #f59e0b, #10b981)', color: 'white', fontSize: '18px', fontWeight: 600, cursor: 'pointer', padding: '20px' }}>
+                                <button type="submit" className="btn-primary" style={{ border: 'none', background: 'var(--primary-green)', color: 'var(--accent-yellow)', fontSize: '18px', fontWeight: 600, cursor: 'pointer', padding: '20px' }}>
                                     Get Free Consultation
                                 </button>
                             </form>

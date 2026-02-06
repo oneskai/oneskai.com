@@ -52,7 +52,7 @@ export function SolutionsSection() {
                     <h2 className="solutions-headline-large">
                         The Only Growth Engine That
                         <br />
-                        <span className="text-gradient">Scale Where You Scale</span>
+                        <span className="title-accent">Scale Where You Scale</span>
                     </h2>
                     <p className="solutions-subtitle-refined">
                         Stop juggling disconnected agencies. Oneskai integrates deep strategy with elite execution to solve your most complex marketing challenges.

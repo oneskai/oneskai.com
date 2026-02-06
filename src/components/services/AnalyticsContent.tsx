@@ -16,13 +16,13 @@ export function AnalyticsContent() {
                                 Data & Analytics
                             </span>
                             <h1 className="analytics-hero-title">
-                                Turn data into <span className="text-gradient">decisions.</span>
+                                Turn data into <span className="title-accent">decisions.</span>
                             </h1>
                             <p className="analytics-hero-subtitle">
                                 GA4 implementation, custom dashboards, and data visualization that transform raw numbers into actionable insights.
                             </p>
                             <div className="content-hero-actions">
-                                <Link href="/contact" className="btn-primary large" style={{ background: 'linear-gradient(135deg, #f97316, #ea580c)', border: 'none', color: 'white' }}>
+                                <Link href="/contact" className="btn-primary large" style={{ background: 'var(--primary-green)', border: 'none', color: 'var(--accent-yellow)' }}>
                                     Get Analytics Audit
                                     <Icon type="arrowRight" />
                                 </Link>
@@ -33,7 +33,7 @@ export function AnalyticsContent() {
                             <div style={{ marginBottom: '20px', color: '#94a3b8', fontSize: '14px' }}>Performance Dashboard</div>
                             {[{ label: 'Sessions', value: '125,847', growth: '+23%' }, { label: 'Conversions', value: '4,521', growth: '+18%' }, { label: 'Revenue', value: '$284,392', growth: '+31%' }].map((metric, i) => (
                                 <div key={i} style={{ background: '#0f172a', padding: '20px', borderRadius: '12px', marginBottom: '10px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                                    <div><div style={{ color: '#94a3b8', fontSize: '13px' }}>{metric.label}</div><div style={{ color: 'white', fontSize: '24px', fontWeight: 600 }}>{metric.value}</div></div>
+                                    <div><div style={{ color: '#94a3b8', fontSize: '13px' }}>{metric.label}</div><div style={{ color: 'var(--accent-yellow)', fontSize: '24px', fontWeight: 600 }}>{metric.value}</div></div>
                                     <div style={{ color: '#22c55e', fontWeight: 600 }}>{metric.growth}</div>
                                 </div>
                             ))}
@@ -47,7 +47,7 @@ export function AnalyticsContent() {
                     <div style={{ display: 'flex', justifyContent: 'center', gap: '80px', flexWrap: 'wrap' }}>
                         {[{ value: '300+', label: 'GA4 Setups' }, { value: '500+', label: 'Dashboards Built' }, { value: 'Certified', label: 'Google Partners' }, { value: '99.9%', label: 'Data Accuracy' }].map((stat, i) => (
                             <div key={i} style={{ textAlign: 'center' }}>
-                                <div style={{ fontSize: '36px', fontWeight: 600, background: 'linear-gradient(135deg, #f97316, #ea580c)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{stat.value}</div>
+                                <div style={{ fontSize: '36px', fontWeight: 600, background: 'var(--primary-green)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{stat.value}</div>
                                 <div style={{ fontSize: '13px', color: '#64748b', marginTop: '5px' }}>{stat.label}</div>
                             </div>
                         ))}
@@ -59,7 +59,7 @@ export function AnalyticsContent() {
                 <div className="analytics-container">
                     <div className="section-header text-center">
                         <span className="section-label">WHAT WE DO</span>
-                        <h2 className="section-title">Analytics <span className="text-gradient">services.</span></h2>
+                        <h2 className="section-title">Analytics <span className="title-accent">services.</span></h2>
                     </div>
                     <div className="services-grid">
                         {[{ title: 'GA4 Implementation', desc: 'Complete GA4 setup with enhanced e-commerce, custom events, and proper configuration.' }, { title: 'Custom Dashboards', desc: 'Looker Studio and Tableau dashboards that visualize your KPIs in real-time.' }, { title: 'Data Strategy', desc: 'Define what to measure, how to measure it, and how to act on the insights.' }].map((service, i) => (
@@ -76,7 +76,7 @@ export function AnalyticsContent() {
                 <div className="analytics-container">
                     <div className="section-header text-center">
                         <span className="section-label">INVESTMENT</span>
-                        <h2 className="section-title">Analytics <span className="text-gradient">packages.</span></h2>
+                        <h2 className="section-title">Analytics <span className="title-accent">packages.</span></h2>
                     </div>
                     <div className="pricing-grid">
                         <div className="price-card">
@@ -100,7 +100,7 @@ export function AnalyticsContent() {
                                 <li><Icon type="check" style={{ color: '#ea580c' }} /> Custom Dashboard</li>
                                 <li><Icon type="check" style={{ color: '#ea580c' }} /> Training</li>
                             </ul>
-                            <Link href="/contact" className="btn-primary" style={{ display: 'block', background: 'linear-gradient(135deg, #f97316, #ea580c)', border: 'none' }}>Start Project</Link>
+                            <Link href="/contact" className="btn-primary" style={{ display: 'block', background: 'var(--primary-green)', border: 'none' }}>Start Project</Link>
                         </div>
                         <div className="price-card">
                             <h4 style={{ fontSize: '24px', fontWeight: 600, marginBottom: '20px' }}>Managed</h4>
@@ -146,7 +146,7 @@ export function AnalyticsContent() {
                                 <input type="text" placeholder="Name" />
                                 <input type="email" placeholder="Email" />
                                 <input type="url" placeholder="Website URL" />
-                                <button type="submit" className="btn-primary" style={{ border: 'none', background: 'linear-gradient(135deg, #f97316, #ea580c)', color: 'white', fontSize: '18px', fontWeight: 600, cursor: 'pointer', padding: '20px' }}>Get Free Analytics Audit</button>
+                                <button type="submit" className="btn-primary" style={{ border: 'none', background: 'var(--primary-green)', color: 'var(--accent-yellow)', fontSize: '18px', fontWeight: 600, cursor: 'pointer', padding: '20px' }}>Get Free Analytics Audit</button>
                             </form>
                         </div>
                     </div>

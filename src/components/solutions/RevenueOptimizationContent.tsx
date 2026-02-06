@@ -6,15 +6,15 @@ import '@/styles/content-marketing.css';
 export function RevenueOptimizationContent() {
     return (
         <div className="content-marketing-page">
-            <section className="content-hero" style={{ background: 'radial-gradient(circle at 20% 30%, rgba(16, 185, 129, 0.15) 0%, transparent 40%), radial-gradient(circle at 80% 70%, rgba(52, 211, 153, 0.15) 0%, transparent 40%), var(--bg-white)' }}>
+            <section className="content-hero" style={{ background: 'var(--bg-cream)' }}>
                 <div className="content-container">
                     <div className="content-hero-grid">
                         <div className="content-hero-content">
-                            <span className="content-badge" style={{ background: 'rgba(16, 185, 129, 0.15)', color: '#10b981', border: '1px solid rgba(16, 185, 129, 0.3)' }}><Icon type="dollarSign" />Revenue Optimization</span>
-                            <h1 className="content-hero-title">Maximize <span style={{ background: 'linear-gradient(135deg, #10b981, #34d399)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Every Dollar.</span></h1>
+                            <span className="content-badge" style={{ background: 'rgba(255, 45, 117, 0.08)', color: 'var(--accent-pink)', border: '1px solid rgba(255, 45, 117, 0.1)' }}><Icon type="dollarSign" />Revenue Optimization</span>
+                            <h1 className="content-hero-title">Maximize <span className="title-accent">Every Dollar.</span></h1>
                             <p className="content-hero-subtitle">Extract more value from existing traffic and customers. CRO, pricing optimization, and revenue operations that improve your bottom line.</p>
                             <div className="content-hero-actions">
-                                <Link href="/contact" className="btn-primary large" style={{ background: 'linear-gradient(135deg, #10b981, #34d399)', border: 'none' }}>Get Revenue Audit<Icon type="arrowRight" /></Link>
+                                <Link href="/contact" className="btn-primary large" style={{ background: 'var(--primary-green)', border: 'none' }}>Get Revenue Audit<Icon type="arrowRight" /></Link>
                                 <Link href="#case-studies" className="btn-outline">See Revenue Gains</Link>
                             </div>
                             <div className="hero-stat-bars">
@@ -23,8 +23,8 @@ export function RevenueOptimizationContent() {
                             </div>
                         </div>
                         <div className="content-hero-visual">
-                            <div className="content-visual-card" style={{ background: 'linear-gradient(135deg, #10b981, #34d399)' }}>
-                                <div style={{ padding: '40px', color: 'white', textAlign: 'center' }}>
+                            <div className="content-visual-card" style={{ background: 'var(--primary-green)' }}>
+                                <div style={{ padding: '40px', color: 'var(--accent-yellow)', textAlign: 'center' }}>
                                     <div style={{ fontSize: '60px' }}>💰</div>
                                     <div style={{ fontSize: '18px', marginTop: '10px' }}>Revenue Engine</div>
                                 </div>
@@ -38,7 +38,7 @@ export function RevenueOptimizationContent() {
                 <div className="content-container">
                     <div className="section-header text-center">
                         <span className="section-label">THE OPPORTUNITY</span>
-                        <h2 className="section-title">You&apos;re Leaving <span style={{ background: 'linear-gradient(135deg, #10b981, #34d399)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Money on the Table</span></h2>
+                        <h2 className="section-title">You&apos;re Leaving <span className="title-accent">Money on the Table</span></h2>
                     </div>
                     <div className="challenges-grid">
                         <div className="challenge-card"><div className="challenge-icon" style={{ background: 'rgba(16, 185, 129, 0.15)', color: '#10b981' }}><Icon type="trending-down" /></div><h3>Low Conversion Rates</h3><p>Traffic costs money. Every unconverted visitor is wasted marketing spend.</p></div>
@@ -50,7 +50,7 @@ export function RevenueOptimizationContent() {
 
             <section className="content-services">
                 <div className="content-container">
-                    <div className="section-header"><span className="section-label">REVENUE LEVERS</span><h2 className="section-title">How We <span style={{ background: 'linear-gradient(135deg, #10b981, #34d399)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Optimize Revenue</span></h2></div>
+                    <div className="section-header"><span className="section-label">REVENUE LEVERS</span><h2 className="section-title">How We <span className="title-accent">Optimize Revenue</span></h2></div>
                     <div className="services-grid">
                         {[
                             { title: 'Conversion Optimization', desc: 'A/B testing and UX improvements that turn more visitors into customers.', tags: ['CRO', 'Testing'] },
@@ -75,11 +75,11 @@ export function RevenueOptimizationContent() {
                 </div>
             </section>
 
-            <section className="content-cta" style={{ background: 'linear-gradient(135deg, #10b981, #34d399)' }}>
+            <section className="content-cta" style={{ background: 'var(--primary-green)' }}>
                 <div className="content-container">
                     <div className="cta-box" style={{ background: 'transparent', boxShadow: 'none' }}>
-                        <h2 style={{ color: 'white' }}>Ready to <span style={{ color: '#d1fae5' }}>Maximize Revenue?</span></h2>
-                        <p style={{ fontSize: '20px', marginBottom: '40px', opacity: 0.9, color: 'white' }}>Get a revenue audit to see where you&apos;re leaving money on the table.</p>
+                        <h2 style={{ color: 'var(--accent-yellow)' }}>Ready to <span style={{ color: '#d1fae5' }}>Maximize Revenue?</span></h2>
+                        <p style={{ fontSize: '20px', marginBottom: '40px', opacity: 0.9, color: 'var(--accent-yellow)' }}>Get a revenue audit to see where you&apos;re leaving money on the table.</p>
                         <Link href="/contact" className="btn-white">Get Revenue Audit</Link>
                     </div>
                 </div>

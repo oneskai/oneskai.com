@@ -1,11 +1,13 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { Icon } from '@/components/ui/Icon';
 import { Badge } from '@/components/ui/Badge';
 import { ThemeToggle } from '@/components/ui/ThemeToggle';
 import type { Navigation } from '@/types/sanity';
+import { useTheme } from '@/providers/ThemeProvider';
 
 interface HeaderProps {
   navigation?: Navigation;
@@ -177,6 +179,12 @@ function ServicesMegaMenu() {
 export function Header({ navigation }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -355,7 +363,26 @@ export function Header({ navigation }: HeaderProps) {
     <header className={`header ${scrolled ? 'scrolled' : ''}`}>
       <div className="container header-inner">
         <Link href="/" className="logo">
-          <span style={{ color: 'var(--accent-yellow)' }}>O</span>NESKAI
+          {mounted && (
+            <Image
+              src={resolvedTheme === 'dark' ? '/images/logo/os-dark.webp' : '/images/logo/os-light.webp'}
+              alt="Oneskai"
+              width={160}
+              height={40}
+              priority
+              className="logo-image"
+            />
+          )}
+          {!mounted && (
+            <Image
+              src="/images/logo/os-light.webp"
+              alt="Oneskai"
+              width={160}
+              height={40}
+              priority
+              className="logo-image"
+            />
+          )}
         </Link>
 
         {/* Desktop Navigation */}

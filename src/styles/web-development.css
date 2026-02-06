@@ -32,9 +32,7 @@
 .webdev-hero {
     min-height: 95vh;
     padding: 180px 0 100px;
-    background: radial-gradient(circle at 20% 30%, rgba(16, 185, 129, 0.08) 0%, transparent 40%),
-        radial-gradient(circle at 80% 70%, rgba(59, 130, 246, 0.08) 0%, transparent 40%),
-        var(--bg-white);
+    background: var(--bg-cream);
     position: relative;
     overflow: hidden;
 }
@@ -80,7 +78,7 @@
 }
 
 .webdev-hero-title .text-gradient {
-    background: linear-gradient(135deg, #10b981, #3b82f6, #8b5cf6);
+    background: linear-gradient(135deg, #10b981, #3b82f6, var(--accent-pink));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -188,7 +186,7 @@
 /* ===== SERVICES ===== */
 .webdev-services {
     padding: 120px 0;
-    background: linear-gradient(135deg, #064e3b, #0f766e);
+    background: var(--primary-green);
     color: white;
 }
 

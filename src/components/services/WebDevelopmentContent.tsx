@@ -17,13 +17,13 @@ export function WebDevelopmentContent() {
                                 Full-Stack Development
                             </span>
                             <h1 className="webdev-hero-title">
-                                Code that <span className="text-gradient">scales with you.</span>
+                                Code that <span className="title-accent">scales with you.</span>
                             </h1>
                             <p className="webdev-hero-subtitle">
                                 Enterprise-grade web applications built with modern technologies. From MVPs to complex platforms, we engineer solutions that perform.
                             </p>
                             <div className="content-hero-actions">
-                                <Link href="/contact" className="btn-primary large" style={{ background: 'linear-gradient(135deg, #10b981, #3b82f6)', border: 'none', color: 'white' }}>
+                                <Link href="/contact" className="btn-primary large" style={{ background: 'var(--primary-green)', border: 'none', color: 'var(--accent-yellow)' }}>
                                     Start Development Project
                                     <Icon type="arrowRight" />
                                 </Link>
@@ -66,7 +66,7 @@ export function WebDevelopmentContent() {
                             { value: '24/7', label: 'Support Available' }
                         ].map((stat, i) => (
                             <div key={i} style={{ textAlign: 'center' }}>
-                                <div style={{ fontSize: '36px', fontWeight: 600, background: 'linear-gradient(135deg, #10b981, #3b82f6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{stat.value}</div>
+                                <div style={{ fontSize: '36px', fontWeight: 600, background: 'var(--primary-green)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{stat.value}</div>
                                 <div style={{ fontSize: '13px', color: '#64748b', marginTop: '5px' }}>{stat.label}</div>
                             </div>
                         ))}
@@ -79,7 +79,7 @@ export function WebDevelopmentContent() {
                 <div className="webdev-container">
                     <div className="section-header text-center">
                         <span className="section-label">OUR STACK</span>
-                        <h2 className="section-title">Modern <span className="text-gradient">technologies.</span></h2>
+                        <h2 className="section-title">Modern <span className="title-accent">technologies.</span></h2>
                     </div>
                     <div className="tech-grid">
                         {[
@@ -110,7 +110,7 @@ export function WebDevelopmentContent() {
                 <div className="webdev-container">
                     <div className="section-header text-center">
                         <span className="section-label" style={{ color: 'rgba(255,255,255,0.7)' }}>WHAT WE BUILD</span>
-                        <h2 className="section-title" style={{ color: 'white' }}>Development <span style={{ color: '#6ee7b7' }}>services.</span></h2>
+                        <h2 className="section-title" style={{ color: 'var(--accent-yellow)' }}>Development <span style={{ color: '#6ee7b7' }}>services.</span></h2>
                     </div>
                     <div className="services-grid">
                         {[
@@ -132,7 +132,7 @@ export function WebDevelopmentContent() {
                 <div className="webdev-container">
                     <div className="section-header text-center">
                         <span className="section-label">INVESTMENT</span>
-                        <h2 className="section-title">Development <span className="text-gradient">engagements.</span></h2>
+                        <h2 className="section-title">Development <span className="title-accent">engagements.</span></h2>
                     </div>
                     <div className="pricing-grid">
                         <div className="price-card">
@@ -160,7 +160,7 @@ export function WebDevelopmentContent() {
                                 <li><Icon type="check" style={{ color: '#3b82f6' }} /> Analytics & Reporting</li>
                                 <li><Icon type="check" style={{ color: '#3b82f6' }} /> 3-4 Month Delivery</li>
                             </ul>
-                            <Link href="/contact" className="btn-primary" style={{ display: 'block', background: 'linear-gradient(135deg, #10b981, #3b82f6)', border: 'none' }}>Start Project</Link>
+                            <Link href="/contact" className="btn-primary" style={{ display: 'block', background: 'var(--primary-green)', border: 'none' }}>Start Project</Link>
                         </div>
 
                         <div className="price-card">
@@ -224,7 +224,7 @@ export function WebDevelopmentContent() {
                                     <option value="other">Other</option>
                                 </select>
                                 <textarea placeholder="Describe your project..." style={{ height: '100px' }}></textarea>
-                                <button type="submit" className="btn-primary" style={{ border: 'none', background: 'linear-gradient(135deg, #10b981, #3b82f6)', color: 'white', fontSize: '18px', fontWeight: 600, cursor: 'pointer', padding: '20px' }}>
+                                <button type="submit" className="btn-primary" style={{ border: 'none', background: 'var(--primary-green)', color: 'var(--accent-yellow)', fontSize: '18px', fontWeight: 600, cursor: 'pointer', padding: '20px' }}>
                                     Get Free Consultation
                                 </button>
                             </form>

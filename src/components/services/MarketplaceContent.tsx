@@ -15,11 +15,11 @@ export function MarketplaceContent() {
                             <h1 className="specialized-hero-title">Win on <span style={{ background: `linear-gradient(135deg, ${color1}, ${color2})`, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Amazon & beyond.</span></h1>
                             <p className="specialized-hero-subtitle">Marketplace optimization for Amazon, Walmart, and eBay. Increase visibility, sales, and market share on the platforms that matter.</p>
                             <div className="content-hero-actions">
-                                <Link href="/contact" className="btn-primary large" style={{ background: `linear-gradient(135deg, ${color1}, ${color2})`, border: 'none', color: 'white' }}>Get Marketplace Audit<Icon type="arrowRight" /></Link>
+                                <Link href="/contact" className="btn-primary large" style={{ background: `linear-gradient(135deg, ${color1}, ${color2})`, border: 'none', color: 'var(--accent-yellow)' }}>Get Marketplace Audit<Icon type="arrowRight" /></Link>
                                 <Link href="#pricing" className="btn-outline">View Packages</Link>
                             </div>
                         </div>
-                        <div style={{ background: `linear-gradient(135deg, ${color1}, ${color2})`, borderRadius: '24px', height: '400px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white' }}>
+                        <div style={{ background: `linear-gradient(135deg, ${color1}, ${color2})`, borderRadius: '24px', height: '400px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--accent-yellow)' }}>
                             <div style={{ textAlign: 'center' }}><div style={{ fontSize: '80px', fontWeight: 600 }}>$50M</div><div style={{ fontSize: '18px', opacity: 0.9 }}>Revenue Managed</div></div>
                         </div>
                     </div>
@@ -52,7 +52,7 @@ export function MarketplaceContent() {
 
             <section className="specialized-cta"><div className="specialized-container"><div className="cta-grid">
                 <div><h2 style={{ fontSize: '56px', fontWeight: 600, marginBottom: '30px', lineHeight: 1.1 }}>Ready to win on <span style={{ color: 'var(--accent-yellow)' }}>marketplaces?</span></h2><p style={{ fontSize: '20px', opacity: 0.8, marginBottom: '50px', lineHeight: 1.6 }}>Get a free marketplace audit.</p></div>
-                <div className="cta-form"><form style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}><input type="text" placeholder="Brand Name" /><input type="email" placeholder="Email" /><input type="text" placeholder="Amazon ASIN or Store URL" /><button type="submit" className="btn-primary" style={{ border: 'none', background: `linear-gradient(135deg, ${color1}, ${color2})`, color: 'white', fontSize: '18px', fontWeight: 600, cursor: 'pointer', padding: '20px' }}>Get Free Audit</button></form></div>
+                <div className="cta-form"><form style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}><input type="text" placeholder="Brand Name" /><input type="email" placeholder="Email" /><input type="text" placeholder="Amazon ASIN or Store URL" /><button type="submit" className="btn-primary" style={{ border: 'none', background: `linear-gradient(135deg, ${color1}, ${color2})`, color: 'var(--accent-yellow)', fontSize: '18px', fontWeight: 600, cursor: 'pointer', padding: '20px' }}>Get Free Audit</button></form></div>
             </div></div></section>
         </div>
     );

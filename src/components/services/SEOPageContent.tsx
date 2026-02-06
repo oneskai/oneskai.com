@@ -23,7 +23,7 @@ export function SEOPageContent() {
                             </span>
                             <h1 className="seo-hero-title">
                                 Dominate Search.
-                                <span className="text-gradient"> Drive Growth.</span>
+                                <span className="title-accent"> Drive Growth.</span>
                             </h1>
                             <p className="seo-hero-subtitle">
                                 Enterprise-grade SEO strategies that deliver measurable results. We combine
@@ -105,7 +105,7 @@ export function SEOPageContent() {
                     <div className="section-header text-center">
                         <span className="section-label">THE PROBLEM</span>
                         <h2 className="section-title">
-                            Common <span className="text-gradient">SEO Challenges</span> Holding You Back
+                            Common <span className="title-accent">SEO Challenges</span> Holding You Back
                         </h2>
                         <p className="section-subtitle">
                             If any of these sound familiar, you&apos;re not alone. Most businesses struggle with the same issues—until they partner with the right SEO team.
@@ -165,7 +165,7 @@ export function SEOPageContent() {
                         <div className="essential-content">
                             <span className="section-label">THE OPPORTUNITY</span>
                             <h2 className="section-title">
-                                Why SEO Is Essential<br />for <span className="text-gradient">Business Growth</span>
+                                Why SEO Is Essential<br />for <span className="title-accent">Business Growth</span>
                             </h2>
                             <p className="section-subtitle">
                                 SEO isn&apos;t just about rankings—it&apos;s about building a predictable, scalable engine for growth that compounds over time.
@@ -236,7 +236,7 @@ export function SEOPageContent() {
                     <div className="section-header">
                         <span className="section-label">OUR SEO SERVICES</span>
                         <h2 className="section-title">
-                            How We Position Your Brand for <span className="text-gradient">Maximum Visibility</span>
+                            How We Position Your Brand for <span className="title-accent">Maximum Visibility</span>
                         </h2>
                     </div>
                     <div className="services-grid">
@@ -309,7 +309,7 @@ export function SEOPageContent() {
                     <div className="section-header text-center">
                         <span className="section-label">OUR PROVEN PROCESS</span>
                         <h2 className="section-title">
-                            Our Proven <span className="text-gradient">6-Phase SEO Methodology</span>
+                            Our Proven <span className="title-accent">6-Phase SEO Methodology</span>
                         </h2>
                         <p className="section-subtitle">
                             A battle-tested framework refined over 500+ successful campaigns. Every phase builds on the last to create compounding growth.
@@ -401,7 +401,7 @@ export function SEOPageContent() {
                     <div className="section-header text-center">
                         <span className="section-label">PROVEN RESULTS</span>
                         <h2 className="section-title">
-                            Real Results, <span className="text-gradient">Real Growth</span>
+                            Real Results, <span className="title-accent">Real Growth</span>
                         </h2>
                     </div>
                     <div className="results-grid">
@@ -469,7 +469,7 @@ export function SEOPageContent() {
                     <div className="section-header text-center">
                         <span className="section-label">INVESTMENT</span>
                         <h2 className="section-title">
-                            Your SEO Engine, <span className="text-gradient">On Subscription</span>
+                            Your SEO Engine, <span className="title-accent">On Subscription</span>
                         </h2>
                         <p className="section-subtitle">
                             Predictable pricing. Scalable results. Choose the plan that matches your growth stage.
@@ -565,7 +565,7 @@ export function SEOPageContent() {
                     <div className="section-header text-center">
                         <span className="section-label">CLIENT SUCCESS STORIES</span>
                         <h2 className="section-title">
-                            What Our Clients <span className="text-gradient">Say About Us</span>
+                            What Our Clients <span className="title-accent">Say About Us</span>
                         </h2>
                     </div>
                     <div className="testimonials-grid">
@@ -675,7 +675,7 @@ export function SEOPageContent() {
                     <div className="cta-card">
                         <div className="cta-content">
                             <h2 className="cta-title">
-                                Ready to Be <span className="text-gradient">Undeniable</span>?
+                                Ready to Be <span className="title-accent">Undeniable</span>?
                             </h2>
                             <p className="cta-text">
                                 Get a free, comprehensive SEO audit and discover how we can help you

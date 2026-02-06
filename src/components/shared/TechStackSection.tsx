@@ -18,7 +18,7 @@ export function TechStackSection() {
             <div className="seo-container">
                 <div className="section-header text-center">
                     <span className="section-label">OUR TECH STACK</span>
-                    <h2 className="section-title">Built with <span className="text-gradient">Best-in-Class Tools</span></h2>
+                    <h2 className="section-title">Built with <span className="title-accent">Best-in-Class Tools</span></h2>
                     <p className="section-subtitle">
                         We leverage the industry&apos;s most powerful platforms to gain deep insights and drive measurable results.
                     </p>

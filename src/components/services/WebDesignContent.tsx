@@ -17,13 +17,13 @@ export function WebDesignContent() {
                                 Award-Winning Design
                             </span>
                             <h1 className="web-design-hero-title">
-                                Websites that <span className="text-gradient">convert visitors</span> into customers.
+                                Websites that <span className="title-accent">convert visitors</span> into customers.
                             </h1>
                             <p className="web-design-hero-subtitle">
                                 We design and develop high-performance websites that look stunning, load fast, and drive measurable business results—built on modern tech stacks for scalability.
                             </p>
                             <div className="content-hero-actions">
-                                <Link href="/contact" className="btn-primary large" style={{ background: 'linear-gradient(135deg, #7c3aed, #ec4899)', border: 'none', color: 'white' }}>
+                                <Link href="/contact" className="btn-primary large" style={{ background: 'linear-gradient(135deg, var(--accent-pink), #ec4899)', border: 'none', color: 'var(--accent-yellow)' }}>
                                     Start Your Project
                                     <Icon type="arrowRight" />
                                 </Link>
@@ -60,7 +60,7 @@ export function WebDesignContent() {
                             { value: '35%', label: 'Avg. Conversion Lift' }
                         ].map((stat, i) => (
                             <div key={i} className="trust-metric">
-                                <div style={{ fontSize: '36px', fontWeight: 600, background: 'linear-gradient(135deg, #7c3aed, #ec4899)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{stat.value}</div>
+                                <div style={{ fontSize: '36px', fontWeight: 600, background: 'linear-gradient(135deg, var(--accent-pink), #ec4899)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{stat.value}</div>
                                 <div style={{ fontSize: '13px', color: '#64748b', marginTop: '5px' }}>{stat.label}</div>
                             </div>
                         ))}
@@ -73,7 +73,7 @@ export function WebDesignContent() {
                 <div className="web-design-container">
                     <div className="section-header text-center">
                         <span className="section-label">OUR PROCESS</span>
-                        <h2 className="section-title">From concept to <span className="text-gradient">launch-ready.</span></h2>
+                        <h2 className="section-title">From concept to <span className="title-accent">launch-ready.</span></h2>
                     </div>
                     <div className="process-timeline">
                         {[
@@ -98,7 +98,7 @@ export function WebDesignContent() {
                 <div className="web-design-container">
                     <div className="section-header text-center">
                         <span className="section-label" style={{ color: 'rgba(255,255,255,0.7)' }}>TECH STACK</span>
-                        <h2 className="section-title" style={{ color: 'white' }}>Built on <span style={{ color: '#a78bfa' }}>modern foundations.</span></h2>
+                        <h2 className="section-title" style={{ color: 'var(--accent-yellow)' }}>Built on <span style={{ color: '#a78bfa' }}>modern foundations.</span></h2>
                     </div>
                     <div className="tech-grid">
                         {[
@@ -122,7 +122,7 @@ export function WebDesignContent() {
                 <div className="web-design-container">
                     <div className="section-header text-center">
                         <span className="section-label">WHAT WE BUILD</span>
-                        <h2 className="section-title">Websites for <span className="text-gradient">every need.</span></h2>
+                        <h2 className="section-title">Websites for <span className="title-accent">every need.</span></h2>
                     </div>
                     <div className="types-grid">
                         {[
@@ -131,13 +131,13 @@ export function WebDesignContent() {
                             { icon: 'rocket', title: 'SaaS & Startups', desc: 'Launch-ready marketing sites that convert.', items: ['Landing Pages', 'Pricing Pages', 'Feature Tours'] }
                         ].map((type, i) => (
                             <div key={i} className="type-card">
-                                <Icon type={type.icon} style={{ color: '#7c3aed', marginBottom: '20px' }} />
+                                <Icon type={type.icon} style={{ color: 'var(--accent-pink)', marginBottom: '20px' }} />
                                 <h3 style={{ fontSize: '24px', fontWeight: 600, marginBottom: '15px' }}>{type.title}</h3>
                                 <p style={{ fontSize: '15px', color: '#64748b', marginBottom: '20px', lineHeight: 1.6 }}>{type.desc}</p>
                                 <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px' }}>
                                     {type.items.map((item, j) => (
                                         <li key={j} style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '14px' }}>
-                                            <Icon type="check" style={{ color: '#7c3aed', width: '16px' }} />
+                                            <Icon type="check" style={{ color: 'var(--accent-pink)', width: '16px' }} />
                                             {item}
                                         </li>
                                     ))}
@@ -153,7 +153,7 @@ export function WebDesignContent() {
                 <div className="web-design-container">
                     <div className="section-header text-center">
                         <span className="section-label">INVESTMENT</span>
-                        <h2 className="section-title">Transparent <span className="text-gradient">project pricing.</span></h2>
+                        <h2 className="section-title">Transparent <span className="title-accent">project pricing.</span></h2>
                     </div>
                     <div className="pricing-grid">
                         <div className="price-card">
@@ -161,10 +161,10 @@ export function WebDesignContent() {
                             <div style={{ fontSize: '42px', fontWeight: 600, marginBottom: '10px' }}>$8K<span style={{ fontSize: '16px', color: '#999' }}>+</span></div>
                             <p style={{ color: '#666', marginBottom: '30px', fontSize: '14px' }}>5-7 page marketing site</p>
                             <ul style={{ listStyle: 'none', textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '40px' }}>
-                                <li><Icon type="check" style={{ color: '#7c3aed' }} /> Custom Design</li>
-                                <li><Icon type="check" style={{ color: '#7c3aed' }} /> Mobile Responsive</li>
-                                <li><Icon type="check" style={{ color: '#7c3aed' }} /> Basic SEO Setup</li>
-                                <li><Icon type="check" style={{ color: '#7c3aed' }} /> 4-6 Week Delivery</li>
+                                <li><Icon type="check" style={{ color: 'var(--accent-pink)' }} /> Custom Design</li>
+                                <li><Icon type="check" style={{ color: 'var(--accent-pink)' }} /> Mobile Responsive</li>
+                                <li><Icon type="check" style={{ color: 'var(--accent-pink)' }} /> Basic SEO Setup</li>
+                                <li><Icon type="check" style={{ color: 'var(--accent-pink)' }} /> 4-6 Week Delivery</li>
                             </ul>
                             <Link href="/contact" className="btn-outline" style={{ display: 'block' }}>Get Quote</Link>
                         </div>
@@ -181,7 +181,7 @@ export function WebDesignContent() {
                                 <li><Icon type="check" style={{ color: '#ec4899' }} /> Performance Tuning</li>
                                 <li><Icon type="check" style={{ color: '#ec4899' }} /> 8-12 Week Delivery</li>
                             </ul>
-                            <Link href="/contact" className="btn-primary" style={{ display: 'block', background: 'linear-gradient(135deg, #7c3aed, #ec4899)', border: 'none' }}>Start Project</Link>
+                            <Link href="/contact" className="btn-primary" style={{ display: 'block', background: 'linear-gradient(135deg, var(--accent-pink), #ec4899)', border: 'none' }}>Start Project</Link>
                         </div>
 
                         <div className="price-card">
@@ -189,11 +189,11 @@ export function WebDesignContent() {
                             <div style={{ fontSize: '42px', fontWeight: 600, marginBottom: '10px' }}>Custom</div>
                             <p style={{ color: '#666', marginBottom: '30px', fontSize: '14px' }}>Large-scale web applications</p>
                             <ul style={{ listStyle: 'none', textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '40px' }}>
-                                <li><Icon type="check" style={{ color: '#7c3aed' }} /> Custom Web Applications</li>
-                                <li><Icon type="check" style={{ color: '#7c3aed' }} /> E-commerce Platforms</li>
-                                <li><Icon type="check" style={{ color: '#7c3aed' }} /> API Integrations</li>
-                                <li><Icon type="check" style={{ color: '#7c3aed' }} /> Ongoing Support</li>
-                                <li><Icon type="check" style={{ color: '#7c3aed' }} /> Dedicated Team</li>
+                                <li><Icon type="check" style={{ color: 'var(--accent-pink)' }} /> Custom Web Applications</li>
+                                <li><Icon type="check" style={{ color: 'var(--accent-pink)' }} /> E-commerce Platforms</li>
+                                <li><Icon type="check" style={{ color: 'var(--accent-pink)' }} /> API Integrations</li>
+                                <li><Icon type="check" style={{ color: 'var(--accent-pink)' }} /> Ongoing Support</li>
+                                <li><Icon type="check" style={{ color: 'var(--accent-pink)' }} /> Dedicated Team</li>
                             </ul>
                             <Link href="/contact" className="btn-outline" style={{ display: 'block' }}>Talk to Expert</Link>
                         </div>
@@ -206,11 +206,11 @@ export function WebDesignContent() {
                 <div className="web-design-container">
                     <div className="section-header text-center">
                         <span className="section-label">OUR WORK</span>
-                        <h2 className="section-title">Recent <span className="text-gradient">launches.</span></h2>
+                        <h2 className="section-title">Recent <span className="title-accent">launches.</span></h2>
                     </div>
                     <div className="portfolio-grid">
                         {[
-                            { title: 'TechFlow SaaS', category: 'SaaS Website', color: '#7c3aed' },
+                            { title: 'TechFlow SaaS', category: 'SaaS Website', color: 'var(--accent-pink)' },
                             { title: 'Luxe Beauty', category: 'E-commerce', color: '#ec4899' },
                             { title: 'Vertex Capital', category: 'Corporate', color: '#0ea5e9' }
                         ].map((project, i) => (
@@ -286,7 +286,7 @@ export function WebDesignContent() {
                                     <option value="other">Other</option>
                                 </select>
                                 <textarea placeholder="Tell us about your project..." style={{ height: '100px' }}></textarea>
-                                <button type="submit" className="btn-primary" style={{ border: 'none', background: 'linear-gradient(135deg, #7c3aed, #ec4899)', color: 'white', fontSize: '18px', fontWeight: 600, cursor: 'pointer', padding: '20px' }}>
+                                <button type="submit" className="btn-primary" style={{ border: 'none', background: 'linear-gradient(135deg, var(--accent-pink), #ec4899)', color: 'var(--accent-yellow)', fontSize: '18px', fontWeight: 600, cursor: 'pointer', padding: '20px' }}>
                                     Get Free Consultation
                                 </button>
                             </form>

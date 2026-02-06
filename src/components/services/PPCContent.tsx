@@ -17,13 +17,13 @@ export function PPCContent() {
                                 Google Premier Partner
                             </span>
                             <h1 className="ppc-hero-title">
-                                Turn ad spend into <span className="text-gradient">predictable revenue.</span>
+                                Turn ad spend into <span className="title-accent">predictable revenue.</span>
                             </h1>
                             <p className="ppc-hero-subtitle">
                                 We manage over $50M in annual ad spend across Google, Meta, YouTube, and Bing—delivering consistent ROAS through data-driven campaign architecture and relentless optimization.
                             </p>
                             <div className="content-hero-actions">
-                                <Link href="/contact" className="btn-primary large" style={{ background: 'linear-gradient(135deg, #ea4335, #4285f4)', border: 'none', color: 'white' }}>
+                                <Link href="/contact" className="btn-primary large" style={{ background: 'linear-gradient(135deg, var(--accent-pink), var(--accent-pink))', border: 'none', color: 'var(--accent-yellow)' }}>
                                     Get Free Audit
                                     <Icon type="arrowRight" />
                                 </Link>
@@ -37,7 +37,7 @@ export function PPCContent() {
                             <div className="roas-display">
                                 <div className="roas-circle">
                                     <div className="roas-inner">
-                                        <div style={{ fontSize: '64px', fontWeight: 600, color: '#4285f4', lineHeight: 1 }}>4.8x</div>
+                                        <div style={{ fontSize: '64px', fontWeight: 600, color: 'var(--accent-pink)', lineHeight: 1 }}>4.8x</div>
                                         <div style={{ fontSize: '14px', fontWeight: 600, color: '#64748b', textTransform: 'uppercase', marginTop: '10px', letterSpacing: '1px' }}>Average ROAS</div>
                                     </div>
                                 </div>
@@ -71,7 +71,7 @@ export function PPCContent() {
                 <div className="ppc-container">
                     <div className="section-header text-center">
                         <span className="section-label">PLATFORM EXPERTISE</span>
-                        <h2 className="section-title">Certified across <span className="text-gradient">every major platform.</span></h2>
+                        <h2 className="section-title">Certified across <span className="title-accent">every major platform.</span></h2>
                     </div>
                     <div className="platforms-grid">
                         {[
@@ -97,7 +97,7 @@ export function PPCContent() {
                 <div className="ppc-container">
                     <div className="section-header text-center">
                         <span className="section-label">CAMPAIGN ARCHITECTURE</span>
-                        <h2 className="section-title">Strategic campaigns for <span className="text-gradient">every objective.</span></h2>
+                        <h2 className="section-title">Strategic campaigns for <span className="title-accent">every objective.</span></h2>
                     </div>
                     <div className="campaigns-grid">
                         {[
@@ -106,7 +106,7 @@ export function PPCContent() {
                             { title: 'Brand Awareness', icon: 'megaphone', items: ['Display Network', 'YouTube Pre-roll', 'Responsive Display', 'Audience Targeting'] }
                         ].map((campaign, i) => (
                             <div key={i} className="campaign-card">
-                                <Icon type={campaign.icon} style={{ color: '#4285f4', marginBottom: '20px' }} />
+                                <Icon type={campaign.icon} style={{ color: 'var(--accent-pink)', marginBottom: '20px' }} />
                                 <h3 style={{ fontSize: '24px', fontWeight: 600, marginBottom: '20px' }}>{campaign.title}</h3>
                                 <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '12px' }}>
                                     {campaign.items.map((item, j) => (
@@ -127,7 +127,7 @@ export function PPCContent() {
                 <div className="ppc-container">
                     <div className="section-header text-center">
                         <span className="section-label">SMART BIDDING MASTERY</span>
-                        <h2 className="section-title">AI-powered bidding <span className="text-gradient">that outperforms.</span></h2>
+                        <h2 className="section-title">AI-powered bidding <span className="title-accent">that outperforms.</span></h2>
                     </div>
                     <div className="bidding-grid">
                         <div className="strategy-list">
@@ -138,7 +138,7 @@ export function PPCContent() {
                                 { title: 'Enhanced CPC', desc: 'Manual control with automated bid adjustments.' }
                             ].map((strategy, i) => (
                                 <div key={i} className="strategy-item">
-                                    <div style={{ width: '50px', height: '50px', background: 'linear-gradient(135deg, #ea4335, #4285f4)', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 600, flexShrink: 0 }}>
+                                    <div style={{ width: '50px', height: '50px', background: 'linear-gradient(135deg, var(--accent-pink), var(--accent-pink))', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--accent-yellow)', fontWeight: 600, flexShrink: 0 }}>
                                         0{i + 1}
                                     </div>
                                     <div>
@@ -163,7 +163,7 @@ export function PPCContent() {
                 <div className="ppc-container">
                     <div className="section-header text-center">
                         <span className="section-label">INVESTMENT</span>
-                        <h2 className="section-title">Transparent <span className="text-gradient">PPC Management.</span></h2>
+                        <h2 className="section-title">Transparent <span className="title-accent">PPC Management.</span></h2>
                     </div>
                     <div className="pricing-grid">
                         <div className="price-card">
@@ -185,13 +185,13 @@ export function PPCContent() {
                             <div style={{ fontSize: '42px', fontWeight: 600, marginBottom: '10px' }}>$3,500<span style={{ fontSize: '16px', color: '#999' }}>/mo</span></div>
                             <p style={{ color: '#666', marginBottom: '30px', fontSize: '14px' }}>Ad spend up to $50K/mo</p>
                             <ul style={{ listStyle: 'none', textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '40px' }}>
-                                <li><Icon type="check" style={{ color: '#4285f4' }} /> 3 Platforms Managed</li>
-                                <li><Icon type="check" style={{ color: '#4285f4' }} /> Advanced Audience Building</li>
-                                <li><Icon type="check" style={{ color: '#4285f4' }} /> A/B Creative Testing</li>
-                                <li><Icon type="check" style={{ color: '#4285f4' }} /> Weekly Strategy Calls</li>
-                                <li><Icon type="check" style={{ color: '#4285f4' }} /> Landing Page Recommendations</li>
+                                <li><Icon type="check" style={{ color: 'var(--accent-pink)' }} /> 3 Platforms Managed</li>
+                                <li><Icon type="check" style={{ color: 'var(--accent-pink)' }} /> Advanced Audience Building</li>
+                                <li><Icon type="check" style={{ color: 'var(--accent-pink)' }} /> A/B Creative Testing</li>
+                                <li><Icon type="check" style={{ color: 'var(--accent-pink)' }} /> Weekly Strategy Calls</li>
+                                <li><Icon type="check" style={{ color: 'var(--accent-pink)' }} /> Landing Page Recommendations</li>
                             </ul>
-                            <Link href="/contact" className="btn-primary" style={{ display: 'block', background: 'linear-gradient(135deg, #ea4335, #4285f4)', border: 'none' }}>Scale Now</Link>
+                            <Link href="/contact" className="btn-primary" style={{ display: 'block', background: 'linear-gradient(135deg, var(--accent-pink), var(--accent-pink))', border: 'none' }}>Scale Now</Link>
                         </div>
 
                         <div className="price-card">
@@ -216,7 +216,7 @@ export function PPCContent() {
                 <div className="ppc-container">
                     <div className="section-header text-center">
                         <span className="section-label" style={{ color: '#fbbc04' }}>PROVEN RESULTS</span>
-                        <h2 className="section-title" style={{ color: 'white' }}>Numbers that <span style={{ color: '#fbbc04' }}>speak volumes.</span></h2>
+                        <h2 className="section-title" style={{ color: 'var(--accent-yellow)' }}>Numbers that <span style={{ color: '#fbbc04' }}>speak volumes.</span></h2>
                     </div>
                     <div className="results-grid">
                         {[
@@ -293,7 +293,7 @@ export function PPCContent() {
                                     <option value="25k-50k">$25,000 - $50,000</option>
                                     <option value="50k+">$50,000+</option>
                                 </select>
-                                <button type="submit" className="btn-primary" style={{ border: 'none', background: 'linear-gradient(135deg, #ea4335, #4285f4)', color: 'white', fontSize: '18px', fontWeight: 600, cursor: 'pointer', padding: '20px' }}>
+                                <button type="submit" className="btn-primary" style={{ border: 'none', background: 'linear-gradient(135deg, var(--accent-pink), var(--accent-pink))', color: 'var(--accent-yellow)', fontSize: '18px', fontWeight: 600, cursor: 'pointer', padding: '20px' }}>
                                     Get My Free Audit
                                 </button>
                             </form>

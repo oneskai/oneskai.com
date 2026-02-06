@@ -6,15 +6,15 @@ import '@/styles/content-marketing.css';
 export function SearchDominanceContent() {
     return (
         <div className="content-marketing-page">
-            <section className="content-hero" style={{ background: 'radial-gradient(circle at 20% 30%, rgba(99, 102, 241, 0.15) 0%, transparent 40%), radial-gradient(circle at 80% 70%, rgba(129, 140, 248, 0.15) 0%, transparent 40%), var(--bg-white)' }}>
+            <section className="content-hero" style={{ background: 'var(--bg-cream)' }}>
                 <div className="content-container">
                     <div className="content-hero-grid">
                         <div className="content-hero-content">
-                            <span className="content-badge" style={{ background: 'rgba(99, 102, 241, 0.15)', color: '#6366f1', border: '1px solid rgba(99, 102, 241, 0.3)' }}><Icon type="search" />Search Dominance</span>
-                            <h1 className="content-hero-title">Own Page One <span style={{ background: 'linear-gradient(135deg, #6366f1, #818cf8)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>for Your Keywords.</span></h1>
+                            <span className="content-badge" style={{ background: 'rgba(255, 45, 117, 0.08)', color: 'var(--accent-pink)', border: '1px solid rgba(255, 45, 117, 0.1)' }}><Icon type="search" />Search Dominance</span>
+                            <h1 className="content-hero-title">Own Page One <span className="title-accent">for Your Keywords.</span></h1>
                             <p className="content-hero-subtitle">Comprehensive search strategy combining SEO, PPC, and GEO to dominate search results and capture high-intent traffic at scale.</p>
                             <div className="content-hero-actions">
-                                <Link href="/contact" className="btn-primary large" style={{ background: 'linear-gradient(135deg, #6366f1, #818cf8)', border: 'none' }}>Get Search Audit<Icon type="arrowRight" /></Link>
+                                <Link href="/contact" className="btn-primary large" style={{ background: 'var(--primary-green)', border: 'none' }}>Get Search Audit<Icon type="arrowRight" /></Link>
                                 <Link href="#case-studies" className="btn-outline">See Rankings</Link>
                             </div>
                             <div className="hero-stat-bars">
@@ -23,8 +23,8 @@ export function SearchDominanceContent() {
                             </div>
                         </div>
                         <div className="content-hero-visual">
-                            <div className="content-visual-card" style={{ background: 'linear-gradient(135deg, #6366f1, #818cf8)' }}>
-                                <div style={{ padding: '40px', color: 'white', textAlign: 'center' }}>
+                            <div className="content-visual-card" style={{ background: 'var(--primary-green)' }}>
+                                <div style={{ padding: '40px', color: 'var(--accent-yellow)', textAlign: 'center' }}>
                                     <div style={{ fontSize: '60px' }}>🔍</div>
                                     <div style={{ fontSize: '18px', marginTop: '10px' }}>Search Dominance</div>
                                 </div>
@@ -38,7 +38,7 @@ export function SearchDominanceContent() {
                 <div className="content-container">
                     <div className="section-header text-center">
                         <span className="section-label">THE OPPORTUNITY</span>
-                        <h2 className="section-title">Search is the <span style={{ background: 'linear-gradient(135deg, #6366f1, #818cf8)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Highest-Intent Channel</span></h2>
+                        <h2 className="section-title">Search is the <span className="title-accent">Highest-Intent Channel</span></h2>
                     </div>
                     <div className="challenges-grid">
                         <div className="challenge-card"><div className="challenge-icon" style={{ background: 'rgba(99, 102, 241, 0.15)', color: '#6366f1' }}><Icon type="target" /></div><h3>Buyer Intent</h3><p>Search captures customers actively looking for solutions—the highest-intent traffic available.</p></div>
@@ -50,7 +50,7 @@ export function SearchDominanceContent() {
 
             <section className="content-services">
                 <div className="content-container">
-                    <div className="section-header"><span className="section-label">SEARCH STRATEGY</span><h2 className="section-title">How We Dominate <span style={{ background: 'linear-gradient(135deg, #6366f1, #818cf8)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Search</span></h2></div>
+                    <div className="section-header"><span className="section-label">SEARCH STRATEGY</span><h2 className="section-title">How We Dominate <span className="title-accent">Search</span></h2></div>
                     <div className="services-grid">
                         {[
                             { title: 'SEO Strategy', desc: 'Technical, content, and authority-building strategies for sustainable organic growth.', tags: ['Technical', 'Content', 'Links'] },
@@ -75,11 +75,11 @@ export function SearchDominanceContent() {
                 </div>
             </section>
 
-            <section className="content-cta" style={{ background: 'linear-gradient(135deg, #6366f1, #818cf8)' }}>
+            <section className="content-cta" style={{ background: 'var(--primary-green)' }}>
                 <div className="content-container">
                     <div className="cta-box" style={{ background: 'transparent', boxShadow: 'none' }}>
-                        <h2 style={{ color: 'white' }}>Ready to <span style={{ color: '#e0e7ff' }}>Dominate Search?</span></h2>
-                        <p style={{ fontSize: '20px', marginBottom: '40px', opacity: 0.9, color: 'white' }}>Get a search audit to see your opportunities and competitive gaps.</p>
+                        <h2 style={{ color: 'var(--accent-yellow)' }}>Ready to <span style={{ color: '#e0e7ff' }}>Dominate Search?</span></h2>
+                        <p style={{ fontSize: '20px', marginBottom: '40px', opacity: 0.9, color: 'var(--accent-yellow)' }}>Get a search audit to see your opportunities and competitive gaps.</p>
                         <Link href="/contact" className="btn-white">Get Search Audit</Link>
                     </div>
                 </div>

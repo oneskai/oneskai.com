@@ -7,25 +7,25 @@ import '@/styles/content-marketing.css';
 export function GEOContent() {
     return (
         <div className="content-marketing-page">
-            <section className="content-hero" style={{ background: 'radial-gradient(circle at 20% 30%, rgba(139, 92, 246, 0.15) 0%, transparent 40%), radial-gradient(circle at 80% 70%, rgba(6, 182, 212, 0.15) 0%, transparent 40%), var(--bg-white)' }}>
+            <section className="content-hero" style={{ background: 'var(--bg-cream)' }}>
                 <div className="content-container">
                     <div className="content-hero-grid">
                         <div className="content-hero-content">
-                            <span className="content-badge" style={{ background: 'rgba(139, 92, 246, 0.15)', color: '#8b5cf6', border: '1px solid rgba(139, 92, 246, 0.3)' }}><Icon type="brain" />Generative Engine Optimization</span>
-                            <h1 className="content-hero-title">Win in the <span style={{ background: 'linear-gradient(135deg, #8b5cf6, #06b6d4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>AI Search Era.</span></h1>
+                            <span className="content-badge" style={{ background: 'rgba(255, 45, 117, 0.08)', color: 'var(--accent-pink)', border: '1px solid rgba(255, 45, 117, 0.1)' }}><Icon type="brain" />Generative Engine Optimization</span>
+                            <h1 className="content-hero-title">Win in the <span className="title-accent">AI Search Era.</span></h1>
                             <p className="content-hero-subtitle">Optimize your content to be cited by ChatGPT, Perplexity, Claude, and AI-powered search engines. The future of search is here—are you ready?</p>
                             <div className="content-hero-actions">
-                                <Link href="/contact" className="btn-primary large" style={{ background: 'linear-gradient(135deg, #8b5cf6, #06b6d4)', border: 'none' }}>Get GEO Strategy<Icon type="arrowRight" /></Link>
+                                <Link href="/contact" className="btn-primary large" style={{ background: 'linear-gradient(135deg, var(--accent-pink), #06b6d4)', border: 'none' }}>Get GEO Strategy<Icon type="arrowRight" /></Link>
                                 <Link href="#case-studies" className="btn-outline">See Results</Link>
                             </div>
                             <div className="hero-stat-bars">
-                                <div className="stat-bar-item"><span className="stat-num" style={{ color: '#8b5cf6' }}>First</span><span className="stat-txt">GEO Agency</span></div>
+                                <div className="stat-bar-item"><span className="stat-num" style={{ color: 'var(--accent-pink)' }}>First</span><span className="stat-txt">GEO Agency</span></div>
                                 <div className="stat-bar-item"><span className="stat-num" style={{ color: '#06b6d4' }}>10x</span><span className="stat-txt">AI Citations</span></div>
                             </div>
                         </div>
                         <div className="content-hero-visual">
-                            <div className="content-visual-card" style={{ background: 'linear-gradient(135deg, #8b5cf6, #06b6d4)' }}>
-                                <div style={{ padding: '40px', color: 'white', textAlign: 'center' }}>
+                            <div className="content-visual-card" style={{ background: 'linear-gradient(135deg, var(--accent-pink), #06b6d4)' }}>
+                                <div style={{ padding: '40px', color: 'var(--accent-yellow)', textAlign: 'center' }}>
                                     <div style={{ fontSize: '50px', fontWeight: 600, lineHeight: 1 }}>GEO</div>
                                     <div style={{ fontSize: '14px', opacity: 0.9, marginTop: '10px' }}>Generative Engine Optimization</div>
                                     <div style={{ display: 'flex', justifyContent: 'center', gap: '10px', marginTop: '30px', flexWrap: 'wrap' }}>
@@ -44,13 +44,13 @@ export function GEOContent() {
                 <div className="content-container">
                     <div className="section-header text-center">
                         <span className="section-label">THE SHIFT</span>
-                        <h2 className="section-title">Search is <span style={{ background: 'linear-gradient(135deg, #8b5cf6, #06b6d4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Changing Forever</span></h2>
+                        <h2 className="section-title">Search is <span className="title-accent">Changing Forever</span></h2>
                         <p className="section-subtitle">40% of Gen Z uses AI chatbots instead of Google. Traditional SEO alone won&apos;t cut it anymore.</p>
                     </div>
                     <div className="challenges-grid">
-                        <div className="challenge-card"><div className="challenge-icon" style={{ background: 'rgba(139, 92, 246, 0.15)', color: '#8b5cf6' }}><Icon type="search" /></div><h3>Zero-Click Answers</h3><p>AI engines synthesize answers without users clicking through. If you&apos;re not the source, you&apos;re invisible.</p></div>
-                        <div className="challenge-card"><div className="challenge-icon" style={{ background: 'rgba(139, 92, 246, 0.15)', color: '#8b5cf6' }}><Icon type="brain" /></div><h3>Citation Competition</h3><p>AI models cite only the most authoritative, well-structured content. Generic content gets ignored.</p></div>
-                        <div className="challenge-card"><div className="challenge-icon" style={{ background: 'rgba(139, 92, 246, 0.15)', color: '#8b5cf6' }}><Icon type="zap" /></div><h3>First-Mover Advantage</h3><p>Early adopters of GEO will dominate AI search results while competitors scramble to catch up.</p></div>
+                        <div className="challenge-card"><div className="challenge-icon" style={{ background: 'rgba(255, 45, 117, 0.08)', color: 'var(--accent-pink)' }}><Icon type="search" /></div><h3>Zero-Click Answers</h3><p>AI engines synthesize answers without users clicking through. If you&apos;re not the source, you&apos;re invisible.</p></div>
+                        <div className="challenge-card"><div className="challenge-icon" style={{ background: 'rgba(255, 45, 117, 0.08)', color: 'var(--accent-pink)' }}><Icon type="brain" /></div><h3>Citation Competition</h3><p>AI models cite only the most authoritative, well-structured content. Generic content gets ignored.</p></div>
+                        <div className="challenge-card"><div className="challenge-icon" style={{ background: 'rgba(255, 45, 117, 0.08)', color: 'var(--accent-pink)' }}><Icon type="zap" /></div><h3>First-Mover Advantage</h3><p>Early adopters of GEO will dominate AI search results while competitors scramble to catch up.</p></div>
                     </div>
                 </div>
             </section>
@@ -59,11 +59,11 @@ export function GEOContent() {
                 <div className="content-container">
                     <div className="impact-grid">
                         <div className="impact-visual">
-                            <div className="growth-indicator" style={{ background: 'linear-gradient(135deg, #8b5cf6, #06b6d4)' }}><Icon type="trending-up" />+900% AI Citations</div>
+                            <div className="growth-indicator" style={{ background: 'linear-gradient(135deg, var(--accent-pink), #06b6d4)' }}><Icon type="trending-up" />+900% AI Citations</div>
                             <div className="chart-container">
                                 {[10, 20, 35, 55, 80, 100].map((h, i) => (
                                     <div key={i} className="chart-bar-group">
-                                        <div className={`chart-bar-fill ${i === 5 ? 'active' : ''}`} style={{ height: `${h}%`, background: i === 5 ? 'linear-gradient(135deg, #8b5cf6, #06b6d4)' : 'rgba(139, 92, 246, 0.3)' }}></div>
+                                        <div className={`chart-bar-fill ${i === 5 ? 'active' : ''}`} style={{ height: `${h}%`, background: i === 5 ? 'linear-gradient(135deg, var(--accent-pink), #06b6d4)' : 'rgba(139, 92, 246, 0.3)' }}></div>
                                         <span className="chart-label">M{i + 1}</span>
                                     </div>
                                 ))}
@@ -71,14 +71,14 @@ export function GEOContent() {
                         </div>
                         <div className="impact-content">
                             <span className="section-label">THE OPPORTUNITY</span>
-                            <h2 className="section-title">Be the <span style={{ background: 'linear-gradient(135deg, #8b5cf6, #06b6d4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>AI&apos;s Source</span></h2>
+                            <h2 className="section-title">Be the <span className="title-accent">AI&apos;s Source</span></h2>
                             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '20px' }}>
                                 {[
                                     { title: 'Structured for AI', desc: 'Content formatted so AI models can easily extract and cite your information.' },
                                     { title: 'Authority Signals', desc: 'Building the trust markers that AI uses to determine source credibility.' },
                                     { title: 'Answer Optimization', desc: 'Targeting the specific questions users ask AI assistants.' }
                                 ].map((item, i) => (
-                                    <li key={i} style={{ display: 'flex', gap: '15px' }}><div style={{ color: '#8b5cf6' }}><Icon type="check" /></div><div><h4 style={{ fontWeight: 600 }}>{item.title}</h4><p style={{ fontSize: '14px', color: 'var(--text-gray)' }}>{item.desc}</p></div></li>
+                                    <li key={i} style={{ display: 'flex', gap: '15px' }}><div style={{ color: 'var(--accent-pink)' }}><Icon type="check" /></div><div><h4 style={{ fontWeight: 600 }}>{item.title}</h4><p style={{ fontSize: '14px', color: 'var(--text-gray)' }}>{item.desc}</p></div></li>
                                 ))}
                             </ul>
                         </div>
@@ -88,7 +88,7 @@ export function GEOContent() {
 
             <section className="content-services">
                 <div className="content-container">
-                    <div className="section-header"><span className="section-label">WHAT WE OFFER</span><h2 className="section-title">GEO <span style={{ background: 'linear-gradient(135deg, #8b5cf6, #06b6d4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Services</span></h2></div>
+                    <div className="section-header"><span className="section-label">WHAT WE OFFER</span><h2 className="section-title">GEO <span className="title-accent">Services</span></h2></div>
                     <div className="services-grid">
                         {[
                             { title: 'AI Citation Audit', desc: 'Analyze how often your brand is cited by major AI models and identify gaps.', tags: ['ChatGPT', 'Perplexity'] },
@@ -116,11 +116,11 @@ export function GEOContent() {
                 </div>
             </section>
 
-            <section className="content-cta" style={{ background: 'linear-gradient(135deg, #8b5cf6, #06b6d4)' }}>
+            <section className="content-cta" style={{ background: 'linear-gradient(135deg, var(--accent-pink), #06b6d4)' }}>
                 <div className="content-container">
                     <div className="cta-box" style={{ background: 'transparent', boxShadow: 'none' }}>
-                        <h2 style={{ color: 'white' }}>Ready for the <span style={{ color: '#e0f2fe' }}>AI Search Era?</span></h2>
-                        <p style={{ fontSize: '20px', marginBottom: '40px', opacity: 0.9, color: 'white' }}>Get a free GEO audit and see how AI engines view your brand.</p>
+                        <h2 style={{ color: 'var(--accent-yellow)' }}>Ready for the <span style={{ color: '#e0f2fe' }}>AI Search Era?</span></h2>
+                        <p style={{ fontSize: '20px', marginBottom: '40px', opacity: 0.9, color: 'var(--accent-yellow)' }}>Get a free GEO audit and see how AI engines view your brand.</p>
                         <Link href="/contact" className="btn-white">Get Your Free GEO Audit</Link>
                     </div>
                 </div>

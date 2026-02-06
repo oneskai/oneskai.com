@@ -32,9 +32,7 @@
 .uiux-hero {
     min-height: 95vh;
     padding: 180px 0 100px;
-    background: radial-gradient(circle at 20% 30%, rgba(99, 102, 241, 0.08) 0%, transparent 40%),
-        radial-gradient(circle at 80% 70%, rgba(168, 85, 247, 0.08) 0%, transparent 40%),
-        var(--bg-white);
+    background: var(--bg-cream);
     position: relative;
     overflow: hidden;
 }
@@ -143,7 +141,7 @@
 
 .wireframe-main div {
     height: 60px;
-    background: linear-gradient(135deg, #6366f1, #a855f7);
+    background: var(--primary-green);
     border-radius: 8px;
 }
 
@@ -190,7 +188,7 @@
     display: block;
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, #6366f1, #a855f7);
+    background: var(--primary-green);
     border-radius: 16px;
     margin-bottom: 25px;
 }
@@ -203,7 +201,7 @@
 /* ===== PROCESS ===== */
 .uiux-process {
     padding: 120px 0;
-    background: linear-gradient(135deg, #1e1b4b, #312e81);
+    background: var(--primary-green);
     color: white;
 }
 
@@ -231,7 +229,7 @@
 .step-num {
     width: 50px;
     height: 50px;
-    background: linear-gradient(135deg, #6366f1, #a855f7);
+    background: var(--primary-green);
     border-radius: 50%;
     display: flex;
     align-items: center;

@@ -11,14 +11,14 @@ export function InfluencerContent() {
                     <div className="influencer-hero-grid">
                         <div>
                             <span className="influencer-badge"><Icon type="users" />Influencer Marketing</span>
-                            <h1 className="influencer-hero-title">Authentic voices. <span className="text-gradient">Real results.</span></h1>
+                            <h1 className="influencer-hero-title">Authentic voices. <span className="title-accent">Real results.</span></h1>
                             <p className="influencer-hero-subtitle">Strategic influencer partnerships that drive brand awareness, engagement, and conversions through authentic creator content.</p>
                             <div className="content-hero-actions">
-                                <Link href="/contact" className="btn-primary large" style={{ background: 'linear-gradient(135deg, #ec4899, #a855f7)', border: 'none', color: 'white' }}>Start Campaign<Icon type="arrowRight" /></Link>
+                                <Link href="/contact" className="btn-primary large" style={{ background: 'var(--primary-green)', border: 'none', color: 'var(--accent-yellow)' }}>Start Campaign<Icon type="arrowRight" /></Link>
                                 <Link href="#pricing" className="btn-outline">View Packages</Link>
                             </div>
                         </div>
-                        <div style={{ background: 'linear-gradient(135deg, #ec4899, #a855f7)', borderRadius: '24px', height: '400px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white' }}>
+                        <div style={{ background: 'var(--primary-green)', borderRadius: '24px', height: '400px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--accent-yellow)' }}>
                             <div style={{ textAlign: 'center' }}><div style={{ fontSize: '80px', fontWeight: 600 }}>50M+</div><div style={{ fontSize: '18px', opacity: 0.9 }}>Reach Generated</div></div>
                         </div>
                     </div>
@@ -30,7 +30,7 @@ export function InfluencerContent() {
                     <div style={{ display: 'flex', justifyContent: 'center', gap: '80px', flexWrap: 'wrap' }}>
                         {[{ value: '500+', label: 'Creators Network' }, { value: '200+', label: 'Campaigns Run' }, { value: '8.5%', label: 'Avg. Engagement' }, { value: '5x', label: 'Avg. ROAS' }].map((stat, i) => (
                             <div key={i} style={{ textAlign: 'center' }}>
-                                <div style={{ fontSize: '36px', fontWeight: 600, background: 'linear-gradient(135deg, #ec4899, #a855f7)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{stat.value}</div>
+                                <div style={{ fontSize: '36px', fontWeight: 600, background: 'var(--primary-green)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{stat.value}</div>
                                 <div style={{ fontSize: '13px', color: '#64748b', marginTop: '5px' }}>{stat.label}</div>
                             </div>
                         ))}
@@ -40,7 +40,7 @@ export function InfluencerContent() {
 
             <section className="influencer-services">
                 <div className="influencer-container">
-                    <div className="section-header text-center"><span className="section-label">WHAT WE DO</span><h2 className="section-title">Influencer <span className="text-gradient">services.</span></h2></div>
+                    <div className="section-header text-center"><span className="section-label">WHAT WE DO</span><h2 className="section-title">Influencer <span className="title-accent">services.</span></h2></div>
                     <div className="services-grid">
                         {[{ title: 'Creator Discovery', desc: 'Find the perfect influencers for your brand using our vetted network and AI-powered matching.' }, { title: 'Campaign Management', desc: 'End-to-end campaign execution from briefing to content approval and performance tracking.' }, { title: 'UGC Content', desc: 'Authentic user-generated content at scale for ads, social, and website.' }].map((s, i) => (
                             <div key={i} className="service-card"><h3 style={{ fontSize: '24px', fontWeight: 600, marginBottom: '15px' }}>{s.title}</h3><p style={{ fontSize: '16px', color: '#64748b', lineHeight: 1.7 }}>{s.desc}</p></div>
@@ -51,7 +51,7 @@ export function InfluencerContent() {
 
             <section id="pricing" className="influencer-pricing">
                 <div className="influencer-container">
-                    <div className="section-header text-center"><span className="section-label">INVESTMENT</span><h2 className="section-title">Campaign <span className="text-gradient">packages.</span></h2></div>
+                    <div className="section-header text-center"><span className="section-label">INVESTMENT</span><h2 className="section-title">Campaign <span className="title-accent">packages.</span></h2></div>
                     <div className="pricing-grid">
                         <div className="price-card">
                             <h4 style={{ fontSize: '24px', fontWeight: 600, marginBottom: '20px' }}>Starter</h4>
@@ -74,7 +74,7 @@ export function InfluencerContent() {
                                 <li><Icon type="check" style={{ color: '#a855f7' }} /> Paid Amplification</li>
                                 <li><Icon type="check" style={{ color: '#a855f7' }} /> Performance Report</li>
                             </ul>
-                            <Link href="/contact" className="btn-primary" style={{ display: 'block', background: 'linear-gradient(135deg, #ec4899, #a855f7)', border: 'none' }}>Start Campaign</Link>
+                            <Link href="/contact" className="btn-primary" style={{ display: 'block', background: 'var(--primary-green)', border: 'none' }}>Start Campaign</Link>
                         </div>
                         <div className="price-card">
                             <h4 style={{ fontSize: '24px', fontWeight: 600, marginBottom: '20px' }}>Enterprise</h4>
@@ -117,7 +117,7 @@ export function InfluencerContent() {
                                 <input type="text" placeholder="Name" />
                                 <input type="email" placeholder="Email" />
                                 <input type="text" placeholder="Budget Range" />
-                                <button type="submit" className="btn-primary" style={{ border: 'none', background: 'linear-gradient(135deg, #ec4899, #a855f7)', color: 'white', fontSize: '18px', fontWeight: 600, cursor: 'pointer', padding: '20px' }}>Get Free Strategy</button>
+                                <button type="submit" className="btn-primary" style={{ border: 'none', background: 'var(--primary-green)', color: 'var(--accent-yellow)', fontSize: '18px', fontWeight: 600, cursor: 'pointer', padding: '20px' }}>Get Free Strategy</button>
                             </form>
                         </div>
                     </div>

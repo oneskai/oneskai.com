@@ -53,32 +53,12 @@ export function CTASection() {
                         </div>
                     </div>
 
-                    <div className="cta-stats-card">
-                        <div className="stats-card-header">
-                            <span className="stats-card-label">Your Growth Potential</span>
-                        </div>
-
-                        <div className="stats-card-body">
-                            <div className="growth-comparison">
-                                <div className="growth-item">
-                                    <span className="growth-label">Current State</span>
-                                    <div className="growth-bar-container">
-                                        <div className="growth-bar growth-bar-current" style={{ width: '35%' }}></div>
-                                    </div>
-                                </div>
-                                <div className="growth-item">
-                                    <span className="growth-label">With Oneskai</span>
-                                    <div className="growth-bar-container">
-                                        <div className="growth-bar growth-bar-potential" style={{ width: '92%' }}></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="stats-card-highlight">
-                                <span className="highlight-number">+271%</span>
-                                <span className="highlight-label">Average Growth Potential</span>
-                            </div>
-                        </div>
+                    <div className="cta-visual">
+                        <img
+                            src="/images/office-chat.png"
+                            alt="Oneskai Team Discussion"
+                            className="cta-image"
+                        />
                     </div>
                 </div>
             </div>

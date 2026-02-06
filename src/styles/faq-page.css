@@ -22,7 +22,7 @@
     left: 50%;
     width: 800px;
     height: 800px;
-    background: radial-gradient(circle, rgba(61, 13, 168, 0.15) 0%, transparent 60%);
+    background: var(--bg-cream);
     transform: translate(-50%, -50%);
     pointer-events: none;
 }
@@ -54,7 +54,7 @@
 }
 
 .faq-hero-title span {
-    background: linear-gradient(135deg, #ffc700, #3d0da8);
+    background: var(--primary-green);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -331,7 +331,7 @@
 /* CTA Section */
 .faq-cta {
     padding: 100px 0;
-    background: linear-gradient(135deg, #052e26, #0a4a3e);
+    background: var(--primary-green);
     text-align: center;
 }
 

@@ -6,15 +6,15 @@ import '@/styles/content-marketing.css';
 export function MarketResearchContent() {
     return (
         <div className="content-marketing-page">
-            <section className="content-hero" style={{ background: 'radial-gradient(circle at 20% 30%, rgba(14, 165, 233, 0.15) 0%, transparent 40%), radial-gradient(circle at 80% 70%, rgba(34, 211, 238, 0.15) 0%, transparent 40%), var(--bg-white)' }}>
+            <section className="content-hero" style={{ background: 'var(--bg-cream)' }}>
                 <div className="content-container">
                     <div className="content-hero-grid">
                         <div className="content-hero-content">
-                            <span className="content-badge" style={{ background: 'rgba(14, 165, 233, 0.15)', color: '#0ea5e9', border: '1px solid rgba(14, 165, 233, 0.3)' }}><Icon type="search" />Market Research</span>
-                            <h1 className="content-hero-title">Understand Your <span style={{ background: 'linear-gradient(135deg, #0ea5e9, #22d3ee)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Market Deeply.</span></h1>
+                            <span className="content-badge" style={{ background: 'rgba(255, 45, 117, 0.08)', color: 'var(--accent-pink)', border: '1px solid rgba(255, 45, 117, 0.1)' }}><Icon type="search" />Market Research</span>
+                            <h1 className="content-hero-title">Understand Your <span style={{ background: 'var(--primary-green)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Market Deeply.</span></h1>
                             <p className="content-hero-subtitle">Strategic market intelligence that reveals opportunities, threats, and competitive advantages. Make decisions backed by data, not assumptions.</p>
                             <div className="content-hero-actions">
-                                <Link href="/contact" className="btn-primary large" style={{ background: 'linear-gradient(135deg, #0ea5e9, #22d3ee)', border: 'none' }}>Start Research<Icon type="arrowRight" /></Link>
+                                <Link href="/contact" className="btn-primary large" style={{ background: 'var(--primary-green)', border: 'none' }}>Start Research<Icon type="arrowRight" /></Link>
                                 <Link href="#case-studies" className="btn-outline">See Approach</Link>
                             </div>
                             <div className="hero-stat-bars">
@@ -23,8 +23,8 @@ export function MarketResearchContent() {
                             </div>
                         </div>
                         <div className="content-hero-visual">
-                            <div className="content-visual-card" style={{ background: 'linear-gradient(135deg, #0ea5e9, #22d3ee)' }}>
-                                <div style={{ padding: '40px', color: 'white', textAlign: 'center' }}>
+                            <div className="content-visual-card" style={{ background: 'var(--primary-green)' }}>
+                                <div style={{ padding: '40px', color: 'var(--accent-yellow)', textAlign: 'center' }}>
                                     <div style={{ fontSize: '60px' }}>📊</div>
                                     <div style={{ fontSize: '18px', marginTop: '10px' }}>Market Intelligence</div>
                                 </div>
@@ -38,7 +38,7 @@ export function MarketResearchContent() {
                 <div className="content-container">
                     <div className="section-header text-center">
                         <span className="section-label">THE CHALLENGE</span>
-                        <h2 className="section-title">Making Decisions <span style={{ background: 'linear-gradient(135deg, #0ea5e9, #22d3ee)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>in the Dark?</span></h2>
+                        <h2 className="section-title">Making Decisions <span style={{ background: 'var(--primary-green)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>in the Dark?</span></h2>
                     </div>
                     <div className="challenges-grid">
                         <div className="challenge-card"><div className="challenge-icon" style={{ background: 'rgba(14, 165, 233, 0.15)', color: '#0ea5e9' }}><Icon type="compass" /></div><h3>Market Uncertainty</h3><p>Entering new markets or launching products without understanding the competitive landscape.</p></div>
@@ -50,7 +50,7 @@ export function MarketResearchContent() {
 
             <section className="content-services">
                 <div className="content-container">
-                    <div className="section-header"><span className="section-label">RESEARCH SERVICES</span><h2 className="section-title">Market Research <span style={{ background: 'linear-gradient(135deg, #0ea5e9, #22d3ee)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Offerings</span></h2></div>
+                    <div className="section-header"><span className="section-label">RESEARCH SERVICES</span><h2 className="section-title">Market Research <span style={{ background: 'var(--primary-green)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Offerings</span></h2></div>
                     <div className="services-grid">
                         {[
                             { title: 'Competitive Analysis', desc: 'Deep-dive into competitor strategies, positioning, pricing, and market share.', tags: ['Competitors', 'SWOT'] },
@@ -75,11 +75,11 @@ export function MarketResearchContent() {
                 </div>
             </section>
 
-            <section className="content-cta" style={{ background: 'linear-gradient(135deg, #0ea5e9, #22d3ee)' }}>
+            <section className="content-cta" style={{ background: 'var(--primary-green)' }}>
                 <div className="content-container">
                     <div className="cta-box" style={{ background: 'transparent', boxShadow: 'none' }}>
-                        <h2 style={{ color: 'white' }}>Ready for <span style={{ color: '#e0f2fe' }}>Market Clarity?</span></h2>
-                        <p style={{ fontSize: '20px', marginBottom: '40px', opacity: 0.9, color: 'white' }}>Get the intelligence you need to make confident strategic decisions.</p>
+                        <h2 style={{ color: 'var(--accent-yellow)' }}>Ready for <span style={{ color: '#e0f2fe' }}>Market Clarity?</span></h2>
+                        <p style={{ fontSize: '20px', marginBottom: '40px', opacity: 0.9, color: 'var(--accent-yellow)' }}>Get the intelligence you need to make confident strategic decisions.</p>
                         <Link href="/contact" className="btn-white">Start Research Project</Link>
                     </div>
                 </div>

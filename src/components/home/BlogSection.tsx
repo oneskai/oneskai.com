@@ -11,6 +11,7 @@ const featuredPosts = [
         readTime: '8 min read',
         date: 'Feb 1, 2024',
         href: '/blog/ai-digital-marketing-trends-2024',
+        image: '/images/blog-1.png',
         featured: true,
     },
     {
@@ -20,6 +21,7 @@ const featuredPosts = [
         readTime: '5 min read',
         date: 'Jan 28, 2024',
         href: '/blog/340-traffic-growth-case-study',
+        image: '/images/blog-2.png',
         featured: false,
     },
     {
@@ -29,6 +31,7 @@ const featuredPosts = [
         readTime: '12 min read',
         date: 'Jan 25, 2024',
         href: '/blog/ga4-migration-guide',
+        image: '/images/blog-3.png',
         featured: false,
     },
 ];
@@ -59,9 +62,11 @@ export function BlogSection() {
                     {featuredPost && (
                         <Link href={featuredPost.href} className="blog-card blog-card-featured">
                             <div className="blog-card-image">
-                                <div className="blog-image-placeholder">
-                                    <Icon type="fileText" />
-                                </div>
+                                <img
+                                    src={featuredPost.image}
+                                    alt={featuredPost.title}
+                                    className="blog-img"
+                                />
                             </div>
                             <div className="blog-card-content">
                                 <div className="blog-meta">

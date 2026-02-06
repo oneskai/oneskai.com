@@ -6,15 +6,15 @@ import '@/styles/content-marketing.css';
 export function ConsultingContent() {
     return (
         <div className="content-marketing-page">
-            <section className="content-hero" style={{ background: 'radial-gradient(circle at 20% 30%, rgba(59, 130, 246, 0.15) 0%, transparent 40%), radial-gradient(circle at 80% 70%, rgba(99, 102, 241, 0.15) 0%, transparent 40%), var(--bg-white)' }}>
+            <section className="content-hero" style={{ background: 'var(--bg-cream)' }}>
                 <div className="content-container">
                     <div className="content-hero-grid">
                         <div className="content-hero-content">
-                            <span className="content-badge" style={{ background: 'rgba(59, 130, 246, 0.15)', color: '#3b82f6', border: '1px solid rgba(59, 130, 246, 0.3)' }}><Icon type="lightbulb" />Marketing Consulting</span>
-                            <h1 className="content-hero-title">Expert Advice. <span style={{ background: 'linear-gradient(135deg, #3b82f6, #6366f1)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Clear Direction.</span></h1>
+                            <span className="content-badge" style={{ background: 'rgba(255, 45, 117, 0.08)', color: 'var(--accent-pink)', border: '1px solid rgba(255, 45, 117, 0.1)' }}><Icon type="lightbulb" />Marketing Consulting</span>
+                            <h1 className="content-hero-title">Expert Advice. <span style={{ background: 'var(--primary-green)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Clear Direction.</span></h1>
                             <p className="content-hero-subtitle">Strategic marketing consulting that solves complex challenges, identifies growth opportunities, and provides actionable roadmaps.</p>
                             <div className="content-hero-actions">
-                                <Link href="/contact" className="btn-primary large" style={{ background: 'linear-gradient(135deg, #3b82f6, #6366f1)', border: 'none' }}>Book Consultation<Icon type="arrowRight" /></Link>
+                                <Link href="/contact" className="btn-primary large" style={{ background: 'var(--primary-green)', border: 'none' }}>Book Consultation<Icon type="arrowRight" /></Link>
                                 <Link href="#case-studies" className="btn-outline">View Approach</Link>
                             </div>
                             <div className="hero-stat-bars">
@@ -23,8 +23,8 @@ export function ConsultingContent() {
                             </div>
                         </div>
                         <div className="content-hero-visual">
-                            <div className="content-visual-card" style={{ background: 'linear-gradient(135deg, #3b82f6, #6366f1)' }}>
-                                <div style={{ padding: '40px', color: 'white', textAlign: 'center' }}>
+                            <div className="content-visual-card" style={{ background: 'var(--primary-green)' }}>
+                                <div style={{ padding: '40px', color: 'var(--accent-yellow)', textAlign: 'center' }}>
                                     <div style={{ fontSize: '60px', fontWeight: 600 }}>💡</div>
                                     <div style={{ fontSize: '18px', marginTop: '10px' }}>Strategic Clarity</div>
                                 </div>
@@ -38,7 +38,7 @@ export function ConsultingContent() {
                 <div className="content-container">
                     <div className="section-header text-center">
                         <span className="section-label">THE CHALLENGE</span>
-                        <h2 className="section-title">Stuck Without <span style={{ background: 'linear-gradient(135deg, #3b82f6, #6366f1)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>a Clear Path?</span></h2>
+                        <h2 className="section-title">Stuck Without <span style={{ background: 'var(--primary-green)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>a Clear Path?</span></h2>
                     </div>
                     <div className="challenges-grid">
                         <div className="challenge-card"><div className="challenge-icon" style={{ background: 'rgba(59, 130, 246, 0.15)', color: '#3b82f6' }}><Icon type="compass" /></div><h3>Lack of Direction</h3><p>Too many options, conflicting advice, and no clear prioritization of what to do next.</p></div>
@@ -50,7 +50,7 @@ export function ConsultingContent() {
 
             <section className="content-services">
                 <div className="content-container">
-                    <div className="section-header"><span className="section-label">CONSULTING SERVICES</span><h2 className="section-title">How We <span style={{ background: 'linear-gradient(135deg, #3b82f6, #6366f1)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Help</span></h2></div>
+                    <div className="section-header"><span className="section-label">CONSULTING SERVICES</span><h2 className="section-title">How We <span style={{ background: 'var(--primary-green)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Help</span></h2></div>
                     <div className="services-grid">
                         {[
                             { title: 'Marketing Audits', desc: 'Comprehensive analysis of your current marketing efforts, identifying what&apos;s working and what needs to change.', tags: ['Gap Analysis', 'Benchmarking'] },
@@ -75,11 +75,11 @@ export function ConsultingContent() {
                 </div>
             </section>
 
-            <section className="content-cta" style={{ background: 'linear-gradient(135deg, #3b82f6, #6366f1)' }}>
+            <section className="content-cta" style={{ background: 'var(--primary-green)' }}>
                 <div className="content-container">
                     <div className="cta-box" style={{ background: 'transparent', boxShadow: 'none' }}>
-                        <h2 style={{ color: 'white' }}>Need <span style={{ color: '#c7d2fe' }}>Strategic Clarity?</span></h2>
-                        <p style={{ fontSize: '20px', marginBottom: '40px', opacity: 0.9, color: 'white' }}>Book a free discovery call to discuss your challenges.</p>
+                        <h2 style={{ color: 'var(--accent-yellow)' }}>Need <span style={{ color: '#c7d2fe' }}>Strategic Clarity?</span></h2>
+                        <p style={{ fontSize: '20px', marginBottom: '40px', opacity: 0.9, color: 'var(--accent-yellow)' }}>Book a free discovery call to discuss your challenges.</p>
                         <Link href="/contact" className="btn-white">Book Discovery Call</Link>
                     </div>
                 </div>

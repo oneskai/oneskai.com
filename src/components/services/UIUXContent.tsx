@@ -17,13 +17,13 @@ export function UIUXContent() {
                                 Human-Centered Design
                             </span>
                             <h1 className="uiux-hero-title">
-                                Design experiences users <span className="text-gradient">actually love.</span>
+                                Design experiences users <span className="title-accent">actually love.</span>
                             </h1>
                             <p className="uiux-hero-subtitle">
                                 We craft intuitive, beautiful interfaces backed by research and data—turning complex products into delightful experiences that drive engagement and conversion.
                             </p>
                             <div className="content-hero-actions">
-                                <Link href="/contact" className="btn-primary large" style={{ background: 'linear-gradient(135deg, #6366f1, #a855f7)', border: 'none', color: 'white' }}>
+                                <Link href="/contact" className="btn-primary large" style={{ background: 'var(--primary-green)', border: 'none', color: 'var(--accent-yellow)' }}>
                                     Start Design Project
                                     <Icon type="arrowRight" />
                                 </Link>
@@ -63,7 +63,7 @@ export function UIUXContent() {
                             { value: '98%', label: 'Client Satisfaction' }
                         ].map((stat, i) => (
                             <div key={i} style={{ textAlign: 'center' }}>
-                                <div style={{ fontSize: '36px', fontWeight: 600, background: 'linear-gradient(135deg, #6366f1, #a855f7)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{stat.value}</div>
+                                <div style={{ fontSize: '36px', fontWeight: 600, background: 'var(--primary-green)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{stat.value}</div>
                                 <div style={{ fontSize: '13px', color: '#64748b', marginTop: '5px' }}>{stat.label}</div>
                             </div>
                         ))}
@@ -76,7 +76,7 @@ export function UIUXContent() {
                 <div className="uiux-container">
                     <div className="section-header text-center">
                         <span className="section-label">WHAT WE DO</span>
-                        <h2 className="section-title">End-to-end <span className="text-gradient">design services.</span></h2>
+                        <h2 className="section-title">End-to-end <span className="title-accent">design services.</span></h2>
                     </div>
                     <div className="services-grid">
                         {[
@@ -98,7 +98,7 @@ export function UIUXContent() {
                 <div className="uiux-container">
                     <div className="section-header text-center">
                         <span className="section-label" style={{ color: 'rgba(255,255,255,0.7)' }}>OUR PROCESS</span>
-                        <h2 className="section-title" style={{ color: 'white' }}>Design thinking <span style={{ color: '#c4b5fd' }}>in action.</span></h2>
+                        <h2 className="section-title" style={{ color: 'var(--accent-yellow)' }}>Design thinking <span style={{ color: '#c4b5fd' }}>in action.</span></h2>
                     </div>
                     <div className="process-steps">
                         {[
@@ -123,7 +123,7 @@ export function UIUXContent() {
                 <div className="uiux-container">
                     <div className="section-header text-center">
                         <span className="section-label">OUR TOOLKIT</span>
-                        <h2 className="section-title">Industry-leading <span className="text-gradient">design tools.</span></h2>
+                        <h2 className="section-title">Industry-leading <span className="title-accent">design tools.</span></h2>
                     </div>
                     <div className="tools-grid">
                         {[
@@ -147,7 +147,7 @@ export function UIUXContent() {
                 <div className="uiux-container">
                     <div className="section-header text-center">
                         <span className="section-label">INVESTMENT</span>
-                        <h2 className="section-title">Design <span className="text-gradient">packages.</span></h2>
+                        <h2 className="section-title">Design <span className="title-accent">packages.</span></h2>
                     </div>
                     <div className="pricing-grid">
                         <div className="price-card">
@@ -175,7 +175,7 @@ export function UIUXContent() {
                                 <li><Icon type="check" style={{ color: '#a855f7' }} /> Usability Testing</li>
                                 <li><Icon type="check" style={{ color: '#a855f7' }} /> 6-8 Week Delivery</li>
                             </ul>
-                            <Link href="/contact" className="btn-primary" style={{ display: 'block', background: 'linear-gradient(135deg, #6366f1, #a855f7)', border: 'none' }}>Start Project</Link>
+                            <Link href="/contact" className="btn-primary" style={{ display: 'block', background: 'var(--primary-green)', border: 'none' }}>Start Project</Link>
                         </div>
 
                         <div className="price-card">
@@ -199,7 +199,7 @@ export function UIUXContent() {
                 <div className="uiux-container">
                     <div className="section-header text-center">
                         <span className="section-label">OUR WORK</span>
-                        <h2 className="section-title">Recent <span className="text-gradient">projects.</span></h2>
+                        <h2 className="section-title">Recent <span className="title-accent">projects.</span></h2>
                     </div>
                     <div className="portfolio-grid">
                         {[
@@ -259,7 +259,7 @@ export function UIUXContent() {
                                     <option value="redesign">Redesign</option>
                                 </select>
                                 <textarea placeholder="Tell us about your project..." style={{ height: '100px' }}></textarea>
-                                <button type="submit" className="btn-primary" style={{ border: 'none', background: 'linear-gradient(135deg, #6366f1, #a855f7)', color: 'white', fontSize: '18px', fontWeight: 600, cursor: 'pointer', padding: '20px' }}>
+                                <button type="submit" className="btn-primary" style={{ border: 'none', background: 'var(--primary-green)', color: 'var(--accent-yellow)', fontSize: '18px', fontWeight: 600, cursor: 'pointer', padding: '20px' }}>
                                     Get Free UX Audit
                                 </button>
                             </form>

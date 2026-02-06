@@ -16,13 +16,13 @@ export function MarketingAutomationContent() {
                                 Marketing Automation
                             </span>
                             <h1 className="automation-hero-title">
-                                Automate. Scale. <span className="text-gradient">Convert.</span>
+                                Automate. Scale. <span className="title-accent">Convert.</span>
                             </h1>
                             <p className="automation-hero-subtitle">
                                 HubSpot, Marketo, and Salesforce automation that nurtures leads 24/7 and turns prospects into customers while you sleep.
                             </p>
                             <div className="content-hero-actions">
-                                <Link href="/contact" className="btn-primary large" style={{ background: 'linear-gradient(135deg, #10b981, #22c55e)', border: 'none', color: 'white' }}>
+                                <Link href="/contact" className="btn-primary large" style={{ background: 'var(--primary-green)', border: 'none', color: 'var(--accent-yellow)' }}>
                                     Get Automation Audit
                                     <Icon type="arrowRight" />
                                 </Link>
@@ -47,7 +47,7 @@ export function MarketingAutomationContent() {
                     <div style={{ display: 'flex', justifyContent: 'center', gap: '80px', flexWrap: 'wrap' }}>
                         {[{ value: '100+', label: 'Automations Built' }, { value: '10M+', label: 'Emails Automated' }, { value: '40%', label: 'Avg. Time Saved' }, { value: 'Certified', label: 'HubSpot Partners' }].map((stat, i) => (
                             <div key={i} style={{ textAlign: 'center' }}>
-                                <div style={{ fontSize: '36px', fontWeight: 600, background: 'linear-gradient(135deg, #10b981, #22c55e)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{stat.value}</div>
+                                <div style={{ fontSize: '36px', fontWeight: 600, background: 'var(--primary-green)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{stat.value}</div>
                                 <div style={{ fontSize: '13px', color: '#64748b', marginTop: '5px' }}>{stat.label}</div>
                             </div>
                         ))}
@@ -59,7 +59,7 @@ export function MarketingAutomationContent() {
                 <div className="automation-container">
                     <div className="section-header text-center">
                         <span className="section-label">WHAT WE DO</span>
-                        <h2 className="section-title">Automation <span className="text-gradient">services.</span></h2>
+                        <h2 className="section-title">Automation <span className="title-accent">services.</span></h2>
                     </div>
                     <div className="services-grid">
                         {[{ title: 'Lead Nurturing', desc: 'Automated email sequences that guide prospects through your funnel with personalized content.' }, { title: 'CRM Integration', desc: 'Connect HubSpot, Salesforce, or Marketo with your entire marketing stack.' }, { title: 'Workflow Automation', desc: 'Eliminate manual tasks with automated workflows for sales, marketing, and support.' }].map((service, i) => (
@@ -76,7 +76,7 @@ export function MarketingAutomationContent() {
                 <div className="automation-container">
                     <div className="section-header text-center">
                         <span className="section-label">INVESTMENT</span>
-                        <h2 className="section-title">Automation <span className="text-gradient">packages.</span></h2>
+                        <h2 className="section-title">Automation <span className="title-accent">packages.</span></h2>
                     </div>
                     <div className="pricing-grid">
                         <div className="price-card">
@@ -100,7 +100,7 @@ export function MarketingAutomationContent() {
                                 <li><Icon type="check" style={{ color: '#22c55e' }} /> CRM Integration</li>
                                 <li><Icon type="check" style={{ color: '#22c55e' }} /> Training</li>
                             </ul>
-                            <Link href="/contact" className="btn-primary" style={{ display: 'block', background: 'linear-gradient(135deg, #10b981, #22c55e)', border: 'none' }}>Start Project</Link>
+                            <Link href="/contact" className="btn-primary" style={{ display: 'block', background: 'var(--primary-green)', border: 'none' }}>Start Project</Link>
                         </div>
                         <div className="price-card">
                             <h4 style={{ fontSize: '24px', fontWeight: 600, marginBottom: '20px' }}>Managed</h4>
@@ -152,7 +152,7 @@ export function MarketingAutomationContent() {
                                     <option value="marketo">Marketo</option>
                                     <option value="none">None</option>
                                 </select>
-                                <button type="submit" className="btn-primary" style={{ border: 'none', background: 'linear-gradient(135deg, #10b981, #22c55e)', color: 'white', fontSize: '18px', fontWeight: 600, cursor: 'pointer', padding: '20px' }}>Get Free Audit</button>
+                                <button type="submit" className="btn-primary" style={{ border: 'none', background: 'var(--primary-green)', color: 'var(--accent-yellow)', fontSize: '18px', fontWeight: 600, cursor: 'pointer', padding: '20px' }}>Get Free Audit</button>
                             </form>
                         </div>
                     </div>

@@ -6,15 +6,15 @@ import '@/styles/content-marketing.css';
 export function MobileFirstContent() {
     return (
         <div className="content-marketing-page">
-            <section className="content-hero" style={{ background: 'radial-gradient(circle at 20% 30%, rgba(236, 72, 153, 0.15) 0%, transparent 40%), radial-gradient(circle at 80% 70%, rgba(244, 114, 182, 0.15) 0%, transparent 40%), var(--bg-white)' }}>
+            <section className="content-hero" style={{ background: 'var(--bg-cream)' }}>
                 <div className="content-container">
                     <div className="content-hero-grid">
                         <div className="content-hero-content">
-                            <span className="content-badge" style={{ background: 'rgba(236, 72, 153, 0.15)', color: '#ec4899', border: '1px solid rgba(236, 72, 153, 0.3)' }}><Icon type="smartphone" />Mobile-First</span>
-                            <h1 className="content-hero-title">Win the <span style={{ background: 'linear-gradient(135deg, #ec4899, #f472b6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Mobile Moment.</span></h1>
+                            <span className="content-badge" style={{ background: 'rgba(255, 45, 117, 0.08)', color: 'var(--accent-pink)', border: '1px solid rgba(255, 45, 117, 0.1)' }}><Icon type="smartphone" />Mobile-First</span>
+                            <h1 className="content-hero-title">Win the <span className="title-accent">Mobile Moment.</span></h1>
                             <p className="content-hero-subtitle">Mobile-first strategies that capture customers where they spend the most time—on their phones. Apps, mobile web, and cross-device experiences.</p>
                             <div className="content-hero-actions">
-                                <Link href="/contact" className="btn-primary large" style={{ background: 'linear-gradient(135deg, #ec4899, #f472b6)', border: 'none' }}>Get Mobile Audit<Icon type="arrowRight" /></Link>
+                                <Link href="/contact" className="btn-primary large" style={{ background: 'var(--primary-green)', border: 'none' }}>Get Mobile Audit<Icon type="arrowRight" /></Link>
                                 <Link href="#case-studies" className="btn-outline">See Mobile Wins</Link>
                             </div>
                             <div className="hero-stat-bars">
@@ -23,8 +23,8 @@ export function MobileFirstContent() {
                             </div>
                         </div>
                         <div className="content-hero-visual">
-                            <div className="content-visual-card" style={{ background: 'linear-gradient(135deg, #ec4899, #f472b6)' }}>
-                                <div style={{ padding: '40px', color: 'white', textAlign: 'center' }}>
+                            <div className="content-visual-card" style={{ background: 'var(--primary-green)' }}>
+                                <div style={{ padding: '40px', color: 'var(--accent-yellow)', textAlign: 'center' }}>
                                     <div style={{ fontSize: '60px' }}>📱</div>
                                     <div style={{ fontSize: '18px', marginTop: '10px' }}>Always Connected</div>
                                 </div>
@@ -38,7 +38,7 @@ export function MobileFirstContent() {
                 <div className="content-container">
                     <div className="section-header text-center">
                         <span className="section-label">THE REALITY</span>
-                        <h2 className="section-title">Mobile Isn&apos;t <span style={{ background: 'linear-gradient(135deg, #ec4899, #f472b6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Optional Anymore</span></h2>
+                        <h2 className="section-title">Mobile Isn&apos;t <span className="title-accent">Optional Anymore</span></h2>
                     </div>
                     <div className="challenges-grid">
                         <div className="challenge-card"><div className="challenge-icon" style={{ background: 'rgba(236, 72, 153, 0.15)', color: '#ec4899' }}><Icon type="clock" /></div><h3>4+ Hours Daily</h3><p>Adults spend over 4 hours daily on their mobile devices. Are you reaching them?</p></div>
@@ -50,7 +50,7 @@ export function MobileFirstContent() {
 
             <section className="content-services">
                 <div className="content-container">
-                    <div className="section-header"><span className="section-label">MOBILE SOLUTIONS</span><h2 className="section-title">Mobile-First <span style={{ background: 'linear-gradient(135deg, #ec4899, #f472b6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Services</span></h2></div>
+                    <div className="section-header"><span className="section-label">MOBILE SOLUTIONS</span><h2 className="section-title">Mobile-First <span className="title-accent">Services</span></h2></div>
                     <div className="services-grid">
                         {[
                             { title: 'Mobile Strategy', desc: 'Define your mobile-first strategy across app, web, and cross-device experience.', tags: ['Strategy', 'Roadmap'] },
@@ -75,11 +75,11 @@ export function MobileFirstContent() {
                 </div>
             </section>
 
-            <section className="content-cta" style={{ background: 'linear-gradient(135deg, #ec4899, #f472b6)' }}>
+            <section className="content-cta" style={{ background: 'var(--primary-green)' }}>
                 <div className="content-container">
                     <div className="cta-box" style={{ background: 'transparent', boxShadow: 'none' }}>
-                        <h2 style={{ color: 'white' }}>Ready to <span style={{ color: '#fce7f3' }}>Go Mobile-First?</span></h2>
-                        <p style={{ fontSize: '20px', marginBottom: '40px', opacity: 0.9, color: 'white' }}>Get a mobile audit to see where you&apos;re missing opportunities.</p>
+                        <h2 style={{ color: 'var(--accent-yellow)' }}>Ready to <span style={{ color: '#fce7f3' }}>Go Mobile-First?</span></h2>
+                        <p style={{ fontSize: '20px', marginBottom: '40px', opacity: 0.9, color: 'var(--accent-yellow)' }}>Get a mobile audit to see where you&apos;re missing opportunities.</p>
                         <Link href="/contact" className="btn-white">Get Mobile Audit</Link>
                     </div>
                 </div>

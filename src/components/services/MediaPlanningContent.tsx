@@ -6,15 +6,15 @@ import '@/styles/content-marketing.css';
 export function MediaPlanningContent() {
     return (
         <div className="content-marketing-page">
-            <section className="content-hero" style={{ background: 'radial-gradient(circle at 20% 30%, rgba(37, 99, 235, 0.15) 0%, transparent 40%), radial-gradient(circle at 80% 70%, rgba(59, 130, 246, 0.15) 0%, transparent 40%), var(--bg-white)' }}>
+            <section className="content-hero" style={{ background: 'var(--bg-cream)' }}>
                 <div className="content-container">
                     <div className="content-hero-grid">
                         <div className="content-hero-content">
-                            <span className="content-badge" style={{ background: 'rgba(37, 99, 235, 0.15)', color: '#2563eb', border: '1px solid rgba(37, 99, 235, 0.3)' }}><Icon type="layers" />Media Planning</span>
-                            <h1 className="content-hero-title">Strategic <span style={{ background: 'linear-gradient(135deg, #2563eb, #3b82f6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Media Mastery.</span></h1>
+                            <span className="content-badge" style={{ background: 'rgba(255, 45, 117, 0.08)', color: 'var(--accent-pink)', border: '1px solid rgba(255, 45, 117, 0.1)' }}><Icon type="layers" />Media Planning</span>
+                            <h1 className="content-hero-title">Strategic <span style={{ background: 'var(--primary-green)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Media Mastery.</span></h1>
                             <p className="content-hero-subtitle">Data-driven media planning that maximizes reach, efficiency, and ROI across the entire media landscape—paid, owned, and earned.</p>
                             <div className="content-hero-actions">
-                                <Link href="/contact" className="btn-primary large" style={{ background: 'linear-gradient(135deg, #2563eb, #3b82f6)', border: 'none' }}>Get Media Plan<Icon type="arrowRight" /></Link>
+                                <Link href="/contact" className="btn-primary large" style={{ background: 'var(--primary-green)', border: 'none' }}>Get Media Plan<Icon type="arrowRight" /></Link>
                                 <Link href="#case-studies" className="btn-outline">See Approach</Link>
                             </div>
                             <div className="hero-stat-bars">
@@ -23,8 +23,8 @@ export function MediaPlanningContent() {
                             </div>
                         </div>
                         <div className="content-hero-visual">
-                            <div className="content-visual-card" style={{ background: 'linear-gradient(135deg, #2563eb, #3b82f6)' }}>
-                                <div style={{ padding: '40px', color: 'white', textAlign: 'center' }}>
+                            <div className="content-visual-card" style={{ background: 'var(--primary-green)' }}>
+                                <div style={{ padding: '40px', color: 'var(--accent-yellow)', textAlign: 'center' }}>
                                     <div style={{ fontSize: '60px' }}>📊</div>
                                     <div style={{ fontSize: '18px', marginTop: '10px' }}>Strategic Media Mix</div>
                                 </div>
@@ -38,7 +38,7 @@ export function MediaPlanningContent() {
                 <div className="content-container">
                     <div className="section-header text-center">
                         <span className="section-label">THE CHALLENGE</span>
-                        <h2 className="section-title">The Media Landscape is <span style={{ background: 'linear-gradient(135deg, #2563eb, #3b82f6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Overwhelming</span></h2>
+                        <h2 className="section-title">The Media Landscape is <span style={{ background: 'var(--primary-green)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Overwhelming</span></h2>
                     </div>
                     <div className="challenges-grid">
                         <div className="challenge-card"><div className="challenge-icon" style={{ background: 'rgba(37, 99, 235, 0.15)', color: '#2563eb' }}><Icon type="layers" /></div><h3>Channel Fragmentation</h3><p>Dozens of platforms, formats, and buying methods make media planning complex.</p></div>
@@ -50,7 +50,7 @@ export function MediaPlanningContent() {
 
             <section className="content-services">
                 <div className="content-container">
-                    <div className="section-header"><span className="section-label">WHAT WE DO</span><h2 className="section-title">Media Planning <span style={{ background: 'linear-gradient(135deg, #2563eb, #3b82f6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Services</span></h2></div>
+                    <div className="section-header"><span className="section-label">WHAT WE DO</span><h2 className="section-title">Media Planning <span style={{ background: 'var(--primary-green)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Services</span></h2></div>
                     <div className="services-grid">
                         {[
                             { title: 'Media Strategy', desc: 'Comprehensive media strategies aligned to business goals and audience behavior.', tags: ['Strategy', 'Planning'] },
@@ -75,11 +75,11 @@ export function MediaPlanningContent() {
                 </div>
             </section>
 
-            <section className="content-cta" style={{ background: 'linear-gradient(135deg, #2563eb, #3b82f6)' }}>
+            <section className="content-cta" style={{ background: 'var(--primary-green)' }}>
                 <div className="content-container">
                     <div className="cta-box" style={{ background: 'transparent', boxShadow: 'none' }}>
-                        <h2 style={{ color: 'white' }}>Ready for <span style={{ color: '#bfdbfe' }}>Strategic Media?</span></h2>
-                        <p style={{ fontSize: '20px', marginBottom: '40px', opacity: 0.9, color: 'white' }}>Get a custom media plan that maximizes your budget efficiency.</p>
+                        <h2 style={{ color: 'var(--accent-yellow)' }}>Ready for <span style={{ color: '#bfdbfe' }}>Strategic Media?</span></h2>
+                        <p style={{ fontSize: '20px', marginBottom: '40px', opacity: 0.9, color: 'var(--accent-yellow)' }}>Get a custom media plan that maximizes your budget efficiency.</p>
                         <Link href="/contact" className="btn-white">Get Custom Media Plan</Link>
                     </div>
                 </div>

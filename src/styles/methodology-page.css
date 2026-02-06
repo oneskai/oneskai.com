@@ -1,8 +1,8 @@
 /* Methodology Page Styles */
 .methodology-page {
-    --method-primary: #7c3aed;
+    --method-primary: var(--accent-pink);
     --method-secondary: #1f2937;
-    --method-accent: #7c3aed;
+    --method-accent: var(--accent-pink);
     --method-light: #f8fafc;
 }
 
@@ -21,7 +21,7 @@
     right: 0;
     width: 60%;
     height: 100%;
-    background: radial-gradient(circle at 80% 30%, rgba(124, 58, 237, 0.2) 0%, transparent 50%);
+    background: var(--bg-cream);
     pointer-events: none;
 }
 

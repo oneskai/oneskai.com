@@ -6,15 +6,15 @@ import '@/styles/content-marketing.css';
 export function PersonaDevelopmentContent() {
     return (
         <div className="content-marketing-page">
-            <section className="content-hero" style={{ background: 'radial-gradient(circle at 20% 30%, rgba(168, 85, 247, 0.15) 0%, transparent 40%), radial-gradient(circle at 80% 70%, rgba(236, 72, 153, 0.15) 0%, transparent 40%), var(--bg-white)' }}>
+            <section className="content-hero" style={{ background: 'var(--bg-cream)' }}>
                 <div className="content-container">
                     <div className="content-hero-grid">
                         <div className="content-hero-content">
-                            <span className="content-badge" style={{ background: 'rgba(168, 85, 247, 0.15)', color: '#a855f7', border: '1px solid rgba(168, 85, 247, 0.3)' }}><Icon type="users" />Persona Development</span>
-                            <h1 className="content-hero-title">Know Your <span style={{ background: 'linear-gradient(135deg, #a855f7, #ec4899)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Ideal Customer.</span></h1>
+                            <span className="content-badge" style={{ background: 'rgba(255, 45, 117, 0.08)', color: 'var(--accent-pink)', border: '1px solid rgba(255, 45, 117, 0.1)' }}><Icon type="users" />Persona Development</span>
+                            <h1 className="content-hero-title">Know Your <span style={{ background: 'var(--primary-green)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Ideal Customer.</span></h1>
                             <p className="content-hero-subtitle">Data-driven buyer personas that inform messaging, targeting, and product decisions. Stop guessing who your customers are.</p>
                             <div className="content-hero-actions">
-                                <Link href="/contact" className="btn-primary large" style={{ background: 'linear-gradient(135deg, #a855f7, #ec4899)', border: 'none' }}>Build Personas<Icon type="arrowRight" /></Link>
+                                <Link href="/contact" className="btn-primary large" style={{ background: 'var(--primary-green)', border: 'none' }}>Build Personas<Icon type="arrowRight" /></Link>
                                 <Link href="#case-studies" className="btn-outline">See Examples</Link>
                             </div>
                             <div className="hero-stat-bars">
@@ -23,8 +23,8 @@ export function PersonaDevelopmentContent() {
                             </div>
                         </div>
                         <div className="content-hero-visual">
-                            <div className="content-visual-card" style={{ background: 'linear-gradient(135deg, #a855f7, #ec4899)' }}>
-                                <div style={{ padding: '40px', color: 'white', textAlign: 'center' }}>
+                            <div className="content-visual-card" style={{ background: 'var(--primary-green)' }}>
+                                <div style={{ padding: '40px', color: 'var(--accent-yellow)', textAlign: 'center' }}>
                                     <div style={{ fontSize: '60px' }}>👤</div>
                                     <div style={{ fontSize: '18px', marginTop: '10px' }}>Customer Clarity</div>
                                 </div>
@@ -38,7 +38,7 @@ export function PersonaDevelopmentContent() {
                 <div className="content-container">
                     <div className="section-header text-center">
                         <span className="section-label">THE PROBLEM</span>
-                        <h2 className="section-title">Marketing to <span style={{ background: 'linear-gradient(135deg, #a855f7, #ec4899)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Everyone?</span></h2>
+                        <h2 className="section-title">Marketing to <span style={{ background: 'var(--primary-green)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Everyone?</span></h2>
                     </div>
                     <div className="challenges-grid">
                         <div className="challenge-card"><div className="challenge-icon" style={{ background: 'rgba(168, 85, 247, 0.15)', color: '#a855f7' }}><Icon type="target" /></div><h3>Generic Messaging</h3><p>Without clear personas, your messaging is too broad to resonate with anyone specifically.</p></div>
@@ -50,7 +50,7 @@ export function PersonaDevelopmentContent() {
 
             <section className="content-services">
                 <div className="content-container">
-                    <div className="section-header"><span className="section-label">WHAT WE DELIVER</span><h2 className="section-title">Persona <span style={{ background: 'linear-gradient(135deg, #a855f7, #ec4899)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Services</span></h2></div>
+                    <div className="section-header"><span className="section-label">WHAT WE DELIVER</span><h2 className="section-title">Persona <span style={{ background: 'var(--primary-green)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Services</span></h2></div>
                     <div className="services-grid">
                         {[
                             { title: 'Customer Research', desc: 'In-depth interviews, surveys, and behavioral analysis to understand your best customers.', tags: ['Interviews', 'Surveys'] },
@@ -75,11 +75,11 @@ export function PersonaDevelopmentContent() {
                 </div>
             </section>
 
-            <section className="content-cta" style={{ background: 'linear-gradient(135deg, #a855f7, #ec4899)' }}>
+            <section className="content-cta" style={{ background: 'var(--primary-green)' }}>
                 <div className="content-container">
                     <div className="cta-box" style={{ background: 'transparent', boxShadow: 'none' }}>
-                        <h2 style={{ color: 'white' }}>Ready to Know <span style={{ color: '#fce7f3' }}>Your Customer?</span></h2>
-                        <p style={{ fontSize: '20px', marginBottom: '40px', opacity: 0.9, color: 'white' }}>Build data-driven personas that transform your marketing effectiveness.</p>
+                        <h2 style={{ color: 'var(--accent-yellow)' }}>Ready to Know <span style={{ color: '#fce7f3' }}>Your Customer?</span></h2>
+                        <p style={{ fontSize: '20px', marginBottom: '40px', opacity: 0.9, color: 'var(--accent-yellow)' }}>Build data-driven personas that transform your marketing effectiveness.</p>
                         <Link href="/contact" className="btn-white">Start Persona Project</Link>
                     </div>
                 </div>

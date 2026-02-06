@@ -17,13 +17,13 @@ export function GTMContent() {
                                 Tag Management
                             </span>
                             <h1 className="gtm-hero-title">
-                                Track everything. <span className="text-gradient">Break nothing.</span>
+                                Track everything. <span className="title-accent">Break nothing.</span>
                             </h1>
                             <p className="gtm-hero-subtitle">
                                 Expert Google Tag Manager implementation that ensures accurate data collection, faster load times, and seamless marketing integrations.
                             </p>
                             <div className="content-hero-actions">
-                                <Link href="/contact" className="btn-primary large" style={{ background: 'linear-gradient(135deg, #3b82f6, #eab308)', border: 'none', color: 'white' }}>
+                                <Link href="/contact" className="btn-primary large" style={{ background: 'var(--primary-green)', border: 'none', color: 'var(--accent-yellow)' }}>
                                     Get GTM Audit
                                     <Icon type="arrowRight" />
                                 </Link>
@@ -66,7 +66,7 @@ export function GTMContent() {
                             { value: 'Certified', label: 'Google Partners' }
                         ].map((stat, i) => (
                             <div key={i} style={{ textAlign: 'center' }}>
-                                <div style={{ fontSize: '36px', fontWeight: 600, background: 'linear-gradient(135deg, #3b82f6, #eab308)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{stat.value}</div>
+                                <div style={{ fontSize: '36px', fontWeight: 600, background: 'var(--primary-green)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{stat.value}</div>
                                 <div style={{ fontSize: '13px', color: '#64748b', marginTop: '5px' }}>{stat.label}</div>
                             </div>
                         ))}
@@ -79,7 +79,7 @@ export function GTMContent() {
                 <div className="gtm-container">
                     <div className="section-header text-center">
                         <span className="section-label">WHAT WE DO</span>
-                        <h2 className="section-title">GTM <span className="text-gradient">services.</span></h2>
+                        <h2 className="section-title">GTM <span className="title-accent">services.</span></h2>
                     </div>
                     <div className="services-grid">
                         {[
@@ -101,7 +101,7 @@ export function GTMContent() {
                 <div className="gtm-container">
                     <div className="section-header text-center">
                         <span className="section-label">INVESTMENT</span>
-                        <h2 className="section-title">GTM <span className="text-gradient">packages.</span></h2>
+                        <h2 className="section-title">GTM <span className="title-accent">packages.</span></h2>
                     </div>
                     <div className="pricing-grid">
                         <div className="price-card">
@@ -129,7 +129,7 @@ export function GTMContent() {
                                 <li><Icon type="check" style={{ color: '#eab308' }} /> GA4 Configuration</li>
                                 <li><Icon type="check" style={{ color: '#eab308' }} /> Documentation</li>
                             </ul>
-                            <Link href="/contact" className="btn-primary" style={{ display: 'block', background: 'linear-gradient(135deg, #3b82f6, #eab308)', border: 'none' }}>Get Started</Link>
+                            <Link href="/contact" className="btn-primary" style={{ display: 'block', background: 'var(--primary-green)', border: 'none' }}>Get Started</Link>
                         </div>
 
                         <div className="price-card">
@@ -192,7 +192,7 @@ export function GTMContent() {
                                     <option value="existing">Existing GTM, needs audit</option>
                                     <option value="rebuild">Full rebuild needed</option>
                                 </select>
-                                <button type="submit" className="btn-primary" style={{ border: 'none', background: 'linear-gradient(135deg, #3b82f6, #eab308)', color: 'white', fontSize: '18px', fontWeight: 600, cursor: 'pointer', padding: '20px' }}>
+                                <button type="submit" className="btn-primary" style={{ border: 'none', background: 'var(--primary-green)', color: 'var(--accent-yellow)', fontSize: '18px', fontWeight: 600, cursor: 'pointer', padding: '20px' }}>
                                     Get Free GTM Audit
                                 </button>
                             </form>

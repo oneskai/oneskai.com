@@ -8,24 +8,24 @@ export function ASOContent() {
     return (
         <div className="content-marketing-page">
             {/* Hero Section */}
-            <section className="content-hero" style={{ background: 'radial-gradient(circle at 20% 30%, rgba(76, 175, 80, 0.15) 0%, transparent 40%), radial-gradient(circle at 80% 70%, rgba(139, 195, 74, 0.15) 0%, transparent 40%), var(--bg-white)' }}>
+            <section className="content-hero" style={{ background: 'var(--bg-cream)' }}>
                 <div className="content-container">
                     <div className="content-hero-grid">
                         <div className="content-hero-content">
-                            <span className="content-badge" style={{ background: 'rgba(76, 175, 80, 0.15)', color: '#4caf50', border: '1px solid rgba(76, 175, 80, 0.3)' }}>
+                            <span className="content-badge" style={{ background: 'rgba(255, 45, 117, 0.08)', color: 'var(--accent-pink)', border: '1px solid rgba(255, 45, 117, 0.1)' }}>
                                 <Icon type="smartphone" />
                                 App Store Optimization
                             </span>
                             <h1 className="content-hero-title">
                                 Rank Higher.
-                                <span style={{ background: 'linear-gradient(135deg, #4caf50, #8bc34a)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}> Download More.</span>
+                                <span className="title-accent"> Download More.</span>
                             </h1>
                             <p className="content-hero-subtitle">
                                 Maximize your app visibility and organic downloads across iOS and Android.
                                 We turn app store algorithms into your competitive advantage.
                             </p>
                             <div className="content-hero-actions">
-                                <Link href="/contact" className="btn-primary large" style={{ background: 'linear-gradient(135deg, #4caf50, #8bc34a)', border: 'none' }}>
+                                <Link href="/contact" className="btn-primary large" style={{ background: 'linear-gradient(135deg, var(--accent-pink), var(--accent-yellow))', border: 'none' }}>
                                     Get Free ASO Audit
                                     <Icon type="arrowRight" />
                                 </Link>
@@ -35,18 +35,18 @@ export function ASOContent() {
                             </div>
                             <div className="hero-stat-bars">
                                 <div className="stat-bar-item">
-                                    <span className="stat-num" style={{ color: '#4caf50' }}>340%</span>
+                                    <span className="stat-num" style={{ color: 'var(--accent-pink)' }}>340%</span>
                                     <span className="stat-txt">Avg. Download Increase</span>
                                 </div>
                                 <div className="stat-bar-item">
-                                    <span className="stat-num" style={{ color: '#8bc34a' }}>500+</span>
+                                    <span className="stat-num" style={{ color: 'var(--accent-yellow)' }}>500+</span>
                                     <span className="stat-txt">Apps Optimized</span>
                                 </div>
                             </div>
                         </div>
                         <div className="content-hero-visual">
-                            <div className="content-visual-card" style={{ background: 'linear-gradient(135deg, #4caf50, #8bc34a)' }}>
-                                <div style={{ padding: '40px', color: 'white', textAlign: 'center' }}>
+                            <div className="content-visual-card" style={{ background: 'linear-gradient(135deg, var(--accent-pink), var(--accent-yellow))' }}>
+                                <div style={{ padding: '40px', color: 'var(--accent-yellow)', textAlign: 'center' }}>
                                     <div style={{ fontSize: '80px', fontWeight: 600, lineHeight: 1 }}>Top 10</div>
                                     <div style={{ fontSize: '18px', opacity: 0.9, marginTop: '10px' }}>Category Rankings</div>
                                     <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', marginTop: '30px' }}>
@@ -70,7 +70,7 @@ export function ASOContent() {
                     <div className="section-header text-center">
                         <span className="section-label">THE PROBLEM</span>
                         <h2 className="section-title">
-                            Is Your App <span style={{ background: 'linear-gradient(135deg, #4caf50, #8bc34a)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Getting Lost?</span>
+                            Is Your App <span className="title-accent">Getting Lost?</span>
                         </h2>
                         <p className="section-subtitle">
                             With over 5 million apps in the stores, visibility is the biggest challenge.
@@ -79,21 +79,21 @@ export function ASOContent() {
                     </div>
                     <div className="challenges-grid">
                         <div className="challenge-card">
-                            <div className="challenge-icon" style={{ background: 'rgba(76, 175, 80, 0.15)', color: '#4caf50' }}>
+                            <div className="challenge-icon" style={{ background: 'rgba(255, 45, 117, 0.08)', color: 'var(--accent-pink)' }}>
                                 <Icon type="search" />
                             </div>
                             <h3>Invisible in Search</h3>
                             <p>Your app isn&apos;t showing up when users search for key terms. You&apos;re losing downloads to competitors who&apos;ve mastered ASO.</p>
                         </div>
                         <div className="challenge-card">
-                            <div className="challenge-icon" style={{ background: 'rgba(76, 175, 80, 0.15)', color: '#4caf50' }}>
+                            <div className="challenge-icon" style={{ background: 'rgba(255, 45, 117, 0.08)', color: 'var(--accent-pink)' }}>
                                 <Icon type="trending-up" />
                             </div>
                             <h3>High CPI, Low ROI</h3>
                             <p>Your paid acquisition costs are unsustainable. Without strong organic growth, you&apos;re burning cash just to stay alive.</p>
                         </div>
                         <div className="challenge-card">
-                            <div className="challenge-icon" style={{ background: 'rgba(76, 175, 80, 0.15)', color: '#4caf50' }}>
+                            <div className="challenge-icon" style={{ background: 'rgba(255, 45, 117, 0.08)', color: 'var(--accent-pink)' }}>
                                 <Icon type="barChart" />
                             </div>
                             <h3>Low Conversion Rate</h3>
@@ -108,7 +108,7 @@ export function ASOContent() {
                 <div className="content-container">
                     <div className="impact-grid">
                         <div className="impact-visual">
-                            <div className="growth-indicator" style={{ background: 'linear-gradient(135deg, #4caf50, #8bc34a)' }}>
+                            <div className="growth-indicator" style={{ background: 'linear-gradient(135deg, var(--accent-pink), var(--accent-yellow))' }}>
                                 <Icon type="trending-up" />
                                 +340% Downloads
                             </div>
@@ -117,7 +117,7 @@ export function ASOContent() {
                                     <div key={i} className="chart-bar-group">
                                         <div
                                             className={`chart-bar-fill ${i === 5 ? 'active' : ''}`}
-                                            style={{ height: `${h}%`, background: i === 5 ? 'linear-gradient(135deg, #4caf50, #8bc34a)' : 'rgba(76, 175, 80, 0.3)' }}
+                                            style={{ height: `${h}%`, background: i === 5 ? 'linear-gradient(135deg, var(--accent-pink), var(--accent-yellow))' : 'rgba(76, 175, 80, 0.3)' }}
                                         ></div>
                                         <span className="chart-label">M{i + 1}</span>
                                     </div>
@@ -129,28 +129,28 @@ export function ASOContent() {
                         </div>
                         <div className="impact-content">
                             <span className="section-label">DATA-DRIVEN RESULTS</span>
-                            <h2 className="section-title">ASO that <span style={{ background: 'linear-gradient(135deg, #4caf50, #8bc34a)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Compounds</span></h2>
+                            <h2 className="section-title">ASO that <span className="title-accent">Compounds</span></h2>
                             <p className="section-subtitle">
                                 App Store Optimization isn&apos;t a one-time fix—it&apos;s a compound growth engine.
                                 Every improvement builds on the last, creating exponential visibility gains.
                             </p>
                             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '20px' }}>
                                 <li style={{ display: 'flex', gap: '15px' }}>
-                                    <div style={{ color: '#4caf50' }}><Icon type="check" /></div>
+                                    <div style={{ color: 'var(--accent-pink)' }}><Icon type="check" /></div>
                                     <div>
                                         <h4 style={{ fontWeight: 600 }}>65% of Downloads from Search</h4>
                                         <p style={{ fontSize: '14px', color: 'var(--text-gray)' }}>App store search is the #1 discovery channel. Own it.</p>
                                     </div>
                                 </li>
                                 <li style={{ display: 'flex', gap: '15px' }}>
-                                    <div style={{ color: '#4caf50' }}><Icon type="check" /></div>
+                                    <div style={{ color: 'var(--accent-pink)' }}><Icon type="check" /></div>
                                     <div>
                                         <h4 style={{ fontWeight: 600 }}>Zero Ad Spend Required</h4>
                                         <p style={{ fontSize: '14px', color: 'var(--text-gray)' }}>Organic visibility that doesn&apos;t drain your UA budget.</p>
                                     </div>
                                 </li>
                                 <li style={{ display: 'flex', gap: '15px' }}>
-                                    <div style={{ color: '#4caf50' }}><Icon type="check" /></div>
+                                    <div style={{ color: 'var(--accent-pink)' }}><Icon type="check" /></div>
                                     <div>
                                         <h4 style={{ fontWeight: 600 }}>Higher Quality Users</h4>
                                         <p style={{ fontSize: '14px', color: 'var(--text-gray)' }}>Organic users have 3x higher LTV than paid users.</p>
@@ -167,7 +167,7 @@ export function ASOContent() {
                 <div className="content-container">
                     <div className="section-header text-center">
                         <span className="section-label">OUR METHODOLOGY</span>
-                        <h2 className="section-title">The <span style={{ background: 'linear-gradient(135deg, #4caf50, #8bc34a)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>ASO Engine</span> Framework</h2>
+                        <h2 className="section-title">The <span className="title-accent">ASO Engine</span> Framework</h2>
                         <p className="section-subtitle">Our proven 6-step process to dominate app store rankings.</p>
                     </div>
                     <div className="process-steps-grid">
@@ -180,8 +180,8 @@ export function ASOContent() {
                             { title: 'Continuous Testing', desc: 'A/B testing and iteration to continuously improve conversion rates.', icon: 'activity' }
                         ].map((step, i) => (
                             <div key={i} className="step-card">
-                                <div className="step-number-badge" style={{ background: 'linear-gradient(135deg, #4caf50, #8bc34a)' }}>{i + 1}</div>
-                                <div className="step-icon-wrapper" style={{ color: '#4caf50' }}>
+                                <div className="step-number-badge" style={{ background: 'linear-gradient(135deg, var(--accent-pink), var(--accent-yellow))' }}>{i + 1}</div>
+                                <div className="step-icon-wrapper" style={{ color: 'var(--accent-pink)' }}>
                                     <Icon type={step.icon} />
                                 </div>
                                 <h3 style={{ fontSize: '20px', fontWeight: 600, marginBottom: '10px' }}>{step.title}</h3>
@@ -198,7 +198,7 @@ export function ASOContent() {
                     <div className="tech-grid">
                         <div className="tech-content">
                             <span className="tech-tag">PLATFORM EXPERTISE</span>
-                            <h2 className="section-title" style={{ color: 'white' }}>iOS & Android <span style={{ color: '#8bc34a' }}>Mastery</span></h2>
+                            <h2 className="section-title" style={{ color: 'var(--accent-yellow)' }}>iOS & Android <span style={{ color: 'var(--accent-yellow)' }}>Mastery</span></h2>
                             <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '18px', marginBottom: '30px' }}>
                                 We understand the nuances of both Apple&apos;s App Store and Google Play. Different algorithms, different strategies, unified growth.
                             </p>
@@ -222,15 +222,15 @@ export function ASOContent() {
                                 </div>
                                 <div className="mockup-line" style={{ width: '80%' }}></div>
                                 <div className="mockup-line" style={{ width: '40%' }}></div>
-                                <div className="mockup-line accent" style={{ background: 'linear-gradient(90deg, #4caf50, #8bc34a)' }}></div>
+                                <div className="mockup-line accent" style={{ background: 'linear-gradient(90deg, var(--accent-pink), var(--accent-yellow))' }}></div>
                                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px', marginTop: '30px' }}>
                                     <div style={{ padding: '15px', background: '#1a1a1a', borderRadius: '8px' }}>
                                         <span style={{ fontSize: '10px', color: '#555' }}>KEYWORD RANKING</span>
-                                        <div style={{ fontSize: '24px', fontWeight: 600, color: '#4caf50' }}>#3</div>
+                                        <div style={{ fontSize: '24px', fontWeight: 600, color: 'var(--accent-pink)' }}>#3</div>
                                     </div>
                                     <div style={{ padding: '15px', background: '#1a1a1a', borderRadius: '8px' }}>
                                         <span style={{ fontSize: '10px', color: '#555' }}>CONVERSION RATE</span>
-                                        <div style={{ fontSize: '24px', fontWeight: 600, color: '#8bc34a' }}>42%</div>
+                                        <div style={{ fontSize: '24px', fontWeight: 600, color: 'var(--accent-yellow)' }}>42%</div>
                                     </div>
                                 </div>
                             </div>
@@ -245,7 +245,7 @@ export function ASOContent() {
                     <div className="section-header">
                         <span className="section-label">WHAT WE OFFER</span>
                         <h2 className="section-title">
-                            Complete <span style={{ background: 'linear-gradient(135deg, #4caf50, #8bc34a)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>ASO Solutions</span>
+                            Complete <span className="title-accent">ASO Solutions</span>
                         </h2>
                     </div>
                     <div className="services-grid">
@@ -306,15 +306,15 @@ export function ASOContent() {
                 <div className="content-container">
                     <div className="section-header text-center">
                         <span className="section-label">PROVEN RESULTS</span>
-                        <h2 className="section-title">Real <span style={{ background: 'linear-gradient(135deg, #4caf50, #8bc34a)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>App Growth</span> Stories</h2>
+                        <h2 className="section-title">Real <span className="title-accent">App Growth</span> Stories</h2>
                     </div>
                     <div className="testimonial-track">
                         <div className="content-testimonial-card">
-                            <div className="industry-label" style={{ color: '#4caf50', fontWeight: 600, fontSize: '12px', marginBottom: '10px' }}>FITNESS APP</div>
+                            <div className="industry-label" style={{ color: 'var(--accent-pink)', fontWeight: 600, fontSize: '12px', marginBottom: '10px' }}>FITNESS APP</div>
                             <h3>500% Increase in Organic Downloads</h3>
                             <p style={{ color: 'var(--text-gray)', margin: '15px 0' }}>Through strategic keyword targeting and screenshot optimization, we took a fitness app from obscurity to category leader.</p>
                             <div className="author" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                                <div className="avatar" style={{ width: '40px', height: '40px', borderRadius: '50%', background: '#4caf50' }}></div>
+                                <div className="avatar" style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'var(--accent-pink)' }}></div>
                                 <div className="info">
                                     <span style={{ display: 'block', fontWeight: 600, fontSize: '14px' }}>Jason Chen</span>
                                     <span style={{ fontSize: '12px', color: 'var(--text-gray)' }}>CEO, FitTrack Pro</span>
@@ -322,11 +322,11 @@ export function ASOContent() {
                             </div>
                         </div>
                         <div className="content-testimonial-card">
-                            <div className="industry-label" style={{ color: '#8bc34a', fontWeight: 600, fontSize: '12px', marginBottom: '10px' }}>FINTECH APP</div>
+                            <div className="industry-label" style={{ color: 'var(--accent-yellow)', fontWeight: 600, fontSize: '12px', marginBottom: '10px' }}>FINTECH APP</div>
                             <h3>From #120 to #8 in Finance Category</h3>
                             <p style={{ color: 'var(--text-gray)', margin: '15px 0' }}>Comprehensive ASO overhaul including localization in 12 markets drove massive ranking improvements.</p>
                             <div className="author" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                                <div className="avatar" style={{ width: '40px', height: '40px', borderRadius: '50%', background: '#8bc34a' }}></div>
+                                <div className="avatar" style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'var(--accent-yellow)' }}></div>
                                 <div className="info">
                                     <span style={{ display: 'block', fontWeight: 600, fontSize: '14px' }}>Maria Santos</span>
                                     <span style={{ fontSize: '12px', color: 'var(--text-gray)' }}>CMO, PayFlow</span>
@@ -378,11 +378,11 @@ export function ASOContent() {
             </section>
 
             {/* Final CTA */}
-            <section className="content-cta" style={{ background: 'linear-gradient(135deg, #4caf50, #8bc34a)' }}>
+            <section className="content-cta" style={{ background: 'linear-gradient(135deg, var(--accent-pink), var(--accent-yellow))' }}>
                 <div className="content-container">
                     <div className="cta-box" style={{ background: 'transparent', boxShadow: 'none' }}>
-                        <h2 style={{ color: 'white' }}>Ready to <span style={{ color: '#c8e6c9' }}>Dominate</span> the App Stores?</h2>
-                        <p style={{ fontSize: '20px', marginBottom: '40px', opacity: 0.9, color: 'white' }}>Get a free ASO audit and see exactly how to increase your organic downloads.</p>
+                        <h2 style={{ color: 'var(--accent-yellow)' }}>Ready to <span style={{ color: '#c8e6c9' }}>Dominate</span> the App Stores?</h2>
+                        <p style={{ fontSize: '20px', marginBottom: '40px', opacity: 0.9, color: 'var(--accent-yellow)' }}>Get a free ASO audit and see exactly how to increase your organic downloads.</p>
                         <Link href="/contact" className="btn-white">
                             Get Your Free ASO Audit
                         </Link>

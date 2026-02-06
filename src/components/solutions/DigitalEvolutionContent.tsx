@@ -6,15 +6,15 @@ import '@/styles/content-marketing.css';
 export function DigitalEvolutionContent() {
     return (
         <div className="content-marketing-page">
-            <section className="content-hero" style={{ background: 'radial-gradient(circle at 20% 30%, rgba(6, 182, 212, 0.15) 0%, transparent 40%), radial-gradient(circle at 80% 70%, rgba(34, 211, 238, 0.15) 0%, transparent 40%), var(--bg-white)' }}>
+            <section className="content-hero" style={{ background: 'var(--bg-cream)' }}>
                 <div className="content-container">
                     <div className="content-hero-grid">
                         <div className="content-hero-content">
-                            <span className="content-badge" style={{ background: 'rgba(6, 182, 212, 0.15)', color: '#06b6d4', border: '1px solid rgba(6, 182, 212, 0.3)' }}><Icon type="refresh" />Digital Evolution</span>
-                            <h1 className="content-hero-title">Transform Your <span style={{ background: 'linear-gradient(135deg, #06b6d4, #22d3ee)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Digital Presence.</span></h1>
+                            <span className="content-badge" style={{ background: 'rgba(255, 45, 117, 0.08)', color: 'var(--accent-pink)', border: '1px solid rgba(255, 45, 117, 0.1)' }}><Icon type="refresh" />Digital Evolution</span>
+                            <h1 className="content-hero-title">Transform Your <span className="title-accent">Digital Presence.</span></h1>
                             <p className="content-hero-subtitle">Complete digital transformation that modernizes your technology, optimizes operations, and positions your business for the future of commerce.</p>
                             <div className="content-hero-actions">
-                                <Link href="/contact" className="btn-primary large" style={{ background: 'linear-gradient(135deg, #06b6d4, #22d3ee)', border: 'none' }}>Start Transformation<Icon type="arrowRight" /></Link>
+                                <Link href="/contact" className="btn-primary large" style={{ background: 'var(--primary-green)', border: 'none' }}>Start Transformation<Icon type="arrowRight" /></Link>
                                 <Link href="#case-studies" className="btn-outline">See Transformations</Link>
                             </div>
                             <div className="hero-stat-bars">
@@ -23,8 +23,8 @@ export function DigitalEvolutionContent() {
                             </div>
                         </div>
                         <div className="content-hero-visual">
-                            <div className="content-visual-card" style={{ background: 'linear-gradient(135deg, #06b6d4, #22d3ee)' }}>
-                                <div style={{ padding: '40px', color: 'white', textAlign: 'center' }}>
+                            <div className="content-visual-card" style={{ background: 'var(--primary-green)' }}>
+                                <div style={{ padding: '40px', color: 'var(--accent-yellow)', textAlign: 'center' }}>
                                     <div style={{ fontSize: '60px' }}>🚀</div>
                                     <div style={{ fontSize: '18px', marginTop: '10px' }}>Future-Ready Business</div>
                                 </div>
@@ -38,7 +38,7 @@ export function DigitalEvolutionContent() {
                 <div className="content-container">
                     <div className="section-header text-center">
                         <span className="section-label">THE IMPERATIVE</span>
-                        <h2 className="section-title">Evolve or Be <span style={{ background: 'linear-gradient(135deg, #06b6d4, #22d3ee)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Left Behind</span></h2>
+                        <h2 className="section-title">Evolve or Be <span className="title-accent">Left Behind</span></h2>
                     </div>
                     <div className="challenges-grid">
                         <div className="challenge-card"><div className="challenge-icon" style={{ background: 'rgba(6, 182, 212, 0.15)', color: '#06b6d4' }}><Icon type="clock" /></div><h3>Legacy Systems</h3><p>Outdated technology slows operations and limits your ability to compete in the digital economy.</p></div>
@@ -50,7 +50,7 @@ export function DigitalEvolutionContent() {
 
             <section className="content-services">
                 <div className="content-container">
-                    <div className="section-header"><span className="section-label">TRANSFORMATION PILLARS</span><h2 className="section-title">Our <span style={{ background: 'linear-gradient(135deg, #06b6d4, #22d3ee)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Approach</span></h2></div>
+                    <div className="section-header"><span className="section-label">TRANSFORMATION PILLARS</span><h2 className="section-title">Our <span className="title-accent">Approach</span></h2></div>
                     <div className="services-grid">
                         {[
                             { title: 'Digital Strategy', desc: 'Comprehensive roadmap aligning digital initiatives with business objectives and competitive positioning.', tags: ['Vision', 'Roadmap'] },
@@ -75,11 +75,11 @@ export function DigitalEvolutionContent() {
                 </div>
             </section>
 
-            <section className="content-cta" style={{ background: 'linear-gradient(135deg, #06b6d4, #22d3ee)' }}>
+            <section className="content-cta" style={{ background: 'var(--primary-green)' }}>
                 <div className="content-container">
                     <div className="cta-box" style={{ background: 'transparent', boxShadow: 'none' }}>
-                        <h2 style={{ color: 'white' }}>Ready to <span style={{ color: '#cffafe' }}>Evolve Digitally?</span></h2>
-                        <p style={{ fontSize: '20px', marginBottom: '40px', opacity: 0.9, color: 'white' }}>Start your transformation journey with a digital maturity assessment.</p>
+                        <h2 style={{ color: 'var(--accent-yellow)' }}>Ready to <span style={{ color: '#cffafe' }}>Evolve Digitally?</span></h2>
+                        <p style={{ fontSize: '20px', marginBottom: '40px', opacity: 0.9, color: 'var(--accent-yellow)' }}>Start your transformation journey with a digital maturity assessment.</p>
                         <Link href="/contact" className="btn-white">Start Transformation</Link>
                     </div>
                 </div>

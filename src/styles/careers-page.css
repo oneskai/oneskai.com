@@ -21,7 +21,7 @@
     right: 0;
     width: 50%;
     height: 100%;
-    background: radial-gradient(circle at 80% 30%, rgba(61, 13, 168, 0.15) 0%, transparent 50%);
+    background: var(--bg-cream);
     pointer-events: none;
 }
 
@@ -420,7 +420,7 @@
 /* CTA Section */
 .careers-cta {
     padding: 100px 0;
-    background: linear-gradient(135deg, #052e26, #0a4a3e);
+    background: var(--primary-green);
     text-align: center;
 }
 

@@ -32,9 +32,7 @@
 .graphic-hero {
     min-height: 95vh;
     padding: 180px 0 100px;
-    background: radial-gradient(circle at 20% 30%, rgba(236, 72, 153, 0.08) 0%, transparent 40%),
-        radial-gradient(circle at 80% 70%, rgba(251, 146, 60, 0.08) 0%, transparent 40%),
-        var(--bg-white);
+    background: var(--bg-cream);
     position: relative;
     overflow: hidden;
 }
@@ -164,7 +162,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #ec4899, #f97316);
+    background: var(--primary-green);
     color: white;
     font-size: 28px;
 }
@@ -172,7 +170,7 @@
 /* ===== PROCESS ===== */
 .graphic-process {
     padding: 120px 0;
-    background: linear-gradient(135deg, #831843, #9d174d);
+    background: var(--primary-green);
     color: white;
 }
 

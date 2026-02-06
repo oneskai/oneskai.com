@@ -4,7 +4,7 @@ import { Icon } from '@/components/ui/Icon';
 import '@/styles/specialized.css';
 
 export function PodcastContent() {
-    const color1 = '#7c3aed', color2 = '#a855f7';
+    const color1 = 'var(--accent-pink)', color2 = '#a855f7';
     return (
         <div className="specialized-page">
             <section className="specialized-hero" style={{ background: `radial-gradient(circle at 20% 30%, ${color1}15 0%, transparent 40%), radial-gradient(circle at 80% 70%, ${color2}15 0%, transparent 40%), var(--bg-white)` }}>
@@ -15,11 +15,11 @@ export function PodcastContent() {
                             <h1 className="specialized-hero-title">Your voice. <span style={{ background: `linear-gradient(135deg, ${color1}, ${color2})`, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Amplified.</span></h1>
                             <p className="specialized-hero-subtitle">Full-service podcast production from concept to distribution. Launch a show that builds authority and grows your audience.</p>
                             <div className="content-hero-actions">
-                                <Link href="/contact" className="btn-primary large" style={{ background: `linear-gradient(135deg, ${color1}, ${color2})`, border: 'none', color: 'white' }}>Launch Podcast<Icon type="arrowRight" /></Link>
+                                <Link href="/contact" className="btn-primary large" style={{ background: `linear-gradient(135deg, ${color1}, ${color2})`, border: 'none', color: 'var(--accent-yellow)' }}>Launch Podcast<Icon type="arrowRight" /></Link>
                                 <Link href="#pricing" className="btn-outline">View Packages</Link>
                             </div>
                         </div>
-                        <div style={{ background: `linear-gradient(135deg, ${color1}, ${color2})`, borderRadius: '24px', height: '400px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white' }}>
+                        <div style={{ background: `linear-gradient(135deg, ${color1}, ${color2})`, borderRadius: '24px', height: '400px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--accent-yellow)' }}>
                             <div style={{ textAlign: 'center' }}><div style={{ fontSize: '80px', fontWeight: 600 }}>50+</div><div style={{ fontSize: '18px', opacity: 0.9 }}>Podcasts Launched</div></div>
                         </div>
                     </div>
@@ -52,7 +52,7 @@ export function PodcastContent() {
 
             <section className="specialized-cta"><div className="specialized-container"><div className="cta-grid">
                 <div><h2 style={{ fontSize: '56px', fontWeight: 600, marginBottom: '30px', lineHeight: 1.1 }}>Ready to launch <span style={{ color: 'var(--accent-yellow)' }}>your show?</span></h2><p style={{ fontSize: '20px', opacity: 0.8, marginBottom: '50px', lineHeight: 1.6 }}>Get a free podcast strategy consultation.</p></div>
-                <div className="cta-form"><form style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}><input type="text" placeholder="Name" /><input type="email" placeholder="Email" /><textarea placeholder="Tell us about your podcast idea..." style={{ height: '100px' }}></textarea><button type="submit" className="btn-primary" style={{ border: 'none', background: `linear-gradient(135deg, ${color1}, ${color2})`, color: 'white', fontSize: '18px', fontWeight: 600, cursor: 'pointer', padding: '20px' }}>Get Free Strategy</button></form></div>
+                <div className="cta-form"><form style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}><input type="text" placeholder="Name" /><input type="email" placeholder="Email" /><textarea placeholder="Tell us about your podcast idea..." style={{ height: '100px' }}></textarea><button type="submit" className="btn-primary" style={{ border: 'none', background: `linear-gradient(135deg, ${color1}, ${color2})`, color: 'var(--accent-yellow)', fontSize: '18px', fontWeight: 600, cursor: 'pointer', padding: '20px' }}>Get Free Strategy</button></form></div>
             </div></div></section>
         </div>
     );

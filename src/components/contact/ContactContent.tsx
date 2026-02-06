@@ -116,16 +116,15 @@ export function ContactContent() {
                         {/* Form Side */}
                         <div className="contact-form-card">
                             {status === 'success' ? (
-                                <div className="form-success-message" style={{ textAlign: 'center', padding: '40px 0' }}>
-                                    <div style={{ fontSize: '64px', marginBottom: '20px' }}>✅</div>
-                                    <h2 style={{ fontSize: '28px', color: '#0f172a', marginBottom: '10px' }}>Message Sent!</h2>
-                                    <p style={{ color: '#64748b', fontSize: '18px', marginBottom: '30px' }}>
+                                <div className="form-success-state">
+                                    <div className="form-success-emoji">✅</div>
+                                    <h2>Message Sent!</h2>
+                                    <p>
                                         Thank you for reaching out. One of our experts will contact you shortly.
                                     </p>
                                     <button
-                                        className="contact-form-btn"
+                                        className="contact-form-btn form-success-btn"
                                         onClick={() => setStatus('idle')}
-                                        style={{ maxWidth: '200px', margin: '0 auto' }}
                                     >
                                         Send Another
                                     </button>
@@ -240,9 +239,9 @@ export function ContactContent() {
             {/* Offices Section */}
             <section className="contact-offices">
                 <div className="contact-offices-container">
-                    <div style={{ textAlign: 'center', marginBottom: '60px' }}>
+                    <div className="contact-offices-heading">
                         <span className="contact-label">GLOBAL PRESENCE</span>
-                        <h2 style={{ fontSize: '36px', fontWeight: 600, color: '#0f172a' }}>Our Offices</h2>
+                        <h2>Our Offices</h2>
                     </div>
                     <div className="contact-offices-grid">
                         <div className="office-card">

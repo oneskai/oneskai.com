@@ -6,25 +6,25 @@ import '@/styles/content-marketing.css';
 export function AIIntegrationContent() {
     return (
         <div className="content-marketing-page">
-            <section className="content-hero" style={{ background: 'radial-gradient(circle at 20% 30%, rgba(139, 92, 246, 0.15) 0%, transparent 40%), radial-gradient(circle at 80% 70%, rgba(192, 132, 252, 0.15) 0%, transparent 40%), var(--bg-white)' }}>
+            <section className="content-hero" style={{ background: 'var(--bg-cream)' }}>
                 <div className="content-container">
                     <div className="content-hero-grid">
                         <div className="content-hero-content">
-                            <span className="content-badge" style={{ background: 'rgba(139, 92, 246, 0.15)', color: '#8b5cf6', border: '1px solid rgba(139, 92, 246, 0.3)' }}><Icon type="brain" />AI Integration</span>
-                            <h1 className="content-hero-title">AI-Powered <span style={{ background: 'linear-gradient(135deg, #8b5cf6, #c084fc)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Growth Engine.</span></h1>
+                            <span className="content-badge" style={{ background: 'rgba(255, 45, 117, 0.08)', color: 'var(--accent-pink)', border: '1px solid rgba(255, 45, 117, 0.1)' }}><Icon type="brain" />AI Integration</span>
+                            <h1 className="content-hero-title">AI-Powered <span className="title-accent">Growth Engine.</span></h1>
                             <p className="content-hero-subtitle">Harness artificial intelligence to automate operations, personalize experiences, and discover insights that drive exponential business growth.</p>
                             <div className="content-hero-actions">
-                                <Link href="/contact" className="btn-primary large" style={{ background: 'linear-gradient(135deg, #8b5cf6, #c084fc)', border: 'none' }}>Get AI Assessment<Icon type="arrowRight" /></Link>
+                                <Link href="/contact" className="btn-primary large" style={{ background: 'linear-gradient(135deg, var(--accent-pink), #c084fc)', border: 'none' }}>Get AI Assessment<Icon type="arrowRight" /></Link>
                                 <Link href="#case-studies" className="btn-outline">See AI Impact</Link>
                             </div>
                             <div className="hero-stat-bars">
-                                <div className="stat-bar-item"><span className="stat-num" style={{ color: '#8b5cf6' }}>47%</span><span className="stat-txt">Cost Reduction</span></div>
+                                <div className="stat-bar-item"><span className="stat-num" style={{ color: 'var(--accent-pink)' }}>47%</span><span className="stat-txt">Cost Reduction</span></div>
                                 <div className="stat-bar-item"><span className="stat-num" style={{ color: '#c084fc' }}>10x</span><span className="stat-txt">Faster Insights</span></div>
                             </div>
                         </div>
                         <div className="content-hero-visual">
-                            <div className="content-visual-card" style={{ background: 'linear-gradient(135deg, #8b5cf6, #c084fc)' }}>
-                                <div style={{ padding: '40px', color: 'white', textAlign: 'center' }}>
+                            <div className="content-visual-card" style={{ background: 'linear-gradient(135deg, var(--accent-pink), #c084fc)' }}>
+                                <div style={{ padding: '40px', color: 'var(--accent-yellow)', textAlign: 'center' }}>
                                     <div style={{ fontSize: '60px' }}>🤖</div>
                                     <div style={{ fontSize: '18px', marginTop: '10px' }}>Intelligent Automation</div>
                                 </div>
@@ -38,19 +38,19 @@ export function AIIntegrationContent() {
                 <div className="content-container">
                     <div className="section-header text-center">
                         <span className="section-label">THE OPPORTUNITY</span>
-                        <h2 className="section-title">AI Transforms <span style={{ background: 'linear-gradient(135deg, #8b5cf6, #c084fc)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Every Business</span></h2>
+                        <h2 className="section-title">AI Transforms <span className="title-accent">Every Business</span></h2>
                     </div>
                     <div className="challenges-grid">
-                        <div className="challenge-card"><div className="challenge-icon" style={{ background: 'rgba(139, 92, 246, 0.15)', color: '#8b5cf6' }}><Icon type="zap" /></div><h3>Automation at Scale</h3><p>AI eliminates repetitive tasks, freeing your team to focus on high-value strategic work.</p></div>
-                        <div className="challenge-card"><div className="challenge-icon" style={{ background: 'rgba(139, 92, 246, 0.15)', color: '#8b5cf6' }}><Icon type="users" /></div><h3>Hyper-Personalization</h3><p>Deliver 1:1 personalized experiences at scale—impossible with traditional methods.</p></div>
-                        <div className="challenge-card"><div className="challenge-icon" style={{ background: 'rgba(139, 92, 246, 0.15)', color: '#8b5cf6' }}><Icon type="trending-up" /></div><h3>Predictive Power</h3><p>Anticipate customer needs, market shifts, and business outcomes before they happen.</p></div>
+                        <div className="challenge-card"><div className="challenge-icon" style={{ background: 'rgba(255, 45, 117, 0.08)', color: 'var(--accent-pink)' }}><Icon type="zap" /></div><h3>Automation at Scale</h3><p>AI eliminates repetitive tasks, freeing your team to focus on high-value strategic work.</p></div>
+                        <div className="challenge-card"><div className="challenge-icon" style={{ background: 'rgba(255, 45, 117, 0.08)', color: 'var(--accent-pink)' }}><Icon type="users" /></div><h3>Hyper-Personalization</h3><p>Deliver 1:1 personalized experiences at scale—impossible with traditional methods.</p></div>
+                        <div className="challenge-card"><div className="challenge-icon" style={{ background: 'rgba(255, 45, 117, 0.08)', color: 'var(--accent-pink)' }}><Icon type="trending-up" /></div><h3>Predictive Power</h3><p>Anticipate customer needs, market shifts, and business outcomes before they happen.</p></div>
                     </div>
                 </div>
             </section>
 
             <section className="content-services">
                 <div className="content-container">
-                    <div className="section-header"><span className="section-label">AI SOLUTIONS</span><h2 className="section-title">How We <span style={{ background: 'linear-gradient(135deg, #8b5cf6, #c084fc)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Integrate AI</span></h2></div>
+                    <div className="section-header"><span className="section-label">AI SOLUTIONS</span><h2 className="section-title">How We <span className="title-accent">Integrate AI</span></h2></div>
                     <div className="services-grid">
                         {[
                             { title: 'AI Strategy', desc: 'Roadmap for AI adoption aligned with your business goals and technical capabilities.', tags: ['Strategy', 'Roadmap'] },
@@ -75,11 +75,11 @@ export function AIIntegrationContent() {
                 </div>
             </section>
 
-            <section className="content-cta" style={{ background: 'linear-gradient(135deg, #8b5cf6, #c084fc)' }}>
+            <section className="content-cta" style={{ background: 'linear-gradient(135deg, var(--accent-pink), #c084fc)' }}>
                 <div className="content-container">
                     <div className="cta-box" style={{ background: 'transparent', boxShadow: 'none' }}>
-                        <h2 style={{ color: 'white' }}>Ready to <span style={{ color: '#ede9fe' }}>Unlock AI&apos;s Power?</span></h2>
-                        <p style={{ fontSize: '20px', marginBottom: '40px', opacity: 0.9, color: 'white' }}>Get a free AI readiness assessment to see where you can benefit most.</p>
+                        <h2 style={{ color: 'var(--accent-yellow)' }}>Ready to <span style={{ color: '#ede9fe' }}>Unlock AI&apos;s Power?</span></h2>
+                        <p style={{ fontSize: '20px', marginBottom: '40px', opacity: 0.9, color: 'var(--accent-yellow)' }}>Get a free AI readiness assessment to see where you can benefit most.</p>
                         <Link href="/contact" className="btn-white">Get AI Assessment</Link>
                     </div>
                 </div>

@@ -17,13 +17,13 @@ export function PaidSocialContent() {
                                 Meta Business Partner
                             </span>
                             <h1 className="paid-social-hero-title">
-                                Social ads that <span className="text-gradient">print money.</span>
+                                Social ads that <span className="title-accent">print money.</span>
                             </h1>
                             <p className="paid-social-hero-subtitle">
                                 We architect paid social campaigns across Meta, TikTok, LinkedIn, and Pinterest that turn scroll-stoppers into revenue—with obsessive testing and real-time optimization.
                             </p>
                             <div className="content-hero-actions">
-                                <Link href="/contact" className="btn-primary large" style={{ background: 'linear-gradient(135deg, #1877F2, #E1306C)', border: 'none', color: 'white' }}>
+                                <Link href="/contact" className="btn-primary large" style={{ background: 'var(--primary-green)', border: 'none', color: 'var(--accent-yellow)' }}>
                                     Launch Campaign
                                     <Icon type="arrowRight" />
                                 </Link>
@@ -36,18 +36,18 @@ export function PaidSocialContent() {
                         <div className="paid-social-hero-visual">
                             <div className="spend-visual">
                                 <div className="spend-cards">
-                                    <div className="spend-card" style={{ background: 'linear-gradient(135deg, #1877F2, #0066CC)' }}>
-                                        <div style={{ color: 'white', fontSize: '14px', fontWeight: 600, marginBottom: '10px' }}>META ADS</div>
-                                        <div style={{ color: 'white', fontSize: '32px', fontWeight: 600 }}>+247%</div>
+                                    <div className="spend-card" style={{ background: 'var(--primary-green)' }}>
+                                        <div style={{ color: 'var(--accent-yellow)', fontSize: '14px', fontWeight: 600, marginBottom: '10px' }}>META ADS</div>
+                                        <div style={{ color: 'var(--accent-yellow)', fontSize: '32px', fontWeight: 600 }}>+247%</div>
                                         <div style={{ color: 'rgba(255,255,255,0.8)', fontSize: '13px' }}>ROAS Increase</div>
                                     </div>
-                                    <div className="spend-card" style={{ background: 'linear-gradient(135deg, #E1306C, #C13584)' }}>
-                                        <div style={{ color: 'white', fontSize: '14px', fontWeight: 600, marginBottom: '10px' }}>INSTAGRAM</div>
-                                        <div style={{ color: 'white', fontSize: '32px', fontWeight: 600 }}>3.2x</div>
+                                    <div className="spend-card" style={{ background: 'var(--primary-green)' }}>
+                                        <div style={{ color: 'var(--accent-yellow)', fontSize: '14px', fontWeight: 600, marginBottom: '10px' }}>INSTAGRAM</div>
+                                        <div style={{ color: 'var(--accent-yellow)', fontSize: '32px', fontWeight: 600 }}>3.2x</div>
                                         <div style={{ color: 'rgba(255,255,255,0.8)', fontSize: '13px' }}>Avg. ROAS</div>
                                     </div>
-                                    <div className="spend-card" style={{ background: 'linear-gradient(135deg, #000, #333)' }}>
-                                        <div style={{ color: 'white', fontSize: '14px', fontWeight: 600, marginBottom: '10px' }}>TIKTOK</div>
+                                    <div className="spend-card" style={{ background: 'var(--primary-green)' }}>
+                                        <div style={{ color: 'var(--accent-yellow)', fontSize: '14px', fontWeight: 600, marginBottom: '10px' }}>TIKTOK</div>
                                         <div style={{ color: '#00f2ea', fontSize: '32px', fontWeight: 600 }}>-58%</div>
                                         <div style={{ color: 'rgba(255,255,255,0.8)', fontSize: '13px' }}>Cost Per Acquisition</div>
                                     </div>
@@ -69,7 +69,7 @@ export function PaidSocialContent() {
                             { value: '94%', label: 'Client Retention' }
                         ].map((stat, i) => (
                             <div key={i} className="trust-stat">
-                                <div style={{ fontSize: '36px', fontWeight: 600, background: 'linear-gradient(135deg, #1877F2, #E1306C)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{stat.value}</div>
+                                <div style={{ fontSize: '36px', fontWeight: 600, background: 'var(--primary-green)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{stat.value}</div>
                                 <div style={{ fontSize: '13px', color: '#64748b', marginTop: '5px' }}>{stat.label}</div>
                             </div>
                         ))}
@@ -82,7 +82,7 @@ export function PaidSocialContent() {
                 <div className="paid-social-container">
                     <div className="section-header text-center">
                         <span className="section-label">PLATFORM MASTERY</span>
-                        <h2 className="section-title">Full-stack social <span className="text-gradient">advertising.</span></h2>
+                        <h2 className="section-title">Full-stack social <span className="title-accent">advertising.</span></h2>
                     </div>
                     <div className="platform-details">
                         {[
@@ -110,7 +110,7 @@ export function PaidSocialContent() {
                 <div className="paid-social-container">
                     <div className="section-header text-center">
                         <span className="section-label" style={{ color: 'rgba(255,255,255,0.7)' }}>PRECISION TARGETING</span>
-                        <h2 className="section-title" style={{ color: 'white' }}>Reach the right people, <span style={{ color: '#fbbf24' }}>every time.</span></h2>
+                        <h2 className="section-title" style={{ color: 'var(--accent-yellow)' }}>Reach the right people, <span style={{ color: '#fbbf24' }}>every time.</span></h2>
                     </div>
                     <div className="audience-grid">
                         {[
@@ -134,7 +134,7 @@ export function PaidSocialContent() {
                 <div className="paid-social-container">
                     <div className="section-header text-center">
                         <span className="section-label">CREATIVE THAT CONVERTS</span>
-                        <h2 className="section-title">Scroll-stopping <span className="text-gradient">ad creative.</span></h2>
+                        <h2 className="section-title">Scroll-stopping <span className="title-accent">ad creative.</span></h2>
                     </div>
                     <div className="creative-grid">
                         <div className="creative-formats">
@@ -165,7 +165,7 @@ export function PaidSocialContent() {
                 <div className="paid-social-container">
                     <div className="section-header text-center">
                         <span className="section-label">INVESTMENT</span>
-                        <h2 className="section-title">Transparent <span className="text-gradient">management fees.</span></h2>
+                        <h2 className="section-title">Transparent <span className="title-accent">management fees.</span></h2>
                     </div>
                     <div className="budget-tiers">
                         <div className="budget-card">
@@ -193,7 +193,7 @@ export function PaidSocialContent() {
                                 <li><Icon type="check" style={{ color: '#E1306C' }} /> Weekly Strategy Calls</li>
                                 <li><Icon type="check" style={{ color: '#E1306C' }} /> Dedicated Strategist</li>
                             </ul>
-                            <Link href="/contact" className="btn-primary" style={{ display: 'block', background: 'linear-gradient(135deg, #1877F2, #E1306C)', border: 'none' }}>Scale Now</Link>
+                            <Link href="/contact" className="btn-primary" style={{ display: 'block', background: 'var(--primary-green)', border: 'none' }}>Scale Now</Link>
                         </div>
 
                         <div className="budget-card">
@@ -218,7 +218,7 @@ export function PaidSocialContent() {
                 <div className="paid-social-container">
                     <div className="section-header text-center">
                         <span className="section-label">CASE STUDIES</span>
-                        <h2 className="section-title">Real results, <span className="text-gradient">real brands.</span></h2>
+                        <h2 className="section-title">Real results, <span className="title-accent">real brands.</span></h2>
                     </div>
                     <div className="results-showcase">
                         {[
@@ -298,7 +298,7 @@ export function PaidSocialContent() {
                                     <option value="linkedin">LinkedIn</option>
                                     <option value="multiple">Multiple Platforms</option>
                                 </select>
-                                <button type="submit" className="btn-primary" style={{ border: 'none', background: 'linear-gradient(135deg, #1877F2, #E1306C)', color: 'white', fontSize: '18px', fontWeight: 600, cursor: 'pointer', padding: '20px' }}>
+                                <button type="submit" className="btn-primary" style={{ border: 'none', background: 'var(--primary-green)', color: 'var(--accent-yellow)', fontSize: '18px', fontWeight: 600, cursor: 'pointer', padding: '20px' }}>
                                     Get My Free Audit
                                 </button>
                             </form>

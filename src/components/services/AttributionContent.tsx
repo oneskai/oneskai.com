@@ -16,20 +16,20 @@ export function AttributionContent() {
                                 Marketing Attribution
                             </span>
                             <h1 className="attr-hero-title">
-                                Know what&apos;s <span className="text-gradient">actually working.</span>
+                                Know what&apos;s <span className="title-accent">actually working.</span>
                             </h1>
                             <p className="attr-hero-subtitle">
                                 Multi-touch attribution modeling that reveals which channels drive real conversions, so you can allocate budget with confidence.
                             </p>
                             <div className="content-hero-actions">
-                                <Link href="/contact" className="btn-primary large" style={{ background: 'linear-gradient(135deg, #8b5cf6, #06b6d4)', border: 'none', color: 'white' }}>
+                                <Link href="/contact" className="btn-primary large" style={{ background: 'linear-gradient(135deg, var(--accent-pink), #06b6d4)', border: 'none', color: 'var(--accent-yellow)' }}>
                                     Get Attribution Audit
                                     <Icon type="arrowRight" />
                                 </Link>
                                 <Link href="#pricing" className="btn-outline">View Packages</Link>
                             </div>
                         </div>
-                        <div className="attr-hero-visual" style={{ background: 'linear-gradient(135deg, #8b5cf6, #06b6d4)', borderRadius: '24px', height: '400px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white' }}>
+                        <div className="attr-hero-visual" style={{ background: 'linear-gradient(135deg, var(--accent-pink), #06b6d4)', borderRadius: '24px', height: '400px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--accent-yellow)' }}>
                             <div style={{ textAlign: 'center' }}>
                                 <div style={{ fontSize: '80px', fontWeight: 600 }}>42%</div>
                                 <div style={{ fontSize: '18px', opacity: 0.9 }}>Revenue Attributed</div>
@@ -44,7 +44,7 @@ export function AttributionContent() {
                     <div style={{ display: 'flex', justifyContent: 'center', gap: '80px', flexWrap: 'wrap' }}>
                         {[{ value: '85%', label: 'More Accurate Data' }, { value: '3x', label: 'Better ROAS' }, { value: '50+', label: 'Models Deployed' }, { value: '24/7', label: 'Real-Time Tracking' }].map((stat, i) => (
                             <div key={i} style={{ textAlign: 'center' }}>
-                                <div style={{ fontSize: '36px', fontWeight: 600, background: 'linear-gradient(135deg, #8b5cf6, #06b6d4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{stat.value}</div>
+                                <div style={{ fontSize: '36px', fontWeight: 600, background: 'linear-gradient(135deg, var(--accent-pink), #06b6d4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{stat.value}</div>
                                 <div style={{ fontSize: '13px', color: '#64748b', marginTop: '5px' }}>{stat.label}</div>
                             </div>
                         ))}
@@ -56,7 +56,7 @@ export function AttributionContent() {
                 <div className="attr-container">
                     <div className="section-header text-center">
                         <span className="section-label">WHAT WE DO</span>
-                        <h2 className="section-title">Attribution <span className="text-gradient">services.</span></h2>
+                        <h2 className="section-title">Attribution <span className="title-accent">services.</span></h2>
                     </div>
                     <div className="services-grid">
                         {[{ title: 'Multi-Touch Modeling', desc: 'Go beyond last-click with data-driven attribution that credits every touchpoint.' }, { title: 'Channel Analysis', desc: 'Understand the true contribution of each marketing channel to your conversions.' }, { title: 'Budget Optimization', desc: 'Reallocate spend based on actual performance data, not guesswork.' }].map((service, i) => (
@@ -73,7 +73,7 @@ export function AttributionContent() {
                 <div className="attr-container">
                     <div className="section-header text-center">
                         <span className="section-label">INVESTMENT</span>
-                        <h2 className="section-title">Attribution <span className="text-gradient">packages.</span></h2>
+                        <h2 className="section-title">Attribution <span className="title-accent">packages.</span></h2>
                     </div>
                     <div className="pricing-grid">
                         <div className="price-card">
@@ -81,9 +81,9 @@ export function AttributionContent() {
                             <div style={{ fontSize: '42px', fontWeight: 600, marginBottom: '10px' }}>$2,500</div>
                             <p style={{ color: '#666', marginBottom: '30px', fontSize: '14px' }}>Current state analysis</p>
                             <ul style={{ listStyle: 'none', textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '40px' }}>
-                                <li><Icon type="check" style={{ color: '#8b5cf6' }} /> Data Audit</li>
-                                <li><Icon type="check" style={{ color: '#8b5cf6' }} /> Gap Analysis</li>
-                                <li><Icon type="check" style={{ color: '#8b5cf6' }} /> Recommendations</li>
+                                <li><Icon type="check" style={{ color: 'var(--accent-pink)' }} /> Data Audit</li>
+                                <li><Icon type="check" style={{ color: 'var(--accent-pink)' }} /> Gap Analysis</li>
+                                <li><Icon type="check" style={{ color: 'var(--accent-pink)' }} /> Recommendations</li>
                             </ul>
                             <Link href="/contact" className="btn-outline" style={{ display: 'block' }}>Get Started</Link>
                         </div>
@@ -97,16 +97,16 @@ export function AttributionContent() {
                                 <li><Icon type="check" style={{ color: '#06b6d4' }} /> Dashboard</li>
                                 <li><Icon type="check" style={{ color: '#06b6d4' }} /> Training</li>
                             </ul>
-                            <Link href="/contact" className="btn-primary" style={{ display: 'block', background: 'linear-gradient(135deg, #8b5cf6, #06b6d4)', border: 'none' }}>Start Project</Link>
+                            <Link href="/contact" className="btn-primary" style={{ display: 'block', background: 'linear-gradient(135deg, var(--accent-pink), #06b6d4)', border: 'none' }}>Start Project</Link>
                         </div>
                         <div className="price-card">
                             <h4 style={{ fontSize: '24px', fontWeight: 600, marginBottom: '20px' }}>Managed</h4>
                             <div style={{ fontSize: '42px', fontWeight: 600, marginBottom: '10px' }}>$2,500<span style={{ fontSize: '16px', color: '#999' }}>/mo</span></div>
                             <p style={{ color: '#666', marginBottom: '30px', fontSize: '14px' }}>Ongoing optimization</p>
                             <ul style={{ listStyle: 'none', textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '40px' }}>
-                                <li><Icon type="check" style={{ color: '#8b5cf6' }} /> Monthly Reports</li>
-                                <li><Icon type="check" style={{ color: '#8b5cf6' }} /> Model Updates</li>
-                                <li><Icon type="check" style={{ color: '#8b5cf6' }} /> Strategic Review</li>
+                                <li><Icon type="check" style={{ color: 'var(--accent-pink)' }} /> Monthly Reports</li>
+                                <li><Icon type="check" style={{ color: 'var(--accent-pink)' }} /> Model Updates</li>
+                                <li><Icon type="check" style={{ color: 'var(--accent-pink)' }} /> Strategic Review</li>
                             </ul>
                             <Link href="/contact" className="btn-outline" style={{ display: 'block' }}>Talk to Expert</Link>
                         </div>
@@ -143,7 +143,7 @@ export function AttributionContent() {
                                 <input type="text" placeholder="Name" />
                                 <input type="email" placeholder="Email" />
                                 <input type="text" placeholder="Monthly Ad Spend" />
-                                <button type="submit" className="btn-primary" style={{ border: 'none', background: 'linear-gradient(135deg, #8b5cf6, #06b6d4)', color: 'white', fontSize: '18px', fontWeight: 600, cursor: 'pointer', padding: '20px' }}>Get Free Assessment</button>
+                                <button type="submit" className="btn-primary" style={{ border: 'none', background: 'linear-gradient(135deg, var(--accent-pink), #06b6d4)', color: 'var(--accent-yellow)', fontSize: '18px', fontWeight: 600, cursor: 'pointer', padding: '20px' }}>Get Free Assessment</button>
                             </form>
                         </div>
                     </div>

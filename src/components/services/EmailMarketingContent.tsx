@@ -17,7 +17,7 @@ export function EmailMarketingContent() {
                                 Retention & ROI
                             </span>
                             <h1 className="email-hero-title">
-                                Email marketing to <span className="text-gradient">increase sales</span> from your list.
+                                Email marketing to <span className="title-accent">increase sales</span> from your list.
                             </h1>
                             <p className="email-hero-subtitle">
                                 Stop leaving money on the table. We build high-performance email and SMS lifecycles that turn one-time buyers into lifelong fans.
@@ -36,7 +36,7 @@ export function EmailMarketingContent() {
                             <div className="email-mockup-stack">
                                 <div className="email-card-sub left">
                                     <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
-                                        <div style={{ width: '30px', height: '30px', background: '#7c3aed', borderRadius: '6px' }}></div>
+                                        <div style={{ width: '30px', height: '30px', background: 'var(--accent-pink)', borderRadius: '6px' }}></div>
                                         <div>
                                             <div style={{ width: '60px', height: '6px', background: '#eee', marginBottom: '4px' }}></div>
                                             <div style={{ width: '40px', height: '4px', background: '#f5f5f5' }}></div>
@@ -46,12 +46,12 @@ export function EmailMarketingContent() {
                                 </div>
                                 <div className="email-card-main">
                                     <div style={{ textAlign: 'center', marginBottom: '20px' }}>
-                                        <Icon type="zap" className="text-gradient" />
+                                        <Icon type="zap" className="title-accent" />
                                         <h4 style={{ fontSize: '18px', fontWeight: 600, marginTop: '10px' }}>Weekly Revenue</h4>
                                     </div>
                                     {[70, 40, 90, 60, 100].map((h, i) => (
                                         <div key={i} style={{ height: '10px', background: '#f8fafc', borderRadius: '10px', marginBottom: '10px', overflow: 'hidden' }}>
-                                            <div style={{ width: `${h}%`, height: '100%', background: 'linear-gradient(90deg, #3d0da8, #ffc700)' }}></div>
+                                            <div style={{ width: `${h}%`, height: '100%', background: 'var(--primary-green)' }}></div>
                                         </div>
                                     ))}
                                     <div style={{ marginTop: '20px', padding: '15px', background: '#f0fdf4', borderRadius: '12px', textAlign: 'center' }}>
@@ -72,7 +72,7 @@ export function EmailMarketingContent() {
             {/* Partner Banner */}
             <section className="email-partner">
                 <div className="email-container">
-                    <p className="partner-text">Don&apos;t settle for ordinary. Partner with <span style={{ color: '#7c3aed' }}>extraordinary</span>.</p>
+                    <p className="partner-text">Don&apos;t settle for ordinary. Partner with <span style={{ color: 'var(--accent-pink)' }}>extraordinary</span>.</p>
                 </div>
             </section>
 
@@ -81,7 +81,7 @@ export function EmailMarketingContent() {
                 <div className="email-container">
                     <div className="section-header text-center">
                         <span className="section-label">OUR CORE FOCUS</span>
-                        <h2 className="section-title">Send the only emails they&apos;ll <span className="text-gradient">want to read.</span></h2>
+                        <h2 className="section-title">Send the only emails they&apos;ll <span className="title-accent">want to read.</span></h2>
                         <p className="section-subtitle">We combine psychology-driven copywriting with advanced automation to ensure your message hits the right inbox at the perfect time.</p>
                     </div>
                     <div className="features-box-grid">
@@ -107,7 +107,7 @@ export function EmailMarketingContent() {
                     <div className="lifecycle-grid">
                         <div className="lifecycle-content">
                             <span className="section-label">LIFECYCLE MARKETING</span>
-                            <h2 className="section-title">Turn your retention channels into <span className="text-gradient">money makers.</span></h2>
+                            <h2 className="section-title">Turn your retention channels into <span className="title-accent">money makers.</span></h2>
                             <p className="section-subtitle">Email isn&apos;t just about newsletters. It&apos;s about building a systematic approach to customer acquisition and retention.</p>
 
                             <div className="lifecycle-item">
@@ -125,7 +125,7 @@ export function EmailMarketingContent() {
                         </div>
                         <div className="lifecycle-visual" style={{ background: '#fff', padding: '40px', borderRadius: '32px', boxShadow: '0 20px 40px rgba(0,0,0,0.05)' }}>
                             <div className="mockup-header">
-                                <div className="dot" style={{ background: '#7c3aed' }}></div>
+                                <div className="dot" style={{ background: 'var(--accent-pink)' }}></div>
                                 <div style={{ fontSize: '14px', fontWeight: 600 }}>Automation Workflow</div>
                             </div>
                             <div style={{ marginTop: '30px', display: 'flex', flexDirection: 'column', gap: '20px' }}>
@@ -138,7 +138,7 @@ export function EmailMarketingContent() {
                                 ].map((step, i) => (
                                     <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '15px', position: 'relative' }}>
                                         <div style={{ padding: '12px 20px', background: '#f8fafc', borderRadius: '10px', flex: 1, border: '1px solid #eee' }}>
-                                            <span style={{ fontSize: '10px', color: '#7c3aed', fontWeight: 600, display: 'block' }}>{step.c}</span>
+                                            <span style={{ fontSize: '10px', color: 'var(--accent-pink)', fontWeight: 600, display: 'block' }}>{step.c}</span>
                                             <span style={{ fontWeight: 600 }}>{step.t}</span>
                                         </div>
                                         {i < 4 && <div style={{ position: 'absolute', bottom: '-15px', left: '30px', height: '15px', width: '2px', background: '#ddd' }}></div>}
@@ -154,7 +154,7 @@ export function EmailMarketingContent() {
             <section className="email-impact">
                 <div className="email-container text-center">
                     <span className="section-label" style={{ color: 'var(--accent-yellow)' }}>THE IMPACT</span>
-                    <h2 className="section-title" style={{ color: 'white' }}>Revenue You Can <span style={{ color: 'var(--accent-yellow)' }}>Count On.</span></h2>
+                    <h2 className="section-title" style={{ color: 'var(--accent-yellow)' }}>Revenue You Can <span style={{ color: 'var(--accent-yellow)' }}>Count On.</span></h2>
                     <p className="section-subtitle" style={{ color: 'rgba(255,255,255,0.7)', marginLeft: 'auto', marginRight: 'auto' }}>
                         Our clients see an immediate lift in their bottom line within the first 30 days of implementation.
                     </p>
@@ -185,16 +185,16 @@ export function EmailMarketingContent() {
                 <div className="email-container">
                     <div className="section-header text-center">
                         <span className="section-label">PRICING</span>
-                        <h2 className="section-title">Choose your <span className="text-gradient">growth path.</span></h2>
+                        <h2 className="section-title">Choose your <span className="title-accent">growth path.</span></h2>
                     </div>
                     <div className="plans-grid">
                         <div className="plan-card">
                             <h4 style={{ fontWeight: 600, fontSize: '20px', marginBottom: '20px' }}>Starter</h4>
                             <div style={{ fontSize: '32px', fontWeight: 600, marginBottom: '20px' }}>$1,999<span style={{ fontSize: '14px', color: '#999' }}>/mo</span></div>
                             <ul style={{ listStyle: 'none', textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '30px' }}>
-                                <li><Icon type="check" className="text-gradient" /> 4 Campaigns / mo</li>
-                                <li><Icon type="check" className="text-gradient" /> Core Flow Setup</li>
-                                <li><Icon type="check" className="text-gradient" /> Monthly Reporting</li>
+                                <li><Icon type="check" className="title-accent" /> 4 Campaigns / mo</li>
+                                <li><Icon type="check" className="title-accent" /> Core Flow Setup</li>
+                                <li><Icon type="check" className="title-accent" /> Monthly Reporting</li>
                             </ul>
                             <Link href="/contact" className="btn-outline" style={{ display: 'block' }}>Get Started</Link>
                         </div>
@@ -207,16 +207,16 @@ export function EmailMarketingContent() {
                                 <li><Icon type="check" /> SMS Integration</li>
                                 <li><Icon type="check" /> Weekly Sync</li>
                             </ul>
-                            <Link href="/contact" className="btn-white" style={{ display: 'block', color: '#7c3aed' }}>Scale Now</Link>
+                            <Link href="/contact" className="btn-white" style={{ display: 'block', color: 'var(--accent-pink)' }}>Scale Now</Link>
                         </div>
                         <div className="plan-card">
                             <h4 style={{ fontWeight: 600, fontSize: '20px', marginBottom: '20px' }}>Scale</h4>
                             <div style={{ fontSize: '32px', fontWeight: 600, marginBottom: '20px' }}>$5,999<span style={{ fontSize: '14px', color: '#999' }}>/mo</span></div>
                             <ul style={{ listStyle: 'none', textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '30px' }}>
-                                <li><Icon type="check" className="text-gradient" /> 16 Campaigns / mo</li>
-                                <li><Icon type="check" className="text-gradient" /> Full Omnichannel Retention</li>
-                                <li><Icon type="check" className="text-gradient" /> Prediction Modeling</li>
-                                <li><Icon type="check" className="text-gradient" /> 24/7 Slack Support</li>
+                                <li><Icon type="check" className="title-accent" /> 16 Campaigns / mo</li>
+                                <li><Icon type="check" className="title-accent" /> Full Omnichannel Retention</li>
+                                <li><Icon type="check" className="title-accent" /> Prediction Modeling</li>
+                                <li><Icon type="check" className="title-accent" /> 24/7 Slack Support</li>
                             </ul>
                             <Link href="/contact" className="btn-outline" style={{ display: 'block' }}>Go Pro</Link>
                         </div>
@@ -259,7 +259,7 @@ export function EmailMarketingContent() {
             </section>
 
             {/* CTA section with form inspired by image */}
-            <section className="email-cta" style={{ background: '#052e26', padding: '100px 0', color: 'white' }}>
+            <section className="email-cta" style={{ background: '#052e26', padding: '100px 0', color: 'var(--accent-yellow)' }}>
                 <div className="email-container">
                     <div className="cta-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px', alignItems: 'center' }}>
                         <div>

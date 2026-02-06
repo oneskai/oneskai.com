@@ -6,15 +6,15 @@ import '@/styles/content-marketing.css';
 export function PredictiveContent() {
     return (
         <div className="content-marketing-page">
-            <section className="content-hero" style={{ background: 'radial-gradient(circle at 20% 30%, rgba(20, 184, 166, 0.15) 0%, transparent 40%), radial-gradient(circle at 80% 70%, rgba(6, 182, 212, 0.15) 0%, transparent 40%), var(--bg-white)' }}>
+            <section className="content-hero" style={{ background: 'var(--bg-cream)' }}>
                 <div className="content-container">
                     <div className="content-hero-grid">
                         <div className="content-hero-content">
-                            <span className="content-badge" style={{ background: 'rgba(20, 184, 166, 0.15)', color: '#14b8a6', border: '1px solid rgba(20, 184, 166, 0.3)' }}><Icon type="brain" />Predictive Analytics</span>
-                            <h1 className="content-hero-title">See The Future <span style={{ background: 'linear-gradient(135deg, #14b8a6, #06b6d4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>of Your Business.</span></h1>
+                            <span className="content-badge" style={{ background: 'rgba(255, 45, 117, 0.08)', color: 'var(--accent-pink)', border: '1px solid rgba(255, 45, 117, 0.1)' }}><Icon type="brain" />Predictive Analytics</span>
+                            <h1 className="content-hero-title">See The Future <span style={{ background: 'var(--primary-green)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>of Your Business.</span></h1>
                             <p className="content-hero-subtitle">Machine learning models that predict customer behavior, forecast outcomes, and optimize marketing spend before you invest.</p>
                             <div className="content-hero-actions">
-                                <Link href="/contact" className="btn-primary large" style={{ background: 'linear-gradient(135deg, #14b8a6, #06b6d4)', border: 'none' }}>Get Prediction Demo<Icon type="arrowRight" /></Link>
+                                <Link href="/contact" className="btn-primary large" style={{ background: 'var(--primary-green)', border: 'none' }}>Get Prediction Demo<Icon type="arrowRight" /></Link>
                                 <Link href="#case-studies" className="btn-outline">See Results</Link>
                             </div>
                             <div className="hero-stat-bars">
@@ -23,8 +23,8 @@ export function PredictiveContent() {
                             </div>
                         </div>
                         <div className="content-hero-visual">
-                            <div className="content-visual-card" style={{ background: 'linear-gradient(135deg, #14b8a6, #06b6d4)' }}>
-                                <div style={{ padding: '40px', color: 'white', textAlign: 'center' }}>
+                            <div className="content-visual-card" style={{ background: 'var(--primary-green)' }}>
+                                <div style={{ padding: '40px', color: 'var(--accent-yellow)', textAlign: 'center' }}>
                                     <div style={{ fontSize: '60px' }}>🔮</div>
                                     <div style={{ fontSize: '18px', marginTop: '10px' }}>ML-Powered Predictions</div>
                                 </div>
@@ -38,7 +38,7 @@ export function PredictiveContent() {
                 <div className="content-container">
                     <div className="section-header text-center">
                         <span className="section-label">THE PROBLEM</span>
-                        <h2 className="section-title">Making Decisions <span style={{ background: 'linear-gradient(135deg, #14b8a6, #06b6d4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>After the Fact?</span></h2>
+                        <h2 className="section-title">Making Decisions <span style={{ background: 'var(--primary-green)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>After the Fact?</span></h2>
                     </div>
                     <div className="challenges-grid">
                         <div className="challenge-card"><div className="challenge-icon" style={{ background: 'rgba(20, 184, 166, 0.15)', color: '#14b8a6' }}><Icon type="clock" /></div><h3>Reactive Decisions</h3><p>By the time you see the data, it&apos;s already too late to act on it effectively.</p></div>
@@ -50,7 +50,7 @@ export function PredictiveContent() {
 
             <section className="content-services">
                 <div className="content-container">
-                    <div className="section-header"><span className="section-label">WHAT WE BUILD</span><h2 className="section-title">Predictive <span style={{ background: 'linear-gradient(135deg, #14b8a6, #06b6d4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Models</span></h2></div>
+                    <div className="section-header"><span className="section-label">WHAT WE BUILD</span><h2 className="section-title">Predictive <span style={{ background: 'var(--primary-green)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Models</span></h2></div>
                     <div className="services-grid">
                         {[
                             { title: 'Churn Prediction', desc: 'Identify at-risk customers before they leave and take action to retain them.', tags: ['Retention', 'Early Warning'] },
@@ -75,11 +75,11 @@ export function PredictiveContent() {
                 </div>
             </section>
 
-            <section className="content-cta" style={{ background: 'linear-gradient(135deg, #14b8a6, #06b6d4)' }}>
+            <section className="content-cta" style={{ background: 'var(--primary-green)' }}>
                 <div className="content-container">
                     <div className="cta-box" style={{ background: 'transparent', boxShadow: 'none' }}>
-                        <h2 style={{ color: 'white' }}>Ready to <span style={{ color: '#ccfbf1' }}>Predict the Future?</span></h2>
-                        <p style={{ fontSize: '20px', marginBottom: '40px', opacity: 0.9, color: 'white' }}>Get a demo of our predictive models and see what&apos;s possible.</p>
+                        <h2 style={{ color: 'var(--accent-yellow)' }}>Ready to <span style={{ color: '#ccfbf1' }}>Predict the Future?</span></h2>
+                        <p style={{ fontSize: '20px', marginBottom: '40px', opacity: 0.9, color: 'var(--accent-yellow)' }}>Get a demo of our predictive models and see what&apos;s possible.</p>
                         <Link href="/contact" className="btn-white">Get Prediction Demo</Link>
                     </div>
                 </div>

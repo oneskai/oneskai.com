@@ -17,13 +17,13 @@ export function PhotographyContent() {
                                 Professional Photography
                             </span>
                             <h1 className="photo-hero-title">
-                                Images that tell <span className="text-gradient">your story.</span>
+                                Images that tell <span className="title-accent">your story.</span>
                             </h1>
                             <p className="photo-hero-subtitle">
                                 From product shots to corporate headshots, we capture high-quality imagery that elevates your brand and connects with your audience.
                             </p>
                             <div className="content-hero-actions">
-                                <Link href="/contact" className="btn-primary large" style={{ background: 'linear-gradient(135deg, #f43f5e, #fbbf24)', border: 'none', color: 'white' }}>
+                                <Link href="/contact" className="btn-primary large" style={{ background: 'var(--primary-green)', border: 'none', color: 'var(--accent-yellow)' }}>
                                     Book a Shoot
                                     <Icon type="arrowRight" />
                                 </Link>
@@ -55,7 +55,7 @@ export function PhotographyContent() {
                             { value: 'Same Day', label: 'Turnaround Available' }
                         ].map((stat, i) => (
                             <div key={i} style={{ textAlign: 'center' }}>
-                                <div style={{ fontSize: '36px', fontWeight: 600, background: 'linear-gradient(135deg, #f43f5e, #fbbf24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{stat.value}</div>
+                                <div style={{ fontSize: '36px', fontWeight: 600, background: 'var(--primary-green)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{stat.value}</div>
                                 <div style={{ fontSize: '13px', color: '#64748b', marginTop: '5px' }}>{stat.label}</div>
                             </div>
                         ))}
@@ -68,7 +68,7 @@ export function PhotographyContent() {
                 <div className="photo-container">
                     <div className="section-header text-center">
                         <span className="section-label">WHAT WE SHOOT</span>
-                        <h2 className="section-title">Photography <span className="text-gradient">services.</span></h2>
+                        <h2 className="section-title">Photography <span className="title-accent">services.</span></h2>
                     </div>
                     <div className="services-grid">
                         {[
@@ -101,7 +101,7 @@ export function PhotographyContent() {
                             { color: '#f97316' },
                             { color: '#10b981' },
                             { color: '#0ea5e9' },
-                            { color: '#8b5cf6', tall: true },
+                            { color: 'var(--accent-pink)', tall: true },
                             { color: '#ec4899' },
                             { color: '#14b8a6' }
                         ].map((item, i) => (
@@ -123,7 +123,7 @@ export function PhotographyContent() {
                 <div className="photo-container">
                     <div className="section-header text-center">
                         <span className="section-label">INVESTMENT</span>
-                        <h2 className="section-title">Photography <span className="text-gradient">packages.</span></h2>
+                        <h2 className="section-title">Photography <span className="title-accent">packages.</span></h2>
                     </div>
                     <div className="pricing-grid">
                         <div className="price-card">
@@ -151,7 +151,7 @@ export function PhotographyContent() {
                                 <li><Icon type="check" style={{ color: '#fbbf24' }} /> 2 Locations</li>
                                 <li><Icon type="check" style={{ color: '#fbbf24' }} /> 3-Day Delivery</li>
                             </ul>
-                            <Link href="/contact" className="btn-primary" style={{ display: 'block', background: 'linear-gradient(135deg, #f43f5e, #fbbf24)', border: 'none' }}>Book Now</Link>
+                            <Link href="/contact" className="btn-primary" style={{ display: 'block', background: 'var(--primary-green)', border: 'none' }}>Book Now</Link>
                         </div>
 
                         <div className="price-card">
@@ -215,7 +215,7 @@ export function PhotographyContent() {
                                     <option value="event">Event Coverage</option>
                                 </select>
                                 <textarea placeholder="Tell us about your project..." style={{ height: '100px' }}></textarea>
-                                <button type="submit" className="btn-primary" style={{ border: 'none', background: 'linear-gradient(135deg, #f43f5e, #fbbf24)', color: 'white', fontSize: '18px', fontWeight: 600, cursor: 'pointer', padding: '20px' }}>
+                                <button type="submit" className="btn-primary" style={{ border: 'none', background: 'var(--primary-green)', color: 'var(--accent-yellow)', fontSize: '18px', fontWeight: 600, cursor: 'pointer', padding: '20px' }}>
                                     Get Free Consultation
                                 </button>
                             </form>

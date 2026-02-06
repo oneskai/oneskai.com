@@ -40,7 +40,7 @@ export function BlogBriefSection() {
             <div className="seo-container">
                 <div className="section-header text-center">
                     <span className="section-label">LATEST INSIGHTS</span>
-                    <h2 className="section-title">From Our <span className="text-gradient">SEO Lab</span></h2>
+                    <h2 className="section-title">From Our <span className="title-accent">SEO Lab</span></h2>
                     <p className="section-subtitle">
                         Expert analysis and actionable strategies to help you stay ahead of the ever-evolving search landscape.
                     </p>

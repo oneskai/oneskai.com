@@ -8,24 +8,24 @@ export function GA4Content() {
     return (
         <div className="content-marketing-page">
             {/* Hero Section */}
-            <section className="content-hero" style={{ background: 'radial-gradient(circle at 20% 30%, rgba(234, 67, 53, 0.15) 0%, transparent 40%), radial-gradient(circle at 80% 70%, rgba(251, 188, 5, 0.15) 0%, transparent 40%), var(--bg-white)' }}>
+            <section className="content-hero" style={{ background: 'var(--bg-cream)' }}>
                 <div className="content-container">
                     <div className="content-hero-grid">
                         <div className="content-hero-content">
-                            <span className="content-badge" style={{ background: 'rgba(234, 67, 53, 0.15)', color: '#ea4335', border: '1px solid rgba(234, 67, 53, 0.3)' }}>
+                            <span className="content-badge" style={{ background: 'rgba(255, 45, 117, 0.08)', color: 'var(--accent-pink)', border: '1px solid rgba(255, 45, 117, 0.1)' }}>
                                 <Icon type="barChart" />
                                 GA4 Analytics
                             </span>
                             <h1 className="content-hero-title">
                                 Know Your Data.
-                                <span style={{ background: 'linear-gradient(135deg, #ea4335, #fbbc05)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}> Own Your Growth.</span>
+                                <span className="title-accent"> Own Your Growth.</span>
                             </h1>
                             <p className="content-hero-subtitle">
                                 Master Google Analytics 4 with expert implementation, migration, and strategic insights.
                                 Turn raw data into actionable business intelligence.
                             </p>
                             <div className="content-hero-actions">
-                                <Link href="/contact" className="btn-primary large" style={{ background: 'linear-gradient(135deg, #ea4335, #fbbc05)', border: 'none' }}>
+                                <Link href="/contact" className="btn-primary large" style={{ background: 'linear-gradient(135deg, var(--accent-pink), #fbbc05)', border: 'none' }}>
                                     Get GA4 Audit
                                     <Icon type="arrowRight" />
                                 </Link>
@@ -33,7 +33,7 @@ export function GA4Content() {
                             </div>
                             <div className="hero-stat-bars">
                                 <div className="stat-bar-item">
-                                    <span className="stat-num" style={{ color: '#ea4335' }}>500+</span>
+                                    <span className="stat-num" style={{ color: 'var(--accent-pink)' }}>500+</span>
                                     <span className="stat-txt">GA4 Implementations</span>
                                 </div>
                                 <div className="stat-bar-item">
@@ -43,8 +43,8 @@ export function GA4Content() {
                             </div>
                         </div>
                         <div className="content-hero-visual">
-                            <div className="content-visual-card" style={{ background: 'linear-gradient(135deg, #ea4335, #fbbc05)' }}>
-                                <div style={{ padding: '40px', color: 'white', textAlign: 'center' }}>
+                            <div className="content-visual-card" style={{ background: 'linear-gradient(135deg, var(--accent-pink), #fbbc05)' }}>
+                                <div style={{ padding: '40px', color: 'var(--accent-yellow)', textAlign: 'center' }}>
                                     <div style={{ fontSize: '60px', fontWeight: 600, lineHeight: 1 }}>GA4</div>
                                     <div style={{ fontSize: '16px', opacity: 0.9, marginTop: '10px' }}>Certified Experts</div>
                                     <div style={{ display: 'flex', justifyContent: 'center', gap: '15px', marginTop: '30px', flexWrap: 'wrap' }}>
@@ -64,22 +64,22 @@ export function GA4Content() {
                 <div className="content-container">
                     <div className="section-header text-center">
                         <span className="section-label">THE PROBLEM</span>
-                        <h2 className="section-title">Is Your Analytics <span style={{ background: 'linear-gradient(135deg, #ea4335, #fbbc05)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Actually Working?</span></h2>
+                        <h2 className="section-title">Is Your Analytics <span className="title-accent">Actually Working?</span></h2>
                         <p className="section-subtitle">Universal Analytics is gone. GA4 is fundamentally different. Most businesses are flying blind with broken tracking and missing data.</p>
                     </div>
                     <div className="challenges-grid">
                         <div className="challenge-card">
-                            <div className="challenge-icon" style={{ background: 'rgba(234, 67, 53, 0.15)', color: '#ea4335' }}><Icon type="alert" /></div>
+                            <div className="challenge-icon" style={{ background: 'rgba(255, 45, 117, 0.08)', color: 'var(--accent-pink)' }}><Icon type="alert" /></div>
                             <h3>Data Gaps & Inaccuracies</h3>
                             <p>Your GA4 setup is missing critical events, tracking the wrong things, or double-counting conversions.</p>
                         </div>
                         <div className="challenge-card">
-                            <div className="challenge-icon" style={{ background: 'rgba(234, 67, 53, 0.15)', color: '#ea4335' }}><Icon type="brain" /></div>
+                            <div className="challenge-icon" style={{ background: 'rgba(255, 45, 117, 0.08)', color: 'var(--accent-pink)' }}><Icon type="brain" /></div>
                             <h3>Confusing Interface</h3>
                             <p>GA4&apos;s new event-based model and interface leave your team struggling to find the insights they need.</p>
                         </div>
                         <div className="challenge-card">
-                            <div className="challenge-icon" style={{ background: 'rgba(234, 67, 53, 0.15)', color: '#ea4335' }}><Icon type="barChart" /></div>
+                            <div className="challenge-icon" style={{ background: 'rgba(255, 45, 117, 0.08)', color: 'var(--accent-pink)' }}><Icon type="barChart" /></div>
                             <h3>No Actionable Insights</h3>
                             <p>You have data, but no clarity on what it means or how to use it to drive better marketing decisions.</p>
                         </div>
@@ -92,11 +92,11 @@ export function GA4Content() {
                 <div className="content-container">
                     <div className="impact-grid">
                         <div className="impact-visual">
-                            <div className="growth-indicator" style={{ background: 'linear-gradient(135deg, #ea4335, #fbbc05)' }}><Icon type="trending-up" />+85% Data Accuracy</div>
+                            <div className="growth-indicator" style={{ background: 'linear-gradient(135deg, var(--accent-pink), #fbbc05)' }}><Icon type="trending-up" />+85% Data Accuracy</div>
                             <div className="chart-container">
                                 {[40, 55, 60, 75, 85, 100].map((h, i) => (
                                     <div key={i} className="chart-bar-group">
-                                        <div className={`chart-bar-fill ${i === 5 ? 'active' : ''}`} style={{ height: `${h}%`, background: i === 5 ? 'linear-gradient(135deg, #ea4335, #fbbc05)' : 'rgba(234, 67, 53, 0.3)' }}></div>
+                                        <div className={`chart-bar-fill ${i === 5 ? 'active' : ''}`} style={{ height: `${h}%`, background: i === 5 ? 'linear-gradient(135deg, var(--accent-pink), #fbbc05)' : 'rgba(234, 67, 53, 0.3)' }}></div>
                                         <span className="chart-label">M{i + 1}</span>
                                     </div>
                                 ))}
@@ -104,7 +104,7 @@ export function GA4Content() {
                         </div>
                         <div className="impact-content">
                             <span className="section-label">DATA-DRIVEN RESULTS</span>
-                            <h2 className="section-title">Analytics that <span style={{ background: 'linear-gradient(135deg, #ea4335, #fbbc05)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Inform</span></h2>
+                            <h2 className="section-title">Analytics that <span className="title-accent">Inform</span></h2>
                             <p className="section-subtitle">Proper GA4 implementation means every marketing dollar is tracked, attributed, and optimized.</p>
                             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '20px' }}>
                                 {[
@@ -113,7 +113,7 @@ export function GA4Content() {
                                     { title: 'Predictive Analytics', desc: 'ML-powered insights predict churn and purchase likelihood.' }
                                 ].map((item, i) => (
                                     <li key={i} style={{ display: 'flex', gap: '15px' }}>
-                                        <div style={{ color: '#ea4335' }}><Icon type="check" /></div>
+                                        <div style={{ color: 'var(--accent-pink)' }}><Icon type="check" /></div>
                                         <div><h4 style={{ fontWeight: 600 }}>{item.title}</h4><p style={{ fontSize: '14px', color: 'var(--text-gray)' }}>{item.desc}</p></div>
                                     </li>
                                 ))}
@@ -128,7 +128,7 @@ export function GA4Content() {
                 <div className="content-container">
                     <div className="section-header text-center">
                         <span className="section-label">OUR METHODOLOGY</span>
-                        <h2 className="section-title">The <span style={{ background: 'linear-gradient(135deg, #ea4335, #fbbc05)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>GA4 Mastery</span> Framework</h2>
+                        <h2 className="section-title">The <span className="title-accent">GA4 Mastery</span> Framework</h2>
                     </div>
                     <div className="process-steps-grid">
                         {[
@@ -140,8 +140,8 @@ export function GA4Content() {
                             { title: 'Training & Support', desc: 'Empower your team to use GA4 confidently with custom dashboards.', icon: 'users' }
                         ].map((step, i) => (
                             <div key={i} className="step-card">
-                                <div className="step-number-badge" style={{ background: 'linear-gradient(135deg, #ea4335, #fbbc05)' }}>{i + 1}</div>
-                                <div className="step-icon-wrapper" style={{ color: '#ea4335' }}><Icon type={step.icon} /></div>
+                                <div className="step-number-badge" style={{ background: 'linear-gradient(135deg, var(--accent-pink), #fbbc05)' }}>{i + 1}</div>
+                                <div className="step-icon-wrapper" style={{ color: 'var(--accent-pink)' }}><Icon type={step.icon} /></div>
                                 <h3 style={{ fontSize: '20px', fontWeight: 600, marginBottom: '10px' }}>{step.title}</h3>
                                 <p style={{ fontSize: '14px', color: 'var(--text-gray)', lineHeight: '1.6' }}>{step.desc}</p>
                             </div>
@@ -155,7 +155,7 @@ export function GA4Content() {
                 <div className="content-container">
                     <div className="section-header">
                         <span className="section-label">WHAT WE OFFER</span>
-                        <h2 className="section-title">Complete <span style={{ background: 'linear-gradient(135deg, #ea4335, #fbbc05)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>GA4 Solutions</span></h2>
+                        <h2 className="section-title">Complete <span className="title-accent">GA4 Solutions</span></h2>
                     </div>
                     <div className="services-grid">
                         {[
@@ -193,11 +193,11 @@ export function GA4Content() {
             </section>
 
             {/* CTA */}
-            <section className="content-cta" style={{ background: 'linear-gradient(135deg, #ea4335, #fbbc05)' }}>
+            <section className="content-cta" style={{ background: 'linear-gradient(135deg, var(--accent-pink), #fbbc05)' }}>
                 <div className="content-container">
                     <div className="cta-box" style={{ background: 'transparent', boxShadow: 'none' }}>
-                        <h2 style={{ color: 'white' }}>Ready to Master <span style={{ color: '#fff3cd' }}>Your Data?</span></h2>
-                        <p style={{ fontSize: '20px', marginBottom: '40px', opacity: 0.9, color: 'white' }}>Get a free GA4 audit and discover what you&apos;re missing.</p>
+                        <h2 style={{ color: 'var(--accent-yellow)' }}>Ready to Master <span style={{ color: '#fff3cd' }}>Your Data?</span></h2>
+                        <p style={{ fontSize: '20px', marginBottom: '40px', opacity: 0.9, color: 'var(--accent-yellow)' }}>Get a free GA4 audit and discover what you&apos;re missing.</p>
                         <Link href="/contact" className="btn-white">Get Your Free GA4 Audit</Link>
                     </div>
                 </div>

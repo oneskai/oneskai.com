@@ -17,13 +17,13 @@ export function AppDevelopmentContent() {
                                 Mobile App Development
                             </span>
                             <h1 className="appdev-hero-title">
-                                Apps that users <span className="text-gradient">can&apos;t put down.</span>
+                                Apps that users <span className="title-accent">can&apos;t put down.</span>
                             </h1>
                             <p className="appdev-hero-subtitle">
                                 Native and cross-platform mobile applications built for performance, designed for engagement, and optimized for the app store.
                             </p>
                             <div className="content-hero-actions">
-                                <Link href="/contact" className="btn-primary large" style={{ background: 'linear-gradient(135deg, #3b82f6, #a855f7)', border: 'none', color: 'white' }}>
+                                <Link href="/contact" className="btn-primary large" style={{ background: 'var(--primary-green)', border: 'none', color: 'var(--accent-yellow)' }}>
                                     Start App Project
                                     <Icon type="arrowRight" />
                                 </Link>
@@ -57,7 +57,7 @@ export function AppDevelopmentContent() {
                             { value: 'Top 10', label: 'Category Rankings' }
                         ].map((stat, i) => (
                             <div key={i} style={{ textAlign: 'center' }}>
-                                <div style={{ fontSize: '36px', fontWeight: 600, background: 'linear-gradient(135deg, #3b82f6, #a855f7)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{stat.value}</div>
+                                <div style={{ fontSize: '36px', fontWeight: 600, background: 'var(--primary-green)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{stat.value}</div>
                                 <div style={{ fontSize: '13px', color: '#64748b', marginTop: '5px' }}>{stat.label}</div>
                             </div>
                         ))}
@@ -70,7 +70,7 @@ export function AppDevelopmentContent() {
                 <div className="appdev-container">
                     <div className="section-header text-center">
                         <span className="section-label">PLATFORMS</span>
-                        <h2 className="section-title">Build for <span className="text-gradient">every device.</span></h2>
+                        <h2 className="section-title">Build for <span className="title-accent">every device.</span></h2>
                     </div>
                     <div className="platforms-grid">
                         {[
@@ -93,7 +93,7 @@ export function AppDevelopmentContent() {
                 <div className="appdev-container">
                     <div className="section-header text-center">
                         <span className="section-label" style={{ color: 'rgba(255,255,255,0.7)' }}>OUR PROCESS</span>
-                        <h2 className="section-title" style={{ color: 'white' }}>From concept to <span style={{ color: '#c4b5fd' }}>launch.</span></h2>
+                        <h2 className="section-title" style={{ color: 'var(--accent-yellow)' }}>From concept to <span style={{ color: '#c4b5fd' }}>launch.</span></h2>
                     </div>
                     <div className="process-steps">
                         {[
@@ -118,7 +118,7 @@ export function AppDevelopmentContent() {
                 <div className="appdev-container">
                     <div className="section-header text-center">
                         <span className="section-label">INVESTMENT</span>
-                        <h2 className="section-title">App <span className="text-gradient">packages.</span></h2>
+                        <h2 className="section-title">App <span className="title-accent">packages.</span></h2>
                     </div>
                     <div className="pricing-grid">
                         <div className="price-card">
@@ -146,7 +146,7 @@ export function AppDevelopmentContent() {
                                 <li><Icon type="check" style={{ color: '#a855f7' }} /> Backend & API</li>
                                 <li><Icon type="check" style={{ color: '#a855f7' }} /> 4-6 Month Delivery</li>
                             </ul>
-                            <Link href="/contact" className="btn-primary" style={{ display: 'block', background: 'linear-gradient(135deg, #3b82f6, #a855f7)', border: 'none' }}>Start Project</Link>
+                            <Link href="/contact" className="btn-primary" style={{ display: 'block', background: 'var(--primary-green)', border: 'none' }}>Start Project</Link>
                         </div>
 
                         <div className="price-card">
@@ -209,7 +209,7 @@ export function AppDevelopmentContent() {
                                     <option value="both">iOS + Android</option>
                                 </select>
                                 <textarea placeholder="Describe your app idea..." style={{ height: '100px' }}></textarea>
-                                <button type="submit" className="btn-primary" style={{ border: 'none', background: 'linear-gradient(135deg, #3b82f6, #a855f7)', color: 'white', fontSize: '18px', fontWeight: 600, cursor: 'pointer', padding: '20px' }}>
+                                <button type="submit" className="btn-primary" style={{ border: 'none', background: 'var(--primary-green)', color: 'var(--accent-yellow)', fontSize: '18px', fontWeight: 600, cursor: 'pointer', padding: '20px' }}>
                                     Get Free Consultation
                                 </button>
                             </form>

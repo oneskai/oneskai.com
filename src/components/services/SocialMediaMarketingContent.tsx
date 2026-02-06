@@ -17,13 +17,13 @@ export function SocialMediaMarketingContent() {
                                 Social Powerhouse
                             </span>
                             <h1 className="social-hero-title">
-                                Social media that <span className="text-gradient">converts attention</span> into growth.
+                                Social media that <span className="title-accent">converts attention</span> into growth.
                             </h1>
                             <p className="social-hero-subtitle">
                                 We combine data-driven strategy with high-production creative to build social presences that don&apos;t just look good—they drive measurable revenue and brand authority.
                             </p>
                             <div className="content-hero-actions">
-                                <Link href="/contact" className="btn-primary large" style={{ background: 'linear-gradient(135deg, #4facfe, #00f2fe)', border: 'none', color: 'white' }}>
+                                <Link href="/contact" className="btn-primary large" style={{ background: 'linear-gradient(135deg, var(--accent-pink), var(--accent-yellow))', border: 'none', color: 'var(--accent-yellow)' }}>
                                     Build Your Influence
                                     <Icon type="arrowRight" />
                                 </Link>
@@ -44,7 +44,7 @@ export function SocialMediaMarketingContent() {
 
                                 {/* Center Stats */}
                                 <div className="hero-stats-overlay">
-                                    <div style={{ fontSize: '52px', fontWeight: 600, color: '#4facfe', lineHeight: 1 }}>+315%</div>
+                                    <div style={{ fontSize: '52px', fontWeight: 600, color: 'var(--accent-pink)', lineHeight: 1 }}>+315%</div>
                                     <div style={{ fontSize: '13px', fontWeight: 600, color: '#64748b', textTransform: 'uppercase', marginTop: '10px', letterSpacing: '1px' }}>Avg. Engagement Lift</div>
                                 </div>
                             </div>
@@ -69,7 +69,7 @@ export function SocialMediaMarketingContent() {
                 <div className="social-container">
                     <div className="section-header text-center" style={{ marginBottom: '60px' }}>
                         <span className="section-label">THE ONESKAI ADVANTAGE</span>
-                        <h2 className="section-title">Dominance across the <span className="text-gradient">entire digital matrix.</span></h2>
+                        <h2 className="section-title">Dominance across the <span className="title-accent">entire digital matrix.</span></h2>
                     </div>
                     <div className="benefits-grid">
                         <div className="benefit-card vibrant">
@@ -78,12 +78,12 @@ export function SocialMediaMarketingContent() {
                             <p>We leverage native platform features and current trends to inject your brand into the cultural conversation with precision.</p>
                         </div>
                         <div className="benefit-card soft">
-                            <Icon type="target" style={{ color: '#4facfe', marginBottom: '20px' }} />
+                            <Icon type="target" style={{ color: 'var(--accent-pink)', marginBottom: '20px' }} />
                             <h3>Psych-First Strategy</h3>
                             <p>Understanding the &ldquo;Why&rdquo; behind the scroll. We build content that maps directly to your customer&apos;s psychological triggers.</p>
                         </div>
                         <div className="benefit-card soft">
-                            <Icon type="activity" style={{ color: '#7c3aed', marginBottom: '20px' }} />
+                            <Icon type="activity" style={{ color: 'var(--accent-pink)', marginBottom: '20px' }} />
                             <h3>Full-Funnel Social</h3>
                             <p>From awareness to advocacy. We move followers through a structured journey that ends in a transaction, not just a like.</p>
                         </div>
@@ -97,23 +97,23 @@ export function SocialMediaMarketingContent() {
                     <div className="metrics-grid">
                         <div className="metrics-content">
                             <span className="section-label">DATA-BACKED PROOF</span>
-                            <h2 className="section-title">Witness the <span className="text-gradient">Engagement Shift.</span></h2>
+                            <h2 className="section-title">Witness the <span className="title-accent">Engagement Shift.</span></h2>
                             <p className="section-subtitle">Our strategies consistently outperform industry benchmarks by 3.5x. We turn passive audiences into active brand advocates.</p>
 
                             <div style={{ marginTop: '40px' }}>
                                 <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
                                     <span style={{ fontWeight: 600 }}>Organic Reach Growth</span>
-                                    <span style={{ fontWeight: 600, color: '#4facfe' }}>+412%</span>
+                                    <span style={{ fontWeight: 600, color: 'var(--accent-pink)' }}>+412%</span>
                                 </div>
                                 <div style={{ height: '8px', background: '#e2e8f0', borderRadius: '10px', overflow: 'hidden' }}>
-                                    <div style={{ width: '85%', height: '100%', background: '#4facfe' }}></div>
+                                    <div style={{ width: '85%', height: '100%', background: 'var(--accent-pink)' }}></div>
                                 </div>
                                 <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px', marginTop: '25px' }}>
                                     <span style={{ fontWeight: 600 }}>Inbound Lead Conversion</span>
-                                    <span style={{ fontWeight: 600, color: '#7c3aed' }}>+285%</span>
+                                    <span style={{ fontWeight: 600, color: 'var(--accent-pink)' }}>+285%</span>
                                 </div>
                                 <div style={{ height: '8px', background: '#e2e8f0', borderRadius: '10px', overflow: 'hidden' }}>
-                                    <div style={{ width: '70%', height: '100%', background: '#7c3aed' }}></div>
+                                    <div style={{ width: '70%', height: '100%', background: 'var(--accent-pink)' }}></div>
                                 </div>
                             </div>
                         </div>
@@ -144,7 +144,7 @@ export function SocialMediaMarketingContent() {
                 <div className="social-container">
                     <div className="section-header">
                         <span className="section-label">PLATFORM EXPERTISE</span>
-                        <h2 className="section-title">Where your <span className="text-gradient">customers live.</span></h2>
+                        <h2 className="section-title">Where your <span className="title-accent">customers live.</span></h2>
                         <p className="section-subtitle">We don&apos;t do generic. Every platform receives a custom-tailored strategy designed for its unique algorithm and audience behavior.</p>
                     </div>
                     <div className="platform-grid">
@@ -173,7 +173,7 @@ export function SocialMediaMarketingContent() {
                 <div className="social-container">
                     <div className="section-header text-center">
                         <span className="section-label">SPECIALIZED NICHES</span>
-                        <h2 className="section-title">Industries we <span className="text-gradient">excel in.</span></h2>
+                        <h2 className="section-title">Industries we <span className="title-accent">excel in.</span></h2>
                     </div>
                     <div className="industry-grid">
                         {['SaaS & Tech', 'E-commerce', 'Luxury Beauty', 'Real Estate', 'Education', 'Health & Wellness', 'FinTech', 'Legal Services'].map((ind) => (
@@ -190,7 +190,7 @@ export function SocialMediaMarketingContent() {
                 <div className="social-container">
                     <div className="section-header text-center">
                         <span className="section-label" style={{ color: 'var(--accent-yellow)' }}>OUR OPERATING SYSTEM</span>
-                        <h2 className="section-title" style={{ color: 'white' }}>The 5-Phase <span style={{ color: 'var(--accent-yellow)' }}>Narrative Workflow</span></h2>
+                        <h2 className="section-title" style={{ color: 'var(--accent-yellow)' }}>The 5-Phase <span style={{ color: 'var(--accent-yellow)' }}>Narrative Workflow</span></h2>
                     </div>
                     <div className="workflow-steps">
                         {[
@@ -217,7 +217,7 @@ export function SocialMediaMarketingContent() {
                 <div className="social-container">
                     <div className="section-header text-center">
                         <span className="section-label">INVESTMENT</span>
-                        <h2 className="section-title">Transparent <span className="text-gradient">Growth Packages.</span></h2>
+                        <h2 className="section-title">Transparent <span className="title-accent">Growth Packages.</span></h2>
                     </div>
                     <div className="pricing-grid">
                         <div className="price-card">
@@ -225,10 +225,10 @@ export function SocialMediaMarketingContent() {
                             <div style={{ fontSize: '42px', fontWeight: 600, marginBottom: '20px' }}>$2,499<span style={{ fontSize: '16px', color: '#999' }}>/mo</span></div>
                             <p style={{ color: '#666', marginBottom: '30px' }}>Perfect for brands looking to professionalize their presence.</p>
                             <ul style={{ listStyle: 'none', textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '40px' }}>
-                                <li><Icon type="check" className="text-gradient" /> 15 Custom Posts / mo</li>
-                                <li><Icon type="check" className="text-gradient" /> 2 Platforms Managed</li>
-                                <li><Icon type="check" className="text-gradient" /> Basic Community MGMT</li>
-                                <li><Icon type="check" className="text-gradient" /> Monthly Analytics Report</li>
+                                <li><Icon type="check" className="title-accent" /> 15 Custom Posts / mo</li>
+                                <li><Icon type="check" className="title-accent" /> 2 Platforms Managed</li>
+                                <li><Icon type="check" className="title-accent" /> Basic Community MGMT</li>
+                                <li><Icon type="check" className="title-accent" /> Monthly Analytics Report</li>
                             </ul>
                             <Link href="/contact" className="btn-outline" style={{ display: 'block' }}>Get Started</Link>
                         </div>
@@ -239,13 +239,13 @@ export function SocialMediaMarketingContent() {
                             <div style={{ fontSize: '42px', fontWeight: 600, marginBottom: '20px' }}>$4,999<span style={{ fontSize: '16px', color: '#999' }}>/mo</span></div>
                             <p style={{ color: '#666', marginBottom: '30px' }}>Comprehensive management for scale-ready brands.</p>
                             <ul style={{ listStyle: 'none', textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '40px' }}>
-                                <li><Icon type="check" style={{ color: '#4facfe' }} /> 30 Custom Posts / mo</li>
-                                <li><Icon type="check" style={{ color: '#4facfe' }} /> 8 Short-Form Videos / mo</li>
-                                <li><Icon type="check" style={{ color: '#4facfe' }} /> 4 Platforms Managed</li>
-                                <li><Icon type="check" style={{ color: '#4facfe' }} /> Active Community Growth</li>
-                                <li><Icon type="check" style={{ color: '#4facfe' }} /> Weekly Strategy Syncs</li>
+                                <li><Icon type="check" style={{ color: 'var(--accent-pink)' }} /> 30 Custom Posts / mo</li>
+                                <li><Icon type="check" style={{ color: 'var(--accent-pink)' }} /> 8 Short-Form Videos / mo</li>
+                                <li><Icon type="check" style={{ color: 'var(--accent-pink)' }} /> 4 Platforms Managed</li>
+                                <li><Icon type="check" style={{ color: 'var(--accent-pink)' }} /> Active Community Growth</li>
+                                <li><Icon type="check" style={{ color: 'var(--accent-pink)' }} /> Weekly Strategy Syncs</li>
                             </ul>
-                            <Link href="/contact" className="btn-primary" style={{ display: 'block', background: 'linear-gradient(135deg, #4facfe, #00f2fe)', border: 'none' }}>Scale Now</Link>
+                            <Link href="/contact" className="btn-primary" style={{ display: 'block', background: 'linear-gradient(135deg, var(--accent-pink), var(--accent-yellow))', border: 'none' }}>Scale Now</Link>
                         </div>
 
                         <div className="price-card">
@@ -253,11 +253,11 @@ export function SocialMediaMarketingContent() {
                             <div style={{ fontSize: '42px', fontWeight: 600, marginBottom: '20px' }}>Custom</div>
                             <p style={{ color: '#666', marginBottom: '30px' }}>For global brands requiring 24/7 narrative dominance.</p>
                             <ul style={{ listStyle: 'none', textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '40px' }}>
-                                <li><Icon type="check" className="text-gradient" /> Unlimited Custom Content</li>
-                                <li><Icon type="check" className="text-gradient" /> Professional Video Production</li>
-                                <li><Icon type="check" className="text-gradient" /> Influencer Seed Campaigns</li>
-                                <li><Icon type="check" className="text-gradient" /> Crisis PR Management</li>
-                                <li><Icon type="check" className="text-gradient" /> Dedicated 24/7 Account Team</li>
+                                <li><Icon type="check" className="title-accent" /> Unlimited Custom Content</li>
+                                <li><Icon type="check" className="title-accent" /> Professional Video Production</li>
+                                <li><Icon type="check" className="title-accent" /> Influencer Seed Campaigns</li>
+                                <li><Icon type="check" className="title-accent" /> Crisis PR Management</li>
+                                <li><Icon type="check" className="title-accent" /> Dedicated 24/7 Account Team</li>
                             </ul>
                             <Link href="/contact" className="btn-outline" style={{ display: 'block' }}>Talk to Specialist</Link>
                         </div>
@@ -270,7 +270,7 @@ export function SocialMediaMarketingContent() {
                 <div className="social-container">
                     <div className="section-header">
                         <span className="section-label">THE CREATIVE REEL</span>
-                        <h2 className="section-title">Content that <span style={{ color: '#00f2fe' }}>demands attention.</span></h2>
+                        <h2 className="section-title">Content that <span style={{ color: 'var(--accent-yellow)' }}>demands attention.</span></h2>
                     </div>
                     <div className="feed-scroll">
                         {[
@@ -282,7 +282,7 @@ export function SocialMediaMarketingContent() {
                             <div key={i} className="feed-card">
                                 <div style={{ width: '100%', height: '100%', background: `linear-gradient(${45 * i}deg, #1a1a1a, #333)`, transition: 'all 0.4s' }}></div>
                                 <div className="feed-overlay">
-                                    <span style={{ fontSize: '12px', fontWeight: 600, textTransform: 'uppercase', color: '#4facfe' }}>{p.label}</span>
+                                    <span style={{ fontSize: '12px', fontWeight: 600, textTransform: 'uppercase', color: 'var(--accent-pink)' }}>{p.label}</span>
                                     <h4 style={{ fontSize: '22px', fontWeight: 600, marginTop: '10px' }}>{p.text}</h4>
                                 </div>
                             </div>
@@ -318,7 +318,7 @@ export function SocialMediaMarketingContent() {
             </section>
 
             {/* Final CTA Revamp */}
-            <section className="social-cta" style={{ background: '#052e26', padding: '120px 0', color: 'white' }}>
+            <section className="social-cta" style={{ background: '#052e26', padding: '120px 0', color: 'var(--accent-yellow)' }}>
                 <div className="social-container">
                     <div className="cta-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1.1fr', gap: '100px', alignItems: 'center' }}>
                         <div>
