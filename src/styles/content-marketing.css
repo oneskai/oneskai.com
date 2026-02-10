@@ -92,7 +92,7 @@
     padding: 16px 28px;
     background: var(--primary-green);
     color: var(--accent-yellow);
-    border-radius: 12px;
+    border-radius: 10px;
     font-size: 15px;
     font-weight: 600;
     text-decoration: none;
@@ -125,7 +125,7 @@
     background: transparent;
     color: var(--text-dark);
     border: 2px solid var(--border-color);
-    border-radius: 12px;
+    border-radius: 10px;
     font-size: 15px;
     font-weight: 600;
     text-decoration: none;
@@ -168,7 +168,7 @@
 
 .content-visual-card {
     background: white;
-    border-radius: 24px;
+    border-radius: 10px;
     padding: 20px;
     box-shadow: 0 40px 100px rgba(0, 0, 0, 0.1);
     position: relative;
@@ -184,7 +184,7 @@
 .preview-block {
     height: 60px;
     background: #f8fafc;
-    border-radius: 12px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     padding: 0 20px;
@@ -195,7 +195,7 @@
     width: 32px;
     height: 32px;
     background: #e2e8f0;
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
 .preview-line {
@@ -294,7 +294,7 @@
 .challenge-card {
     padding: 40px;
     background: #f8fafc;
-    border-radius: 24px;
+    border-radius: 10px;
     transition: all 0.3s ease;
     border: 1px solid transparent;
 }
@@ -311,7 +311,7 @@
     height: 64px;
     background: rgba(61, 13, 168, 0.1);
     color: var(--accent-pink);
-    border-radius: 16px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -368,7 +368,7 @@
 .pillar-content {
     background: rgba(255, 255, 255, 0.05);
     padding: 30px;
-    border-radius: 20px;
+    border-radius: 10px;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     height: 100%;
@@ -402,7 +402,7 @@
 .content-service-card {
     background: white;
     padding: 40px;
-    border-radius: 24px;
+    border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
     transition: all 0.3s ease;
 }
@@ -454,7 +454,7 @@
 .content-testimonial-card {
     padding: 40px;
     border: 1px solid #e2e8f0;
-    border-radius: 24px;
+    border-radius: 10px;
 }
 
 /* ===== FAQ ===== */
@@ -470,7 +470,7 @@
 
 .faq-item {
     background: white;
-    border-radius: 16px;
+    border-radius: 10px;
     margin-bottom: 16px;
     padding: 24px;
     cursor: pointer;
@@ -540,7 +540,7 @@
 
 .impact-visual {
     background: #f8fafc;
-    border-radius: 32px;
+    border-radius: 10px;
     padding: 40px;
     position: relative;
     box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.02);
@@ -567,7 +567,7 @@
 .chart-bar-fill {
     width: 100%;
     background: #e2e8f0;
-    border-radius: 8px 8px 0 0;
+    border-radius: 10px 8px 0 0;
     transition: all 1s ease;
     position: relative;
 }
@@ -614,7 +614,7 @@
     position: relative;
     padding: 40px;
     background: white;
-    border-radius: 24px;
+    border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
 }
 
@@ -639,7 +639,7 @@
     height: 56px;
     background: rgba(61, 13, 168, 0.1);
     color: var(--accent-pink);
-    border-radius: 12px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -700,14 +700,14 @@
 .tech-visual-display {
     position: relative;
     background: rgba(255, 255, 255, 0.05);
-    border-radius: 32px;
+    border-radius: 10px;
     padding: 40px;
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .tech-dashboard-mockup {
     background: #0a0a0a;
-    border-radius: 16px;
+    border-radius: 10px;
     padding: 20px;
     box-shadow: 0 40px 80px rgba(0, 0, 0, 0.4);
 }

@@ -9,7 +9,8 @@ const tools = [
     { name: 'Siteliner', desc: 'Duplicate content & broken link finder', icon: 'layers' },
     { name: 'Google Search Console', desc: 'Search performance & index monitoring', icon: 'globe' },
     { name: 'GA4', desc: 'Advanced user behavior analytics', icon: 'barChart' },
-    { name: 'PageSpeed Insights', desc: 'Performance & Core Web Vitals audit', icon: 'zap' }
+    { name: 'PageSpeed Insights', desc: 'Performance & Core Web Vitals audit', icon: 'zap' },
+    { name: 'AnswerThePublic', desc: 'Search intent & question discovery', icon: 'help' }
 ];
 
 export function TechStackSection() {

@@ -191,30 +191,6 @@ export function MethodologyContent() {
                 </div>
             </section>
 
-            {/* Results Bar */}
-            <section className="method-results">
-                <div className="method-container">
-                    <div className="method-trust-grid">
-                        <div className="method-result-item">
-                            <span className="method-result-num">21%</span>
-                            <span className="method-result-label">revenue growth YoY</span>
-                        </div>
-                        <div className="method-result-item">
-                            <span className="method-result-num">35%</span>
-                            <span className="method-result-label">reduction in waste</span>
-                        </div>
-                        <div className="method-result-item">
-                            <span className="method-result-num">3x</span>
-                            <span className="method-result-label">faster optimization</span>
-                        </div>
-                        <div className="method-result-item">
-                            <span className="method-result-num">90%</span>
-                            <span className="method-result-label">client retention</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
             {/* Growth Flywheel Section */}
             <section className="method-flywheel">
                 <div className="flywheel-svg">
@@ -326,13 +302,23 @@ export function MethodologyContent() {
                         </p>
                     </div>
                     <div className="stack-marquee">
-                        <div className="stack-item"><span>01</span> Google Analytics 4</div>
-                        <div className="stack-item"><span>02</span> Meta Business Suite</div>
-                        <div className="stack-item"><span>03</span> SEMRush</div>
-                        <div className="stack-item"><span>04</span> HubSpot CRM</div>
-                        <div className="stack-item"><span>05</span> Segment</div>
-                        <div className="stack-item"><span>06</span> Klaviyo</div>
-                        <div className="stack-item"><span>07</span> Hotjar</div>
+                        {[
+                            'Google Analytics 4', 'Meta Business Suite', 'SEMRush',
+                            'HubSpot CRM', 'Segment', 'Klaviyo', 'Hotjar'
+                        ].map((item, idx) => (
+                            <div key={`stack-${idx}`} className="stack-item">
+                                <span>{String(idx + 1).padStart(2, '0')}</span> {item}
+                            </div>
+                        ))}
+                        {/* Duplicate for seamless loop */}
+                        {[
+                            'Google Analytics 4', 'Meta Business Suite', 'SEMRush',
+                            'HubSpot CRM', 'Segment', 'Klaviyo', 'Hotjar'
+                        ].map((item, idx) => (
+                            <div key={`stack-dup-${idx}`} className="stack-item">
+                                <span>{String(idx + 1).padStart(2, '0')}</span> {item}
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>
@@ -340,7 +326,7 @@ export function MethodologyContent() {
             {/* Process Section */}
             <section className="method-process">
                 <div className="method-container">
-                    <div className="method-problems-header" style={{ textAlign: 'left', maxWidth: '800px' }}>
+                    <div className="method-problems-header" style={{ textAlign: 'left', maxWidth: '800px', marginBottom: '40px' }}>
                         <span className="method-label">THE FRAMEWORK</span>
                         <h2 className="method-section-title" style={{ color: '#011812' }}>Our <span>6-Phase Process</span></h2>
                         <p className="method-section-subtitle">
@@ -418,19 +404,6 @@ export function MethodologyContent() {
                 </div>
             </section>
 
-            {/* Final CTA */}
-            <section className="method-final-cta">
-                <div className="method-container">
-                    <h2>Ready to be <span>Undeniable?</span></h2>
-                    <p>
-                        Partner with us to apply the Growth Framework to your business.
-                        Stop guessing and start growing with confidence.
-                    </p>
-                    <Link href="/contact" className="method-hero-btn">
-                        Let&apos;s Talk Strategy <Icon type="arrowRight" />
-                    </Link>
-                </div>
-            </section>
         </div>
     );
 }

@@ -82,7 +82,7 @@
     transform: translate(-50%, -50%);
     width: 320px;
     background: white;
-    border-radius: 24px;
+    border-radius: 10px;
     padding: 24px;
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
     z-index: 2;
@@ -93,7 +93,7 @@
     width: 280px;
     background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 20px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
 }
@@ -138,7 +138,7 @@
 
 .feature-box {
     padding: 50px 40px;
-    border-radius: 32px;
+    border-radius: 10px;
     background: #f8fafc;
     transition: all 0.3s ease;
 }
@@ -204,7 +204,7 @@
     text-align: center;
     padding: 30px;
     background: rgba(255, 255, 255, 0.05);
-    border-radius: 20px;
+    border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -230,7 +230,7 @@
 
 .plan-card {
     padding: 40px 30px;
-    border-radius: 24px;
+    border-radius: 10px;
     background: white;
     border: 1px solid #eee;
     text-align: center;

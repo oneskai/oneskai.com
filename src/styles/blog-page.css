@@ -113,7 +113,7 @@
     padding: 16px 24px 16px 56px;
     background: #ffffff;
     border: 1.5px solid #e2e8f0;
-    border-radius: 14px;
+    border-radius: 10px;
     font-size: 16px;
     color: var(--text-dark);
     outline: none;
@@ -144,7 +144,7 @@
 
 .blog-category-btn {
     padding: 12px 24px;
-    border-radius: 14px;
+    border-radius: 10px;
     background: #ffffff;
     border: 1.5px solid #e2e8f0;
     font-size: 14px;
@@ -186,7 +186,7 @@
     grid-template-columns: 1.2fr 1fr;
     gap: 0;
     background: white;
-    border-radius: 14px;
+    border-radius: 10px;
     overflow: hidden;
     border: 1px solid var(--blog-border);
     box-shadow: 0 30px 90px rgba(0, 0, 0, 0.06);
@@ -206,7 +206,7 @@
     background: var(--accent-pink);
     color: white;
     padding: 10px 20px;
-    border-radius: 14px;
+    border-radius: 10px;
     font-size: 13px;
     font-weight: 700;
     letter-spacing: 1px;
@@ -279,7 +279,7 @@
 .blog-author-avatar {
     width: 56px;
     height: 56px;
-    border-radius: 14px;
+    border-radius: 10px;
     background: var(--section-light-bg);
     border: 1px solid var(--blog-border);
     display: flex;
@@ -352,7 +352,7 @@
 
 .blog-card {
     background: white;
-    border-radius: 14px;
+    border-radius: 10px;
     overflow: hidden;
     border: 1px solid var(--blog-border);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -379,7 +379,7 @@
     backdrop-filter: blur(10px);
     color: var(--text-dark);
     padding: 8px 16px;
-    border-radius: 14px;
+    border-radius: 10px;
     font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
@@ -484,7 +484,7 @@
     width: 52px;
     height: 52px;
     border: 1.5px solid #e2e8f0;
-    border-radius: 14px;
+    border-radius: 10px;
     background: white;
     font-weight: 700;
     color: var(--text-gray);
@@ -531,7 +531,7 @@
     background: rgba(255, 255, 255, 0.03);
     backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 14px;
+    border-radius: 10px;
     position: relative;
     z-index: 10;
 }
@@ -567,7 +567,7 @@
     padding: 20px 28px;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 14px;
+    border-radius: 10px;
     font-size: 16px;
     color: white;
     outline: none;
@@ -584,7 +584,7 @@
     color: white;
     padding: 20px 40px;
     border: none;
-    border-radius: 14px;
+    border-radius: 10px;
     font-weight: 700;
     font-size: 16px;
     cursor: pointer;

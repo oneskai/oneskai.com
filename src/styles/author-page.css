@@ -43,14 +43,14 @@
     position: relative;
     width: 100%;
     aspect-ratio: 1 / 1;
-    border-radius: 12px;
+    border-radius: 10px;
     overflow: visible;
     border: 1px solid #e5e7eb;
 }
 
 .author-main-img {
     object-fit: cover;
-    border-radius: 12px;
+    border-radius: 10px;
 }
 
 .author-pills-overlay {
@@ -103,7 +103,7 @@
     height: 44px;
     background: #7c3aed;
     color: white;
-    border-radius: 8px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -132,7 +132,7 @@
 .expert-meter-box {
     background: #f8fafc;
     padding: 40px;
-    border-radius: 20px;
+    border-radius: 10px;
     border: 1px solid #f1f5f9;
 }
 

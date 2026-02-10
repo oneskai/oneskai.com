@@ -240,7 +240,7 @@
 .share-icon-btn {
     width: 44px;
     height: 44px;
-    border-radius: 12px;
+    border-radius: 10px;
     background: #f8fafc;
     border: 1px solid #e2e8f0;
     color: #64748b;
@@ -311,7 +311,7 @@
     padding: 8px 16px;
     background: #f1f5f9;
     color: #64748b;
-    border-radius: 8px;
+    border-radius: 10px;
     font-size: 13px;
     font-weight: 600;
     text-decoration: none;

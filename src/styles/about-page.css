@@ -242,7 +242,7 @@
 .about-value-icon {
     width: 60px;
     height: 60px;
-    border-radius: 16px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;

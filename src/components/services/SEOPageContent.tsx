@@ -1,94 +1,84 @@
 'use client';
 
+import { useState } from 'react';
 import Link from 'next/link';
 import { Icon } from '@/components/ui/Icon';
 import '@/styles/seo-page.css';
 import { PartnerLogos } from '@/components/partners/PartnerLogos';
 import { BlogBriefSection } from '@/components/blog/BlogBriefSection';
 import { TechStackSection } from '@/components/shared/TechStackSection';
-
 import { SEOIndustrySection } from './SEOIndustrySection';
 
 export function SEOPageContent() {
+    const [openFaq, setOpenFaq] = useState<number | null>(null);
+
     return (
         <div className="seo-page">
-            {/* Hero Section */}
+            {/* ===== HERO (DARK) ===== */}
             <section className="seo-hero">
+                <div className="seo-hero-bg-effects">
+                    <div className="seo-hero-orb seo-hero-orb-1" />
+                    <div className="seo-hero-orb seo-hero-orb-2" />
+                    <div className="seo-hero-grid-overlay" />
+                </div>
                 <div className="seo-container">
-                    <div className="seo-hero-grid">
-                        <div className="seo-hero-content">
-                            <span className="seo-badge">
-                                <span className="badge-dot"></span>
-                                #1 Rated SEO Agency
-                            </span>
-                            <h1 className="seo-hero-title">
-                                Dominate Search.
-                                <span className="title-accent"> Drive Growth.</span>
-                            </h1>
-                            <p className="seo-hero-subtitle">
-                                Enterprise-grade SEO strategies that deliver measurable results. We combine
-                                technical excellence, content authority, and AI-powered insights to put your
-                                brand where your customers are searching.
-                            </p>
-                            <div className="seo-hero-actions">
-                                <Link href="/contact" className="btn-primary">
-                                    Get Your Free SEO Audit
-                                    <Icon type="arrowRight" />
-                                </Link>
-                                <Link href="#case-studies" className="btn-outline">
-                                    View Case Studies
-                                </Link>
-                            </div>
-                            <div className="seo-hero-stats">
-                                <div className="hero-stat">
-                                    <span className="stat-number">500+</span>
-                                    <span className="stat-label">Clients Ranked #1</span>
-                                </div>
-                                <div className="hero-stat">
-                                    <span className="stat-number">8.2M</span>
-                                    <span className="stat-label">Keywords Tracked</span>
-                                </div>
-                                <div className="hero-stat">
-                                    <span className="stat-number">340%</span>
-                                    <span className="stat-label">Avg. Organic Growth</span>
-                                </div>
-                            </div>
+                    <div className="seo-hero-content text-center">
+                        <span className="seo-badge">
+                            <span className="badge-dot"></span>
+                            TRANSFORMING SEARCH TO REVENUE
+                        </span>
+                        <h1 className="seo-hero-title">
+                            Don&apos;t Just Rank. <span>Dominate the Category.</span>
+                        </h1>
+                        <p className="seo-hero-subtitle">
+                            We blend advanced technical SEO with data-driven content strategy and
+                            AI search optimization to turn your website into a predictable growth engine.
+                        </p>
+
+                        <div className="seo-hero-actions justify-center">
+                            <Link href="/contact" className="btn-primary-pill">
+                                Get Your Free Growth Audit <Icon type="arrowRight" />
+                            </Link>
+                            <Link href="#strategy" className="btn-outline-pill">
+                                Explore Methodology
+                            </Link>
                         </div>
-                        <div className="seo-hero-visual">
-                            <div className="hero-visual-card">
-                                <div className="search-preview">
-                                    <div className="search-bar">
-                                        <span className="search-icon">🔍</span>
-                                        <span className="search-text">best marketing agency</span>
+
+                        <div className="seo-hero-visual-wrapper">
+                            <div className="seo-hero-dashboard">
+                                <div className="dashboard-header">
+                                    <div className="search-bar-mock">
+                                        <Icon type="search" />
+                                        <span>Industry Leading Keywords</span>
                                     </div>
-                                    <div className="search-result featured">
-                                        <div className="result-favicon">O</div>
-                                        <div className="result-content">
-                                            <span className="result-url">oneskai.com</span>
-                                            <span className="result-title">Oneskai - #1 Marketing Agency for Growth</span>
-                                            <span className="result-desc">Transform your digital presence with data-driven SEO...</span>
-                                        </div>
-                                        <span className="result-badge">#1</span>
-                                    </div>
-                                    <div className="search-result">
-                                        <div className="result-favicon">C</div>
-                                        <div className="result-content">
-                                            <span className="result-url">competitor.com</span>
-                                            <span className="result-title">Another Marketing Agency</span>
-                                        </div>
+                                    <div className="search-status">
+                                        <span className="status-online">Live</span>
+                                        <span className="status-dot"></span>
                                     </div>
                                 </div>
-                                <div className="growth-chart">
-                                    <div className="chart-label">Organic Traffic Growth</div>
-                                    <div className="chart-bars">
-                                        <div className="chart-bar" style={{ height: '30%' }}></div>
-                                        <div className="chart-bar" style={{ height: '45%' }}></div>
-                                        <div className="chart-bar" style={{ height: '55%' }}></div>
-                                        <div className="chart-bar" style={{ height: '70%' }}></div>
-                                        <div className="chart-bar" style={{ height: '85%' }}></div>
-                                        <div className="chart-bar highlight" style={{ height: '100%' }}></div>
+                                <div className="dashboard-body">
+                                    <div className="dashboard-chart-main">
+                                        <div className="chart-bars-tech">
+                                            {[30, 45, 35, 60, 55, 85, 95].map((h, i) => (
+                                                <div
+                                                    key={i}
+                                                    className={`chart-bar-tech ${i === 6 ? 'highlight' : ''}`}
+                                                    style={{ '--height': `${h}%` } as React.CSSProperties}
+                                                />
+                                            ))}
+                                        </div>
+                                        <div className="chart-value">+412% <span>Growth</span></div>
                                     </div>
-                                    <span className="chart-increase">+340%</span>
+                                    <div className="dashboard-side-stats">
+                                        <div className="side-stat-item">
+                                            <span className="side-stat-label">Authority Score</span>
+                                            <span className="side-stat-value">84</span>
+                                        </div>
+                                        <div className="side-stat-item">
+                                            <span className="side-stat-label">AI Visibility</span>
+                                            <span className="side-stat-value">Top 1%</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -96,603 +86,505 @@ export function SEOPageContent() {
                 </div>
             </section>
 
-            {/* Trust Bar / Clients We Served */}
-            <PartnerLogos />
+            {/* ===== TRUSTED BY (LIGHT) ===== */}
+            <div className="seo-client-bar">
+                <div className="seo-container">
+                    <p className="client-bar-label">THE AGENCY OF CHOICE FOR AMBITIOUS BRANDS</p>
+                    <PartnerLogos />
+                </div>
+            </div>
 
-            {/* Common SEO Challenges - Pain Points Section */}
-            <section className="seo-challenges">
+            {/* ===== FLYWHEEL (LIGHT) ===== */}
+            <section className="seo-flywheel">
                 <div className="seo-container">
                     <div className="section-header text-center">
-                        <span className="section-label">THE PROBLEM</span>
-                        <h2 className="section-title">
-                            Common <span className="title-accent">SEO Challenges</span> Holding You Back
-                        </h2>
+                        <span className="section-label">THE ENGINE</span>
+                        <h2 className="section-title">The SEO <span>Growth Flywheel</span></h2>
                         <p className="section-subtitle">
-                            If any of these sound familiar, you&apos;re not alone. Most businesses struggle with the same issues—until they partner with the right SEO team.
+                            Unlike paid media, SEO is a compounding asset. We build the engine that
+                            lowers your CAC while increasing your market dominance.
                         </p>
                     </div>
-                    <div className="challenges-grid">
-                        <div className="challenge-card">
-                            <div className="challenge-icon">
-                                <Icon type="target" />
+
+                    <div className="flywheel-visual">
+                        <div className="flywheel-circle">
+                            <div className="flywheel-node active" style={{ '--angle': '0deg' } as React.CSSProperties}>
+                                <div className="node-icon"><Icon type="zap" /></div>
+                                <div className="node-content">
+                                    <h4>Technical Audit</h4>
+                                    <p>Flawless indexability</p>
+                                </div>
                             </div>
-                            <h3>Invisible in Search Results</h3>
-                            <p>Your competitors are ranking on page one while your website is buried where customers never look.</p>
+                            <div className="flywheel-node" style={{ '--angle': '72deg' } as React.CSSProperties}>
+                                <div className="node-icon"><Icon type="search" /></div>
+                                <div className="node-content">
+                                    <h4>Intelligence</h4>
+                                    <p>High-intent targeting</p>
+                                </div>
+                            </div>
+                            <div className="flywheel-node" style={{ '--angle': '144deg' } as React.CSSProperties}>
+                                <div className="node-icon"><Icon type="pen" /></div>
+                                <div className="node-content">
+                                    <h4>On-Page Authority</h4>
+                                    <p>Content excellence</p>
+                                </div>
+                            </div>
+                            <div className="flywheel-node" style={{ '--angle': '216deg' } as React.CSSProperties}>
+                                <div className="node-icon"><Icon type="link" /></div>
+                                <div className="node-content">
+                                    <h4>Link Supremacy</h4>
+                                    <p>Backlink profile build</p>
+                                </div>
+                            </div>
+                            <div className="flywheel-node" style={{ '--angle': '288deg' } as React.CSSProperties}>
+                                <div className="node-icon"><Icon type="activity" /></div>
+                                <div className="node-content">
+                                    <h4>Conversion</h4>
+                                    <p>Traffic to revenue</p>
+                                </div>
+                            </div>
                         </div>
-                        <div className="challenge-card">
-                            <div className="challenge-icon warning">
-                                <Icon type="activity" />
-                            </div>
-                            <h3>Traffic Without Conversions</h3>
-                            <p>You&apos;re getting visitors but they&apos;re not turning into leads or customers. Wrong traffic = wasted opportunity.</p>
-                        </div>
-                        <div className="challenge-card">
-                            <div className="challenge-icon danger">
-                                <Icon type="barChart" />
-                            </div>
-                            <h3>Declining Organic Visibility</h3>
-                            <p>Algorithm updates have crushed your rankings. What worked before isn&apos;t working anymore.</p>
-                        </div>
-                        <div className="challenge-card">
-                            <div className="challenge-icon">
-                                <Icon type="zap" />
-                            </div>
-                            <h3>Technical Issues Hurting Performance</h3>
-                            <p>Slow load times, poor mobile experience, and crawl errors are silently killing your rankings.</p>
-                        </div>
-                        <div className="challenge-card">
-                            <div className="challenge-icon warning">
-                                <Icon type="cpu" />
-                            </div>
-                            <h3>No Clear SEO Strategy</h3>
-                            <p>Random optimizations without a cohesive plan. You&apos;re spending money but not seeing ROI.</p>
-                        </div>
-                        <div className="challenge-card">
-                            <div className="challenge-icon danger">
-                                <Icon type="globe" />
-                            </div>
-                            <h3>Missing from AI Search</h3>
-                            <p>ChatGPT, Perplexity, and AI Overviews are changing search. If you&apos;re not there, you&apos;re invisible to the next generation.</p>
+                        <div className="flywheel-center">
+                            <div className="center-logo">O</div>
+                            <div className="center-label">Compounding<br />Growth</div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Why SEO Is Essential Section */}
-            <section className="seo-essential">
+            {/* ===== CHALLENGES (LIGHT) ===== */}
+            <section className="seo-challenges">
+                <div className="seo-container">
+                    <div className="challenges-grid-v2">
+                        <div className="challenges-content">
+                            <span className="section-label">THE PROBLEM</span>
+                            <h2 className="section-title">Common Challenges <span>Holding You Back</span></h2>
+                            <p className="section-subtitle">
+                                Most businesses think they have an SEO problem, but they actually have
+                                a strategy and technical infrastructure problem.
+                            </p>
+                            <div className="challenge-list-tech">
+                                <div className="challenge-tech-item">
+                                    <div className="tech-item-icon warning"><Icon type="activity" /></div>
+                                    <div className="tech-item-text">
+                                        <h4>Stagnant Organic Visibility</h4>
+                                        <p>Trapped on page two while competitors dominate the primary market share.</p>
+                                    </div>
+                                </div>
+                                <div className="challenge-tech-item">
+                                    <div className="tech-item-icon danger"><Icon type="zap" /></div>
+                                    <div className="tech-item-text">
+                                        <h4>Algorithm Volatility</h4>
+                                        <p>Losing traffic after every Google update due to outdated tactics.</p>
+                                    </div>
+                                </div>
+                                <div className="challenge-tech-item">
+                                    <div className="tech-item-icon info"><Icon type="cpu" /></div>
+                                    <div className="tech-item-text">
+                                        <h4>AI Search Gap</h4>
+                                        <p>Your brand is invisible to ChatGPT, Perplexity, and AI Overviews.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="seo-diagnostic-card">
+                            <div className="diagnostic-header">
+                                <span className="diagnostic-title">Typical SEO Health Audit</span>
+                                <span className="diagnostic-status">Needs Work</span>
+                            </div>
+                            <div className="diagnostic-score-ring">
+                                <svg viewBox="0 0 120 120" className="diagnostic-svg">
+                                    <circle cx="60" cy="60" r="52" fill="none" stroke="#f0f0f0" strokeWidth="8" />
+                                    <circle cx="60" cy="60" r="52" fill="none" stroke="var(--seo-primary)" strokeWidth="8" strokeDasharray="327" strokeDashoffset="190" strokeLinecap="round" transform="rotate(-90 60 60)" />
+                                </svg>
+                                <div className="diagnostic-score-text">
+                                    <span className="diagnostic-score-num">42</span>
+                                    <span className="diagnostic-score-label">/100</span>
+                                </div>
+                            </div>
+                            <div className="diagnostic-metrics">
+                                {[
+                                    { label: 'Core Web Vitals', value: 'Failed', status: 'critical' },
+                                    { label: 'Mobile Usability', value: '68%', status: 'warning' },
+                                    { label: 'Crawl Efficiency', value: '31%', status: 'critical' },
+                                    { label: 'Schema Coverage', value: '12%', status: 'critical' },
+                                    { label: 'Backlink Authority', value: 'DA 24', status: 'warning' },
+                                    { label: 'AI Visibility', value: 'None', status: 'critical' },
+                                ].map((m, i) => (
+                                    <div key={i} className="diagnostic-metric-row">
+                                        <span className={`diagnostic-dot ${m.status}`} />
+                                        <span className="diagnostic-metric-label">{m.label}</span>
+                                        <span className={`diagnostic-metric-value ${m.status}`}>{m.value}</span>
+                                    </div>
+                                ))}
+                            </div>
+                            <div className="diagnostic-footer">
+                                This is what we typically find. Let us fix yours.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* ===== WHY SEO (DARK) ===== */}
+            <section className="seo-essential darker">
                 <div className="seo-container">
                     <div className="essential-grid">
                         <div className="essential-content">
                             <span className="section-label">THE OPPORTUNITY</span>
                             <h2 className="section-title">
-                                Why SEO Is Essential<br />for <span className="title-accent">Business Growth</span>
+                                Why SEO Is Essential<br />for <span>Business Growth</span>
                             </h2>
                             <p className="section-subtitle">
-                                SEO isn&apos;t just about rankings—it&apos;s about building a predictable, scalable engine for growth that compounds over time.
+                                SEO isn&apos;t just about rankings—it&apos;s about building a predictable,
+                                scalable engine for growth that compounds over time.
                             </p>
-                            <div className="essential-stats">
-                                <div className="essential-stat">
-                                    <span className="essential-number">68%</span>
-                                    <span className="essential-label">of online experiences begin with a search engine</span>
+                            <div className="essential-stats-modern">
+                                <div className="essential-stat-pill">
+                                    <strong>68%</strong>
+                                    <span>of online journeys start with search</span>
                                 </div>
-                                <div className="essential-stat">
-                                    <span className="essential-number">53%</span>
-                                    <span className="essential-label">of website traffic comes from organic search</span>
+                                <div className="essential-stat-pill">
+                                    <strong>14.6%</strong>
+                                    <span>SEO Close Rate</span>
                                 </div>
-                                <div className="essential-stat">
-                                    <span className="essential-number">14.6%</span>
-                                    <span className="essential-label">close rate from SEO leads vs. 1.7% for outbound</span>
+                                <div className="essential-stat-pill">
+                                    <strong>340%</strong>
+                                    <span>Avg Growth</span>
                                 </div>
                             </div>
                         </div>
-                        <div className="essential-benefits">
-                            <div className="essential-benefit">
-                                <div className="benefit-check">
-                                    <Icon type="check" />
+                        <div className="essential-benefits-grid">
+                            {[
+                                { title: 'Sustainable Traffic', text: 'Build a moat that competitors can\'t simply buy through ads.', icon: 'activity' },
+                                { title: 'Trust Authority', text: 'High rankings are the ultimate digital signal of industry leadership.', icon: 'award' },
+                                { title: 'Lower CAC', text: 'The only channel where costs go down as performance goes up.', icon: 'barChart' },
+                                { title: 'AI Visibility', text: 'Capture traffic from Gen-AI tools and Answer Engines.', icon: 'cpu' }
+                            ].map((b, i) => (
+                                <div key={i} className="benefit-card-glass">
+                                    <div className="benefit-icon-mini"><Icon type={b.icon} /></div>
+                                    <h4>{b.title}</h4>
+                                    <p>{b.text}</p>
                                 </div>
-                                <div className="benefit-text">
-                                    <h4>Sustainable Traffic</h4>
-                                    <p>Unlike paid ads, organic traffic doesn&apos;t stop when you stop paying. Build lasting visibility.</p>
-                                </div>
-                            </div>
-                            <div className="essential-benefit">
-                                <div className="benefit-check">
-                                    <Icon type="check" />
-                                </div>
-                                <div className="benefit-text">
-                                    <h4>Higher Trust & Credibility</h4>
-                                    <p>75% of users never scroll past page one. Ranking high signals authority and trust.</p>
-                                </div>
-                            </div>
-                            <div className="essential-benefit">
-                                <div className="benefit-check">
-                                    <Icon type="check" />
-                                </div>
-                                <div className="benefit-text">
-                                    <h4>Lower Customer Acquisition Cost</h4>
-                                    <p>Organic search often yields the highest ROI of any marketing channel over the long term.</p>
-                                </div>
-                            </div>
-                            <div className="essential-benefit">
-                                <div className="benefit-check">
-                                    <Icon type="check" />
-                                </div>
-                                <div className="benefit-text">
-                                    <h4>Competitive Edge</h4>
-                                    <p>Dominating search results means capturing market share before your competitors do.</p>
-                                </div>
-                            </div>
+                            ))}
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Tech Stack Section */}
+            {/* ===== TECH STACK (LIGHT) ===== */}
             <TechStackSection />
 
-            {/* Services Grid */}
-            <section className="seo-services">
+            {/* ===== CAPABILITIES (LIGHT) ===== */}
+            <section className="seo-services-grid">
+                <div className="seo-container">
+                    <div className="section-header text-center">
+                        <span className="section-label">OUR CAPABILITIES</span>
+                        <h2 className="section-title">Comprehensive <span>SEO Excellence</span></h2>
+                    </div>
+                    <div className="capabilities-grid">
+                        <div className="cap-card main">
+                            <span className="cap-tag">FOUNDATIONAL</span>
+                            <h3>Technical Audit & Strategy</h3>
+                            <p>We analyze 250+ individual signals from Core Web Vitals to site architecture. Our technical audits don&apos;t just find problems; they build the roadmap to dominance.</p>
+                            <ul className="cap-list">
+                                <li><Icon type="check" /> Site Architecture Overhaul</li>
+                                <li><Icon type="check" /> Advanced Schema Implementation</li>
+                                <li><Icon type="check" /> International SEO Infrastructure</li>
+                                <li><Icon type="check" /> Core Web Vitals Optimization</li>
+                            </ul>
+                            <a href="/contact" className="cap-main-cta">
+                                <span>Get Your Free Technical Audit</span>
+                                <Icon type="arrowRight" />
+                            </a>
+                        </div>
+                        <div className="cap-card">
+                            <div className="cap-icon"><Icon type="pen" /></div>
+                            <h3>Authority Content</h3>
+                            <p>Subject matter expert content that earns trust and rankings.</p>
+                        </div>
+                        <div className="cap-card">
+                            <div className="cap-icon"><Icon type="link" /></div>
+                            <h3>Strategic Backlinks</h3>
+                            <p>High-authority links that build enterprise domain strength.</p>
+                        </div>
+                        <div className="cap-card highlight-border">
+                            <span className="cap-tag-premium">NEXT GEN</span>
+                            <div className="cap-icon purple"><Icon type="cpu" /></div>
+                            <h3>GEO & AEO</h3>
+                            <p>Optimization for Generative AI search results (ChatGPT, Perplexity).</p>
+                        </div>
+                        <div className="cap-card">
+                            <div className="cap-icon"><Icon type="globe" /></div>
+                            <h3>Local SEO & Maps</h3>
+                            <p>Dominate Google Maps and local pack results in your target markets.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* ===== SEO ROI INFOGRAPHIC (LIGHT) ===== */}
+            <section className="seo-roi-section">
+                <div className="seo-container">
+                    <div className="section-header text-center">
+                        <span className="section-label">SEO VS OTHER CHANNELS</span>
+                        <h2 className="section-title">Why SEO Delivers the <span>Best ROI</span></h2>
+                        <p className="section-subtitle">
+                            SEO compounds over time while paid channels reset to zero when you stop spending.
+                            Here&apos;s how the numbers break down.
+                        </p>
+                    </div>
+                    <div className="seo-roi-grid">
+                        <div className="seo-roi-chart-card">
+                            <div className="seo-roi-chart-header">
+                                <span className="seo-roi-chart-title">Traffic Growth Over 12 Months</span>
+                                <span className="seo-roi-badge">Organic vs Paid</span>
+                            </div>
+                            <div className="seo-roi-bars">
+                                {[
+                                    { label: 'Month 3', seo: '18%', paid: '45%', seoW: '18%', paidW: '45%', seoColor: '#052e26', paidColor: '#e5e7eb' },
+                                    { label: 'Month 6', seo: '42%', paid: '42%', seoW: '42%', paidW: '42%', seoColor: '#052e26', paidColor: '#e5e7eb' },
+                                    { label: 'Month 9', seo: '78%', paid: '38%', seoW: '78%', paidW: '38%', seoColor: '#052e26', paidColor: '#e5e7eb' },
+                                    { label: 'Month 12', seo: '125%', paid: '35%', seoW: '95%', paidW: '35%', seoColor: '#052e26', paidColor: '#e5e7eb' },
+                                ].map((row, i) => (
+                                    <div key={i}>
+                                        <div className="seo-roi-bar-label" style={{ marginBottom: '8px' }}>{row.label}</div>
+                                        <div style={{ display: 'flex', gap: '8px' }}>
+                                            <div className="seo-roi-bar-track" style={{ flex: 1 }}>
+                                                <div className="seo-roi-bar-fill" style={{ width: row.seoW, background: row.seoColor }}>{row.seo}</div>
+                                            </div>
+                                            <div className="seo-roi-bar-track" style={{ flex: 1 }}>
+                                                <div className="seo-roi-bar-fill" style={{ width: row.paidW, background: '#d1d5db', color: '#6b7280' }}>{row.paid}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                            <div style={{ display: 'flex', gap: '24px', marginTop: '20px' }}>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '13px', color: '#6b7280' }}>
+                                    <div style={{ width: '10px', height: '10px', borderRadius: '3px', background: '#052e26' }} />SEO (compounds)
+                                </div>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '13px', color: '#6b7280' }}>
+                                    <div style={{ width: '10px', height: '10px', borderRadius: '3px', background: '#d1d5db' }} />Paid (plateaus)
+                                </div>
+                            </div>
+                        </div>
+                        <div className="seo-roi-comparison">
+                            <div className="seo-roi-comparison-title">Channel ROI Comparison</div>
+                            <div className="seo-roi-comparison-items">
+                                {[
+                                    { channel: 'Organic SEO', desc: 'Compounding returns', value: '5.3x', valueColor: '#052e26', icon: 'search', iconBg: 'rgba(5, 46, 38, 0.06)' },
+                                    { channel: 'Content Marketing', desc: 'Long-term authority', value: '3.8x', valueColor: 'var(--accent-purple)', icon: 'bookOpen', iconBg: 'rgba(61, 13, 168, 0.06)' },
+                                    { channel: 'Email Marketing', desc: 'Nurture existing leads', value: '3.2x', valueColor: 'var(--seo-primary)', icon: 'mail', iconBg: 'rgba(255, 45, 117, 0.06)' },
+                                    { channel: 'Social Ads', desc: 'Pay-to-play model', value: '1.8x', valueColor: '#9ca3af', icon: 'megaphone', iconBg: 'rgba(0,0,0,0.04)' },
+                                    { channel: 'Display Ads', desc: 'Awareness only', value: '0.9x', valueColor: '#d1d5db', icon: 'monitor', iconBg: 'rgba(0,0,0,0.03)' },
+                                ].map((item, i) => (
+                                    <div key={i} className="seo-roi-comparison-item">
+                                        <div className="seo-roi-channel-icon" style={{ background: item.iconBg, color: item.valueColor }}>
+                                            <Icon type={item.icon} />
+                                        </div>
+                                        <div className="seo-roi-channel-info">
+                                            <div className="seo-roi-channel-name">{item.channel}</div>
+                                            <div className="seo-roi-channel-desc">{item.desc}</div>
+                                        </div>
+                                        <div className="seo-roi-channel-value" style={{ color: item.valueColor }}>{item.value}</div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* ===== METHODOLOGY (DARK) ===== */}
+            <section id="strategy" className="seo-methodology-v2">
                 <div className="seo-container">
                     <div className="section-header">
-                        <span className="section-label">OUR SEO SERVICES</span>
-                        <h2 className="section-title">
-                            How We Position Your Brand for <span className="title-accent">Maximum Visibility</span>
-                        </h2>
+                        <span className="section-label">METHODOLOGY</span>
+                        <h2 className="section-title">The <span>6-Phase Growth Roadmap</span></h2>
                     </div>
-                    <div className="services-grid">
-                        <div className="service-card large">
-                            <div className="service-number">01</div>
-                            <h3>Technical SEO Audit & Optimization</h3>
-                            <p>Comprehensive site audits covering site architecture, crawlability,
-                                indexation, Core Web Vitals, mobile optimization, and structured data
-                                implementation.</p>
-                            <ul className="service-features">
-                                <li><Icon type="check" /> Site speed optimization</li>
-                                <li><Icon type="check" /> Schema markup implementation</li>
-                                <li><Icon type="check" /> Mobile-first indexing</li>
-                                <li><Icon type="check" /> Crawl budget optimization</li>
-                            </ul>
-                        </div>
-                        <div className="service-card">
-                            <div className="service-number">02</div>
-                            <h3>On-Page SEO</h3>
-                            <p>Strategic optimization of titles, meta descriptions, headers, and content
-                                to maximize relevance signals.</p>
-                            <ul className="service-features">
-                                <li><Icon type="check" /> Keyword mapping</li>
-                                <li><Icon type="check" /> Content optimization</li>
-                                <li><Icon type="check" /> Internal linking strategy</li>
-                            </ul>
-                        </div>
-                        <div className="service-card">
-                            <div className="service-number">03</div>
-                            <h3>Link Building</h3>
-                            <p>White-hat link acquisition from authoritative domains in your industry
-                                to build domain authority.</p>
-                            <ul className="service-features">
-                                <li><Icon type="check" /> Digital PR campaigns</li>
-                                <li><Icon type="check" /> Guest posting</li>
-                                <li><Icon type="check" /> Broken link building</li>
-                            </ul>
-                        </div>
-                        <div className="service-card">
-                            <div className="service-number">04</div>
-                            <h3>Local SEO</h3>
-                            <p>Dominate local search results with optimized Google Business Profile,
-                                local citations, and geo-targeted content.</p>
-                            <ul className="service-features">
-                                <li><Icon type="check" /> GBP optimization</li>
-                                <li><Icon type="check" /> Local link building</li>
-                                <li><Icon type="check" /> Review management</li>
-                            </ul>
-                        </div>
-                        <div className="service-card featured">
-                            <div className="service-badge">NEW</div>
-                            <div className="service-number">05</div>
-                            <h3>GEO & AEO Optimization</h3>
-                            <p>Future-proof your visibility with Generative Engine Optimization (GEO)
-                                and Answer Engine Optimization (AEO) for AI search platforms.</p>
-                            <ul className="service-features">
-                                <li><Icon type="check" /> ChatGPT optimization</li>
-                                <li><Icon type="check" /> Perplexity visibility</li>
-                                <li><Icon type="check" /> Featured snippet targeting</li>
-                                <li><Icon type="check" /> AI Overview optimization</li>
-                            </ul>
-                        </div>
+                    <div className="roadmap-grid">
+                        {[
+                            { step: '01', title: 'Assessment', desc: 'Technical signal audit & keyword gap intelligence across 250+ ranking factors.' },
+                            { step: '02', title: 'Roadmap', desc: 'KPI-focused strategy & resource planning aligned to your revenue goals.' },
+                            { step: '03', title: 'On-Page', desc: 'NLP semantic optimization, internal linking & content structure overhaul.' },
+                            { step: '04', title: 'Technical', desc: 'Core Web Vitals, Schema architecture & crawl budget optimization.' },
+                            { step: '05', title: 'Authority', desc: 'Pillar content, topic clusters & strategic link acquisition campaigns.' },
+                            { step: '06', title: 'Expansion', desc: 'EEAT building, GEO optimization & AI search visibility scaling.' }
+                        ].map((r, i) => (
+                            <div key={i} className="roadmap-step">
+                                <div className="step-num">{r.step}</div>
+                                <div className="step-info">
+                                    <h4>{r.title}</h4>
+                                    <p>{r.desc}</p>
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>
 
-            {/* 6-Phase Methodology Section */}
-            <section className="seo-methodology">
+            {/* ===== TESTIMONIALS (LIGHT) ===== */}
+            <section className="seo-testimonials-v2">
                 <div className="seo-container">
                     <div className="section-header text-center">
-                        <span className="section-label">OUR PROVEN PROCESS</span>
-                        <h2 className="section-title">
-                            Our Proven <span className="title-accent">6-Phase SEO Methodology</span>
-                        </h2>
-                        <p className="section-subtitle">
-                            A battle-tested framework refined over 500+ successful campaigns. Every phase builds on the last to create compounding growth.
-                        </p>
-                    </div>
-                    <div className="methodology-grid">
-                        <div className="methodology-phase">
-                            <div className="phase-number">01</div>
-                            <div className="phase-content">
-                                <h3>Assessment & Audit</h3>
-                                <p>Deep technical audit of crawlability, indexability, and performance alongside a comprehensive keyword gap analysis and competitor review.</p>
-                                <div className="phase-deliverables">
-                                    <span>Technical Audit</span>
-                                    <span>Keyword Gap Analysis</span>
-                                    <span>Competitor Review</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="methodology-phase">
-                            <div className="phase-number">02</div>
-                            <div className="phase-content">
-                                <h3>Strategy & Roadmap</h3>
-                                <p>Defining KPIs and business-aligned goals, creating a content calendar, and prioritizing "low-hanging fruit" vs. long-term authority goals.</p>
-                                <div className="phase-deliverables">
-                                    <span>KPI Definition</span>
-                                    <span>Content Roadmap</span>
-                                    <span>Resource Planning</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="methodology-phase">
-                            <div className="phase-number">03</div>
-                            <div className="phase-content">
-                                <h3>On-Page Optimization</h3>
-                                <p>Implementing semantic content optimization (NLP/LSI), HTML header structure improvements, and a strategic internal linking architecture.</p>
-                                <div className="phase-deliverables">
-                                    <span>NLP Optimization</span>
-                                    <span>Header Structure</span>
-                                    <span>Internal Linking</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="methodology-phase">
-                            <div className="phase-number">04</div>
-                            <div className="phase-content">
-                                <h3>Technical Excellence</h3>
-                                <p>Core Web Vitals optimization, schema markup (Structured Data) implementation, and ensuring native mobile-first indexing compliance.</p>
-                                <div className="phase-deliverables">
-                                    <span>Core Web Vitals</span>
-                                    <span>Schema Markup</span>
-                                    <span>Mobile Performance</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="methodology-phase">
-                            <div className="phase-number">05</div>
-                            <div className="phase-content">
-                                <h3>Content Authority</h3>
-                                <p>Creation of high-value pillar pages and topic clusters integrated with Conversion Rate Optimization (CRO) for landing pages.</p>
-                                <div className="phase-deliverables">
-                                    <span>Pillar Content</span>
-                                    <span>Topic Clusters</span>
-                                    <span>CRO Integration</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="methodology-phase">
-                            <div className="phase-number">06</div>
-                            <div className="phase-content">
-                                <h3>E-E-A-T & Backlinks</h3>
-                                <p>Building Expertise, Authoritativeness, and Trustworthiness through strategic link acquisition and digital PR from high-authority domains.</p>
-                                <div className="phase-deliverables">
-                                    <span>Authority Links</span>
-                                    <span>EEAT Strategy</span>
-                                    <span>Digital PR</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Blog Brief Section */}
-            <BlogBriefSection />
-
-            {/* Results Section */}
-            <section id="case-studies" className="seo-results">
-                <div className="seo-container">
-                    <div className="section-header text-center">
-                        <span className="section-label">PROVEN RESULTS</span>
-                        <h2 className="section-title">
-                            Real Results, <span className="title-accent">Real Growth</span>
-                        </h2>
-                    </div>
-                    <div className="results-grid">
-                        <div className="result-card">
-                            <div className="result-industry">E-Commerce</div>
-                            <h3>Fashion Retailer</h3>
-                            <div className="result-metrics">
-                                <div className="metric">
-                                    <span className="metric-value">+412%</span>
-                                    <span className="metric-label">Organic Traffic</span>
-                                </div>
-                                <div className="metric">
-                                    <span className="metric-value">+287%</span>
-                                    <span className="metric-label">Revenue from SEO</span>
-                                </div>
-                            </div>
-                            <p className="result-summary">
-                                Scaled from 5,000 to 25,000+ monthly organic visitors in 8 months through
-                                technical SEO and content optimization.
-                            </p>
-                        </div>
-                        <div className="result-card">
-                            <div className="result-industry">SaaS</div>
-                            <h3>B2B Software Company</h3>
-                            <div className="result-metrics">
-                                <div className="metric">
-                                    <span className="metric-value">+156%</span>
-                                    <span className="metric-label">Lead Generation</span>
-                                </div>
-                                <div className="metric">
-                                    <span className="metric-value">Top 3</span>
-                                    <span className="metric-label">For 200+ Keywords</span>
-                                </div>
-                            </div>
-                            <p className="result-summary">
-                                Dominated competitive SaaS keywords and increased demo requests by 156%
-                                within the first year.
-                            </p>
-                        </div>
-                        <div className="result-card">
-                            <div className="result-industry">Healthcare</div>
-                            <h3>Medical Practice Network</h3>
-                            <div className="result-metrics">
-                                <div className="metric">
-                                    <span className="metric-value">+523%</span>
-                                    <span className="metric-label">Local Visibility</span>
-                                </div>
-                                <div className="metric">
-                                    <span className="metric-value">+89%</span>
-                                    <span className="metric-label">Patient Bookings</span>
-                                </div>
-                            </div>
-                            <p className="result-summary">
-                                Multi-location local SEO strategy that put practices at the top of
-                                Google Maps and local search results.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* SEO Subscription Packages */}
-            <section className="seo-pricing">
-                <div className="seo-container">
-                    <div className="section-header text-center">
-                        <span className="section-label">INVESTMENT</span>
-                        <h2 className="section-title">
-                            Your SEO Engine, <span className="title-accent">On Subscription</span>
-                        </h2>
-                        <p className="section-subtitle">
-                            Predictable pricing. Scalable results. Choose the plan that matches your growth stage.
-                        </p>
-                    </div>
-                    <div className="pricing-grid">
-                        <div className="pricing-card">
-                            <div className="pricing-header">
-                                <h3>Launch</h3>
-                                <p className="pricing-description">Perfect for startups and small businesses looking to establish a search presence.</p>
-                            </div>
-                            <div className="pricing-price">
-                                <span className="price-currency">$</span>
-                                <span className="price-amount">2,500</span>
-                                <span className="price-period">/month</span>
-                            </div>
-                            <ul className="pricing-features">
-                                <li><Icon type="check" /> Technical SEO audit & fixes</li>
-                                <li><Icon type="check" /> Keyword research (50 keywords)</li>
-                                <li><Icon type="check" /> On-page optimization (10 pages/mo)</li>
-                                <li><Icon type="check" /> 4 SEO blog posts/month</li>
-                                <li><Icon type="check" /> Monthly reporting & strategy call</li>
-                                <li><Icon type="check" /> Google Business Profile optimization</li>
-                            </ul>
-                            <Link href="/contact" className="btn-outline">
-                                Get Started
-                            </Link>
-                        </div>
-                        <div className="pricing-card featured">
-                            <div className="pricing-badge">MOST POPULAR</div>
-                            <div className="pricing-header">
-                                <h3>Growth</h3>
-                                <p className="pricing-description">Designed for scaling businesses that want to dominate their niche.</p>
-                            </div>
-                            <div className="pricing-price">
-                                <span className="price-currency">$</span>
-                                <span className="price-amount">5,000</span>
-                                <span className="price-period">/month</span>
-                            </div>
-                            <ul className="pricing-features">
-                                <li><Icon type="check" /> Everything in Growth, plus:</li>
-                                <li><Icon type="check" /> Advanced technical optimization</li>
-                                <li><Icon type="check" /> Keyword research (150 keywords)</li>
-                                <li><Icon type="check" /> On-page optimization (25 pages/mo)</li>
-                                <li><Icon type="check" /> 8 SEO blog posts/month</li>
-                                <li><Icon type="check" /> Link building (10 links/month)</li>
-                                <li><Icon type="check" /> Competitor tracking & analysis</li>
-                                <li><Icon type="check" /> Bi-weekly strategy calls</li>
-                            </ul>
-                            <Link href="/contact" className="btn-primary">
-                                Get Started
-                                <Icon type="arrowRight" />
-                            </Link>
-                        </div>
-                        <div className="pricing-card">
-                            <div className="pricing-header">
-                                <h3>Dominance</h3>
-                                <p className="pricing-description">For industry leaders requiring enterprise-level SEO and advanced analysis.</p>
-                            </div>
-                            <div className="pricing-price">
-                                <span className="price-currency">$</span>
-                                <span className="price-amount">10,000</span>
-                                <span className="price-period">/month</span>
-                            </div>
-                            <ul className="pricing-features">
-                                <li><Icon type="check" /> Everything in Scale, plus:</li>
-                                <li><Icon type="check" /> GEO & AEO optimization</li>
-                                <li><Icon type="check" /> Unlimited keyword research</li>
-                                <li><Icon type="check" /> Unlimited on-page optimization</li>
-                                <li><Icon type="check" /> 16 SEO blog posts/month</li>
-                                <li><Icon type="check" /> Link building (25 links/month)</li>
-                                <li><Icon type="check" /> Dedicated SEO strategist</li>
-                                <li><Icon type="check" /> Weekly strategy calls</li>
-                                <li><Icon type="check" /> Real-time Slack support</li>
-                            </ul>
-                            <Link href="/contact" className="btn-outline">
-                                Contact Sales
-                            </Link>
-                        </div>
-                    </div>
-                    <div className="pricing-note">
-                        <p>All plans include a 90-day commitment. Custom enterprise solutions available.</p>
-                    </div>
-                </div>
-            </section>
-
-            {/* Industries Section */}
-            <SEOIndustrySection />
-
-            {/* Testimonials */}
-            <section className="seo-testimonials">
-                <div className="seo-container">
-                    <div className="section-header text-center">
-                        <span className="section-label">CLIENT SUCCESS STORIES</span>
-                        <h2 className="section-title">
-                            What Our Clients <span className="title-accent">Say About Us</span>
-                        </h2>
+                        <span className="section-label">CLIENT STORIES</span>
+                        <h2 className="section-title">What Our <span>Clients Say</span></h2>
                     </div>
                     <div className="testimonials-grid">
-                        <div className="testimonial-card">
-                            <div className="testimonial-rating">★★★★★</div>
-                            <p className="testimonial-text">
-                                &quot;Oneskai&apos;s SEO team transformed our online presence. We went from page 3
-                                to ranking #1 for our most competitive keywords in just 6 months.&quot;
-                            </p>
-                            <div className="testimonial-author">
-                                <div className="author-avatar">JM</div>
-                                <div className="author-info">
-                                    <span className="author-name">James Mitchell</span>
-                                    <span className="author-title">CMO, TechScale Inc.</span>
+                        {[
+                            {
+                                quote: 'Oneskai redefined our entire search footprint and decreased our CAC by 42%. They are the only agency we trust with our growth.',
+                                name: 'James Mitchell',
+                                role: 'CMO, TechScale Enterprise',
+                                metric: '-42%',
+                                metricLabel: 'CAC Reduction'
+                            },
+                            {
+                                quote: 'Within 6 months, our organic traffic tripled and we started ranking for terms we never thought possible. Their technical SEO expertise is unmatched.',
+                                name: 'Sarah Chen',
+                                role: 'VP Marketing, CloudSync',
+                                metric: '3x',
+                                metricLabel: 'Organic Traffic'
+                            },
+                            {
+                                quote: 'They didn\'t just improve our SEO — they built a revenue engine. Our lead pipeline from organic search grew by 280% in one year.',
+                                name: 'David Okonkwo',
+                                role: 'CEO, FinEdge Solutions',
+                                metric: '+280%',
+                                metricLabel: 'Lead Pipeline'
+                            }
+                        ].map((t, i) => (
+                            <div key={i} className="testimonial-card">
+                                <div className="testimonial-card-metric">
+                                    <span className="testimonial-metric-num">{t.metric}</span>
+                                    <span className="testimonial-metric-label">{t.metricLabel}</span>
+                                </div>
+                                <div className="stars">★★★★★</div>
+                                <p className="testimonial-quote">&quot;{t.quote}&quot;</p>
+                                <div className="testimonial-footer">
+                                    <div className="client-meta">
+                                        <strong>{t.name}</strong>
+                                        <span>{t.role}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* ===== RESULTS (LIGHT BG) ===== */}
+            <section id="case-studies" className="seo-results-v2">
+                <div className="seo-container">
+                    <div className="results-matrix-grid">
+                        <div className="result-main-card">
+                            <span className="result-label-pill">CASE STUDY: E-COMMERCE</span>
+                            <h3>Fashion Elite Growth</h3>
+                            <div className="mega-stats">
+                                <div className="mega-stat">
+                                    <span className="mega-num">+412%</span>
+                                    <span className="mega-lab">Organic Traffic</span>
+                                </div>
+                                <div className="mega-stat">
+                                    <span className="mega-num">$2.4M</span>
+                                    <span className="mega-lab">SEO Revenue</span>
                                 </div>
                             </div>
                         </div>
-                        <div className="testimonial-card featured">
-                            <div className="testimonial-rating">★★★★★</div>
-                            <p className="testimonial-text">
-                                &quot;The ROI from our SEO investment has been incredible. Their GEO optimization
-                                strategy has us appearing in AI search results, giving us a real competitive edge.&quot;
-                            </p>
-                            <div className="testimonial-author">
-                                <div className="author-avatar">SK</div>
-                                <div className="author-info">
-                                    <span className="author-name">Sarah Kim</span>
-                                    <span className="author-title">Founder, EcoStyle</span>
-                                </div>
+                        <div className="result-sub-cards">
+                            <div className="sub-result">
+                                <strong>SaaS Growth</strong>
+                                <span>+156% Leads</span>
                             </div>
-                        </div>
-                        <div className="testimonial-card">
-                            <div className="testimonial-rating">★★★★★</div>
-                            <p className="testimonial-text">
-                                &quot;Finally, an agency that delivers what they promise. Our organic traffic
-                                has tripled, and more importantly, so have our qualified leads.&quot;
-                            </p>
-                            <div className="testimonial-author">
-                                <div className="author-avatar">DP</div>
-                                <div className="author-info">
-                                    <span className="author-name">David Park</span>
-                                    <span className="author-title">Director, HealthFirst</span>
-                                </div>
+                            <div className="sub-result">
+                                <strong>Health Tech</strong>
+                                <span>+523% Local Visibility</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* FAQ Section */}
-            <section className="seo-faq">
+            {/* ===== FAQ (LIGHT) ===== */}
+            <section className="seo-faq-section">
                 <div className="seo-container">
-                    <div className="faq-layout">
-                        <div className="faq-header">
-                            <span className="section-label">FAQS</span>
-                            <h2 className="section-title">Frequently Asked Questions</h2>
-                            <p className="section-subtitle">
-                                Everything you need to know about our SEO services.
-                            </p>
+                    <div className="section-header text-center">
+                        <span className="section-label">COMMON QUESTIONS</span>
+                        <h2 className="section-title">SEO <span>FAQs</span></h2>
+                    </div>
+                    <div className="seo-faq-grid">
+                        {[
+                            { q: 'How long does it take to see SEO results?', a: 'Most clients see measurable improvements in 3-4 months. Significant traffic and revenue growth typically happens within 6-9 months, depending on your starting point and competition level.' },
+                            { q: 'What makes your SEO approach different?', a: 'We focus on revenue, not just rankings. Our methodology combines technical excellence, AI-ready content, and data-driven strategy — all tied to your business KPIs, not vanity metrics.' },
+                            { q: 'Do you guarantee first page rankings?', a: 'No ethical SEO agency can guarantee specific rankings. What we guarantee is a systematic, transparent approach that consistently delivers measurable improvements in traffic, leads, and revenue.' },
+                            { q: 'What is GEO / AEO optimization?', a: 'Generative Engine Optimization (GEO) and Answer Engine Optimization (AEO) ensure your brand appears in AI-generated search results from tools like ChatGPT, Perplexity, and Google AI Overviews.' },
+                            { q: 'How do you report on progress?', a: 'You get weekly performance dashboards, monthly strategy reviews, and quarterly business impact reports. Full transparency on rankings, traffic, conversions, and ROI attribution.' },
+                            { q: 'Can you work alongside our in-house team?', a: 'Absolutely. We frequently embed with in-house marketing teams, providing strategy, execution support, and training. We adapt to your workflow and tools.' },
+                        ].map((faq, i) => (
+                            <details
+                                key={i}
+                                className="seo-faq-item"
+                                open={openFaq === i}
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    setOpenFaq(openFaq === i ? null : i);
+                                }}
+                            >
+                                <summary>{faq.q}</summary>
+                                <p>{faq.a}</p>
+                            </details>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* ===== PRICING (LIGHT) ===== */}
+            <section className="seo-investment">
+                <div className="seo-container">
+                    <div className="section-header text-center">
+                        <span className="section-label">PRICING</span>
+                        <h2 className="section-title">Growth <span>Subscription Plans</span></h2>
+                    </div>
+                    <div className="invest-grid">
+                        <div className="invest-card">
+                            <h3>Growth</h3>
+                            <div className="price">$5,000<span>/mo</span></div>
+                            <p>For brands ready to scale organic revenue.</p>
+                            <Link href="/contact" className="btn-invest">Select Plan</Link>
                         </div>
-                        <div className="faq-list">
-                            <details className="faq-item">
-                                <summary>How long does it take to see SEO results?</summary>
-                                <p>Most clients start seeing measurable improvements within 3-6 months.
-                                    However, SEO is a long-term investment, and the best results compound
-                                    over 12-24 months of consistent optimization.</p>
-                            </details>
-                            <details className="faq-item">
-                                <summary>What&apos;s the difference between SEO, AEO, and GEO?</summary>
-                                <p><strong>SEO</strong> (Search Engine Optimization) focuses on ranking in traditional
-                                    search engines like Google. <strong>AEO</strong> (Answer Engine Optimization) targets
-                                    featured snippets and direct answers. <strong>GEO</strong> (Generative Engine Optimization)
-                                    optimizes for AI-powered search like ChatGPT and Perplexity.</p>
-                            </details>
-                            <details className="faq-item">
-                                <summary>Do you guarantee first page rankings?</summary>
-                                <p>We never guarantee specific rankings as Google&apos;s algorithm is beyond
-                                    any agency&apos;s control. However, we do guarantee our methodology,
-                                    transparency, and commitment to delivering measurable improvements.</p>
-                            </details>
-                            <details className="faq-item">
-                                <summary>How do you report on SEO progress?</summary>
-                                <p>You&apos;ll receive access to a real-time dashboard plus monthly detailed
-                                    reports covering rankings, traffic, conversions, and ROI. We also
-                                    schedule regular calls to discuss strategy and results.</p>
-                            </details>
-                            <details className="faq-item">
-                                <summary>What makes Oneskai different from other SEO agencies?</summary>
-                                <p>We combine traditional SEO expertise with cutting-edge AI and GEO
-                                    strategies. Our team includes former Google engineers and we stay
-                                    ahead of algorithm changes, not react to them.</p>
-                            </details>
-                            <details className="faq-item">
-                                <summary>Can I cancel my subscription?</summary>
-                                <p>After the initial 90-day commitment period, you can cancel with 30 days notice.
-                                    However, SEO works best with consistent, long-term investment. Most clients
-                                    see their best results after 12+ months of partnership.</p>
-                            </details>
+                        <div className="invest-card featured">
+                            <div className="feat-badge">MOST POPULAR</div>
+                            <h3>Dominance</h3>
+                            <div className="price">$10,000<span>/mo</span></div>
+                            <p>For category leaders requiring complete control.</p>
+                            <Link href="/contact" className="btn-invest gold">Get Started</Link>
+                        </div>
+                        <div className="invest-card">
+                            <h3>Enterprise</h3>
+                            <div className="price">Custom</div>
+                            <p>Tailored solutions for complex organizations.</p>
+                            <Link href="/contact" className="btn-invest">Contact Us</Link>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* CTA Section */}
-            <section className="seo-cta">
+            {/* ===== INDUSTRIES (DARK) ===== */}
+            <SEOIndustrySection />
+
+            {/* ===== CTA ===== */}
+            <section className="seo-final-cta">
                 <div className="seo-container">
-                    <div className="cta-card">
-                        <div className="cta-content">
-                            <h2 className="cta-title">
-                                Ready to Be <span className="title-accent">Undeniable</span>?
-                            </h2>
-                            <p className="cta-text">
-                                Get a free, comprehensive SEO audit and discover how we can help you
-                                dominate search results and drive meaningful business growth.
-                            </p>
-                            <div className="cta-actions">
-                                <Link href="/contact" className="btn-primary large">
-                                    Get Your Free SEO Audit
-                                    <Icon type="arrowRight" />
-                                </Link>
-                                <Link href="/contact" className="btn-outline">
-                                    Schedule a Call
-                                </Link>
-                            </div>
-                            <p className="cta-note">
-                                No commitment required • Response within 24 hours
-                            </p>
+                    <div className="seo-cta-box">
+                        <div className="cta-header">
+                            <h2 className="cta-title">Ready to Rank <span>#1?</span></h2>
+                            <p>Get a comprehensive technical and content audit from our experts.</p>
+                        </div>
+                        <div className="cta-actions-v2">
+                            <Link href="/contact" className="btn-primary-pill large">
+                                Get Your Free SEO Audit <Icon type="arrowRight" />
+                            </Link>
                         </div>
                     </div>
                 </div>

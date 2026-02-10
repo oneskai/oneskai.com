@@ -85,7 +85,7 @@
 }
 
 .hero-img {
-    border-radius: 14px;
+    border-radius: 10px;
     box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5);
     border: 1px solid rgba(255, 255, 255, 0.1);
     width: 100%;
@@ -100,7 +100,7 @@
     backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 24px;
-    border-radius: 14px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     gap: 16px;
@@ -125,7 +125,7 @@
     width: 52px;
     height: 52px;
     background: var(--accent-pink);
-    border-radius: 14px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -211,7 +211,7 @@
     padding: 32px;
     background: white;
     border: 1px solid rgba(0, 0, 0, 0.04);
-    border-radius: 14px;
+    border-radius: 10px;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
 }
@@ -226,7 +226,7 @@
     width: 64px;
     height: 64px;
     background: var(--section-light-bg);
-    border-radius: 14px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -270,7 +270,7 @@
     background: white;
     border: 1px solid rgba(0, 0, 0, 0.05);
     padding: 60px;
-    border-radius: 14px;
+    border-radius: 10px;
     box-shadow: 0 30px 90px rgba(0, 0, 0, 0.06);
     position: relative;
 }
@@ -280,7 +280,7 @@
     position: absolute;
     inset: -1px;
     background: linear-gradient(135deg, rgba(217, 27, 92, 0.1), transparent 40%);
-    border-radius: 14px;
+    border-radius: 10px;
     z-index: -1;
 }
 
@@ -315,7 +315,7 @@
     padding: 20px 24px;
     background: #fcfdfe;
     border: 2px solid #f1f5f9;
-    border-radius: 14px;
+    border-radius: 10px;
     font-size: 16px;
     color: var(--text-dark);
     outline: none;
@@ -343,7 +343,7 @@
     color: white;
     padding: 20px 40px;
     border: none;
-    border-radius: 14px;
+    border-radius: 10px;
     font-size: 18px;
     font-weight: 700;
     cursor: pointer;
@@ -405,7 +405,7 @@
 .office-card {
     background: white;
     border: 1px solid var(--border-color);
-    border-radius: 14px;
+    border-radius: 10px;
     padding: 48px;
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
@@ -438,7 +438,7 @@
     text-align: center;
     background: linear-gradient(135deg, rgba(217, 27, 92, 0.1) 0%, transparent 100%);
     padding: 80px;
-    border-radius: 14px;
+    border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 

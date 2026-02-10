@@ -70,7 +70,7 @@
 /* Shopping Cart Visual */
 .cart-visual {
     background: white;
-    border-radius: 24px;
+    border-radius: 10px;
     padding: 30px;
     box-shadow: 0 40px 80px rgba(0, 0, 0, 0.1);
 }
@@ -86,7 +86,7 @@
 .cart-item-img {
     width: 60px;
     height: 60px;
-    border-radius: 12px;
+    border-radius: 10px;
 }
 
 .cart-total {
@@ -120,7 +120,7 @@
 .platform-card {
     background: white;
     padding: 40px 30px;
-    border-radius: 24px;
+    border-radius: 10px;
     text-align: center;
     border: 1px solid #f1f5f9;
     transition: all 0.3s ease;
@@ -154,7 +154,7 @@
 .feature-card {
     background: rgba(255, 255, 255, 0.1);
     padding: 40px;
-    border-radius: 24px;
+    border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     transition: all 0.3s ease;
 }
@@ -180,7 +180,7 @@
 .price-card {
     background: white;
     padding: 50px 40px;
-    border-radius: 32px;
+    border-radius: 10px;
     border: 1px solid #eee;
     text-align: center;
     position: relative;
@@ -230,7 +230,7 @@
 .cta-form {
     background: white;
     padding: 50px;
-    border-radius: 40px;
+    border-radius: 10px;
     color: black;
     box-shadow: 0 40px 80px rgba(0, 0, 0, 0.3);
 }
@@ -240,7 +240,7 @@
 .cta-form textarea {
     width: 100%;
     padding: 18px;
-    border-radius: 12px;
+    border-radius: 10px;
     border: 2px solid #f1f5f9;
     background: #f8fafc;
     font-size: 16px;
