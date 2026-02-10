@@ -2,107 +2,83 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Icon } from '@/components/ui/Icon';
 
-const heroWords = ['Marketing', 'Growth', 'Revenue', 'Dominance', 'Excellence'];
+const dynamicWords = ['Predictable Revenue', 'Market Leadership', 'Maximum ROI', 'Scalable Growth'];
 
 export function HeroSection() {
-    const [currentWord, setCurrentWord] = useState(0);
-    const [isAnimating, setIsAnimating] = useState(false);
+    const [index, setIndex] = useState(0);
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setIsAnimating(true);
-            setTimeout(() => {
-                setCurrentWord((prev) => (prev + 1) % heroWords.length);
-                setIsAnimating(false);
-            }, 400);
+            setIndex((prevIndex) => (prevIndex + 1) % dynamicWords.length);
         }, 3000);
         return () => clearInterval(interval);
     }, []);
 
     return (
-        <section className="hero-section">
-            <div className="hero-container">
-                <div className="hero-content">
-                    <div className="hero-badge">
-                        <span className="badge-dot"></span>
-                        <span>Trusted by Brands Worldwide</span>
+        <section className="home-hero section-dark">
+            <div className="home-hero-bg">
+                <Image
+                    src="/images/premium-hero.png"
+                    alt="World-Class Marketing Consulting"
+                    fill
+                    priority
+                    className="object-cover"
+                />
+                <div className="home-hero-overlay"></div>
+            </div>
+
+            <div className="container home-hero-container">
+                <div className="home-hero-content">
+                    <div className="hero-tag-wrapper">
+                        <span className="hero-tag">Strategy & Performance</span>
                     </div>
 
-                    <h1 className="hero-headline">
-                        <span className="hero-line-1">
-                            We engineer{" "}
-                            <span className={`hero-word ${isAnimating ? 'animating' : ''}`}>
-                                {heroWords[currentWord]}
-                            </span>
-                        </span>
-                        <span className="hero-line-2">For Ambitious Brands</span>
+                    <h1 className="home-hero-title">
+                        Driving <span className="dynamic-highlight">{dynamicWords[index]}</span> for Ambitious Brands
                     </h1>
 
-                    <p className="hero-subtext">
-                        Data-driven marketing strategies that transform traffic into revenue.
-                        We combine AI-powered insights with human creativity to deliver
-                        measurable results that matter.
+                    <p className="home-hero-description">
+                        The data-driven growth partner for mid-market companies.
+                        We blend high-performance marketing with strategic consulting to turn your spend into undeniable market dominance.
                     </p>
 
-                    <div className="hero-cta-group">
-                        <Link href="/contact" className="btn-primary">
-                            <span>Talk to Us</span>
+                    <div className="home-hero-cta">
+                        <Link href="/contact" className="hero-btn-primary">
+                            <span>Get Free Growth Audit</span>
                             <Icon type="arrowRight" />
                         </Link>
-                        <Link href="/work" className="btn-secondary">
-                            <Icon type="play" />
-                            <span>See Our Results</span>
+                        <Link href="/contact" className="hero-btn-secondary">
+                            <span>Book Strategy Call</span>
                         </Link>
                     </div>
 
-                    <div className="hero-stats">
-                        <div className="hero-stat">
-                            <span className="stat-number">15.4k+</span>
-                            <span className="stat-label">Qualified Leads</span>
-                        </div>
-                        <div className="stat-divider"></div>
-                        <div className="hero-stat">
-                            <span className="stat-number">340%</span>
-                            <span className="stat-label">Avg. ROI Increase</span>
-                        </div>
-                        <div className="stat-divider"></div>
-                        <div className="hero-stat">
-                            <span className="stat-number">98%</span>
-                            <span className="stat-label">Client Retention</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="hero-visual">
-                    <div className="hero-image-container">
-                        <img
-                            src="/images/hero-team.png"
-                            alt="Oneskai Team Strategy Session"
-                            className="hero-image"
-                        />
-                        <div className="hero-card hero-card-float">
-                            <Icon type="trending" />
-                            <span>Revenue up 34% this month</span>
-                        </div>
-                        <div className="hero-card hero-card-float-2">
-                            <div className="notification-icon">
-                                <Icon type="check" />
+                    <div className="home-hero-proof">
+                        <div className="proof-avatars">
+                            <div className="avatar-stack-mini">
+                                <div className="mini-avatar">
+                                    <Image src="/images/team-member-1.png" alt="Leader 1" fill className="object-cover" />
+                                </div>
+                                <div className="mini-avatar">
+                                    <Image src="/images/team-member-2.png" alt="Leader 2" fill className="object-cover" />
+                                </div>
+                                <div className="mini-avatar">
+                                    <Image src="/images/team-member-3.png" alt="Leader 3" fill className="object-cover" />
+                                </div>
                             </div>
-                            <div className="notification-text">
-                                <span className="notification-title">Goal Achieved</span>
-                                <span className="notification-desc">Q4 target exceeded by 127%</span>
-                            </div>
+                            <span className="proof-text">Trusted by 200+ Enterprise Leaders</span>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div className="hero-scroll-indicator">
-                <span>Scroll to explore</span>
-                <div className="scroll-line"></div>
+            <div className="hero-scroll-pill">
+                <div className="scroll-dot"></div>
             </div>
         </section>
     );
 }
+
+export default HeroSection;

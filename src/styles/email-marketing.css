@@ -16,13 +16,9 @@
 .email-hero {
     min-height: 90vh;
     padding: 160px 0 80px;
-    background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+    background: linear-gradient(135deg, #F9F9F7 0%, #F9F9F7 100%);
     position: relative;
     overflow: hidden;
-}
-
-[data-theme="dark"] .email-hero {
-    background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
 }
 
 .email-hero-grid {
@@ -153,7 +149,7 @@
 }
 
 .feature-box:nth-child(2) {
-    background: #e0e7ff;
+    background: #f0eaff;
 }
 
 .feature-box:nth-child(3) {

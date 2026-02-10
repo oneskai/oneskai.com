@@ -5,61 +5,43 @@ import { Icon } from '@/components/ui/Icon';
 
 export function CTASection() {
     return (
-        <section className="cta-section">
-            <div className="cta-background-overlay"></div>
-
+        <section className="cta-section section-dark">
             <div className="cta-container">
-                <div className="cta-inner">
-                    <div className="cta-content">
-                        <span className="cta-badge">
-                            <span className="badge-dot"></span>
-                            Ready to Evolve?
-                        </span>
+                <div className="cta-inner-clean">
+                    <span className="cta-badge-clean">
+                        <span className="badge-dot"></span>
+                        Ready to Grow?
+                    </span>
 
-                        <h2 className="cta-headline">
-                            Let&apos;s Build Something
-                            <span className="cta-headline-accent"> Extraordinary</span>
-                        </h2>
+                    <h2 className="cta-headline-clean">
+                        Let&apos;s Build Something
+                        <span className="cta-headline-accent"> Extraordinary</span>
+                    </h2>
 
-                        <p className="cta-description">
-                            Schedule a free strategy session with our experts. We&apos;ll analyze your
-                            current marketing performance and show you exactly how we can help
-                            you reach your goals.
-                        </p>
+                    <p className="cta-description-clean">
+                        Schedule a free strategy session with our experts. We&apos;ll analyze your
+                        current marketing and show you exactly where the growth opportunities are.
+                    </p>
 
-                        <div className="cta-benefits">
-                            <div className="cta-benefit">
-                                <Icon type="check" />
-                                <span>Free 30-min strategy call</span>
-                            </div>
-                            <div className="cta-benefit">
-                                <Icon type="check" />
-                                <span>Custom growth roadmap</span>
-                            </div>
-                            <div className="cta-benefit">
-                                <Icon type="check" />
-                                <span>No obligation to commit</span>
-                            </div>
+                    <div className="cta-benefits-clean">
+                        <div className="cta-benefit-item">
+                            <Icon type="check" />
+                            <span>Free 30-min strategy call</span>
                         </div>
-
-                        <div className="cta-buttons">
-                            <Link href="/contact" className="cta-btn-primary">
-                                Start Your Evolution
-                                <Icon type="arrowRight" />
-                            </Link>
-                            <Link href="/work" className="cta-btn-secondary">
-                                See Our Work
-                            </Link>
+                        <div className="cta-benefit-item">
+                            <Icon type="check" />
+                            <span>Custom growth roadmap</span>
+                        </div>
+                        <div className="cta-benefit-item">
+                            <Icon type="check" />
+                            <span>No commitment required</span>
                         </div>
                     </div>
 
-                    <div className="cta-visual">
-                        <img
-                            src="/images/office-chat.png"
-                            alt="Oneskai Team Discussion"
-                            className="cta-image"
-                        />
-                    </div>
+                    <Link href="/contact" className="cta-btn-main">
+                        Book Your Free Strategy Call
+                        <Icon type="arrowRight" />
+                    </Link>
                 </div>
             </div>
         </section>

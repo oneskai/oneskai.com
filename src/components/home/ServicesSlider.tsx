@@ -25,7 +25,7 @@ const services = [
     {
         title: 'Creative',
         description: 'Captivate your audience with high-performance creative that balances brand aesthetics with conversion-oriented design principles.',
-        tags: ['Ad Content', 'Video Production', 'Web Experience', 'Brand Identity', 'Lander Optimization'],
+        tags: ['Ad Content', 'Video Production', 'Web Experience', 'AEO & GEO', 'Lander Optimization'],
         id: 'creative'
     }
 ];

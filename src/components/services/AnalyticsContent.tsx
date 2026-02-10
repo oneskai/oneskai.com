@@ -13,13 +13,13 @@ export function AnalyticsContent() {
                         <div className="analytics-hero-content">
                             <span className="analytics-badge">
                                 <Icon type="barChart" />
-                                Data & Analytics
+                                Marketing Analytics
                             </span>
                             <h1 className="analytics-hero-title">
-                                Turn data into <span className="title-accent">decisions.</span>
+                                Stop guessing. Start <span className="title-accent">growing.</span>
                             </h1>
                             <p className="analytics-hero-subtitle">
-                                GA4 implementation, custom dashboards, and data visualization that transform raw numbers into actionable insights.
+                                Full-funnel attribution and real-time performance tracking that transforms marketing data into undeniable revenue growth.
                             </p>
                             <div className="content-hero-actions">
                                 <Link href="/contact" className="btn-primary large" style={{ background: 'var(--primary-green)', border: 'none', color: 'var(--accent-yellow)' }}>
@@ -59,10 +59,10 @@ export function AnalyticsContent() {
                 <div className="analytics-container">
                     <div className="section-header text-center">
                         <span className="section-label">WHAT WE DO</span>
-                        <h2 className="section-title">Analytics <span className="title-accent">services.</span></h2>
+                        <h2 className="section-title">Marketing <span className="title-accent">Intelligence.</span></h2>
                     </div>
                     <div className="services-grid">
-                        {[{ title: 'GA4 Implementation', desc: 'Complete GA4 setup with enhanced e-commerce, custom events, and proper configuration.' }, { title: 'Custom Dashboards', desc: 'Looker Studio and Tableau dashboards that visualize your KPIs in real-time.' }, { title: 'Data Strategy', desc: 'Define what to measure, how to measure it, and how to act on the insights.' }].map((service, i) => (
+                        {[{ title: 'Full-Funnel Attribution', desc: 'Connect every touchpoint to revenue. Understand exactly which channels are driving your most valuable conversions.' }, { title: 'Marketing Dashboards', desc: 'Real-time performance views for CMOs and Growth teams. Stop hunting for data and start acting on it.' }, { title: 'Predictive Analytics', desc: 'Leverage AI to forecast trends, identify high-value customer segments, and optimize your spend before it happens.' }].map((service, i) => (
                             <div key={i} className="service-card">
                                 <h3 style={{ fontSize: '24px', fontWeight: 600, marginBottom: '15px' }}>{service.title}</h3>
                                 <p style={{ fontSize: '16px', color: '#64748b', lineHeight: 1.7 }}>{service.desc}</p>
@@ -138,8 +138,8 @@ export function AnalyticsContent() {
                 <div className="analytics-container">
                     <div className="cta-grid">
                         <div>
-                            <h2 style={{ fontSize: '56px', fontWeight: 600, marginBottom: '30px', lineHeight: 1.1 }}>Ready to unlock <span style={{ color: 'var(--accent-yellow)' }}>your data?</span></h2>
-                            <p style={{ fontSize: '20px', opacity: 0.8, marginBottom: '50px', lineHeight: 1.6 }}>Get a free analytics audit and discover insights hiding in your data.</p>
+                            <h2 style={{ fontSize: '56px', fontWeight: 600, marginBottom: '30px', lineHeight: 1.1 }}>Ready for <span style={{ color: 'var(--accent-yellow)' }}>Marketing Clarity?</span></h2>
+                            <p style={{ fontSize: '20px', opacity: 0.8, marginBottom: '50px', lineHeight: 1.6 }}>Get a free marketing analytics audit and discover the missed revenue opportunities in your current data stack.</p>
                         </div>
                         <div className="cta-form">
                             <form style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>

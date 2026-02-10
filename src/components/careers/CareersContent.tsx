@@ -1,4 +1,5 @@
 'use client';
+import { useState } from 'react';
 import Link from 'next/link';
 import { Icon } from '@/components/ui/Icon';
 import '@/styles/careers-page.css';
@@ -68,53 +69,53 @@ const jobOpenings: JobOpening[] = [
 // Culture values
 const cultureValues = [
     {
-        icon: '🚀',
+        icon: 'rocket',
         title: 'Growth Mindset',
         description: 'We believe in continuous learning and pushing boundaries. Every challenge is an opportunity to grow.',
-        color: 'linear-gradient(135deg, #10b981 0%, #059669 100%)'
+        color: '#10b981'
     },
     {
-        icon: '🤝',
+        icon: 'users',
         title: 'Collaboration First',
         description: 'Great work happens together. We foster an environment where ideas flow freely across teams.',
-        color: 'linear-gradient(135deg, #6366f1 0%, #4f46e5 100%)'
+        color: '#6366f1'
     },
     {
-        icon: '💡',
+        icon: 'zap',
         title: 'Innovation Driven',
         description: 'We stay ahead of trends and embrace new technologies to deliver cutting-edge solutions.',
-        color: 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)'
+        color: '#f59e0b'
     },
     {
-        icon: '🎯',
+        icon: 'target',
         title: 'Results Focused',
         description: 'We measure success by the impact we create for our clients and the results we deliver.',
-        color: 'linear-gradient(135deg, #ec4899 0%, #db2777 100%)'
+        color: '#ec4899'
     },
     {
-        icon: '🌍',
+        icon: 'globe',
         title: 'Remote-First',
         description: 'Work from anywhere. We believe talent knows no boundaries and flexibility drives productivity.',
-        color: 'linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%)'
+        color: '#8b5cf6'
     },
     {
-        icon: '❤️',
+        icon: 'heart',
         title: 'Work-Life Balance',
         description: 'We value your wellbeing. Flexible hours and unlimited PTO ensure you bring your best self.',
-        color: 'linear-gradient(135deg, #ef4444 0%, #dc2626 100%)'
+        color: '#ef4444'
     }
 ];
 
 // Benefits
 const benefits = [
-    { icon: '💰', title: 'Competitive Salary', desc: 'Top-tier compensation packages' },
-    { icon: '🏥', title: 'Health Insurance', desc: 'Comprehensive medical coverage' },
-    { icon: '📚', title: 'Learning Budget', desc: '$2,000 annual development fund' },
-    { icon: '🏠', title: 'Remote Work', desc: 'Work from anywhere globally' },
-    { icon: '🌴', title: 'Unlimited PTO', desc: 'Take time when you need it' },
-    { icon: '💻', title: 'Equipment Stipend', desc: 'Latest tools and hardware' },
-    { icon: '👶', title: 'Parental Leave', desc: 'Generous family leave policy' },
-    { icon: '🎉', title: 'Team Events', desc: 'Quarterly retreats & socials' }
+    { icon: 'target', title: 'Competitive Salary', desc: 'Top-tier compensation packages' },
+    { icon: 'shield', title: 'Health Insurance', desc: 'Comprehensive medical coverage' },
+    { icon: 'award', title: 'Learning Budget', desc: '$2,000 annual development fund' },
+    { icon: 'globe', title: 'Remote Work', desc: 'Work from anywhere globally' },
+    { icon: 'calendar', title: 'Unlimited PTO', desc: 'Take time when you need it' },
+    { icon: 'zap', title: 'Equipment Stipend', desc: 'Latest tools and hardware' },
+    { icon: 'users', title: 'Parental Leave', desc: 'Generous family leave policy' },
+    { icon: 'star', title: 'Team Events', desc: 'Quarterly retreats & socials' }
 ];
 
 // Hiring process steps
@@ -126,42 +127,176 @@ const hiringProcess = [
 ];
 
 export function CareersContent() {
+    const [activeTab, setActiveTab] = useState('Team Culture');
+
     return (
         <div className="careers-page">
-            {/* Hero Section */}
-            <section className="careers-hero">
-                <div className="careers-hero-container">
-                    <div className="careers-hero-grid">
-                        <div className="careers-hero-content">
-                            <span className="careers-label">JOIN OUR TEAM</span>
-                            <h1 className="careers-hero-title">
-                                Build Your Career <span>With Us</span>
-                            </h1>
-                            <p className="careers-hero-subtitle">
-                                Join a team of passionate marketers, technologists, and creatives who are
-                                transforming how businesses grow. We&apos;re always looking for exceptional
-                                talent to help us push boundaries.
-                            </p>
-                            <a href="#openings" className="careers-hero-btn">
-                                View Open Positions <Icon type="arrowRight" />
-                            </a>
+            {/* New Main Hero Section */}
+            <section className="careers-main-hero">
+                <div className="careers-main-hero-bg">
+                    <img src="/images/hero-team-new.png" alt="Collaborative Team" />
+                    <div className="careers-main-hero-overlay"></div>
+                </div>
+                <div className="careers-main-hero-container">
+                    <span className="careers-label">WE ARE HIRING</span>
+                    <h1 className="careers-main-hero-title">
+                        Grow With a Team That <span>Values Excellence</span>
+                    </h1>
+                    <p className="careers-main-hero-subtitle">
+                        Join Oneskai to work on high-impact projects, learn from industry leaders, and build a career that moves you forward. Our culture is built on innovation, transparency, and results.
+                    </p>
+                    <div className="careers-main-hero-btns">
+                        <a href="#openings" className="careers-hero-btn">
+                            Explore Opportunities <Icon type="arrowRight" />
+                        </a>
+                        <Link href="/about" className="careers-hero-btn secondary">
+                            Learn About Our Story
+                        </Link>
+                    </div>
+                </div>
+            </section>
+
+            {/* Experience Collage with Tabs */}
+            <section className="careers-experience">
+                <div className="careers-experience-container">
+                    <div className="careers-section-header">
+                        <span className="careers-label">LIFE AT ONESKAI</span>
+                        <h2 className="careers-section-title">Beyond the Workplace</h2>
+                        <div className="careers-experience-tabs">
+                            {['Team Culture', 'Global Events', 'Work Environment'].map((tab) => (
+                                <button
+                                    key={tab}
+                                    className={activeTab === tab ? 'active' : ''}
+                                    onClick={() => setActiveTab(tab)}
+                                >
+                                    {tab}
+                                </button>
+                            ))}
                         </div>
-                        <div className="careers-hero-stats">
-                            <div className="careers-stat-card">
-                                <span className="careers-stat-num">50+</span>
-                                <span className="careers-stat-label">Team Members</span>
+                    </div>
+
+                    {activeTab === 'Team Culture' && (
+                        <div className="careers-experience-grid">
+                            <div className="experience-item large">
+                                <img src="/images/office-chat.png" alt="Team Discussion" />
+                                <div className="experience-info">
+                                    <h3>Collaborative Culture</h3>
+                                    <p>Where ideas turn into reality</p>
+                                </div>
                             </div>
-                            <div className="careers-stat-card">
-                                <span className="careers-stat-num">12</span>
-                                <span className="careers-stat-label">Countries</span>
+                            <div className="experience-item">
+                                <img src="/images/team-brainstorm.png" alt="Brainstorming" />
                             </div>
-                            <div className="careers-stat-card">
-                                <span className="careers-stat-num">4.8</span>
-                                <span className="careers-stat-label">Glassdoor Rating</span>
+                            <div className="experience-item">
+                                <img src="/images/business-woman.png" alt="Focus" />
                             </div>
-                            <div className="careers-stat-card">
-                                <span className="careers-stat-num">95%</span>
-                                <span className="careers-stat-label">Retention Rate</span>
+                            <div className="experience-item wide">
+                                <img src="/images/hero-team.png" alt="Team Meetup" />
+                            </div>
+                        </div>
+                    )}
+
+                    {activeTab === 'Global Events' && (
+                        <div className="careers-experience-grid">
+                            <div className="experience-item wide">
+                                <img src="/images/hero-team-new.png" alt="Global Summit" />
+                                <div className="experience-info">
+                                    <h3>Global Summit</h3>
+                                    <p>Connecting teams across continents</p>
+                                </div>
+                            </div>
+                            <div className="experience-item">
+                                <img src="/images/team-brainstorm.png" alt="Workshop" />
+                            </div>
+                            <div className="experience-item">
+                                <img src="/images/office-chat.png" alt="Networking" />
+                            </div>
+                            <div className="experience-item large">
+                                <img src="/images/hero-team.png" alt="Annual Retreat" />
+                                <div className="experience-info">
+                                    <h3>Annual Retreat</h3>
+                                    <p>Building bonds beyond borders</p>
+                                </div>
+                            </div>
+                        </div>
+                    )}
+
+                    {activeTab === 'Work Environment' && (
+                        <div className="careers-experience-grid">
+                            <div className="experience-item">
+                                <img src="/images/business-woman.png" alt="Deep Work" />
+                            </div>
+                            <div className="experience-item large">
+                                <img src="/images/team-brainstorm.png" alt="Brainstorm Session" />
+                                <div className="experience-info">
+                                    <h3>Creative Spaces</h3>
+                                    <p>Designed for deep work and collaboration</p>
+                                </div>
+                            </div>
+                            <div className="experience-item wide">
+                                <img src="/images/office-chat.png" alt="Office Life" />
+                                <div className="experience-info">
+                                    <h3>Open & Inclusive</h3>
+                                    <p>A workspace that inspires</p>
+                                </div>
+                            </div>
+                            <div className="experience-item">
+                                <img src="/images/hero-team-new.png" alt="Flexible Setup" />
+                            </div>
+                        </div>
+                    )}
+                </div>
+            </section>
+
+            {/* Reviews & Testimonials Section */}
+            <section className="careers-reviews">
+                <div className="careers-reviews-container">
+                    <div className="careers-reviews-grid">
+                        <div className="careers-reviews-logos">
+                            <div className="careers-review-logo-card">
+                                <div style={{ marginBottom: '16px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                                    <span style={{ fontSize: '24px', fontWeight: 800, color: '#00af41' }}>glassdoor</span>
+                                </div>
+                                <div style={{ display: 'flex', color: '#ffc700', gap: '2px', marginBottom: '8px' }}>
+                                    {[1, 2, 3, 4, 5].map((s) => <Icon key={s} type="star" style={{ width: '16px', height: '16px' }} />)}
+                                </div>
+                                <p style={{ fontSize: '14px', fontWeight: 700, color: '#011812' }}>4.8 Rating</p>
+                            </div>
+                            <div className="careers-review-logo-card">
+                                <div style={{ marginBottom: '16px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                                    <span style={{ fontSize: '24px', fontWeight: 800, color: '#2563eb' }}>AmbitionBox</span>
+                                </div>
+                                <div style={{ display: 'flex', color: '#ffc700', gap: '2px', marginBottom: '8px' }}>
+                                    {[1, 2, 3, 4, 5].map((s) => <Icon key={s} type="star" style={{ width: '16px', height: '16px' }} />)}
+                                </div>
+                                <p style={{ fontSize: '14px', fontWeight: 700, color: '#011812' }}>4.7 Rating</p>
+                            </div>
+                        </div>
+                        <div className="careers-reviews-list">
+                            <div className="careers-review-card">
+                                <div className="careers-review-quote">
+                                    <Icon type="star" style={{ color: '#ffc700', width: '24px', height: '24px', position: 'absolute', top: '-10px', left: '20px', opacity: 0.2 }} />
+                                    <p>&quot;The culture here is incredible. I&apos;ve never worked at a place that truly values individual growth as much as Oneskai does. The mentorship is top-notch.&quot;</p>
+                                </div>
+                                <div className="careers-review-author">
+                                    <img src="/images/team-member-1.png" alt="Employee" />
+                                    <div>
+                                        <strong>Senior Strategist</strong>
+                                        <span>3+ Years at Oneskai</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="careers-review-card">
+                                <div className="careers-review-quote">
+                                    <p>&quot;Remote-first work that actually works. We stay connected through great tools and regular retreats. It&apos;s the perfect balance of freedom and collaboration.&quot;</p>
+                                </div>
+                                <div className="careers-review-author">
+                                    <img src="/images/business-woman.png" alt="Employee" />
+                                    <div>
+                                        <strong>Full Stack Developer</strong>
+                                        <span>2+ Years at Oneskai</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -182,8 +317,8 @@ export function CareersContent() {
                     <div className="careers-culture-grid">
                         {cultureValues.map((value, index) => (
                             <div key={index} className="careers-culture-card">
-                                <div className="careers-culture-icon" style={{ background: value.color }}>
-                                    {value.icon}
+                                <div className="careers-culture-icon" style={{ background: value.color + '15', color: value.color }}>
+                                    <Icon type={value.icon as any} style={{ width: '32px', height: '32px' }} />
                                 </div>
                                 <h3>{value.title}</h3>
                                 <p>{value.description}</p>
@@ -207,11 +342,48 @@ export function CareersContent() {
                     <div className="careers-benefits-grid">
                         {benefits.map((benefit, index) => (
                             <div key={index} className="careers-benefit-card">
-                                <div className="careers-benefit-icon">{benefit.icon}</div>
+                                <div className="careers-benefit-icon-wrapper">
+                                    <Icon type={benefit.icon as any} style={{ width: '32px', height: '32px' }} />
+                                </div>
                                 <h4>{benefit.title}</h4>
                                 <p>{benefit.desc}</p>
                             </div>
                         ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Global Network Stats */}
+            <section className="careers-stats-section">
+                <div className="careers-hero-container">
+                    <div className="careers-hero-grid">
+                        <div className="careers-hero-content">
+                            <span className="careers-label">OPERATIONS</span>
+                            <h2 style={{ fontSize: '42px', fontWeight: 800, color: 'white', marginBottom: '24px', letterSpacing: '-1.5px' }}>
+                                A Global Network of <span>Experts</span>
+                            </h2>
+                            <p style={{ fontSize: '18px', color: 'rgba(255, 255, 255, 0.6)', marginBottom: '32px' }}>
+                                We&apos;ve built a distributed team that brings together the best talent from around the world to solve complex digital challenges.
+                            </p>
+                        </div>
+                        <div className="careers-hero-stats">
+                            <div className="careers-stat-card">
+                                <span className="careers-stat-num">50+</span>
+                                <span className="careers-stat-label">Team Members</span>
+                            </div>
+                            <div className="careers-stat-card">
+                                <span className="careers-stat-num">12</span>
+                                <span className="careers-stat-label">Countries</span>
+                            </div>
+                            <div className="careers-stat-card">
+                                <span className="careers-stat-num">4.8</span>
+                                <span className="careers-stat-label">Glassdoor Rating</span>
+                            </div>
+                            <div className="careers-stat-card">
+                                <span className="careers-stat-num">95%</span>
+                                <span className="careers-stat-label">Retention Rate</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -253,9 +425,9 @@ export function CareersContent() {
                             ))}
                         </div>
                     ) : (
-                        <div className="careers-no-jobs">
-                            <h3>No Open Positions Right Now</h3>
-                            <p>We&apos;re always looking for great talent. Send us your resume and we&apos;ll keep you in mind!</p>
+                        <div className="careers-no-jobs" style={{ textAlign: 'center', padding: '100px 40px', background: '#f8fafc', borderRadius: '20px' }}>
+                            <h3 style={{ fontSize: '28px', fontWeight: 800, color: '#011812', marginBottom: '16px' }}>No Open Positions Right Now</h3>
+                            <p style={{ fontSize: '18px', color: '#64748b', marginBottom: '32px' }}>We&apos;re always looking for great talent. Send us your resume and we&apos;ll keep you in mind!</p>
                             <Link href="/contact" className="careers-hero-btn">
                                 Send Your Resume <Icon type="arrowRight" />
                             </Link>

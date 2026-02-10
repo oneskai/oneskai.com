@@ -12,24 +12,10 @@
     background: #ffffff;
 }
 
-[data-theme="dark"] .influencer-page {
-    background: #0a0a0a;
-}
-
-[data-theme="dark"] .influencer-page .section-title,
-[data-theme="dark"] .influencer-page h2,
-[data-theme="dark"] .influencer-page h3 {
-    color: #ffffff;
-}
-
 .influencer-hero {
     min-height: 95vh;
     padding: 180px 0 100px;
     background: var(--bg-cream);
-}
-
-[data-theme="dark"] .influencer-hero {
-    background: radial-gradient(circle at 20% 30%, rgba(236, 72, 153, 0.15) 0%, transparent 40%), radial-gradient(circle at 80% 70%, rgba(168, 85, 247, 0.15) 0%, transparent 40%), #0a0a0a;
 }
 
 .influencer-hero-grid {
@@ -43,14 +29,14 @@
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    background: linear-gradient(90deg, rgba(236, 72, 153, 0.1), rgba(168, 85, 247, 0.1));
+    background: linear-gradient(90deg, rgba(255, 45, 117, 0.1), rgba(61, 13, 168, 0.1));
     padding: 12px 20px;
     border-radius: 100px;
     font-size: 14px;
     font-weight: 600;
-    color: #ec4899;
+    color: #ff2d75;
     margin-bottom: 32px;
-    border: 1px solid rgba(236, 72, 153, 0.2);
+    border: 1px solid rgba(255, 45, 117, 0.2);
 }
 
 .influencer-hero-title {
@@ -59,10 +45,6 @@
     line-height: 1.05;
     letter-spacing: -3px;
     margin-bottom: 28px;
-}
-
-[data-theme="dark"] .influencer-hero-title {
-    color: #ffffff;
 }
 
 .influencer-hero-title .text-gradient {
@@ -86,11 +68,6 @@
     border-bottom: 1px solid #e2e8f0;
 }
 
-[data-theme="dark"] .influencer-trust {
-    background: #111;
-    border-color: #222;
-}
-
 .influencer-services {
     padding: 120px 0;
 }
@@ -100,17 +77,9 @@
     background: #fafafa;
 }
 
-[data-theme="dark"] .influencer-pricing {
-    background: #0d0d0d;
-}
-
 .influencer-faq {
     padding: 120px 0;
     background: #f8fafc;
-}
-
-[data-theme="dark"] .influencer-faq {
-    background: #0d0d0d;
 }
 
 .influencer-cta {
@@ -134,15 +103,10 @@
     transition: all 0.4s ease;
 }
 
-[data-theme="dark"] .service-card {
-    background: #111;
-    border-color: #222;
-}
-
 .service-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 30px 60px rgba(236, 72, 153, 0.1);
-    border-color: #ec4899;
+    box-shadow: 0 30px 60px rgba(255, 45, 117, 0.1);
+    border-color: #ff2d75;
 }
 
 .pricing-grid {
@@ -161,16 +125,11 @@
     position: relative;
 }
 
-[data-theme="dark"] .price-card {
-    background: #1a1a1a;
-    border-color: #333;
-}
-
 .price-card.featured {
-    border: 2px solid #ec4899;
+    border: 2px solid #ff2d75;
     transform: scale(1.05);
     z-index: 2;
-    box-shadow: 0 30px 60px rgba(236, 72, 153, 0.15);
+    box-shadow: 0 30px 60px rgba(255, 45, 117, 0.15);
 }
 
 .price-card .popular-tag {
@@ -178,7 +137,7 @@
     top: -15px;
     left: 50%;
     transform: translateX(-50%);
-    background: linear-gradient(90deg, #ec4899, #a855f7);
+    background: linear-gradient(90deg, #ff2d75, #3d0da8);
     color: white;
     padding: 8px 24px;
     border-radius: 100px;
@@ -215,7 +174,7 @@
 .cta-form input:focus,
 .cta-form select:focus {
     outline: none;
-    border-color: #ec4899;
+    border-color: #ff2d75;
 }
 
 @media (max-width: 1024px) {

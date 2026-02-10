@@ -102,7 +102,7 @@
 }
 
 .btn-primary:hover {
-    background: #073d32;
+    background: #052e26;
     transform: translateY(-2px);
     box-shadow: 0 10px 30px rgba(5, 46, 38, 0.3);
 }
@@ -303,13 +303,13 @@
     transform: translateY(-5px);
     border-color: var(--accent-pink);
     background: white;
-    box-shadow: 0 20px 40px rgba(124, 58, 237, 0.05);
+    box-shadow: 0 20px 40px rgba(61, 13, 168, 0.05);
 }
 
 .challenge-icon {
     width: 64px;
     height: 64px;
-    background: rgba(124, 58, 237, 0.1);
+    background: rgba(61, 13, 168, 0.1);
     color: var(--accent-pink);
     border-radius: 16px;
     display: flex;
@@ -586,15 +586,15 @@
     position: absolute;
     top: 40px;
     right: 40px;
-    background: #f0fdf4;
-    color: #16a34a;
+    background: #f0f9f7;
+    color: #052e26;
     padding: 10px 20px;
     border-radius: 100px;
     font-weight: 600;
     display: flex;
     align-items: center;
     gap: 8px;
-    box-shadow: 0 4px 12px rgba(22, 163, 74, 0.1);
+    box-shadow: 0 4px 12px rgba(5, 46, 38, 0.1);
 }
 
 /* ===== PROCESS LIFECYCLE (STEPS) ===== */
@@ -637,7 +637,7 @@
 .step-icon-wrapper {
     width: 56px;
     height: 56px;
-    background: rgba(124, 58, 237, 0.1);
+    background: rgba(61, 13, 168, 0.1);
     color: var(--accent-pink);
     border-radius: 12px;
     display: flex;

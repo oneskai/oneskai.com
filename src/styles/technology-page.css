@@ -1,7 +1,7 @@
 /* Marketing Technology Page Styles */
 .tech-page {
     --tech-primary: #0f172a;
-    --tech-accent: #6366f1;
+    --tech-accent: #3d0da8;
     --tech-light: #f8fafc;
 }
 
@@ -21,7 +21,8 @@
     left: 50%;
     width: 600px;
     height: 600px;
-    background: var(--bg-cream);
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
     transform: translate(-50%, -50%);
     pointer-events: none;
 }

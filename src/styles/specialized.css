@@ -10,20 +10,6 @@
     background: #ffffff;
 }
 
-[data-theme="dark"] .specialized-page {
-    background: #0a0a0a;
-}
-
-[data-theme="dark"] .specialized-page .section-title,
-[data-theme="dark"] .specialized-page h2,
-[data-theme="dark"] .specialized-page h3 {
-    color: #ffffff;
-}
-
-[data-theme="dark"] .specialized-page p {
-    color: rgba(255, 255, 255, 0.7);
-}
-
 .specialized-hero {
     min-height: 95vh;
     padding: 180px 0 100px;
@@ -55,10 +41,6 @@
     margin-bottom: 28px;
 }
 
-[data-theme="dark"] .specialized-hero-title {
-    color: #ffffff;
-}
-
 .specialized-hero-subtitle {
     font-size: 22px;
     line-height: 1.6;
@@ -74,11 +56,6 @@
     border-bottom: 1px solid #e2e8f0;
 }
 
-[data-theme="dark"] .specialized-trust {
-    background: #111;
-    border-color: #222;
-}
-
 .specialized-services {
     padding: 120px 0;
 }
@@ -88,17 +65,9 @@
     background: #fafafa;
 }
 
-[data-theme="dark"] .specialized-pricing {
-    background: #0d0d0d;
-}
-
 .specialized-faq {
     padding: 120px 0;
     background: #f8fafc;
-}
-
-[data-theme="dark"] .specialized-faq {
-    background: #0d0d0d;
 }
 
 .specialized-cta {
@@ -122,11 +91,6 @@
     transition: all 0.4s ease;
 }
 
-[data-theme="dark"] .service-card {
-    background: #111;
-    border-color: #222;
-}
-
 .service-card:hover {
     transform: translateY(-10px);
 }
@@ -145,11 +109,6 @@
     border: 1px solid #eee;
     text-align: center;
     position: relative;
-}
-
-[data-theme="dark"] .price-card {
-    background: #1a1a1a;
-    border-color: #333;
 }
 
 .price-card.featured {

@@ -13,21 +13,6 @@
     background: #ffffff;
 }
 
-[data-theme="dark"] .ppc-page {
-    background: #0a0a0a;
-}
-
-[data-theme="dark"] .ppc-page .section-title,
-[data-theme="dark"] .ppc-page h2,
-[data-theme="dark"] .ppc-page h3,
-[data-theme="dark"] .ppc-page h4 {
-    color: #ffffff;
-}
-
-[data-theme="dark"] .ppc-page p {
-    color: rgba(255, 255, 255, 0.7);
-}
-
 /* ===== HERO SECTION ===== */
 .ppc-hero {
     min-height: 95vh;
@@ -35,12 +20,6 @@
     background: var(--bg-cream);
     position: relative;
     overflow: hidden;
-}
-
-[data-theme="dark"] .ppc-hero {
-    background: radial-gradient(circle at 20% 20%, rgba(255, 45, 117, 0.08) 0%, transparent 40%),
-        radial-gradient(circle at 80% 80%, rgba(255, 45, 117, 0.08) 0%, transparent 40%),
-        #0a0a0a;
 }
 
 .ppc-hero-grid {
@@ -71,10 +50,6 @@
     letter-spacing: -3px;
     margin-bottom: 28px;
     color: var(--text-dark);
-}
-
-[data-theme="dark"] .ppc-hero-title {
-    color: #ffffff;
 }
 
 .ppc-hero-title .text-gradient {
@@ -138,21 +113,12 @@
     text-align: center;
 }
 
-[data-theme="dark"] .roas-inner {
-    background: #1a1a1a;
-}
-
 /* ===== TRUST BAR ===== */
 .ppc-trust-bar {
     padding: 50px 0;
     background: #f8fafc;
     border-top: 1px solid #e2e8f0;
     border-bottom: 1px solid #e2e8f0;
-}
-
-[data-theme="dark"] .ppc-trust-bar {
-    background: #111;
-    border-color: #222;
 }
 
 .partner-badges {
@@ -190,11 +156,6 @@
     text-align: center;
     border: 1px solid #f1f5f9;
     transition: all 0.3s ease;
-}
-
-[data-theme="dark"] .platform-card {
-    background: #111;
-    border-color: #222;
 }
 
 .platform-card:hover {
@@ -239,10 +200,6 @@
     background: #f8fafc;
 }
 
-[data-theme="dark"] .ppc-campaigns {
-    background: #0d0d0d;
-}
-
 .campaigns-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -257,10 +214,6 @@
     position: relative;
     overflow: hidden;
     transition: all 0.4s ease;
-}
-
-[data-theme="dark"] .campaign-card {
-    background: #1a1a1a;
 }
 
 .campaign-card::before {
@@ -307,17 +260,9 @@
     transition: all 0.3s ease;
 }
 
-[data-theme="dark"] .strategy-item {
-    background: #111;
-}
-
 .strategy-item:hover {
     background: #f0f9ff;
     transform: translateX(10px);
-}
-
-[data-theme="dark"] .strategy-item:hover {
-    background: #1a1a1a;
 }
 
 .bidding-visual {
@@ -332,10 +277,6 @@
 .ppc-pricing {
     padding: 120px 0;
     background: #fafafa;
-}
-
-[data-theme="dark"] .ppc-pricing {
-    background: #0d0d0d;
 }
 
 .pricing-grid {
@@ -353,11 +294,6 @@
     text-align: center;
     position: relative;
     transition: all 0.3s ease;
-}
-
-[data-theme="dark"] .price-card {
-    background: #1a1a1a;
-    border-color: #333;
 }
 
 .price-card.featured {
@@ -431,11 +367,6 @@
     cursor: pointer;
     border: 1px solid #e2e8f0;
     transition: all 0.3s ease;
-}
-
-[data-theme="dark"] .faq-item {
-    background: #111;
-    border-color: #222;
 }
 
 .faq-item:hover {

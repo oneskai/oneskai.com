@@ -44,7 +44,7 @@
     --gradient-accent: linear-gradient(135deg, var(--brand-accent-yellow), var(--brand-accent-purple));
     --gradient-hero: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-primary-dark) 100%);
     --gradient-dark: linear-gradient(135deg, var(--brand-primary-dark) 0%, var(--brand-navy) 100%);
-    --gradient-purple: linear-gradient(135deg, var(--brand-accent-purple), #6b21a8);
+    --gradient-purple: linear-gradient(135deg, var(--brand-accent-purple), var(--accent-pink));
 
     /* Shadows */
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);

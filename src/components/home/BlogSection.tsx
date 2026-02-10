@@ -47,9 +47,7 @@ export function BlogSection() {
                     <div className="blog-header-left">
                         <span className="section-tag">Insights & Resources</span>
                         <h2 className="section-title">
-                            Latest From
-                            <br />
-                            <span className="title-accent">Our Blog</span>
+                            Latest From <span className="title-accent">Our Blog</span>
                         </h2>
                     </div>
                     <Link href="/blog" className="btn-outline">

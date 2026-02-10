@@ -1,0 +1,281 @@
+.author-profile-page {
+    padding-top: 100px;
+    background: white;
+    --author-purple: #7c3aed;
+    --author-pink: #ff2d75;
+    --author-dark: #18181b;
+    --author-gray: #f4f4f5;
+}
+
+/* HEADER V2 */
+.author-header-v2 {
+    background: white;
+    padding: 60px 0 100px;
+}
+
+.author-header-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.author-top-label {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--author-purple);
+    margin-bottom: 40px;
+}
+
+.author-hero-grid {
+    display: grid;
+    grid-template-columns: 450px 1fr;
+    gap: 80px;
+    align-items: center;
+    /* Better vertical alignment */
+}
+
+/* LEFT COLUMN: IMAGE & PILLS */
+.author-hero-left {
+    position: relative;
+}
+
+.author-image-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 12px;
+    overflow: visible;
+    border: 1px solid #e5e7eb;
+}
+
+.author-main-img {
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.author-pills-overlay {
+    position: absolute;
+    right: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+.author-name-pill {
+    background: #7c3aed;
+    color: white;
+    padding: 12px 32px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    font-weight: 700;
+    font-size: 18px;
+    box-shadow: 0 10px 25px rgba(124, 58, 237, 0.3);
+    white-space: nowrap;
+}
+
+.author-role-pill {
+    background: #27272a;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 10px 32px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    font-size: 16px;
+    margin-top: -5px;
+    margin-left: 0px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    white-space: nowrap;
+}
+
+.author-social-links {
+    display: flex;
+    gap: 12px;
+    margin-top: 40px;
+}
+
+.social-icon-box {
+    width: 44px;
+    height: 44px;
+    background: #7c3aed;
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s;
+}
+
+.social-icon-box:hover {
+    transform: translateY(-5px);
+}
+
+/* RIGHT COLUMN: BIO & METER */
+.author-hero-right {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    /* Reduced gap for tighter alignment */
+}
+
+.author-bio-v2 {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #3f3f46;
+    max-width: 800px;
+}
+
+.expert-meter-box {
+    background: #f8fafc;
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid #f1f5f9;
+}
+
+.expert-meter-title {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--author-dark);
+    margin-bottom: 32px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.expert-metrics-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.metric-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.metric-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    font-weight: 700;
+    color: #1a1d23;
+}
+
+.metric-val {
+    color: #7c3aed;
+}
+
+.metric-bar-bg {
+    height: 8px;
+    background: #e2e8f0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.metric-bar-fill {
+    height: 100%;
+    background: #7c3aed;
+    /* Single color as requested */
+    border-radius: 4px;
+}
+
+/* AUTHOR CONTENT SEPARATOR */
+.author-content {
+    background: white;
+    padding: 100px 0 120px;
+    position: relative;
+    z-index: 20;
+}
+
+.author-content-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.author-section-title {
+    font-size: 36px;
+    font-weight: 800;
+    color: #18181b;
+    margin-bottom: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+}
+
+.author-section-title span {
+    background: #ff2d75;
+    color: white;
+    padding: 4px 16px;
+    border-radius: 50px;
+    font-size: 16px;
+}
+
+
+/* BLOG CARD ENHANCEMENT — smaller cards on author page */
+.author-profile-page .blog-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.author-profile-page .blog-card {
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.author-profile-page .blog-card-image {
+    height: 150px;
+}
+
+.author-profile-page .blog-card-content {
+    padding: 20px;
+}
+
+.author-profile-page .blog-card-title {
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.author-profile-page .blog-card-excerpt {
+    font-size: 14px;
+    margin-bottom: 16px;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+}
+
+.author-profile-page .blog-card-date {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.author-profile-page .blog-card-footer {
+    padding-top: 14px;
+}
+
+.author-profile-page .blog-card-read {
+    font-size: 13px;
+}
+
+.author-profile-page .blog-card:hover {
+    border-color: #7c3aed;
+    box-shadow: 0 15px 35px rgba(124, 58, 237, 0.08);
+    transform: translateY(-5px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .author-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .author-hero-left {
+        max-width: 450px;
+        margin: 0 auto;
+    }
+}

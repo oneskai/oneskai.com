@@ -1,0 +1,320 @@
+/* src/styles/growth-journey.css */
+
+.growth-journey-section {
+    padding: 120px 0;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.journey-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.journey-header {
+    text-align: center;
+    margin-bottom: 140px;
+}
+
+/* Roadmap styles */
+.journey-roadmap {
+    position: relative;
+    padding: 60px 0;
+}
+
+/* SVG Path for desktop */
+.journey-svg-path {
+    position: absolute;
+    top: 140px;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    z-index: 1;
+    pointer-events: none;
+    display: block;
+    opacity: 0.4;
+}
+
+@media (max-width: 1200px) {
+    .journey-svg-path {
+        display: none;
+    }
+}
+
+.journey-phases {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    z-index: 2;
+    gap: 120px;
+    /* Large gap to house connectors */
+}
+
+.phase-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    min-width: 250px;
+}
+
+/* Phase Card - House Shape */
+.phase-card {
+    width: 100%;
+    background: #ffffff;
+    padding: 60px 24px 40px;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border-radius: 0 0 24px 24px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    /* Main border */
+    border-top: none;
+}
+
+/* The Peak (House roof) - FIXED VISIBILITY */
+.phase-card::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -1px;
+    /* Align with card border */
+    right: -1px;
+    height: 52px;
+    background: #ffffff;
+    /* Use clip-path but we need to see the border. 
+       We'll use a wrap-around shadow or a second element for border */
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    z-index: 1;
+}
+
+/* Secondary element for the peaked border line */
+.phase-card::after {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -1px;
+    right: -1px;
+    height: 52px;
+    z-index: 0;
+    background: rgba(0, 0, 0, 0.08);
+    /* The border color */
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    padding: 1px;
+    /* Simulate border width */
+}
+
+.phase-top-tag {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 6px 20px;
+    border-radius: 100px;
+    font-size: 11px;
+    font-weight: 800;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    z-index: 10;
+    white-space: nowrap;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Gradients for Phase Tops */
+.phase-1 .phase-top-tag {
+    background: linear-gradient(135deg, #fde047 0%, #a3e635 100%);
+}
+
+.phase-2 .phase-top-tag {
+    background: linear-gradient(135deg, #2dd4bf 0%, #06b6d4 100%);
+}
+
+.phase-3 .phase-top-tag {
+    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+}
+
+.phase-4 .phase-top-tag {
+    background: linear-gradient(135deg, #a855f7 0%, #6366f1 100%);
+}
+
+.phase-metric {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: -1px;
+}
+
+.phase-1 .phase-metric {
+    color: #84cc16;
+}
+
+.phase-2 .phase-metric {
+    color: #0891b2;
+}
+
+.phase-3 .phase-metric {
+    color: #6366f1;
+}
+
+.phase-4 .phase-metric {
+    color: #4338ca;
+}
+
+.phase-title {
+    font-size: 22px;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 20px;
+}
+
+.phase-description {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #475569;
+}
+
+/* Actions / Loops - POSITIONED HIGHER TO PREVENT OVERLAP */
+.phase-connector {
+    position: absolute;
+    top: 40px;
+    /* Moved up to clear the description text */
+    right: -85px;
+    /* Centered in the 120px gap */
+    width: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 5;
+}
+
+.loop-wrapper {
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+
+.loop-icon {
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    border: 2px solid #e2e8f0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    color: #94a3b8;
+}
+
+.loop-spinner {
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    animation: rotateLoop 10s linear infinite;
+}
+
+@keyframes rotateLoop {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loop-text {
+    margin-top: 15px;
+    /* More breathing room */
+    font-size: 10px;
+    font-weight: 800;
+    color: #0f172a;
+    /* Darker for better contrast */
+    text-transform: uppercase;
+    white-space: nowrap;
+    letter-spacing: 0.8px;
+    background: #ffffff;
+    padding: 6px 14px;
+    border-radius: 100px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+/* Hover effects */
+.phase-item:hover {
+    transform: translateY(-15px);
+}
+
+.phase-item:hover .phase-card {
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.08);
+    border-color: var(--accent-pink-light);
+}
+
+.phase-item:hover .loop-icon {
+    border-color: var(--accent-pink);
+    color: var(--accent-pink);
+    transform: scale(1.1);
+}
+
+/* Mobile Styling */
+@media (max-width: 1200px) {
+    .journey-phases {
+        flex-direction: column;
+        align-items: center;
+        gap: 120px;
+    }
+
+    .phase-item {
+        width: 100%;
+        max-width: 480px;
+    }
+
+    .phase-connector {
+        position: relative;
+        right: auto;
+        top: auto;
+        margin-top: 40px;
+        width: 100%;
+    }
+
+    .phase-item::after {
+        content: '';
+        position: absolute;
+        bottom: -120px;
+        left: 50%;
+        width: 2px;
+        height: 120px;
+        background: linear-gradient(to bottom, #e2e8f0, transparent);
+    }
+
+    .phase-item:last-child::after {
+        display: none;
+    }
+}
+
+.journey-footer {
+    margin-top: 120px;
+    text-align: center;
+}
+
+.journey-cta-bar {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    background: #f8fafc;
+    padding: 16px 40px;
+    border-radius: 100px;
+    font-weight: 700;
+    color: #0f172a;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}

@@ -23,7 +23,7 @@ const faqSections: FAQSection[] = [
     {
         id: 'general',
         title: 'General Questions',
-        icon: '❓',
+        icon: 'help',
         color: 'linear-gradient(135deg, #6366f1, #8b5cf6)',
         faqs: [
             {
@@ -55,7 +55,7 @@ const faqSections: FAQSection[] = [
     {
         id: 'seo',
         title: 'SEO & Organic Search',
-        icon: '🔍',
+        icon: 'search',
         color: 'linear-gradient(135deg, #10b981, #059669)',
         faqs: [
             {
@@ -103,7 +103,7 @@ const faqSections: FAQSection[] = [
     {
         id: 'aeo',
         title: 'Answer Engine Optimization (AEO)',
-        icon: '🤖',
+        icon: 'cpu',
         color: 'linear-gradient(135deg, #8b5cf6, #a855f7)',
         faqs: [
             {
@@ -139,7 +139,7 @@ const faqSections: FAQSection[] = [
     {
         id: 'geo',
         title: 'Generative Engine Optimization (GEO)',
-        icon: '✨',
+        icon: 'zap',
         color: 'linear-gradient(135deg, #f59e0b, #d97706)',
         faqs: [
             {
@@ -171,7 +171,7 @@ const faqSections: FAQSection[] = [
     {
         id: 'ppc',
         title: 'PPC & Paid Advertising',
-        icon: '📢',
+        icon: 'megaphone',
         color: 'linear-gradient(135deg, #ef4444, #dc2626)',
         faqs: [
             {
@@ -211,7 +211,7 @@ const faqSections: FAQSection[] = [
     {
         id: 'social',
         title: 'Social Media Marketing',
-        icon: '📱',
+        icon: 'smartphone',
         color: 'linear-gradient(135deg, #ec4899, #db2777)',
         faqs: [
             {
@@ -243,7 +243,7 @@ const faqSections: FAQSection[] = [
     {
         id: 'analytics',
         title: 'Analytics & Reporting',
-        icon: '📊',
+        icon: 'analytics',
         color: 'linear-gradient(135deg, #0ea5e9, #0284c7)',
         faqs: [
             {
@@ -275,7 +275,7 @@ const faqSections: FAQSection[] = [
     {
         id: 'pricing',
         title: 'Pricing & Process',
-        icon: '💰',
+        icon: 'briefcase',
         color: 'linear-gradient(135deg, #22c55e, #16a34a)',
         faqs: [
             {
@@ -311,7 +311,7 @@ const faqSections: FAQSection[] = [
     {
         id: 'technical',
         title: 'Technical & Website',
-        icon: '💻',
+        icon: 'code',
         color: 'linear-gradient(135deg, #64748b, #475569)',
         faqs: [
             {
@@ -369,7 +369,7 @@ function FAQSectionBlock({ section, openItems, toggleItem }: {
         <div id={section.id} className="faq-section">
             <div className="faq-section-header">
                 <div className="faq-section-icon" style={{ background: section.color }}>
-                    {section.icon}
+                    <Icon type={section.icon} />
                 </div>
                 <h2 className="faq-section-title">{section.title}</h2>
                 <span className="faq-section-count">{section.faqs.length} Questions</span>
@@ -417,7 +417,6 @@ export function FAQContent() {
         }
     };
 
-    const totalFAQs = faqSections.reduce((acc, section) => acc + section.faqs.length, 0);
 
     return (
         <div className="faq-page">
@@ -432,13 +431,6 @@ export function FAQContent() {
                         Find answers to common questions about our digital marketing services,
                         processes, and how we can help grow your business.
                     </p>
-                    <div className="faq-search">
-                        <input
-                            type="text"
-                            className="faq-search-input"
-                            placeholder="Search for answers..."
-                        />
-                    </div>
                 </div>
             </section>
 
@@ -458,47 +450,28 @@ export function FAQContent() {
                                 className={`faq-category-btn ${activeCategory === section.id ? 'active' : ''}`}
                                 onClick={() => scrollToSection(section.id)}
                             >
-                                {section.icon} {section.title}
+                                <Icon type={section.icon} /> {section.title}
                             </button>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* FAQ Stats */}
-            <section className="faq-stats">
-                <div className="faq-stats-container">
-                    <div className="faq-stats-grid">
-                        <div className="faq-stat-item">
-                            <span className="faq-stat-num">{totalFAQs}+</span>
-                            <span className="faq-stat-label">Questions Answered</span>
-                        </div>
-                        <div className="faq-stat-item">
-                            <span className="faq-stat-num">{faqSections.length}</span>
-                            <span className="faq-stat-label">Topic Categories</span>
-                        </div>
-                        <div className="faq-stat-item">
-                            <span className="faq-stat-num">24/7</span>
-                            <span className="faq-stat-label">Support Available</span>
-                        </div>
-                        <div className="faq-stat-item">
-                            <span className="faq-stat-num">98%</span>
-                            <span className="faq-stat-label">Questions Resolved</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
             {/* FAQ Sections */}
             <section className="faq-sections">
                 <div className="faq-sections-container">
-                    {faqSections.map((section) => (
-                        <FAQSectionBlock
-                            key={section.id}
-                            section={section}
-                            openItems={openItems}
-                            toggleItem={toggleItem}
-                        />
+                    {faqSections.map((section, index) => (
+                        <div key={section.id}>
+                            <FAQSectionBlock
+                                section={section}
+                                openItems={openItems}
+                                toggleItem={toggleItem}
+                            />
+                            {index < faqSections.length - 1 && (
+                                <div className="faq-section-separator" />
+                            )}
+                        </div>
                     ))}
                 </div>
             </section>

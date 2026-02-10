@@ -49,22 +49,12 @@
     border: 1px solid rgba(139, 92, 246, 0.1);
 }
 
-[data-theme="dark"] .geo-badge {
-    background: rgba(255, 255, 255, 0.08);
-    color: var(--accent-yellow);
-    border: 1px solid rgba(255, 199, 1, 0.2);
-}
-
 .geo-badge .badge-dot {
     width: 8px;
     height: 8px;
     background: var(--accent-pink);
     border-radius: 50%;
     animation: pulse 2s infinite;
-}
-
-[data-theme="dark"] .geo-badge .badge-dot {
-    background: var(--accent-yellow);
 }
 
 .geo-hero-title {
@@ -344,10 +334,6 @@
     overflow: hidden;
 }
 
-[data-theme="dark"] .industry-expertise-section.geo-version {
-    background: #01090e;
-}
-
 .industry-header-grid {
     display: grid;
     grid-template-columns: 1.2fr 0.8fr;
@@ -372,11 +358,6 @@
     overflow: hidden;
     transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
     cursor: pointer;
-}
-
-[data-theme="dark"] .industry-mosaic-card {
-    background: rgba(255, 255, 255, 0.03);
-    border-color: rgba(255, 255, 255, 0.08);
 }
 
 .industry-mosaic-card.saas {
@@ -421,7 +402,7 @@
 
 .mosaic-icon-box.blue {
     background: rgba(59, 130, 246, 0.1);
-    color: #3b82f6;
+    color: #3d0da8;
 }
 
 .mosaic-icon-box.pink {
@@ -448,10 +429,6 @@
     margin-bottom: 20px;
     letter-spacing: -1px;
     color: var(--text-dark);
-}
-
-[data-theme="dark"] .mosaic-title {
-    color: white;
 }
 
 .mosaic-description {

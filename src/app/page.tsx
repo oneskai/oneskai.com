@@ -1,16 +1,17 @@
 import {
   HeroSection,
   LogoWall,
-  ReviewsSection,
-  ChallengesSection,
-  IndustryExpertise,
+  ProcessSection,
   ServicesSection,
+  ChallengesSection,
   ResultsSection,
-  WhyUsSection,
-  SolutionsSection,
-  TestimonialsSection,
-  BlogSection,
-  CTASection
+  SocialProofSection,
+  HumanSection,
+  FAQSection,
+  LeadMagnet,
+  CTASection,
+  GrowthJourney,
+  BlogSection
 } from '@/components/home';
 
 export default function HomePage() {
@@ -18,15 +19,15 @@ export default function HomePage() {
     <main className="home-page">
       <HeroSection />
       <LogoWall />
-      <ServicesSection />
       <ChallengesSection />
-      <IndustryExpertise />
+      <ServicesSection />
       <ResultsSection />
-      <WhyUsSection />
-      <SolutionsSection />
-      <TestimonialsSection />
-      <ReviewsSection />
+      <GrowthJourney />
+      <SocialProofSection />
+      <HumanSection />
+      <LeadMagnet />
       <BlogSection />
+      <FAQSection />
       <CTASection />
     </main>
   );

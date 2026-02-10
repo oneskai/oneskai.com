@@ -6,38 +6,39 @@ import '@/styles/about-page.css';
 export function AboutContent() {
     return (
         <div className="about-page">
-            {/* Hero Section */}
+            {/* Hero Section (Homepage Style) */}
             <section className="about-hero">
+                <div className="about-hero-bg">
+                    <img
+                        src="/images/office-chat.png"
+                        alt="Oneskai Team Background"
+                    />
+                </div>
+                <div className="about-hero-overlay"></div>
+
                 <div className="about-hero-container">
-                    <div className="about-hero-grid">
-                        <div className="about-hero-content">
-                            <span className="about-label">ABOUT ONESKAI</span>
-                            <h1 className="about-hero-title">
-                                Driving the Future of <span>Digital Evolution</span>
-                            </h1>
-                            <p className="about-hero-subtitle">
-                                We are a team of strategists, creatives, and technologists united by a single mission:
-                                to transform ambitious brands into digital leaders through data-driven innovation.
-                            </p>
-                        </div>
-                        <div className="about-hero-visual">
-                            <div className="about-hero-stats">
-                                <div className="about-stat-card">
-                                    <span className="about-stat-num">150+</span>
-                                    <span className="about-stat-label">Projects Delivered</span>
-                                </div>
-                                <div className="about-stat-card">
-                                    <span className="about-stat-num">$50M+</span>
-                                    <span className="about-stat-label">Revenue Generated</span>
-                                </div>
-                                <div className="about-stat-card">
-                                    <span className="about-stat-num">40+</span>
-                                    <span className="about-stat-label">Team Members</span>
-                                </div>
-                                <div className="about-stat-card">
-                                    <span className="about-stat-num">8+</span>
-                                    <span className="about-stat-label">Years of Excellence</span>
-                                </div>
+                    <div className="about-hero-content">
+                        <span className="about-label">OUR MISSION</span>
+                        <h1 className="about-hero-title">
+                            Driving the Future of <span>Digital Evolution</span>
+                        </h1>
+                        <p className="about-hero-subtitle">
+                            We are a team of strategists, creatives, and technologists united by a single mission:
+                            to transform ambitious brands into digital leaders through data-driven innovation.
+                        </p>
+
+                        <div className="about-hero-stats">
+                            <div className="about-stat-item">
+                                <span className="about-stat-num">150+</span>
+                                <span className="about-stat-label">Projects</span>
+                            </div>
+                            <div className="about-stat-item">
+                                <span className="about-stat-num">$50M+</span>
+                                <span className="about-stat-label">Revenue</span>
+                            </div>
+                            <div className="about-stat-item">
+                                <span className="about-stat-num">40+</span>
+                                <span className="about-stat-label">Experts</span>
                             </div>
                         </div>
                     </div>
@@ -73,7 +74,7 @@ export function AboutContent() {
                                 Connect with our experts to discuss how Oneskai can transform your digital presence and accelerate your business growth.
                             </p>
                             <Link href="/contact" className="about-cta-btn">
-                                Schedule a Consultation
+                                Schedule a Consultation <Icon type="arrowRight" />
                             </Link>
                         </div>
                     </div>
@@ -92,42 +93,42 @@ export function AboutContent() {
                     </div>
                     <div className="about-values-grid">
                         <div className="about-value-card">
-                            <div className="about-value-icon" style={{ background: 'rgba(251, 191, 36, 0.15)', color: '#fbbf24' }}>
+                            <div className="about-value-icon" style={{ background: 'rgba(217, 27, 92, 0.1)', color: 'var(--about-accent)' }}>
                                 <Icon type="target" />
                             </div>
                             <h3>Results-Obsessed</h3>
                             <p>We measure everything. If it doesn&apos;t move the needle for your business, we don&apos;t do it. Period.</p>
                         </div>
                         <div className="about-value-card">
-                            <div className="about-value-icon" style={{ background: 'rgba(236, 72, 153, 0.15)', color: '#ec4899' }}>
+                            <div className="about-value-icon" style={{ background: 'rgba(217, 27, 92, 0.1)', color: 'var(--about-accent)' }}>
                                 <Icon type="heart" />
                             </div>
                             <h3>Client-Centric</h3>
                             <p>Your success is our success. We genuinely care about your goals and treat your business like our own.</p>
                         </div>
                         <div className="about-value-card">
-                            <div className="about-value-icon" style={{ background: 'rgba(34, 197, 94, 0.15)', color: '#22c55e' }}>
+                            <div className="about-value-icon" style={{ background: 'rgba(217, 27, 92, 0.1)', color: 'var(--about-accent)' }}>
                                 <Icon type="zap" />
                             </div>
                             <h3>Innovation-Driven</h3>
                             <p>The digital landscape evolves constantly. We stay ahead of trends so you don&apos;t have to.</p>
                         </div>
                         <div className="about-value-card">
-                            <div className="about-value-icon" style={{ background: 'rgba(59, 130, 246, 0.15)', color: '#3b82f6' }}>
+                            <div className="about-value-icon" style={{ background: 'rgba(217, 27, 92, 0.1)', color: 'var(--about-accent)' }}>
                                 <Icon type="shield" />
                             </div>
                             <h3>Radical Transparency</h3>
                             <p>No hidden fees, no jargon, no BS. We tell you exactly what we&apos;re doing and why.</p>
                         </div>
                         <div className="about-value-card">
-                            <div className="about-value-icon" style={{ background: 'rgba(139, 92, 246, 0.15)', color: '#8b5cf6' }}>
+                            <div className="about-value-icon" style={{ background: 'rgba(217, 27, 92, 0.1)', color: 'var(--about-accent)' }}>
                                 <Icon type="users" />
                             </div>
                             <h3>Collaborative Spirit</h3>
                             <p>We don&apos;t work for you—we work with you. The best results come from true partnership.</p>
                         </div>
                         <div className="about-value-card">
-                            <div className="about-value-icon" style={{ background: 'rgba(6, 182, 212, 0.15)', color: '#06b6d4' }}>
+                            <div className="about-value-icon" style={{ background: 'rgba(217, 27, 92, 0.1)', color: 'var(--about-accent)' }}>
                                 <Icon type="trending-up" />
                             </div>
                             <h3>Continuous Growth</h3>
@@ -141,43 +142,119 @@ export function AboutContent() {
             <section className="about-team">
                 <div className="about-team-container">
                     <div className="about-team-header">
-                        <span className="about-label">OUR TEAM</span>
-                        <h2 className="about-section-title">Meet the Experts</h2>
+                        <span className="about-label">OWNERSHIP</span>
+                        <h2 className="about-section-title">Leadership</h2>
                         <p style={{ color: '#64748b', fontSize: '17px', lineHeight: '1.7' }}>
-                            A diverse team of strategists, creators, and analysts working to grow your business.
+                            Meet the visionaries driving our agency forward with strategy and innovation.
                         </p>
                     </div>
-                    <div className="about-team-grid">
+
+                    {/* Leadership Grid */}
+                    <div className="about-leadership-grid">
                         <div className="about-team-card">
-                            <div className="about-team-avatar">👨‍💼</div>
-                            <h4>Rajesh Kumar</h4>
+                            <div className="about-team-avatar">
+                                <img src="/images/team-member-1.png" alt="Swapan Kumar Manna" />
+                            </div>
+                            <h4>Swapan Kumar Manna</h4>
                             <span>Founder & CEO</span>
                         </div>
                         <div className="about-team-card">
-                            <div className="about-team-avatar">👩‍💻</div>
-                            <h4>Priya Sharma</h4>
-                            <span>Head of Strategy</span>
+                            <div className="about-team-avatar">
+                                <img src="/images/team-member-2.png" alt="Prasen Pal" />
+                            </div>
+                            <h4>Prasen Pal</h4>
+                            <span>Partner</span>
                         </div>
                         <div className="about-team-card">
-                            <div className="about-team-avatar">👨‍🎨</div>
-                            <h4>Arjun Patel</h4>
-                            <span>Creative Director</span>
-                        </div>
-                        <div className="about-team-card">
-                            <div className="about-team-avatar">👩‍🔬</div>
-                            <h4>Neha Gupta</h4>
-                            <span>Head of Analytics</span>
+                            <div className="about-team-avatar">
+                                <img src="/images/team-member-3.png" alt="Arpit Garg" />
+                            </div>
+                            <h4>Arpit Garg</h4>
+                            <span>Partner</span>
                         </div>
                     </div>
-                    <div style={{ textAlign: 'center', marginTop: '50px' }}>
-                        <Link href="/about/team" className="about-cta-btn" style={{ background: 'transparent', border: '2px solid #1a472a', color: '#1a472a' }}>
-                            View Full Team <Icon type="arrowRight" />
+
+                    <div className="about-team-header" style={{ marginTop: '100px', marginBottom: '40px' }}>
+                        <h3 style={{ fontSize: '32px', fontWeight: 800, color: 'var(--about-dark)', letterSpacing: '-1px' }}>Team Experts</h3>
+                    </div>
+
+                    {/* Small Team Cards Grid */}
+                    <div className="about-team-grid-small">
+                        {[
+                            { name: "Sarah Jenkins", role: "Sr. Director, Social Media", img: "/images/business-woman.png" },
+                            { name: "David Miller", role: "Digital Marketing Lead", img: "/images/team-member-1.png" },
+                            { name: "Amanda Chen", role: "Software Engineer", img: "/images/woman-apron.png" },
+                            { name: "Robert Wilson", role: "People Executive", img: "/images/team-member-2.png" },
+                            { name: "Elena Rodriguez", role: "Content Strategist", img: "/images/client-testimonial.png" },
+                            { name: "James Taylor", role: "Performance Marketer", img: "/images/team-member-3.png" },
+                            { name: "Michelle Wu", role: "UI/UX Designer", img: "/images/business-woman.png" },
+                            { name: "Kevin Park", role: "Backend Developer", img: "/images/team-member-1.png" },
+                            { name: "Rachel Green", role: "Account Manager", img: "/images/business-woman.png" },
+                            { name: "Daniel Lee", role: "Data Analyst", img: "/images/team-member-2.png" },
+                            { name: "Sophie Moore", role: "SEO Specialist", img: "/images/business-woman.png" },
+                            { name: "Thomas Wright", role: "Creative Lead", img: "/images/team-member-3.png" }
+                        ].map((expert, index) => (
+                            <div key={index} className="about-team-card-small">
+                                <img src={expert.img} alt={expert.name} />
+                                <div className="about-team-expert-info">
+                                    <h5>{expert.name}</h5>
+                                    <p>{expert.role}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
+                    <div style={{ textAlign: 'center', marginTop: '80px' }}>
+                        <Link href="/about/team" className="about-cta-btn" style={{ background: 'white', border: '1px solid #e2e8f0', color: 'var(--about-dark)' }}>
+                            Join Our Team <Icon type="arrowRight" />
                         </Link>
                     </div>
                 </div>
             </section>
 
-            {/* Journey/Timeline Section */}
+            {/* Awards/Trust Section */}
+            <section className="about-awards">
+                <div className="about-awards-container">
+                    <div className="about-awards-grid">
+                        <div className="about-award-badge">
+                            <Icon type="target" style={{ color: '#D91B5C', width: '32px', height: '32px' }} />
+                            <span>Best Results</span>
+                        </div>
+                        <div className="about-award-badge">
+                            <Icon type="zap" style={{ color: '#F59E0B', width: '32px', height: '32px' }} />
+                            <span>Fastest Implementation</span>
+                        </div>
+                        <div className="about-award-badge">
+                            <Icon type="shield" style={{ color: '#10B981', width: '32px', height: '32px' }} />
+                            <span>Best Relationship</span>
+                        </div>
+                        <div className="about-award-badge">
+                            <Icon type="goodfirms" style={{ color: '#0EA5E9', width: '32px', height: '32px' }} />
+                            <span>Top Rated Agency</span>
+                        </div>
+                        <div className="about-award-badge">
+                            <Icon type="award" style={{ color: '#8B5CF6', width: '32px', height: '32px' }} />
+                            <span>Best Usability</span>
+                        </div>
+                        <div className="about-award-badge">
+                            <Icon type="clutch" style={{ color: '#EF4444', width: '32px', height: '32px' }} />
+                            <span>Easiest Admin</span>
+                        </div>
+                    </div>
+                    <div className="about-awards-info">
+                        <span className="about-label">RECOGNITION</span>
+                        <h3>Voted #1 in 571 Reports</h3>
+                        <p style={{ color: '#64748b', marginBottom: '32px', fontSize: '17px' }}>
+                            Our dedication to excellence has been recognized by top industry review platforms and benchmarks worldwide.
+                        </p>
+                        <Link href="/about/awards" className="about-learn-more">
+                            Learn more <Icon type="arrowRight" />
+                        </Link>
+                    </div>
+                </div>
+            </section>
+
+            {/* Journey Section */}
             <section className="about-journey">
                 <div className="about-journey-container">
                     <div className="about-journey-header">
@@ -232,19 +309,62 @@ export function AboutContent() {
                 </div>
             </section>
 
+            {/* Client List Section */}
+            <section className="about-clients">
+                <div className="about-clients-container">
+                    <div style={{ textAlign: 'center', marginBottom: '60px' }}>
+                        <span className="about-label">OUR CLIENTS</span>
+                        <h2 className="about-section-title">Brands We Power</h2>
+                    </div>
+                    <div className="about-clients-grid">
+                        <div className="about-client-logo">
+                            <span style={{ fontSize: '20px', fontWeight: 800, color: '#94a3b8' }}>SAMSUNG</span>
+                        </div>
+                        <div className="about-client-logo">
+                            <span style={{ fontSize: '20px', fontWeight: 800, color: '#94a3b8' }}>VERIZON</span>
+                        </div>
+                        <div className="about-client-logo">
+                            <span style={{ fontSize: '20px', fontWeight: 800, color: '#94a3b8' }}>LENOVO</span>
+                        </div>
+                        <div className="about-client-logo">
+                            <span style={{ fontSize: '20px', fontWeight: 800, color: '#94a3b8' }}>PFIZER</span>
+                        </div>
+                        <div className="about-client-logo">
+                            <span style={{ fontSize: '20px', fontWeight: 800, color: '#94a3b8' }}>DISNEY</span>
+                        </div>
+                        <div className="about-client-logo">
+                            <span style={{ fontSize: '20px', fontWeight: 800, color: '#94a3b8' }}>ADOBE</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* Partners Section */}
             <section className="about-partners">
                 <div className="about-partners-container">
-                    <div className="about-partners-header">
-                        <span className="about-label">TRUSTED BY</span>
-                        <h2 className="about-section-title" style={{ fontSize: '28px' }}>Brands We&apos;ve Partnered With</h2>
+                    <div style={{ textAlign: 'center', marginBottom: '60px' }}>
+                        <span className="about-label">PARTNERSHIPS</span>
+                        <h2 className="about-section-title">Global Partners</h2>
                     </div>
                     <div className="about-partners-grid">
-                        <span style={{ fontSize: '24px', fontWeight: 600, color: '#94a3b8' }}>Google</span>
-                        <span style={{ fontSize: '24px', fontWeight: 600, color: '#94a3b8' }}>Meta</span>
-                        <span style={{ fontSize: '24px', fontWeight: 600, color: '#94a3b8' }}>Shopify</span>
-                        <span style={{ fontSize: '24px', fontWeight: 600, color: '#94a3b8' }}>HubSpot</span>
-                        <span style={{ fontSize: '24px', fontWeight: 600, color: '#94a3b8' }}>Semrush</span>
+                        <div className="about-partner-logo">
+                            <span style={{ fontSize: '20px', fontWeight: 800, color: '#94a3b8' }}>GOOGLE</span>
+                        </div>
+                        <div className="about-partner-logo">
+                            <span style={{ fontSize: '20px', fontWeight: 800, color: '#94a3b8' }}>META</span>
+                        </div>
+                        <div className="about-partner-logo">
+                            <span style={{ fontSize: '20px', fontWeight: 800, color: '#94a3b8' }}>SHOPIFY</span>
+                        </div>
+                        <div className="about-partner-logo">
+                            <span style={{ fontSize: '20px', fontWeight: 800, color: '#94a3b8' }}>HUBSPOT</span>
+                        </div>
+                        <div className="about-partner-logo">
+                            <span style={{ fontSize: '20px', fontWeight: 800, color: '#94a3b8' }}>SEMRUSH</span>
+                        </div>
+                        <div className="about-partner-logo">
+                            <span style={{ fontSize: '20px', fontWeight: 800, color: '#94a3b8' }}>AWS</span>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -265,5 +385,6 @@ export function AboutContent() {
         </div>
     );
 }
+
 
 export default AboutContent;

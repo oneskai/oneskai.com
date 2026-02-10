@@ -24,7 +24,7 @@ const logos = [
 
 export function LogoWall() {
     return (
-        <section className="logo-wall-section">
+        <section className="logo-wall-section section-dark">
             <div className="container">
                 <div className="logo-wall-grid">
                     {logos.map((logo) => (

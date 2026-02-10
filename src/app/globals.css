@@ -1,68 +1,137 @@
 @import "tailwindcss";
 
 :root {
+  /* === HYBRID DESIGN SYSTEM === */
+  /* Rich Dark - For dark sections (not pure black) */
+  --section-dark-bg: #0A0D12;
+  --section-dark-text: rgba(255, 255, 255, 0.88);
+  --section-dark-text-muted: rgba(255, 255, 255, 0.6);
+
+  /* Soft Light - For light sections (not pure white) */
+  --section-light-bg: #F8F6F3;
+  --section-light-text: #1A1D23;
+  --section-light-text-muted: #5A5D63;
+
+  /* Accent Colors - Base (for dark backgrounds) */
+  --accent-pink: #FF2D75;
+  --accent-purple: #9B5DE5;
+  --accent-yellow: #FFC700;
+
+  /* Accent Colors - Adapted for light backgrounds */
+  --accent-pink-light: #D91B5C;
+  --accent-purple-light: #7B3FC5;
+  --accent-yellow-light: #D9A800;
+
+  /* Legacy tokens (for compatibility) */
   --primary-green: #052e26;
   --primary-green-text: var(--primary-green);
   --secondary-green: #0a4a3e;
-  --accent-pink: #ff2d75;
-  --accent-purple: #3d0da8;
-  --accent-yellow: #ffc700;
   --dark-navy: #152039;
-  --near-black: #01090e;
-  --text-dark: #1A1A1A;
-  --text-gray: #555555;
-  --bg-cream: #F9F9F7;
+  --near-black: #0A0D12;
+  --text-dark: #1A1D23;
+  --text-gray: #5A5D63;
+  --bg-cream: #F8F6F3;
   --bg-white: #FFFFFF;
-  --border-color: #EAEAEA;
-  --background: #ffffff;
-  --foreground: #171717;
+  --border-color: #E5E3DF;
+  --background: #F8F6F3;
+  --foreground: #1A1D23;
 
-  /* Header defaults */
-  --header-logo: var(--primary-green);
-  --header-link: var(--text-gray);
-  --header-link-hover: var(--primary-green);
-  --header-cta-bg: var(--primary-green);
-  --header-cta-text: var(--accent-yellow);
+  /* Header defaults - Fixed dark style */
+  --header-logo: #ffffff;
+  --header-link: rgba(255, 255, 255, 0.85);
+  --header-link-hover: var(--accent-yellow);
+  --header-cta-bg: var(--accent-pink);
+  --header-cta-text: #ffffff;
   --header-bg: transparent;
 }
 
-.title-accent {
+/* Global Icon Styling */
+.mega-menu-icon svg {
+  stroke: currentColor;
+}
+
+/* === SECTION THEME CLASSES === */
+.section-dark {
+  background: var(--section-dark-bg);
+  color: var(--section-dark-text);
+}
+
+.section-dark .section-title,
+.section-dark h1,
+.section-dark h2,
+.section-dark h3 {
+  color: #ffffff;
+}
+
+.section-dark .section-subtitle,
+.section-dark p {
+  color: var(--section-dark-text-muted);
+}
+
+.section-dark .title-accent {
   color: var(--accent-pink) !important;
-  background: none !important;
-  -webkit-text-fill-color: currentColor !important;
-  background-clip: unset !important;
 }
 
-[data-theme="dark"] .title-accent {
-  color: #ff4a8d !important;
+.section-dark .section-tag {
+  background: rgba(255, 45, 117, 0.15);
+  color: var(--accent-pink);
+  border-color: rgba(255, 45, 117, 0.3);
 }
 
-[data-theme="dark"] {
-  --background: #0a0a0a;
-  --foreground: #ededed;
-  --bg-white: #0a0a0a;
-  --bg-cream: #141414;
-  --text-dark: #f0f0f0;
-  --text-gray: #a0a0a0;
-  --border-color: #222222;
-  --accent-pink: #ff4a8d;
-  --primary-green-text: #ffffff;
-
-  --header-logo: #ffffff;
-  --header-link: rgba(255, 255, 255, 0.8);
-  --header-link-hover: var(--accent-yellow);
-  --header-cta-bg: var(--accent-yellow);
-  --header-cta-text: var(--primary-green);
+.section-light {
+  background: var(--section-light-bg);
+  color: var(--section-light-text);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.section-light .section-title,
+.section-light h1,
+.section-light h2,
+.section-light h3 {
+  color: var(--section-light-text);
 }
 
-* {
+.section-light .section-subtitle,
+.section-light p {
+  color: var(--section-light-text-muted);
+}
+
+.section-light .title-accent {
+  color: var(--accent-pink-light) !important;
+}
+
+.section-light .section-tag {
+  background: rgba(217, 27, 92, 0.08);
+  color: var(--accent-pink-light);
+  border: 1px solid rgba(217, 27, 92, 0.2);
+}
+
+/* === SECTION TRANSITIONS === */
+/* Clean break approach - no gradient, just clean section edges */
+/* Sections naturally flow with their own backgrounds */
+
+/* Optional: Subtle centered accent divider between contrasting sections */
+.section-dark+.section-light::before,
+.section-light+.section-dark::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--accent-pink-light), transparent);
+  opacity: 0.4;
+  pointer-events: none;
+  border-radius: 2px;
+}
+
+/* Make section transitions feel seamless with extra padding */
+.section-dark+.section-light,
+.section-light+.section-dark {
+  position: relative;
+}
+
+/* Remove old * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -117,7 +186,7 @@ body {
 }
 
 .header.scrolled {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   padding: 12px 0;
@@ -125,10 +194,17 @@ body {
   border-bottom: 1px solid rgba(5, 46, 38, 0.05);
 }
 
-[data-theme="dark"] .header.scrolled {
-  background: rgba(10, 10, 10, 0.9);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+.header.scrolled .nav-link {
+  color: var(--text-dark);
+}
+
+.header.scrolled .nav-link:hover,
+.header.scrolled .nav-link.active {
+  color: var(--accent-pink-light);
+}
+
+.header.scrolled .btn-talk {
+  background: var(--accent-pink-light);
 }
 
 .header-inner {
@@ -200,10 +276,6 @@ body {
   box-shadow: 0 6px 20px rgba(255, 199, 0, 0.3);
 }
 
-[data-theme="dark"] .header-cta .btn-talk:hover {
-  box-shadow: 0 6px 20px rgba(233, 30, 99, 0.2);
-}
-
 .header-cta {
   display: flex;
   align-items: center;
@@ -240,12 +312,6 @@ body {
 
 .mega-menu.narrow {
   width: 900px;
-}
-
-[data-theme="dark"] .mega-menu {
-  background: #111111;
-  border-color: rgba(255, 255, 255, 0.05);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
 }
 
 .nav-item-wrapper:hover .mega-menu {
@@ -310,22 +376,12 @@ body {
   padding: 24px;
 }
 
-[data-theme="dark"] .mega-menu-sidebar {
-  background: rgba(255, 255, 255, 0.02);
-  border-right-color: rgba(255, 255, 255, 0.05);
-}
-
 .mega-menu-footer {
   padding: 16px 0;
   border-top: 1px solid rgba(0, 0, 0, 0.05);
   display: flex;
   justify-content: center;
   background: #fcfdfe;
-}
-
-[data-theme="dark"] .mega-menu-footer {
-  border-top-color: rgba(255, 255, 255, 0.05);
-  background: rgba(255, 255, 255, 0.01);
 }
 
 .mega-menu-footer-link {
@@ -368,11 +424,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-[data-theme="dark"] .feature-card-icon {
-  background: rgba(255, 45, 117, 0.12);
-  color: var(--accent-pink);
 }
 
 .feature-card-title {
@@ -443,10 +494,6 @@ body {
   background: rgba(0, 0, 0, 0.03);
 }
 
-[data-theme="dark"] .mega-menu-item:hover {
-  background: rgba(255, 255, 255, 0.05);
-}
-
 .mega-menu-icon {
   width: 32px;
   height: 32px;
@@ -457,11 +504,6 @@ body {
   background: rgba(61, 13, 168, 0.1);
   color: var(--accent-purple);
   border-radius: 10px;
-}
-
-[data-theme="dark"] .mega-menu-icon {
-  background: rgba(255, 45, 117, 0.12);
-  color: var(--accent-pink);
 }
 
 .mega-menu-icon svg {
@@ -529,11 +571,6 @@ body {
   gap: 6px;
 }
 
-[data-theme="dark"] .services-sidebar {
-  background: rgba(255, 255, 255, 0.02);
-  border-right-color: rgba(255, 255, 255, 0.05);
-}
-
 .services-tab-btn {
   width: 100%;
   text-align: left;
@@ -571,11 +608,6 @@ body {
   border: 1px solid rgba(5, 46, 38, 0.05);
 }
 
-[data-theme="dark"] .services-tab-btn.active {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.1);
-}
-
 .services-content {
   flex: 1;
   padding: 24px 30px;
@@ -598,10 +630,6 @@ body {
   letter-spacing: 1.5px;
   margin-bottom: 12px;
   opacity: 0.9;
-}
-
-[data-theme="dark"] .services-category-title {
-  color: var(--accent-pink);
 }
 
 .services-grid-new,
@@ -643,16 +671,6 @@ body {
   color: var(--accent-yellow);
 }
 
-[data-theme="dark"] .view-all-btn {
-  background: rgba(255, 45, 117, 0.12);
-  color: var(--accent-pink);
-}
-
-[data-theme="dark"] .view-all-btn:hover {
-  background: var(--accent-pink);
-  color: #fff;
-}
-
 /* Badge */
 .badge {
   background: var(--accent-yellow);
@@ -663,7 +681,6 @@ body {
   border-radius: 20px;
   text-transform: uppercase;
 }
-
 
 /* Hero */
 .hero {

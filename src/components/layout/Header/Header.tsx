@@ -5,9 +5,7 @@ import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { Icon } from '@/components/ui/Icon';
 import { Badge } from '@/components/ui/Badge';
-import { ThemeToggle } from '@/components/ui/ThemeToggle';
 import type { Navigation } from '@/types/sanity';
-import { useTheme } from '@/providers/ThemeProvider';
 
 interface HeaderProps {
   navigation?: Navigation;
@@ -136,10 +134,9 @@ function ServicesMegaMenu() {
           <div className="services-grid-new">
             <MegaMenuItem icon="globe" title="Web Design & Development" description="Custom, fast & conversion-focused." href="/services/web-design" />
             <MegaMenuItem icon="award" title="Brand Identity" description="Logos, voice, and visual guidelines." href="/services/branding" />
-            <MegaMenuItem icon="video" title="Video Production" description="High-impact video for paid & social." href="/services/video" />
             <MegaMenuItem icon="zap" title="Ad Creatives" description="Performance-driven design for ads." href="/services/ads-creative" />
             <MegaMenuItem icon="smartphone" title="User Interface & User Experience Design" description="Conversion-focused digital experiences." href="/services/ui-ux" />
-            <MegaMenuItem icon="fileText" title="Copywriting" description="Persuasive words that drive action." href="/services/copywriting" />
+            <MegaMenuItem icon="analytics" title="Graphic Design" description="Visual design that communicates your brand." href="/services/graphic-design" />
           </div>
         </div>
       </div>
@@ -179,7 +176,6 @@ function ServicesMegaMenu() {
 export function Header({ navigation }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const { resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -291,8 +287,7 @@ export function Header({ navigation }: HeaderProps) {
                   <h4 className="mega-menu-heading">Our Story</h4>
                   <MegaMenuItem key="4" icon="cpu" title="Our Methodology" description="The proven growth framework" href="/about/methodology" />
                   <MegaMenuItem key="5" icon="settings" title="Technology & Partners" description="Our marketing tech stack" href="/about/technology" />
-                  <MegaMenuItem key="6" icon="activity" title="Our Process" description="How we deliver results" href="/about/process" />
-                  <MegaMenuItem key="7" icon="award" title="Awards" description="Recognition and achievements" href="/about/awards" />
+                  <MegaMenuItem key="6" icon="award" title="Awards" description="Recognition and achievements" href="/about/awards" />
                 </div>
               </div>
             </div>
@@ -332,15 +327,14 @@ export function Header({ navigation }: HeaderProps) {
                 <div className="mega-menu-column">
                   <h4 className="mega-menu-heading">Learn</h4>
                   <MegaMenuItem key="1" icon="fileText" title="Blog" description="Latest insights" href="/blog" />
-                  <MegaMenuItem key="2" icon="book" title="Guides & Ebooks" description="In-depth resources" href="/resources/guides" />
-                  <MegaMenuItem key="3" icon="video" title="Webinars" description="Live and recorded sessions" href="/resources/webinars" />
-                  <MegaMenuItem key="4" icon="calendar" title="Events" description="Upcoming meetups & conferences" href="/events" />
+                  <MegaMenuItem key="2" icon="book" title="Guides" description="In-depth strategy guides" href="/resources/guides" />
+                  <MegaMenuItem key="3" icon="fileText" title="Ebooks" description="Comprehensive deep dives" href="/resources/ebooks" />
                 </div>
                 <div className="mega-menu-column">
-                  <h4 className="mega-menu-heading">Support</h4>
-                  <MegaMenuItem key="5" icon="book" title="Documentation" description="Technical docs" href="/docs" />
-                  <MegaMenuItem key="6" icon="help" title="FAQ" description="Common questions" href="/faq" />
-                  <MegaMenuItem key="7" icon="message" title="Community" description="Join our forum" href="/community" />
+                  <h4 className="mega-menu-heading">More</h4>
+                  <MegaMenuItem key="4" icon="mail" title="Newsletter" description="Weekly growth insights" href="/newsletter" />
+                  <MegaMenuItem key="5" icon="help" title="FAQ" description="Common questions" href="/faq" />
+                  <MegaMenuItem key="6" icon="download" title="Downloads" description="Templates & tools" href="/resources/downloads" />
                 </div>
               </div>
             </div>
@@ -363,26 +357,14 @@ export function Header({ navigation }: HeaderProps) {
     <header className={`header ${scrolled ? 'scrolled' : ''}`}>
       <div className="container header-inner">
         <Link href="/" className="logo">
-          {mounted && (
-            <Image
-              src={resolvedTheme === 'dark' ? '/images/logo/os-dark.webp' : '/images/logo/os-light.webp'}
-              alt="Oneskai"
-              width={160}
-              height={40}
-              priority
-              className="logo-image"
-            />
-          )}
-          {!mounted && (
-            <Image
-              src="/images/logo/os-light.webp"
-              alt="Oneskai"
-              width={160}
-              height={40}
-              priority
-              className="logo-image"
-            />
-          )}
+          <Image
+            src={scrolled ? "/images/logo/os-light.webp" : "/images/logo/os-dark.webp"}
+            alt="Oneskai"
+            width={160}
+            height={40}
+            priority
+            className="logo-image"
+          />
         </Link>
 
         {/* Desktop Navigation */}
@@ -424,7 +406,6 @@ export function Header({ navigation }: HeaderProps) {
         </nav>
 
         <div className="header-cta">
-          <ThemeToggle />
           <Link href={navData.ctaButton?.href || '/contact'} className="btn-talk">
             {navData.ctaButton?.text || 'Work with Us'}
           </Link>

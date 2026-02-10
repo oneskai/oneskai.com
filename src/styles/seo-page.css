@@ -107,7 +107,7 @@
 }
 
 .btn-primary:hover {
-    background: #073d32;
+    background: #052e26;
     transform: translateY(-2px);
     box-shadow: 0 10px 30px rgba(5, 46, 38, 0.3);
 }
@@ -427,15 +427,9 @@
     color: var(--accent-pink);
 }
 
-[data-theme="dark"] .benefit-icon.pink {
-    background: rgba(255, 45, 117, 0.2);
-    color: #ff6b9d;
-    /* Lighter pink for dark mode */
-}
-
 .benefit-icon.yellow {
     background: rgba(255, 199, 0, 0.15);
-    color: #b8860b;
+    color: #ffc700;
 }
 
 .benefit-icon svg {
@@ -492,7 +486,7 @@
 }
 
 .service-card.featured {
-    background: linear-gradient(135deg, var(--primary-green), #073d32);
+    background: linear-gradient(135deg, var(--primary-green), #052e26);
     color: white;
 }
 
@@ -1052,7 +1046,7 @@
 
 .challenge-icon.warning {
     background: rgba(255, 199, 0, 0.15);
-    color: #b8860b;
+    color: #ffc700;
 }
 
 .challenge-icon.danger {
@@ -1278,7 +1272,7 @@
     top: -12px;
     left: 50%;
     transform: translateX(-50%);
-    background: linear-gradient(135deg, var(--accent-pink), #a855f7);
+    background: linear-gradient(135deg, var(--accent-pink), #3d0da8);
     color: white;
     padding: 6px 20px;
     border-radius: 100px;
@@ -1594,7 +1588,7 @@
 }
 
 .blog-brief-image {
-    height: 200px;
+    height: 180px;
     position: relative;
 }
 
@@ -1699,7 +1693,12 @@
     color: white;
 }
 
-.industry-expertise-section.seo-version .title-accent { color: var(--accent-pink) !important; background: none !important; -webkit-text-fill-color: currentColor !important; background-clip: unset !important; }
+.industry-expertise-section.seo-version .title-accent {
+    color: var(--accent-pink) !important;
+    background: none !important;
+    -webkit-text-fill-color: currentColor !important;
+    background-clip: unset !important;
+}
 
 .industry-expertise-section.seo-version .section-subtitle {
     font-size: 18px;
@@ -1798,7 +1797,7 @@
 }
 
 .mosaic-icon-box.blue {
-    color: #3b82f6;
+    color: #3d0da8;
     background: rgba(59, 130, 246, 0.1);
 }
 
@@ -1977,12 +1976,12 @@
     color: var(--text-dark);
 }
 
-[data-theme="dark"] .industry-expertise-section.seo-version {
-    background: #0a0a0a;
-    color: white;
+.industry-expertise-section.seo-version .title-accent {
+    color: var(--accent-pink) !important;
+    background: none !important;
+    -webkit-text-fill-color: currentColor !important;
+    background-clip: unset !important;
 }
-
-.industry-expertise-section.seo-version .title-accent { color: var(--accent-pink) !important; background: none !important; -webkit-text-fill-color: currentColor !important; background-clip: unset !important; }
 
 .globe-core {
     position: absolute;
@@ -2011,7 +2010,7 @@
 }
 
 .industry-mosaic-card.blue:hover {
-    border-color: #3b82f6;
+    border-color: #3d0da8;
 }
 
 .industry-mosaic-card.yellow:hover {
@@ -2019,14 +2018,6 @@
 }
 
 /* Adjust Industry Section for White Theme */
-[data-theme="light"] .industry-expertise-section.seo-version .mosaic-industry-name {
-    color: var(--text-gray);
-}
-
-[data-theme="light"] .industry-expertise-section.seo-version .mosaic-description {
-    color: var(--text-gray);
-}
-
 /* Final Polish for Industry Section */
 .industry-expertise-section.seo-version {
     background: var(--bg-cream);
@@ -2037,30 +2028,10 @@
     mix-blend-mode: overlay;
 }
 
-[data-theme="dark"] .tech-tool-card {
-    background: rgba(255, 255, 255, 0.02);
-    border-color: rgba(255, 255, 255, 0.05);
-}
-
-[data-theme="dark"] .tech-tool-info h3 {
-    color: white;
-}
-
-[data-theme="dark"] .tech-tool-icon {
-    background: rgba(255, 45, 117, 0.1);
-    color: var(--accent-pink);
-    box-shadow: 0 0 20px rgba(255, 45, 117, 0.2);
-}
-
 /* Fix for Partner Logos */
 .seo-trust-bar {
     background: var(--bg-white);
     border-top: 1px solid var(--border-color);
-}
-
-[data-theme="dark"] .seo-trust-bar {
-    background: #0f1416;
-    border-color: rgba(255, 255, 255, 0.05);
 }
 
 .trust-logo {
@@ -2068,11 +2039,6 @@
     letter-spacing: -0.5px;
     color: var(--text-gray);
     opacity: 0.4;
-}
-
-[data-theme="dark"] .trust-logo {
-    color: white;
-    opacity: 0.3;
 }
 
 .trust-logo:hover {
@@ -2084,199 +2050,7 @@
    DARK MODE COMPREHENSIVE FIXES
    ================================================ */
 
-[data-theme="dark"] .seo-page {
-    background-color: #000000;
-    color: white;
-}
-
 /* Sections Backgrounds */
-[data-theme="dark"] .seo-hero,
-[data-theme="dark"] .seo-challenges,
-[data-theme="dark"] .seo-services,
-[data-theme="dark"] .seo-pricing,
-[data-theme="dark"] .seo-blog-brief,
-[data-theme="dark"] .seo-tech-stack {
-    background: #01080a;
-}
-
-[data-theme="dark"] .seo-essential,
-[data-theme="dark"] .seo-methodology,
-[data-theme="dark"] .seo-testimonials,
-[data-theme="dark"] .seo-faq,
-[data-theme="dark"] .seo-benefits,
-[data-theme="dark"] .seo-process {
-    background: #000000;
-}
-
 /* Section Typography */
-[data-theme="dark"] .section-title,
-[data-theme="dark"] .seo-hero-title,
-[data-theme="dark"] .benefit-card h3,
-[data-theme="dark"] .service-card h3,
-[data-theme="dark"] .phase-content h3,
-[data-theme="dark"] .pricing-header h3,
-[data-theme="dark"] .price-currency,
-[data-theme="dark"] .pricing-features li,
-[data-theme="dark"] .testimonial-text,
-[data-theme="dark"] .author-name,
-[data-theme="dark"] .faq-item summary,
-[data-theme="dark"] .faq-item p strong,
-[data-theme="dark"] .benefit-text h4,
-[data-theme="dark"] .challenge-card h3 {
-    color: #ffffff;
-}
-
-[data-theme="dark"] .section-subtitle,
-[data-theme="dark"] .seo-hero-subtitle,
-[data-theme="dark"] .benefit-card p,
-[data-theme="dark"] .service-card p,
-[data-theme="dark"] .service-features li,
-[data-theme="dark"] .phase-content p,
-[data-theme="dark"] .pricing-description,
-[data-theme="dark"] .price-period,
-[data-theme="dark"] .author-title,
-[data-theme="dark"] .faq-item p,
-[data-theme="dark"] .benefit-text p,
-[data-theme="dark"] .challenge-card p,
-[data-theme="dark"] .stat-label {
-    color: rgba(255, 255, 255, 0.6);
-}
-
 /* Cards and Components */
-[data-theme="dark"] .hero-visual-card,
-[data-theme="dark"] .pricing-card {
-    background: #0f1416;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-}
-
-[data-theme="dark"] .pricing-card.featured {
-    background: linear-gradient(180deg, #0f1416 0%, rgba(255, 45, 117, 0.05) 100%);
-    border-color: var(--accent-pink);
-}
-
-[data-theme="dark"] .benefit-card,
-[data-theme="dark"] .service-card:not(.featured),
-[data-theme="dark"] .methodology-phase,
-[data-theme="dark"] .testimonial-card:not(.featured),
-[data-theme="dark"] .faq-item,
-[data-theme="dark"] .challenge-card,
-[data-theme="dark"] .essential-benefit,
-[data-theme="dark"] .blog-brief-card {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-[data-theme="dark"] .benefit-card:hover,
-[data-theme="dark"] .service-card:not(.featured):hover,
-[data-theme="dark"] .methodology-phase:hover,
-[data-theme="dark"] .testimonial-card:not(.featured):hover,
-[data-theme="dark"] .challenge-card:hover,
-[data-theme="dark"] .essential-benefit:hover,
-[data-theme="dark"] .blog-brief-card:hover {
-    background: rgba(255, 255, 255, 0.06);
-    border-color: rgba(255, 255, 255, 0.1);
-}
-
 /* UI Elements */
-[data-theme="dark"] .search-bar {
-    background: rgba(255, 255, 255, 0.05);
-}
-
-[data-theme="dark"] .search-text {
-    color: rgba(255, 255, 255, 0.4);
-}
-
-[data-theme="dark"] .btn-outline {
-    color: white;
-    border-color: rgba(255, 255, 255, 0.15);
-}
-
-[data-theme="dark"] .btn-outline:hover {
-    border-color: var(--accent-pink);
-    color: var(--accent-pink);
-    background: rgba(255, 45, 117, 0.05);
-}
-
-[data-theme="dark"] .pricing-price {
-    border-bottom-color: rgba(255, 255, 255, 0.1);
-}
-
-[data-theme="dark"] .pricing-features svg {
-    color: var(--accent-pink);
-}
-
-[data-theme="dark"] .benefit-check,
-[data-theme="dark"] .challenge-icon,
-[data-theme="dark"] .benefit-icon {
-    background: rgba(255, 45, 117, 0.1);
-    color: var(--accent-pink);
-    border: 1px solid rgba(255, 45, 117, 0.2);
-}
-
-[data-theme="dark"] .challenge-icon.warning,
-[data-theme="dark"] .benefit-icon.yellow {
-    background: rgba(255, 199, 0, 0.1);
-    color: var(--accent-yellow);
-    border-color: rgba(255, 199, 0, 0.2);
-}
-
-[data-theme="dark"] .challenge-icon.danger {
-    background: rgba(168, 85, 247, 0.1);
-    color: #a855f7;
-    border-color: rgba(168, 85, 247, 0.2);
-}
-
-[data-theme="dark"] .phase-deliverables span {
-    background: rgba(255, 255, 255, 0.05);
-    color: var(--accent-pink);
-    border: 1px solid rgba(255, 45, 117, 0.1);
-}
-
-[data-theme="dark"] .seo-cta {
-    background: linear-gradient(180deg, #000000 0%, #01080a 100%);
-}
-
-[data-theme="dark"] .essential-stat {
-    border-bottom-color: rgba(255, 255, 255, 0.1);
-}
-
-[data-theme="dark"] .pricing-card.featured .pricing-header h3 {
-    color: #ffffff;
-}
-
-[data-theme="dark"] .pricing-card.featured .price-amount {
-    color: var(--accent-pink);
-}
-
-[data-theme="dark"] .price-amount {
-    color: var(--accent-pink);
-}
-
-[data-theme="dark"] .service-card.featured {
-    background: var(--primary-green);
-    border: 1px solid rgba(255, 199, 0, 0.2);
-}
-
-[data-theme="dark"] .search-result.featured {
-    background: rgba(255, 255, 255, 0.03);
-    border-color: rgba(255, 255, 255, 0.1);
-}
-
-[data-theme="dark"] .search-bar .search-icon {
-    color: var(--accent-pink);
-}
-
-[data-theme="dark"] .result-favicon {
-    background: var(--accent-pink);
-    color: white;
-}
-
-[data-theme="dark"] .result-title {
-    color: white;
-}
-
-[data-theme="dark"] .result-badge {
-    background: var(--accent-pink);
-    color: white;
-}

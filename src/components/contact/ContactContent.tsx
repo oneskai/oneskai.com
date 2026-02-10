@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image';
 import { useState } from 'react';
 import Link from 'next/link';
 import { Icon } from '@/components/ui/Icon';
@@ -47,14 +48,37 @@ export function ContactContent() {
             {/* Hero Section */}
             <section className="contact-hero">
                 <div className="contact-hero-container">
-                    <span className="contact-label">CONTACT US</span>
-                    <h1 className="contact-hero-title">
-                        Ready to <span>Evolve?</span>
-                    </h1>
-                    <p className="contact-hero-subtitle">
-                        Let&apos;s build something undeniable together. Whether you have a question about
-                        our services or are ready to kick off a project, our team is standing by.
-                    </p>
+                    <div className="contact-hero-content">
+                        <span className="contact-label">Get in Touch</span>
+                        <h1 className="contact-hero-title">
+                            Ready to <span>Scale?</span>
+                        </h1>
+                        <p className="contact-hero-subtitle">
+                            Stop guessing and start growing. Our data-driven team is ready to
+                            analyze your business and deliver a roadmap to undeniable market dominance.
+                        </p>
+                    </div>
+                    <div className="contact-hero-image">
+                        <div className="hero-img-wrapper">
+                            <Image
+                                src="/images/office-chat.png"
+                                alt="Oneskai Strategic Consultation"
+                                width={700}
+                                height={500}
+                                priority
+                                className="hero-img"
+                            />
+                        </div>
+                        <div className="hero-image-badge">
+                            <div className="badge-icon">
+                                <Icon type="zap" />
+                            </div>
+                            <div className="badge-text">
+                                <strong>High Performance</strong>
+                                <span>24h Response Guaranteed</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -65,10 +89,10 @@ export function ContactContent() {
                         {/* Info Side */}
                         <div className="contact-info-card">
                             <div className="contact-info-header">
-                                <h2>Get in Touch</h2>
+                                <h2>Let&apos;s Build Your Growth Engine</h2>
                                 <p>
-                                    Fill out the form or use our contact details below.
-                                    Our experts respond within 24 hours on business days.
+                                    Whether you&apos;re looking to scale organic traffic or optimize your
+                                    paid media ROI, we have the expertise to get you there.
                                 </p>
                             </div>
 
@@ -78,8 +102,8 @@ export function ContactContent() {
                                         <Icon type="message" />
                                     </div>
                                     <div className="contact-method-text">
-                                        <h3>Email Us</h3>
-                                        <a href="mailto:hello@oneskai.com">hello@oneskai.com</a>
+                                        <h3>Direct Email</h3>
+                                        <a href="mailto:growth@oneskai.com">growth@oneskai.com</a>
                                     </div>
                                 </div>
                                 <div className="contact-method-item">
@@ -87,7 +111,7 @@ export function ContactContent() {
                                         <Icon type="phone" />
                                     </div>
                                     <div className="contact-method-text">
-                                        <h3>Call Us</h3>
+                                        <h3>Voice Call</h3>
                                         <a href="tel:+1234567890">+1 (234) 567-890</a>
                                     </div>
                                 </div>
@@ -96,19 +120,9 @@ export function ContactContent() {
                                         <Icon type="location" />
                                     </div>
                                     <div className="contact-method-text">
-                                        <h3>Our Headquarters</h3>
-                                        <p>123 Digital Way, Suite 100<br />San Francisco, CA 94105</p>
+                                        <h3>Visit Us</h3>
+                                        <p>Global Hub: San Francisco, CA</p>
                                     </div>
-                                </div>
-                            </div>
-
-                            <div className="contact-social">
-                                <span className="contact-social-title">Follow Us</span>
-                                <div className="contact-social-links">
-                                    <a href="#" className="contact-social-link"><Icon type="linkedin" /></a>
-                                    <a href="#" className="contact-social-link"><Icon type="twitter" /></a>
-                                    <a href="#" className="contact-social-link"><Icon type="facebook" /></a>
-                                    <a href="#" className="contact-social-link"><Icon type="instagram" /></a>
                                 </div>
                             </div>
                         </div>
@@ -117,16 +131,16 @@ export function ContactContent() {
                         <div className="contact-form-card">
                             {status === 'success' ? (
                                 <div className="form-success-state">
-                                    <div className="form-success-emoji">✅</div>
-                                    <h2>Message Sent!</h2>
+                                    <div className="form-success-emoji">🚀</div>
+                                    <h2>Request Received</h2>
                                     <p>
-                                        Thank you for reaching out. One of our experts will contact you shortly.
+                                        One of our growth strategists will analyze your business and reach out within 24 hours.
                                     </p>
                                     <button
-                                        className="contact-form-btn form-success-btn"
+                                        className="contact-form-btn"
                                         onClick={() => setStatus('idle')}
                                     >
-                                        Send Another
+                                        Send Another Request
                                     </button>
                                 </div>
                             ) : (
@@ -157,29 +171,29 @@ export function ContactContent() {
                                             />
                                         </div>
                                         <div className="form-group">
-                                            <label className="form-label">Company Name</label>
+                                            <label className="form-label">Company</label>
                                             <input
                                                 type="text"
                                                 name="company"
                                                 className="form-input"
-                                                placeholder="Acme Inc."
+                                                placeholder="Your Business Name"
                                                 value={formData.company}
                                                 onChange={handleChange}
                                             />
                                         </div>
                                         <div className="form-group">
-                                            <label className="form-label">Phone Number</label>
+                                            <label className="form-label">Phone (Optional)</label>
                                             <input
                                                 type="tel"
                                                 name="phone"
                                                 className="form-input"
-                                                placeholder="+1 (234) 567-890"
+                                                placeholder="+1 (555) 000-0000"
                                                 value={formData.phone}
                                                 onChange={handleChange}
                                             />
                                         </div>
                                         <div className="form-group">
-                                            <label className="form-label">Service Interested In</label>
+                                            <label className="form-label">Primary Goal</label>
                                             <select
                                                 name="service"
                                                 className="form-select"
@@ -187,34 +201,34 @@ export function ContactContent() {
                                                 onChange={handleChange}
                                             >
                                                 <option>SEO & Organic Growth</option>
-                                                <option>PPC & Paid Advertising</option>
-                                                <option>Content Marketing</option>
-                                                <option>Digital Evolution Strategy</option>
-                                                <option>Web Design & Development</option>
-                                                <option>Other / Not Sure</option>
+                                                <option>Paid Media Scaling</option>
+                                                <option>Content & Authority</option>
+                                                <option>AI Marketing Evolution</option>
+                                                <option>Website Performance</option>
+                                                <option>Full Digital Strategy</option>
                                             </select>
                                         </div>
                                         <div className="form-group">
-                                            <label className="form-label">Monthly Budget</label>
+                                            <label className="form-label">Monthly Growth Budget</label>
                                             <select
                                                 name="budget"
                                                 className="form-select"
                                                 value={formData.budget}
                                                 onChange={handleChange}
                                             >
-                                                <option>$2,500 - $5,000</option>
                                                 <option>$5,000 - $10,000</option>
                                                 <option>$10,000 - $25,000</option>
                                                 <option>$25,000 - $50,000</option>
-                                                <option>$50,000+</option>
+                                                <option>$50,000 - $100,000</option>
+                                                <option>$100,000+</option>
                                             </select>
                                         </div>
                                         <div className="form-group full-width">
-                                            <label className="form-label">How can we help?</label>
+                                            <label className="form-label">Main Challenges & Objectives</label>
                                             <textarea
                                                 name="message"
                                                 className="form-textarea"
-                                                placeholder="Tell us about your project, goals, and challenges..."
+                                                placeholder="Tell us about your project, current ROI, and what you want to achieve..."
                                                 value={formData.message}
                                                 onChange={handleChange}
                                                 required
@@ -226,7 +240,7 @@ export function ContactContent() {
                                         className="contact-form-btn"
                                         disabled={status === 'sending'}
                                     >
-                                        {status === 'sending' ? 'Sending...' : 'Send Message'}
+                                        {status === 'sending' ? 'Analyzing...' : 'Get My Growth Proposal'}
                                         {status !== 'sending' && <Icon type="arrowRight" />}
                                     </button>
                                 </form>
@@ -240,27 +254,27 @@ export function ContactContent() {
             <section className="contact-offices">
                 <div className="contact-offices-container">
                     <div className="contact-offices-heading">
-                        <span className="contact-label">GLOBAL PRESENCE</span>
-                        <h2>Our Offices</h2>
+                        <span className="contact-label">Our Presence</span>
+                        <h2>Our Collaboration Hubs</h2>
                     </div>
                     <div className="contact-offices-grid">
                         <div className="office-card">
-                            <div className="office-image">🌉</div>
-                            <h3>San Francisco</h3>
-                            <p>123 Digital Way, Suite 100<br />San Francisco, CA 94105</p>
-                            <a href="#" className="office-link">Get Directions <Icon type="arrowRight" /></a>
+                            <span className="office-emoji">🏛️</span>
+                            <h3>Kolkata</h3>
+                            <p>Strategic Creative Hub<br />Salt Lake Sector V, WB 700091</p>
+                            <a href="#" className="office-link">View Map <Icon type="arrowRight" /></a>
                         </div>
                         <div className="office-card">
-                            <div className="office-image">🗽</div>
-                            <h3>New York</h3>
-                            <p>456 Growth Ave, Floor 12<br />New York, NY 10001</p>
-                            <a href="#" className="office-link">Get Directions <Icon type="arrowRight" /></a>
+                            <span className="office-emoji">🏙️</span>
+                            <h3>Gurugram</h3>
+                            <p>Performance & Growth<br />Cyber City, Tower 10, HR 122002</p>
+                            <a href="#" className="office-link">View Map <Icon type="arrowRight" /></a>
                         </div>
                         <div className="office-card">
-                            <div className="office-image">🎡</div>
-                            <h3>London</h3>
-                            <p>789 Innovation St<br />London, EC1A 1BB, UK</p>
-                            <a href="#" className="office-link">Get Directions <Icon type="arrowRight" /></a>
+                            <span className="office-emoji">🚀</span>
+                            <h3>Bengaluru</h3>
+                            <p>Tech & Innovation<br />Indiranagar 100ft Rd, KA 560038</p>
+                            <a href="#" className="office-link">View Map <Icon type="arrowRight" /></a>
                         </div>
                     </div>
                 </div>
@@ -269,13 +283,13 @@ export function ContactContent() {
             {/* FAQ Teaser */}
             <section className="contact-faq-teaser">
                 <div className="contact-faq-content">
-                    <h2>Quick Answers?</h2>
+                    <h2>Need Instant Answers?</h2>
                     <p>
-                        Check out our frequently asked questions to find instant answers
-                        about our services, pricing, and process.
+                        Discover more about our pricing, timelines,
+                        and how we deliver measurable ROI for our partners.
                     </p>
                     <Link href="/faq" className="faq-teaser-btn">
-                        Go to FAQ Center <Icon type="arrowRight" />
+                        Explore FAQ Center
                     </Link>
                 </div>
             </section>

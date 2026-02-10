@@ -18,6 +18,7 @@ const getPostData = (slug: string) => ({
     author: {
         name: 'Sarah Chen',
         initials: 'SC',
+        slug: 'sarah-chen',
         role: 'Head of SEO Strategy',
         bio: 'Sarah is an experienced SEO strategist with over 10 years of experience helping businesses dominate search rankings. She specializes in technical SEO and content strategy.'
     },
@@ -80,7 +81,7 @@ const relatedPosts = [
         category: 'Content',
         date: 'Jan 22, 2024',
         readTime: '10 min read',
-        author: { name: 'Emily Zhang', initials: 'EZ' },
+        author: { name: 'Emily Zhang', initials: 'EZ', slug: 'emily-zhang' },
         image: '/images/blog-2.png'
     },
     {
@@ -90,7 +91,7 @@ const relatedPosts = [
         category: 'PPC',
         date: 'Jan 28, 2024',
         readTime: '6 min read',
-        author: { name: 'Michael Ross', initials: 'MR' },
+        author: { name: 'Michael Ross', initials: 'MR', slug: 'michael-ross' },
         image: '/images/blog-3.png'
     },
     {
@@ -100,7 +101,7 @@ const relatedPosts = [
         category: 'Analytics',
         date: 'Jan 12, 2024',
         readTime: '12 min read',
-        author: { name: 'Lisa Wang', initials: 'LW' },
+        author: { name: 'Lisa Wang', initials: 'LW', slug: 'lisa-wang' },
         image: '/images/blog-1.png'
     }
 ];
@@ -130,130 +131,132 @@ export function BlogPostContent({ slug }: BlogPostContentProps) {
         <div className="single-post-page">
             {/* Post Header */}
             <header className="post-header">
-                <div className="post-header-container">
-                    <nav className="post-breadcrumb">
-                        <Link href="/">Home</Link>
-                        <span>/</span>
+                <div className="post-header-container centered">
+                    <nav className="post-breadcrumb-minimal">
                         <Link href="/blog">Blog</Link>
                         <span>/</span>
-                        <span style={{ color: 'var(--post-secondary)' }}>{post.category}</span>
+                        <span className="current">{post.category}</span>
                     </nav>
 
-                    <span className="post-category">{post.category}</span>
+                    <h1 className="post-title-refined">{post.title}</h1>
 
-                    <h1 className="post-title">{post.title}</h1>
-
-                    <div className="post-meta">
-                        <div className="post-author">
-                            <div className="post-author-avatar">{post.author.initials}</div>
-                            <div className="post-author-info">
-                                <h4>{post.author.name}</h4>
-                                <span>{post.author.role}</span>
-                            </div>
-                        </div>
-                        <div className="post-meta-item">
-                            <Icon type="calendar" />
-                            {post.date}
-                        </div>
-                        <div className="post-meta-item">
-                            <Icon type="clock" />
-                            {post.readTime}
-                        </div>
+                    <div className="post-meta-minimal">
+                        <Link href={`/author/${post.author.slug}`} className="author-pill">
+                            <div className="author-avatar-small">{post.author.initials}</div>
+                            <span>{post.author.name}</span>
+                        </Link>
+                        <div className="meta-divider"></div>
+                        <div className="meta-text">{post.date}</div>
+                        <div className="meta-divider"></div>
+                        <div className="meta-text">{post.readTime}</div>
                     </div>
                 </div>
             </header>
 
-            {/* Featured Image */}
-            <div className="post-featured-image">
+            {/* Featured Image - Hanging Style */}
+            <div className="post-featured-hanging">
                 <div className="post-featured-image-container">
-                    <div className="post-image-wrapper">
+                    <div className="post-image-wrapper-refined">
                         <Image
                             src="/images/blog-1.png"
                             alt={post.title}
-                            width={1000}
-                            height={500}
-                            style={{ objectFit: 'cover', width: '100%', height: '500px' }}
+                            width={1200}
+                            height={600}
+                            style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+                            priority
                         />
                     </div>
                 </div>
             </div>
 
-            {/* Post Content */}
-            <section className="post-content-section">
-                <div className="post-content-container">
-                    {/* Main Content */}
-                    <article className="post-main-content">
+            {/* Post Content - 3 Column Layout */}
+            <section className="post-content-section-refined">
+                <div className="post-layout-grid">
+                    {/* Left: Table of Contents */}
+                    <aside className="post-sidebar-left">
+                        <div className="toc-minimalist">
+                            <h4>In This Article</h4>
+                            <nav>
+                                {post.tableOfContents.map((item, index) => (
+                                    <a key={index} href={`#${item.id}`}>
+                                        <span className="toc-num">{index + 1}.</span> {item.title}
+                                    </a>
+                                ))}
+                            </nav>
+                        </div>
+
+                        <div className="post-share-horizontal">
+                            <h4 className="share-title">Share Article</h4>
+                            <div className="share-buttons-row">
+                                <button onClick={() => handleShare('twitter')} className="share-icon-btn"><Icon type="twitter" /></button>
+                                <button onClick={() => handleShare('linkedin')} className="share-icon-btn"><Icon type="linkedin" /></button>
+                                <button onClick={() => handleShare('facebook')} className="share-icon-btn"><Icon type="facebook" /></button>
+                            </div>
+                        </div>
+                    </aside>
+
+                    {/* Middle: Content */}
+                    <article className="post-main-editorial">
                         <div
-                            className="post-body"
+                            className="post-body-refined"
                             dangerouslySetInnerHTML={{ __html: post.content }}
                         />
 
                         {/* Tags */}
-                        <div className="post-tags">
+                        <div className="post-tags-refined">
                             {post.tags.map((tag, index) => (
-                                <Link key={index} href={`/blog?tag=${tag.toLowerCase()}`} className="post-tag">
+                                <Link key={index} href={`/blog?tag=${tag.toLowerCase()}`} className="tag-pill">
                                     #{tag}
                                 </Link>
                             ))}
                         </div>
 
-                        {/* Author Bio */}
-                        <div className="post-author-bio">
-                            <div className="post-author-bio-avatar">{post.author.initials}</div>
-                            <div className="post-author-bio-content">
-                                <h3>{post.author.name}</h3>
-                                <span className="role">{post.author.role}</span>
+                        {/* Author Bio - Expert Style */}
+                        <div className="post-author-bio-refined">
+                            <Link href={`/author/${post.author.slug}`} className="author-bio-avatar">
+                                {post.author.initials}
+                            </Link>
+                            <div className="author-bio-content">
+                                <Link href={`/author/${post.author.slug}`}>
+                                    <h3>{post.author.name}</h3>
+                                </Link>
+                                <span className="author-role">{post.author.role}</span>
                                 <p>{post.author.bio}</p>
                             </div>
                         </div>
                     </article>
 
-                    {/* Sidebar */}
-                    <aside className="post-sidebar">
-                        {/* Table of Contents */}
-                        <div className="post-toc">
-                            <h4>In This Article</h4>
-                            <ul>
-                                {post.tableOfContents.map((item, index) => (
-                                    <li key={index}>
-                                        <a href={`#${item.id}`}>{item.title}</a>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-
-                        {/* Share Buttons */}
-                        <div className="post-share">
-                            <h4>Share Article</h4>
-                            <div className="post-share-buttons">
-                                <button
-                                    className="post-share-btn twitter"
-                                    onClick={() => handleShare('twitter')}
-                                    aria-label="Share on Twitter"
-                                >
-                                    <Icon type="twitter" />
-                                </button>
-                                <button
-                                    className="post-share-btn linkedin"
-                                    onClick={() => handleShare('linkedin')}
-                                    aria-label="Share on LinkedIn"
-                                >
-                                    <Icon type="linkedin" />
-                                </button>
-                                <button
-                                    className="post-share-btn facebook"
-                                    onClick={() => handleShare('facebook')}
-                                    aria-label="Share on Facebook"
-                                >
-                                    <Icon type="facebook" />
-                                </button>
-                                <button
-                                    className="post-share-btn copy"
-                                    onClick={() => handleShare('copy')}
-                                    aria-label="Copy link"
-                                >
-                                    <Icon type="link" />
-                                </button>
+                    {/* Right: Editorial Standards Card */}
+                    <aside className="post-sidebar-right">
+                        <div className="editorial-standards-card">
+                            <h4 className="standards-title">Our Editorial Standards</h4>
+                            <div className="standard-item purple-light">
+                                <Icon type="check" />
+                                <div>
+                                    <h5>ACCURACY</h5>
+                                    <p>Every piece is fact-checked for precision.</p>
+                                </div>
+                            </div>
+                            <div className="standard-item purple-vibrant">
+                                <Icon type="clock" />
+                                <div>
+                                    <h5>UP-TO-DATE</h5>
+                                    <p>We reflect the latest trends and insights.</p>
+                                </div>
+                            </div>
+                            <div className="standard-item black-sleek">
+                                <Icon type="link" />
+                                <div>
+                                    <h5>CREDIBLE</h5>
+                                    <p>Backed by trusted industry sources.</p>
+                                </div>
+                            </div>
+                            <div className="standard-item grey-soft">
+                                <Icon type="star" />
+                                <div>
+                                    <h5>INSIGHT-DRIVEN</h5>
+                                    <p>Strategic takeaways for real results.</p>
+                                </div>
                             </div>
                         </div>
                     </aside>
@@ -285,12 +288,12 @@ export function BlogPostContent({ slug }: BlogPostContentProps) {
                                     <h3 className="blog-card-title">{relatedPost.title}</h3>
                                     <p className="blog-card-excerpt">{relatedPost.excerpt}</p>
                                     <div className="blog-card-footer">
-                                        <div className="blog-card-author">
+                                        <Link href={`/author/${relatedPost.author.slug}`} className="blog-card-author">
                                             <div className="blog-card-author-avatar">{relatedPost.author.initials}</div>
                                             <span>{relatedPost.author.name}</span>
-                                        </div>
+                                        </Link>
                                         <span className="blog-card-read">
-                                            Read <Icon type="arrowRight" />
+                                            Read the full article <Icon type="arrowRight" />
                                         </span>
                                     </div>
                                 </div>
@@ -300,19 +303,6 @@ export function BlogPostContent({ slug }: BlogPostContentProps) {
                 </div>
             </section>
 
-            {/* CTA Section */}
-            <section className="post-cta">
-                <div className="post-cta-container">
-                    <h2>Ready to <span>Transform</span> Your Digital Presence?</h2>
-                    <p>
-                        Let our experts help you implement these strategies and achieve
-                        measurable results for your business.
-                    </p>
-                    <Link href="/contact" className="post-cta-btn">
-                        Start Your Journey <Icon type="arrowRight" />
-                    </Link>
-                </div>
-            </section>
         </div>
     );
 }

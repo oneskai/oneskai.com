@@ -13,21 +13,6 @@
     background: #ffffff;
 }
 
-[data-theme="dark"] .branding-page {
-    background: #0a0a0a;
-}
-
-[data-theme="dark"] .branding-page .section-title,
-[data-theme="dark"] .branding-page h2,
-[data-theme="dark"] .branding-page h3,
-[data-theme="dark"] .branding-page h4 {
-    color: #ffffff;
-}
-
-[data-theme="dark"] .branding-page p {
-    color: rgba(255, 255, 255, 0.7);
-}
-
 /* ===== HERO SECTION ===== */
 .branding-hero {
     min-height: 95vh;
@@ -35,12 +20,6 @@
     background: var(--bg-cream);
     position: relative;
     overflow: hidden;
-}
-
-[data-theme="dark"] .branding-hero {
-    background: radial-gradient(circle at 20% 30%, rgba(245, 158, 11, 0.15) 0%, transparent 40%),
-        radial-gradient(circle at 80% 70%, rgba(16, 185, 129, 0.15) 0%, transparent 40%),
-        #0a0a0a;
 }
 
 .branding-hero-grid {
@@ -54,14 +33,14 @@
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    background: linear-gradient(90deg, rgba(245, 158, 11, 0.1), rgba(16, 185, 129, 0.1));
+    background: linear-gradient(90deg, rgba(255, 199, 0, 0.1), rgba(5, 46, 38, 0.1));
     padding: 12px 20px;
     border-radius: 100px;
     font-size: 14px;
     font-weight: 600;
-    color: #f59e0b;
+    color: #ffc700;
     margin-bottom: 32px;
-    border: 1px solid rgba(245, 158, 11, 0.2);
+    border: 1px solid rgba(255, 199, 0, 0.2);
 }
 
 .branding-hero-title {
@@ -73,12 +52,8 @@
     color: var(--text-dark);
 }
 
-[data-theme="dark"] .branding-hero-title {
-    color: #ffffff;
-}
-
 .branding-hero-title .text-gradient {
-    background: linear-gradient(135deg, #f59e0b, #10b981, #06b6d4);
+    background: linear-gradient(135deg, #ffc700, #052e26, #3d0da8);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -134,10 +109,6 @@
     transition: all 0.3s ease;
 }
 
-[data-theme="dark"] .logo-card {
-    background: #1a1a1a;
-}
-
 .logo-card:hover {
     transform: scale(1.05);
 }
@@ -148,11 +119,6 @@
     background: #f8fafc;
     border-top: 1px solid #e2e8f0;
     border-bottom: 1px solid #e2e8f0;
-}
-
-[data-theme="dark"] .branding-trust {
-    background: #111;
-    border-color: #222;
 }
 
 .trust-brands {
@@ -189,15 +155,10 @@
     transition: all 0.3s ease;
 }
 
-[data-theme="dark"] .service-card {
-    background: #111;
-    border-color: #222;
-}
-
 .service-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
-    border-color: #f59e0b;
+    border-color: #ffc700;
 }
 
 .service-icon {
@@ -284,17 +245,9 @@
     transition: all 0.3s ease;
 }
 
-[data-theme="dark"] .deliverable-item {
-    background: #111;
-}
-
 .deliverable-item:hover {
     transform: translateX(10px);
-    background: #fef3c7;
-}
-
-[data-theme="dark"] .deliverable-item:hover {
-    background: #1a1a1a;
+    background: #fff8e0;
 }
 
 .deliverables-visual {
@@ -309,10 +262,6 @@
 .branding-pricing {
     padding: 120px 0;
     background: #fafafa;
-}
-
-[data-theme="dark"] .branding-pricing {
-    background: #0d0d0d;
 }
 
 .pricing-grid {
@@ -332,16 +281,11 @@
     transition: all 0.3s ease;
 }
 
-[data-theme="dark"] .price-card {
-    background: #1a1a1a;
-    border-color: #333;
-}
-
 .price-card.featured {
-    border: 2px solid #f59e0b;
+    border: 2px solid #ffc700;
     transform: scale(1.05);
     z-index: 2;
-    box-shadow: 0 30px 60px rgba(245, 158, 11, 0.15);
+    box-shadow: 0 30px 60px rgba(255, 199, 0, 0.15);
 }
 
 .price-card .popular-tag {
@@ -349,7 +293,7 @@
     top: -15px;
     left: 50%;
     transform: translateX(-50%);
-    background: linear-gradient(90deg, #f59e0b, #10b981);
+    background: linear-gradient(90deg, #ffc700, #052e26);
     color: white;
     padding: 8px 24px;
     border-radius: 100px;
@@ -381,10 +325,6 @@
     overflow: hidden;
 }
 
-[data-theme="dark"] .portfolio-item {
-    background: #1a1a1a;
-}
-
 .portfolio-item:hover {
     transform: scale(1.05);
 }
@@ -393,10 +333,6 @@
 .branding-faq {
     padding: 120px 0;
     background: #f8fafc;
-}
-
-[data-theme="dark"] .branding-faq {
-    background: #0d0d0d;
 }
 
 /* ===== CTA ===== */
@@ -437,7 +373,7 @@
 .cta-form select:focus,
 .cta-form textarea:focus {
     outline: none;
-    border-color: #f59e0b;
+    border-color: #ffc700;
 }
 
 /* ===== RESPONSIVE ===== */

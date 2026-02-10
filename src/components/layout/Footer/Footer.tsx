@@ -21,7 +21,7 @@ export function Footer({ siteSettings }: FooterProps) {
   }, []);
 
   return (
-    <footer className="site-footer">
+    <footer className="site-footer section-dark">
       <div className="footer-wrapper">
 
         {/* ── CTA Banner ── */}

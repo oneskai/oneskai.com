@@ -14,7 +14,7 @@ const blogPosts = [
         category: 'SEO',
         date: 'Feb 2, 2024',
         readTime: '8 min read',
-        author: { name: 'Sarah Chen', initials: 'SC' },
+        author: { name: 'Sarah Chen', initials: 'SC', slug: 'sarah-chen' },
         featured: true,
         image: '/images/blog-1.png'
     },
@@ -25,7 +25,7 @@ const blogPosts = [
         category: 'PPC',
         date: 'Jan 28, 2024',
         readTime: '6 min read',
-        author: { name: 'Michael Ross', initials: 'MR' },
+        author: { name: 'Michael Ross', initials: 'MR', slug: 'michael-ross' },
         image: '/images/blog-2.png'
     },
     {
@@ -35,7 +35,7 @@ const blogPosts = [
         category: 'Content',
         date: 'Jan 22, 2024',
         readTime: '10 min read',
-        author: { name: 'Emily Zhang', initials: 'EZ' },
+        author: { name: 'Emily Zhang', initials: 'EZ', slug: 'emily-zhang' },
         image: '/images/blog-3.png'
     },
     {
@@ -45,7 +45,7 @@ const blogPosts = [
         category: 'Social Media',
         date: 'Jan 18, 2024',
         readTime: '7 min read',
-        author: { name: 'David Kim', initials: 'DK' },
+        author: { name: 'David Kim', initials: 'DK', slug: 'david-kim' },
         image: '/images/blog-1.png'
     },
     {
@@ -55,7 +55,7 @@ const blogPosts = [
         category: 'Analytics',
         date: 'Jan 12, 2024',
         readTime: '12 min read',
-        author: { name: 'Lisa Wang', initials: 'LW' },
+        author: { name: 'Lisa Wang', initials: 'LW', slug: 'lisa-wang' },
         image: '/images/blog-2.png'
     },
     {
@@ -65,7 +65,7 @@ const blogPosts = [
         category: 'E-commerce',
         date: 'Jan 5, 2024',
         readTime: '9 min read',
-        author: { name: 'James Miller', initials: 'JM' },
+        author: { name: 'James Miller', initials: 'JM', slug: 'james-miller' },
         image: '/images/blog-3.png'
     },
     {
@@ -75,7 +75,7 @@ const blogPosts = [
         category: 'AI',
         date: 'Dec 28, 2023',
         readTime: '8 min read',
-        author: { name: 'Sarah Chen', initials: 'SC' },
+        author: { name: 'Sarah Chen', initials: 'SC', slug: 'sarah-chen' },
         image: '/images/blog-1.png'
     },
     {
@@ -85,7 +85,7 @@ const blogPosts = [
         category: 'Branding',
         date: 'Dec 20, 2023',
         readTime: '6 min read',
-        author: { name: 'Emily Zhang', initials: 'EZ' },
+        author: { name: 'Emily Zhang', initials: 'EZ', slug: 'emily-zhang' },
         image: '/images/blog-2.png'
     },
     {
@@ -95,7 +95,7 @@ const blogPosts = [
         category: 'SEO',
         date: 'Dec 15, 2023',
         readTime: '11 min read',
-        author: { name: 'Michael Ross', initials: 'MR' },
+        author: { name: 'Michael Ross', initials: 'MR', slug: 'michael-ross' },
         image: '/images/blog-3.png'
     }
 ];
@@ -182,17 +182,19 @@ export function BlogContent() {
                                         <Icon type="calendar" /> {featuredPost.date}
                                     </span>
                                 </div>
-                                <h2 className="blog-featured-title">{featuredPost.title}</h2>
+                                <Link href={`/blog/${featuredPost.slug}`}>
+                                    <h2 className="blog-featured-title">{featuredPost.title}</h2>
+                                </Link>
                                 <p className="blog-featured-excerpt">{featuredPost.excerpt}</p>
-                                <div className="blog-featured-author">
+                                <Link href={`/author/${featuredPost.author.slug}`} className="blog-featured-author">
                                     <div className="blog-author-avatar">{featuredPost.author.initials}</div>
                                     <div className="blog-author-info">
                                         <h4>{featuredPost.author.name}</h4>
                                         <span>{featuredPost.readTime}</span>
                                     </div>
-                                </div>
+                                </Link>
                                 <Link href={`/blog/${featuredPost.slug}`} className="blog-featured-link">
-                                    Read Article <Icon type="arrowRight" />
+                                    Read the Full Article <Icon type="arrowRight" />
                                 </Link>
                             </div>
                         </div>
@@ -229,12 +231,12 @@ export function BlogContent() {
                                         <h3 className="blog-card-title">{post.title}</h3>
                                         <p className="blog-card-excerpt">{post.excerpt}</p>
                                         <div className="blog-card-footer">
-                                            <div className="blog-card-author">
+                                            <Link href={`/author/${post.author.slug}`} className="blog-card-author">
                                                 <div className="blog-card-author-avatar">{post.author.initials}</div>
                                                 <span>{post.author.name}</span>
-                                            </div>
+                                            </Link>
                                             <span className="blog-card-read">
-                                                Read <Icon type="arrowRight" />
+                                                Read the Full Article <Icon type="arrowRight" />
                                             </span>
                                         </div>
                                     </div>
