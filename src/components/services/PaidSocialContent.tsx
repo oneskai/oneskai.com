@@ -1,56 +1,66 @@
 'use client';
 
+import { useState } from 'react';
 import Link from 'next/link';
 import { Icon } from '@/components/ui/Icon';
-import '@/styles/paid-social.css';
+import '@/styles/ps-page.css';
 
 export function PaidSocialContent() {
+    const [openFaq, setOpenFaq] = useState<number | null>(null);
+
     return (
-        <div className="paid-social-page">
-            {/* Hero Section */}
-            <section className="paid-social-hero">
-                <div className="paid-social-container">
-                    <div className="paid-social-hero-grid">
-                        <div className="paid-social-hero-content">
-                            <span className="paid-social-badge">
+        <div className="ps-page">
+            {/* ===== DARK HERO ===== */}
+            <section className="ps-hero">
+                <div className="ps-hero-orb one" />
+                <div className="ps-hero-orb two" />
+                <div className="ps-container">
+                    <div className="ps-hero-inner">
+                        <div>
+                            <span className="ps-hero-badge">
                                 <Icon type="megaphone" />
-                                Meta Business Partner
+                                Paid Social Advertising
                             </span>
-                            <h1 className="paid-social-hero-title">
-                                Social ads that <span className="title-accent">print money.</span>
+                            <h1 className="ps-hero-title">
+                                Turn ad spend into <span className="ps-gradient">revenue machines.</span>
                             </h1>
-                            <p className="paid-social-hero-subtitle">
-                                We architect paid social campaigns across Meta, TikTok, LinkedIn, and Pinterest that turn scroll-stoppers into revenue—with obsessive testing and real-time optimization.
+                            <p className="ps-hero-subtitle">
+                                We architect paid social campaigns across Meta, LinkedIn, Pinterest &amp; Snapchat that turn impressions into conversions—with obsessive testing and real-time optimization.
                             </p>
-                            <div className="content-hero-actions">
-                                <Link href="/contact" className="btn-primary large" style={{ background: 'var(--primary-green)', border: 'none', color: 'var(--accent-yellow)' }}>
-                                    Launch Campaign
-                                    <Icon type="arrowRight" />
+                            <div className="ps-hero-actions">
+                                <Link href="/contact" className="ps-btn-primary">
+                                    Launch Campaign <Icon type="arrowRight" />
                                 </Link>
-                                <Link href="#budget" className="btn-outline">
+                                <Link href="#pricing" className="ps-btn-outline">
                                     See Packages
                                 </Link>
                             </div>
                         </div>
 
-                        <div className="paid-social-hero-visual">
-                            <div className="spend-visual">
-                                <div className="spend-cards">
-                                    <div className="spend-card" style={{ background: 'var(--primary-green)' }}>
-                                        <div style={{ color: 'var(--accent-yellow)', fontSize: '14px', fontWeight: 600, marginBottom: '10px' }}>META ADS</div>
-                                        <div style={{ color: 'var(--accent-yellow)', fontSize: '32px', fontWeight: 600 }}>+247%</div>
-                                        <div style={{ color: 'rgba(255,255,255,0.8)', fontSize: '13px' }}>ROAS Increase</div>
+                        <div className="ps-hero-visual">
+                            <div className="ps-dashboard-mock">
+                                <div className="ps-dash-header">
+                                    <span>Campaign Dashboard</span>
+                                    <strong>Live</strong>
+                                </div>
+                                <div className="ps-dash-kpis">
+                                    <div className="ps-dash-kpi">
+                                        <span className="kpi-val">3.8x</span>
+                                        <span className="kpi-label">ROAS</span>
                                     </div>
-                                    <div className="spend-card" style={{ background: 'var(--primary-green)' }}>
-                                        <div style={{ color: 'var(--accent-yellow)', fontSize: '14px', fontWeight: 600, marginBottom: '10px' }}>INSTAGRAM</div>
-                                        <div style={{ color: 'var(--accent-yellow)', fontSize: '32px', fontWeight: 600 }}>3.2x</div>
-                                        <div style={{ color: 'rgba(255,255,255,0.8)', fontSize: '13px' }}>Avg. ROAS</div>
+                                    <div className="ps-dash-kpi">
+                                        <span className="kpi-val">$14</span>
+                                        <span className="kpi-label">CPA</span>
                                     </div>
-                                    <div className="spend-card" style={{ background: 'var(--primary-green)' }}>
-                                        <div style={{ color: 'var(--accent-yellow)', fontSize: '14px', fontWeight: 600, marginBottom: '10px' }}>TIKTOK</div>
-                                        <div style={{ color: '#00f2ea', fontSize: '32px', fontWeight: 600 }}>-58%</div>
-                                        <div style={{ color: 'rgba(255,255,255,0.8)', fontSize: '13px' }}>Cost Per Acquisition</div>
+                                    <div className="ps-dash-kpi">
+                                        <span className="kpi-val">2.4M</span>
+                                        <span className="kpi-label">Reach</span>
                                     </div>
+                                </div>
+                                <div className="ps-dash-bars">
+                                    {[40, 55, 35, 70, 85, 60, 90, 75, 95, 80].map((h, i) => (
+                                        <div key={i} className={`ps-dash-bar${i >= 6 ? ' active' : ''}`} style={{ height: `${h}%` }} />
+                                    ))}
                                 </div>
                             </div>
                         </div>
@@ -58,45 +68,210 @@ export function PaidSocialContent() {
                 </div>
             </section>
 
-            {/* Trust Stats */}
-            <section className="paid-social-trust">
-                <div className="paid-social-container">
-                    <div className="trust-stats">
+            {/* ===== METRICS BAR ===== */}
+            <section className="ps-metrics">
+                <div className="ps-container">
+                    <div className="ps-metrics-grid">
                         {[
-                            { value: '$30M+', label: 'Social Ad Spend Managed' },
-                            { value: '350+', label: 'Campaigns Launched' },
-                            { value: '2.8x', label: 'Avg. ROAS Delivered' },
-                            { value: '94%', label: 'Client Retention' }
-                        ].map((stat, i) => (
-                            <div key={i} className="trust-stat">
-                                <div style={{ fontSize: '36px', fontWeight: 600, background: 'var(--primary-green)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{stat.value}</div>
-                                <div style={{ fontSize: '13px', color: '#64748b', marginTop: '5px' }}>{stat.label}</div>
+                            { val: '$30M+', label: 'Ad Spend Managed' },
+                            { val: '350+', label: 'Campaigns Launched' },
+                            { val: '3.2x', label: 'Avg. ROAS Delivered' },
+                            { val: '94%', label: 'Client Retention' }
+                        ].map((m, i) => (
+                            <div key={i} className="ps-metric-card">
+                                <span className="metric-val">{m.val}</span>
+                                <span className="metric-label">{m.label}</span>
                             </div>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* Platform Breakdown */}
-            <section className="paid-social-platforms">
-                <div className="paid-social-container">
-                    <div className="section-header text-center">
-                        <span className="section-label">PLATFORM MASTERY</span>
-                        <h2 className="section-title">Full-stack social <span className="title-accent">advertising.</span></h2>
+            {/* ===== AIDA FUNNEL ===== */}
+            <section className="ps-aida">
+                <div className="ps-container">
+                    <div style={{ textAlign: 'center' }}>
+                        <span className="ps-section-badge"><Icon type="filter" /> Conversion Framework</span>
+                        <h2 className="ps-section-title">The AIDA Funnel: from scroll to sale.</h2>
+                        <p className="ps-section-subtitle" style={{ margin: '0 auto' }}>
+                            Every paid social campaign follows the AIDA model—Awareness, Interest, Desire, Action. We optimize each stage to maximize your return on ad spend.
+                        </p>
                     </div>
-                    <div className="platform-details">
+
+                    <div className="ps-aida-funnel">
                         {[
-                            { name: 'Meta Ads', icon: 'users', desc: 'Facebook & Instagram campaigns with Advantage+ automation and custom conversions.', features: ['Lookalike Audiences', 'Dynamic Creative', 'Catalog Sales'] },
-                            { name: 'TikTok Ads', icon: 'tiktok', desc: 'Spark Ads, TopView placements, and creator partnership campaigns.', features: ['Spark Ads', 'Branded Effects', 'Hashtag Challenges'] },
-                            { name: 'LinkedIn Ads', icon: 'briefcase', desc: 'B2B lead generation with InMail, Conversation Ads, and ABM targeting.', features: ['Account-Based', 'Lead Gen Forms', 'Retargeting'] }
-                        ].map((platform, i) => (
-                            <div key={i} className="platform-detail-card">
-                                <Icon type={platform.icon} style={{ color: '#1877F2', marginBottom: '20px' }} />
-                                <h3 style={{ fontSize: '24px', fontWeight: 600, marginBottom: '15px' }}>{platform.name}</h3>
-                                <p style={{ fontSize: '15px', color: '#64748b', marginBottom: '20px', lineHeight: 1.6 }}>{platform.desc}</p>
-                                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', justifyContent: 'center' }}>
-                                    {platform.features.map((f, j) => (
-                                        <span key={j} style={{ background: '#f1f5f9', padding: '6px 12px', borderRadius: '100px', fontSize: '12px', fontWeight: 600 }}>{f}</span>
+                            { letter: 'A', name: 'Awareness', desc: 'Reach new audiences at scale', leftLabel: 'Paid Superpower', leftDesc: 'Instant reach to millions of targeted users', rightLabel: 'Key Metrics', rightDesc: 'Impressions, Reach, CPM, Video Views' },
+                            { letter: 'I', name: 'Interest', desc: 'Engage with compelling creative', leftLabel: 'Paid Superpower', leftDesc: 'Retargeting to re-engage warm audiences', rightLabel: 'Key Metrics', rightDesc: 'CTR, Engagement Rate, Video Completion' },
+                            { letter: 'D', name: 'Desire', desc: 'Nurture intent with social proof', leftLabel: 'Paid Superpower', leftDesc: 'Dynamic product ads & testimonials', rightLabel: 'Key Metrics', rightDesc: 'Add to Cart, Lead Form Opens, DMs' },
+                            { letter: 'A', name: 'Action', desc: 'Drive conversions & revenue', leftLabel: 'Paid Superpower', leftDesc: 'Conversion-optimized campaigns', rightLabel: 'Key Metrics', rightDesc: 'CPA, ROAS, Revenue, Conv. Rate' }
+                        ].map((stage, i) => (
+                            <div key={i} className="ps-aida-stage">
+                                <div className="ps-aida-side left">
+                                    <strong>{stage.leftLabel}</strong>
+                                    {stage.leftDesc}
+                                </div>
+                                <div className="ps-aida-shape">
+                                    <div>
+                                        <span className="ps-aida-label">{stage.letter} — {stage.name}</span>
+                                        <span className="ps-aida-desc">{stage.desc}</span>
+                                    </div>
+                                </div>
+                                <div className="ps-aida-side right">
+                                    <strong>{stage.rightLabel}</strong>
+                                    {stage.rightDesc}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* ===== ORGANIC VS PAID VENN ===== */}
+            <section className="ps-venn-section">
+                <div className="ps-container">
+                    <div style={{ textAlign: 'center' }}>
+                        <span className="ps-section-badge" style={{ background: 'rgba(225,29,72,0.15)', color: '#fb7185' }}>
+                            <Icon type="layers" /> Strategy Insight
+                        </span>
+                        <h2 className="ps-section-title" style={{ color: 'white' }}>Organic vs. Paid: better together.</h2>
+                        <p className="ps-section-subtitle" style={{ margin: '0 auto', color: 'rgba(255,255,255,0.6)' }}>
+                            The most effective social strategies blend organic community-building with paid amplification. Here&apos;s how they complement each other.
+                        </p>
+                    </div>
+
+                    <div className="ps-venn-wrapper">
+                        <div className="ps-venn-circle organic">
+                            <div className="ps-venn-label">Organic</div>
+                            <ul className="ps-venn-items">
+                                <li>Build brand loyalty</li>
+                                <li>Nurture community</li>
+                                <li>Establish authority</li>
+                                <li>Long-term trust</li>
+                            </ul>
+                        </div>
+
+                        <div className="ps-venn-overlap">
+                            <div className="ps-venn-overlap-title">Both</div>
+                            <ul className="ps-venn-overlap-items">
+                                <li>Extend reach</li>
+                                <li>A/B test content</li>
+                                <li>Learn audience</li>
+                                <li>Retarget users</li>
+                            </ul>
+                        </div>
+
+                        <div className="ps-venn-circle paid">
+                            <div className="ps-venn-label">Paid</div>
+                            <ul className="ps-venn-items">
+                                <li>Bigger audience fast</li>
+                                <li>Precision targeting</li>
+                                <li>Leads on demand</li>
+                                <li>Measurable ROAS</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* ===== 5-STEP STAIRCASE ===== */}
+            <section className="ps-staircase">
+                <div className="ps-container">
+                    <div style={{ textAlign: 'center' }}>
+                        <span className="ps-section-badge"><Icon type="trending" /> Why Paid Social</span>
+                        <h2 className="ps-section-title">5 benefits of paid social advertising.</h2>
+                        <p className="ps-section-subtitle" style={{ margin: '0 auto' }}>
+                            Paid social isn&apos;t just boosting posts—it&apos;s a strategic lever for growth. Each benefit builds on the last.
+                        </p>
+                    </div>
+
+                    <div className="ps-stairs">
+                        {[
+                            { icon: 'target', title: 'Targeted Reach', caption: 'Reach your ideal customer by demographics, interests, and behaviors.' },
+                            { icon: 'zap', title: 'Enhanced Visibility', caption: 'Cut through algorithm noise and get in front of the right eyeballs.' },
+                            { icon: 'barChart', title: 'Data-Driven', caption: 'Real-time analytics let you optimize campaigns on the fly.' },
+                            { icon: 'layers', title: 'Ad Formats', caption: 'Video, carousel, stories, reels—choose formats that convert.' },
+                            { icon: 'shield', title: 'Cost Control', caption: 'Set budgets, bid strategies, and never overspend with smart caps.' }
+                        ].map((step, i) => (
+                            <div key={i} className="ps-stair">
+                                <div className="ps-stair-bar">
+                                    <span className="ps-stair-num">0{i + 1}</span>
+                                    <div className="ps-stair-icon">
+                                        <Icon type={step.icon} />
+                                    </div>
+                                    <span className="ps-stair-title">{step.title}</span>
+                                </div>
+                                <p className="ps-stair-caption">{step.caption}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* ===== SERPENTINE PROCESS ===== */}
+            <section className="ps-process">
+                <div className="ps-container">
+                    <div style={{ textAlign: 'center' }}>
+                        <span className="ps-section-badge"><Icon type="activity" /> Our Process</span>
+                        <h2 className="ps-section-title">How we build winning campaigns.</h2>
+                        <p className="ps-section-subtitle" style={{ margin: '0 auto' }}>
+                            A proven 5-step methodology that turns ad spend into predictable, scalable revenue.
+                        </p>
+                    </div>
+
+                    <div className="ps-serpentine">
+                        {[
+                            { title: 'Identify Target Audience', desc: 'We deep-dive into your ideal customer profiles, analyzing demographics, psychographics, and platform behavior to build laser-focused audience segments.', tags: ['Persona Mapping', 'Data Analysis', 'Segmentation'] },
+                            { title: 'Choose Ad Formats', desc: 'We select the right mix of creative formats—video, carousel, stories, lead forms—based on your goals and what performs best on each platform.', tags: ['Creative Strategy', 'A/B Testing', 'Format Mix'] },
+                            { title: 'Set Budget & Bidding', desc: 'We architect your budget allocation across platforms and campaigns, choosing bid strategies (CBO, ABO, ROAS targets) that maximize every dollar.', tags: ['Budget Planning', 'Bid Strategy', 'Forecasting'] },
+                            { title: 'Create Ad Content', desc: 'Our creative team produces thumb-stopping ads—UGC-style videos, product shoots, and copy that converts. We test 50+ variations per campaign.', tags: ['Copywriting', 'Video Production', 'UGC'] },
+                            { title: 'Analyze & Optimize', desc: 'We monitor performance daily, kill underperformers fast, scale winners aggressively, and provide transparent reporting with actionable insights.', tags: ['Reporting', 'Optimization', 'Scaling'] }
+                        ].map((step, i) => (
+                            <div key={i} className="ps-serp-step">
+                                <div className="ps-serp-num">{i + 1}</div>
+                                <div className="ps-serp-content">
+                                    <h4>{step.title}</h4>
+                                    <p>{step.desc}</p>
+                                    <div className="ps-serp-tags">
+                                        {step.tags.map((t, j) => (
+                                            <span key={j}>{t}</span>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* ===== PLATFORM MASTERY ===== */}
+            <section className="ps-platforms">
+                <div className="ps-container">
+                    <div style={{ textAlign: 'center' }}>
+                        <span className="ps-section-badge"><Icon type="globe" /> Platform Expertise</span>
+                        <h2 className="ps-section-title">Full-stack paid social mastery.</h2>
+                        <p className="ps-section-subtitle" style={{ margin: '0 auto' }}>
+                            We manage campaigns across every major social advertising platform with certified expertise and proven results.
+                        </p>
+                    </div>
+
+                    <div className="ps-platform-grid">
+                        {[
+                            { name: 'Meta Ads', icon: 'facebook', color: '#1877F2', bg: 'rgba(24,119,242,0.08)', desc: 'Facebook & Instagram campaigns with Advantage+ automation, Conversions API, and dynamic creative optimization.', features: ['Lookalike Audiences', 'Dynamic Ads', 'Catalog Sales', 'Advantage+'] },
+                            { name: 'LinkedIn Ads', icon: 'linkedin', color: '#0A66C2', bg: 'rgba(10,102,194,0.08)', desc: 'B2B lead generation with InMail, Conversation Ads, Document Ads, and precision account-based targeting.', features: ['ABM Targeting', 'Lead Gen Forms', 'InMail Ads', 'Retargeting'] },
+                            { name: 'Pinterest Ads', icon: 'camera', color: '#E60023', bg: 'rgba(230,0,35,0.08)', desc: 'Shopping and awareness campaigns leveraging Pinterest visual search, idea pins, and catalog integration.', features: ['Shopping Ads', 'Idea Pins', 'Visual Search', 'Catalog Sync'] },
+                            { name: 'Snapchat Ads', icon: 'smartphone', color: '#FFFC00', bg: 'rgba(255,252,0,0.1)', desc: 'Reach Gen Z with immersive AR lenses, story ads, and dynamic product campaigns on Snapchat.', features: ['AR Lenses', 'Story Ads', 'Dynamic Ads', 'Spotlight'] },
+                            { name: 'Twitter / X Ads', icon: 'twitter', color: '#1DA1F2', bg: 'rgba(29,161,242,0.08)', desc: 'Trend hijacking, conversation ads, and follower campaigns to amplify brand voice in real-time.', features: ['Promoted Trends', 'Conversation Ads', 'Follower Ads', 'Video Ads'] },
+                            { name: 'YouTube Ads', icon: 'play', color: '#FF0000', bg: 'rgba(255,0,0,0.08)', desc: 'Pre-roll, in-stream, and discovery ads that drive brand awareness and direct response at scale.', features: ['TrueView Ads', 'Bumper Ads', 'Discovery Ads', 'Shorts Ads'] }
+                        ].map((p, i) => (
+                            <div key={i} className="ps-platform-card">
+                                <div className="ps-platform-card-icon" style={{ background: p.bg, color: p.color }}>
+                                    <Icon type={p.icon} />
+                                </div>
+                                <h4>{p.name}</h4>
+                                <p>{p.desc}</p>
+                                <div className="ps-platform-features">
+                                    {p.features.map((f, j) => (
+                                        <span key={j}>{f}</span>
                                     ))}
                                 </div>
                             </div>
@@ -105,133 +280,64 @@ export function PaidSocialContent() {
                 </div>
             </section>
 
-            {/* Audience Targeting */}
-            <section className="paid-social-audience">
-                <div className="paid-social-container">
-                    <div className="section-header text-center">
-                        <span className="section-label" style={{ color: 'rgba(255,255,255,0.7)' }}>PRECISION TARGETING</span>
-                        <h2 className="section-title" style={{ color: 'var(--accent-yellow)' }}>Reach the right people, <span style={{ color: '#fbbf24' }}>every time.</span></h2>
+            {/* ===== SERVICES GRID ===== */}
+            <section className="ps-services">
+                <div className="ps-container">
+                    <div style={{ textAlign: 'center' }}>
+                        <span className="ps-section-badge" style={{ background: 'rgba(225,29,72,0.15)', color: '#fb7185' }}>
+                            <Icon type="briefcase" /> What We Deliver
+                        </span>
+                        <h2 className="ps-section-title" style={{ color: 'white' }}>End-to-end paid social services.</h2>
                     </div>
-                    <div className="audience-grid">
+
+                    <div className="ps-services-grid">
                         {[
-                            { icon: 'filter', title: 'Custom Audiences', desc: 'Website visitors, email lists, app users' },
-                            { icon: 'users', title: 'Lookalikes', desc: '1-10% expansion of your best customers' },
-                            { icon: 'target', title: 'Interest Stacking', desc: 'Behavioral + demographic layering' },
-                            { icon: 'activity', title: 'Retargeting', desc: 'Dynamic product ads, cart abandonment' }
-                        ].map((item, i) => (
-                            <div key={i} className="audience-card">
-                                <Icon type={item.icon} style={{ marginBottom: '20px' }} />
-                                <h4 style={{ fontSize: '20px', fontWeight: 600, marginBottom: '10px' }}>{item.title}</h4>
-                                <p style={{ fontSize: '14px', opacity: 0.8 }}>{item.desc}</p>
+                            { icon: 'search', title: 'Audit & Strategy', desc: 'Full account audit, competitive analysis, and custom roadmap aligned to your growth goals.' },
+                            { icon: 'target', title: 'Audience Building', desc: 'Custom, lookalike, and interest-based audiences refined through iterative testing.' },
+                            { icon: 'video', title: 'Creative Production', desc: 'Scroll-stopping video, static, and UGC ads—50+ variations per campaign cycle.' },
+                            { icon: 'cpu', title: 'Campaign Management', desc: 'Daily monitoring, bid optimization, budget pacing, and real-time creative swaps.' },
+                            { icon: 'barChart', title: 'Analytics & Reporting', desc: 'Custom dashboards, attribution modeling, and weekly/monthly performance reviews.' },
+                            { icon: 'rocket', title: 'Scaling Strategy', desc: 'Horizontal and vertical scaling playbooks to profitably increase spend 2-10x.' }
+                        ].map((s, i) => (
+                            <div key={i} className="ps-service-card">
+                                <div className="ps-service-card-icon">
+                                    <Icon type={s.icon} />
+                                </div>
+                                <h4>{s.title}</h4>
+                                <p>{s.desc}</p>
                             </div>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* Creative Framework */}
-            <section className="paid-social-creative">
-                <div className="paid-social-container">
-                    <div className="section-header text-center">
-                        <span className="section-label">CREATIVE THAT CONVERTS</span>
-                        <h2 className="section-title">Scroll-stopping <span className="title-accent">ad creative.</span></h2>
+            {/* ===== TESTIMONIALS ===== */}
+            <section className="ps-testimonials">
+                <div className="ps-container">
+                    <div style={{ textAlign: 'center' }}>
+                        <span className="ps-section-badge"><Icon type="star" /> Client Results</span>
+                        <h2 className="ps-section-title">Brands that scaled with us.</h2>
                     </div>
-                    <div className="creative-grid">
-                        <div className="creative-formats">
-                            {[
-                                { icon: 'video', title: 'Video Ads', desc: 'UGC, product demos, testimonials' },
-                                { icon: 'camera', title: 'Static Ads', desc: 'Product shots, lifestyle imagery' },
-                                { icon: 'layers', title: 'Carousels', desc: 'Multi-product, storytelling' },
-                                { icon: 'monitor', title: 'Collection Ads', desc: 'Immersive shopping experiences' }
-                            ].map((format, i) => (
-                                <div key={i} className="format-card">
-                                    <Icon type={format.icon} style={{ marginBottom: '15px' }} />
-                                    <h4 style={{ fontWeight: 600, marginBottom: '8px' }}>{format.title}</h4>
-                                    <p style={{ fontSize: '13px', color: '#64748b' }}>{format.desc}</p>
-                                </div>
-                            ))}
-                        </div>
-                        <div className="creative-showcase">
-                            <div style={{ fontSize: '72px', fontWeight: 600, marginBottom: '20px' }}>50+</div>
-                            <div style={{ fontSize: '18px', marginBottom: '40px' }}>Creatives tested per campaign on average</div>
-                            <div style={{ fontSize: '14px', opacity: 0.8, maxWidth: '400px', margin: '0 auto', lineHeight: 1.6 }}>We don&apos;t guess—we test. Every campaign gets a minimum of 50 creative variations to find your winning formula.</div>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
-            {/* Budget Tiers */}
-            <section id="budget" className="paid-social-budget">
-                <div className="paid-social-container">
-                    <div className="section-header text-center">
-                        <span className="section-label">INVESTMENT</span>
-                        <h2 className="section-title">Transparent <span className="title-accent">management fees.</span></h2>
-                    </div>
-                    <div className="budget-tiers">
-                        <div className="budget-card">
-                            <h4 style={{ fontSize: '24px', fontWeight: 600, marginBottom: '20px' }}>Launch</h4>
-                            <div style={{ fontSize: '42px', fontWeight: 600, marginBottom: '10px' }}>$2,000<span style={{ fontSize: '16px', color: '#999' }}>/mo</span></div>
-                            <p style={{ color: '#666', marginBottom: '30px', fontSize: '14px' }}>Ad spend up to $15K/mo</p>
-                            <ul style={{ listStyle: 'none', textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '40px' }}>
-                                <li><Icon type="check" style={{ color: '#1877F2' }} /> 1 Platform Managed</li>
-                                <li><Icon type="check" style={{ color: '#1877F2' }} /> Campaign Setup & Creative</li>
-                                <li><Icon type="check" style={{ color: '#1877F2' }} /> Monthly Reporting</li>
-                                <li><Icon type="check" style={{ color: '#1877F2' }} /> Bi-weekly Optimization</li>
-                            </ul>
-                            <Link href="/contact" className="btn-outline" style={{ display: 'block' }}>Get Started</Link>
-                        </div>
-
-                        <div className="budget-card featured">
-                            <span className="popular-tag">BEST VALUE</span>
-                            <h4 style={{ fontSize: '24px', fontWeight: 600, marginBottom: '20px' }}>Scale</h4>
-                            <div style={{ fontSize: '42px', fontWeight: 600, marginBottom: '10px' }}>$4,500<span style={{ fontSize: '16px', color: '#999' }}>/mo</span></div>
-                            <p style={{ color: '#666', marginBottom: '30px', fontSize: '14px' }}>Ad spend up to $75K/mo</p>
-                            <ul style={{ listStyle: 'none', textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '40px' }}>
-                                <li><Icon type="check" style={{ color: '#E1306C' }} /> 3 Platforms Managed</li>
-                                <li><Icon type="check" style={{ color: '#E1306C' }} /> Full Creative Production</li>
-                                <li><Icon type="check" style={{ color: '#E1306C' }} /> A/B Testing Framework</li>
-                                <li><Icon type="check" style={{ color: '#E1306C' }} /> Weekly Strategy Calls</li>
-                                <li><Icon type="check" style={{ color: '#E1306C' }} /> Dedicated Strategist</li>
-                            </ul>
-                            <Link href="/contact" className="btn-primary" style={{ display: 'block', background: 'var(--primary-green)', border: 'none' }}>Scale Now</Link>
-                        </div>
-
-                        <div className="budget-card">
-                            <h4 style={{ fontSize: '24px', fontWeight: 600, marginBottom: '20px' }}>Enterprise</h4>
-                            <div style={{ fontSize: '42px', fontWeight: 600, marginBottom: '10px' }}>Custom</div>
-                            <p style={{ color: '#666', marginBottom: '30px', fontSize: '14px' }}>Ad spend $75K+/mo</p>
-                            <ul style={{ listStyle: 'none', textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '40px' }}>
-                                <li><Icon type="check" style={{ color: '#1877F2' }} /> Unlimited Platforms</li>
-                                <li><Icon type="check" style={{ color: '#1877F2' }} /> In-house Creative Team</li>
-                                <li><Icon type="check" style={{ color: '#1877F2' }} /> Custom Attribution</li>
-                                <li><Icon type="check" style={{ color: '#1877F2' }} /> Influencer Partnerships</li>
-                                <li><Icon type="check" style={{ color: '#1877F2' }} /> 24/7 Campaign Monitoring</li>
-                            </ul>
-                            <Link href="/contact" className="btn-outline" style={{ display: 'block' }}>Talk to Expert</Link>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Results */}
-            <section className="paid-social-results">
-                <div className="paid-social-container">
-                    <div className="section-header text-center">
-                        <span className="section-label">CASE STUDIES</span>
-                        <h2 className="section-title">Real results, <span className="title-accent">real brands.</span></h2>
-                    </div>
-                    <div className="results-showcase">
+                    <div className="ps-testimonials-grid">
                         {[
-                            { metric: '412%', title: 'ROAS Increase', desc: 'E-commerce fashion brand scaled from $50K to $500K monthly revenue in 6 months.' },
-                            { metric: '-67%', title: 'CPA Reduction', desc: 'SaaS company reduced cost per trial signup from $85 to $28 with creative testing.' },
-                            { metric: '3.8M', title: 'Monthly Impressions', desc: 'DTC brand achieved massive reach with TikTok Spark Ads campaign.' },
-                            { metric: '156%', title: 'Lead Volume Increase', desc: 'B2B tech company doubled qualified leads through LinkedIn Ads strategy.' }
-                        ].map((result, i) => (
-                            <div key={i} className="result-item">
-                                <div className="result-number">{result.metric}</div>
-                                <div>
-                                    <h4 style={{ fontWeight: 600, marginBottom: '8px' }}>{result.title}</h4>
-                                    <p style={{ fontSize: '15px', color: '#64748b', lineHeight: 1.6 }}>{result.desc}</p>
+                            { quote: 'Oneskai took our Meta campaigns from 1.2x to 4.1x ROAS in just 90 days. Their creative testing framework is unlike anything we have seen.', name: 'Sarah Chen', role: 'CMO, E-Commerce Brand', initials: 'SC' },
+                            { quote: 'We went from zero paid social presence to generating 200+ qualified leads per month on LinkedIn. The ROI has been incredible.', name: 'Marcus Rivera', role: 'VP Marketing, B2B SaaS', initials: 'MR' },
+                            { quote: 'The team helped us reduce CPA by 62% while increasing conversion volume. Their data-driven approach gives us confidence in every dollar spent.', name: 'Emily Park', role: 'Growth Lead, DTC Brand', initials: 'EP' }
+                        ].map((t, i) => (
+                            <div key={i} className="ps-testimonial-card">
+                                <div className="ps-testimonial-stars">
+                                    {[...Array(5)].map((_, j) => (
+                                        <Icon key={j} type="star" />
+                                    ))}
+                                </div>
+                                <blockquote>&ldquo;{t.quote}&rdquo;</blockquote>
+                                <div className="ps-testimonial-author">
+                                    <div className="ps-testimonial-avatar">{t.initials}</div>
+                                    <div>
+                                        <strong>{t.name}</strong>
+                                        <span>{t.role}</span>
+                                    </div>
                                 </div>
                             </div>
                         ))}
@@ -239,69 +345,123 @@ export function PaidSocialContent() {
                 </div>
             </section>
 
-            {/* FAQ */}
-            <section className="paid-social-faq">
-                <div className="paid-social-container">
-                    <div className="section-header text-center">
-                        <span className="section-label">CLARITY</span>
-                        <h2 className="section-title">Frequently Asked Questions.</h2>
+            {/* ===== FAQ ===== */}
+            <section className="ps-faq">
+                <div className="ps-container">
+                    <div style={{ textAlign: 'center' }}>
+                        <span className="ps-section-badge"><Icon type="help" /> Common Questions</span>
+                        <h2 className="ps-section-title">Frequently asked questions.</h2>
                     </div>
-                    <div className="faq-container" style={{ maxWidth: '900px', margin: '0 auto', marginTop: '60px' }}>
-                        {[
-                            { q: 'What platforms do you specialize in?', a: 'We manage campaigns across Meta (Facebook/Instagram), TikTok, LinkedIn, Pinterest, and Snapchat. Our strongest results come from Meta and TikTok for DTC brands, and LinkedIn for B2B.' },
-                            { q: 'Do you create the ad creative?', a: 'Yes, our in-house creative team produces static images, videos, and UGC-style content. We also work with creator networks for authentic influencer-style ads.' },
-                            { q: 'What is the minimum ad spend you work with?', a: 'We recommend a minimum of $10,000/month in ad spend to effectively test and optimize campaigns. Smaller budgets limit our ability to gather meaningful data quickly.' },
-                            { q: 'How do you measure success?', a: 'We focus on business outcomes: ROAS, CPA, and revenue generated. We implement proper pixel tracking and can integrate with your analytics for full-funnel visibility.' }
-                        ].map((item, idx) => (
-                            <details key={idx} className="faq-item" style={{ background: '#f8fafc', padding: '30px', borderRadius: '24px', marginBottom: '20px', cursor: 'pointer', border: '1px solid #e2e8f0' }}>
-                                <summary style={{ fontWeight: 600, fontSize: '20px', listStyle: 'none', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                                    {item.q}
-                                    <Icon type="plus" style={{ width: '20px' }} />
-                                </summary>
-                                <p style={{ marginTop: '20px', color: '#64748b', fontSize: '17px', lineHeight: 1.7 }}>{item.a}</p>
-                            </details>
-                        ))}
-                    </div>
-                </div>
-            </section>
 
-            {/* CTA */}
-            <section className="paid-social-cta">
-                <div className="paid-social-container">
-                    <div className="cta-grid">
-                        <div>
-                            <h2 style={{ fontSize: '56px', fontWeight: 600, marginBottom: '30px', lineHeight: 1.1 }}>Ready to scale your <span style={{ color: 'var(--accent-yellow)' }}>social ads?</span></h2>
-                            <p style={{ fontSize: '20px', opacity: 0.8, marginBottom: '50px', lineHeight: 1.6 }}>Get a free campaign audit and discover untapped opportunities in your paid social strategy.</p>
-                            <div style={{ display: 'flex', gap: '40px' }}>
-                                <div style={{ textAlign: 'center' }}>
-                                    <div style={{ fontSize: '32px', fontWeight: 600, color: 'var(--accent-yellow)' }}>Free</div>
-                                    <div style={{ fontSize: '12px', opacity: 0.6 }}>CAMPAIGN AUDIT</div>
-                                </div>
-                                <div style={{ textAlign: 'center' }}>
-                                    <div style={{ fontSize: '32px', fontWeight: 600, color: 'var(--accent-yellow)' }}>24h</div>
-                                    <div style={{ fontSize: '12px', opacity: 0.6 }}>RESPONSE TIME</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="cta-form">
-                            <form style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-                                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
-                                    <input type="text" placeholder="First Name" />
-                                    <input type="text" placeholder="Last Name" />
-                                </div>
-                                <input type="email" placeholder="Work Email" />
-                                <input type="url" placeholder="Website or Store URL" />
-                                <select defaultValue="">
-                                    <option value="" disabled>Primary Platform</option>
-                                    <option value="meta">Meta (Facebook/Instagram)</option>
-                                    <option value="tiktok">TikTok</option>
-                                    <option value="linkedin">LinkedIn</option>
-                                    <option value="multiple">Multiple Platforms</option>
-                                </select>
-                                <button type="submit" className="btn-primary" style={{ border: 'none', background: 'var(--primary-green)', color: 'var(--accent-yellow)', fontSize: '18px', fontWeight: 600, cursor: 'pointer', padding: '20px' }}>
-                                    Get My Free Audit
+                    <div className="ps-faq-grid">
+                        {[
+                            { q: 'What platforms do you specialize in?', a: 'We manage campaigns across Meta (Facebook & Instagram), LinkedIn, Pinterest, Snapchat, Twitter/X, and YouTube. Our strongest results come from Meta for DTC brands and LinkedIn for B2B lead generation.' },
+                            { q: 'Do you create the ad creative?', a: 'Yes. Our in-house creative team produces static images, videos, and UGC-style content. We also work with creator networks for authentic influencer-style ads. Every campaign gets 50+ creative variations.' },
+                            { q: 'What is the minimum ad spend you work with?', a: 'We recommend a minimum of $10,000/month in ad spend to effectively test and optimize campaigns. Smaller budgets limit our ability to gather statistically significant data quickly.' },
+                            { q: 'How do you measure success?', a: 'We focus on business outcomes: ROAS, CPA, and revenue generated. We implement server-side tracking via Conversions API and integrate with your analytics for full-funnel attribution.' },
+                            { q: 'How quickly will I see results?', a: 'Most clients see measurable improvements within 2-4 weeks. Full optimization typically takes 60-90 days as we test audiences, creative, and bid strategies to find your winning formula.' },
+                            { q: 'Do you require long-term contracts?', a: 'We offer month-to-month agreements after an initial 3-month commitment. The first 90 days are critical for testing, learning, and building the foundation for scalable growth.' }
+                        ].map((faq, i) => (
+                            <div key={i} className={`ps-faq-item${openFaq === i ? ' open' : ''}`}>
+                                <button className="ps-faq-q" onClick={() => setOpenFaq(openFaq === i ? null : i)}>
+                                    {faq.q}
+                                    <span className="ps-faq-toggle"><Icon type="plus" /></span>
                                 </button>
-                            </form>
+                                {openFaq === i && <div className="ps-faq-a">{faq.a}</div>}
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* ===== PRICING ===== */}
+            <section id="pricing" className="ps-pricing">
+                <div className="ps-container">
+                    <div style={{ textAlign: 'center' }}>
+                        <span className="ps-section-badge"><Icon type="barChart" /> Investment</span>
+                        <h2 className="ps-section-title">Transparent management fees.</h2>
+                        <p className="ps-section-subtitle" style={{ margin: '0 auto' }}>
+                            No hidden costs. No long-term lock-ins after month 3. Choose the plan that matches your growth stage.
+                        </p>
+                    </div>
+
+                    <div className="ps-pricing-grid">
+                        <div className="ps-price-card">
+                            <div className="ps-price-name">Launch</div>
+                            <div className="ps-price-amount">$2,000<span>/mo</span></div>
+                            <p className="ps-price-desc">Ad spend up to $15K/mo</p>
+                            <ul className="ps-price-features">
+                                <li><Icon type="check" className="check-icon" /> 1 Platform Managed</li>
+                                <li><Icon type="check" className="check-icon" /> Campaign Setup &amp; Creative</li>
+                                <li><Icon type="check" className="check-icon" /> Monthly Reporting</li>
+                                <li><Icon type="check" className="check-icon" /> Bi-weekly Optimization</li>
+                            </ul>
+                            <Link href="/contact" className="ps-price-btn outline">Get Started</Link>
+                        </div>
+
+                        <div className="ps-price-card featured">
+                            <span className="ps-price-popular">BEST VALUE</span>
+                            <div className="ps-price-name">Scale</div>
+                            <div className="ps-price-amount">$4,500<span>/mo</span></div>
+                            <p className="ps-price-desc">Ad spend up to $75K/mo</p>
+                            <ul className="ps-price-features">
+                                <li><Icon type="check" className="check-icon" /> 3 Platforms Managed</li>
+                                <li><Icon type="check" className="check-icon" /> Full Creative Production</li>
+                                <li><Icon type="check" className="check-icon" /> A/B Testing Framework</li>
+                                <li><Icon type="check" className="check-icon" /> Weekly Strategy Calls</li>
+                                <li><Icon type="check" className="check-icon" /> Dedicated Strategist</li>
+                            </ul>
+                            <Link href="/contact" className="ps-price-btn primary">Scale Now</Link>
+                        </div>
+
+                        <div className="ps-price-card">
+                            <div className="ps-price-name">Enterprise</div>
+                            <div className="ps-price-amount">Custom</div>
+                            <p className="ps-price-desc">Ad spend $75K+/mo</p>
+                            <ul className="ps-price-features">
+                                <li><Icon type="check" className="check-icon" /> Unlimited Platforms</li>
+                                <li><Icon type="check" className="check-icon" /> In-house Creative Team</li>
+                                <li><Icon type="check" className="check-icon" /> Custom Attribution</li>
+                                <li><Icon type="check" className="check-icon" /> Influencer Partnerships</li>
+                                <li><Icon type="check" className="check-icon" /> 24/7 Campaign Monitoring</li>
+                            </ul>
+                            <Link href="/contact" className="ps-price-btn outline">Talk to Expert</Link>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* ===== CTA ===== */}
+            <section className="ps-cta">
+                <div className="ps-cta-orb one" />
+                <div className="ps-cta-orb two" />
+                <div className="ps-container">
+                    <div className="ps-cta-inner">
+                        <h2 className="ps-cta-title">Ready to scale your <span>paid social?</span></h2>
+                        <p className="ps-cta-subtitle">
+                            Get a free campaign audit and discover untapped opportunities in your paid social strategy.
+                        </p>
+                        <div className="ps-cta-actions">
+                            <Link href="/contact" className="ps-btn-primary">
+                                Get Free Audit <Icon type="arrowRight" />
+                            </Link>
+                            <Link href="/work" className="ps-btn-outline">
+                                See Our Work
+                            </Link>
+                        </div>
+                        <div className="ps-cta-stats">
+                            <div className="ps-cta-stat">
+                                <span className="stat-val">Free</span>
+                                <span className="stat-label">Campaign Audit</span>
+                            </div>
+                            <div className="ps-cta-stat">
+                                <span className="stat-val">24h</span>
+                                <span className="stat-label">Response Time</span>
+                            </div>
+                            <div className="ps-cta-stat">
+                                <span className="stat-val">3.2x</span>
+                                <span className="stat-label">Avg. ROAS</span>
+                            </div>
                         </div>
                     </div>
                 </div>
