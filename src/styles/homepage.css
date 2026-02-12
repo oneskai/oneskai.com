@@ -139,6 +139,152 @@
     font-size: 15px;
 }
 
+/* New Human Section Styles */
+.human-content-centered {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.human-header-center {
+    margin-bottom: 60px;
+}
+
+.human-header-center .section-subtitle {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.human-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.stat-card-human {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 40px 30px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.3s ease;
+}
+
+.stat-card-human:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--accent-pink);
+    box-shadow: 0 20px 40px rgba(255, 45, 117, 0.15);
+}
+
+.stat-icon-human {
+    width: 56px;
+    height: 56px;
+    background: rgba(255, 45, 117, 0.15);
+    color: var(--accent-pink);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.stat-number-human {
+    font-size: 48px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 8px;
+    line-height: 1;
+}
+
+.stat-label-human {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.stat-desc-human {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 1.5;
+}
+
+.human-features-new {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.feature-card-human {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 40px 30px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.feature-card-human:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--accent-pink);
+}
+
+.feature-icon-human {
+    width: 64px;
+    height: 64px;
+    background: rgba(255, 45, 117, 0.15);
+    color: var(--accent-pink);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px;
+}
+
+.feature-card-human h4 {
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 12px;
+}
+
+.feature-card-human p {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+}
+
+.human-cta-center {
+    display: flex;
+    justify-content: center;
+}
+
+/* Responsive Styles for New Human Section */
+@media (max-width: 1024px) {
+    .human-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .human-features-new {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .human-stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-number-human {
+        font-size: 36px;
+    }
+}
+
 /* ===== FAQ SECTION ===== */
 .faq-section {
     padding: 120px 0;
@@ -696,7 +842,7 @@
 }
 
 .services-section.section-light {
-    background: var(--section-light-bg);
+    background: #ffffff;
     color: var(--section-light-text);
 }
 
@@ -1953,6 +2099,7 @@
 .cta-btn-primary .mega-menu-icon {
     width: 18px;
     height: 18px;
+    color: white;
 }
 
 .cta-btn-secondary {
@@ -2383,12 +2530,14 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
+    height: 100%;
 }
 
 .blog-card-compact {
     display: flex;
     align-items: center;
     padding: 24px;
+    flex: 1;
 }
 
 .blog-card-compact .blog-card-content {
@@ -2699,7 +2848,7 @@
 
 /* Challenges section is now light by default via .section-light class */
 .challenges-section.section-light {
-    background: var(--section-light-bg);
+    background: #ffffff;
     color: var(--section-light-text);
 }
 
@@ -2741,6 +2890,18 @@
 
 .section-light .challenge-card-icon svg {
     stroke: currentColor;
+}
+
+.section-light .challenge-card-clean:hover .challenge-card-icon,
+.section-light .challenge-card-clean.active .challenge-card-icon {
+    background: var(--accent-purple-light);
+    color: white;
+}
+
+.section-light .challenge-card-clean:hover .challenge-card-icon svg,
+.section-light .challenge-card-clean.active .challenge-card-icon svg {
+    fill: white !important;
+    stroke: white !important;
 }
 
 .challenges-glow-bg {
@@ -4080,6 +4241,11 @@
     transform: scale(1.05);
 }
 
+.service-card-flat:hover .service-icon-flat svg {
+    fill: white !important;
+    stroke: white !important;
+}
+
 .service-category-tag {
     font-size: 11px;
     font-weight: 600;
@@ -4107,8 +4273,8 @@
     font-size: 13px;
     font-weight: 600;
     color: var(--accent-pink);
-    opacity: 0;
-    transform: translateX(-8px);
+    opacity: 1;
+    transform: translateX(0);
     transition: all 0.3s ease;
     margin-top: auto;
 }
@@ -4124,7 +4290,7 @@
 
 .service-card-flat:hover .service-link-arrow {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateX(4px);
 }
 
 @media (max-width: 1200px) {
@@ -4200,6 +4366,12 @@
 .challenge-card-clean:hover .challenge-card-icon {
     background: var(--accent-purple-light);
     color: white;
+}
+
+.challenge-card-clean:hover .challenge-card-icon svg,
+.challenge-card-clean.active .challenge-card-icon svg {
+    fill: white !important;
+    stroke: white !important;
 }
 
 .challenge-card-clean .challenge-card-title {
@@ -4771,8 +4943,19 @@
 .reviews-panel {
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    justify-content: center;
+}
+
+.reviews-panel::after {
+    content: '';
+    height: 72px;
+    /* Matches testimonial nav height (48px) + gap (24px) */
+    display: block;
+}
+
+@media (max-width: 1024px) {
+    .reviews-panel::after {
+        display: none;
+    }
 }
 
 /* Removed reviews-panel-title styles */
@@ -4780,7 +4963,7 @@
 .review-platforms-stack {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    justify-content: space-between;
     flex-grow: 1;
 }
 
@@ -4998,6 +5181,7 @@
 .cta-btn-main .mega-menu-icon {
     width: 20px;
     height: 20px;
+    color: white;
 }
 
 @media (max-width: 768px) {

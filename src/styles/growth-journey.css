@@ -14,13 +14,13 @@
 
 .journey-header {
     text-align: center;
-    margin-bottom: 140px;
+    margin-bottom: 60px;
 }
 
 /* Roadmap styles */
 .journey-roadmap {
     position: relative;
-    padding: 60px 0;
+    padding: 0;
 }
 
 /* SVG Path for desktop */
@@ -48,8 +48,8 @@
     align-items: flex-start;
     position: relative;
     z-index: 2;
-    gap: 120px;
-    /* Large gap to house connectors */
+    gap: 80px;
+    /* Gap to house connectors */
 }
 
 .phase-item {
@@ -60,7 +60,8 @@
     text-align: center;
     position: relative;
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    min-width: 250px;
+    min-width: 220px;
+    overflow: visible;
 }
 
 /* Phase Card - House Shape */
@@ -70,48 +71,19 @@
     padding: 60px 24px 40px;
     position: relative;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    border-radius: 0 0 24px 24px;
+    border-radius: 10px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
     border: 1px solid rgba(0, 0, 0, 0.08);
-    /* Main border */
-    border-top: none;
+    display: flex;
+    flex-direction: column;
+    min-height: 320px;
 }
 
-/* The Peak (House roof) - FIXED VISIBILITY */
-.phase-card::before {
-    content: '';
-    position: absolute;
-    top: -50px;
-    left: -1px;
-    /* Align with card border */
-    right: -1px;
-    height: 52px;
-    background: #ffffff;
-    /* Use clip-path but we need to see the border. 
-       We'll use a wrap-around shadow or a second element for border */
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-    z-index: 1;
-}
-
-/* Secondary element for the peaked border line */
-.phase-card::after {
-    content: '';
-    position: absolute;
-    top: -50px;
-    left: -1px;
-    right: -1px;
-    height: 52px;
-    z-index: 0;
-    background: rgba(0, 0, 0, 0.08);
-    /* The border color */
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-    padding: 1px;
-    /* Simulate border width */
-}
+/* Removed peak/roof elements for cleaner design */
 
 .phase-top-tag {
     position: absolute;
-    top: -20px;
+    top: 20px;
     left: 50%;
     transform: translateX(-50%);
     padding: 6px 20px;
@@ -178,16 +150,18 @@
     font-size: 14px;
     line-height: 1.6;
     color: #475569;
+    flex-grow: 1;
 }
 
-/* Actions / Loops - POSITIONED HIGHER TO PREVENT OVERLAP */
+/* Actions / Loops - POSITIONED BETWEEN CARDS */
 .phase-connector {
     position: absolute;
-    top: 40px;
-    /* Moved up to clear the description text */
-    right: -85px;
-    /* Centered in the 120px gap */
-    width: 170px;
+    top: 50%;
+    transform: translateY(-50%);
+    /* Centered vertically */
+    right: -75px;
+    /* Centered in the 80px gap */
+    width: 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -234,20 +208,8 @@
 }
 
 .loop-text {
-    margin-top: 15px;
-    /* More breathing room */
-    font-size: 10px;
-    font-weight: 800;
-    color: #0f172a;
-    /* Darker for better contrast */
-    text-transform: uppercase;
-    white-space: nowrap;
-    letter-spacing: 0.8px;
-    background: #ffffff;
-    padding: 6px 14px;
-    border-radius: 100px;
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    display: none;
+    /* Hidden as requested - text was appearing outside cards */
 }
 
 /* Hover effects */
@@ -303,7 +265,7 @@
 }
 
 .journey-footer {
-    margin-top: 120px;
+    margin-top: 60px;
     text-align: center;
 }
 

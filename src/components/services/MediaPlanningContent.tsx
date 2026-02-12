@@ -1,32 +1,88 @@
 'use client';
+
+import { useState } from 'react';
 import Link from 'next/link';
 import { Icon } from '@/components/ui/Icon';
-import '@/styles/content-marketing.css';
+import '@/styles/media-planning.css';
 
 export function MediaPlanningContent() {
+    const [openFaq, setOpenFaq] = useState<number | null>(null);
+
     return (
-        <div className="content-marketing-page">
-            <section className="content-hero" style={{ background: 'var(--bg-cream)' }}>
-                <div className="content-container">
-                    <div className="content-hero-grid">
-                        <div className="content-hero-content">
-                            <span className="content-badge" style={{ background: 'rgba(255, 45, 117, 0.08)', color: 'var(--accent-pink)', border: '1px solid rgba(255, 45, 117, 0.1)' }}><Icon type="layers" />Media Planning</span>
-                            <h1 className="content-hero-title">Strategic <span style={{ background: 'var(--primary-green)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Media Mastery.</span></h1>
-                            <p className="content-hero-subtitle">Data-driven media planning that maximizes reach, efficiency, and ROI across the entire media landscape—paid, owned, and earned.</p>
-                            <div className="content-hero-actions">
-                                <Link href="/contact" className="btn-primary large" style={{ background: 'var(--primary-green)', border: 'none' }}>Get Media Plan<Icon type="arrowRight" /></Link>
-                                <Link href="#case-studies" className="btn-outline">See Approach</Link>
+        <div className="media-planning-page">
+            {/* Hero */}
+            <section className="media-hero">
+                <div className="media-hero-bg">
+                    <div className="media-grid"></div>
+                    <div className="media-orb media-orb-1"></div>
+                    <div className="media-orb media-orb-2"></div>
+                </div>
+                <div className="media-container">
+                    <div className="media-hero-layout">
+                        <div className="media-hero-content">
+                            <span className="media-badge">
+                                <Icon type="layers" />
+                                MEDIA PLANNING & STRATEGY
+                            </span>
+                            <h1 className="media-hero-title">
+                                Strategic Media Plans That <span>Drive Results</span>
+                            </h1>
+                            <p className="media-hero-subtitle">
+                                Data-driven media planning that maximizes reach, efficiency, and ROI. From channel selection to budget allocation, we optimize every dollar.
+                            </p>
+                            <div className="media-hero-actions">
+                                <Link href="/contact" className="btn-media-primary">
+                                    Get Media Plan <Icon type="arrowRight" />
+                                </Link>
+                                <Link href="#channels" className="btn-media-outline">
+                                    View Channels
+                                </Link>
                             </div>
-                            <div className="hero-stat-bars">
-                                <div className="stat-bar-item"><span className="stat-num" style={{ color: '#2563eb' }}>$100M+</span><span className="stat-txt">Media Planned</span></div>
-                                <div className="stat-bar-item"><span className="stat-num" style={{ color: '#3b82f6' }}>30%</span><span className="stat-txt">Avg. Efficiency Gain</span></div>
+                            <div className="media-stats-row">
+                                {[
+                                    { value: '$100M+', label: 'Media Planned' },
+                                    { value: '30%', label: 'Avg Efficiency Gain' },
+                                    { value: '50+', label: 'Channels Managed' }
+                                ].map((stat, i) => (
+                                    <div key={i} className="stat-pill-media">
+                                        <span className="stat-num-media">{stat.value}</span>
+                                        <span className="stat-label-media">{stat.label}</span>
+                                    </div>
+                                ))}
                             </div>
                         </div>
-                        <div className="content-hero-visual">
-                            <div className="content-visual-card" style={{ background: 'var(--primary-green)' }}>
-                                <div style={{ padding: '40px', color: 'var(--accent-yellow)', textAlign: 'center' }}>
-                                    <div style={{ fontSize: '60px' }}>📊</div>
-                                    <div style={{ fontSize: '18px', marginTop: '10px' }}>Strategic Media Mix</div>
+                        <div className="media-hero-visual">
+                            <div className="media-mix-visual">
+                                <div className="media-mix-header">
+                                    <span>Optimized Media Mix</span>
+                                    <span className="media-mix-live">Live</span>
+                                </div>
+                                <div className="media-channels-list">
+                                    {[
+                                        { name: 'Paid Search', percent: 35, color: '#3b82f6' },
+                                        { name: 'Paid Social', percent: 25, color: '#8b5cf6' },
+                                        { name: 'Display', percent: 20, color: '#ec4899' },
+                                        { name: 'Video', percent: 15, color: '#f59e0b' },
+                                        { name: 'Native', percent: 5, color: '#10b981' }
+                                    ].map((channel, i) => (
+                                        <div key={i} className="media-channel-bar">
+                                            <div className="channel-label-row">
+                                                <span>{channel.name}</span>
+                                                <span>{channel.percent}%</span>
+                                            </div>
+                                            <div className="channel-bar-bg">
+                                                <div
+                                                    className="channel-bar-fill"
+                                                    style={{
+                                                        width: `${channel.percent}%`,
+                                                        background: channel.color
+                                                    }}
+                                                >
+                                                    ${(channel.percent * 100).toLocaleString()}K
+                                                </div>
+                                            </div>
+                                        </div>
+                                    ))}
                                 </div>
                             </div>
                         </div>
@@ -34,57 +90,232 @@ export function MediaPlanningContent() {
                 </div>
             </section>
 
-            <section className="content-challenges">
-                <div className="content-container">
-                    <div className="section-header text-center">
-                        <span className="section-label">THE CHALLENGE</span>
-                        <h2 className="section-title">The Media Landscape is <span style={{ background: 'var(--primary-green)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Overwhelming</span></h2>
+            {/* Channel Categories */}
+            <section className="media-channels" id="channels">
+                <div className="media-container">
+                    <div className="section-header-media center">
+                        <span className="section-label-media">CHANNELS</span>
+                        <h2 className="section-title-media">
+                            Plan Across All <span>Media Channels</span>
+                        </h2>
                     </div>
-                    <div className="challenges-grid">
-                        <div className="challenge-card"><div className="challenge-icon" style={{ background: 'rgba(37, 99, 235, 0.15)', color: '#2563eb' }}><Icon type="layers" /></div><h3>Channel Fragmentation</h3><p>Dozens of platforms, formats, and buying methods make media planning complex.</p></div>
-                        <div className="challenge-card"><div className="challenge-icon" style={{ background: 'rgba(37, 99, 235, 0.15)', color: '#2563eb' }}><Icon type="dollarSign" /></div><h3>Budget Allocation</h3><p>Without proper planning, budgets get spread too thin or concentrated in the wrong places.</p></div>
-                        <div className="challenge-card"><div className="challenge-icon" style={{ background: 'rgba(37, 99, 235, 0.15)', color: '#2563eb' }}><Icon type="target" /></div><h3>Audience Reach</h3><p>Your audience is everywhere—finding the right mix to reach them efficiently is critical.</p></div>
-                    </div>
-                </div>
-            </section>
-
-            <section className="content-services">
-                <div className="content-container">
-                    <div className="section-header"><span className="section-label">WHAT WE DO</span><h2 className="section-title">Media Planning <span style={{ background: 'var(--primary-green)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Services</span></h2></div>
-                    <div className="services-grid">
+                    <div className="channels-categories-grid">
                         {[
-                            { title: 'Media Strategy', desc: 'Comprehensive media strategies aligned to business goals and audience behavior.', tags: ['Strategy', 'Planning'] },
-                            { title: 'Budget Allocation', desc: 'Optimized budget distribution across channels based on data and goals.', tags: ['Budgeting', 'ROI'] },
-                            { title: 'Channel Selection', desc: 'Identify the right channels for your audience, message, and objectives.', tags: ['Channels', 'Mix'] },
-                            { title: 'Media Mix Modeling', desc: 'Econometric modeling to understand true channel contribution.', tags: ['MMM', 'Attribution'] },
-                            { title: 'Reach & Frequency', desc: 'Plan optimal reach and frequency to maximize impact and minimize waste.', tags: ['R&F', 'Planning'] },
-                            { title: 'Vendor Negotiation', desc: 'Leverage our buying power to negotiate better rates and placements.', tags: ['Buying', 'Rates'] }
-                        ].map((service, i) => (<div key={i} className="content-service-card"><h3>{service.title}</h3><p>{service.desc}</p><div className="service-tags">{service.tags.map((tag, j) => <span key={j} className="service-tag">{tag}</span>)}</div></div>))}
+                            {
+                                category: 'Digital Paid Media',
+                                icon: 'monitor',
+                                description: 'Performance-driven digital advertising across search, social, and display.',
+                                channels: ['Paid Search', 'Paid Social', 'Display Ads', 'Programmatic', 'Video Ads', 'Native']
+                            },
+                            {
+                                category: 'Traditional Media',
+                                icon: 'tv',
+                                description: 'Mass reach channels for brand awareness and broad audience targeting.',
+                                channels: ['TV', 'Radio', 'Print', 'Out-of-Home', 'Direct Mail', 'Cinema']
+                            },
+                            {
+                                category: 'Owned & Earned',
+                                icon: 'share2',
+                                description: 'Maximize your owned properties and earned media opportunities.',
+                                channels: ['SEO', 'Content', 'Email', 'Social Organic', 'PR', 'Partnerships']
+                            }
+                        ].map((cat, i) => (
+                            <div key={i} className="channel-category-card">
+                                <div className="channel-icon-wrapper">
+                                    <Icon type={cat.icon} />
+                                </div>
+                                <h3>{cat.category}</h3>
+                                <p>{cat.description}</p>
+                                <ul className="channel-list">
+                                    {cat.channels.map((ch, j) => (
+                                        <li key={j}>
+                                            <Icon type="check" />
+                                            {ch}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>
 
-            <section className="content-faq">
-                <div className="content-container">
-                    <div className="section-header text-center"><span className="section-label">FAQS</span><h2 className="section-title">Common Questions</h2></div>
-                    <div className="faq-container">
-                        <details className="faq-item"><summary>Do you also handle media buying?</summary><p>Yes, we offer end-to-end services from planning through buying and optimization.</p></details>
-                        <details className="faq-item"><summary>What budget levels do you work with?</summary><p>We work with annual media budgets from $500K to $50M+. Our approach scales appropriately.</p></details>
-                        <details className="faq-item"><summary>How do you measure success?</summary><p>We establish clear KPIs upfront and measure against them with robust attribution and reporting.</p></details>
+            {/* Process */}
+            <section className="media-process">
+                <div className="media-container">
+                    <div className="section-header-media center">
+                        <span className="section-label-media">OUR PROCESS</span>
+                        <h2 className="section-title-media">
+                            Strategic Planning <span>Methodology</span>
+                        </h2>
+                    </div>
+                    <div className="process-timeline">
+                        {[
+                            {
+                                step: 1,
+                                title: 'Discovery & Research',
+                                description: 'Deep dive into your business goals, target audience, competitive landscape, and current media performance.',
+                                deliverables: ['Audience Insights', 'Competitive Analysis', 'Performance Audit', 'Goal Definition']
+                            },
+                            {
+                                step: 2,
+                                title: 'Channel Strategy',
+                                description: 'Identify the optimal channel mix based on your audience behavior, budget, and objectives.',
+                                deliverables: ['Channel Recommendations', 'Budget Allocation', 'Reach & Frequency Models', 'Media Mix']
+                            },
+                            {
+                                step: 3,
+                                title: 'Media Planning',
+                                description: 'Build comprehensive media plans with tactics, timelines, and KPIs for each channel.',
+                                deliverables: ['Media Plan', 'Flight Schedule', 'KPI Framework', 'Creative Requirements']
+                            },
+                            {
+                                step: 4,
+                                title: 'Execution & Optimization',
+                                description: 'Execute the plan, monitor performance, and continuously optimize for better results.',
+                                deliverables: ['Campaign Launch', 'Performance Tracking', 'Optimization', 'Reporting']
+                            }
+                        ].map((process, i) => (
+                            <div key={i} className="process-step">
+                                <div className="process-number">{process.step}</div>
+                                <div className="process-content">
+                                    <h3>{process.title}</h3>
+                                    <p>{process.description}</p>
+                                    <div className="process-deliverables">
+                                        {process.deliverables.map((del, j) => (
+                                            <span key={j} className="deliverable-tag">{del}</span>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>
 
-            <section className="content-cta" style={{ background: 'var(--primary-green)' }}>
-                <div className="content-container">
-                    <div className="cta-box" style={{ background: 'transparent', boxShadow: 'none' }}>
-                        <h2 style={{ color: 'var(--accent-yellow)' }}>Ready for <span style={{ color: '#bfdbfe' }}>Strategic Media?</span></h2>
-                        <p style={{ fontSize: '20px', marginBottom: '40px', opacity: 0.9, color: 'var(--accent-yellow)' }}>Get a custom media plan that maximizes your budget efficiency.</p>
-                        <Link href="/contact" className="btn-white">Get Custom Media Plan</Link>
+            {/* Pricing */}
+            <section className="media-pricing">
+                <div className="media-container">
+                    <div className="section-header-media center">
+                        <span className="section-label-media">INVESTMENT</span>
+                        <h2 className="section-title-media">
+                            Media Planning <span>Packages</span>
+                        </h2>
+                    </div>
+                    <div className="pricing-grid-media">
+                        {[
+                            {
+                                name: 'Starter',
+                                price: '$5,000',
+                                period: 'one-time',
+                                features: ['Single Campaign Plan', '3 Channels', 'Budget Allocation', 'Media Plan Document', 'Basic Reporting'],
+                                cta: 'Get Started'
+                            },
+                            {
+                                name: 'Growth',
+                                price: '$10,000/mo',
+                                period: 'monthly',
+                                features: ['Multi-Channel Strategy', 'Unlimited Channels', 'Monthly Optimization', 'Media Mix Modeling', 'Vendor Negotiation', 'Performance Tracking'],
+                                cta: 'Start Planning',
+                                popular: true
+                            },
+                            {
+                                name: 'Enterprise',
+                                price: 'Custom',
+                                period: 'flexible',
+                                features: ['Full-Service Planning', 'Media Buying Included', 'Dedicated Strategist', 'Quarterly Planning', 'Advanced Attribution', 'Executive Reporting'],
+                                cta: 'Talk to Us'
+                            }
+                        ].map((pkg, i) => (
+                            <div key={i} className={`pricing-card-media ${pkg.popular ? 'popular' : ''}`}>
+                                {pkg.popular && <span className="popular-badge-media">MOST POPULAR</span>}
+                                <h3>{pkg.name}</h3>
+                                <div className="price-media">{pkg.price}</div>
+                                <ul className="features-list-media">
+                                    {pkg.features.map((f, j) => (
+                                        <li key={j}>
+                                            <Icon type="check" />
+                                            {f}
+                                        </li>
+                                    ))}
+                                </ul>
+                                <Link
+                                    href="/contact"
+                                    className={pkg.popular ? 'btn-media-primary' : 'btn-media-outline'}
+                                >
+                                    {pkg.cta}
+                                </Link>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* FAQ */}
+            <section className="media-faq">
+                <div className="media-container">
+                    <div className="faq-layout-media">
+                        <div className="faq-sidebar-media">
+                            <span className="section-label-media">FAQ</span>
+                            <h2 className="section-title-media">
+                                Common <span>Questions</span>
+                            </h2>
+                        </div>
+                        <div className="faq-content-media">
+                            {[
+                                {
+                                    q: 'What&apos;s the difference between media planning and media buying?',
+                                    a: 'Media planning is the strategic process of selecting channels, allocating budget, and creating the roadmap. Media buying is the tactical execution of purchasing ad inventory. We offer both services.'
+                                },
+                                {
+                                    q: 'What budget levels do you work with?',
+                                    a: 'We work with annual media budgets from $500K to $50M+. Our strategic approach scales to fit your investment level while maximizing efficiency.'
+                                },
+                                {
+                                    q: 'Do you handle both digital and traditional media?',
+                                    a: 'Yes! We plan across all channels—digital paid, traditional mass media, and owned/earned channels. We believe in integrated planning for maximum impact.'
+                                },
+                                {
+                                    q: 'How do you measure success?',
+                                    a: 'We establish clear KPIs aligned to your business goals (awareness, consideration, conversion) and track performance with advanced attribution and reporting throughout the campaign.'
+                                },
+                                {
+                                    q: 'Can you work with our existing agency partners?',
+                                    a: 'Absolutely. We often collaborate with creative agencies, production companies, and other partners to ensure seamless execution of media plans.'
+                                }
+                            ].map((faq, i) => (
+                                <details
+                                    key={i}
+                                    className="faq-item-media"
+                                    open={openFaq === i}
+                                    onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                                >
+                                    <summary>
+                                        {faq.q}
+                                        <Icon type="plus" />
+                                    </summary>
+                                    <p>{faq.a}</p>
+                                </details>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* CTA */}
+            <section className="media-cta">
+                <div className="media-container">
+                    <div className="cta-content-media">
+                        <h2>Ready for Strategic <span>Media Planning?</span></h2>
+                        <p>Get a custom media plan that maximizes reach, efficiency, and ROI across all channels.</p>
+                        <Link href="/contact" className="btn-media-primary large">
+                            Get Custom Media Plan <Icon type="arrowRight" />
+                        </Link>
                     </div>
                 </div>
             </section>
         </div>
     );
 }
+
 export default MediaPlanningContent;

@@ -1,49 +1,257 @@
 'use client';
 
+import { useState } from 'react';
 import Link from 'next/link';
 import { Icon } from '@/components/ui/Icon';
 import '@/styles/uiux.css';
 
 export function UIUXContent() {
+    const [openFaq, setOpenFaq] = useState<number | null>(null);
+
     return (
         <div className="uiux-page">
-            {/* Hero Section */}
-            <section className="uiux-hero">
+            {/* ===== PREMIUM HERO ===== */}
+            <section className="uiux-hero-v2">
+                <div className="uiux-hero-bg">
+                    <div className="uiux-grid-pattern"></div>
+                    <div className="uiux-gradient-blob blob-1"></div>
+                    <div className="uiux-gradient-blob blob-2"></div>
+                </div>
                 <div className="uiux-container">
-                    <div className="uiux-hero-grid">
+                    <div className="uiux-hero-layout">
                         <div className="uiux-hero-content">
-                            <span className="uiux-badge">
-                                <Icon type="layout" />
-                                Human-Centered Design
+                            <span className="uiux-badge-v2">
+                                <Icon type="users" />
+                                HUMAN-CENTERED DESIGN
                             </span>
                             <h1 className="uiux-hero-title">
-                                Design experiences users <span className="title-accent">actually love.</span>
+                                Design Experiences Users <span>Actually Love</span>
                             </h1>
                             <p className="uiux-hero-subtitle">
-                                We craft intuitive, beautiful interfaces backed by research and data—turning complex products into delightful experiences that drive engagement and conversion.
+                                We craft intuitive, beautiful interfaces backed by research and data—transforming
+                                complex products into delightful experiences that drive engagement and conversion.
                             </p>
-                            <div className="content-hero-actions">
-                                <Link href="/contact" className="btn-primary large" style={{ background: 'var(--primary-green)', border: 'none', color: 'var(--accent-yellow)' }}>
-                                    Start Design Project
-                                    <Icon type="arrowRight" />
+                            <div className="uiux-hero-actions">
+                                <Link href="/contact" className="btn-uiux-primary">
+                                    Start Design Project <Icon type="arrowRight" />
                                 </Link>
-                                <Link href="#pricing" className="btn-outline">
-                                    View Packages
+                                <Link href="#process" className="btn-uiux-outline">
+                                    See Our Process
                                 </Link>
+                            </div>
+                            <div className="uiux-hero-stats">
+                                {[
+                                    { value: '100+', label: 'Products Designed' },
+                                    { value: '45%', label: 'Avg Conversion Lift' },
+                                    { value: '5M+', label: 'Users Impacted' }
+                                ].map((stat, i) => (
+                                    <div key={i} className="hero-stat-item">
+                                        <span className="stat-value-uiux">{stat.value}</span>
+                                        <span className="stat-label-uiux">{stat.label}</span>
+                                    </div>
+                                ))}
                             </div>
                         </div>
 
+                        {/* Interactive UI Mockup */}
                         <div className="uiux-hero-visual">
-                            <div className="wireframe-visual">
-                                <div className="wireframe-card">
-                                    <div className="wireframe-header"></div>
-                                    <div className="wireframe-content">
-                                        <div className="wireframe-sidebar">
-                                            <div></div><div></div><div></div><div></div>
+                            <div className="ui-mockup-container">
+                                <div className="ui-mockup-browser">
+                                    <div className="browser-header">
+                                        <div className="browser-dots">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
                                         </div>
-                                        <div className="wireframe-main">
-                                            <div></div><div></div><div></div>
+                                        <div className="browser-url">yourproduct.com</div>
+                                    </div>
+                                    <div className="browser-content">
+                                        {/* Navigation */}
+                                        <div className="mockup-nav">
+                                            <div className="nav-logo"></div>
+                                            <div className="nav-menu">
+                                                <div className="nav-item"></div>
+                                                <div className="nav-item"></div>
+                                                <div className="nav-item"></div>
+                                            </div>
+                                            <div className="nav-cta"></div>
                                         </div>
+                                        {/* Hero Section */}
+                                        <div className="mockup-hero-section">
+                                            <div className="hero-text-block">
+                                                <div className="text-line large"></div>
+                                                <div className="text-line medium"></div>
+                                            </div>
+                                            <div className="hero-cta-group">
+                                                <div className="cta-button primary"></div>
+                                                <div className="cta-button secondary"></div>
+                                            </div>
+                                        </div>
+                                        {/* Cards Grid */}
+                                        <div className="mockup-cards-grid">
+                                            {[1, 2, 3].map((i) => (
+                                                <div key={i} className="mockup-card">
+                                                    <div className="card-image"></div>
+                                                    <div className="card-text">
+                                                        <div className="text-line"></div>
+                                                        <div className="text-line short"></div>
+                                                    </div>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </div>
+                                {/* Floating annotations */}
+                                <div className="design-annotation annotation-1">
+                                    <div className="annotation-dot"></div>
+                                    <div className="annotation-label">Clear CTA</div>
+                                </div>
+                                <div className="design-annotation annotation-2">
+                                    <div className="annotation-dot"></div>
+                                    <div className="annotation-label">Visual Hierarchy</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* ===== DESIGN PRINCIPLES ===== */}
+            <section className="design-principles-section">
+                <div className="uiux-container">
+                    <div className="section-header-uiux center">
+                        <span className="section-label-uiux">CORE PRINCIPLES</span>
+                        <h2 className="section-title-uiux">
+                            What Makes <span>Great UX</span>
+                        </h2>
+                        <p className="section-subtitle-uiux">
+                            Evidence-based design principles that guide every decision we make.
+                        </p>
+                    </div>
+
+                    <div className="principles-grid-uiux">
+                        {[
+                            {
+                                icon: 'users',
+                                title: 'User-Centered',
+                                desc: 'Design based on real user needs, behaviors, and pain points—not assumptions',
+                                color: 'var(--accent-purple)'
+                            },
+                            {
+                                icon: 'eye',
+                                title: 'Visual Hierarchy',
+                                desc: 'Guide attention with size, color, and spacing to create intuitive navigation',
+                                color: 'var(--accent-pink)'
+                            },
+                            {
+                                icon: 'zap',
+                                title: 'Consistency',
+                                desc: 'Unified patterns and components that create predictable, learnable interfaces',
+                                color: 'var(--accent-yellow)'
+                            },
+                            {
+                                icon: 'check',
+                                title: 'Accessibility',
+                                desc: 'WCAG-compliant designs that work for everyone, regardless of ability',
+                                color: 'var(--primary-green)'
+                            }
+                        ].map((principle, i) => (
+                            <div key={i} className="principle-card-uiux">
+                                <div className="principle-icon-uiux" style={{ background: `${principle.color}15`, color: principle.color }}>
+                                    <Icon type={principle.icon} />
+                                </div>
+                                <h3>{principle.title}</h3>
+                                <p>{principle.desc}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* ===== UX RESEARCH METHODOLOGY ===== */}
+            <section id="process" className="ux-research-section">
+                <div className="uiux-container">
+                    <div className="research-layout">
+                        <div className="research-content">
+                            <span className="section-label-uiux">RESEARCH-DRIVEN</span>
+                            <h2 className="section-title-uiux">
+                                Design Backed by <span>Real Insights</span>
+                            </h2>
+                            <p className="section-subtitle-uiux">
+                                We don&apos;t guess. We research, test, and iterate based on actual user behavior and feedback.
+                            </p>
+
+                            <div className="research-methods">
+                                {[
+                                    {
+                                        method: 'User Interviews',
+                                        desc: 'One-on-one sessions to understand motivations, frustrations, and mental models',
+                                        icon: 'message-circle'
+                                    },
+                                    {
+                                        method: 'Usability Testing',
+                                        desc: 'Observe real users completing tasks to identify friction points',
+                                        icon: 'activity'
+                                    },
+                                    {
+                                        method: 'Analytics Analysis',
+                                        desc: 'Heatmaps, session recordings, and funnel analysis to find drop-off points',
+                                        icon: 'trending'
+                                    },
+                                    {
+                                        method: 'A/B Testing',
+                                        desc: 'Statistical validation of design decisions through controlled experiments',
+                                        icon: 'target'
+                                    }
+                                ].map((method, i) => (
+                                    <div key={i} className="research-method-card">
+                                        <div className="method-icon-wrapper">
+                                            <Icon type={method.icon} />
+                                        </div>
+                                        <div>
+                                            <h4>{method.method}</h4>
+                                            <p>{method.desc}</p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* User Journey Map Visual */}
+                        <div className="research-visual">
+                            <div className="journey-map-card">
+                                <div className="journey-map-header">
+                                    <span className="journey-map-title">User Journey Map</span>
+                                    <span className="journey-map-badge">Awareness → Purchase</span>
+                                </div>
+                                <div className="journey-stages">
+                                    {['Discover', 'Research', 'Compare', 'Decide', 'Purchase'].map((stage, i) => (
+                                        <div key={i} className="journey-stage">
+                                            <div className="stage-dot"></div>
+                                            <div className="stage-label">{stage}</div>
+                                        </div>
+                                    ))}
+                                    <div className="journey-line"></div>
+                                </div>
+                                <div className="journey-emotions">
+                                    <div className="emotion-label">Emotion</div>
+                                    <svg className="emotion-graph" viewBox="0 0 300 60">
+                                        <polyline
+                                            points="0,45 60,30 120,35 180,20 240,25 300,15"
+                                            fill="none"
+                                            stroke="var(--accent-purple)"
+                                            strokeWidth="3"
+                                        />
+                                    </svg>
+                                </div>
+                                <div className="journey-insights">
+                                    <div className="insight-item pain">
+                                        <Icon type="alert-circle" />
+                                        <span>Pain Point</span>
+                                    </div>
+                                    <div className="insight-item opportunity">
+                                        <Icon type="lightbulb" />
+                                        <span>Opportunity</span>
                                     </div>
                                 </div>
                             </div>
@@ -52,217 +260,310 @@ export function UIUXContent() {
                 </div>
             </section>
 
-            {/* Trust Bar */}
-            <section className="uiux-trust">
+            {/* ===== DESIGN PROCESS ===== */}
+            <section className="design-process-section">
                 <div className="uiux-container">
-                    <div style={{ display: 'flex', justifyContent: 'center', gap: '80px', flexWrap: 'wrap' }}>
+                    <div className="section-header-uiux center">
+                        <span className="section-label-uiux">OUR WORKFLOW</span>
+                        <h2 className="section-title-uiux">
+                            From Research to <span>Launch</span>
+                        </h2>
+                    </div>
+
+                    <div className="process-timeline-uiux">
                         {[
-                            { value: '100+', label: 'Products Designed' },
-                            { value: '45%', label: 'Avg. Conversion Lift' },
-                            { value: '5M+', label: 'Users Impacted' },
-                            { value: '98%', label: 'Client Satisfaction' }
-                        ].map((stat, i) => (
-                            <div key={i} style={{ textAlign: 'center' }}>
-                                <div style={{ fontSize: '36px', fontWeight: 600, background: 'var(--primary-green)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{stat.value}</div>
-                                <div style={{ fontSize: '13px', color: '#64748b', marginTop: '5px' }}>{stat.label}</div>
+                            {
+                                phase: 'Discover',
+                                week: 'Week 1-2',
+                                desc: 'User research, competitive analysis, and stakeholder interviews',
+                                deliverables: ['Research Report', 'User Personas', 'Journey Maps'],
+                                icon: 'search'
+                            },
+                            {
+                                phase: 'Define',
+                                week: 'Week 2-3',
+                                desc: 'Synthesize insights into clear problems and design requirements',
+                                deliverables: ['Problem Statements', 'Design Requirements', 'User Flows'],
+                                icon: 'target'
+                            },
+                            {
+                                phase: 'Design',
+                                week: 'Week 3-6',
+                                desc: 'Create wireframes, high-fidelity mockups, and interactive prototypes',
+                                deliverables: ['Wireframes', 'UI Designs', 'Prototypes', 'Design System'],
+                                icon: 'pen'
+                            },
+                            {
+                                phase: 'Test & Iterate',
+                                week: 'Week 6-8',
+                                desc: 'Usability testing, feedback incorporation, and design refinement',
+                                deliverables: ['Test Results', 'Final Designs', 'Handoff Files'],
+                                icon: 'refresh'
+                            }
+                        ].map((phase, i) => (
+                            <div key={i} className="process-phase-card">
+                                <div className="phase-icon-large">
+                                    <Icon type={phase.icon} />
+                                </div>
+                                <div className="phase-content">
+                                    <div className="phase-header">
+                                        <h3>{phase.phase}</h3>
+                                        <span className="phase-week">{phase.week}</span>
+                                    </div>
+                                    <p>{phase.desc}</p>
+                                    <div className="phase-deliverables">
+                                        <span className="deliverables-label">Deliverables:</span>
+                                        <div className="deliverables-tags">
+                                            {phase.deliverables.map((d, j) => (
+                                                <span key={j} className="deliverable-tag-uiux">{d}</span>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </div>
+                                {i < 3 && <div className="phase-connector"></div>}
                             </div>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* Services */}
-            <section className="uiux-services">
+            {/* ===== DESIGN SYSTEM SHOWCASE ===== */}
+            <section className="design-system-section">
                 <div className="uiux-container">
-                    <div className="section-header text-center">
-                        <span className="section-label">WHAT WE DO</span>
-                        <h2 className="section-title">End-to-end <span className="title-accent">design services.</span></h2>
-                    </div>
-                    <div className="services-grid">
-                        {[
-                            { title: 'UX Research', desc: 'User interviews, surveys, usability testing, and competitive analysis to inform design decisions.' },
-                            { title: 'UI Design', desc: 'Pixel-perfect interfaces with consistent design systems and component libraries.' },
-                            { title: 'Prototyping', desc: 'Interactive prototypes for testing and stakeholder alignment before development.' }
-                        ].map((service, i) => (
-                            <div key={i} className="service-card">
-                                <h3 style={{ fontSize: '24px', fontWeight: 600, marginBottom: '15px' }}>{service.title}</h3>
-                                <p style={{ fontSize: '16px', color: '#64748b', lineHeight: 1.7 }}>{service.desc}</p>
+                    <div className="design-system-grid">
+                        <div className="design-system-visual">
+                            <div className="design-system-card">
+                                <div className="ds-header">
+                                    <span className="ds-title">Design System</span>
+                                    <span className="ds-version">v2.0</span>
+                                </div>
+                                <div className="ds-components">
+                                    <div className="ds-section">
+                                        <div className="ds-section-label">Buttons</div>
+                                        <div className="ds-button-group">
+                                            <div className="ds-button primary">Primary</div>
+                                            <div className="ds-button secondary">Secondary</div>
+                                            <div className="ds-button tertiary">Tertiary</div>
+                                        </div>
+                                    </div>
+                                    <div className="ds-section">
+                                        <div className="ds-section-label">Typography</div>
+                                        <div className="ds-type-scale">
+                                            <div className="type-sample h1">H1</div>
+                                            <div className="type-sample h2">H2</div>
+                                            <div className="type-sample h3">H3</div>
+                                            <div className="type-sample body">Body</div>
+                                        </div>
+                                    </div>
+                                    <div className="ds-section">
+                                        <div className="ds-section-label">Colors</div>
+                                        <div className="ds-color-palette">
+                                            <div className="color-swatch" style={{ background: 'var(--primary-green)' }}></div>
+                                            <div className="color-swatch" style={{ background: 'var(--accent-purple)' }}></div>
+                                            <div className="color-swatch" style={{ background: 'var(--accent-pink)' }}></div>
+                                            <div className="color-swatch" style={{ background: 'var(--accent-yellow)' }}></div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Process */}
-            <section className="uiux-process">
-                <div className="uiux-container">
-                    <div className="section-header text-center">
-                        <span className="section-label" style={{ color: 'rgba(255,255,255,0.7)' }}>OUR PROCESS</span>
-                        <h2 className="section-title" style={{ color: 'var(--accent-yellow)' }}>Design thinking <span style={{ color: '#c4b5fd' }}>in action.</span></h2>
-                    </div>
-                    <div className="process-steps">
-                        {[
-                            { num: '01', title: 'Discover', desc: 'Research & insights' },
-                            { num: '02', title: 'Define', desc: 'Problems & goals' },
-                            { num: '03', title: 'Ideate', desc: 'Concepts & solutions' },
-                            { num: '04', title: 'Design', desc: 'Visual & interaction' },
-                            { num: '05', title: 'Test', desc: 'Validate & iterate' }
-                        ].map((step, i) => (
-                            <div key={i} className="process-step">
-                                <div className="step-num">{step.num}</div>
-                                <h4 style={{ fontWeight: 600, marginBottom: '8px' }}>{step.title}</h4>
-                                <p style={{ fontSize: '13px', opacity: 0.8 }}>{step.desc}</p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Tools */}
-            <section className="uiux-tools">
-                <div className="uiux-container">
-                    <div className="section-header text-center">
-                        <span className="section-label">OUR TOOLKIT</span>
-                        <h2 className="section-title">Industry-leading <span className="title-accent">design tools.</span></h2>
-                    </div>
-                    <div className="tools-grid">
-                        {[
-                            { icon: '🎨', name: 'Figma', desc: 'Collaborative design' },
-                            { icon: '⚡', name: 'Framer', desc: 'Interactive prototypes' },
-                            { icon: '🔬', name: 'Maze', desc: 'User testing' },
-                            { icon: '📊', name: 'Hotjar', desc: 'Behavior analytics' }
-                        ].map((tool, i) => (
-                            <div key={i} className="tool-card">
-                                <div className="tool-icon">{tool.icon}</div>
-                                <h4 style={{ fontWeight: 600, marginBottom: '8px' }}>{tool.name}</h4>
-                                <p style={{ fontSize: '14px', color: '#64748b' }}>{tool.desc}</p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Pricing */}
-            <section id="pricing" className="uiux-pricing">
-                <div className="uiux-container">
-                    <div className="section-header text-center">
-                        <span className="section-label">INVESTMENT</span>
-                        <h2 className="section-title">Design <span className="title-accent">packages.</span></h2>
-                    </div>
-                    <div className="pricing-grid">
-                        <div className="price-card">
-                            <h4 style={{ fontSize: '24px', fontWeight: 600, marginBottom: '20px' }}>Sprint</h4>
-                            <div style={{ fontSize: '42px', fontWeight: 600, marginBottom: '10px' }}>$5,000<span style={{ fontSize: '16px', color: '#999' }}>+</span></div>
-                            <p style={{ color: '#666', marginBottom: '30px', fontSize: '14px' }}>Single feature or page</p>
-                            <ul style={{ listStyle: 'none', textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '40px' }}>
-                                <li><Icon type="check" style={{ color: '#6366f1' }} /> UX Research</li>
-                                <li><Icon type="check" style={{ color: '#6366f1' }} /> UI Design (5-10 screens)</li>
-                                <li><Icon type="check" style={{ color: '#6366f1' }} /> Interactive Prototype</li>
-                                <li><Icon type="check" style={{ color: '#6366f1' }} /> 2-Week Delivery</li>
-                            </ul>
-                            <Link href="/contact" className="btn-outline" style={{ display: 'block' }}>Get Started</Link>
                         </div>
 
-                        <div className="price-card featured">
-                            <span className="popular-tag">MOST POPULAR</span>
-                            <h4 style={{ fontSize: '24px', fontWeight: 600, marginBottom: '20px' }}>Product Design</h4>
-                            <div style={{ fontSize: '42px', fontWeight: 600, marginBottom: '10px' }}>$15,000<span style={{ fontSize: '16px', color: '#999' }}>+</span></div>
-                            <p style={{ color: '#666', marginBottom: '30px', fontSize: '14px' }}>Full product or app</p>
-                            <ul style={{ listStyle: 'none', textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '40px' }}>
-                                <li><Icon type="check" style={{ color: '#a855f7' }} /> Full UX Research Phase</li>
-                                <li><Icon type="check" style={{ color: '#a855f7' }} /> Complete UI Design</li>
-                                <li><Icon type="check" style={{ color: '#a855f7' }} /> Design System</li>
-                                <li><Icon type="check" style={{ color: '#a855f7' }} /> Usability Testing</li>
-                                <li><Icon type="check" style={{ color: '#a855f7' }} /> 6-8 Week Delivery</li>
-                            </ul>
-                            <Link href="/contact" className="btn-primary" style={{ display: 'block', background: 'var(--primary-green)', border: 'none' }}>Start Project</Link>
-                        </div>
+                        <div className="design-system-content">
+                            <span className="section-label-uiux">SCALABLE DESIGN</span>
+                            <h2 className="section-title-uiux">
+                                Build Once, <span>Use Everywhere</span>
+                            </h2>
+                            <p className="section-subtitle-uiux">
+                                We create comprehensive design systems that ensure consistency, speed up development,
+                                and make your product feel cohesive at every touchpoint.
+                            </p>
 
-                        <div className="price-card">
-                            <h4 style={{ fontSize: '24px', fontWeight: 600, marginBottom: '20px' }}>Retainer</h4>
-                            <div style={{ fontSize: '42px', fontWeight: 600, marginBottom: '10px' }}>$8,000<span style={{ fontSize: '16px', color: '#999' }}>/mo</span></div>
-                            <p style={{ color: '#666', marginBottom: '30px', fontSize: '14px' }}>Ongoing design support</p>
-                            <ul style={{ listStyle: 'none', textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '40px' }}>
-                                <li><Icon type="check" style={{ color: '#6366f1' }} /> Dedicated Designer</li>
-                                <li><Icon type="check" style={{ color: '#6366f1' }} /> 40 Hours/Month</li>
-                                <li><Icon type="check" style={{ color: '#6366f1' }} /> Priority Response</li>
-                                <li><Icon type="check" style={{ color: '#6366f1' }} /> Quarterly Reviews</li>
-                            </ul>
-                            <Link href="/contact" className="btn-outline" style={{ display: 'block' }}>Talk to Expert</Link>
+                            <div className="ds-benefits">
+                                {[
+                                    { benefit: 'Component Library', desc: 'Reusable UI components with variants and states' },
+                                    { benefit: 'Design Tokens', desc: 'Colors, spacing, typography defined as variables' },
+                                    { benefit: 'Documentation', desc: 'Usage guidelines and implementation examples' },
+                                    { benefit: 'Developer Handoff', desc: 'Specs, assets, and code snippets for engineering' }
+                                ].map((item, i) => (
+                                    <div key={i} className="ds-benefit-item">
+                                        <Icon type="check" />
+                                        <div>
+                                            <h4>{item.benefit}</h4>
+                                            <p>{item.desc}</p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Portfolio */}
-            <section className="uiux-portfolio">
+            {/* ===== IMPACT METRICS ===== */}
+            <section className="impact-metrics-section">
                 <div className="uiux-container">
-                    <div className="section-header text-center">
-                        <span className="section-label">OUR WORK</span>
-                        <h2 className="section-title">Recent <span className="title-accent">projects.</span></h2>
+                    <div className="section-header-uiux center">
+                        <span className="section-label-uiux">PROVEN RESULTS</span>
+                        <h2 className="section-title-uiux">
+                            Designs That <span>Drive Results</span>
+                        </h2>
                     </div>
-                    <div className="portfolio-grid">
+
+                    <div className="metrics-showcase">
                         {[
-                            { title: 'FinTech Dashboard', color: '#6366f1' },
-                            { title: 'Healthcare App', color: '#a855f7' },
-                            { title: 'E-commerce Redesign', color: '#ec4899' }
-                        ].map((project, i) => (
-                            <div key={i} className="portfolio-item" style={{ background: `linear-gradient(135deg, ${project.color}60, ${project.color})` }}>
+                            { metric: '45%', label: 'Avg Conversion Rate Increase', icon: 'trending' },
+                            { metric: '3.2x', label: 'User Engagement Lift', icon: 'users' },
+                            { metric: '62%', label: 'Reduction in Support Tickets', icon: 'message-circle' },
+                            { metric: '89%', label: 'Task Completion Rate', icon: 'check' }
+                        ].map((item, i) => (
+                            <div key={i} className="metric-card-uiux">
+                                <div className="metric-icon-bg">
+                                    <Icon type={item.icon} />
+                                </div>
+                                <div className="metric-number">{item.metric}</div>
+                                <div className="metric-label">{item.label}</div>
                             </div>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* FAQ */}
-            <section className="uiux-faq">
+            {/* ===== PRICING ===== */}
+            <section className="uiux-pricing-v2">
                 <div className="uiux-container">
-                    <div className="section-header text-center">
-                        <span className="section-label">CLARITY</span>
-                        <h2 className="section-title">Common Questions.</h2>
+                    <div className="section-header-uiux center">
+                        <span className="section-label-uiux">INVESTMENT</span>
+                        <h2 className="section-title-uiux">
+                            Design <span>Packages</span>
+                        </h2>
                     </div>
-                    <div style={{ maxWidth: '900px', margin: '0 auto', marginTop: '60px' }}>
+
+                    <div className="pricing-cards-uiux">
                         {[
-                            { q: 'What\'s the difference between UI and UX?', a: 'UX (User Experience) focuses on the overall feel and usability of a product—how users interact with it. UI (User Interface) is about the visual design—colors, typography, and layout.' },
-                            { q: 'Do you work with existing design systems?', a: 'Absolutely. We can work within your existing design system, extend it, or create a new one from scratch based on your needs.' },
-                            { q: 'How do you measure design success?', a: 'We establish clear metrics upfront—conversion rates, task completion, user satisfaction scores—and measure impact through A/B testing and analytics.' }
-                        ].map((item, idx) => (
-                            <details key={idx} style={{ background: '#fff', padding: '30px', borderRadius: '24px', marginBottom: '20px', cursor: 'pointer', border: '1px solid #e2e8f0' }}>
-                                <summary style={{ fontWeight: 600, fontSize: '20px', listStyle: 'none', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                                    {item.q}
-                                    <Icon type="plus" style={{ width: '20px' }} />
-                                </summary>
-                                <p style={{ marginTop: '20px', color: '#64748b', fontSize: '17px', lineHeight: 1.7 }}>{item.a}</p>
-                            </details>
+                            {
+                                name: 'UX Sprint',
+                                price: '$5,000',
+                                desc: 'Single feature or flow',
+                                features: ['UX Research', 'User Flows', 'Wireframes', 'UI Design (5-10 screens)', 'Interactive Prototype', '2-Week Delivery'],
+                                cta: 'Get Started'
+                            },
+                            {
+                                name: 'Product Design',
+                                price: '$15,000',
+                                desc: 'Full product or application',
+                                features: ['Comprehensive UX Research', 'Complete UI Design', 'Design System', 'Prototyping', 'Usability Testing', 'Developer Handoff', '6-8 Week Delivery'],
+                                cta: 'Start Project',
+                                popular: true
+                            },
+                            {
+                                name: 'Design Retainer',
+                                price: '$8,000/mo',
+                                desc: 'Ongoing design support',
+                                features: ['Dedicated Designer', '40 Hours/Month', 'Priority Response', 'Design System Maintenance', 'Quarterly UX Reviews', 'Flexible Scope'],
+                                cta: 'Talk to Us'
+                            }
+                        ].map((pkg, i) => (
+                            <div key={i} className={`pricing-card-uiux ${pkg.popular ? 'popular' : ''}`}>
+                                {pkg.popular && <span className="popular-badge-uiux">MOST POPULAR</span>}
+                                <h3>{pkg.name}</h3>
+                                <div className="price-amount-uiux">{pkg.price}</div>
+                                <p className="price-desc-uiux">{pkg.desc}</p>
+                                <ul className="price-features-uiux">
+                                    {pkg.features.map((f, j) => (
+                                        <li key={j}>
+                                            <Icon type="check" />
+                                            {f}
+                                        </li>
+                                    ))}
+                                </ul>
+                                <Link href="/contact" className={pkg.popular ? 'btn-uiux-primary' : 'btn-uiux-outline'}>
+                                    {pkg.cta}
+                                </Link>
+                            </div>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* CTA */}
-            <section className="uiux-cta">
+            {/* ===== FAQ ===== */}
+            <section className="uiux-faq-v2">
                 <div className="uiux-container">
-                    <div className="cta-grid">
-                        <div>
-                            <h2 style={{ fontSize: '56px', fontWeight: 600, marginBottom: '30px', lineHeight: 1.1 }}>Ready to elevate your <span style={{ color: 'var(--accent-yellow)' }}>user experience?</span></h2>
-                            <p style={{ fontSize: '20px', opacity: 0.8, marginBottom: '50px', lineHeight: 1.6 }}>Get a free UX audit and discover opportunities to improve your product.</p>
+                    <div className="faq-layout-uiux">
+                        <div className="faq-sidebar-uiux">
+                            <span className="section-label-uiux">CLARITY</span>
+                            <h2 className="section-title-uiux">
+                                Common <span>Questions</span>
+                            </h2>
                         </div>
-                        <div className="cta-form">
-                            <form style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-                                <input type="text" placeholder="Name" />
-                                <input type="email" placeholder="Work Email" />
-                                <select defaultValue="">
-                                    <option value="" disabled>Project Type</option>
-                                    <option value="app">Mobile App</option>
-                                    <option value="web">Web Application</option>
-                                    <option value="saas">SaaS Product</option>
-                                    <option value="redesign">Redesign</option>
-                                </select>
-                                <textarea placeholder="Tell us about your project..." style={{ height: '100px' }}></textarea>
-                                <button type="submit" className="btn-primary" style={{ border: 'none', background: 'var(--primary-green)', color: 'var(--accent-yellow)', fontSize: '18px', fontWeight: 600, cursor: 'pointer', padding: '20px' }}>
-                                    Get Free UX Audit
-                                </button>
-                            </form>
+                        <div className="faq-content-uiux">
+                            {[
+                                {
+                                    q: 'What&apos;s the difference between UI and UX?',
+                                    a: 'UX (User Experience) focuses on the overall feel and usability—how users interact with and navigate your product. UI (User Interface) is the visual layer—colors, typography, buttons, and layout. Great products need both.'
+                                },
+                                {
+                                    q: 'How do you measure design success?',
+                                    a: 'We establish clear metrics upfront based on your goals: conversion rates, task completion, time on task, user satisfaction scores (NPS/CSAT), and engagement metrics. We then validate through A/B testing and analytics.'
+                                },
+                                {
+                                    q: 'Do you work with existing design systems?',
+                                    a: 'Absolutely. We can work within your existing design system, extend it with new components, or create a new one from scratch. We&apos;ll audit what you have and recommend the best path forward.'
+                                },
+                                {
+                                    q: 'What tools do you use?',
+                                    a: 'We design in Figma for collaboration and handoff, use Maze for usability testing, Hotjar/Mixpanel for analytics, and Framer for interactive prototypes. We adapt to your tech stack.'
+                                },
+                                {
+                                    q: 'Can you redesign our existing product?',
+                                    a: 'Yes! We start with a UX audit to identify pain points and opportunities, then create a phased redesign plan that minimizes disruption while maximizing impact.'
+                                },
+                                {
+                                    q: 'What&apos;s included in developer handoff?',
+                                    a: 'You receive organized Figma files with auto-layout, design specs (spacing, colors, typography), exportable assets (SVGs, PNGs), component documentation, and we&apos;re available for Q&A during implementation.'
+                                }
+                            ].map((faq, i) => (
+                                <details
+                                    key={i}
+                                    className="faq-item-uiux"
+                                    open={openFaq === i}
+                                    onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                                >
+                                    <summary>
+                                        {faq.q}
+                                        <Icon type="plus" />
+                                    </summary>
+                                    <p>{faq.a}</p>
+                                </details>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* ===== CTA ===== */}
+            <section className="uiux-cta-v2">
+                <div className="uiux-container">
+                    <div className="cta-content-uiux">
+                        <h2>Ready to Elevate Your <span>User Experience?</span></h2>
+                        <p>Get a free UX audit and discover opportunities to improve your product&apos;s usability and conversion.</p>
+                        <div className="cta-actions-uiux">
+                            <Link href="/contact" className="btn-uiux-primary large">
+                                Get Free UX Audit <Icon type="arrowRight" />
+                            </Link>
+                        </div>
+                        <div className="cta-trust-uiux">
+                            <div className="trust-item-uiux">
+                                <Icon type="check" />
+                                <span>No Obligation</span>
+                            </div>
+                            <div className="trust-item-uiux">
+                                <Icon type="check" />
+                                <span>48hr Response</span>
+                            </div>
+                            <div className="trust-item-uiux">
+                                <Icon type="check" />
+                                <span>Expert Consultation</span>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -280,6 +280,121 @@ export function PaidSocialContent() {
                 </div>
             </section>
 
+            {/* ===== SOCIAL ADS PREVIEW ===== */}
+            <section className="ps-ad-preview">
+                <div className="ps-container">
+                    <div style={{ textAlign: 'center' }}>
+                        <span className="ps-section-badge"><Icon type="play" /> Ad Formats</span>
+                        <h2 className="ps-section-title">Social ads preview.</h2>
+                        <p className="ps-section-subtitle" style={{ margin: '0 auto' }}>
+                            We craft platform-native ads that feel organic yet drive measurable action. Here&apos;s what your campaigns could look like.
+                        </p>
+                    </div>
+
+                    <div className="ps-ad-preview-grid">
+                        {/* LinkedIn Ad */}
+                        <div className="ps-ad-card ps-ad-linkedin">
+                            <div className="ps-ad-card-platform">
+                                <Icon type="linkedin" />
+                                <span>LinkedIn</span>
+                            </div>
+                            <div className="ps-ad-card-body">
+                                <div className="ps-ad-card-header">
+                                    <div className="ps-ad-card-avatar">OS</div>
+                                    <div className="ps-ad-card-meta">
+                                        <strong>Oneskai Digital</strong>
+                                        <span>Promoted</span>
+                                    </div>
+                                </div>
+                                <p className="ps-ad-card-copy">
+                                    Struggling to scale B2B leads? Our paid social framework helped a SaaS client generate 200+ qualified leads/month at 40% lower CPA.
+                                </p>
+                                <div className="ps-ad-card-image linkedin-img">
+                                    <div className="ps-ad-card-image-overlay">
+                                        <span className="ps-ad-card-cta-badge">Free Strategy Guide</span>
+                                        <strong>The B2B Paid Social Playbook</strong>
+                                        <span className="ps-ad-card-subtitle">oneskai.com</span>
+                                    </div>
+                                </div>
+                                <div className="ps-ad-card-actions">
+                                    <span>👍 Like</span>
+                                    <span>💬 Comment</span>
+                                    <span>🔄 Repost</span>
+                                    <span>📩 Send</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Instagram Ad */}
+                        <div className="ps-ad-card ps-ad-instagram">
+                            <div className="ps-ad-card-platform">
+                                <Icon type="camera" />
+                                <span>Instagram</span>
+                            </div>
+                            <div className="ps-ad-card-body">
+                                <div className="ps-ad-card-header">
+                                    <div className="ps-ad-card-avatar ig">OS</div>
+                                    <div className="ps-ad-card-meta">
+                                        <strong>oneskai</strong>
+                                        <span>Sponsored</span>
+                                    </div>
+                                </div>
+                                <div className="ps-ad-card-image ig-img">
+                                    <div className="ps-ad-ig-content">
+                                        <span className="ps-ad-ig-tag">4.1x ROAS</span>
+                                        <strong>From scroll to sale in 90 days</strong>
+                                        <p>See how we scaled DTC brands with creative that converts.</p>
+                                    </div>
+                                </div>
+                                <div className="ps-ad-card-ig-cta">
+                                    <span>Learn More</span>
+                                    <Icon type="arrowRight" />
+                                </div>
+                                <p className="ps-ad-card-copy ig-copy">
+                                    Ready to turn your social ads into a revenue engine? 🚀 Link in bio for a free campaign audit.
+                                </p>
+                                <div className="ps-ad-card-actions ig-actions">
+                                    <span>♥️</span>
+                                    <span>💬</span>
+                                    <span>📤</span>
+                                    <span style={{ marginLeft: 'auto' }}>🔖</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* YouTube Ad */}
+                        <div className="ps-ad-card ps-ad-youtube">
+                            <div className="ps-ad-card-platform">
+                                <Icon type="play" />
+                                <span>YouTube</span>
+                            </div>
+                            <div className="ps-ad-card-body">
+                                <div className="ps-ad-card-image yt-img">
+                                    <div className="ps-ad-yt-overlay">
+                                        <div className="ps-ad-yt-play">▶</div>
+                                    </div>
+                                    <div className="ps-ad-yt-badge">Ad · 0:15</div>
+                                    <div className="ps-ad-yt-skip">
+                                        Skip Ad →
+                                    </div>
+                                </div>
+                                <div className="ps-ad-yt-info">
+                                    <div className="ps-ad-card-avatar yt">OS</div>
+                                    <div>
+                                        <strong>Scale Your Brand with Paid Social | Oneskai</strong>
+                                        <span className="ps-ad-yt-channel">Oneskai Digital · 12K views · 2 days ago</span>
+                                    </div>
+                                </div>
+                                <div className="ps-ad-yt-cta-bar">
+                                    <span className="ps-ad-yt-cta">Get Free Audit</span>
+                                    <span className="ps-ad-yt-url">oneskai.com</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* ===== SERVICES GRID ===== */}
             <section className="ps-services">
                 <div className="ps-container">

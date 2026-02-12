@@ -1,0 +1,1043 @@
+/* ================================================
+   GA4 ANALYTICS PAGE STYLES - Oneskai
+   Premium Analytics Dashboard Theme
+   Purple/Blue Color Scheme
+   ================================================ */
+
+:root {
+    --ga4-purple: #7c3aed;
+    --ga4-violet: #6366f1;
+    --ga4-blue: #3b82f6;
+    --ga4-cyan: #06b6d4;
+    --ga4-sky: #0ea5e9;
+    --ga4-dark: #0a0e27;
+    --ga4-darker: #050712;
+    --ga4-slate: #1e293b;
+    --ga4-glass: rgba(255, 255, 255, 0.04);
+    --ga4-border: rgba(255, 255, 255, 0.1);
+    --ga4-text-light: #e2e8f0;
+}
+
+.ga4-page {
+    background: #ffffff;
+    overflow-x: hidden;
+}
+
+.ga4-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* ===== HERO SECTION (DARK) ===== */
+.ga4-hero {
+    min-height: 100vh;
+    padding: 160px 0 120px;
+    position: relative;
+    background: linear-gradient(160deg, var(--ga4-darker) 0%, #0f1629 40%, #1a1f3a 100%);
+    color: white;
+    overflow: hidden;
+}
+
+.ga4-hero-effects {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.ga4-hero-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(140px);
+    opacity: 0.15;
+}
+
+.ga4-hero-orb-1 {
+    width: 700px;
+    height: 700px;
+    background: var(--ga4-purple);
+    top: -250px;
+    right: -150px;
+    animation: floatOrbSlow 15s ease-in-out infinite;
+}
+
+.ga4-hero-orb-2 {
+    width: 600px;
+    height: 600px;
+    background: var(--ga4-cyan);
+    bottom: -200px;
+    left: -150px;
+    animation: floatOrbSlow 18s ease-in-out infinite reverse;
+}
+
+@keyframes floatOrbSlow {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(40px, 60px) scale(1.15); }
+}
+
+.ga4-hero-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(124, 58, 237, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(124, 58, 237, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    mask-image: radial-gradient(ellipse at center, black 20%, transparent 80%);
+}
+
+.ga4-hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.ga4-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(124, 58, 237, 0.15);
+    backdrop-filter: blur(10px);
+    color: var(--ga4-purple);
+    padding: 12px 26px;
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    border: 1px solid rgba(124, 58, 237, 0.3);
+    margin-bottom: 36px;
+}
+
+.ga4-badge-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--ga4-purple);
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+    box-shadow: 0 0 12px var(--ga4-purple);
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(0.9); }
+}
+
+.ga4-hero-grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.ga4-hero-title {
+    font-size: clamp(52px, 6vw, 86px);
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    margin-bottom: 32px;
+}
+
+.ga4-hero-title span {
+    background: linear-gradient(135deg, var(--ga4-purple) 0%, var(--ga4-cyan) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.ga4-hero-subtitle {
+    font-size: 21px;
+    line-height: 1.7;
+    color: var(--ga4-text-light);
+    opacity: 0.85;
+    margin-bottom: 50px;
+    max-width: 600px;
+}
+
+.ga4-hero-actions {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.ga4-btn-primary {
+    background: linear-gradient(135deg, var(--ga4-purple) 0%, var(--ga4-violet) 100%);
+    color: white;
+    padding: 20px 42px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 17px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 12px 35px rgba(124, 58, 237, 0.3);
+    text-decoration: none;
+    border: none;
+}
+
+.ga4-btn-primary:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 50px rgba(124, 58, 237, 0.45);
+}
+
+.ga4-btn-secondary {
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 18px 42px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 17px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.ga4-btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--ga4-purple);
+}
+
+/* Dashboard Mockup in Hero */
+.ga4-dashboard-mockup {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 24px;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+    position: relative;
+}
+
+.ga4-dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ga4-dashboard-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--ga4-text-light);
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.ga4-dashboard-date {
+    font-size: 12px;
+    color: var(--ga4-purple);
+    background: rgba(124, 58, 237, 0.15);
+    padding: 6px 14px;
+    border-radius: 20px;
+}
+
+.ga4-metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.ga4-metric-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    padding: 18px;
+}
+
+.ga4-metric-label {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.ga4-metric-value {
+    font-size: 28px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 6px;
+}
+
+.ga4-metric-change {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.ga4-metric-change.positive {
+    color: #10b981;
+}
+
+.ga4-metric-change.negative {
+    color: #ef4444;
+}
+
+.ga4-chart-container {
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 12px;
+    padding: 20px;
+    height: 200px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    gap: 8px;
+}
+
+.ga4-chart-bar {
+    flex: 1;
+    background: linear-gradient(180deg, var(--ga4-purple) 0%, var(--ga4-violet) 100%);
+    border-radius: 6px 6px 0 0;
+    transition: all 0.3s ease;
+    opacity: 0.5;
+}
+
+.ga4-chart-bar:hover {
+    opacity: 1;
+    transform: scaleY(1.05);
+}
+
+.ga4-chart-bar.active {
+    background: linear-gradient(180deg, var(--ga4-cyan) 0%, var(--ga4-sky) 100%);
+    opacity: 1;
+    box-shadow: 0 -5px 25px rgba(6, 182, 212, 0.5);
+}
+
+/* ===== STATS BAR ===== */
+.ga4-stats-bar {
+    background: white;
+    padding: 70px 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+[data-theme="dark"] .ga4-stats-bar {
+    background: #1a1f2e;
+    border-bottom-color: #2d3548;
+}
+
+.ga4-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 60px;
+}
+
+.ga4-stat-item {
+    text-align: center;
+}
+
+.ga4-stat-value {
+    font-size: 52px;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--ga4-purple) 0%, var(--ga4-cyan) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 12px;
+    line-height: 1;
+}
+
+.ga4-stat-label {
+    font-size: 15px;
+    color: #64748b;
+    font-weight: 500;
+}
+
+[data-theme="dark"] .ga4-stat-label {
+    color: #94a3b8;
+}
+
+/* ===== DASHBOARDS SHOWCASE ===== */
+.ga4-dashboards {
+    padding: 120px 0;
+    background: var(--bg-cream);
+}
+
+[data-theme="dark"] .ga4-dashboards {
+    background: #0f1419;
+}
+
+.ga4-section-header {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.ga4-section-label {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--ga4-purple) 0%, var(--ga4-violet) 100%);
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    padding: 8px 22px;
+    border-radius: 100px;
+    margin-bottom: 24px;
+}
+
+.ga4-section-title {
+    font-size: 58px;
+    font-weight: 800;
+    color: #0a0e27;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+[data-theme="dark"] .ga4-section-title {
+    color: white;
+}
+
+.ga4-section-title span {
+    background: linear-gradient(135deg, var(--ga4-purple) 0%, var(--ga4-cyan) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.ga4-section-subtitle {
+    font-size: 21px;
+    color: #64748b;
+    line-height: 1.6;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+[data-theme="dark"] .ga4-section-subtitle {
+    color: #94a3b8;
+}
+
+.ga4-dashboards-grid {
+    display: grid;
+    gap: 40px;
+}
+
+.ga4-dashboard-item {
+    background: white;
+    border-radius: 28px;
+    padding: 50px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e5e7eb;
+}
+
+[data-theme="dark"] .ga4-dashboard-item {
+    background: #1a1f2e;
+    border-color: #2d3548;
+}
+
+.ga4-dashboard-item-header {
+    margin-bottom: 35px;
+}
+
+.ga4-dashboard-item-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #0a0e27;
+    margin-bottom: 12px;
+}
+
+[data-theme="dark"] .ga4-dashboard-item-title {
+    color: white;
+}
+
+.ga4-dashboard-item-desc {
+    font-size: 17px;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+[data-theme="dark"] .ga4-dashboard-item-desc {
+    color: #94a3b8;
+}
+
+.ga4-dashboard-preview {
+    background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%);
+    border-radius: 20px;
+    padding: 40px;
+    border: 2px solid #e0f2fe;
+}
+
+[data-theme="dark"] .ga4-dashboard-preview {
+    background: linear-gradient(135deg, #0f1419 0%, #1a1f3a 100%);
+    border-color: #2d3548;
+}
+
+/* Real-Time Dashboard */
+.ga4-realtime-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
+}
+
+.ga4-realtime-map {
+    background: rgba(124, 58, 237, 0.05);
+    border: 2px solid rgba(124, 58, 237, 0.15);
+    border-radius: 16px;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    min-height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ga4-realtime-count {
+    font-size: 72px;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--ga4-purple) 0%, var(--ga4-cyan) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+}
+
+.ga4-realtime-label {
+    font-size: 16px;
+    color: #64748b;
+    margin-top: 12px;
+    font-weight: 600;
+}
+
+[data-theme="dark"] .ga4-realtime-label {
+    color: #94a3b8;
+}
+
+.ga4-realtime-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.ga4-realtime-item {
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+[data-theme="dark"] .ga4-realtime-item {
+    background: rgba(255, 255, 255, 0.03);
+    border-color: #2d3548;
+}
+
+.ga4-realtime-item-label {
+    font-size: 14px;
+    color: #475569;
+    font-weight: 500;
+}
+
+[data-theme="dark"] .ga4-realtime-item-label {
+    color: #cbd5e1;
+}
+
+.ga4-realtime-item-value {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--ga4-purple);
+}
+
+/* Acquisition Dashboard */
+.ga4-acquisition-channels {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.ga4-channel-card {
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 24px;
+    text-align: center;
+}
+
+[data-theme="dark"] .ga4-channel-card {
+    background: rgba(255, 255, 255, 0.03);
+    border-color: #2d3548;
+}
+
+.ga4-channel-icon {
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, var(--ga4-purple) 0%, var(--ga4-violet) 100%);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    margin: 0 auto 16px;
+}
+
+.ga4-channel-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 8px;
+}
+
+[data-theme="dark"] .ga4-channel-name {
+    color: #e2e8f0;
+}
+
+.ga4-channel-users {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--ga4-purple);
+    margin-bottom: 6px;
+}
+
+.ga4-channel-percentage {
+    font-size: 13px;
+    color: #10b981;
+    font-weight: 600;
+}
+
+/* Engagement Dashboard */
+.ga4-engagement-metrics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.ga4-engagement-card {
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 24px 20px;
+    text-align: center;
+}
+
+[data-theme="dark"] .ga4-engagement-card {
+    background: rgba(255, 255, 255, 0.03);
+    border-color: #2d3548;
+}
+
+.ga4-engagement-value {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--ga4-purple);
+    margin-bottom: 8px;
+}
+
+.ga4-engagement-label {
+    font-size: 13px;
+    color: #64748b;
+    font-weight: 500;
+}
+
+[data-theme="dark"] .ga4-engagement-label {
+    color: #94a3b8;
+}
+
+.ga4-pages-table {
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 24px;
+}
+
+[data-theme="dark"] .ga4-pages-table {
+    background: rgba(255, 255, 255, 0.03);
+    border-color: #2d3548;
+}
+
+.ga4-table-header {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 20px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid #e5e7eb;
+    margin-bottom: 12px;
+}
+
+[data-theme="dark"] .ga4-table-header {
+    border-bottom-color: #2d3548;
+}
+
+.ga4-table-header-cell {
+    font-size: 12px;
+    font-weight: 700;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+[data-theme="dark"] .ga4-table-header-cell {
+    color: #94a3b8;
+}
+
+.ga4-table-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 14px 0;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+[data-theme="dark"] .ga4-table-row {
+    border-bottom-color: #1e293b;
+}
+
+.ga4-table-row:last-child {
+    border-bottom: none;
+}
+
+.ga4-table-cell {
+    font-size: 14px;
+    color: #334155;
+    display: flex;
+    align-items: center;
+}
+
+[data-theme="dark"] .ga4-table-cell {
+    color: #cbd5e1;
+}
+
+.ga4-table-cell.primary {
+    font-weight: 600;
+}
+
+.ga4-table-cell.number {
+    font-weight: 600;
+    color: #0a0e27;
+}
+
+[data-theme="dark"] .ga4-table-cell.number {
+    color: white;
+}
+
+/* ===== FEATURES SECTION ===== */
+.ga4-features {
+    padding: 120px 0;
+    background: white;
+}
+
+[data-theme="dark"] .ga4-features {
+    background: #1a1f2e;
+}
+
+.ga4-features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+    margin-top: 60px;
+}
+
+.ga4-feature-card {
+    background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%);
+    border: 2px solid #e0f2fe;
+    border-radius: 24px;
+    padding: 45px 35px;
+    transition: all 0.3s ease;
+}
+
+.ga4-feature-card:hover {
+    border-color: var(--ga4-purple);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(124, 58, 237, 0.15);
+}
+
+[data-theme="dark"] .ga4-feature-card {
+    background: linear-gradient(135deg, #0f1419 0%, #1a1f3a 100%);
+    border-color: #2d3548;
+}
+
+.ga4-feature-icon {
+    width: 68px;
+    height: 68px;
+    background: linear-gradient(135deg, var(--ga4-purple) 0%, var(--ga4-violet) 100%);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 30px;
+    margin-bottom: 26px;
+}
+
+.ga4-feature-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #0a0e27;
+    margin-bottom: 14px;
+}
+
+[data-theme="dark"] .ga4-feature-title {
+    color: white;
+}
+
+.ga4-feature-desc {
+    font-size: 16px;
+    color: #64748b;
+    line-height: 1.7;
+}
+
+[data-theme="dark"] .ga4-feature-desc {
+    color: #94a3b8;
+}
+
+/* ===== PRICING SECTION ===== */
+.ga4-pricing {
+    padding: 120px 0;
+    background: var(--bg-cream);
+}
+
+[data-theme="dark"] .ga4-pricing {
+    background: #0f1419;
+}
+
+.ga4-pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+    margin-top: 60px;
+}
+
+.ga4-price-card {
+    background: white;
+    border: 2px solid #e5e7eb;
+    border-radius: 28px;
+    padding: 50px 40px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.ga4-price-card:hover {
+    border-color: var(--ga4-purple);
+    transform: translateY(-10px);
+    box-shadow: 0 25px 60px rgba(124, 58, 237, 0.15);
+}
+
+[data-theme="dark"] .ga4-price-card {
+    background: #1a1f2e;
+    border-color: #2d3548;
+}
+
+.ga4-price-card.featured {
+    background: linear-gradient(135deg, var(--ga4-purple) 0%, var(--ga4-violet) 100%);
+    border-color: var(--ga4-purple);
+    color: white;
+}
+
+.ga4-price-badge {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    background: var(--ga4-cyan);
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 6px 16px;
+    border-radius: 100px;
+    letter-spacing: 0.5px;
+}
+
+.ga4-price-name {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+.ga4-price-amount {
+    font-size: 58px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    line-height: 1;
+}
+
+.ga4-price-desc {
+    font-size: 15px;
+    opacity: 0.7;
+    margin-bottom: 40px;
+}
+
+.ga4-price-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 45px;
+}
+
+.ga4-price-features li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+}
+
+.ga4-price-features li::before {
+    content: '✓';
+    width: 24px;
+    height: 24px;
+    background: rgba(124, 58, 237, 0.15);
+    color: var(--ga4-purple);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.ga4-price-card.featured .ga4-price-features li::before {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+/* ===== FAQ SECTION ===== */
+.ga4-faq {
+    padding: 120px 0;
+    background: white;
+}
+
+[data-theme="dark"] .ga4-faq {
+    background: #1a1f2e;
+}
+
+.ga4-faq-container {
+    max-width: 900px;
+    margin: 60px auto 0;
+}
+
+.ga4-faq-item {
+    background: white;
+    border: 2px solid #e5e7eb;
+    border-radius: 20px;
+    padding: 35px 40px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.ga4-faq-item:hover {
+    border-color: var(--ga4-purple);
+    box-shadow: 0 10px 30px rgba(124, 58, 237, 0.1);
+}
+
+[data-theme="dark"] .ga4-faq-item {
+    background: #1a1f2e;
+    border-color: #2d3548;
+}
+
+.ga4-faq-item summary {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0a0e27;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+[data-theme="dark"] .ga4-faq-item summary {
+    color: white;
+}
+
+.ga4-faq-item p {
+    font-size: 17px;
+    color: #64748b;
+    line-height: 1.7;
+    margin-top: 20px;
+}
+
+[data-theme="dark"] .ga4-faq-item p {
+    color: #94a3b8;
+}
+
+/* ===== CTA SECTION ===== */
+.ga4-cta {
+    padding: 120px 0;
+    background: linear-gradient(135deg, var(--ga4-darker) 0%, #1a1f3a 100%);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.ga4-cta::before {
+    content: '';
+    position: absolute;
+    top: -300px;
+    right: -300px;
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(124, 58, 237, 0.2) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.ga4-cta-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.ga4-cta-title {
+    font-size: 68px;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 28px;
+}
+
+.ga4-cta-title span {
+    background: linear-gradient(135deg, var(--ga4-purple) 0%, var(--ga4-cyan) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.ga4-cta-subtitle {
+    font-size: 22px;
+    opacity: 0.85;
+    margin-bottom: 50px;
+    line-height: 1.6;
+}
+
+.ga4-cta-actions {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1200px) {
+    .ga4-hero-title { font-size: 68px; }
+    .ga4-section-title { font-size: 50px; }
+    .ga4-cta-title { font-size: 58px; }
+    .ga4-features-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 1024px) {
+    .ga4-container { padding: 0 30px; }
+    .ga4-hero-grid-layout { grid-template-columns: 1fr; gap: 60px; }
+    .ga4-stats-grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+    .ga4-realtime-grid { grid-template-columns: 1fr; }
+    .ga4-acquisition-channels { grid-template-columns: 1fr; }
+    .ga4-engagement-metrics { grid-template-columns: repeat(2, 1fr); }
+    .ga4-pricing-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+    .ga4-container { padding: 0 20px; }
+    .ga4-hero { padding: 120px 0 80px; }
+    .ga4-hero-title { font-size: 48px; }
+    .ga4-section-title { font-size: 42px; }
+    .ga4-cta-title { font-size: 44px; }
+    .ga4-stats-grid { grid-template-columns: 1fr; gap: 30px; }
+    .ga4-features-grid { grid-template-columns: 1fr; }
+    .ga4-metrics-grid { grid-template-columns: 1fr; }
+    .ga4-engagement-metrics { grid-template-columns: 1fr; }
+    .ga4-table-header, .ga4-table-row { grid-template-columns: 1fr; gap: 10px; }
+}

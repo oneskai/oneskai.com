@@ -72,10 +72,7 @@ export function Footer({ siteSettings }: FooterProps) {
                 <li><Link href="/services/paid-social">Paid Social</Link></li>
                 <li><Link href="/services/programmatic">Programmatic & Display</Link></li>
                 <li><Link href="/services/remarketing">Remarketing & Retargeting</Link></li>
-                <li><Link href="/services/influencer">Influencer Marketing</Link></li>
-                <li><Link href="/services/affiliate">Affiliate Marketing</Link></li>
                 <li><Link href="/services/marketplace">Marketplace Optimization</Link></li>
-                <li><Link href="/services/media-planning">Media Planning</Link></li>
               </ul>
             </div>
 
@@ -86,11 +83,9 @@ export function Footer({ siteSettings }: FooterProps) {
               <ul className="footer-nav-list">
                 <li><Link href="/services/web-design">Web Design</Link></li>
                 <li><Link href="/services/web-development">Web Development</Link></li>
-                <li><Link href="/services/app-development">App Development</Link></li>
                 <li><Link href="/services/ecommerce">Ecommerce Development</Link></li>
                 <li><Link href="/services/ui-ux">UI/UX Design</Link></li>
                 <li><Link href="/services/branding">Branding & Identity</Link></li>
-                <li><Link href="/services/graphic-design">Graphic Design</Link></li>
                 <li><Link href="/services/ads-creative">Ads Creative</Link></li>
               </ul>
             </div>
@@ -100,12 +95,7 @@ export function Footer({ siteSettings }: FooterProps) {
             <div className="footer-service-group">
               <h4 className="footer-group-title">Data & Analytics</h4>
               <ul className="footer-nav-list">
-                <li><Link href="/services/analytics">Analytics Services</Link></li>
                 <li><Link href="/services/ga4">Google Analytics 4</Link></li>
-                <li><Link href="/services/attribution">Attribution Modeling</Link></li>
-                <li><Link href="/services/predictive">Predictive Analytics</Link></li>
-                <li><Link href="/services/bi">Business Intelligence</Link></li>
-                <li><Link href="/services/data-audits">Data Audits</Link></li>
                 <li><Link href="/services/marketing-automation">Marketing Automation</Link></li>
                 <li><Link href="/services/gtm">Google Tag Manager</Link></li>
               </ul>
@@ -119,7 +109,6 @@ export function Footer({ siteSettings }: FooterProps) {
                 <li><Link href="/services/strategy">Digital Strategy</Link></li>
                 <li><Link href="/services/consulting">Marketing Consulting</Link></li>
                 <li><Link href="/services/fractional-cmo">Fractional CMO</Link></li>
-                <li><Link href="/services/market-research">Market Research</Link></li>
                 <li><Link href="/services/persona-development">Persona Development</Link></li>
                 <li><Link href="/services" className="footer-view-all">View All Services →</Link></li>
               </ul>
@@ -219,11 +208,9 @@ export function Footer({ siteSettings }: FooterProps) {
             <h4 className="footer-nav-title">Company</h4>
             <ul className="footer-nav-list">
               <li><Link href="/about">About Us</Link></li>
-              <li><Link href="/about/team">Our Team</Link></li>
               <li><Link href="/about/methodology">Methodology</Link></li>
               <li><Link href="/about/technology">Partnership</Link></li>
               <li><Link href="/work">Case Studies</Link></li>
-              <li><Link href="/about/awards">Recognition</Link></li>
               <li><Link href="/careers">Careers</Link></li>
               <li><Link href="/contact">Contact</Link></li>
             </ul>
@@ -235,12 +222,10 @@ export function Footer({ siteSettings }: FooterProps) {
             <h4 className="footer-nav-title">Resources</h4>
             <ul className="footer-nav-list">
               <li><Link href="/blog">Blog</Link></li>
-              <li><Link href="/resources/guides">Guides</Link></li>
               <li><Link href="/resources/ebooks">Ebooks</Link></li>
               <li><Link href="/newsletter">Newsletter</Link></li>
               <li><Link href="/faq">FAQ</Link></li>
               <li><Link href="/resources/downloads">Downloads</Link></li>
-              <li><Link href="/community">Community</Link></li>
               <li><Link href="/resources/brand-assets">Brand Assets</Link></li>
             </ul>
           </div>

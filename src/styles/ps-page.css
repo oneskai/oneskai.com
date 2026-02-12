@@ -385,7 +385,7 @@
 
 .ps-aida-side {
     position: absolute;
-    max-width: 200px;
+    max-width: 280px;
     font-size: 14px;
     line-height: 1.5;
     color: #64748b;
@@ -394,12 +394,12 @@
 }
 
 .ps-aida-side.left {
-    right: calc(50% + 340px);
+    right: calc(50% + 320px);
     text-align: right;
 }
 
 .ps-aida-side.right {
-    left: calc(50% + 340px);
+    left: calc(50% + 320px);
     text-align: left;
 }
 
@@ -425,34 +425,34 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    min-height: 440px;
+    min-height: 520px;
 }
 
 .ps-venn-circle {
-    width: 380px;
-    height: 380px;
+    width: 500px;
+    height: 500px;
     border-radius: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 40px;
+    padding: 50px;
     position: relative;
 }
 
 .ps-venn-circle.organic {
     background: rgba(5, 46, 38, 0.6);
     border: 2px solid rgba(255, 199, 0, 0.4);
-    margin-right: -100px;
+    margin-right: -120px;
     z-index: 1;
-    padding-right: 80px;
+    padding-right: 140px;
 }
 
 .ps-venn-circle.paid {
     background: rgba(225, 29, 72, 0.2);
     border: 2px solid rgba(225, 29, 72, 0.4);
-    margin-left: -100px;
+    margin-left: -120px;
     z-index: 1;
-    padding-left: 80px;
+    padding-left: 160px;
 }
 
 .ps-venn-label {
@@ -511,7 +511,11 @@
     transform: translate(-50%, -50%);
     z-index: 3;
     text-align: center;
-    width: 180px;
+    width: 170px;
+    background: rgba(26, 26, 46, 0.9);
+    backdrop-filter: blur(8px);
+    border-radius: 16px;
+    padding: 18px 14px;
 }
 
 .ps-venn-overlap-title {
@@ -1224,6 +1228,323 @@
     display: block;
 }
 
+/* ===== SOCIAL ADS PREVIEW ===== */
+.ps-ad-preview {
+    padding: 120px 0;
+    background: #fafafa;
+}
+
+.ps-ad-preview-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-top: 60px;
+    align-items: start;
+}
+
+.ps-ad-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+}
+
+.ps-ad-card:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    transform: translateY(-4px);
+}
+
+.ps-ad-card-platform {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 20px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.ps-ad-linkedin .ps-ad-card-platform {
+    color: #0A66C2;
+    background: rgba(10, 102, 194, 0.04);
+}
+
+.ps-ad-instagram .ps-ad-card-platform {
+    color: #E4405F;
+    background: rgba(228, 64, 95, 0.04);
+}
+
+.ps-ad-youtube .ps-ad-card-platform {
+    color: #FF0000;
+    background: rgba(255, 0, 0, 0.04);
+}
+
+.ps-ad-card-body {
+    padding: 0;
+}
+
+.ps-ad-card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px 0;
+}
+
+.ps-ad-card-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--primary-green);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.ps-ad-card-avatar.ig {
+    background: linear-gradient(135deg, #833AB4, #FD1D1D, #F56040);
+}
+
+.ps-ad-card-avatar.yt {
+    background: #FF0000;
+}
+
+.ps-ad-card-meta {
+    display: flex;
+    flex-direction: column;
+}
+
+.ps-ad-card-meta strong {
+    font-size: 14px;
+    color: var(--text-dark);
+}
+
+.ps-ad-card-meta span {
+    font-size: 12px;
+    color: #94a3b8;
+}
+
+.ps-ad-card-copy {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #334155;
+    padding: 12px 20px;
+    margin: 0;
+}
+
+.ps-ad-card-copy.ig-copy {
+    padding-top: 4px;
+    font-size: 13px;
+}
+
+/* LinkedIn Ad Image */
+.ps-ad-card-image {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.ps-ad-card-image.linkedin-img {
+    background: linear-gradient(135deg, #052e26, #0A66C2);
+    height: 200px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.ps-ad-card-image-overlay {
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.ps-ad-card-cta-badge {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--accent-yellow);
+}
+
+.ps-ad-card-image-overlay strong {
+    font-size: 18px;
+    color: white;
+    font-weight: 600;
+}
+
+.ps-ad-card-subtitle {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.ps-ad-card-actions {
+    display: flex;
+    gap: 20px;
+    padding: 14px 20px;
+    border-top: 1px solid #f1f5f9;
+    font-size: 13px;
+    color: #64748b;
+}
+
+.ps-ad-card-actions.ig-actions {
+    font-size: 18px;
+    gap: 16px;
+}
+
+/* Instagram Ad Image */
+.ps-ad-card-image.ig-img {
+    background: linear-gradient(135deg, var(--ps-rose), var(--ps-magenta), var(--accent-purple));
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ps-ad-ig-content {
+    text-align: center;
+    color: white;
+    padding: 24px;
+}
+
+.ps-ad-ig-tag {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 6px 16px;
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.ps-ad-ig-content strong {
+    display: block;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 8px;
+}
+
+.ps-ad-ig-content p {
+    font-size: 14px;
+    opacity: 0.85;
+    margin: 0;
+}
+
+.ps-ad-card-ig-cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    background: #f8fafc;
+    font-size: 14px;
+    font-weight: 600;
+    color: #0A66C2;
+    border-top: 1px solid #e2e8f0;
+}
+
+/* YouTube Ad */
+.ps-ad-card-image.yt-img {
+    background: linear-gradient(135deg, #1a1a2e, var(--ps-rose));
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.ps-ad-yt-overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ps-ad-yt-play {
+    width: 64px;
+    height: 64px;
+    background: rgba(255, 0, 0, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
+}
+
+.ps-ad-yt-badge {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.ps-ad-yt-skip {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.ps-ad-yt-info {
+    display: flex;
+    gap: 12px;
+    padding: 16px 20px 8px;
+    align-items: flex-start;
+}
+
+.ps-ad-yt-info strong {
+    font-size: 14px;
+    color: var(--text-dark);
+    display: block;
+    line-height: 1.4;
+}
+
+.ps-ad-yt-channel {
+    font-size: 12px;
+    color: #94a3b8;
+    display: block;
+    margin-top: 4px;
+}
+
+.ps-ad-yt-cta-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 20px 16px;
+}
+
+.ps-ad-yt-cta {
+    background: #0A66C2;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.ps-ad-yt-url {
+    font-size: 12px;
+    color: #94a3b8;
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1200px) {
     .ps-aida-side {
@@ -1231,8 +1552,18 @@
     }
 
     .ps-venn-circle {
-        width: 320px;
-        height: 320px;
+        width: 400px;
+        height: 400px;
+    }
+
+    .ps-venn-circle.organic {
+        margin-right: -100px;
+        padding-right: 120px;
+    }
+
+    .ps-venn-circle.paid {
+        margin-left: -100px;
+        padding-left: 140px;
     }
 }
 
@@ -1246,8 +1577,15 @@
     .ps-services-grid,
     .ps-testimonials-grid,
     .ps-pricing-grid,
-    .ps-faq-grid {
+    .ps-faq-grid,
+    .ps-ad-preview-grid {
         grid-template-columns: 1fr;
+    }
+
+    .ps-ad-preview-grid {
+        max-width: 480px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .ps-hero-title {

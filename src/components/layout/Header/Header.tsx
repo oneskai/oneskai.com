@@ -103,11 +103,12 @@ function ServicesMegaMenu() {
         <div className="services-category-section">
           <h4 className="services-category-title">Intelligence & Analytics</h4>
           <div className="services-grid-new">
-            <MegaMenuItem icon="analytics" title="Data Audits" description="Evaluate your current data infrastructure." href="/services/data-audits" />
-            <MegaMenuItem icon="target" title="Attribution" description="Understand the true value of every channel." href="/services/attribution" />
-            <MegaMenuItem icon="zap" title="Predictive Analytics" description="Forecast trends and customer behavior." href="/services/predictive" />
-            <MegaMenuItem icon="activity" title="Google Analytics 4 Strategy" description="Clean migrations and advanced tracking." href="/services/ga4" />
-            <MegaMenuItem icon="cpu" title="Business Intelligence Dashboards" description="Real-time insights for better decisions." href="/services/bi" />
+            <MegaMenuItem icon="analytics" title="Marketing Analytics" description="Comprehensive analytics for marketing performance." href="/services/marketing-analytics" />
+            <MegaMenuItem icon="activity" title="GA4 Analytics" description="Advanced Google Analytics 4 implementation." href="/services/ga4" />
+            <MegaMenuItem icon="hash" title="Social Media Analytics" description="Track and optimize social media performance." href="/services/social-media-analytics" />
+            <MegaMenuItem icon="target" title="Marketing Measurement" description="ROI tracking and attribution modeling." href="/services/marketing-measurement" />
+            <MegaMenuItem icon="zap" title="Conversion Analytics" description="Optimize funnels and conversion rates." href="/services/conversion-analytics" />
+            <MegaMenuItem icon="cpu" title="Marketing Dashboards" description="Real-time marketing intelligence dashboards." href="/services/marketing-dashboards" />
           </div>
         </div>
       </div>
@@ -120,9 +121,7 @@ function ServicesMegaMenu() {
             <MegaMenuItem icon="users" title="Fractional Chief Marketing Officer" description="High-level strategy without the overhead." href="/services/fractional-cmo" />
             <MegaMenuItem icon="briefcase" title="Consulting" description="Navigate complexity with expert consulting." href="/services/consulting" />
             <MegaMenuItem icon="target" title="Full Go-To-Market Strategy" description="Data-driven GTM digital strategy." href="/services/gtm" />
-            <MegaMenuItem icon="activity" title="Media Planning Scenarios" description="Optimize ad spend with forecasting." href="/services/media-planning" />
             <MegaMenuItem icon="users" title="Persona Development" description="Develop data-driven customer profiles." href="/services/persona-development" />
-            <MegaMenuItem icon="search" title="Market Research" description="Deep dives into your target audience." href="/services/market-research" />
           </div>
         </div>
       </div>
@@ -136,7 +135,6 @@ function ServicesMegaMenu() {
             <MegaMenuItem icon="award" title="Brand Identity" description="Logos, voice, and visual guidelines." href="/services/branding" />
             <MegaMenuItem icon="zap" title="Ad Creatives" description="Performance-driven design for ads." href="/services/ads-creative" />
             <MegaMenuItem icon="smartphone" title="User Interface & User Experience Design" description="Conversion-focused digital experiences." href="/services/ui-ux" />
-            <MegaMenuItem icon="analytics" title="Graphic Design" description="Visual design that communicates your brand." href="/services/graphic-design" />
           </div>
         </div>
       </div>
@@ -280,14 +278,12 @@ export function Header({ navigation }: HeaderProps) {
                 <div className="mega-menu-column">
                   <h4 className="mega-menu-heading">Company</h4>
                   <MegaMenuItem key="1" icon="building" title="About Us" description="Our mission and values" href="/about" />
-                  <MegaMenuItem key="2" icon="users" title="Our Team" description="Meet our experts" href="/about/team" />
                   <MegaMenuItem key="3" icon="briefcase" title="Careers" description="Join our team" href="/careers" badge="Hiring" />
                 </div>
                 <div className="mega-menu-column">
                   <h4 className="mega-menu-heading">Our Story</h4>
                   <MegaMenuItem key="4" icon="cpu" title="Our Methodology" description="The proven growth framework" href="/about/methodology" />
                   <MegaMenuItem key="5" icon="settings" title="Technology & Partners" description="Our marketing tech stack" href="/about/technology" />
-                  <MegaMenuItem key="6" icon="award" title="Awards" description="Recognition and achievements" href="/about/awards" />
                 </div>
               </div>
             </div>
@@ -327,7 +323,6 @@ export function Header({ navigation }: HeaderProps) {
                 <div className="mega-menu-column">
                   <h4 className="mega-menu-heading">Learn</h4>
                   <MegaMenuItem key="1" icon="fileText" title="Blog" description="Latest insights" href="/blog" />
-                  <MegaMenuItem key="2" icon="book" title="Guides" description="In-depth strategy guides" href="/resources/guides" />
                   <MegaMenuItem key="3" icon="fileText" title="Ebooks" description="Comprehensive deep dives" href="/resources/ebooks" />
                 </div>
                 <div className="mega-menu-column">

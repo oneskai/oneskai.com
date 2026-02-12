@@ -23,9 +23,9 @@ export default function HomePage() {
       <ServicesSection />
       <ResultsSection />
       <GrowthJourney />
+      <LeadMagnet />
       <SocialProofSection />
       <HumanSection />
-      <LeadMagnet />
       <BlogSection />
       <FAQSection />
       <CTASection />

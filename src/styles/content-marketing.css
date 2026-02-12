@@ -493,19 +493,23 @@
 
 /* ===== CTA ===== */
 .content-cta {
-    padding: 100px 0;
+    padding: 120px 0;
     background: var(--primary-green);
 }
 
 .cta-box {
     text-align: center;
     color: white;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
 }
 
 .cta-box h2 {
-    font-size: 56px;
+    font-size: 64px;
     font-weight: 600;
     margin-bottom: 24px;
+    line-height: 1.2;
 }
 
 .btn-white {
