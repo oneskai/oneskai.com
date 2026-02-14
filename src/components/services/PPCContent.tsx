@@ -645,7 +645,7 @@ export function PPCContent() {
                             <Link href="/contact" className="ppc-btn-primary">
                                 Get Free Audit <Icon type="arrowRight" />
                             </Link>
-                            <Link href="/work" className="ppc-btn-outline">
+                            <Link href="/results/case-studies" className="ppc-btn-outline">
                                 See Our Work
                             </Link>
                         </div>

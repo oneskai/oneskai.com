@@ -5,145 +5,75 @@
 ```
 src/app/(site)/
 ├── page.tsx                    # Homepage
-├── about/
-│   ├── page.tsx               # About landing
+├── company/
+│   ├── about-us/page.tsx      # Mission & Story
+│   ├── careers/page.tsx       # Careers page
 │   ├── team/page.tsx          # Team page
-│   ├── process/page.tsx       # Our process
-│   ├── awards/page.tsx        # Awards & recognition
-│   └── partners/page.tsx      # Strategic partners
+│   ├── methodology/page.tsx   # Methodology
+│   └── partnership/page.tsx    # Tech & Data Stack
 ├── services/
-│   ├── page.tsx               # Services landing
-│   ├── seo/page.tsx           # Search Engine Optimization
-│   ├── geo/page.tsx           # Generative Engine Optimization
-│   ├── aso/page.tsx           # App Store Optimization
-│   ├── content-marketing/page.tsx
-│   ├── email-marketing/page.tsx
-│   ├── social-media/page.tsx
-│   ├── paid-social/page.tsx
-│   ├── ppc/page.tsx
-│   ├── programmatic/page.tsx
-│   ├── remarketing/page.tsx
-│   ├── data-audits/page.tsx
-│   ├── attribution/page.tsx
-│   ├── predictive/page.tsx
-│   ├── ga4/page.tsx
-│   ├── bi/page.tsx
-│   ├── fractional-cmo/page.tsx
-│   ├── consulting/page.tsx
-│   ├── gtm/page.tsx
-│   ├── media-planning/page.tsx
-│   ├── persona-development/page.tsx
-│   ├── market-research/page.tsx
-│   ├── web-design/page.tsx
-│   ├── branding/page.tsx
-│   ├── video/page.tsx
-│   ├── ads-creative/page.tsx
-│   ├── ui-ux/page.tsx
-│   └── copywriting/page.tsx
-├── solutions/
-│   ├── page.tsx               # Solutions landing
-│   ├── lead-generation/page.tsx
-│   ├── ecommerce/page.tsx
-│   ├── revenue-optimization/page.tsx
-│   ├── market-leadership/page.tsx
-│   ├── social-influence/page.tsx
-│   ├── digital-evolution/page.tsx
-│   ├── ai-integration/page.tsx
-│   ├── search-dominance/page.tsx
-│   └── mobile-first/page.tsx
-├── resources/
-│   ├── page.tsx               # Resources landing
-│   ├── guides/page.tsx
-│   └── webinars/page.tsx
-├── blog/
-│   ├── page.tsx               # Blog listing
-│   └── [slug]/page.tsx        # Individual blog posts (Sanity-driven)
-├── work/page.tsx              # Success stories / Case studies
-├── careers/page.tsx           # Careers page
+│   ├── page.tsx                           # Services landing
+│   ├── search-engine-optimization/page.tsx # SEO
+│   ├── generative-engine-optimization/page.tsx # GEO
+│   ├── b2b-lead-generation/page.tsx        # Lead Gen
+│   ├── paid-social-advertising/page.tsx    # Paid Social
+│   ├── pay-per-click-advertising/page.tsx  # PPC
+│   ├── go-to-market-strategy/page.tsx      # GTM
+│   ├── fractional-cmo-leadership/page.tsx  # Fractional CMO
+│   └── website-development/page.tsx        # Web Development
+├── insights/
+│   ├── blog/page.tsx          # Blog listing
+│   ├── ebooks/page.tsx        # Ebooks listing
+│   └── newsletter/page.tsx    # Newsletter signup
+├── results/
+│   ├── case-studies/page.tsx  # Success stories
+│   ├── client-testimonials/page.tsx
+│   └── strategy-sample-report/page.tsx
 ├── contact/page.tsx           # Contact page
-├── newsletter/page.tsx        # Newsletter signup
-├── docs/page.tsx              # Documentation
 ├── faq/page.tsx               # FAQ
-├── community/page.tsx         # Community forum
 ├── privacy/page.tsx           # Privacy policy
 └── terms/page.tsx             # Terms of service
 ```
 
 ## 🔗 URL Structure
 
-### Services (27 pages)
+### Services (Major Examples)
 | Category | Page | URL |
 |----------|------|-----|
-| **Owned Media** | SEO | `/services/seo` |
-| | GEO | `/services/geo` |
-| | ASO | `/services/aso` |
-| | Content Marketing | `/services/content-marketing` |
-| | Email & SMS | `/services/email-marketing` |
-| | Social Media | `/services/social-media` |
-| **Paid Media** | Paid Social | `/services/paid-social` |
-| | PPC | `/services/ppc` |
-| | Programmatic | `/services/programmatic` |
-| | Remarketing | `/services/remarketing` |
-| **Intelligence** | Data Audits | `/services/data-audits` |
-| | Attribution | `/services/attribution` |
-| | Predictive | `/services/predictive` |
-| | GA4 | `/services/ga4` |
-| | BI Dashboards | `/services/bi` |
-| **Consulting** | Fractional CMO | `/services/fractional-cmo` |
-| | Consulting | `/services/consulting` |
-| | GTM Strategy | `/services/gtm` |
-| | Media Planning | `/services/media-planning` |
-| | Persona Development | `/services/persona-development` |
-| | Market Research | `/services/market-research` |
-| **Creatives** | Web Design | `/services/web-design` |
+| **Owned Media** | SEO | `/services/search-engine-optimization` |
+| | GEO | `/services/generative-engine-optimization` |
+| | Content Strategy | `/services/content-strategy` |
+| **Paid Media** | Paid Social | `/services/paid-social-advertising` |
+| | PPC | `/services/pay-per-click-advertising` |
+| **Intelligence** | Conversion Analytics | `/services/conversion-analytics` |
+| | GA4 | `/services/google-analytics-4` |
+| **Consulting** | Fractional CMO | `/services/fractional-cmo-leadership` |
+| | GTM Strategy | `/services/go-to-market-strategy` |
+| **Creatives** | Web Development | `/services/website-development` |
 | | Branding | `/services/branding` |
-| | Video | `/services/video` |
-| | Ad Creatives | `/services/ads-creative` |
-| | UI/UX | `/services/ui-ux` |
-| | Copywriting | `/services/copywriting` |
 
-### Solutions (9 pages)
-| Category | Page | URL |
-|----------|------|-----|
-| **Growth & Performance** | Lead Generation | `/solutions/lead-generation` |
-| | eCommerce | `/solutions/ecommerce` |
-| | Revenue Optimization | `/solutions/revenue-optimization` |
-| **Brand & Presence** | Market Leadership | `/solutions/market-leadership` |
-| | Social Influence | `/solutions/social-influence` |
-| | Digital Evolution | `/solutions/digital-evolution` |
-| **Future-Ready** | AI Integration | `/solutions/ai-integration` |
-| | Search Dominance | `/solutions/search-dominance` |
-| | Mobile-First | `/solutions/mobile-first` |
-
-### About (5 pages)
+### Company (Pillar)
 | Page | URL |
 |------|-----|
-| About Us | `/about` |
-| Team | `/about/team` |
-| Process | `/about/process` |
-| Awards | `/about/awards` |
-| Partners | `/about/partners` |
+| About Us | `/company/about-us` |
+| Careers | `/company/careers` |
+| Team | `/company/team` |
+| Partnership | `/company/partnership` |
+| Methodology | `/company/methodology` |
 
-### Resources (3 pages)
+### Results (Pillar)
 | Page | URL |
 |------|-----|
-| Resources | `/resources` |
-| Guides & Ebooks | `/resources/guides` |
-| Webinars | `/resources/webinars` |
+| Case Studies | `/results/case-studies` |
+| Testimonials | `/results/client-testimonials` |
+| Sample Report| `/results/strategy-sample-report` |
 
-### Other Pages
+### Insights (Pillar)
 | Page | URL |
 |------|-----|
-| Blog | `/blog` |
-| Work / Case Studies | `/work` |
-| Careers | `/careers` |
-| Contact | `/contact` |
-| Newsletter | `/newsletter` |
-| Documentation | `/docs` |
-| FAQ | `/faq` |
-| Community | `/community` |
-| Privacy Policy | `/privacy` |
-| Terms of Service | `/terms` |
+| Blog | `/insights/blog` |
+| Ebooks | `/insights/ebooks` |
+| Newsletter | `/insights/newsletter` |
 
 ## 🗄️ Sanity Integration Architecture
 

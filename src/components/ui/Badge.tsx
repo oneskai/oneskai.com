@@ -7,16 +7,16 @@ interface BadgeProps {
 }
 
 const variants = {
-  default: 'bg-[#ffc700]/10 text-[#ffc700] border border-[#ffc700]/20',
-  new: 'bg-emerald-500/10 text-emerald-600 border border-emerald-500/20',
-  hiring: 'bg-blue-500/10 text-blue-600 border border-blue-500/20',
+  default: 'bg-[#ffc700] text-[#052e26]',
+  new: 'bg-emerald-500 text-white',
+  hiring: 'bg-accent-pink text-white',
 };
 
 export function Badge({ children, variant = 'default', className = '' }: BadgeProps) {
   return (
     <span
       className={cn(
-        'inline-flex items-center px-2 py-0.5 rounded-full text-xs font-bold text-white uppercase tracking-wide',
+        'inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wide',
         variants[variant],
         className
       )}

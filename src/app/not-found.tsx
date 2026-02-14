@@ -22,8 +22,8 @@ export default function NotFound() {
           <div className="not-found-link-grid">
             <Link href="/services">Services</Link>
             <Link href="/solutions">Solutions</Link>
-            <Link href="/about">About Us</Link>
-            <Link href="/blog">Blog</Link>
+            <Link href="/company/about-us">About Us</Link>
+            <Link href="/insights/blog">Blog</Link>
           </div>
         </div>
       </div>

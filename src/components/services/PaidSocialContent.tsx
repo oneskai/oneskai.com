@@ -560,7 +560,7 @@ export function PaidSocialContent() {
                             <Link href="/contact" className="ps-btn-primary">
                                 Get Free Audit <Icon type="arrowRight" />
                             </Link>
-                            <Link href="/work" className="ps-btn-outline">
+                            <Link href="/results/case-studies" className="ps-btn-outline">
                                 See Our Work
                             </Link>
                         </div>

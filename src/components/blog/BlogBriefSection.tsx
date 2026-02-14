@@ -62,7 +62,7 @@ export function BlogBriefSection() {
                     ))}
                 </div>
                 <div className="section-actions text-center">
-                    <Link href="/blog" className="btn-outline">View All Articles</Link>
+                    <Link href="/insights/blog" className="btn-outline">View All Articles</Link>
                 </div>
             </div>
         </section>

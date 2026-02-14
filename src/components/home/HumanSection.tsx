@@ -85,7 +85,7 @@ export function HumanSection() {
                     </div>
 
                     <div className="human-cta-center">
-                        <Link href="/about" className="btn-outline">
+                        <Link href="/company/about-us" className="btn-outline">
                             Learn About Our Team
                             <Icon type="arrowRight" />
                         </Link>

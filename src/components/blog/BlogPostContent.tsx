@@ -133,7 +133,7 @@ export function BlogPostContent({ slug }: BlogPostContentProps) {
             <header className="post-header">
                 <div className="post-header-container centered">
                     <nav className="post-breadcrumb-minimal">
-                        <Link href="/blog">Blog</Link>
+                        <Link href="/insights/blog">Blog</Link>
                         <span>/</span>
                         <span className="current">{post.category}</span>
                     </nav>

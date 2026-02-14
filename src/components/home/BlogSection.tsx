@@ -50,7 +50,7 @@ export function BlogSection() {
                             Latest From <span className="title-accent">Our Blog</span>
                         </h2>
                     </div>
-                    <Link href="/blog" className="btn-outline">
+                    <Link href="/insights/blog" className="btn-outline">
                         View All Articles
                         <Icon type="arrowRight" />
                     </Link>

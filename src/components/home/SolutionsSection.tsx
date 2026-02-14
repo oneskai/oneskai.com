@@ -11,31 +11,31 @@ const solutionCategories = [
         icon: 'trending',
         description: 'Exponential scaling through precision-engineered performance systems.',
         items: [
-            { name: 'Lead Generation', href: '/solutions/lead-generation', description: 'AI-driven high-intent prospect identification.', icon: 'target' },
-            { name: 'eCommerce Growth', href: '/solutions/ecommerce', description: 'Revenue-first scaling for digital retailers.', icon: 'cart' },
-            { name: 'Revenue Optimization', href: '/solutions/revenue-optimization', description: 'Advanced conversion rate dominance.', icon: 'zap' },
+            { name: 'B2B Lead Generation', href: '/services/b2b-lead-generation', description: 'AI-driven high-intent prospect identification and pipeline growth.', icon: 'target' },
+            { name: 'eCommerce Scaling', href: '/services/ecommerce-scaling', description: 'Revenue-first scaling strategies for high-growth digital retailers.', icon: 'cart' },
+            { name: 'Performance Creative', href: '/services/performance-creative', description: 'High-converting ad creative and campaign assets delivered at scale.', icon: 'layout' },
         ]
     },
     {
         id: 'brand',
-        label: 'Brand & Presence',
+        label: 'Brand & Authority',
         icon: 'star',
-        description: 'Authority-building frameworks that turn brands into market leaders.',
+        description: 'Authority-building frameworks that turn brands into category leaders.',
         items: [
-            { name: 'Market Leadership', href: '/solutions/market-leadership', description: 'Psychology-led positioning strategies.', icon: 'award' },
-            { name: 'Digital Evolution', href: '/solutions/digital-evolution', description: 'End-to-end digital transformation.', icon: 'rocket' },
-            { name: 'Social Influence', href: '/solutions/social-influence', description: 'High-impact community engagement.', icon: 'users' },
+            { name: 'Fractional CMO', href: '/services/fractional-cmo-leadership', description: 'Elite growth leadership and strategic expertise embedded in your team.', icon: 'users' },
+            { name: 'Go-To-Market Strategy', href: '/services/go-to-market-strategy', description: 'Launch and scale in new markets with proven methodology and speed.', icon: 'globe' },
+            { name: 'Content Marketing', href: '/services/content-strategy', description: 'Expert content strategies that educate buyers and drive authority.', icon: 'fileText' },
         ]
     },
     {
         id: 'future',
-        label: 'Future-Ready',
+        label: 'Future-Proof Tech',
         icon: 'brain',
-        description: 'Leveraging cutting-edge technology to future-proof your growth engine.',
+        description: 'Leveraging cutting-edge technology to automate and optimize your growth.',
         items: [
-            { name: 'AI Integration', href: '/solutions/ai-integration', description: 'Custom AI workflows for marketing teams.', icon: 'cpu' },
-            { name: 'Search Dominance', href: '/solutions/search-dominance', description: 'Next-gen SEO and semantic search.', icon: 'search' },
-            { name: 'Mobile-First', href: '/solutions/mobile-first', description: 'Win in the palm of your customer\'s hand.', icon: 'smartphone' },
+            { name: 'AI Search (GEO)', href: '/services/generative-engine-optimization', description: 'Get recommended and prioritized across the AI search engine landscape.', icon: 'cpu' },
+            { name: 'Website Development', href: '/services/website-development', description: 'High-performance, conversion-optimized sites built for rapid scale.', icon: 'code' },
+            { name: 'Marketing Automation', href: '/services/marketing-automation', description: 'End-to-level automated workflows that eliminate manual marketing ops.', icon: 'settings' },
         ]
     },
 ];

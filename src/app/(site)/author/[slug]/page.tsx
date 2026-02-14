@@ -177,7 +177,7 @@ export default function AuthorPage({ params }: AuthorPageProps) {
                 <p style={{ fontSize: '18px', color: '#64748b', marginTop: '20px' }}>
                     The author you're looking for doesn't seem to have any published articles yet.
                 </p>
-                <Link href="/blog" className="blog-featured-link" style={{ justifyContent: 'center', marginTop: '40px' }}>
+                <Link href="/insights/blog" className="blog-featured-link" style={{ justifyContent: 'center', marginTop: '40px' }}>
                     Back to Blog <Icon type="arrowRight" />
                 </Link>
             </div>

@@ -98,7 +98,7 @@ export function ResultsSection() {
                 </div>
 
                 <div className="results-footer-v3">
-                    <Link href="/work" className="btn-outline">
+                    <Link href="/results/case-studies" className="btn-outline">
                         View All Case Studies <Icon type="arrowRight" />
                     </Link>
                 </div>

@@ -149,7 +149,7 @@ export function CareersContent() {
                         <a href="#openings" className="careers-hero-btn">
                             Explore Opportunities <Icon type="arrowRight" />
                         </a>
-                        <Link href="/about" className="careers-hero-btn secondary">
+                        <Link href="/company/about-us" className="careers-hero-btn secondary">
                             Learn About Our Story
                         </Link>
                     </div>

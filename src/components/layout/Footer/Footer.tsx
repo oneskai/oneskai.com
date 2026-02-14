@@ -39,7 +39,7 @@ export function Footer({ siteSettings }: FooterProps) {
               Start Your Journey
               <Icon type="arrowRight" />
             </Link>
-            <Link href="/work" className="footer-cta-btn-outline">
+            <Link href="/results/case-studies" className="footer-cta-btn-outline">
               View Case Studies
             </Link>
           </div>
@@ -52,14 +52,14 @@ export function Footer({ siteSettings }: FooterProps) {
             <div className="footer-service-group">
               <h4 className="footer-group-title">Growth Marketing</h4>
               <ul className="footer-nav-list">
-                <li><Link href="/services/seo">Search Engine Optimization</Link></li>
-                <li><Link href="/services/geo">GEO (AI Search)</Link></li>
-                <li><Link href="/services/aso">App Store Optimization</Link></li>
+                <li><Link href="/services/search-engine-optimization">Search Engine Optimization</Link></li>
+                <li><Link href="/services/generative-engine-optimization">GEO (AI Search)</Link></li>
+                <li><Link href="/services/app-store-optimization">App Store Optimization</Link></li>
                 <li><Link href="/services/local-seo">Local SEO</Link></li>
-                <li><Link href="/services/content-marketing">Content Marketing</Link></li>
-                <li><Link href="/services/email-marketing">Email Marketing</Link></li>
+                <li><Link href="/services/content-strategy">Content Marketing</Link></li>
+                <li><Link href="/services/email-and-sms-marketing">Email Marketing</Link></li>
                 <li><Link href="/services/social-media">Social Media</Link></li>
-                <li><Link href="/services/cro">Conversion Optimization</Link></li>
+                <li><Link href="/services/conversion-rate-optimization">Conversion Optimization</Link></li>
               </ul>
             </div>
 
@@ -68,11 +68,11 @@ export function Footer({ siteSettings }: FooterProps) {
             <div className="footer-service-group">
               <h4 className="footer-group-title">Paid Media</h4>
               <ul className="footer-nav-list">
-                <li><Link href="/services/ppc">PPC Advertising</Link></li>
-                <li><Link href="/services/paid-social">Paid Social</Link></li>
-                <li><Link href="/services/programmatic">Programmatic & Display</Link></li>
-                <li><Link href="/services/remarketing">Remarketing & Retargeting</Link></li>
-                <li><Link href="/services/marketplace">Marketplace Optimization</Link></li>
+                <li><Link href="/services/pay-per-click-advertising">PPC Advertising</Link></li>
+                <li><Link href="/services/paid-social-advertising">Paid Social</Link></li>
+                <li><Link href="/services/programmatic-and-display">Programmatic & Display</Link></li>
+                <li><Link href="/services/remarketing-and-retargeting">Remarketing & Retargeting</Link></li>
+                <li><Link href="/services/marketplace-optimization">Marketplace Optimization</Link></li>
               </ul>
             </div>
 
@@ -82,8 +82,8 @@ export function Footer({ siteSettings }: FooterProps) {
               <h4 className="footer-group-title">Creative & Build</h4>
               <ul className="footer-nav-list">
                 <li><Link href="/services/web-design">Web Design</Link></li>
-                <li><Link href="/services/web-development">Web Development</Link></li>
-                <li><Link href="/services/ecommerce">Ecommerce Development</Link></li>
+                <li><Link href="/services/website-development">Web Development</Link></li>
+                <li><Link href="/services/ecommerce-scaling">Ecommerce Development</Link></li>
                 <li><Link href="/services/ui-ux">UI/UX Design</Link></li>
                 <li><Link href="/services/branding">Branding & Identity</Link></li>
                 <li><Link href="/services/ads-creative">Ads Creative</Link></li>
@@ -95,9 +95,9 @@ export function Footer({ siteSettings }: FooterProps) {
             <div className="footer-service-group">
               <h4 className="footer-group-title">Data & Analytics</h4>
               <ul className="footer-nav-list">
-                <li><Link href="/services/ga4">Google Analytics 4</Link></li>
+                <li><Link href="/services/google-analytics-4">Google Analytics 4</Link></li>
                 <li><Link href="/services/marketing-automation">Marketing Automation</Link></li>
-                <li><Link href="/services/gtm">Google Tag Manager</Link></li>
+                <li><Link href="/services/go-to-market-strategy">Google Tag Manager</Link></li>
               </ul>
             </div>
 
@@ -106,9 +106,8 @@ export function Footer({ siteSettings }: FooterProps) {
             <div className="footer-service-group">
               <h4 className="footer-group-title">Strategy & Consulting</h4>
               <ul className="footer-nav-list">
-                <li><Link href="/services/strategy">Digital Strategy</Link></li>
                 <li><Link href="/services/consulting">Marketing Consulting</Link></li>
-                <li><Link href="/services/fractional-cmo">Fractional CMO</Link></li>
+                <li><Link href="/services/fractional-cmo-leadership">Fractional CMO</Link></li>
                 <li><Link href="/services/persona-development">Persona Development</Link></li>
                 <li><Link href="/services" className="footer-view-all">View All Services →</Link></li>
               </ul>
@@ -189,16 +188,15 @@ export function Footer({ siteSettings }: FooterProps) {
         {/* ── Lower Nav Grid ── */}
         <div className="footer-nav-section">
           <div className="footer-nav-col">
-            <h4 className="footer-nav-title">Solutions</h4>
+            <h4 className="footer-nav-title">Capabilities</h4>
             <ul className="footer-nav-list">
-              <li><Link href="/solutions/lead-generation">Lead Generation</Link></li>
-              <li><Link href="/solutions/ecommerce">eCommerce Growth</Link></li>
-              <li><Link href="/solutions/revenue-optimization">Revenue Optimization</Link></li>
-              <li><Link href="/solutions/market-leadership">Market Leadership</Link></li>
-              <li><Link href="/solutions/digital-evolution">Digital Evolution</Link></li>
-              <li><Link href="/solutions/ai-integration">AI Integration</Link></li>
-              <li><Link href="/solutions/search-dominance">Search Dominance</Link></li>
-              <li><Link href="/solutions/b2b-strategy">B2B Strategy</Link></li>
+              <li><Link href="/services/b2b-lead-generation">Lead Generation</Link></li>
+              <li><Link href="/services/ecommerce-scaling">eCommerce Scaling</Link></li>
+              <li><Link href="/services/fractional-cmo-leadership">Fractional CMO</Link></li>
+              <li><Link href="/services/go-to-market-strategy">GTM Strategy</Link></li>
+              <li><Link href="/services/generative-engine-optimization">GEO (AI Search)</Link></li>
+              <li><Link href="/services/search-engine-optimization">SEO Dominance</Link></li>
+              <li><Link href="/services/marketing-automation">Automations</Link></li>
             </ul>
           </div>
 
@@ -207,11 +205,11 @@ export function Footer({ siteSettings }: FooterProps) {
           <div className="footer-nav-col">
             <h4 className="footer-nav-title">Company</h4>
             <ul className="footer-nav-list">
-              <li><Link href="/about">About Us</Link></li>
-              <li><Link href="/about/methodology">Methodology</Link></li>
-              <li><Link href="/about/technology">Partnership</Link></li>
-              <li><Link href="/work">Case Studies</Link></li>
-              <li><Link href="/careers">Careers</Link></li>
+              <li><Link href="/company/about-us">About Us</Link></li>
+              <li><Link href="/company/methodology">Methodology</Link></li>
+              <li><Link href="/company/partnership">Partnership</Link></li>
+              <li><Link href="/results/case-studies">Case Studies</Link></li>
+              <li><Link href="/company/careers">Careers</Link></li>
               <li><Link href="/contact">Contact</Link></li>
             </ul>
           </div>
@@ -221,11 +219,10 @@ export function Footer({ siteSettings }: FooterProps) {
           <div className="footer-nav-col">
             <h4 className="footer-nav-title">Resources</h4>
             <ul className="footer-nav-list">
-              <li><Link href="/blog">Blog</Link></li>
-              <li><Link href="/resources/ebooks">Ebooks</Link></li>
-              <li><Link href="/newsletter">Newsletter</Link></li>
+              <li><Link href="/insights/blog">Blog</Link></li>
+              <li><Link href="/insights/ebooks">Ebooks</Link></li>
+              <li><Link href="/insights/newsletter">Newsletter</Link></li>
               <li><Link href="/faq">FAQ</Link></li>
-              <li><Link href="/resources/downloads">Downloads</Link></li>
               <li><Link href="/resources/brand-assets">Brand Assets</Link></li>
             </ul>
           </div>
