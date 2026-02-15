@@ -187,7 +187,7 @@ export function Footer({ siteSettings }: FooterProps) {
             <ul className="footer-nav-list">
               <li><Link href="/approach/growth-framework">Growth Framework</Link></li>
               <li><Link href="/approach/technology">Technology Stack</Link></li>
-              <li><Link href="/approach/why-switch">Why Oneskai</Link></li>
+              <li><Link href="/approach/why-oneskai">Why Oneskai</Link></li>
             </ul>
           </div>
 

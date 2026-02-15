@@ -1,20 +1,20 @@
-/* Methodology Page Design System */
+/* Methodology Page — Aligned to DESIGN_SYSTEM.md */
 :root {
     --method-primary: #ffc700;
     --method-primary-dark: #e5b200;
-    --method-bg-dark: #0a0a0a;
+    --method-bg-dark: #0A0D12;
     --method-card-bg: rgba(255, 255, 255, 0.03);
     --method-border: rgba(255, 255, 255, 0.08);
-    --method-text-muted: rgba(255, 255, 255, 0.6);
-    --method-container-width: 1300px;
+    --method-text-muted: rgba(255, 255, 255, 0.7);
+    --method-container-width: 1400px;
     --method-section-padding: 140px 0;
-    --method-purple: #7c3aed;
-    --method-purple-light: #a78bfa;
+    --method-purple: #9B5DE5;
+    --method-purple-light: #b794f6;
 }
 
 .methodology-page {
     background: #fff;
-    color: #0f172a;
+    color: #1A1D23;
     font-family: inherit;
 }
 
@@ -30,7 +30,7 @@
     align-items: center;
     gap: 8px;
     font-size: 13px;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--method-primary);
@@ -45,11 +45,11 @@
 }
 
 .method-section-title {
-    font-size: 52px;
-    font-weight: 800;
+    font-size: 48px;
+    font-weight: 700;
     line-height: 1.1;
-    letter-spacing: -0.03em;
-    color: #011812;
+    letter-spacing: -1.0px;
+    color: #1A1D23;
     margin-bottom: 24px;
 }
 
@@ -59,9 +59,9 @@
 }
 
 .method-section-subtitle {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.6;
-    color: #475569;
+    color: #5A5D63;
     max-width: 650px;
 }
 
@@ -75,7 +75,7 @@
     justify-content: center;
     text-align: center;
     overflow: hidden;
-    background: #000;
+    background: #0A0D12;
     padding-top: 100px;
 }
 
@@ -97,8 +97,8 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.8) 100%),
-        linear-gradient(to bottom, transparent 60%, #000 100%);
+    background: radial-gradient(circle at center, transparent 0%, rgba(10, 13, 18, 0.4) 50%, rgba(10, 13, 18, 0.8) 100%),
+        linear-gradient(to bottom, transparent 60%, #0A0D12 100%);
 }
 
 .method-hero-content {
@@ -109,12 +109,12 @@
 }
 
 .method-hero-title {
-    font-size: 72px;
-    font-weight: 900;
-    line-height: 0.95;
+    font-size: clamp(36px, 5vw, 62px);
+    font-weight: 700;
+    line-height: 1.15;
     color: #fff;
     margin-bottom: 32px;
-    letter-spacing: -0.04em;
+    letter-spacing: -1.5px;
 }
 
 .method-hero-title span {
@@ -122,9 +122,9 @@
 }
 
 .method-hero-subtitle {
-    font-size: 22px;
+    font-size: 18px;
     line-height: 1.6;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.7);
     margin: 0 auto 48px;
     max-width: 720px;
 }
@@ -151,9 +151,9 @@
 
 /* Trust Bar */
 .method-trust {
-    background: #fff;
+    background: #F8F6F3;
     padding: 40px 0;
-    border-bottom: 1px solid #f1f5f9;
+    border-bottom: 1px solid #e8e6e3;
 }
 
 .method-trust-grid {
@@ -172,14 +172,14 @@
 .method-trust-item strong {
     font-size: 32px;
     font-weight: 800;
-    color: #011812;
+    color: #1A1D23;
     letter-spacing: -0.02em;
 }
 
 .method-trust-item span {
     font-size: 14px;
     font-weight: 600;
-    color: #64748b;
+    color: #5A5D63;
     text-transform: uppercase;
     letter-spacing: 0.05em;
 }
@@ -198,8 +198,8 @@
 
 .method-why-text p {
     font-size: 18px;
-    line-height: 1.8;
-    color: #475569;
+    line-height: 1.6;
+    color: #5A5D63;
     margin-bottom: 24px;
 }
 
@@ -217,7 +217,7 @@
     align-items: center;
     gap: 12px;
     font-weight: 700;
-    color: #011812;
+    color: #1A1D23;
 }
 
 .method-why-list li svg {
@@ -229,7 +229,7 @@
 .method-why-image {
     position: relative;
     aspect-ratio: 4/3;
-    background: #f8fafc;
+    background: #F8F6F3;
     border-radius: 10px;
     overflow: hidden;
 }
@@ -243,7 +243,7 @@
 /* Problems Section */
 .method-problems {
     padding: var(--method-section-padding);
-    background: #0a0a0a;
+    background: #0A0D12;
     color: #fff;
 }
 
@@ -257,7 +257,7 @@
 }
 
 .method-problems-header .method-section-subtitle {
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.7);
     margin: 0 auto;
 }
 
@@ -276,7 +276,7 @@
 }
 
 .method-problem-card:hover {
-    background: rgba(255, 255, 255, 0.06);
+    background: rgba(255, 255, 255, 0.05);
     border-color: var(--method-primary);
     transform: translateY(-8px);
 }
@@ -304,19 +304,19 @@
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 16px;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.5px;
 }
 
 .method-problem-card p {
     font-size: 16px;
     line-height: 1.6;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.7);
 }
 
 /* Results Bar (Dark) */
 .method-results {
     padding: 80px 0;
-    background: #000;
+    background: #0A0D12;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -398,16 +398,16 @@
 }
 
 .method-step-card h3 {
-    font-size: 22px;
-    font-weight: 800;
-    color: #011812;
+    font-size: 20px;
+    font-weight: 600;
+    color: #1A1D23;
     margin-bottom: 12px;
 }
 
 .method-step-card p {
     font-size: 16px;
-    line-height: 1.7;
-    color: #64748b;
+    line-height: 1.6;
+    color: #5A5D63;
 }
 
 /* Comparison Section */
@@ -417,7 +417,7 @@
 }
 
 .method-comparison-box {
-    background: linear-gradient(135deg, #012b20 0%, #000 100%);
+    background: linear-gradient(135deg, #012b20 0%, #0A0D12 100%);
     border-radius: 10px;
     padding: 80px;
     text-align: center;
@@ -437,14 +437,14 @@
 }
 
 .method-comparison-box h2 {
-    font-size: 52px;
-    font-weight: 800;
+    font-size: 48px;
+    font-weight: 700;
     margin-bottom: 24px;
     color: #fff;
 }
 
 .method-comparison-box p {
-    font-size: 20px;
+    font-size: 18px;
     color: rgba(255, 255, 255, 0.7);
     max-width: 700px;
     margin: 0 auto 48px;
@@ -472,21 +472,21 @@
 /* Final CTA */
 .method-final-cta {
     padding: 140px 0;
-    background: #f8fafc;
+    background: #F8F6F3;
     text-align: center;
 }
 
 .method-final-cta h2 {
-    font-size: 64px;
-    font-weight: 900;
-    color: #011812;
+    font-size: 48px;
+    font-weight: 700;
+    color: #1A1D23;
     margin-bottom: 32px;
-    letter-spacing: -0.04em;
+    letter-spacing: -1.0px;
 }
 
 .method-final-cta p {
-    font-size: 20px;
-    color: #475569;
+    font-size: 18px;
+    color: #5A5D63;
     max-width: 600px;
     margin: 0 auto 48px;
 }
@@ -494,7 +494,7 @@
 /* Growth Scorecard Section */
 .method-scorecard {
     padding: var(--method-section-padding);
-    background: #0f0f10;
+    background: #0A0D12;
     color: #fff;
 }
 
@@ -527,7 +527,7 @@
 }
 
 .score-pill:hover {
-    background: rgba(124, 58, 237, 0.1);
+    background: rgba(155, 93, 229, 0.1);
     border-color: var(--method-purple);
     transform: translateX(10px);
 }
@@ -545,7 +545,7 @@
 .score-pill.active {
     background: linear-gradient(90deg, var(--method-purple), #ff2d75);
     border: none;
-    box-shadow: 0 10px 30px rgba(124, 58, 237, 0.3);
+    box-shadow: 0 10px 30px rgba(155, 93, 229, 0.3);
 }
 
 .score-pill .alert {
@@ -556,7 +556,7 @@
 /* Growth Matrix (Power Circuit) */
 .method-matrix {
     padding: var(--method-section-padding);
-    background: #fcfcfd;
+    background: #F8F6F3;
 }
 
 .matrix-container {
@@ -584,8 +584,8 @@
     position: relative;
     width: 100%;
     aspect-ratio: 1.2;
-    border-left: 2px solid #000;
-    border-bottom: 2px solid #000;
+    border-left: 2px solid #1A1D23;
+    border-bottom: 2px solid #1A1D23;
 }
 
 .axis-label-y {
@@ -620,7 +620,7 @@
 }
 
 .quadrant {
-    background: #f8fafc;
+    background: #F8F6F3;
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -628,20 +628,20 @@
     text-align: center;
     padding: 20px;
     font-weight: 700;
-    color: #64748b;
+    color: #5A5D63;
     border: 1px dashed #e2e8f0;
     font-size: 14px;
 }
 
 .quadrant.goal {
-    background: rgba(124, 58, 237, 0.05);
+    background: rgba(155, 93, 229, 0.05);
     color: var(--method-purple);
     border: 2px solid var(--method-purple);
 }
 
 .quadrant.current {
-    border: 2px solid #000;
-    color: #000;
+    border: 2px solid #1A1D23;
+    color: #1A1D23;
 }
 
 .handwritten-note {
@@ -649,7 +649,7 @@
     font-family: 'cursive', sans-serif;
     font-style: italic;
     font-size: 16px;
-    color: #64748b;
+    color: #5A5D63;
 }
 
 /* Dashboard Mockup Styles */
@@ -662,7 +662,7 @@
 }
 
 .rollup-score {
-    background: #f0ebff;
+    background: rgba(155, 93, 229, 0.08);
     padding: 24px;
     border-radius: 10px;
     display: flex;
@@ -707,7 +707,7 @@
 
 .margin-bubble {
     background: #fff;
-    border: 1px solid #000;
+    border: 1px solid #1A1D23;
     border-radius: 100px;
     padding: 12px 24px;
     display: flex;
@@ -738,13 +738,13 @@
 /* Growth Flywheel Revamp */
 .method-flywheel {
     padding: 120px 0;
-    background: #0a0a0b;
+    background: #0A0D12;
     text-align: center;
     color: #fff;
     overflow: hidden;
     position: relative;
     background-image:
-        radial-gradient(circle at 20% 30%, rgba(124, 58, 237, 0.1) 0%, transparent 40%),
+        radial-gradient(circle at 20% 30%, rgba(155, 93, 229, 0.1) 0%, transparent 40%),
         radial-gradient(circle at 80% 70%, rgba(255, 199, 0, 0.05) 0%, transparent 40%);
 }
 
@@ -762,7 +762,7 @@
     transform: translate(-50%, -50%);
     width: 160px;
     height: 160px;
-    background: #0a0a0b;
+    background: #0A0D12;
     border: 2px solid var(--method-primary);
     color: #fff;
     border-radius: 50%;
@@ -878,7 +878,7 @@
 .flywheel-item:nth-child(3) {
     top: 50%;
     left: 90%;
-    border-color: #a78bfa;
+    border-color: var(--method-purple-light);
 }
 
 /* right */
@@ -928,7 +928,7 @@
 /* Tech Stack Section */
 .method-stack {
     padding: var(--method-section-padding);
-    background: #000;
+    background: #0A0D12;
     color: #fff;
     overflow: hidden;
 }
@@ -982,12 +982,8 @@
 
 /* Responsive */
 @media (max-width: 1200px) {
-    .method-hero-title {
-        font-size: 64px;
-    }
-
     .method-section-title {
-        font-size: 44px;
+        font-size: 40px;
     }
 }
 
@@ -1011,10 +1007,6 @@
 }
 
 @media (max-width: 768px) {
-    .method-hero-title {
-        font-size: 48px;
-    }
-
     .method-trust-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 24px;
@@ -1026,6 +1018,6 @@
     }
 
     .method-final-cta h2 {
-        font-size: 44px;
+        font-size: 36px;
     }
 }

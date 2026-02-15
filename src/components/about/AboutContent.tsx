@@ -220,7 +220,7 @@ export function AboutContent() {
                         <div className="about-model-step">
                             <div className="step-number">04</div>
                             <h3>Revenue Optimization</h3>
-                            <p>Continuous tuning of the engine to maximize ROI and LTV.</p>
+                            <p>Continuous tuning of the engine to maximize return on investment and customer value.</p>
                         </div>
                     </div>
                 </div>

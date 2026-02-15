@@ -6,7 +6,7 @@ import { Icon } from '@/components/ui/Icon';
 
 const caseStudies = [
     {
-        id: 0,
+        id: 'ecommerce-scale',
         brand: 'E-Commerce Brand',
         industry: 'Fashion & Retail',
         tags: ['Paid Media', 'SEO', 'Creative'],
@@ -18,7 +18,7 @@ const caseStudies = [
         quote: 'Oneskai transformed our digital presence. We went from struggling to scale to being the fastest-growing D2C brand in our category.',
     },
     {
-        id: 1,
+        id: 'saas-leads',
         brand: 'SaaS Platform',
         industry: 'Technology',
         tags: ['ABM', 'Content', 'Analytics'],
@@ -30,7 +30,7 @@ const caseStudies = [
         quote: 'Their data-driven approach to B2B marketing helped us close our Series B. The ROI is undeniable.',
     },
     {
-        id: 2,
+        id: 'healthcare-growth',
         brand: 'Healthcare Provider',
         industry: 'Healthcare',
         tags: ['Local SEO', 'Paid Search', 'Reputation'],
@@ -89,7 +89,7 @@ export function ResultsSection() {
                             </div>
 
                             <div className="case-card-footer">
-                                <Link href={`/work/${study.id}`} className="case-card-link">
+                                <Link href={`/results/case-studies/${study.id}`} className="case-card-link">
                                     View Full Case Study <Icon type="arrowRight" />
                                 </Link>
                             </div>

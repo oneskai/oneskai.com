@@ -1,0 +1,567 @@
+/* ================================================
+   WHY SWITCH PAGE — Oneskai Digital Agency
+   Premium Editorial Style
+   ================================================ */
+
+.why-oneskai-page {
+    background: #fff;
+    color: #1a1d23;
+    min-height: 100vh;
+}
+
+/* ===== HERO ===== */
+.wsp-hero {
+    padding: 180px 0 100px;
+    background: #0a0d12;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.wsp-hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.wsp-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(10, 13, 18, 0.7) 0%, #0a0d12 100%);
+    z-index: 1;
+}
+
+.wsp-hero .container {
+    position: relative;
+    z-index: 2;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Fix Back Link Icon */
+.back-link .mega-menu-icon {
+    background: transparent;
+    color: inherit;
+    width: auto;
+    height: auto;
+    padding: 0;
+}
+
+.wsp-label {
+    display: inline-block;
+    color: #FFC700;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 24px;
+}
+
+.wsp-title {
+    font-size: clamp(36px, 5vw, 64px);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -2px;
+    margin-bottom: 32px;
+}
+
+.wsp-subtitle {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 700px;
+    margin: 0 auto 48px;
+    line-height: 1.6;
+}
+
+/* Divider */
+.wsp-divider {
+    height: 1px;
+    background: #E5E3DF;
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+/* ===== MAIN CONTENT ===== */
+.wsp-main-content {
+    padding: 120px 0;
+}
+
+.comparison-grid-container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px;
+    align-items: center;
+}
+
+.comparison-text h2 {
+    font-size: 40px;
+    font-weight: 800;
+    color: #0a0d12;
+    margin-bottom: 24px;
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+.comparison-text p {
+    font-size: 18px;
+    color: #5A5D63;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.feature-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.fi-icon {
+    width: 24px;
+    height: 24px;
+    color: #FF2D75;
+    flex-shrink: 0;
+    margin-top: 4px;
+}
+
+.fi-content h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0a0d12;
+    margin-bottom: 8px;
+}
+
+.fi-content p {
+    font-size: 15px;
+    color: #5A5D63;
+    margin: 0;
+}
+
+.comparison-visual {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 60px;
+    border: 1px solid #e5e3df;
+    position: relative;
+}
+
+.visual-badge {
+    position: absolute;
+    top: -20px;
+    right: 40px;
+    background: #FF2D75;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 14px;
+    box-shadow: 0 10px 20px rgba(255, 45, 117, 0.3);
+}
+
+.stat-card-row {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.stat-visual-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.svc-number {
+    font-size: 48px;
+    font-weight: 800;
+    color: #0a0d12;
+    line-height: 1;
+}
+
+.svc-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #5A5D63;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ===== TECH SECTION ===== */
+.wsp-tech-section {
+    background: #0a0d12;
+    color: #fff;
+    padding: 120px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.tech-container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 2;
+}
+
+.tech-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 80px;
+}
+
+.tech-header h2 {
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 24px;
+    letter-spacing: -1px;
+}
+
+.tech-header p {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.tech-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 40px;
+    transition: all 0.3s ease;
+}
+
+.tech-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: #FF2D75;
+    transform: translateY(-5px);
+}
+
+.tc-icon {
+    font-size: 32px;
+    color: #FF2D75;
+    margin-bottom: 24px;
+    display: block;
+}
+
+.tech-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #fff;
+}
+
+.tech-card p {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.6;
+}
+
+/* ===== TIMELINE SECTION ===== */
+.wsp-timeline-section {
+    padding: 120px 0;
+    background: #fff;
+    border-top: 1px solid #e5e3df;
+}
+
+.timeline-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.timeline-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.timeline-header h2 {
+    font-size: 40px;
+    font-weight: 800;
+    color: #0a0d12;
+    margin-bottom: 24px;
+}
+
+.timeline-header p {
+    font-size: 18px;
+    color: #5A5D63;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.timeline-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+    padding-left: 40px;
+}
+
+.timeline-steps::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 20px;
+    bottom: 20px;
+    width: 2px;
+    background: #e5e3df;
+}
+
+.timeline-item {
+    position: relative;
+    padding-bottom: 60px;
+}
+
+.timeline-item:last-child {
+    padding-bottom: 0;
+}
+
+.tl-marker {
+    position: absolute;
+    left: -40px;
+    top: 0;
+    width: 32px;
+    height: 32px;
+    background: #fff;
+    border: 2px solid #FF2D75;
+    border-radius: 50%;
+    color: #FF2D75;
+    font-size: 14px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.tl-content {
+    background: #f8f9fa;
+    border: 1px solid #e5e3df;
+    padding: 32px;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
+.tl-week {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #5A5D63;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.tl-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0a0d12;
+    margin-bottom: 12px;
+}
+
+.tl-desc {
+    font-size: 16px;
+    color: #5A5D63;
+    line-height: 1.6;
+}
+
+/* ===== EXPERT SECTION ===== */
+.wsp-expert-section {
+    padding: 120px 0;
+    background: #f8f9fa;
+    border-top: 1px solid #e5e3df;
+}
+
+.expert-container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.expert-text h2 {
+    font-size: 40px;
+    font-weight: 800;
+    color: #0a0d12;
+    margin-bottom: 24px;
+}
+
+.expert-text p {
+    font-size: 18px;
+    color: #5A5D63;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.expert-check-list {
+    display: grid;
+    gap: 16px;
+}
+
+.check-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #0a0d12;
+}
+
+.check-icon {
+    width: 24px;
+    height: 24px;
+    background: #FF2D75;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.expert-visual {
+    position: relative;
+}
+
+.expert-image-card {
+    background: #fff;
+    border: 1px solid #e5e3df;
+    border-radius: 10px;
+    padding: 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+    transform: rotate(2deg);
+}
+
+.expert-image-card img {
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ===== BOTTOM CTA ===== */
+.wsp-cta {
+    padding: 120px 0;
+    background: #0a0d12;
+    /* Deeper dark for premium feel */
+    color: #fff;
+    text-align: center;
+}
+
+.wsp-cta-box {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 80px 40px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.wsp-cta-box h2 {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 24px;
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+}
+
+.wsp-cta-box p {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 48px;
+}
+
+.wsp-cta-box .btn-gold {
+    background: #FF2D75;
+    color: #fff;
+    padding: 18px 40px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(255, 45, 117, 0.3);
+}
+
+.wsp-cta-box .btn-gold .mega-menu-icon {
+    background: transparent;
+    color: #fff;
+    width: auto;
+    height: auto;
+    padding: 0;
+}
+
+.wsp-cta-box .btn-gold .mega-menu-icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+.wsp-cta-box .btn-gold:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(255, 45, 117, 0.4);
+    background: #fff;
+    color: #FF2D75;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 991px) {
+    .comparison-grid-container {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .comparison-visual {
+        order: -1;
+    }
+
+    .tech-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .expert-container {
+        grid-template-columns: 1fr;
+    }
+
+    .expert-visual {
+        order: -1;
+    }
+}
+
+@media (max-width: 767px) {
+    .wsp-hero {
+        padding: 120px 0 60px;
+    }
+
+    .wsp-title {
+        font-size: 36px;
+    }
+
+    .wsp-cta-box h2 {
+        font-size: 32px;
+    }
+}

@@ -27,7 +27,7 @@ const journeyPhases = [
         label: 'Phase 3',
         title: 'Growth & Nurturing',
         metric: '1.0%-3.0%',
-        description: 'Predictable returns. Focus shifts to CRM integration, lead nurturing, and multi-channel LTV maximization to scale profitably.',
+        description: 'Predictable returns. Focus shifts to CRM integration, lead nurturing, and multi-channel lifetime value maximization to scale profitably.',
         actions: 'Add, Optimize, Iterate, Scale',
     },
     {

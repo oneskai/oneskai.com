@@ -116,7 +116,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
-      url: `${BASE_URL}/approach/why-switch`,
+      url: `${BASE_URL}/approach/why-oneskai`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.6,

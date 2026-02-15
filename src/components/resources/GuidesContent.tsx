@@ -13,7 +13,7 @@ const guides = [
         category: "Technical",
         readTime: "15 min read",
         excerpt: "A complete architectural blueprint for managing SEO on sites with 1M+ pages. Covers crawling, indexing, and rendering.",
-        modules: ["Crawl Budget Optimization", "JS Rendering Strategies", "Log File Analysis"],
+        modules: ["Crawl Budget Optimization", "JavaScript Rendering Strategies", "Log File Analysis"],
         link: "/insights/guides/technical-seo-roadmap"
     },
     {
@@ -30,13 +30,13 @@ const guides = [
         title: "Paid Social Creative Matrix",
         category: "Growth",
         readTime: "10 min read",
-        excerpt: "Stop guessing with ads. Use this testing framework to systematically iterate on creative concepts and lower CPA.",
+        excerpt: "Stop guessing with ads. Use this testing framework to systematically iterate on creative concepts and lower acquisition costs.",
         modules: ["The 3-Hook System", "Visual Testing Framework", "Copywriting Templates"],
         link: "/insights/guides/paid-social-creative"
     },
     {
         id: 4,
-        title: "SaaS PLG Activation Model",
+        title: "SaaS Product-Led Growth Model",
         category: "Product",
         readTime: "20 min read",
         excerpt: "Turn signups into active users. A step-by-step guide to onboarding flows that drive product adoption.",
@@ -87,7 +87,7 @@ export function GuidesContent() {
                         </h1>
                         <p className="guides-description">
                             Tactical playbooks and step-by-step guides for executing complex growth strategies.
-                            Straight from our internal SOPs.
+                            Straight from our internal standard procedures.
                         </p>
                         <Link href="/contact" className="btn-accent">
                             Speak to an Expert <Icon type="arrowRight" />
@@ -111,15 +111,15 @@ export function GuidesContent() {
                             <div className="framework-steps">
                                 <div className="step-item">
                                     <span className="step-num">PHASE 1</span>
-                                    <h4 className="step-title">Foundation & Infrastructure</h4>
+                                    <h4 className="step-title">Building The Foundation</h4>
                                 </div>
                                 <div className="step-item">
                                     <span className="step-num">PHASE 2</span>
-                                    <h4 className="step-title">Acquisition & Scale</h4>
+                                    <h4 className="step-title">Finding New Customers</h4>
                                 </div>
                                 <div className="step-item">
                                     <span className="step-num">PHASE 3</span>
-                                    <h4 className="step-title">Retention & LTV</h4>
+                                    <h4 className="step-title">Keeping Your Customers</h4>
                                 </div>
                             </div>
 

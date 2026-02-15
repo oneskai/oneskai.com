@@ -81,11 +81,11 @@ export function MethodologyContent() {
                         <div className="scorecard-content">
                             <span className="method-label">PERFORMANCE AUDIT</span>
                             <h2 className="method-section-title" style={{ color: '#fff' }}>The Oneskai <span>Growth Scorecard</span></h2>
-                            <p className="method-section-subtitle" style={{ color: 'rgba(255,255,255,0.6)' }}>
+                            <p className="method-section-subtitle" style={{ color: 'rgba(255,255,255,0.7)' }}>
                                 Before we build, we audit. We measure your business across 6 critical pillars
                                 to identify the &quot;leaky buckets&quot; in your funnel and prioritize high-impact growth levers.
                             </p>
-                            <ul className="method-why-list" style={{ color: 'rgba(255,255,255,0.8)', marginTop: '32px' }}>
+                            <ul className="method-why-list" style={{ color: 'rgba(255,255,255,0.7)', marginTop: '32px' }}>
                                 <li style={{ color: '#fff' }}><Icon type="check" /> Benchmarking against 500+ competitors</li>
                                 <li style={{ color: '#fff' }}><Icon type="check" /> Identifying conversion friction points</li>
                                 <li style={{ color: '#fff' }}><Icon type="check" /> Assessing technical debt & data gaps</li>
@@ -158,7 +158,7 @@ export function MethodologyContent() {
                     <div className="matrix-container">
                         <div className="matrix-grid-wrapper">
                             <div className="matrix-content">
-                                <span className="method-label" style={{ color: '#7c3aed' }}>THE MATRIX</span>
+                                <span className="method-label" style={{ color: '#9B5DE5' }}>THE MATRIX</span>
                                 <h2 className="method-section-title">The Oneskai <span>Growth Equilibrium</span></h2>
                                 <p className="method-section-subtitle">
                                     Our framework identifies the perfect balance between **Velocity** and **Unit Economics**.
@@ -195,14 +195,14 @@ export function MethodologyContent() {
             <section className="method-flywheel">
                 <div className="flywheel-svg">
                     <svg width="100%" height="100%" viewBox="0 0 1000 1000">
-                        <circle cx="500" cy="500" r="450" fill="none" stroke="rgba(124, 58, 237, 0.2)" strokeWidth="1" strokeDasharray="10 10" />
+                        <circle cx="500" cy="500" r="450" fill="none" stroke="rgba(155, 93, 229, 0.2)" strokeWidth="1" strokeDasharray="10 10" />
                         <circle cx="500" cy="500" r="300" fill="none" stroke="rgba(255, 199, 0, 0.1)" strokeWidth="1" />
                     </svg>
                 </div>
                 <div className="method-container">
                     <span className="method-label" style={{ color: '#ffc700' }}>RECURRING REVENUE</span>
                     <h2 className="method-section-title" style={{ color: '#fff' }}>The Oneskai <span>Growth Flywheel</span></h2>
-                    <p className="method-section-subtitle" style={{ margin: '0 auto 40px', maxWidth: '700px', color: 'rgba(255,255,255,0.6)' }}>
+                    <p className="method-section-subtitle" style={{ margin: '0 auto 40px', maxWidth: '700px', color: 'rgba(255,255,255,0.7)' }}>
                         Our 8-stage recurring revenue loop ensures every customer acquired accelerates
                         the next phase of your growth, creating a self-sustaining momentum engine.
                     </p>
@@ -226,7 +226,7 @@ export function MethodologyContent() {
             </section>
 
             {/* Distribution Network Section */}
-            <section className="method-attribution" style={{ padding: '140px 0', background: '#f8fafc' }}>
+            <section className="method-attribution" style={{ padding: '140px 0', background: '#F8F6F3' }}>
                 <div className="method-container">
                     <div className="scorecard-grid">
                         <div className="dashboard-card">
@@ -239,7 +239,7 @@ export function MethodologyContent() {
                                     </div>
                                 </div>
                                 <div className="margin-bubble" style={{ borderColor: '#ffc700' }}>
-                                    <span className="label" style={{ color: '#000' }}>Growth Margin</span>
+                                    <span className="label" style={{ color: '#1A1D23' }}>Growth Margin</span>
                                     <div className="stats">
                                         <span className="biz">6%</span>
                                         <span className="bench">10%</span>
@@ -251,7 +251,7 @@ export function MethodologyContent() {
                                 <h4>Growth Maturity Index:</h4>
                                 <div className="stat-group">
                                     <div className="stat-item"><span className="val">A+</span><span className="lbl">Rating</span></div>
-                                    <div className="stat-item"><span className="val" style={{ color: '#7c3aed' }}>84%</span><span className="lbl">Index</span></div>
+                                    <div className="stat-item"><span className="val" style={{ color: '#9B5DE5' }}>84%</span><span className="lbl">Index</span></div>
                                 </div>
                             </div>
                             <div style={{ padding: '24px', background: '#fff', border: '1px solid #eef2f6', borderRadius: '12px' }}>
@@ -262,10 +262,10 @@ export function MethodologyContent() {
                                         { label: 'Rev. Attribution', biz: '90%', bench: '20%', status: '✅' },
                                         { label: 'Paid Search', biz: '14%', bench: '12%', status: '✅' }
                                     ].map((row, i) => (
-                                        <div key={i} style={{ display: 'flex', justifyContent: 'space-between', padding: '12px 0', borderBottom: '1px solid #f8fafc' }}>
+                                        <div key={i} style={{ display: 'flex', justifyContent: 'space-between', padding: '12px 0', borderBottom: '1px solid #F8F6F3' }}>
                                             <span style={{ fontSize: '14px', opacity: 0.8 }}>{row.label}</span>
                                             <div style={{ display: 'flex', gap: '24px', fontSize: '14px', fontWeight: 700 }}>
-                                                <span style={{ color: '#7c3aed' }}>{row.biz}</span>
+                                                <span style={{ color: '#9B5DE5' }}>{row.biz}</span>
                                                 <span style={{ opacity: 0.4 }}>{row.bench}</span>
                                                 <span>{row.status}</span>
                                             </div>
@@ -296,7 +296,7 @@ export function MethodologyContent() {
                     <div className="method-problems-header">
                         <span className="method-label">THE ECOSYSTEM</span>
                         <h2 className="method-section-title" style={{ color: '#fff' }}>Integrated <span>Growth Stack</span></h2>
-                        <p className="method-section-subtitle" style={{ color: 'rgba(255,255,255,0.6)' }}>
+                        <p className="method-section-subtitle" style={{ color: 'rgba(255,255,255,0.7)' }}>
                             Our methodology is powered by a best-in-class technology stack. We don&apos;t just use tools;
                             we build integrated ecosystems that automate growth and provide deep visibility.
                         </p>
@@ -328,7 +328,7 @@ export function MethodologyContent() {
                 <div className="method-container">
                     <div className="method-problems-header" style={{ textAlign: 'left', maxWidth: '800px', marginBottom: '40px' }}>
                         <span className="method-label">THE FRAMEWORK</span>
-                        <h2 className="method-section-title" style={{ color: '#011812' }}>Our <span>6-Phase Process</span></h2>
+                        <h2 className="method-section-title" style={{ color: '#1A1D23' }}>Our <span>6-Phase Process</span></h2>
                         <p className="method-section-subtitle">
                             A systematic approach that takes you from marketing chaos to predictable, scalable growth.
                             Each phase is designed to build upon the last for maximum impact.

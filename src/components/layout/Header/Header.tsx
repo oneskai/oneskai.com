@@ -291,7 +291,7 @@ function MobileSubMenu({ navKey, onLinkClick }: { navKey: string; onLinkClick: (
       <div className="mobile-nav-category">
         <Link href="/approach/growth-framework" className="mobile-nav-sublink" onClick={onLinkClick}><Icon type="layers" /><span className="mobile-nav-sublink-text">Growth Framework</span></Link>
         <Link href="/approach/technology" className="mobile-nav-sublink" onClick={onLinkClick}><Icon type="settings" /><span className="mobile-nav-sublink-text">Technology Stack</span></Link>
-        <Link href="/approach/why-switch" className="mobile-nav-sublink" onClick={onLinkClick}><Icon type="rocket" /><span className="mobile-nav-sublink-text">Why Oneskai</span></Link>
+        <Link href="/approach/why-oneskai" className="mobile-nav-sublink" onClick={onLinkClick}><Icon type="rocket" /><span className="mobile-nav-sublink-text">Why Oneskai</span></Link>
       </div>
     );
   }
@@ -416,7 +416,7 @@ export function Header({ navigation }: HeaderProps) {
                 <div className="mega-menu-column">
                   <MegaMenuItem key="framework" icon="layers" title="The Oneskai Growth Framework" description="The proprietary 90-day methodology we use for scalable revenue growth." href="/approach/growth-framework" />
                   <MegaMenuItem key="tech-stack" icon="settings" title="Tech & Data Stack We Use" description="The advanced marketing infrastructure and data stack we implement." href="/approach/technology" />
-                  <MegaMenuItem key="why-switch" icon="rocket" title="Why Work With Oneskai" description="The unique competitive advantages and strategic edge we provide clients." href="/approach/why-switch" />
+                  <MegaMenuItem key="why-switch" icon="rocket" title="Why Work With Oneskai" description="The unique competitive advantages and strategic edge we provide clients." href="/approach/why-oneskai" />
                 </div>
                 <div className="mega-menu-column featured-column">
                   <h4 className="mega-menu-heading">Featured Methodology</h4>

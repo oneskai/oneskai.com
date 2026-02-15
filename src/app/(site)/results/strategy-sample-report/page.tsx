@@ -1,12 +1,11 @@
-import { GenericPage } from '@/components/layout/GenericPage/GenericPage';
+import { Metadata } from 'next';
+import { SampleReportContent } from '@/components/work/SampleReportContent';
+
+export const metadata: Metadata = {
+    title: 'Sample Strategy Reports | Marketing Audit Examples | Oneskai',
+    description: 'Explore our sample strategy reports to see the depth of our analysis. Download examples of our SEO audits, paid media blueprints, and growth roadmaps.',
+};
 
 export default function SampleReportPage() {
-    return (
-        <GenericPage
-            category="OUR RESULTS"
-            title="Strategic Excellence, Visualized"
-            subtitle="Explore our sample strategy reports to see the depth of our analysis."
-            description="We believe in showing, not just telling. Download our sample strategy reports to understand how we audit, analyze, and plan growth for our clients. See the level of detail that goes into every Oneskai recommendation."
-        />
-    );
+    return <SampleReportContent />;
 }

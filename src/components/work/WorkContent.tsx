@@ -6,68 +6,11 @@ import Image from 'next/image';
 import { Icon } from '@/components/ui/Icon';
 import '@/styles/work-page.css';
 
-const caseStudies = [
-    {
-        id: 'ecommerce-scale',
-        brand: 'Global Fashion Retailer',
-        industry: 'E-Commerce',
-        title: 'Scaling D2C Revenue by 412% in 12 Months',
-        description: 'A multi-brand retailer struggling with customer acquisition costs partnered with us to overhaul their paid media strategy and build a scalable SEO engine.',
-        tags: ['Paid Media', 'SEO', 'Creative Strategy'],
-        metrics: [
-            { value: '+412%', label: 'Revenue' },
-            { value: '8.4x', label: 'ROAS' },
-            { value: '-47%', label: 'CAC' },
-        ],
-        image: '/images/results/case-studies/ecommerce.png',
-    },
-    {
-        id: 'saas-leads',
-        brand: 'Enterprise SaaS Platform',
-        industry: 'Technology',
-        title: 'Driving $24M in New Pipeline Value',
-        description: 'An enterprise SaaS company needed to break into the mid-market segment. We designed an ABM strategy paired with high-intent content that opened new verticals.',
-        tags: ['ABM', 'Content Marketing', 'Analytics'],
-        metrics: [
-            { value: '+890%', label: 'Leads' },
-            { value: '$24M', label: 'Pipeline' },
-            { value: '-32%', label: 'Sales Cycle' },
-        ],
-        image: '/images/results/case-studies/saas.png',
-    },
-    {
-        id: 'healthcare-growth',
-        brand: 'Premium Health Network',
-        industry: 'Healthcare',
-        title: 'Navigating Compliance to Deliver 267% Inquiry Growth',
-        description: 'In one of the most heavily regulated industries, we built a compliant yet aggressive growth strategy combining local SEO dominance with precision paid search.',
-        tags: ['Local SEO', 'Paid Search', 'Reputation'],
-        metrics: [
-            { value: '+267%', label: 'Inquiries' },
-            { value: '-58%', label: 'CPL' },
-            { value: '+340%', label: 'Awareness' },
-        ],
-        image: '/images/results/case-studies/healthcare.png',
-    },
-    {
-        id: 'fintech-trust',
-        brand: 'Digital Banking App',
-        industry: 'Fintech',
-        title: 'Lowering User Acquisition Cost by 65% Globally',
-        description: 'A challenger bank expanding across three continents needed a unified performance creative framework. We delivered a system that cut UAC while scaling installs.',
-        tags: ['App Marketing', 'Performance Creative', 'Data'],
-        metrics: [
-            { value: '-65%', label: 'UAC' },
-            { value: '4.2x', label: 'LTV/CAC' },
-            { value: '1.2M', label: 'New Installs' },
-        ],
-        image: '/images/results/case-studies/fintech.png',
-    }
-];
+import { caseStudies } from '@/data/case-studies';
 
 const stats = [
     { value: '$2.5B+', label: 'Revenue Generated' },
-    { value: '340%', label: 'Avg. ROI Increase' },
+    { value: '340%', label: 'Avg. Return on Investment' },
     { value: '200+', label: 'Brands Served' },
     { value: '98%', label: 'Client Retention' },
 ];
@@ -77,6 +20,16 @@ export function WorkContent() {
         <div className="work-page">
             {/* ===== HERO ===== */}
             <section className="work-hero">
+                <div className="work-hero-bg">
+                    <Image
+                        src="/images/results/hero/work-hero-bg.png"
+                        alt="Background"
+                        fill
+                        priority
+                        className="hero-bg-img"
+                    />
+                    <div className="work-hero-overlay"></div>
+                </div>
                 <div className="work-container">
                     <span className="hero-label">Our Work</span>
                     <h1>
@@ -112,17 +65,20 @@ export function WorkContent() {
             <section className="work-grid-section">
                 <div className="work-container">
                     <div className="work-section-header">
-                        <h2>Featured <span>Case Studies</span></h2>
+                        <div className="work-section-header-left">
+                            <span className="work-section-label">Portfolio</span>
+                            <h2>Featured <span>Case Studies</span></h2>
+                        </div>
                         <p className="section-note">
                             Every engagement begins with deep diagnosis and ends with measurable transformation.
                         </p>
                     </div>
                     <div className="case-studies-grid">
-                        {caseStudies.map((study) => (
+                        {caseStudies.map((study, index) => (
                             <Link
                                 key={study.id}
-                                href={`/work/${study.id}`}
-                                className="case-card-editorial"
+                                href={`/results/case-studies/${study.id}`}
+                                className={`case-card-editorial${index === 0 ? ' case-card-featured' : ''}`}
                             >
                                 <div className="case-card-image-wrap">
                                     <Image

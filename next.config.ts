@@ -17,6 +17,20 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/work',
+        destination: '/results/case-studies',
+        permanent: true,
+      },
+      {
+        source: '/work/:slug',
+        destination: '/results/case-studies/:slug',
+        permanent: true,
+      },
+    ];
+  },
   // Security headers
   async headers() {
     return [
