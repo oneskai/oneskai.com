@@ -20,7 +20,7 @@ const blogPosts = [
             initials: 'SC',
             slug: 'sarah-chen',
             role: 'Head of SEO Strategy',
-            image: '/images/business-woman.png',
+            image: '/images/about/team/business-woman.png',
             bio: 'Sarah is an experienced SEO strategist with over 10 years of experience helping businesses dominate search rankings. She specializes in technical SEO and content strategy. At ONESKAI, she leads the search department, creating high-impact strategies that boost visibility and drive sustainable organic growth.',
             social: { linkedin: '#', twitter: '#' },
             metrics: [
@@ -29,7 +29,7 @@ const blogPosts = [
                 { label: 'Data Analysis', value: 88 }
             ]
         },
-        image: '/images/blog-1.png'
+        image: '/images/insights/blog/blog-1.png'
     },
     {
         slug: 'ppc-budget-optimization',
@@ -43,7 +43,7 @@ const blogPosts = [
             initials: 'MR',
             slug: 'michael-ross',
             role: 'PPC Specialist',
-            image: '/images/team-member-1.png',
+            image: '/images/about/team/team-member-1.png',
             bio: 'Michael is a results-driven PPC expert who focuses on maximizing ROI for small to medium-sized businesses. He has managed millions in ad spend across Google, Meta, and LinkedIn, consistently delivering below-average CPAs.',
             social: { linkedin: '#', twitter: '#' },
             metrics: [
@@ -52,7 +52,7 @@ const blogPosts = [
                 { label: 'Conversion Tracking', value: 92 }
             ]
         },
-        image: '/images/blog-2.png'
+        image: '/images/insights/blog/blog-2.png'
     },
     {
         slug: 'content-marketing-strategy',
@@ -66,7 +66,7 @@ const blogPosts = [
             initials: 'EZ',
             slug: 'emily-zhang',
             role: 'Content Strategist',
-            image: '/images/team-member-2.png',
+            image: '/images/about/team/team-member-2.png',
             bio: 'Emily is a master storyteller who helps brands find their voice and connect deeply with their audience through value-driven content. Her editorial approach ensures every piece of content serves a specific business objective.',
             social: { linkedin: '#', twitter: '#' },
             metrics: [
@@ -75,7 +75,7 @@ const blogPosts = [
                 { label: 'Social Strategy', value: 89 }
             ]
         },
-        image: '/images/blog-3.png'
+        image: '/images/insights/blog/blog-3.png'
     },
     {
         slug: 'social-media-engagement',
@@ -89,7 +89,7 @@ const blogPosts = [
             initials: 'DK',
             slug: 'david-kim',
             role: 'Social Media Manager',
-            image: '/images/team-member-3.png',
+            image: '/images/about/team/team-member-3.png',
             bio: 'David is a social media enthusiast who stays on top of every trend to help brands build active and engaged communities. He specializes in organic growth and community management.',
             social: { linkedin: '#', twitter: '#' },
             metrics: [
@@ -98,7 +98,7 @@ const blogPosts = [
                 { label: 'Analytic Tracking', value: 82 }
             ]
         },
-        image: '/images/blog-1.png'
+        image: '/images/insights/blog/blog-1.png'
     },
     {
         slug: 'google-analytics-4-guide',
@@ -112,7 +112,7 @@ const blogPosts = [
             initials: 'LW',
             slug: 'lisa-wang',
             role: 'Data Analyst',
-            image: '/images/business-woman.png',
+            image: '/images/about/team/business-woman.png',
             bio: 'Lisa turns complex data sets into actionable marketing insights, helping businesses make smarter, data-driven decisions. She is a certified Google Analytics expert.',
             social: { linkedin: '#', twitter: '#' },
             metrics: [
@@ -121,7 +121,7 @@ const blogPosts = [
                 { label: 'Visualization', value: 91 }
             ]
         },
-        image: '/images/blog-2.png'
+        image: '/images/insights/blog/blog-2.png'
     },
     {
         slug: 'ecommerce-conversion-tips',
@@ -135,7 +135,7 @@ const blogPosts = [
             initials: 'JM',
             slug: 'james-miller',
             role: 'Conversion Specialist',
-            image: '/images/team-member-1.png',
+            image: '/images/about/team/team-member-1.png',
             bio: 'James specializes in e-commerce growth, focusing on user experience and checkout optimization to drive sales. He has worked with top-tier retailers to improve conversion rates.',
             social: { linkedin: '#', twitter: '#' },
             metrics: [
@@ -144,7 +144,7 @@ const blogPosts = [
                 { label: 'A/B Testing', value: 94 }
             ]
         },
-        image: '/images/blog-3.png'
+        image: '/images/insights/blog/blog-3.png'
     },
     {
         slug: 'ai-marketing-automation',
@@ -153,8 +153,15 @@ const blogPosts = [
         category: 'AI',
         date: 'Dec 28, 2023',
         readTime: '8 min read',
-        author: { name: 'Sarah Chen', initials: 'SC', slug: 'sarah-chen', role: 'Head of SEO Strategy', bio: 'Sarah is an experienced SEO strategist with over 10 years of experience helping businesses dominate search rankings. She specializes in technical SEO and content strategy.' },
-        image: '/images/blog-1.png'
+        author: {
+            name: 'Sarah Chen',
+            initials: 'SC',
+            slug: 'sarah-chen',
+            role: 'Head of SEO Strategy',
+            image: '/images/about/team/business-woman.png',
+            bio: 'Sarah is an experienced SEO strategist with over 10 years of experience helping businesses dominate search rankings. She specializes in technical SEO and content strategy.'
+        },
+        image: '/images/insights/blog/blog-1.png'
     }
 ];
 
@@ -193,53 +200,63 @@ export default function AuthorPage({ params }: AuthorPageProps) {
             <header className="author-header-v2">
                 <div className="author-header-container">
                     <div className="author-hero-grid">
-                        {/* Left: Picture & Info Pills */}
+                        {/* Left: Picture */}
                         <div className="author-hero-left">
                             <div className="author-image-container">
                                 <Image
-                                    src={author.image || '/images/team-member-1.png'}
+                                    src={author.image || '/images/about/team/team-member-1.png'}
                                     alt={author.name}
                                     fill
                                     className="author-main-img"
+                                    priority
                                 />
-                                <div className="author-pills-overlay">
-                                    <div className="author-name-pill">{author.name}</div>
-                                    <div className="author-role-pill">{author.role}</div>
-                                </div>
-                            </div>
-                            <div className="author-social-links">
-                                {author.social?.linkedin && (
-                                    <Link href={author.social.linkedin} className="social-icon-box">
-                                        <Icon type="linkedin" />
-                                    </Link>
-                                )}
-                                {author.social?.twitter && (
-                                    <Link href={author.social.twitter} className="social-icon-box">
-                                        <Icon type="twitter" />
-                                    </Link>
-                                )}
                             </div>
                         </div>
 
-                        {/* Right: Bio & Expert Meter */}
+                        {/* Right: Intro & Bio Cards */}
                         <div className="author-hero-right">
-                            <div className="author-bio-section">
+                            <div className="author-intro">
+                                <h1 className="author-name-v2">
+                                    {author.name}
+                                    <span className="title-divider"></span>
+                                    <span className="author-role-text">{author.role}</span>
+                                </h1>
                                 <p className="author-bio-v2">{author.bio}</p>
                             </div>
 
-                            <div className="expert-meter-box">
-                                <h3 className="expert-meter-title">Expertise Analysis</h3>
-                                <div className="expert-metrics-grid">
-                                    {author.metrics?.map((m: any, i: number) => (
-                                        <div key={i} className="metric-item">
-                                            <div className="metric-info">
-                                                <span>{m.label}</span>
+                            <div className="author-cards-grid">
+                                {/* Expertise Card */}
+                                <div className="expert-meter-box">
+                                    <h3 className="expert-meter-title">Expertise</h3>
+                                    <div className="expert-metrics-grid">
+                                        {author.metrics?.map((m: any, i: number) => (
+                                            <div key={i} className="metric-item">
+                                                <div className="metric-info">
+                                                    <span>{m.label}</span>
+                                                </div>
+                                                <div className="metric-bar-bg">
+                                                    <div className="metric-bar-fill" style={{ width: `${m.value}%` }}></div>
+                                                </div>
                                             </div>
-                                            <div className="metric-bar-bg">
-                                                <div className="metric-bar-fill" style={{ width: `${m.value}%` }}></div>
-                                            </div>
-                                        </div>
-                                    ))}
+                                        ))}
+                                    </div>
+                                </div>
+
+                                {/* Connect Card */}
+                                <div className="author-connect-card">
+                                    <h3 className="connect-card-title">Connect</h3>
+                                    <div className="author-social-icons">
+                                        {author.social?.linkedin && (
+                                            <Link href={author.social.linkedin} className="social-icon-box" target="_blank" rel="noopener noreferrer">
+                                                <Icon type="linkedin" />
+                                            </Link>
+                                        )}
+                                        {author.social?.twitter && (
+                                            <Link href={author.social.twitter} className="social-icon-box" target="_blank" rel="noopener noreferrer">
+                                                <Icon type="twitter" />
+                                            </Link>
+                                        )}
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -256,11 +273,11 @@ export default function AuthorPage({ params }: AuthorPageProps) {
 
                     <div className="blog-grid">
                         {authorPosts.map((post, index) => (
-                            <Link key={index} href={`/blog/${post.slug}`} className="blog-card">
+                            <Link key={index} href={`/insights/${post.slug}`} className="blog-card">
                                 <div className="blog-card-image">
                                     <span className="blog-card-tag">{post.category}</span>
                                     <Image
-                                        src={post.image || '/images/blog-1.png'}
+                                        src={post.image || '/images/insights/blog/blog-1.png'}
                                         alt={post.title}
                                         fill
                                         style={{ objectFit: 'cover' }}
@@ -274,7 +291,19 @@ export default function AuthorPage({ params }: AuthorPageProps) {
                                     <p className="blog-card-excerpt">{post.excerpt}</p>
                                     <div className="blog-card-footer">
                                         <div className="blog-card-author">
-                                            <div className="blog-card-author-avatar">{post.author.initials}</div>
+                                            <div className="blog-card-author-avatar">
+                                                {post.author.image ? (
+                                                    <Image
+                                                        src={post.author.image}
+                                                        alt={post.author.name}
+                                                        width={36}
+                                                        height={36}
+                                                        style={{ objectFit: 'cover', borderRadius: 'inherit' }}
+                                                    />
+                                                ) : (
+                                                    post.author.initials
+                                                )}
+                                            </div>
                                             <span>{post.author.name}</span>
                                         </div>
                                         <span className="blog-card-read">

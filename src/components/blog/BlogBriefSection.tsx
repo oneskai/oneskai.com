@@ -12,7 +12,7 @@ const featuredPosts = [
         category: 'SEO',
         date: 'Feb 2, 2024',
         readTime: '8 min read',
-        image: '/images/blog-1.png'
+        image: '/images/insights/blog/blog-1.png'
     },
     {
         slug: 'local-seo-strategies',
@@ -21,7 +21,7 @@ const featuredPosts = [
         category: 'SEO',
         date: 'Dec 15, 2023',
         readTime: '11 min read',
-        image: '/images/blog-3.png'
+        image: '/images/insights/blog/blog-3.png'
     },
     {
         slug: 'google-analytics-4-guide',
@@ -30,7 +30,7 @@ const featuredPosts = [
         category: 'Analytics',
         date: 'Jan 12, 2024',
         readTime: '12 min read',
-        image: '/images/blog-2.png'
+        image: '/images/insights/blog/blog-2.png'
     }
 ];
 
@@ -47,7 +47,7 @@ export function BlogBriefSection() {
                 </div>
                 <div className="blog-brief-grid">
                     {featuredPosts.map((post, i) => (
-                        <Link key={i} href={`/blog/${post.slug}`} className="blog-brief-card">
+                        <Link key={i} href={`/insights/${post.slug}`} className="blog-brief-card">
                             <div className="blog-brief-image">
                                 <Image src={post.image} alt={post.title} fill style={{ objectFit: 'cover' }} />
                                 <span className="blog-brief-tag">{post.category}</span>

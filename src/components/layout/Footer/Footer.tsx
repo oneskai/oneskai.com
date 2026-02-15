@@ -45,71 +45,66 @@ export function Footer({ siteSettings }: FooterProps) {
           </div>
         </div>
 
-        {/* ── Services Mega Grid ── */}
+        {/* ── Services Mega Grid (Capabilities Sync) ── */}
         <div className="footer-services-section">
-
           <div className="footer-services-grid">
             <div className="footer-service-group">
-              <h4 className="footer-group-title">Growth Marketing</h4>
+              <h4 className="footer-group-title">Demand Generation</h4>
               <ul className="footer-nav-list">
-                <li><Link href="/services/search-engine-optimization">Search Engine Optimization</Link></li>
+                <li><Link href="/services/search-engine-optimization">SEO Dominance</Link></li>
                 <li><Link href="/services/generative-engine-optimization">GEO (AI Search)</Link></li>
                 <li><Link href="/services/app-store-optimization">App Store Optimization</Link></li>
-                <li><Link href="/services/local-seo">Local SEO</Link></li>
-                <li><Link href="/services/content-strategy">Content Marketing</Link></li>
-                <li><Link href="/services/email-and-sms-marketing">Email Marketing</Link></li>
-                <li><Link href="/services/social-media">Social Media</Link></li>
-                <li><Link href="/services/conversion-rate-optimization">Conversion Optimization</Link></li>
+                <li><Link href="/services/content-marketing">Content Marketing</Link></li>
+                <li><Link href="/services/social-media-management">Social Media Management</Link></li>
               </ul>
             </div>
 
             <div className="footer-col-divider" />
 
             <div className="footer-service-group">
-              <h4 className="footer-group-title">Paid Media</h4>
+              <h4 className="footer-group-title">Paid Acquisition</h4>
               <ul className="footer-nav-list">
-                <li><Link href="/services/pay-per-click-advertising">PPC Advertising</Link></li>
-                <li><Link href="/services/paid-social-advertising">Paid Social</Link></li>
-                <li><Link href="/services/programmatic-and-display">Programmatic & Display</Link></li>
-                <li><Link href="/services/remarketing-and-retargeting">Remarketing & Retargeting</Link></li>
-                <li><Link href="/services/marketplace-optimization">Marketplace Optimization</Link></li>
+                <li><Link href="/services/paid-social-advertising">Paid Social Ads</Link></li>
+                <li><Link href="/services/pay-per-click-advertising">Search & PPC</Link></li>
+                <li><Link href="/services/remarketing-and-retargeting">Remarketing</Link></li>
+                <li><Link href="/services/programmatic-advertising">Programmatic Advertising</Link></li>
+                <li><Link href="/services/performance-creative">Performance Creative</Link></li>
               </ul>
             </div>
 
             <div className="footer-col-divider" />
 
             <div className="footer-service-group">
-              <h4 className="footer-group-title">Creative & Build</h4>
+              <h4 className="footer-group-title">Conversion & Lifecycle</h4>
               <ul className="footer-nav-list">
-                <li><Link href="/services/web-design">Web Design</Link></li>
-                <li><Link href="/services/website-development">Web Development</Link></li>
-                <li><Link href="/services/ecommerce-scaling">Ecommerce Development</Link></li>
-                <li><Link href="/services/ui-ux">UI/UX Design</Link></li>
-                <li><Link href="/services/branding">Branding & Identity</Link></li>
-                <li><Link href="/services/ads-creative">Ads Creative</Link></li>
-              </ul>
-            </div>
-
-            <div className="footer-col-divider" />
-
-            <div className="footer-service-group">
-              <h4 className="footer-group-title">Data & Analytics</h4>
-              <ul className="footer-nav-list">
+                <li><Link href="/services/email-marketing">Email Marketing</Link></li>
+                <li><Link href="/services/conversion-rate-optimization">CRO & Testing</Link></li>
                 <li><Link href="/services/google-analytics-4">Google Analytics 4</Link></li>
-                <li><Link href="/services/marketing-automation">Marketing Automation</Link></li>
-                <li><Link href="/services/go-to-market-strategy">Google Tag Manager</Link></li>
+                <li><Link href="/services/lead-generation">B2B Lead Generation</Link></li>
               </ul>
             </div>
 
             <div className="footer-col-divider" />
 
             <div className="footer-service-group">
-              <h4 className="footer-group-title">Strategy & Consulting</h4>
+              <h4 className="footer-group-title">Strategy & Leadership</h4>
               <ul className="footer-nav-list">
-                <li><Link href="/services/consulting">Marketing Consulting</Link></li>
-                <li><Link href="/services/fractional-cmo-leadership">Fractional CMO</Link></li>
-                <li><Link href="/services/persona-development">Persona Development</Link></li>
-                <li><Link href="/services" className="footer-view-all">View All Services →</Link></li>
+                <li><Link href="/services/fractional-cmo">Fractional CMO</Link></li>
+                <li><Link href="/services/marketing-consulting">Marketing Consulting</Link></li>
+                <li><Link href="/services/go-to-market-strategy">GTM Strategy</Link></li>
+                <li><Link href="/services/icp-mapping">ICP Mapping</Link></li>
+              </ul>
+            </div>
+
+            <div className="footer-col-divider" />
+
+            <div className="footer-service-group">
+              <h4 className="footer-group-title">Data & Tech</h4>
+              <ul className="footer-nav-list">
+                <li><Link href="/services/ui-ux-design">UI/UX Design</Link></li>
+                <li><Link href="/services/web-development">Web Development</Link></li>
+                <li><Link href="/services/marketing-analytics">Marketing Analytics</Link></li>
+                <li><Link href="/services/marketing-automation">Marketing Automation</Link></li>
               </ul>
             </div>
           </div>
@@ -121,7 +116,7 @@ export function Footer({ siteSettings }: FooterProps) {
             <Link href="/" className="footer-brand-logo">
               {mounted && (
                 <Image
-                  src="/images/logo/os-dark.webp"
+                  src="/images/common/logo/os-dark.webp"
                   alt="Oneskai"
                   width={140}
                   height={36}
@@ -130,7 +125,7 @@ export function Footer({ siteSettings }: FooterProps) {
               )}
               {!mounted && (
                 <Image
-                  src="/images/logo/os-dark.webp"
+                  src="/images/common/logo/os-dark.webp"
                   alt="Oneskai"
                   width={140}
                   height={36}
@@ -188,15 +183,36 @@ export function Footer({ siteSettings }: FooterProps) {
         {/* ── Lower Nav Grid ── */}
         <div className="footer-nav-section">
           <div className="footer-nav-col">
-            <h4 className="footer-nav-title">Capabilities</h4>
+            <h4 className="footer-nav-title">Approach</h4>
             <ul className="footer-nav-list">
-              <li><Link href="/services/b2b-lead-generation">Lead Generation</Link></li>
-              <li><Link href="/services/ecommerce-scaling">eCommerce Scaling</Link></li>
-              <li><Link href="/services/fractional-cmo-leadership">Fractional CMO</Link></li>
-              <li><Link href="/services/go-to-market-strategy">GTM Strategy</Link></li>
-              <li><Link href="/services/generative-engine-optimization">GEO (AI Search)</Link></li>
-              <li><Link href="/services/search-engine-optimization">SEO Dominance</Link></li>
-              <li><Link href="/services/marketing-automation">Automations</Link></li>
+              <li><Link href="/approach/growth-framework">Growth Framework</Link></li>
+              <li><Link href="/approach/technology">Technology Stack</Link></li>
+              <li><Link href="/approach/why-switch">Why Oneskai</Link></li>
+            </ul>
+          </div>
+
+          <div className="footer-col-divider" />
+
+          <div className="footer-nav-col">
+            <h4 className="footer-nav-title">Results</h4>
+            <ul className="footer-nav-list">
+              <li><Link href="/results/case-studies">Case Studies</Link></li>
+              <li><Link href="/results/client-testimonials">Testimonials</Link></li>
+              <li><Link href="/results/strategy-sample-report">Sample Report</Link></li>
+            </ul>
+          </div>
+
+          <div className="footer-col-divider" />
+
+          <div className="footer-nav-col">
+            <h4 className="footer-nav-title">Insights</h4>
+            <ul className="footer-nav-list">
+              <li><Link href="/insights/blog">Blog</Link></li>
+              <li><Link href="/insights/newsletter">Newsletter</Link></li>
+              <li><Link href="/events">Events</Link></li>
+              <li><Link href="/insights/ebooks">Ebooks</Link></li>
+              <li><Link href="/insights/guides">Guides & Frameworks</Link></li>
+              <li><Link href="/insights/faq">FAQ</Link></li>
             </ul>
           </div>
 
@@ -205,24 +221,11 @@ export function Footer({ siteSettings }: FooterProps) {
           <div className="footer-nav-col">
             <h4 className="footer-nav-title">Company</h4>
             <ul className="footer-nav-list">
-              <li><Link href="/company/about-us">About Us</Link></li>
-              <li><Link href="/company/methodology">Methodology</Link></li>
-              <li><Link href="/company/partnership">Partnership</Link></li>
-              <li><Link href="/results/case-studies">Case Studies</Link></li>
-              <li><Link href="/company/careers">Careers</Link></li>
+              <li><Link href="/about">About Us</Link></li>
+              <li><Link href="/about/team">Our Team</Link></li>
+              <li><Link href="/careers">Careers</Link></li>
+              <li><Link href="/press">Press & Media</Link></li>
               <li><Link href="/contact">Contact</Link></li>
-            </ul>
-          </div>
-
-          <div className="footer-col-divider" />
-
-          <div className="footer-nav-col">
-            <h4 className="footer-nav-title">Resources</h4>
-            <ul className="footer-nav-list">
-              <li><Link href="/insights/blog">Blog</Link></li>
-              <li><Link href="/insights/ebooks">Ebooks</Link></li>
-              <li><Link href="/insights/newsletter">Newsletter</Link></li>
-              <li><Link href="/faq">FAQ</Link></li>
               <li><Link href="/resources/brand-assets">Brand Assets</Link></li>
             </ul>
           </div>
@@ -237,15 +240,15 @@ export function Footer({ siteSettings }: FooterProps) {
             <div className="footer-locations">
               <div className="footer-location">
                 <span className="location-dot"></span>
-                New York, USA
+                Kolkata, India
               </div>
               <div className="footer-location">
                 <span className="location-dot"></span>
-                London, UK
+                Gurugram, India
               </div>
               <div className="footer-location">
                 <span className="location-dot"></span>
-                Singapore
+                Bengaluru, India
               </div>
             </div>
             <Link href="/contact" className="footer-contact-link" style={{ marginBottom: '25px' }}>

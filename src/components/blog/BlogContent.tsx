@@ -14,9 +14,9 @@ const blogPosts = [
         category: 'SEO',
         date: 'Feb 2, 2024',
         readTime: '8 min read',
-        author: { name: 'Sarah Chen', initials: 'SC', slug: 'sarah-chen' },
+        author: { name: 'Sarah Chen', initials: 'SC', slug: 'sarah-chen', image: '/images/about/team/business-woman.png' },
         featured: true,
-        image: '/images/blog-1.png'
+        image: '/images/insights/blog/blog-1.png'
     },
     {
         slug: 'ppc-budget-optimization',
@@ -25,8 +25,8 @@ const blogPosts = [
         category: 'PPC',
         date: 'Jan 28, 2024',
         readTime: '6 min read',
-        author: { name: 'Michael Ross', initials: 'MR', slug: 'michael-ross' },
-        image: '/images/blog-2.png'
+        author: { name: 'Michael Ross', initials: 'MR', slug: 'michael-ross', image: '/images/about/team/team-member-2.png' },
+        image: '/images/insights/blog/blog-2.png'
     },
     {
         slug: 'content-marketing-strategy',
@@ -35,8 +35,8 @@ const blogPosts = [
         category: 'Content',
         date: 'Jan 22, 2024',
         readTime: '10 min read',
-        author: { name: 'Emily Zhang', initials: 'EZ', slug: 'emily-zhang' },
-        image: '/images/blog-3.png'
+        author: { name: 'Emily Zhang', initials: 'EZ', slug: 'emily-zhang', image: '/images/about/team/team-member-3.png' },
+        image: '/images/insights/blog/blog-3.png'
     },
     {
         slug: 'social-media-engagement',
@@ -45,8 +45,8 @@ const blogPosts = [
         category: 'Social Media',
         date: 'Jan 18, 2024',
         readTime: '7 min read',
-        author: { name: 'David Kim', initials: 'DK', slug: 'david-kim' },
-        image: '/images/blog-1.png'
+        author: { name: 'David Kim', initials: 'DK', slug: 'david-kim', image: '/images/about/team/team-member-1.png' },
+        image: '/images/insights/blog/blog-1.png'
     },
     {
         slug: 'google-analytics-4-guide',
@@ -55,8 +55,8 @@ const blogPosts = [
         category: 'Analytics',
         date: 'Jan 12, 2024',
         readTime: '12 min read',
-        author: { name: 'Lisa Wang', initials: 'LW', slug: 'lisa-wang' },
-        image: '/images/blog-2.png'
+        author: { name: 'Lisa Wang', initials: 'LW', slug: 'lisa-wang', image: '/images/about/team/business-woman.png' },
+        image: '/images/insights/blog/blog-2.png'
     },
     {
         slug: 'ecommerce-conversion-tips',
@@ -65,8 +65,8 @@ const blogPosts = [
         category: 'E-commerce',
         date: 'Jan 5, 2024',
         readTime: '9 min read',
-        author: { name: 'James Miller', initials: 'JM', slug: 'james-miller' },
-        image: '/images/blog-3.png'
+        author: { name: 'James Miller', initials: 'JM', slug: 'james-miller', image: '/images/about/team/team-member-2.png' },
+        image: '/images/insights/blog/blog-3.png'
     },
     {
         slug: 'ai-marketing-automation',
@@ -75,8 +75,8 @@ const blogPosts = [
         category: 'AI',
         date: 'Dec 28, 2023',
         readTime: '8 min read',
-        author: { name: 'Sarah Chen', initials: 'SC', slug: 'sarah-chen' },
-        image: '/images/blog-1.png'
+        author: { name: 'Sarah Chen', initials: 'SC', slug: 'sarah-chen', image: '/images/about/team/business-woman.png' },
+        image: '/images/insights/blog/blog-1.png'
     },
     {
         slug: 'brand-voice-development',
@@ -85,8 +85,8 @@ const blogPosts = [
         category: 'Branding',
         date: 'Dec 20, 2023',
         readTime: '6 min read',
-        author: { name: 'Emily Zhang', initials: 'EZ', slug: 'emily-zhang' },
-        image: '/images/blog-2.png'
+        author: { name: 'Emily Zhang', initials: 'EZ', slug: 'emily-zhang', image: '/images/about/team/team-member-3.png' },
+        image: '/images/insights/blog/blog-2.png'
     },
     {
         slug: 'local-seo-strategies',
@@ -95,8 +95,8 @@ const blogPosts = [
         category: 'SEO',
         date: 'Dec 15, 2023',
         readTime: '11 min read',
-        author: { name: 'Michael Ross', initials: 'MR', slug: 'michael-ross' },
-        image: '/images/blog-3.png'
+        author: { name: 'Michael Ross', initials: 'MR', slug: 'michael-ross', image: '/images/about/team/team-member-2.png' },
+        image: '/images/insights/blog/blog-3.png'
     }
 ];
 
@@ -169,7 +169,7 @@ export function BlogContent() {
                             <div className="blog-featured-image">
                                 <span className="blog-featured-badge">✨ Featured</span>
                                 <Image
-                                    src={featuredPost.image || '/images/blog-1.png'}
+                                    src={featuredPost.image || '/images/insights/blog/blog-1.png'}
                                     alt={featuredPost.title}
                                     fill
                                     style={{ objectFit: 'cover' }}
@@ -182,18 +182,30 @@ export function BlogContent() {
                                         <Icon type="calendar" /> {featuredPost.date}
                                     </span>
                                 </div>
-                                <Link href={`/blog/${featuredPost.slug}`}>
+                                <Link href={`/insights/${featuredPost.slug}`}>
                                     <h2 className="blog-featured-title">{featuredPost.title}</h2>
                                 </Link>
                                 <p className="blog-featured-excerpt">{featuredPost.excerpt}</p>
                                 <Link href={`/author/${featuredPost.author.slug}`} className="blog-featured-author">
-                                    <div className="blog-author-avatar">{featuredPost.author.initials}</div>
+                                    <div className="blog-author-avatar">
+                                        {featuredPost.author.image ? (
+                                            <Image
+                                                src={featuredPost.author.image}
+                                                alt={featuredPost.author.name}
+                                                width={56}
+                                                height={56}
+                                                style={{ objectFit: 'cover', borderRadius: 'inherit' }}
+                                            />
+                                        ) : (
+                                            featuredPost.author.initials
+                                        )}
+                                    </div>
                                     <div className="blog-author-info">
                                         <h4>{featuredPost.author.name}</h4>
                                         <span>{featuredPost.readTime}</span>
                                     </div>
                                 </Link>
-                                <Link href={`/blog/${featuredPost.slug}`} className="blog-featured-link">
+                                <Link href={`/insights/${featuredPost.slug}`} className="blog-featured-link">
                                     Read the Full Article <Icon type="arrowRight" />
                                 </Link>
                             </div>
@@ -214,11 +226,11 @@ export function BlogContent() {
                     {regularPosts.length > 0 ? (
                         <div className="blog-grid">
                             {regularPosts.map((post, index) => (
-                                <Link key={index} href={`/blog/${post.slug}`} className="blog-card">
+                                <Link key={index} href={`/insights/${post.slug}`} className="blog-card">
                                     <div className="blog-card-image">
                                         <span className="blog-card-tag">{post.category}</span>
                                         <Image
-                                            src={post.image || '/images/blog-1.png'}
+                                            src={post.image || '/images/insights/blog/blog-1.png'}
                                             alt={post.title}
                                             fill
                                             style={{ objectFit: 'cover' }}
@@ -231,10 +243,22 @@ export function BlogContent() {
                                         <h3 className="blog-card-title">{post.title}</h3>
                                         <p className="blog-card-excerpt">{post.excerpt}</p>
                                         <div className="blog-card-footer">
-                                            <Link href={`/author/${post.author.slug}`} className="blog-card-author">
-                                                <div className="blog-card-author-avatar">{post.author.initials}</div>
+                                            <span className="blog-card-author">
+                                                <div className="blog-card-author-avatar">
+                                                    {post.author.image ? (
+                                                        <Image
+                                                            src={post.author.image}
+                                                            alt={post.author.name}
+                                                            width={36}
+                                                            height={36}
+                                                            style={{ objectFit: 'cover', borderRadius: 'inherit' }}
+                                                        />
+                                                    ) : (
+                                                        post.author.initials
+                                                    )}
+                                                </div>
                                                 <span>{post.author.name}</span>
-                                            </Link>
+                                            </span>
                                             <span className="blog-card-read">
                                                 Read the Full Article <Icon type="arrowRight" />
                                             </span>

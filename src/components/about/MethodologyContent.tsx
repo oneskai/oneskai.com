@@ -9,7 +9,7 @@ export function MethodologyContent() {
             {/* Hero Section */}
             <section className="method-hero">
                 <div className="method-hero-bg">
-                    <img src="/images/office-chat.png" alt="Methodology" />
+                    <img src="/images/common/office-chat.png" alt="Methodology" />
                 </div>
                 <div className="method-hero-content">
                     <span className="method-label">OUR METHODOLOGY</span>
@@ -68,7 +68,7 @@ export function MethodologyContent() {
                             </p>
                         </div>
                         <div className="method-why-image">
-                            <img src="/images/team-brainstorm.png" alt="Collaborative Workshop" />
+                            <img src="/images/common/team-brainstorm.png" alt="Collaborative Workshop" />
                         </div>
                     </div>
                 </div>

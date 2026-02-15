@@ -3,13 +3,13 @@
    ================================================ */
 
 .newsletter-page {
-    --nl-dark: #01090e;
-    --nl-dark-alt: #011812;
-    --nl-accent: #D91B5C;
-    --nl-accent-light: #FF2D75;
-    --nl-text-gray: rgba(255, 255, 255, 0.6);
+    --nl-dark: #0A0D12;
+    --nl-dark-alt: #0d1117;
+    --nl-accent: #7c3aed;
+    --nl-accent-light: #ff2d75;
+    --nl-text-gray: rgba(255, 255, 255, 0.7);
     --nl-glass: rgba(255, 255, 255, 0.03);
-    --nl-border: rgba(255, 255, 255, 0.1);
+    --nl-border: rgba(255, 255, 255, 0.08);
 }
 
 /* ===== NEWSLETTER HERO ===== */
@@ -29,7 +29,7 @@
     right: -5%;
     width: 50%;
     height: 70%;
-    background: radial-gradient(circle, rgba(217, 27, 92, 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(124, 58, 237, 0.1) 0%, transparent 70%);
     z-index: 1;
     pointer-events: none;
 }
@@ -47,15 +47,15 @@
 }
 
 .newsletter-hero-container {
-    max-width: 1400px;
+    max-width: 1320px;
     margin: 0 auto;
     padding: 0 40px;
     position: relative;
     z-index: 10;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    align-items: center;
+    gap: 60px;
+    align-items: stretch;
 }
 
 .newsletter-hero-content {
@@ -77,7 +77,7 @@
 }
 
 .newsletter-hero-title {
-    font-size: clamp(40px, 5vw, 68px);
+    font-size: 56px;
     font-weight: 800;
     line-height: 1.1;
     color: white;
@@ -104,6 +104,7 @@
 .nl-hero-img-wrapper {
     position: relative;
     z-index: 2;
+    height: 100%;
 }
 
 .nl-hero-img {
@@ -111,7 +112,8 @@
     box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5);
     border: 1px solid rgba(255, 255, 255, 0.1);
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* Subscription Form - Hero Version */
@@ -141,7 +143,7 @@
 }
 
 .newsletter-hero-btn {
-    background: var(--nl-accent);
+    background: var(--nl-accent-light);
     color: white;
     padding: 0 28px;
     border: none;
@@ -154,18 +156,17 @@
 }
 
 .newsletter-hero-btn:hover {
-    background: var(--nl-accent-light);
     transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(217, 27, 92, 0.3);
+    box-shadow: 0 10px 25px rgba(124, 58, 237, 0.3);
 }
 
 .newsletter-hero-trust {
-    margin-top: 30px;
+    margin-top: 24px;
     font-size: 14px;
     color: rgba(255, 255, 255, 0.4);
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 8px;
 }
 
@@ -176,7 +177,7 @@
 }
 
 .newsletter-benefits-container {
-    max-width: 1200px;
+    max-width: 1320px;
     margin: 0 auto;
     padding: 0 40px;
 }
@@ -187,17 +188,19 @@
 }
 
 .newsletter-section-title {
-    font-size: 42px;
+    font-size: 48px;
     font-weight: 800;
-    color: var(--text-dark);
+    color: #0A0D12;
     letter-spacing: -2px;
-    margin-bottom: 20px;
+    line-height: 1.1;
+    margin-bottom: 24px;
 }
 
 .newsletter-section-subtitle {
-    font-size: 18px;
-    color: var(--text-gray);
-    max-width: 600px;
+    font-size: 19px;
+    line-height: 1.6;
+    color: #4B5563;
+    max-width: 650px;
     margin: 0 auto;
 }
 
@@ -209,10 +212,10 @@
 
 .newsletter-benefit-card {
     padding: 40px;
-    background: #f8fafc;
+    background: #fdfdfd;
     border-radius: 10px;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    transition: all 0.3s;
+    border: 1px solid #f1f5f9;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .newsletter-benefit-card:hover {
@@ -250,7 +253,7 @@
 /* ===== RECENT EDITIONS ===== */
 .newsletter-editions {
     padding: 120px 0;
-    background: #f1f5f9;
+    background: #fafafa;
 }
 
 .newsletter-edition-grid {
@@ -264,8 +267,8 @@
     border-radius: 10px;
     overflow: hidden;
     display: flex;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    transition: all 0.3s;
+    border: 1px solid #eeeeee;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     text-decoration: none;
 }
 
@@ -323,7 +326,7 @@
 /* ===== FINAL CTA ===== */
 .newsletter-footer-cta {
     padding: 160px 0;
-    background: var(--nl-dark-alt);
+    background: var(--nl-dark);
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -337,29 +340,34 @@
 }
 
 .newsletter-cta-container {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 80px 40px;
-    background: var(--nl-glass);
+    background: rgba(255, 255, 255, 0.03);
     backdrop-filter: blur(20px);
-    border: 1px solid var(--nl-border);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 10px;
     position: relative;
     z-index: 10;
 }
 
 .newsletter-cta-title {
-    font-size: clamp(32px, 5vw, 56px);
+    font-size: 48px;
     font-weight: 800;
     color: white;
     margin-bottom: 24px;
     letter-spacing: -2px;
+    line-height: 1.1;
 }
 
 .newsletter-cta-subtitle {
     font-size: 20px;
     color: var(--nl-text-gray);
     margin-bottom: 48px;
+}
+
+.newsletter-cta-container .newsletter-hero-form {
+    margin: 0 auto;
 }
 
 /* ===== RESPONSIVE ===== */

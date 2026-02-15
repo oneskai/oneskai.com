@@ -11,7 +11,7 @@ interface Event {
     time: string;
     location: string;
     description: string;
-    color: string;
+    image: string;
     icon: string;
     slug: string;
 }
@@ -25,8 +25,8 @@ const upcomingEvents: Event[] = [
         time: '2:00 PM EST',
         location: 'Virtual Event',
         description: 'Learn how to leverage AI tools to automate and optimize your marketing campaigns.',
-        color: 'linear-gradient(135deg, #8b5cf6, #7c3aed)',
-        icon: '🤖',
+        image: '/images/common/growth-chart.png',
+        icon: 'zap',
         slug: 'ai-marketing-automation'
     },
     {
@@ -36,8 +36,8 @@ const upcomingEvents: Event[] = [
         time: '10:00 AM EST',
         location: 'Virtual Event',
         description: 'Deep dive into technical SEO fundamentals with hands-on exercises and auditing techniques.',
-        color: 'linear-gradient(135deg, #10b981, #059669)',
-        icon: '🔍',
+        image: '/images/common/office-chat.png',
+        icon: 'search',
         slug: 'seo-masterclass'
     },
     {
@@ -47,8 +47,8 @@ const upcomingEvents: Event[] = [
         time: '9:00 AM EST',
         location: 'New York City',
         description: 'Annual conference featuring industry leaders sharing insights on performance marketing trends.',
-        color: 'linear-gradient(135deg, #f59e0b, #d97706)',
-        icon: '📈',
+        image: '/images/common/hero-team.png',
+        icon: 'barChart',
         slug: 'performance-summit-2026'
     },
     {
@@ -58,8 +58,8 @@ const upcomingEvents: Event[] = [
         time: '1:00 PM EST',
         location: 'Virtual Event',
         description: 'Build a content strategy that drives engagement, leads, and revenue for your business.',
-        color: 'linear-gradient(135deg, #10b981, #059669)',
-        icon: '✍️',
+        image: '/images/common/woman-apron.png',
+        icon: 'edit',
         slug: 'content-strategy-workshop'
     },
     {
@@ -69,8 +69,8 @@ const upcomingEvents: Event[] = [
         time: '3:00 PM EST',
         location: 'Virtual Event',
         description: 'Transform raw data into actionable marketing insights with advanced analytics techniques.',
-        color: 'linear-gradient(135deg, #8b5cf6, #7c3aed)',
-        icon: '📊',
+        image: '/images/common/growth-chart.png',
+        icon: 'pieChart',
         slug: 'analytics-deep-dive'
     },
     {
@@ -80,8 +80,8 @@ const upcomingEvents: Event[] = [
         time: '6:00 PM EST',
         location: 'San Francisco',
         description: 'Monthly networking event for digital marketing professionals. Food and drinks provided!',
-        color: 'linear-gradient(135deg, #ec4899, #db2777)',
-        icon: '🎉',
+        image: '/images/common/team-brainstorm.png',
+        icon: 'users',
         slug: 'march-meetup'
     }
 ];
@@ -113,15 +113,26 @@ export function EventsContent() {
         <div className="events-page">
             {/* Hero Section */}
             <section className="events-hero">
+                <div className="events-hero-bg">
+                    <img
+                        src="/images/common/team-brainstorm.png"
+                        alt="Events Background"
+                        className="object-cover"
+                    />
+                    <div className="events-hero-overlay"></div>
+                </div>
+
                 <div className="events-hero-container">
-                    <span className="events-label">EVENTS & WEBINARS</span>
-                    <h1 className="events-hero-title">
-                        Learn, Connect, <span>Grow</span>
-                    </h1>
-                    <p className="events-hero-subtitle">
-                        Join our webinars, workshops, and in-person events to stay ahead of marketing
-                        trends, learn from experts, and connect with peers.
-                    </p>
+                    <div className="events-hero-content">
+                        <span className="events-label">EVENTS & WEBINARS</span>
+                        <h1 className="events-hero-title">
+                            Learn, Connect, <span>Grow</span>
+                        </h1>
+                        <p className="events-hero-subtitle">
+                            Join our webinars, workshops, and in-person events to stay ahead of marketing
+                            trends, learn from experts, and connect with peers.
+                        </p>
+                    </div>
                 </div>
             </section>
 
@@ -154,7 +165,9 @@ export function EventsContent() {
                             </Link>
                         </div>
                         <div className="events-featured-visual">
-                            <div className="events-featured-image">🎪</div>
+                            <div className="events-featured-image">
+                                <Icon type="calendar" />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -165,7 +178,7 @@ export function EventsContent() {
                 <div className="events-upcoming-container">
                     <div className="events-section-header">
                         <span className="events-label">UPCOMING</span>
-                        <h2 className="events-section-title">Upcoming Events</h2>
+                        <h2 className="events-section-title">Upcoming <span>Events</span></h2>
                         <p className="events-section-subtitle">
                             Register for our upcoming webinars, workshops, and in-person events.
                         </p>
@@ -173,8 +186,11 @@ export function EventsContent() {
                     <div className="events-grid">
                         {upcomingEvents.map((event, index) => (
                             <div key={index} className="events-card">
-                                <div className="events-card-image" style={{ background: event.color }}>
-                                    {event.icon}
+                                <div className="events-card-image">
+                                    <img src={event.image} alt={event.title} className="events-card-bg" />
+                                    <div className="events-card-icon">
+                                        <Icon type={event.icon as any} />
+                                    </div>
                                     <div className="events-card-date">
                                         <span className="events-card-date-day">{event.date.day}</span>
                                         <span className="events-card-date-month">{event.date.month}</span>
@@ -206,7 +222,7 @@ export function EventsContent() {
                 <div className="events-past-container">
                     <div className="events-section-header">
                         <span className="events-label">ON-DEMAND</span>
-                        <h2 className="events-section-title">Past Events & Recordings</h2>
+                        <h2 className="events-section-title">Past Events & <span>Recordings</span></h2>
                         <p className="events-section-subtitle">
                             Missed an event? Watch recordings of our past webinars and workshops.
                         </p>
@@ -234,10 +250,10 @@ export function EventsContent() {
             {/* Newsletter Section */}
             <section className="events-newsletter">
                 <div className="events-newsletter-container">
-                    <h2>Never Miss an Event</h2>
+                    <h2>Never Miss an <span>Event</span></h2>
                     <p>
                         Subscribe to get notified about upcoming events, exclusive invites,
-                        and early access to recordings.
+                        early access to recordings, and expert marketing insights directly to your inbox.
                     </p>
                     <form className="events-newsletter-form" onSubmit={(e) => e.preventDefault()}>
                         <input

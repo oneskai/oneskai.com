@@ -79,11 +79,11 @@ export function BlogGrid({
           {displayBlogs.map((blog, i) => (
             <Link
               key={i}
-              href={blog.slug ? `/blog/${blog.slug}` : '#'}
+              href={blog.slug ? `/insights/${blog.slug}` : '#'}
               className="blog-item"
             >
               <Image
-                src={blog.img || `/images/blog-${blog.imgIndex}.png`}
+                src={blog.img || `/images/insights/blog/blog-${blog.imgIndex}.png`}
                 alt={blog.title}
                 width={120}
                 height={120}

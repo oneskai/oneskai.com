@@ -75,7 +75,7 @@ export default function NewsletterPage() {
                     <div className="newsletter-hero-image-side">
                         <div className="nl-hero-img-wrapper">
                             <img
-                                src="/images/office-chat.png"
+                                src="/images/common/office-chat.png"
                                 alt="Newsletter Preview"
                                 className="nl-hero-img"
                             />

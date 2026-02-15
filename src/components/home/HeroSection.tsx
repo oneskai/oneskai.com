@@ -21,7 +21,7 @@ export function HeroSection() {
         <section className="home-hero section-dark">
             <div className="home-hero-bg">
                 <Image
-                    src="/images/premium-hero.png"
+                    src="/images/home/premium-hero.png"
                     alt="World-Class Marketing Consulting"
                     fill
                     priority
@@ -59,13 +59,13 @@ export function HeroSection() {
                         <div className="proof-avatars">
                             <div className="avatar-stack-mini">
                                 <div className="mini-avatar">
-                                    <Image src="/images/team-member-1.png" alt="Leader 1" fill className="object-cover" />
+                                    <Image src="/images/about/team/team-member-1.png" alt="Leader 1" fill className="object-cover" />
                                 </div>
                                 <div className="mini-avatar">
-                                    <Image src="/images/team-member-2.png" alt="Leader 2" fill className="object-cover" />
+                                    <Image src="/images/about/team/team-member-2.png" alt="Leader 2" fill className="object-cover" />
                                 </div>
                                 <div className="mini-avatar">
-                                    <Image src="/images/team-member-3.png" alt="Leader 3" fill className="object-cover" />
+                                    <Image src="/images/about/team/team-member-3.png" alt="Leader 3" fill className="object-cover" />
                                 </div>
                             </div>
                             <span className="proof-text">Trusted by 200+ Enterprise Leaders</span>

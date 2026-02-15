@@ -29,7 +29,7 @@ export function CTABanner({
   const displayCtaText = ctaText || staticData?.ctaText || 'Contact Us';
   const displayCtaLink = ctaLink || staticData?.ctaLink || '/contact';
 
-  const imageUrl = image ? urlForImage(image)?.url() : staticData?.imageSrc || '/images/woman-apron.png';
+  const imageUrl = image ? urlForImage(image)?.url() : staticData?.imageSrc || '/images/common/woman-apron.png';
 
   return (
     <section className="cta-banner">

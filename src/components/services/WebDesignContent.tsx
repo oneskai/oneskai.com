@@ -158,11 +158,11 @@ export function WebDesignContent() {
 
                     <div className="wd-tech-grid">
                         {[
-                            { name: 'Next.js', icon: '⚛️', href: '/services/web-design/nextjs' },
-                            { name: 'React', icon: '⚡', href: '/services/web-design/react' },
+                            { name: 'Next.js', icon: '⚛️', href: '/services/web-development/nextjs' },
+                            { name: 'React', icon: '⚡', href: '/services/web-development/react' },
                             { name: 'Sanity CMS', icon: '💎', href: null },
                             { name: 'Strapi', icon: '🚀', href: null },
-                            { name: 'WordPress', icon: '🌐', href: '/services/web-design/wordpress' },
+                            { name: 'WordPress', icon: '🌐', href: '/services/web-development/wordpress' },
                             { name: 'Vue.js', icon: '🟢', href: null },
                             { name: 'GraphQL', icon: '📡', href: null },
                             { name: 'Vercel', icon: '▲', href: null }
@@ -544,19 +544,19 @@ export function WebDesignContent() {
                             {
                                 title: 'Next.js Development',
                                 desc: 'High-performance, SEO-optimized websites with server-side rendering and static generation.',
-                                href: '/services/web-design/nextjs',
+                                href: '/services/web-development/nextjs',
                                 icon: 'zap'
                             },
                             {
                                 title: 'React Applications',
                                 desc: 'Interactive dashboards and complex user interfaces built for scale and performance.',
-                                href: '/services/web-design/react',
+                                href: '/services/web-development/react',
                                 icon: 'layout'
                             },
                             {
                                 title: 'Enterprise WordPress',
                                 desc: 'Custom, secure, and editor-friendly WordPress solutions for content-heavy sites.',
-                                href: '/services/web-design/wordpress',
+                                href: '/services/web-development/wordpress',
                                 icon: 'activity'
                             }
                         ].map((sol, i) => (

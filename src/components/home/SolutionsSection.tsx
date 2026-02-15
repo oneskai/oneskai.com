@@ -11,8 +11,8 @@ const solutionCategories = [
         icon: 'trending',
         description: 'Exponential scaling through precision-engineered performance systems.',
         items: [
-            { name: 'B2B Lead Generation', href: '/services/b2b-lead-generation', description: 'AI-driven high-intent prospect identification and pipeline growth.', icon: 'target' },
-            { name: 'eCommerce Scaling', href: '/services/ecommerce-scaling', description: 'Revenue-first scaling strategies for high-growth digital retailers.', icon: 'cart' },
+            { name: 'Lead Generation', href: '/services/lead-generation', description: 'AI-driven high-intent prospect identification and pipeline growth.', icon: 'target' },
+            { name: 'Paid Search & PPC', href: '/services/pay-per-click-advertising', description: 'Dominance across Google, Bing, and YouTube search results.', icon: 'play' },
             { name: 'Performance Creative', href: '/services/performance-creative', description: 'High-converting ad creative and campaign assets delivered at scale.', icon: 'layout' },
         ]
     },
@@ -22,9 +22,9 @@ const solutionCategories = [
         icon: 'star',
         description: 'Authority-building frameworks that turn brands into category leaders.',
         items: [
-            { name: 'Fractional CMO', href: '/services/fractional-cmo-leadership', description: 'Elite growth leadership and strategic expertise embedded in your team.', icon: 'users' },
+            { name: 'Fractional CMO', href: '/services/fractional-cmo', description: 'Elite growth leadership and strategic expertise embedded in your team.', icon: 'users' },
             { name: 'Go-To-Market Strategy', href: '/services/go-to-market-strategy', description: 'Launch and scale in new markets with proven methodology and speed.', icon: 'globe' },
-            { name: 'Content Marketing', href: '/services/content-strategy', description: 'Expert content strategies that educate buyers and drive authority.', icon: 'fileText' },
+            { name: 'Content Marketing', href: '/services/content-marketing', description: 'Expert content strategies that educate buyers and drive authority.', icon: 'fileText' },
         ]
     },
     {
@@ -34,7 +34,7 @@ const solutionCategories = [
         description: 'Leveraging cutting-edge technology to automate and optimize your growth.',
         items: [
             { name: 'AI Search (GEO)', href: '/services/generative-engine-optimization', description: 'Get recommended and prioritized across the AI search engine landscape.', icon: 'cpu' },
-            { name: 'Website Development', href: '/services/website-development', description: 'High-performance, conversion-optimized sites built for rapid scale.', icon: 'code' },
+            { name: 'Branding & Identity', href: '/services/branding', description: 'Strategic brand engineering to capture market share and mindshare.', icon: 'pen' },
             { name: 'Marketing Automation', href: '/services/marketing-automation', description: 'End-to-level automated workflows that eliminate manual marketing ops.', icon: 'settings' },
         ]
     },

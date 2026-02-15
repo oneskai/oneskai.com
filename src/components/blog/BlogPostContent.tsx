@@ -20,6 +20,7 @@ const getPostData = (slug: string) => ({
         initials: 'SC',
         slug: 'sarah-chen',
         role: 'Head of SEO Strategy',
+        image: '/images/about/team/business-woman.png',
         bio: 'Sarah is an experienced SEO strategist with over 10 years of experience helping businesses dominate search rankings. She specializes in technical SEO and content strategy.'
     },
     tags: ['SEO', 'Digital Marketing', 'Strategy', 'Search Rankings', 'Content'],
@@ -81,8 +82,8 @@ const relatedPosts = [
         category: 'Content',
         date: 'Jan 22, 2024',
         readTime: '10 min read',
-        author: { name: 'Emily Zhang', initials: 'EZ', slug: 'emily-zhang' },
-        image: '/images/blog-2.png'
+        author: { name: 'Emily Zhang', initials: 'EZ', slug: 'emily-zhang', image: '/images/about/team/team-member-3.png' },
+        image: '/images/insights/blog/blog-2.png'
     },
     {
         slug: 'ppc-budget-optimization',
@@ -91,8 +92,8 @@ const relatedPosts = [
         category: 'PPC',
         date: 'Jan 28, 2024',
         readTime: '6 min read',
-        author: { name: 'Michael Ross', initials: 'MR', slug: 'michael-ross' },
-        image: '/images/blog-3.png'
+        author: { name: 'Michael Ross', initials: 'MR', slug: 'michael-ross', image: '/images/about/team/team-member-2.png' },
+        image: '/images/insights/blog/blog-3.png'
     },
     {
         slug: 'google-analytics-4-guide',
@@ -101,8 +102,8 @@ const relatedPosts = [
         category: 'Analytics',
         date: 'Jan 12, 2024',
         readTime: '12 min read',
-        author: { name: 'Lisa Wang', initials: 'LW', slug: 'lisa-wang' },
-        image: '/images/blog-1.png'
+        author: { name: 'Lisa Wang', initials: 'LW', slug: 'lisa-wang', image: '/images/about/team/business-woman.png' },
+        image: '/images/insights/blog/blog-1.png'
     }
 ];
 
@@ -142,7 +143,19 @@ export function BlogPostContent({ slug }: BlogPostContentProps) {
 
                     <div className="post-meta-minimal">
                         <Link href={`/author/${post.author.slug}`} className="author-pill">
-                            <div className="author-avatar-small">{post.author.initials}</div>
+                            <div className="author-avatar-small">
+                                {post.author.image ? (
+                                    <Image
+                                        src={post.author.image}
+                                        alt={post.author.name}
+                                        width={24}
+                                        height={24}
+                                        style={{ objectFit: 'cover', borderRadius: 'inherit' }}
+                                    />
+                                ) : (
+                                    post.author.initials
+                                )}
+                            </div>
                             <span>{post.author.name}</span>
                         </Link>
                         <div className="meta-divider"></div>
@@ -158,7 +171,7 @@ export function BlogPostContent({ slug }: BlogPostContentProps) {
                 <div className="post-featured-image-container">
                     <div className="post-image-wrapper-refined">
                         <Image
-                            src="/images/blog-1.png"
+                            src="/images/insights/blog/blog-1.png"
                             alt={post.title}
                             width={1200}
                             height={600}
@@ -205,7 +218,7 @@ export function BlogPostContent({ slug }: BlogPostContentProps) {
                         {/* Tags */}
                         <div className="post-tags-refined">
                             {post.tags.map((tag, index) => (
-                                <Link key={index} href={`/blog?tag=${tag.toLowerCase()}`} className="tag-pill">
+                                <Link key={index} href={`/insights/blog?tag=${tag.toLowerCase()}`} className="tag-pill">
                                     #{tag}
                                 </Link>
                             ))}
@@ -214,7 +227,17 @@ export function BlogPostContent({ slug }: BlogPostContentProps) {
                         {/* Author Bio - Expert Style */}
                         <div className="post-author-bio-refined">
                             <Link href={`/author/${post.author.slug}`} className="author-bio-avatar">
-                                {post.author.initials}
+                                {post.author.image ? (
+                                    <Image
+                                        src={post.author.image}
+                                        alt={post.author.name}
+                                        width={80}
+                                        height={80}
+                                        style={{ objectFit: 'cover', borderRadius: 'inherit' }}
+                                    />
+                                ) : (
+                                    post.author.initials
+                                )}
                             </Link>
                             <div className="author-bio-content">
                                 <Link href={`/author/${post.author.slug}`}>
@@ -271,11 +294,11 @@ export function BlogPostContent({ slug }: BlogPostContentProps) {
                     </div>
                     <div className="post-related-grid">
                         {relatedPosts.map((relatedPost, index) => (
-                            <Link key={index} href={`/blog/${relatedPost.slug}`} className="blog-card">
+                            <Link key={index} href={`/insights/${relatedPost.slug}`} className="blog-card">
                                 <div className="blog-card-image">
                                     <span className="blog-card-tag">{relatedPost.category}</span>
                                     <Image
-                                        src={relatedPost.image || '/images/blog-1.png'}
+                                        src={relatedPost.image || '/images/insights/blog/blog-1.png'}
                                         alt={relatedPost.title}
                                         fill
                                         style={{ objectFit: 'cover' }}
@@ -288,10 +311,22 @@ export function BlogPostContent({ slug }: BlogPostContentProps) {
                                     <h3 className="blog-card-title">{relatedPost.title}</h3>
                                     <p className="blog-card-excerpt">{relatedPost.excerpt}</p>
                                     <div className="blog-card-footer">
-                                        <Link href={`/author/${relatedPost.author.slug}`} className="blog-card-author">
-                                            <div className="blog-card-author-avatar">{relatedPost.author.initials}</div>
+                                        <div className="blog-card-author">
+                                            <div className="blog-card-author-avatar">
+                                                {relatedPost.author.image ? (
+                                                    <Image
+                                                        src={relatedPost.author.image}
+                                                        alt={relatedPost.author.name}
+                                                        width={36}
+                                                        height={36}
+                                                        style={{ objectFit: 'cover', borderRadius: 'inherit' }}
+                                                    />
+                                                ) : (
+                                                    relatedPost.author.initials
+                                                )}
+                                            </div>
                                             <span>{relatedPost.author.name}</span>
-                                        </Link>
+                                        </div>
                                         <span className="blog-card-read">
                                             Read the full article <Icon type="arrowRight" />
                                         </span>

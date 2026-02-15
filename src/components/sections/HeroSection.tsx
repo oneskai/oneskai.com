@@ -37,7 +37,7 @@ export function HeroSection({
   const displayCtaLink = ctaLink || staticData?.ctaLink || '/services';
   const displayTrustText = trustCard?.text || staticData?.trustText || 'Enabling digital evolution\nfor businesses';
 
-  const imageUrl = image ? urlForImage(image)?.url() : staticData?.imageSrc || '/images/hero-team-new.png';
+  const imageUrl = image ? urlForImage(image)?.url() : staticData?.imageSrc || '/images/common/hero-team-new.png';
 
   return (
     <section className="hero">

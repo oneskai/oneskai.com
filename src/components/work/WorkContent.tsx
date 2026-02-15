@@ -19,7 +19,7 @@ const caseStudies = [
             { value: '8.4x', label: 'ROAS' },
             { value: '-47%', label: 'CAC' },
         ],
-        image: '/images/work/ecommerce.png',
+        image: '/images/results/case-studies/ecommerce.png',
     },
     {
         id: 'saas-leads',
@@ -33,7 +33,7 @@ const caseStudies = [
             { value: '$24M', label: 'Pipeline' },
             { value: '-32%', label: 'Sales Cycle' },
         ],
-        image: '/images/work/saas.png',
+        image: '/images/results/case-studies/saas.png',
     },
     {
         id: 'healthcare-growth',
@@ -47,7 +47,7 @@ const caseStudies = [
             { value: '-58%', label: 'CPL' },
             { value: '+340%', label: 'Awareness' },
         ],
-        image: '/images/work/healthcare.png',
+        image: '/images/results/case-studies/healthcare.png',
     },
     {
         id: 'fintech-trust',
@@ -61,7 +61,7 @@ const caseStudies = [
             { value: '4.2x', label: 'LTV/CAC' },
             { value: '1.2M', label: 'New Installs' },
         ],
-        image: '/images/work/fintech.png',
+        image: '/images/results/case-studies/fintech.png',
     }
 ];
 

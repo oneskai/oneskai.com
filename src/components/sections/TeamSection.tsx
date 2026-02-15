@@ -27,9 +27,9 @@ export function TeamSection({
   const displayTitle = title || staticData?.title || 'Our key people';
 
   const defaultMembers = [
-    { name: 'Arjun Randhawa', role: 'Founder & CEO', img: '/images/team-member-1.png' },
-    { name: 'Sameer S.', role: 'CTO & Senior Developer', img: '/images/team-member-2.png' },
-    { name: 'Amit K.', role: 'Operations Head', img: '/images/team-member-3.png' },
+    { name: 'Arjun Randhawa', role: 'Founder & CEO', img: '/images/about/team/team-member-1.png' },
+    { name: 'Sameer S.', role: 'CTO & Senior Developer', img: '/images/about/team/team-member-2.png' },
+    { name: 'Amit K.', role: 'Operations Head', img: '/images/about/team/team-member-3.png' },
   ];
 
   const displayMembers = teamMembers?.map((m) => ({

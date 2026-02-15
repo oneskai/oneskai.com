@@ -217,7 +217,7 @@ export function GA4Content() {
                                     {[
                                         { path: '/products/analytics', views: '45.2K', time: '5:42', conversions: '2,847' },
                                         { path: '/pricing', views: '38.7K', time: '4:18', conversions: '1,924' },
-                                        { path: '/blog/ga4-guide', views: '32.4K', time: '6:15', conversions: '856' },
+                                        { path: '/insights/ga4-guide', views: '32.4K', time: '6:15', conversions: '856' },
                                         { path: '/case-studies', views: '28.9K', time: '7:33', conversions: '1,445' }
                                     ].map((row, i) => (
                                         <div key={i} className="ga4-table-row">

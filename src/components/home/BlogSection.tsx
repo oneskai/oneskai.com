@@ -10,8 +10,8 @@ const featuredPosts = [
         category: 'AI & Technology',
         readTime: '8 min read',
         date: 'Feb 1, 2024',
-        href: '/blog/ai-digital-marketing-trends-2024',
-        image: '/images/blog-1.png',
+        href: '/insights/ai-digital-marketing-trends-2024',
+        image: '/images/insights/blog/blog-1.png',
         featured: true,
     },
     {
@@ -20,8 +20,8 @@ const featuredPosts = [
         category: 'Case Study',
         readTime: '5 min read',
         date: 'Jan 28, 2024',
-        href: '/blog/340-traffic-growth-case-study',
-        image: '/images/blog-2.png',
+        href: '/insights/340-traffic-growth-case-study',
+        image: '/images/insights/blog/blog-2.png',
         featured: false,
     },
     {
@@ -30,8 +30,8 @@ const featuredPosts = [
         category: 'Analytics',
         readTime: '12 min read',
         date: 'Jan 25, 2024',
-        href: '/blog/ga4-migration-guide',
-        image: '/images/blog-3.png',
+        href: '/insights/ga4-migration-guide',
+        image: '/images/insights/blog/blog-3.png',
         featured: false,
     },
 ];

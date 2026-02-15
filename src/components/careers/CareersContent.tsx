@@ -17,6 +17,22 @@ interface JobOpening {
 // Job openings data
 const jobOpenings: JobOpening[] = [
     {
+        title: 'Marketing Research Analyst (Entry Level)',
+        department: 'Market Research',
+        location: 'Remote / Hybrid',
+        type: 'Full-time',
+        experience: '0-1 year',
+        slug: 'marketing-research-analyst'
+    },
+    {
+        title: 'Junior Content Marketer',
+        department: 'Content & Creative',
+        location: 'Remote',
+        type: 'Full-time',
+        experience: '0-2 years',
+        slug: 'junior-content-marketer'
+    },
+    {
         title: 'Senior SEO Strategist',
         department: 'Search & Organic',
         location: 'Remote / Hybrid',
@@ -39,22 +55,6 @@ const jobOpenings: JobOpening[] = [
         type: 'Full-time',
         experience: '2+ years',
         slug: 'content-marketing-specialist'
-    },
-    {
-        title: 'Data Analyst',
-        department: 'Analytics & Insights',
-        location: 'Remote',
-        type: 'Full-time',
-        experience: '3+ years',
-        slug: 'data-analyst'
-    },
-    {
-        title: 'Account Manager',
-        department: 'Client Success',
-        location: 'Hybrid',
-        type: 'Full-time',
-        experience: '4+ years',
-        slug: 'account-manager'
     },
     {
         title: 'UX/UI Designer',
@@ -100,22 +100,22 @@ const cultureValues = [
     },
     {
         icon: 'heart',
-        title: 'Work-Life Balance',
-        description: 'We value your wellbeing. Flexible hours and unlimited PTO ensure you bring your best self.',
+        title: 'Work-Life Harmony',
+        description: 'We value your wellbeing. Flexible schedules and an outcome-driven culture ensure you bring your best self.',
         color: '#ef4444'
     }
 ];
 
 // Benefits
 const benefits = [
-    { icon: 'target', title: 'Competitive Salary', desc: 'Top-tier compensation packages' },
-    { icon: 'shield', title: 'Health Insurance', desc: 'Comprehensive medical coverage' },
-    { icon: 'award', title: 'Learning Budget', desc: '$2,000 annual development fund' },
-    { icon: 'globe', title: 'Remote Work', desc: 'Work from anywhere globally' },
-    { icon: 'calendar', title: 'Unlimited PTO', desc: 'Take time when you need it' },
-    { icon: 'zap', title: 'Equipment Stipend', desc: 'Latest tools and hardware' },
-    { icon: 'users', title: 'Parental Leave', desc: 'Generous family leave policy' },
-    { icon: 'star', title: 'Team Events', desc: 'Quarterly retreats & socials' }
+    { icon: 'target', title: 'Performance Rewards', desc: 'Annual bonuses and excellence-based incentives' },
+    { icon: 'bookOpen', title: 'Learning Support', desc: 'Sponsorship for premium courses and certifications' },
+    { icon: 'globe', title: 'Remote Freedom', desc: 'Work from anywhere in the world' },
+    { icon: 'brain', title: 'Global Mentorship', desc: 'Direct coaching from world-class industry leaders' },
+    { icon: 'clock', title: 'Flexible Schedules', desc: 'Define your own rhythm and work hours' },
+    { icon: 'activity', title: 'Holistic Wellness', desc: 'Mental health support and fitness programs' },
+    { icon: 'star', title: 'Team Retreats', desc: 'Global quarterly meetups and socials' },
+    { icon: 'zap', title: 'Career Growth', desc: 'Rapid track for high-performing individuals' }
 ];
 
 // Hiring process steps
@@ -134,13 +134,13 @@ export function CareersContent() {
             {/* New Main Hero Section */}
             <section className="careers-main-hero">
                 <div className="careers-main-hero-bg">
-                    <img src="/images/hero-team-new.png" alt="Collaborative Team" />
+                    <img src="/images/common/hero-team-new.png" alt="Collaborative Team" />
                     <div className="careers-main-hero-overlay"></div>
                 </div>
                 <div className="careers-main-hero-container">
                     <span className="careers-label">WE ARE HIRING</span>
                     <h1 className="careers-main-hero-title">
-                        Grow With a Team That <span>Values Excellence</span>
+                        Grow With a Team That <br /> <span>Values Excellence</span>
                     </h1>
                     <p className="careers-main-hero-subtitle">
                         Join Oneskai to work on high-impact projects, learn from industry leaders, and build a career that moves you forward. Our culture is built on innovation, transparency, and results.
@@ -149,7 +149,7 @@ export function CareersContent() {
                         <a href="#openings" className="careers-hero-btn">
                             Explore Opportunities <Icon type="arrowRight" />
                         </a>
-                        <Link href="/company/about-us" className="careers-hero-btn secondary">
+                        <Link href="/about" className="careers-hero-btn secondary">
                             Learn About Our Story
                         </Link>
                     </div>
@@ -178,20 +178,20 @@ export function CareersContent() {
                     {activeTab === 'Team Culture' && (
                         <div className="careers-experience-grid">
                             <div className="experience-item large">
-                                <img src="/images/office-chat.png" alt="Team Discussion" />
+                                <img src="/images/common/office-chat.png" alt="Team Discussion" />
                                 <div className="experience-info">
                                     <h3>Collaborative Culture</h3>
                                     <p>Where ideas turn into reality</p>
                                 </div>
                             </div>
                             <div className="experience-item">
-                                <img src="/images/team-brainstorm.png" alt="Brainstorming" />
+                                <img src="/images/common/team-brainstorm.png" alt="Brainstorming" />
                             </div>
                             <div className="experience-item">
-                                <img src="/images/business-woman.png" alt="Focus" />
+                                <img src="/images/about/team/business-woman.png" alt="Focus" />
                             </div>
                             <div className="experience-item wide">
-                                <img src="/images/hero-team.png" alt="Team Meetup" />
+                                <img src="/images/common/hero-team.png" alt="Team Meetup" />
                             </div>
                         </div>
                     )}
@@ -199,20 +199,20 @@ export function CareersContent() {
                     {activeTab === 'Global Events' && (
                         <div className="careers-experience-grid">
                             <div className="experience-item wide">
-                                <img src="/images/hero-team-new.png" alt="Global Summit" />
+                                <img src="/images/common/hero-team-new.png" alt="Global Summit" />
                                 <div className="experience-info">
                                     <h3>Global Summit</h3>
                                     <p>Connecting teams across continents</p>
                                 </div>
                             </div>
                             <div className="experience-item">
-                                <img src="/images/team-brainstorm.png" alt="Workshop" />
+                                <img src="/images/common/team-brainstorm.png" alt="Workshop" />
                             </div>
                             <div className="experience-item">
-                                <img src="/images/office-chat.png" alt="Networking" />
+                                <img src="/images/common/office-chat.png" alt="Networking" />
                             </div>
                             <div className="experience-item large">
-                                <img src="/images/hero-team.png" alt="Annual Retreat" />
+                                <img src="/images/common/hero-team.png" alt="Annual Retreat" />
                                 <div className="experience-info">
                                     <h3>Annual Retreat</h3>
                                     <p>Building bonds beyond borders</p>
@@ -224,24 +224,24 @@ export function CareersContent() {
                     {activeTab === 'Work Environment' && (
                         <div className="careers-experience-grid">
                             <div className="experience-item">
-                                <img src="/images/business-woman.png" alt="Deep Work" />
+                                <img src="/images/about/team/business-woman.png" alt="Deep Work" />
                             </div>
                             <div className="experience-item large">
-                                <img src="/images/team-brainstorm.png" alt="Brainstorm Session" />
+                                <img src="/images/common/team-brainstorm.png" alt="Brainstorm Session" />
                                 <div className="experience-info">
                                     <h3>Creative Spaces</h3>
                                     <p>Designed for deep work and collaboration</p>
                                 </div>
                             </div>
                             <div className="experience-item wide">
-                                <img src="/images/office-chat.png" alt="Office Life" />
+                                <img src="/images/common/office-chat.png" alt="Office Life" />
                                 <div className="experience-info">
                                     <h3>Open & Inclusive</h3>
                                     <p>A workspace that inspires</p>
                                 </div>
                             </div>
                             <div className="experience-item">
-                                <img src="/images/hero-team-new.png" alt="Flexible Setup" />
+                                <img src="/images/common/hero-team-new.png" alt="Flexible Setup" />
                             </div>
                         </div>
                     )}
@@ -279,7 +279,7 @@ export function CareersContent() {
                                     <p>&quot;The culture here is incredible. I&apos;ve never worked at a place that truly values individual growth as much as Oneskai does. The mentorship is top-notch.&quot;</p>
                                 </div>
                                 <div className="careers-review-author">
-                                    <img src="/images/team-member-1.png" alt="Employee" />
+                                    <img src="/images/about/team/team-member-1.png" alt="Employee" />
                                     <div>
                                         <strong>Senior Strategist</strong>
                                         <span>3+ Years at Oneskai</span>
@@ -291,7 +291,7 @@ export function CareersContent() {
                                     <p>&quot;Remote-first work that actually works. We stay connected through great tools and regular retreats. It&apos;s the perfect balance of freedom and collaboration.&quot;</p>
                                 </div>
                                 <div className="careers-review-author">
-                                    <img src="/images/business-woman.png" alt="Employee" />
+                                    <img src="/images/about/team/business-woman.png" alt="Employee" />
                                     <div>
                                         <strong>Full Stack Developer</strong>
                                         <span>2+ Years at Oneskai</span>
@@ -360,24 +360,24 @@ export function CareersContent() {
                         <div className="careers-hero-content">
                             <span className="careers-label">OPERATIONS</span>
                             <h2 style={{ fontSize: '42px', fontWeight: 800, color: 'white', marginBottom: '24px', letterSpacing: '-1.5px' }}>
-                                A Global Network of <span>Experts</span>
+                                A Unified Force of <span>Experts</span>
                             </h2>
                             <p style={{ fontSize: '18px', color: 'rgba(255, 255, 255, 0.6)', marginBottom: '32px' }}>
-                                We&apos;ve built a distributed team that brings together the best talent from around the world to solve complex digital challenges.
+                                Our core team of specialists works in perfect synergy to solve complex digital challenges and drive measurable growth.
                             </p>
                         </div>
                         <div className="careers-hero-stats">
                             <div className="careers-stat-card">
-                                <span className="careers-stat-num">50+</span>
-                                <span className="careers-stat-label">Team Members</span>
+                                <span className="careers-stat-num">15</span>
+                                <span className="careers-stat-label">Core Specialists</span>
                             </div>
                             <div className="careers-stat-card">
-                                <span className="careers-stat-num">12</span>
-                                <span className="careers-stat-label">Countries</span>
+                                <span className="careers-stat-num">5+</span>
+                                <span className="careers-stat-label">Years Avg Experience</span>
                             </div>
                             <div className="careers-stat-card">
-                                <span className="careers-stat-num">4.8</span>
-                                <span className="careers-stat-label">Glassdoor Rating</span>
+                                <span className="careers-stat-num">5.0</span>
+                                <span className="careers-stat-label">Clutch Rating</span>
                             </div>
                             <div className="careers-stat-card">
                                 <span className="careers-stat-num">95%</span>

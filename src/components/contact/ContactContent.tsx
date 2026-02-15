@@ -1,24 +1,78 @@
 'use client';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { Icon } from '@/components/ui/Icon';
 import '@/styles/contact-page.css';
 
 export function ContactContent() {
-    const [formData, setFormData] = useState({
+    const [formData, setFormData] = useState<{
+        name: string;
+        email: string;
+        company: string;
+        services: string[];
+        message: string;
+    }>({
         name: '',
         email: '',
         company: '',
-        phone: '',
-        service: 'SEO & Organic Growth',
-        budget: '$5,000 - $10,000',
+        services: [],
         message: ''
     });
 
+    const dropdownRef = useRef<HTMLDivElement>(null);
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    useEffect(() => {
+        function handleClickOutside(event: MouseEvent) {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+                setIsDropdownOpen(false);
+            }
+        }
+
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, []);
+
+    const servicesList = [
+        'Search Engine Optimization (SEO)',
+        'Generative Engine Optimization (GEO)',
+        'App Store Optimization (ASO)',
+        'Pay-Per-Click Advertising (PPC)',
+        'Paid Social Advertising',
+        'Programmatic Advertising',
+        'Remarketing & Retargeting',
+        'Content Marketing',
+        'Email Marketing',
+        'Social Media Management',
+        'Web Development',
+        'UI/UX Design',
+        'Marketing Consulting',
+        'Fractional CMO',
+        'Go-to-Market Strategy',
+        'ICP Mapping',
+        'Google Analytics 4 (GA4)',
+        'Marketing Analytics',
+        'Lead Generation',
+        'Conversion Rate Optimization (CRO)',
+        'Marketing Automation'
+    ];
+
+    const toggleService = (service: string) => {
+        setFormData(prev => {
+            const exists = prev.services.includes(service);
+            if (exists) {
+                return { ...prev, services: prev.services.filter(s => s !== service) };
+            } else {
+                return { ...prev, services: [...prev.services, service] };
+            }
+        });
+    };
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
         setFormData(prev => ({ ...prev, [name]: value }));
     };
@@ -35,9 +89,7 @@ export function ContactContent() {
                 name: '',
                 email: '',
                 company: '',
-                phone: '',
-                service: 'SEO & Organic Growth',
-                budget: '$5,000 - $10,000',
+                services: [],
                 message: ''
             });
         }, 1500);
@@ -61,7 +113,7 @@ export function ContactContent() {
                     <div className="contact-hero-image">
                         <div className="hero-img-wrapper">
                             <Image
-                                src="/images/office-chat.png"
+                                src="/images/common/office-chat.png"
                                 alt="Oneskai Strategic Consultation"
                                 width={700}
                                 height={500}
@@ -74,14 +126,13 @@ export function ContactContent() {
                                 <Icon type="zap" />
                             </div>
                             <div className="badge-text">
-                                <strong>High Performance</strong>
-                                <span>24h Response Guaranteed</span>
+                                <strong>Expert Consultation</strong>
+                                <span>Book Your Strategy Call</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-
             {/* Main Contact Section */}
             <section className="contact-main">
                 <div className="contact-main-container">
@@ -112,7 +163,7 @@ export function ContactContent() {
                                     </div>
                                     <div className="contact-method-text">
                                         <h3>Voice Call</h3>
-                                        <a href="tel:+1234567890">+1 (234) 567-890</a>
+                                        <a href="tel:+919830678024">+91 9830 6780 24</a>
                                     </div>
                                 </div>
                                 <div className="contact-method-item">
@@ -121,7 +172,7 @@ export function ContactContent() {
                                     </div>
                                     <div className="contact-method-text">
                                         <h3>Visit Us</h3>
-                                        <p>Global Hub: San Francisco, CA</p>
+                                        <p>Millennium City Park, Kolkata</p>
                                     </div>
                                 </div>
                             </div>
@@ -170,7 +221,7 @@ export function ContactContent() {
                                                 required
                                             />
                                         </div>
-                                        <div className="form-group">
+                                        <div className="form-group full-width">
                                             <label className="form-label">Company</label>
                                             <input
                                                 type="text"
@@ -181,48 +232,37 @@ export function ContactContent() {
                                                 onChange={handleChange}
                                             />
                                         </div>
-                                        <div className="form-group">
-                                            <label className="form-label">Phone (Optional)</label>
-                                            <input
-                                                type="tel"
-                                                name="phone"
-                                                className="form-input"
-                                                placeholder="+1 (555) 000-0000"
-                                                value={formData.phone}
-                                                onChange={handleChange}
-                                            />
+
+                                        <div className="form-group full-width">
+                                            <label className="form-label">How We Can Help (Multi-Select)</label>
+                                            <div className="custom-multi-select" ref={dropdownRef}>
+                                                <div
+                                                    className={`multi-select-trigger ${isDropdownOpen ? 'active' : ''}`}
+                                                    onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                                                >
+                                                    <span>
+                                                        {formData.services.length > 0
+                                                            ? `${formData.services.length} Selected`
+                                                            : 'Select Services...'}
+                                                    </span>
+                                                    <Icon type="chevronDown" />
+                                                </div>
+
+                                                <div className={`multi-select-dropdown ${isDropdownOpen ? 'open' : ''}`}>
+                                                    {servicesList.map((service, index) => (
+                                                        <div
+                                                            key={index}
+                                                            className={`multi-select-option ${formData.services.includes(service) ? 'selected' : ''}`}
+                                                            onClick={() => toggleService(service)}
+                                                        >
+                                                            <div className="checkbox-visual"></div>
+                                                            <span>{service}</span>
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div className="form-group">
-                                            <label className="form-label">Primary Goal</label>
-                                            <select
-                                                name="service"
-                                                className="form-select"
-                                                value={formData.service}
-                                                onChange={handleChange}
-                                            >
-                                                <option>SEO & Organic Growth</option>
-                                                <option>Paid Media Scaling</option>
-                                                <option>Content & Authority</option>
-                                                <option>AI Marketing Evolution</option>
-                                                <option>Website Performance</option>
-                                                <option>Full Digital Strategy</option>
-                                            </select>
-                                        </div>
-                                        <div className="form-group">
-                                            <label className="form-label">Monthly Growth Budget</label>
-                                            <select
-                                                name="budget"
-                                                className="form-select"
-                                                value={formData.budget}
-                                                onChange={handleChange}
-                                            >
-                                                <option>$5,000 - $10,000</option>
-                                                <option>$10,000 - $25,000</option>
-                                                <option>$25,000 - $50,000</option>
-                                                <option>$50,000 - $100,000</option>
-                                                <option>$100,000+</option>
-                                            </select>
-                                        </div>
+
                                         <div className="form-group full-width">
                                             <label className="form-label">Main Challenges & Objectives</label>
                                             <textarea
@@ -255,26 +295,28 @@ export function ContactContent() {
                 <div className="contact-offices-container">
                     <div className="contact-offices-heading">
                         <span className="contact-label">Our Presence</span>
-                        <h2>Our Collaboration Hubs</h2>
+                        <h2>Our Offices</h2>
                     </div>
                     <div className="contact-offices-grid">
                         <div className="office-card">
-                            <span className="office-emoji">🏛️</span>
-                            <h3>Kolkata</h3>
-                            <p>Strategic Creative Hub<br />Salt Lake Sector V, WB 700091</p>
-                            <a href="#" className="office-link">View Map <Icon type="arrowRight" /></a>
+                            <div className="office-icon-wrapper">
+                                <Icon type="location" />
+                            </div>
+                            <div className="office-details">
+                                <h3>Kolkata</h3>
+                                <p>Millennium City, Salt Lake Sector V<br />Kolkata, WB 700091</p>
+                                <a href="#" className="office-link">View on Map</a>
+                            </div>
                         </div>
                         <div className="office-card">
-                            <span className="office-emoji">🏙️</span>
-                            <h3>Gurugram</h3>
-                            <p>Performance & Growth<br />Cyber City, Tower 10, HR 122002</p>
-                            <a href="#" className="office-link">View Map <Icon type="arrowRight" /></a>
-                        </div>
-                        <div className="office-card">
-                            <span className="office-emoji">🚀</span>
-                            <h3>Bengaluru</h3>
-                            <p>Tech & Innovation<br />Indiranagar 100ft Rd, KA 560038</p>
-                            <a href="#" className="office-link">View Map <Icon type="arrowRight" /></a>
+                            <div className="office-icon-wrapper">
+                                <Icon type="zap" />
+                            </div>
+                            <div className="office-details">
+                                <h3>Bengaluru</h3>
+                                <p>Indiranagar 100ft Rd<br />Bengaluru, KA 560038</p>
+                                <a href="#" className="office-link">View on Map</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -285,8 +327,8 @@ export function ContactContent() {
                 <div className="contact-faq-content">
                     <h2>Need Instant Answers?</h2>
                     <p>
-                        Discover more about our pricing, timelines,
-                        and how we deliver measurable ROI for our partners.
+                        Discover more about our services, typical project timelines,
+                        and our data-driven approach to delivering measurable ROI.
                     </p>
                     <Link href="/faq" className="faq-teaser-btn">
                         Explore FAQ Center

@@ -27,9 +27,9 @@ export async function POST(request: NextRequest) {
         break;
 
       case 'blogPost':
-        revalidatePath('/blog');
+        revalidatePath('/insights/blog');
         if (slug?.current) {
-          revalidatePath(`/blog/${slug.current}`);
+          revalidatePath(`/insights/${slug.current}`);
         }
         break;
 

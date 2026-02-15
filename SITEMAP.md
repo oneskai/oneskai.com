@@ -1,65 +1,57 @@
 # ONESKAI Website Sitemap
 
-This sitemap provides a hierarchical view of all public-facing routes on the Oneskai website, reflecting the structure within the `src/app/(site)` directory.
+This sitemap provides a hierarchical view of all public-facing routes on the Oneskai website.
 
 ---
 
 ```text
 /
 ├── services/ (How We Help Overview)
-│   ├── app-store-optimization/ (formerly aso)
-│   ├── branding/ (Branding & Identity)
-│   ├── consulting/ (Strategic Consulting)
-│   ├── content-strategy/ (formerly content-marketing)
-│   ├── conversion-analytics/ (Conversion Tracking)
-│   ├── conversion-rate-optimization/ (formerly cro)
-│   ├── data-attribution/ (Marketing Analytics)
-│   ├── ecommerce-scaling/ (formerly ecommerce)
-│   ├── email-and-sms-marketing/ (formerly email-marketing)
-│   ├── fractional-cmo-leadership/ (formerly fractional-cmo)
-│   ├── google-analytics-4/ (formerly ga4)
-│   ├── generative-engine-optimization/ (formerly geo)
-│   ├── go-to-market-strategy/ (formerly gtm)
-│   ├── icp-mapping/ (Ideal Customer Profile Mapping)
-│   ├── b2b-lead-generation/ (formerly lead-generation)
-│   ├── marketing-automation/ (Automation Workflows)
-│   ├── marketing-dashboards/ (Performance Visuals)
-│   ├── marketing-measurement/ (KPI Tracking)
-│   ├── marketplace-optimization/ (formerly marketplace)
-│   ├── paid-social-advertising/ (formerly paid-social)
-│   ├── performance-creative/ (Paid Acquisition Creative)
-│   ├── pay-per-click-advertising/ (formerly ppc)
-│   ├── programmatic-and-display/ (formerly programmatic)
-│   ├── remarketing-and-retargeting/ (formerly remarketing)
-│   ├── search-engine-optimization/ (formerly seo)
-│   ├── social-media/ (Organic Social)
-│   ├── social-media-analytics/ (Social Metrics)
-│   ├── ui-ux/ (User Experience Design)
-│   └── website-development/ (formerly website-engineering)
-│       ├── nextjs/ (Next.js Development)
-│       ├── react/ (React Development)
-│       └── wordpress/ (WordPress Websites)
+│   ├── search-engine-optimization/
+│   ├── generative-engine-optimization/
+│   ├── app-store-optimization/
+│   ├── pay-per-click-advertising/
+│   ├── paid-social-advertising/
+│   ├── programmatic-advertising/
+│   ├── remarketing-and-retargeting/
+│   ├── content-marketing/
+│   ├── email-marketing/
+│   ├── social-media-management/
+│   ├── web-development/
+│   ├── ui-ux-design/
+│   ├── marketing-consulting/
+│   ├── fractional-cmo/
+│   ├── go-to-market-strategy/
+│   ├── icp-mapping/
+│   ├── google-analytics-4/
+│   ├── marketing-analytics/
+│   ├── lead-generation/
+│   ├── conversion-rate-optimization/
+│   └── marketing-automation/
+├── approach/ (Our Methodology)
+│   ├── growth-framework/
+│   └── technology/
 ├── results/ (The Proof Pillar)
-│   ├── case-studies/ (Success Stories & Case Studies)
-│   ├── client-testimonials/ (Direct Feedback)
-│   └── strategy-sample-report/ (Growth Roadmap Spec)
-├── insights/ (The Knowledge Pillar)
-│   ├── blog/ (Expert Perspectives)
+│   ├── case-studies/
+│   ├── client-testimonials/
+│   └── strategy-sample-report/
+├── insights/ (Expert Perspectives & Resources)
+│   ├── blog/
 │   │   └── [slug]/ (Individual Blog Posts)
-│   ├── ebooks/ (Resource Playbooks)
-│   └── newsletter/ (Weekly Growth Updates)
-├── company/ (The Agency Pillar)
-│   ├── about-us/ (Mission & Story)
-│   ├── careers/ (Join the Team)
-│   ├── partnership/ (Tech & Data Stack)
-│   ├── team/ (Meet the Experts)
-│   └── press/ (Media & Announcements)
+│   ├── ebooks/
+│   ├── newsletter/
+│   ├── guides/
+│   └── faq/
+├── about/ (Mission & Story)
+├── careers/ (Join the Team)
+├── about/
+│   └── team/ (Meet the Experts)
+├── press/ (Media & Announcements)
 ├── contact/ (Connect with Us)
-├── faq/ (Support Hub)
 ├── privacy/ (Privacy Policy)
 ├── terms/ (Terms of Service)
 └── page.tsx (Homepage)
 ```
 
 ---
-*Last Updated: February 14, 2026*
+*Last Updated: February 15, 2026*

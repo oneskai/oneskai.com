@@ -178,7 +178,7 @@ export function TechnologyContent() {
                             </div>
                             <div className="tech-hero-image-wrapper">
                                 <Image
-                                    src="/images/premium-hero.png"
+                                    src="/images/home/premium-hero.png"
                                     alt="Marketing Technology Stack"
                                     width={1200}
                                     height={600}

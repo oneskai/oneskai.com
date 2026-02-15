@@ -14,7 +14,7 @@ const ebooks = [
         excerpt: "Master the technical shifts and strategic evolution required to dominate your category as AI search reshapes the digital landscape.",
         author: "Sarah Chen",
         pages: "42 Pages",
-        image: "/images/blog-1.png",
+        image: "/images/about/team/team-member-1.png",
         tags: ["Strategy", "AI", "Enterprise"]
     },
     {
@@ -24,7 +24,7 @@ const ebooks = [
         excerpt: "The exact framework our senior engineers use to audit high-traffic enterprise websites and recover from global algorithm updates.",
         author: "David Park",
         pages: "28 Pages",
-        image: "/images/blog-2.png",
+        image: "/images/insights/blog/blog-2.png",
         tags: ["Technical SEO", "Growth"]
     },
     {
@@ -34,7 +34,7 @@ const ebooks = [
         excerpt: "Learn how to position your brand as the primary authority for ChatGPT, Perplexity, and Google's AI Overviews.",
         author: "James Mitchell",
         pages: "35 Pages",
-        image: "/images/blog-3.png",
+        image: "/images/insights/blog/blog-3.png",
         tags: ["AEO", "Modern SEO"]
     },
     {
@@ -44,7 +44,7 @@ const ebooks = [
         excerpt: "How to build a content-led growth engine that targets high-value decision-makers and shortens long sales cycles.",
         author: "Sarah Chen",
         pages: "56 Pages",
-        image: "/images/office-chat.png",
+        image: "/images/common/office-chat.png",
         tags: ["B2B", "Lead Gen"]
     }
 ];
@@ -67,7 +67,19 @@ export function EbooksContent() {
     return (
         <div className="ebooks-page">
             {/* Hero Section */}
+            {/* Hero Section */}
             <section className="ebooks-hero">
+                <div className="ebooks-hero-bg">
+                    <Image
+                        src="/images/common/hero-team.png"
+                        alt="Ebooks Background"
+                        fill
+                        className="object-cover"
+                        priority
+                    />
+                    <div className="ebooks-hero-overlay"></div>
+                </div>
+
                 <div className="ebooks-container">
                     <div className="ebooks-hero-content">
                         <span className="section-label">PREMIUM RESOURCES</span>
@@ -80,17 +92,6 @@ export function EbooksContent() {
                         </p>
 
                         <div className="ebooks-hero-actions">
-                            <div className="ebooks-hero-search">
-                                <div className="search-box">
-                                    <Icon type="search" />
-                                    <input
-                                        type="text"
-                                        placeholder="Search guides..."
-                                        value={searchQuery}
-                                        onChange={(e) => setSearchQuery(e.target.value)}
-                                    />
-                                </div>
-                            </div>
                             <Link href="/contact" className="ebooks-hero-btn">Work with Us</Link>
                         </div>
                     </div>
@@ -109,7 +110,7 @@ export function EbooksContent() {
                                 <div className="featured-image">
                                     <div className="ebook-3d-wrap">
                                         <Image
-                                            src="/images/blog-1.png"
+                                            src="/images/insights/blog/blog-1.png"
                                             alt="Ebook Cover"
                                             width={280}
                                             height={380}
@@ -117,12 +118,18 @@ export function EbooksContent() {
                                         />
                                         <div className="ebook-spine"></div>
                                     </div>
+                                    <Link href="/team/sarah-chen" className="author-tag centered">
+                                        <Image
+                                            src="/images/about/team/team-member-1.png"
+                                            alt="Sarah Chen"
+                                            width={32}
+                                            height={32}
+                                            className="author-avatar-img"
+                                        />
+                                        <span>By Sarah Chen • Lead Strategist</span>
+                                    </Link>
                                 </div>
                                 <div className="featured-info-text">
-                                    <div className="author-tag">
-                                        <div className="author-avatar-mini">SC</div>
-                                        <span>By Sarah Chen • Lead Strategist</span>
-                                    </div>
                                     <p className="section-subtext">
                                         A comprehensive 42-page blueprint for navigating the seismic shifts in
                                         consumer behavior, generative search, and technical infrastructure.
@@ -160,7 +167,7 @@ export function EbooksContent() {
             <section className="ebooks-catalog">
                 <div className="ebooks-container">
                     <div className="catalog-header">
-                        <h2 className="section-title">The Oneskai <span>Library</span></h2>
+                        <h2 className="section-title">The eBook <span>Library</span></h2>
                         <div className="category-filters">
                             {["All", "Strategy", "Technical", "Growth"].map(cat => (
                                 <button
@@ -196,7 +203,9 @@ export function EbooksContent() {
                                     <h3>{ebook.title}</h3>
                                     <p>{ebook.excerpt}</p>
                                     <div className="ebook-card-footer">
-                                        <span className="ebook-author">By {ebook.author}</span>
+                                        <Link href={`/team/${ebook.author.toLowerCase().replace(' ', '-')}`} className="ebook-author-link">
+                                            By {ebook.author}
+                                        </Link>
                                         <button className="card-download-btn">
                                             <Icon type="download" />
                                         </button>
@@ -214,7 +223,7 @@ export function EbooksContent() {
                     <div className="cta-box-glass">
                         <div className="cta-content">
                             <span className="section-label">STAY AHEAD</span>
-                            <h2>Get Next-Gen Insights <span>Direct to Your Inbox</span></h2>
+                            <h2>Get Next-Gen Insights <br /> <span>Direct to Your Inbox</span></h2>
                             <p>Join 15,000+ industry leaders who receive our weekly deep-dive on search, AI, and growth.</p>
                             <form className="cta-form">
                                 <input type="email" placeholder="work@company.com" required />

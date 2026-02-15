@@ -72,7 +72,7 @@ export function WhyUsSection() {
                 <div className="whyus-visual">
                     <div className="whyus-image-container">
                         <img
-                            src="/images/team-brainstorm.png"
+                            src="/images/common/team-brainstorm.png"
                             alt="Oneskai Team Brainstorming Strategy"
                             className="whyus-image"
                         />

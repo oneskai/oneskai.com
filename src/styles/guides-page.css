@@ -1,0 +1,520 @@
+/* ================================================
+   GUIDES & FRAMEWORKS PAGE STYLES
+   ================================================ */
+
+.guides-page {
+    --gd-dark: #0A0D12;
+    --gd-accent: #FF2D75;
+    /* Replaced Cyan with Brand Pink */
+    --gd-pink: #FF2D75;
+    --gd-text-gray: rgba(255, 255, 255, 0.7);
+    --gd-glass: rgba(255, 255, 255, 0.03);
+    --gd-border: rgba(255, 255, 255, 0.08);
+    background: #FAFAFA;
+}
+
+.guides-container {
+    width: 100%;
+    /* Critical for Flexbox centering */
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* ===== HERO SECTION ===== */
+.guides-hero {
+    height: 100vh;
+    min-height: 700px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Center the container */
+    text-align: left;
+    overflow: hidden;
+    background: var(--gd-dark);
+    color: white;
+}
+
+.guides-hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.guides-hero-bg img {
+    object-fit: cover;
+    opacity: 0.6;
+    filter: brightness(0.5) contrast(1.1);
+}
+
+.guides-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg,
+            rgba(10, 13, 18, 0.98) 0%,
+            rgba(10, 13, 18, 0.8) 40%,
+            rgba(10, 13, 18, 0.2) 100%);
+    /* Stronger gradient from left */
+    z-index: 2;
+}
+
+.guides-hero-content {
+    position: relative;
+    z-index: 10;
+    max-width: 800px;
+    margin: 0;
+    /* Removing auto margin to keep it left */
+}
+
+.guides-label {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #FFC700;
+    /* Yellow for labels per Design System */
+    margin-bottom: 24px;
+    border: 1px solid #FFC700;
+    padding: 8px 16px;
+    border-radius: 50px;
+    background: transparent;
+}
+
+.guides-title {
+    font-size: 64px;
+    font-weight: 800;
+    line-height: 1.1;
+    color: white;
+    letter-spacing: -2px;
+    margin-bottom: 24px;
+}
+
+.guides-title span {
+    color: var(--gd-accent);
+}
+
+.guides-description {
+    font-size: 20px;
+    line-height: 1.6;
+    color: var(--gd-text-gray);
+    max-width: 650px;
+    margin: 0 0 40px 0;
+    /* Left aligned margin */
+}
+
+/* ===== FEATURED FRAMEWORK ===== */
+.guides-featured {
+    padding: 80px 0;
+    background: white;
+    position: relative;
+    z-index: 5;
+    margin-top: 0;
+    /* Removed negative margin to prevent overlap */
+}
+
+.featured-framework-card {
+    background: white;
+    border-radius: 10px;
+    /* Updated to 10px */
+    padding: 0;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+}
+
+.framework-content {
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.framework-visual {
+    background: #f8fafc;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    border-left: 1px solid #e2e8f0;
+}
+
+.framework-badge {
+    display: inline-block;
+    background: var(--gd-dark);
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.framework-title {
+    font-size: 42px;
+    font-weight: 800;
+    color: var(--gd-dark);
+    line-height: 1.1;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+.framework-title span {
+    color: var(--gd-pink);
+}
+
+.framework-desc {
+    font-size: 18px;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.framework-steps {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.step-item {
+    flex: 1;
+    background: #f8fafc;
+    padding: 20px;
+    border-radius: 10px;
+    /* Updated to 10px */
+    border: 1px solid #e2e8f0;
+}
+
+.step-num {
+    display: block;
+    font-size: 14px;
+    font-weight: 800;
+    color: var(--gd-accent);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.step-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--gd-dark);
+    line-height: 1.3;
+}
+
+/* ===== GUIDES GRID ===== */
+.guides-list-section {
+    padding: 100px 0;
+    background: #FAFAFA;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 60px;
+}
+
+.section-headline h2 {
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--gd-dark);
+    margin-bottom: 10px;
+    letter-spacing: -1px;
+}
+
+.section-headline p {
+    font-size: 18px;
+    color: #64748b;
+}
+
+.guides-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.guide-card {
+    background: white;
+    border-radius: 10px;
+    /* Updated to 10px */
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.guide-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+    border-color: var(--gd-accent);
+}
+
+.guide-header {
+    padding: 30px 30px 20px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.guide-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.guide-category {
+    font-size: 12px;
+    font-weight: 800;
+    color: var(--gd-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background: rgba(255, 45, 117, 0.1);
+    /* Updated to Pink tint */
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+
+.guide-read-time {
+    font-size: 13px;
+    color: #94a3b8;
+    font-weight: 600;
+}
+
+.guide-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--gd-dark);
+    line-height: 1.3;
+    margin-bottom: 0;
+}
+
+.guide-body {
+    padding: 30px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.guide-excerpt {
+    font-size: 15px;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.guide-modules {
+    margin-top: auto;
+    background: #f8fafc;
+    border-radius: 10px;
+    /* Updated to 10px */
+    padding: 16px;
+}
+
+.module-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.module-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: #475569;
+    font-weight: 600;
+}
+
+.module-item svg {
+    color: var(--gd-pink);
+    width: 14px;
+    height: 14px;
+}
+
+.guide-footer {
+    padding: 20px 30px;
+    border-top: 1px solid #f1f5f9;
+    background: white;
+}
+
+.guide-access-btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    /* Updated to 10px */
+    border: 1px solid #e2e8f0;
+    background: white;
+    color: var(--gd-dark);
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.guide-access-btn:hover {
+    background: var(--gd-dark);
+    color: white;
+    border-color: var(--gd-dark);
+}
+
+.guide-access-btn svg {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s ease;
+}
+
+.guide-access-btn:hover svg {
+    transform: translateX(4px);
+}
+
+/* ===== CTA SECTION ===== */
+.guides-cta {
+    padding: 100px 0;
+    background: #FAFAFA;
+}
+
+.cta-dark-box {
+    background: var(--gd-dark);
+    border-radius: 10px;
+    /* Updated to 10px */
+    padding: 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    color: white;
+}
+
+.cta-dark-box h2 {
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+.cta-dark-box h2 span {
+    color: var(--gd-pink);
+}
+
+.cta-dark-box p {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+.btn-primary-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: white;
+    color: var(--gd-dark);
+    padding: 16px 32px;
+    border-radius: 100px;
+    font-weight: 700;
+    font-size: 16px;
+    border: 1px solid #e2e8f0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary-pill:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border-color: var(--gd-accent);
+    color: var(--gd-accent);
+}
+
+.btn-accent {
+    background: var(--gd-accent);
+    color: white;
+    /* Changed to white text for pink bg */
+    padding: 16px 32px;
+    border-radius: 100px;
+    font-weight: 800;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    /* Fix for alignment */
+    align-items: center;
+    /* Fix for alignment */
+    gap: 10px;
+    /* Space for icon */
+    text-decoration: none;
+    /* If anchor tag */
+    white-space: nowrap;
+}
+
+.btn-accent:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(255, 45, 117, 0.3);
+    color: white;
+    /* Ensure text stays white */
+}
+
+.btn-accent svg {
+    color: white !important;
+    stroke: white !important;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .featured-framework-card {
+        grid-template-columns: 1fr;
+    }
+
+    .framework-visual {
+        min-height: 300px;
+        order: -1;
+        border-left: none;
+        border-bottom: 1px solid #e2e8f0;
+    }
+
+    .guides-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .guides-hero {
+        min-height: 500px;
+        padding-top: 100px;
+    }
+
+    .guides-title {
+        font-size: 42px;
+    }
+
+    .framework-content {
+        padding: 40px 24px;
+    }
+
+    .framework-steps {
+        flex-direction: column;
+    }
+
+    .guides-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-dark-box {
+        padding: 50px 24px;
+    }
+
+    .cta-dark-box h2 {
+        font-size: 32px;
+    }
+}
